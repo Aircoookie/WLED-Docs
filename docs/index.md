@@ -60,7 +60,7 @@ See the [wiki](https://github.com/Aircoookie/WLED/wiki)!
 <img src="/assets/images/ui/headers/macbook-pro-space-gray-on-the-wooden-table.jpg" width="50%"><img src="assets/images/ui/headers/walking-with-iphone-x.jpg" width="50%">
 
 ## 💾 Compatible LED Strips
-Type | Voltage | Comments
+| Type | Voltage | Comments |
 |---|---|---|
 WS2812B | 5v |
 WS2813 | 5v | 
@@ -75,7 +75,7 @@ GS8208 | 12v |
 Analog/non-addressable | any | Requires additional circuitry
 
 ## 🧊 Compatible PC RGB Fans and ARGB accessories
-Brand | Model | Comments
+| Brand | Model | Comments |
 |---|---|---|
 Corsair | HD120 Fan | Uses WS2812B, data-in only
 PCCOOLER | Moonlight 5-pack Fans | Uses WS2812B, includes Data-out connector to keep each fan uniquely addressable if wired in series like traditional LED strips
