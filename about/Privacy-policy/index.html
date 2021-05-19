@@ -19,7 +19,7 @@
     
     
       
-        <title>Control a Relay - WLED</title>
+        <title>Privacy Policy - WLED</title>
       
     
     
@@ -68,6 +68,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#overview-of-collected-data" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -96,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Control a Relay
+              Privacy Policy
             
           </span>
         </div>
@@ -243,12 +248,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -269,11 +276,47 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../about/Privacy-policy/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Privacy Policy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Privacy Policy
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-collected-data" class="md-nav__link">
+    Overview of collected data:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -285,7 +328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/contributors/" class="md-nav__link">
+      <a href="../contributors/" class="md-nav__link">
         Contributors and Credits
       </a>
     </li>
@@ -299,7 +342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/roadmap/" class="md-nav__link">
+      <a href="../roadmap/" class="md-nav__link">
         Upcoming Features
       </a>
     </li>
@@ -639,14 +682,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
       
@@ -669,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Macros/" class="md-nav__link">
+      <a href="../../features/Macros/" class="md-nav__link">
         Macros
       </a>
     </li>
@@ -683,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Multi-strip/" class="md-nav__link">
+      <a href="../../features/Multi-strip/" class="md-nav__link">
         Multi-strip Support
       </a>
     </li>
@@ -697,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Presets/" class="md-nav__link">
+      <a href="../../features/Presets/" class="md-nav__link">
         Presets
       </a>
     </li>
@@ -711,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Segments/" class="md-nav__link">
+      <a href="../../features/Segments/" class="md-nav__link">
         Segments
       </a>
     </li>
@@ -725,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Settings/" class="md-nav__link">
+      <a href="../../features/Settings/" class="md-nav__link">
         Settings
       </a>
     </li>
@@ -739,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Subpages/" class="md-nav__link">
+      <a href="../../features/Subpages/" class="md-nav__link">
         Web GUI Sitemap
       </a>
     </li>
@@ -753,7 +794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../effects-palettes/" class="md-nav__link">
+      <a href="../../features/effects-palettes/" class="md-nav__link">
         Effects and Palettes
       </a>
     </li>
@@ -765,19 +806,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../features/relay-control/" class="md-nav__link">
         Control a Relay
       </a>
-      
     </li>
   
 
@@ -984,23 +1017,64 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-collected-data" class="md-nav__link">
+    Overview of collected data:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Aircoookie/WLED-Docs/edit/master/docs/features/relay-control.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Aircoookie/WLED-Docs/edit/master/docs/about/Privacy-policy.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Control a Relay</h1>
+                  <h1>Privacy Policy</h1>
                 
-                <p>LED strips still use power when seemingly switched off. In case you want to prevent that, you have several ways of totally switching off power (including manually switching off the power), one of which is adding a relay to your circuit. GPIO12 (Pin D6 on many devices) is toggled by WLED when WLED is turned on/off (in the UI, or through other interfaces). This lets you control a relay through your WLED flashed controller.</p>
-<p>When you decide you want WLED to control a relay, make sure you buy the right relay. Check what voltage you can supply from your controller (free 3V pin, 5V pin etc), and make sure the relay is suitable to be controlled by the voltage you can supply (3V, 5V or something else). Note, some relays come with a jumper that lets you configure whether the relay switches at high or low signal, giving you maximum flexibility.</p>
-<p><a href="https://www.geekering.com/?p=187">This page</a> gives a clear description using a light bulb instead of a LED strip. And instead of the D1 mentioned in that story, with WLED, you use GPIO12.</p>
-<p>The default WLED behavior is to turn GPIO12 on (high) when the LEDs are on and off (low) when the LEDs are off. It can be changed though with the RLYMDE define in NbpWrapper.h. Many relays are powered when the signal is LOW. See <a href="https://github.com/Aircoookie/WLED/issues/631#issuecomment-605512524">this thread</a>.</p>
-<p>Sometimes people ask whether they can control more than one relay through WLED, including controlling this all via Alexa. Controlling an extra relay separately from the RGB lights is not something WLED is designed to do, however you can modify the code to add that functionality. For that, make sure you can compile WLED from source unmodified first. Then, change #define ESPALEXA_MAXDEVICES 1 in line 71 of the wled.h file to 2. After that, just follow the API documentation on https://github.com/Aircoookie/Espalexa to add a new EspalexaDevice to the alexa.cpp file</p>
+                <p>By using WLED embedded system code, the WLED iOS mobile application, the WLED Android mobile application, web client or associated Services, no personally identifiable data is collected, transmitted and/or stored on external servers.
+No data is processed in any way not absolutely required for the operation of the Service.</p>
+<h3 id="overview-of-collected-data">Overview of collected data:</h3>
+<p>The embedded system internally stores configuration data, including, but not limited to the user's WiFi credentials.
+This data is deletable by the user. Read access to sensitive data is restricted. Configuration data is not sent to any external system besides the users control device.</p>
+<p>The mobile apps internally stores data regarding connected devices, including, but not limited to the device's network-local IP addresses.</p>
+<p>Using the provided Support services (including, but not limited to GitHub, Discord and E-mail), only the information you choose to disclose will be processed. Privacy policies and Terms of Service of service providers apply.</p>
+<p>In accordance with the Service MIT license, THE SOFTWARE IS PROVIDED "AS IS", 
+WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+<p>If you have inquiries regarding this Policy please feel free to contact me at: dev.aircoookie@gmail,com</p>
                 
                   
                 
@@ -1021,7 +1095,7 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../effects-palettes/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../.." class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1030,19 +1104,19 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Effects and Palettes
+              Welcome to WLED
             </div>
           </div>
         </a>
       
       
-        <a href="../../interfaces/Blynk/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../contributors/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Blynk
+              Contributors and Credits
             </div>
           </div>
           <div class="md-footer__button md-icon">

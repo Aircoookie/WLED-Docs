@@ -19,7 +19,7 @@
     
     
       
-        <title>Control a Relay - WLED</title>
+        <title>Presets - WLED</title>
       
     
     
@@ -68,6 +68,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#new-version-011" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -96,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Control a Relay
+              Presets
             
           </span>
         </div>
@@ -695,11 +700,116 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Presets/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Presets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Presets
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#new-version-011" class="md-nav__link">
+    New version (0.11+)
+  </a>
+  
+    <nav class="md-nav" aria-label="New version (0.11+)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use" class="md-nav__link">
+    How to use
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-note-on-performance" class="md-nav__link">
+    A note on performance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-about-my-cool-presets-from-earlier-versions" class="md-nav__link">
+    What about my cool presets from earlier versions?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtaining-preset-list" class="md-nav__link">
+    Obtaining preset list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saving-named-presets" class="md-nav__link">
+    Saving named presets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backing-uprestoring-presets" class="md-nav__link">
+    Backing up/restoring presets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#earlier-versions-up-to-010" class="md-nav__link">
+    Earlier versions (up to 0.10)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preset-cycle" class="md-nav__link">
+    Preset cycle
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -765,19 +875,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../relay-control/" class="md-nav__link">
         Control a Relay
       </a>
-      
     </li>
   
 
@@ -984,23 +1086,187 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#new-version-011" class="md-nav__link">
+    New version (0.11+)
+  </a>
+  
+    <nav class="md-nav" aria-label="New version (0.11+)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use" class="md-nav__link">
+    How to use
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-note-on-performance" class="md-nav__link">
+    A note on performance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-about-my-cool-presets-from-earlier-versions" class="md-nav__link">
+    What about my cool presets from earlier versions?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtaining-preset-list" class="md-nav__link">
+    Obtaining preset list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saving-named-presets" class="md-nav__link">
+    Saving named presets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backing-uprestoring-presets" class="md-nav__link">
+    Backing up/restoring presets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#earlier-versions-up-to-010" class="md-nav__link">
+    Earlier versions (up to 0.10)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preset-cycle" class="md-nav__link">
+    Preset cycle
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Aircoookie/WLED-Docs/edit/master/docs/features/relay-control.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Aircoookie/WLED-Docs/edit/master/docs/features/Presets.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Control a Relay</h1>
+                  <h1>Presets</h1>
                 
-                <p>LED strips still use power when seemingly switched off. In case you want to prevent that, you have several ways of totally switching off power (including manually switching off the power), one of which is adding a relay to your circuit. GPIO12 (Pin D6 on many devices) is toggled by WLED when WLED is turned on/off (in the UI, or through other interfaces). This lets you control a relay through your WLED flashed controller.</p>
-<p>When you decide you want WLED to control a relay, make sure you buy the right relay. Check what voltage you can supply from your controller (free 3V pin, 5V pin etc), and make sure the relay is suitable to be controlled by the voltage you can supply (3V, 5V or something else). Note, some relays come with a jumper that lets you configure whether the relay switches at high or low signal, giving you maximum flexibility.</p>
-<p><a href="https://www.geekering.com/?p=187">This page</a> gives a clear description using a light bulb instead of a LED strip. And instead of the D1 mentioned in that story, with WLED, you use GPIO12.</p>
-<p>The default WLED behavior is to turn GPIO12 on (high) when the LEDs are on and off (low) when the LEDs are off. It can be changed though with the RLYMDE define in NbpWrapper.h. Many relays are powered when the signal is LOW. See <a href="https://github.com/Aircoookie/WLED/issues/631#issuecomment-605512524">this thread</a>.</p>
-<p>Sometimes people ask whether they can control more than one relay through WLED, including controlling this all via Alexa. Controlling an extra relay separately from the RGB lights is not something WLED is designed to do, however you can modify the code to add that functionality. For that, make sure you can compile WLED from source unmodified first. Then, change #define ESPALEXA_MAXDEVICES 1 in line 71 of the wled.h file to 2. After that, just follow the API documentation on https://github.com/Aircoookie/Espalexa to add a new EspalexaDevice to the alexa.cpp file</p>
+                <p>Presets can be used to save your favorite light configurations to apply later!
+You can compare them to the "scenes" feature present in some other smart devices.</p>
+<h3 id="new-version-011">New version (0.11+)</h3>
+<h4 id="overview">Overview</h4>
+<p>WLED 0.11.0 contains a major overhaul of presets, storing them in a <code>/presets.json</code> file in an internal filesystem.<br />
+This enables many new features, you can now have up to 250 presets and each of them can save all segments which are set up!<br />
+Speaking of segments, the maximum number has been increased to 12 on ESP8266 and 16 on ESP32!<br />
+Presets can now also contain both HTTP and JSON API commands, replacing the previous Macro functionality.<br />
+Each preset can be named, so you'll be able to access it more easily!  </p>
+<h4 id="how-to-use">How to use</h4>
+<p>The new preset system is quite a bit more advanced than the previous one, thus it is likely not as self-explanatory to use.<br />
+Here you can find what each setting does and how to make best use of it!</p>
+<p><em>"Create Preset" button</em><br />
+Use this to save the current state as a permanent preset, or to add a new API macro.</p>
+<p><em>Preset name</em><br />
+Enter a nice name for your preset here. I would recommend putting something short, but to the point here, like <code>Epic fireworks</code> or <code>Slow fade</code>.<br />
+All special characters and emoji are permitted (however, there must not be more than 6 consecutive whitespaces)<br />
+If you leave this empty, you'll get a name based on the preset ID number, like <code>Preset 16</code>.</p>
+<p><em>Quick load label</em><br />
+You can optionally add a short label up to 2 characters or 1 emoji long.<br />
+It will show up in a small circle on top of the preset list for extra quick access without scrolling!<br />
+I recommend using this for the presets you truly love.  </p>
+<p><em>Use current state/Overwrite with state</em><br />
+This is enabled by default when adding a new preset and disabled when editing an existing preset.<br />
+When enabled, it will write the current segment config, including all colors and effect, to the preset.<br />
+When disabled, it will instead give you a textfield to enter a custom API command or show you the command currently saved.  </p>
+<p><em>Include brightness</em><br />
+If disabled, the brightness value is not included in the preset. This can be useful e.g. when you want to control the brightness manually and want the preset to only set the effect.</p>
+<p><em>Save segment bounds</em><br />
+This is an important one. Make sure it is enabled for your boot preset, so that your segment config is properly restored on boot!<br />
+When disabled, the segment start and stop LEDs are not included in the preset. This can be useful if you plan to make changes to your segment setup and don't want your presets to always reset it to the point it was when the preset was saved.</p>
+<p><em>API command</em><br />
+This accepts any HTTP or JSON API command! (only visible if the current state checkbox is unchecked)<br />
+It replaces the previous macro functionality.<br />
+If you know your JSON, you can even create playlists of other presets!</p>
+<p><em>Save to ID</em><br />
+This is the ID the preset will be saved to.<br />
+When creating a new preset, you likely won't have to change it as the lowest unused ID will be chosen automatically.<br />
+If you change the ID on an existing preset and save, you can copy it to the new ID - change the name though.  </p>
+<p><em>Save and Delete buttons</em><br />
+Now these are self-explanatory, but I said I'd cover each point :)</p>
+<p><em>ID</em><br />
+This is the number you'll want to use to apply this preset from a timed macro or automation!  </p>
+<h4 id="a-note-on-performance">A note on performance</h4>
+<p>This new preset system is quite fast where it matters, reading the presets.<br />
+Applying a preset will typically take less than a tenth of a second.  </p>
+<p>However, due to a design choice of the LittleFS filesystem used by WLED, random writes to the preset file are very resource intensive.<br />
+This means that while updating your presets, you might notice your light freezing and becoming unresponsive for up to a few seconds.<br />
+Adding new presets is usually very fast, those performance issues will occur once you delete/edit/overwrite older presets and your preset file becomes very large, or when adding presets after deleting older ones.</p>
+<p>I'm looking into ways to mitigate this situation as soon as possible! Meanwhile, to keep things snappy, I would recommend not having more than 50-ish single segment or a dozen of multi-segment presets.</p>
+<h4 id="what-about-my-cool-presets-from-earlier-versions">What about my cool presets from earlier versions?</h4>
+<p>Don't worry, they (as well as your settings) will be automatically imported to the new system!<br />
+And if you ever need to downgrade to v0.10 for some reason, they will still be there (although any changes made in v0.11 won't be applied)</p>
+<h4 id="obtaining-preset-list">Obtaining preset list</h4>
+<p>Obtaining the preset list is possible with the /presets.json file
+Seeing the name of the current preset with the API only is not possible, you can only obtain its ID. Then you'd need some code to match it with the entries from presets.json (this is also what the UI does).  See section "Backing up/restoring presets".</p>
+<h4 id="saving-named-presets">Saving named presets</h4>
+<p>Save a named preset with {"psave":<preset number here>;"n":"Preset name","ib":true,"sb":true}</p>
+<h4 id="backing-uprestoring-presets">Backing up/restoring presets</h4>
+<p>To backup all presets, go to <code>[WLED-IP]/edit</code> (OTA lock must be off), right click the <code>presets.json</code> file and download!<br />
+To restore, use the <code>Choose file</code> and <code>Upload</code> buttons.  </p>
+<h3 id="earlier-versions-up-to-010">Earlier versions (up to 0.10)</h3>
+<p>There are 16 preset slots in total.
+In 0.9.0, the last preset (16) is capable of saving the entire segment configuration. All other presets only save a single segment (main segment, the first one by default) and restore that preset to all selected segments.</p>
+<p>In the Favorites tab, the number buttons from 1-16 are the different save slots. Find a config you like, then toggle <em>Saving mode</em> on and click on a number to save the preset to that slot. If <em>Saving mode</em> is toggled off, you can restore presets with a single click.</p>
+<h3 id="preset-cycle">Preset cycle</h3>
+<p>With this feature, you can create an animation by automatically swapping between presets within a specified range.
+Keep in mind that any changes you make to effects/colors will be overridden once the system applies the next preset.</p>
+<p>If you want to start the preset cycle on boot, go to LED settings and tick "Save current preset cycle configuration as boot default</p>
+<p>To modify the duration of the preset cycle, ensure the preset cycle box is unchecked before entering a new time value. Once updated, the preset cycle can be enabled again"</p>
                 
                   
                 
@@ -1021,7 +1287,7 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../effects-palettes/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../Multi-strip/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1030,19 +1296,19 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Effects and Palettes
+              Multi-strip Support
             </div>
           </div>
         </a>
       
       
-        <a href="../../interfaces/Blynk/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../Segments/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Blynk
+              Segments
             </div>
           </div>
           <div class="md-footer__button md-icon">
