@@ -1,5 +1,8 @@
 ---
 title: Welcome to WLED
+hide:
+  # - navigation
+  # - toc
 ---
 
 <p align="center">

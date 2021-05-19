@@ -10,7 +10,10 @@ theme:
   name: material
   language: en
   logo: assets/images/ui/akemi/000_base.png
+  icon: 
+    repo: fontawesome/brands/github
   # features: 
+  #   - navigation.tabs
   palette:
     - scheme: slate
       primary: red
