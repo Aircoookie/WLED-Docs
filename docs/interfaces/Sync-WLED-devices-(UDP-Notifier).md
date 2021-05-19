@@ -1,3 +1,10 @@
+---
+title: WLED UDP Sync
+hide:
+  # - navigation
+  # - toc
+---
+
 _Note: this page is now out of date, see updated functionality in the code ([udp.cpp](https://github.com/Aircoookie/WLED/blob/master/wled00/udp.cpp))_
 
 ### Usage

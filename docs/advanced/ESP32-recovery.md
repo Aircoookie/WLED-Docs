@@ -1,3 +1,10 @@
+---
+title: ESP32 Recovery
+hide:
+  # - navigation
+  # - toc
+---
+
 In Platformio IDE open a new terminal and type: **pio run -v -t upload**<br>
 When you see the "**Connecting........**" abort the upload.
 

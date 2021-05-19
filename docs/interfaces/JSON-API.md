@@ -1,3 +1,10 @@
+---
+title: JSON API
+hide:
+  # - navigation
+  # - toc
+---
+
 Starting from version 0.8.4, WLED implements a powerful JSON API over HTTP.	
 It is accessible using the `/json` subpage.	
 

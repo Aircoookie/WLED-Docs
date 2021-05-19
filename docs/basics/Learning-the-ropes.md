@@ -1,3 +1,10 @@
+---
+title: Basic Usage
+hide:
+  # - navigation
+  # - toc
+---
+
 **Don't know yet how to solder? Unsure how to connect your LEDs safely? How to find the perfect power supply?**  
 No worries, we have collected a few helpful links for you to learn more about these and more topics:
 

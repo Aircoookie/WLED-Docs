@@ -1,3 +1,10 @@
+---
+title: Macros
+hide:
+  # - navigation
+  # - toc
+---
+
 See [Presets](https://github.com/Aircoookie/WLED/wiki/Presets) for 0.11.0+.
 
 You are able to set custom actions ("Macros") in Time & Macro settings for the following events:

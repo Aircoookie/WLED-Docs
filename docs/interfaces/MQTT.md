@@ -1,3 +1,10 @@
+---
+title: MQTT
+hide:
+  # - navigation
+  # - toc
+---
+
 **Notice:** The MQTT implementation is currently being **restructured** to provide a better experience for users of Home Assistant and other automation software. **This will be a breaking change**. For details regarding the rework, please see [#207](https://github.com/Aircoookie/WLED/issues/207)!
 
 WLED versions from 0.8.0 up are able to connect to an MQTT broker for smart home control.

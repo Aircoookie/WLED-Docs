@@ -1,3 +1,10 @@
+---
+title: Segments
+hide:
+  # - navigation
+  # - toc
+---
+
 Starting in WLED 0.9.0, Segments are supported.
 
 This feature allows you to set different zones on the LED strip, each running a different effect or color.

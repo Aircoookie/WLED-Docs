@@ -1,3 +1,10 @@
+---
+title: Web GUI Sitemap
+hide:
+  # - navigation
+  # - toc
+---
+
 This is the sitemap of the module server.
 Access with \<ESP-IP\>/path (Example: **192.168.8.4/settings**)
 

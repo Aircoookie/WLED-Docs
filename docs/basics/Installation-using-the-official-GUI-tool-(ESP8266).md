@@ -1,3 +1,10 @@
+---
+title: Installation using ESP GUI
+hide:
+  # - navigation
+  # - toc
+---
+
 ## 1. Downloading the firmware bin file
 You can find precompiled .bin files on the <a href="../releases">release page</a>. Be sure to download the latest version. This file looks something like this:
 

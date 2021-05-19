@@ -1,3 +1,10 @@
+---
+title: Presets
+hide:
+  # - navigation
+  # - toc
+---
+
 Presets can be used to save your favorite light configurations to apply later!
 You can compare them to the "scenes" feature present in some other smart devices.
 

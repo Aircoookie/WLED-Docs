@@ -1,3 +1,10 @@
+---
+title: Multi-strip Support
+hide:
+  # - navigation
+  # - toc
+---
+
 ## Multi strip support
 
 Starting in WLED 0.12.0, you are able to connect to multiple LED output from one ESP!

@@ -1,3 +1,10 @@
+---
+title: Effects and Palettes
+hide:
+  # - navigation
+  # - toc
+---
+
 ### Effects
 
 | EffectID | Name | Description | Intensity slider effect

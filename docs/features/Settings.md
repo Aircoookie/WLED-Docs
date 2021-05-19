@@ -1,3 +1,10 @@
+---
+title: Settings
+hide:
+  # - navigation
+  # - toc
+---
+
 All web configurable settings are split in 5 sub-pages.
 This page is meant to clarify the purpose of each setting.
 This documentation applies to WLED 0.8.5.

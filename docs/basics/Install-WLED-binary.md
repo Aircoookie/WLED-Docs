@@ -1,3 +1,10 @@
+---
+title: Install WLED Binary
+hide:
+  # - navigation
+  # - toc
+---
+
 ### Flashing method 1: esptool
 
 - First of all, please follow the steps to install esptool.py [here](https://github.com/espressif/esptool).

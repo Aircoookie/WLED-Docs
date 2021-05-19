@@ -1,3 +1,10 @@
+---
+title: Remote Access / IFTTT
+hide:
+  # - navigation
+  # - toc
+---
+
 WLED is an open-source, DIY software. This means all services are hosted locally on your ESP8266.
 Because of this, you can only control your lights from within your local (home) network.
 

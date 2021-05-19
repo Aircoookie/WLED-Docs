@@ -1,3 +1,10 @@
+---
+title: Blynk
+hide:
+  # - navigation
+  # - toc
+---
+
 You can use the free (if you only use it for 1 WLED light) IoT cloud Blynk to control your WLED Lights with the beautiful Blynk app for Android and iOS!
 
 With Blynk, you can also even control your lights when you are not connected to your home network!

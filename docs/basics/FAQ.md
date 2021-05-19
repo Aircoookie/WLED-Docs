@@ -1,3 +1,10 @@
+---
+title: FAQ
+hide:
+  # - navigation
+  # - toc
+---
+
 This page will continually get updated with questions often asked.
 
 ## Contents

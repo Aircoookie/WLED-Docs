@@ -1,3 +1,10 @@
+---
+title: Compile WLED
+hide:
+  # - navigation
+  # - toc
+---
+
 A lot of people ask how they can compile their own WLED .bin file, whether it be for a custom pins or analog LEDs, so this picture guide will show how to do it.
 
 First, download the latest source code from https://github.com/Aircoookie/WLED under the `Code` dropdown menu.

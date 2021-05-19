@@ -1,3 +1,10 @@
+---
+title: Control a Relay
+hide:
+  # - navigation
+  # - toc
+---
+
 LED strips still use power when seemingly switched off. In case you want to prevent that, you have several ways of totally switching off power (including manually switching off the power), one of which is adding a relay to your circuit. GPIO12 (Pin D6 on many devices) is toggled by WLED when WLED is turned on/off (in the UI, or through other interfaces). This lets you control a relay through your WLED flashed controller.
 
 When you decide you want WLED to control a relay, make sure you buy the right relay. Check what voltage you can supply from your controller (free 3V pin, 5V pin etc), and make sure the relay is suitable to be controlled by the voltage you can supply (3V, 5V or something else). Note, some relays come with a jumper that lets you configure whether the relay switches at high or low signal, giving you maximum flexibility.

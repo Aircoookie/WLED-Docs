@@ -1,3 +1,10 @@
+---
+title: HTTP Request API
+hide:
+  # - navigation
+  # - toc
+---
+
 WLED's HTTP API allows you to set many properties of your lights, even more than the index page UI supports, via a simple GET web request.
 
 _Unsure how all this API stuff works? Check out [this amazing guide](https://tynick.com/blog/01-28-2020/controlling-wled-with-raspberry-pi-using-the-wled-api/) by tynick!_

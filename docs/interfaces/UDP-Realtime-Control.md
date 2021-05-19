@@ -1,3 +1,10 @@
+---
+title: UDP Realtime / tpm2.net
+hide:
+  # - navigation
+  # - toc
+---
+
 ### Hyperion
 
 You can now use WLED with the popular Ambilight software Hyperion.

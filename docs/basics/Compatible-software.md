@@ -1,3 +1,10 @@
+---
+title: Compatible Software
+hide:
+  # - navigation
+  # - toc
+---
+
 This page lists some third-party software that can interface with WLED!
 
 ### Still under construction, feel free to add to the list!

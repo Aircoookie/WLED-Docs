@@ -1,3 +1,10 @@
+---
+title: Philips Hue
+hide:
+  # - navigation
+  # - toc
+---
+
 WLED can sync to your Philips hue lights.
 
 To activate it, please go to Sync settings, fill in the IP of your hue bridge. Also you need to fill in the numeric ID of the hue light you want to sync to, which you can find in the "About" section of the hue app.

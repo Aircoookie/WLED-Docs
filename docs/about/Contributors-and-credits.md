@@ -1,3 +1,10 @@
+---
+title: Contributors and Credits
+hide:
+  # - navigation
+  # - toc
+---
+
 This page is to honor the work of all the people who helped to make WLED what it is today!	
 
 ### Direct Contributors to WLED code   	

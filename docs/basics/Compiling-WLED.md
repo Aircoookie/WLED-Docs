@@ -1,3 +1,11 @@
+---
+title: Compiling WLED
+hide:
+  # - navigation
+  # - toc
+---
+
+
 You want to add custom features to WLED, use non-default pins, or add in a usermod? You've found the right place!
 
 WLED has come to rely on so many dependencies in the latest versions that building with the Arduino IDE is no longer recommended.

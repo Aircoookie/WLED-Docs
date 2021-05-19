@@ -1,3 +1,10 @@
+---
+title: Mapping
+hide:
+  # - navigation
+  # - toc
+---
+
 WLED now has the ability to remap your LED strip programmatically.
 
 ### What is it?

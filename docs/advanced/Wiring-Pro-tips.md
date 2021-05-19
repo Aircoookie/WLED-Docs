@@ -1,3 +1,10 @@
+---
+title: Wiring Pro Tips
+hide:
+  # - navigation
+  # - toc
+---
+
 # Overview
 
 RGB LEDs can draw a lot of current (amps). While most people usually worry about the dangers from high voltage, low voltage + high amperage can be dangerous too, as it can easily become [a fire hazard in certain circumstances](https://youtu.be/nWC0PkHB8O4). Depending on your setup size (the number of LEDs you want to drive), use these tips to help guide your wiring.
