@@ -1,0 +1,19 @@
+
+/* Announcement Bar */
+
+.md-announce a,
+.md-announce a:focus, 
+.md-announce a:hover {
+  color: #fff;
+  font-size: .7rem;
+  padding: 0 .8rem;
+}
+
+.cx-announce {
+  float: right;
+  margin: 0 0 .6rem 0;
+}
+
+.md-typeset .discord {
+  color: var(--md-primary-fg-color);
+}
