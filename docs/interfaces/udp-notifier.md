@@ -52,7 +52,7 @@ Therefore, if a WLED 0.4 system receives a WLED 0.3 UDP notification it will app
 
 The UDP packet is currently 24 bytes long. It is laid out in the following:
 
-Byte Index | Var Name | Description | Notifier Version
+| Byte Index | Var Name | Description | Notifier Version |
 | --- | --- | --- | --- |
 0 | \- | Packet Purpose Byte* | 0
 1 | callMode | Packet Reason** | 0
@@ -81,7 +81,7 @@ Byte Index | Var Name | Description | Notifier Version
 **The callMode variable specifies the reason for the notification.
 Every color update has the potential to trigger a notification.
 
-callMode | Description | Behavior
+| callMode | Description | Behavior |
 | --- | --- | --- |
 0 | Initial Boot | Do not notify
 1 | Direct Change via UI or API | notifyDirect?
@@ -96,7 +96,7 @@ callMode | Description | Behavior
 
 ***This is the version of the UDP protocol.
 
-UDP Version | Description | WLED Version
+| UDP Version | Description | WLED Version |
 | --- | --- | --- |
 0 | Basic Support | 0.3
 1 | White Value supported | 0.4p

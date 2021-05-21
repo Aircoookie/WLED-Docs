@@ -35,7 +35,7 @@ Go to the IP `4.3.2.1` in your browser. You should also be able to use the embed
 **5.** Check your router device list for the IP of the WLED device inside your local network. For easier discovery, use the WLED app! Have fun with the software!
 
 ### Default GPIO Usage:
-Device | GPIO | Notes
+| Device | GPIO | Notes |
 |---|---|---|
 LED Data | 2 |
 LED Clock | 0 | When used

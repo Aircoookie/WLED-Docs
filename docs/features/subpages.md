@@ -8,7 +8,7 @@ hide:
 This is the sitemap of the module server.
 Access with \<ESP-IP\>/path (Example: **192.168.8.4/settings**)
 
- Path | Description | OTA rights required | Since version
+| Path | Description | OTA rights required | Since version |
 | --- | --- | --- | --- |
 / | Default UI, index page | No | 0.2
 /update | Upload new firmware | Yes | 0.3
@@ -39,7 +39,7 @@ Access with \<ESP-IP\>/path (Example: **192.168.8.4/settings**)
 /edit | SPIFFS page (if USEFS) | Yes | 0.2
 
 #### Removed sites
-Path | Description | OTA rights required | Versions
+| Path | Description | OTA rights required | Versions |
 | --- | --- | --- | --- |
 /list | Lists SPIFFS contents (if USEFS) | Yes | 0.2-0.8.3
 /easter | Joke page | No | 0.6.2 only

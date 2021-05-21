@@ -23,26 +23,26 @@ Add one or multiple of the following parameters after the base URL/IP to change 
 
 ## LED control
 
-Parameter | Value Range | Description | Since Version
+| Parameter | Value Range | Description | Since Version |
 | --- | --- | --- | --- |
-&A= | 0 to 255 | Master brightness | 0.2
-&T= | 0, 1, or 2 | Master Off/On/Toggle | 0.3
-&R= | 0 to 255 | Primary Red value | 0.2
-&G= | 0 to 255 | Primary Green value | 0.2
-&B= | 0 to 255 | Primary Blue value | 0.2
-&W= | 0 to 255 | Primary White value | 0.4
-&FX= | 0 to 101 | LED Effect Index | 0.3
-&SX= | 0 to 255 | Effect Speed | 0.3
-&IX= | 0 to 255 | Effect Intensity | 0.5.0
-&FP= | 0 to 46 | FastLED Palette | 0.8.0
-&NL= | 0 to 255 | Nightlight active and duration in minutes | 0.3
-&ND | none | Toggles nightlight on but uses default duration | 0.6.3
-&NT= | 0 to 255 | Nightlight target brightness | 0.5.0
-&NF= | 0 to 2 | Fade Nightlight, 1 = fade brightness only,<br/>2 = additionaly fade color from primary to secondary color | 0.5.0
+| &A= | 0 to 255 | Master brightness | 0.2 |
+| &T= | 0, 1, or 2 | Master Off/On/Toggle | 0.3 |
+| &R= | 0 to 255 | Primary Red value | 0.2 |
+| &G= | 0 to 255 | Primary Green value | 0.2 |
+| &B= | 0 to 255 | Primary Blue value | 0.2 |
+| &W= | 0 to 255 | Primary White value | 0.4 |
+| &FX= | 0 to 101 | LED Effect Index | 0.3 |
+| &SX= | 0 to 255 | Effect Speed | 0.3 |
+| &IX= | 0 to 255 | Effect Intensity | 0.5.0 |
+| &FP= | 0 to 46 | FastLED Palette | 0.8.0 |
+| &NL= | 0 to 255 | Nightlight active and duration in minutes | 0.3 |
+| &ND | none | Toggles nightlight on but uses default duration | 0.6.3 |
+| &NT= | 0 to 255 | Nightlight target brightness | 0.5.0 |
+| &NF= | 0 to 2 | Fade Nightlight, 1 = fade brightness only,<br/>2 = additionaly fade color from primary to secondary color | 0.5.0 |
 
 ## Advanced
 
-Parameter | Value Range | Description | Since Version
+| Parameter | Value Range | Description | Since Version |
 | --- | --- | --- | --- |
 &CL= | HEX/DEC | Primary color | 0.8.0
 &C2= | HEX/DEC | Secondary color | 0.8.0
@@ -74,7 +74,7 @@ Loxone offers two commands. One for RGB values and one for brightness and color 
 
 ## Notifications
 
-Parameter | Value Range | Description | Since Version
+| Parameter | Value Range | Description | Since Version |
 | --- | --- | --- | --- |
 &RN= | 0 or 1 | Receive UDP Notifications | 0.3
 &SN= | 0 or 1 | Send UDP Notifications | 0.3
@@ -83,7 +83,7 @@ Parameter | Value Range | Description | Since Version
 
 ## Presets
 
-Parameter | Value Range | Description | Since Version
+| Parameter | Value Range | Description | Since Version |
 | --- | --- | --- | --- |
 &PS= | 1 to 16 | Saves current setup to preset | 0.4
 &PL= | 0 to 16 | Applies entire preset | 0.4
@@ -96,14 +96,14 @@ Parameter | Value Range | Description | Since Version
 
 ## Macros
 
-Parameter | Value Range | Description | Since Version
+| Parameter | Value Range | Description | Since Version |
 | --- | --- | --- | --- |
 &M= | 0 to 16 | Apply macro (deprecated, added for compatibility with pre-0.11 automations) | 0.5.0
 
 ## Segments
 It is highly recommended to use the [JSON API](/interfaces/json-api) when dealing with Segments.
 
-Parameter | Value Range | Description | Since Version
+| Parameter | Value Range | Description | Since Version |
 | --- | --- | --- | --- |
 &SM= | 0 to 9 | Set the main segment (values are reported to XML) | 0.9.0
 &SS= | 0 to 9 | Select segment to apply THIS api call to | 0.9.0
@@ -117,7 +117,7 @@ Parameter | Value Range | Description | Since Version
 
 ## General and Experimental
 
-Parameter | Value Range | Description | Since Version
+| Parameter | Value Range | Description | Since Version |
 | --- | --- | --- | --- |
 &RB | none | Reboot WLED | 0.10.0 (?)
 &ST= | 32bit | Current UTC time in Unix epoch | 0.4
@@ -139,28 +139,28 @@ Parameter | Value Range | Description | Since Version
 ## XML response
 This is the XML file sent as response to every API call.
 
-Parameter | Value Range | Description
+| Parameter | Value Range | Description |
 | --- | --- | --- |
-\<ac> | 0 to 255 | Master Brightness
-\<cl> | 3x 0..255 | Primary Color RGB
-\<cs> | 3x 0..255 | Secondary RGB
-\<ns> | 0 or 1 | Notification Sending on
-\<nr> | 0 or 1 | Notification Receive on
-\<nl> | 0 or 1 | Nightlight active
-\<nf> | 0 or 2 | Nightlight Fade type
-\<nd> | 0 to 255 | Nightlight delay
-\<nt> | 0 to 255 | Nightlight target brightness
-\<fx> | 0 to 73 | Effect index
-\<sx> | 0 to 255 | Effect speed
-\<ix> | 0 to 255 | Effect intensity
-\<fp> | 0 to 43 | FastLED palette
-\<wv> | -1 to 255 | Primary White value
-\<ws> | 0 to 255 | Secondary White
-\<ps> | 0 to 255 | Current Preset
-\<cy> | 0 or 1 | Preset Cycling enabled
-\<md> | 0 or 1 | RGB or HSB UI mode
-\<ds> | String 0..32 | Server description
-\<ss> | 0 to 12 | Segment ID
+`\<ac>` | 0 to 255 | Master Brightness
+`\<cl>` | 3x 0..255 | Primary Color RGB
+`\<cs>` | 3x 0..255 | Secondary RGB
+`\<ns>` | 0 or 1 | Notification Sending on
+`\<nr>` | 0 or 1 | Notification Receive on
+`\<nl>` | 0 or 1 | Nightlight active
+`\<nf>` | 0 or 2 | Nightlight Fade type
+`\<nd>` | 0 to 255 | Nightlight delay
+`\<nt>` | 0 to 255 | Nightlight target brightness
+`\<fx>` | 0 to 73 | Effect index
+`\<sx>` | 0 to 255 | Effect speed
+`\<ix>` | 0 to 255 | Effect intensity
+`\<fp>` | 0 to 43 | FastLED palette
+`\<wv>` | -1 to 255 | Primary White value
+`\<ws>` | 0 to 255 | Secondary White
+`\<ps>` | 0 to 255 | Current Preset
+`\<cy>` | 0 or 1 | Preset Cycling enabled
+`\<md>` | 0 or 1 | RGB or HSB UI mode
+`\<ds>` | String 0..32 | Server description
+`\<ss>` | 0 to 12 | Segment ID
 
 ## In-/decrementing values
 

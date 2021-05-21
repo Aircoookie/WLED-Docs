@@ -12,7 +12,7 @@ This page lists some third-party hardware and/or tools that are working with WLE
 Please use a decent and neutral description when adding things to this list.
 
 ## Addressable LED Strips
-Type | Voltage | Comments
+| Type | Voltage | Comments |
 |---|---|---|
 WS2812B | 5v |
 WS2813 | 5v | 
@@ -28,7 +28,7 @@ GS8208 | 12v |
 
 ## ESP8266/ESP32 boards
 
-Name | Chip | Description
+| Name | Chip | Description |
 |---|---|---|
 [Wemos D1 mini](https://docs.wemos.cc/en/latest/d1/d1_mini.html) | ESP8266 | An affordable ESP8266 development board. Aircoookie's recommendation for running WLED. Current version: 3.1.0
 [Wemos D1 mini Pro](https://docs.wemos.cc/en/latest/d1/d1_mini_pro.html) | ESP8266 | A newer development board with an external antenna connector. Works very well with WLED. Recommended if your signal strength is too low with another board. Current version: 2.0.0. Version 1.0.0 has the same form factor as the D1 mini.
@@ -54,7 +54,7 @@ NodeMCU-32s | ESP32 | The most common ESP32 development board. Works well, depen
 
 ## Useful boards and addons
 
-Name | Description
+| Name | Description |
 |---|---|
 [Simple WLED Board](https://github.com/wladwnt/wled) | Very simple DIY board, minimum of required components, option for 5V/12V LEDs. Easy to solder (no SMT components). Simple to understand connection schematics and pictures.
 [WLED Wemos shield](https://github.com/srg74/WLED-wemos-shield) | DIY board, 100% compatible with WLED project and WLED <a href=https://github.com/atuline/WLED>sound reactive fork</a>. Integrated level shifter, fuse for LED strip, resettable fuse for the development board, exposed I2C interface for display or sensors, relay for energy-saving and 1-wire temperature sensor. Exposed pins for Analog and Digital microphones. Works with Wemos D1 mini and D1-style ESP32 boards. <a href=https://github.com/srg74/WLED/tree/WLED_wemos_shield>Firmware is here</a>.
@@ -70,7 +70,7 @@ Name | Description
 
 ## Levelshifters
 
-Name | Description
+| Name | Description |
 |---|---|
 SN74AHCT125N | Aircoookie's recommended levelshifter. Used on the QuinLed Dig-Uno and <a href="https://github.com/srg74/WLED-wemos-shield">WLED Wemos shield</a>.
 SN74HCT125N | Slower, cheaper version. Works just as well for WS2812, but not recommended for APA102.
@@ -80,7 +80,7 @@ NB: I2C shifters are too slow for wled, so don't use them.
 
 ## USB/TTL adapters
 
-Name | Description
+| Name | Description |
 |---|---|
 [CH340](https://www.aliexpress.com/item/32761423124.html) | CH340 module instead of CP2102, PL2303 or FTDI/FTDT. The CH340 can deliver more current which is needed while the flash process depending on the board type. The timing is also much more stable. **For boards with an USB/TTL adapter onboard this is NOT needed**
 [ESP uploader](https://github.com/srg74/ESP-uploader) |  CP2102N module. Same USB to UART converter as many recent Dev boards using. Featuring latest USB-C connector. For use with many ESP32, ESP8266, ESP8255 and Tuya based modules. 3.3V logic and 5V power pass through for custom boards.

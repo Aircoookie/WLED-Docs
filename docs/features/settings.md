@@ -15,7 +15,7 @@ This documentation applies to WLED 0.8.5.
 
 This sub-page offers options to connect the ESP to different WiFi/WLAN devices.
 
-Setting name | Value Range | Description
+| Setting name | Value Range | Description |
 |---|---|---|
 Network Name | String 0..32 | The name (SSID) of your home WiFi. Spaces and some other characters are not supported.
 Network password | String 0..64 | The password of your home WiFi
@@ -36,7 +36,7 @@ WiFi sleep | Y/N | Disabling WiFi sleep can increase reliability, but increases 
 
 This sub-page configures the state of your lights.
 
-Setting name | Value Range | Description
+| Setting name | Value Range | Description |
 |---|---|---|
 LED count | 1..1500 | How many LEDs are in your WS2812B strip
 Automatic brightness limiter | Y/N | Limit brightness to stay in a given current range
@@ -67,7 +67,7 @@ Skip first LED | Y/N | Will turn off the first LED and shift the remaining by 1 
 
 This sub-page changes the look of the web interface.
 
-Setting name | Value Range | Description
+| Setting name | Value Range | Description |
 |---|---|---|
 Server description | String 1..32 | The name of the device as shown on the top of the UI. Differs from Alexa device name
 Sync button toggles... | Y/N | If enabled, both send and receive are toggled by the button in UI. If disabled, only sending is toggled and receiving is kept as configured in Sync settings.
@@ -76,7 +76,7 @@ Sync button toggles... | Y/N | If enabled, both send and receive are toggled by 
 
 This sub-page configures external software synchronization interfaces.
 
-Setting name | Value Range | Description
+| Setting name | Value Range | Description |
 |---|---|---|
 On/Off button enabled | Y/N | Check if there is a physical pushbutton connected to GPIO0
 Infrared receiver type | select | Type of infrared receiver
@@ -116,7 +116,7 @@ Hue status | - | Shows the current connection status to a hue bridge
 
 This sub-page configures automation tasks.
 
-Setting name | Value Range | Description
+| Setting name | Value Range | Description |
 |---|---|---|
 Get time from NTP | Y/N | Whether to get the current time from the internet
 Use 24h format | Y/N | Use 24h clock format instead of AM/PM
@@ -138,7 +138,7 @@ Timed-Light-Over Macro | 0..16 | Macro to trigger when timed light is done
 
 This sub-page manages permissions and updates.
 
-Setting name | Value Range | Description
+| Setting name | Value Range | Description |
 |---|---|---|
 Enable OTA lock | Y/N | If enabled, no firmware updates may be done via WiFi and some settings can't be changed.
 Passphrase | String 0..32 | To disable OTA lock, you need a password. The default is "wledota". Change it!

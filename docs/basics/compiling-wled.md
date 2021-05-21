@@ -42,7 +42,7 @@ For current compiles I recommend the latest Arduino core version 2.7.4. If you d
 
 - You will need to install a few libraries:
 
-Library Name | Platform
+| Library Name | Platform |
 | --- | --- |
 [NeoPixelBus](https://github.com/Makuna/NeoPixelBus) (2.6.0) | All
 [FastLED](https://github.com/FastLED/FastLED) | All
