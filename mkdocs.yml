@@ -13,8 +13,11 @@ theme:
   logo: assets/images/ui/akemi/000_base.png
   icon: 
     repo: fontawesome/brands/github
-  # features: 
-  #   - navigation.tabs
+  features: 
+    - navigation.top
+    # - navigation.expand
+    - navigation.tabs
+    # - toc.integrate
   palette:
     - scheme: slate
       primary: red
@@ -95,4 +98,3 @@ nav:
     - Contributors & Credits: about/contributors.md
     - Privacy Policy: about/privacy-policy.md
     - Upcoming Features: about/roadmap.md
-    
