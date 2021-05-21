@@ -2,7 +2,7 @@
 title: Privacy Policy
 hide:
   # - navigation
-  # - toc
+  - toc
 ---
 
 By using WLED embedded system code, the WLED iOS mobile application, the WLED Android mobile application, web client or associated Services, no personally identifiable data is collected, transmitted and/or stored on external servers.
