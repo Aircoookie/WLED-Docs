@@ -48,4 +48,51 @@ extra_css:
   - assets/stylesheets/global.css
 extra_javascript:
   - assets/js/newtab.js
-  
+nav:
+  - Welcome: index.md
+  - Basics:
+    - Getting Started: basics/getting-started.md
+    - Compatibility:
+      - Hardware: basics/compatible-hardware.md
+      - Software: basics/compatible-software.md
+    - Installation:
+      - Install WLED Binary: basics/install-binary.md
+      - Install using ESP GUI: basics/install-gui.md
+      - Compiling WLED: basics/compiling-wled.md
+    - Tutorials: basics/tutorials.md
+    - FAQ: basics/faq.md
+  - Features:
+    - Effects & Palettes: features/effects-palettes.md
+    - Macros: features/macros.md
+    - Presets: features/presets.md
+    - Segments: features/segments.md
+    - Settings: features/settings.md
+    - Multi-strip Support: features/multi-strip.md
+    - Relay Control: features/relay-control.md
+    - Web GUI Sitemap: features/subpages.md
+  - Interfaces: 
+    - Blynk: interfaces/blynk.md
+    - DMX: interfaces/dmx.md
+    - E1.31 (DMX) / Art-Net: interfaces/e1.31-dmx.md
+    - HTTP Request API: interfaces/http-api.md
+    - JSON API: interfaces/json-api.md
+    - MQTT: interfaces/mqtt.md
+    - Infrared: interfaces/infrared.md
+    - Philips Hue: interfaces/philips-hue.md
+    - WLED UDP Sync: interfaces/udp-notifier.md
+    - UDP Realtime / tpm2.net: interfaces/udp-realtime.md
+    - Websocket: interfaces/websocket.md
+  - Advanced: 
+    - Home Automation: advanced/home-automation.md
+    - Remote Access / IFTTT: advanced/remote-access-ifttt.md
+    - Security: advanced/security.md
+    - Wiring Protips: advanced/wiring.md
+    - Compile WLED: advanced/compile-wled.md
+    - Custom Features: advanced/custom-features.md
+    - ESP32 Recovery: advanced/esp32-recovery.md
+    - Mapping: advanced/mapping.md
+  - About: 
+    - Contributors & Credits: about/contributors.md
+    - Privacy Policy: about/privacy-policy.md
+    - Upcoming Features: about/roadmap.md
+    
