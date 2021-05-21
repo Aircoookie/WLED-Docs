@@ -5,7 +5,7 @@ hide:
   # - toc
 ---
 
-WLED was designed in a way that you should be safe to have a [router port forwarding](https://github.com/Aircoookie/WLED/wiki/Remote-Access-and-IFTTT) to control the system from the public internet. This page will tell you what you can expect by WLEDs security.
+WLED was designed in a way that you should be safe to have a [router port forwarding](/advanced/remote-access-ifttt) to control the system from the public internet. This page will tell you what you can expect by WLEDs security.
 
 ### TLDR - what to do?
 

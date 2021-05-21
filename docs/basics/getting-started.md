@@ -11,16 +11,16 @@ Unless noted otherwise, all information applies to the latest release (v0.11.0).
 
 ### Quick start guide:
 
-**1.** Connect a  WS2812B-compatible RGB(W) led strip to `GPIO2`. On most ESP8266 based development boards this pin is labeled `D4`, on ESP32 based boards use `D2` or `G2` or `2`. _If this wire cannot be kept short, use a [level shifter/translator](https://github.com/Aircoookie/WLED/wiki/Compatible-hardware#levelshifters)._ Optionally connect a normally open pushbutton to `GPIO0` (NodeMCU/Wemos pin `D3`<!-- What pin for ESP32? -->) and ground.  
+**1.** Connect a  WS2812B-compatible RGB(W) led strip to `GPIO2`. On most ESP8266 based development boards this pin is labeled `D4`, on ESP32 based boards use `D2` or `G2` or `2`. _If this wire cannot be kept short, use a [level shifter/translator](/basics/compatible-hardware#levelshifters)._ Optionally connect a normally open pushbutton to `GPIO0` (NodeMCU/Wemos pin `D3`<!-- What pin for ESP32? -->) and ground.  
 **Note:** Board pin naming varies depending on the manufacturer. Please use the board pinout from the _specific_ board you purchased and use the GPIO PINS to reference this guide. Make sure to connect ESP and LED-strip grounds together.
 
 ![](https://i.ibb.co/WFc797W/connections.jpg)
 
 **2.** Flash the software to your ESP module! There are two options for this step:
 
-[I just want to use WLED! (install release binary)](https://github.com/Aircoookie/WLED/wiki/Install-WLED-binary)
+[I just want to use WLED! (install release binary)](/basics/install-binary)
 
-[I want to modify WLED (compile from source code)](https://github.com/Aircoookie/WLED/wiki/Compiling-WLED)
+[I want to modify WLED (compile from source code)](/basics/compiling-wled)
 
 If everything worked the first thirty LEDs will light up in bright orange to stimulate courage, friendliness and success!
 

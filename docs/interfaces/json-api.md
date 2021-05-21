@@ -134,7 +134,7 @@ lor | 0, 1, or 2 | Live data override. 0 is off, 1 is override until live data e
 time | uint32 | Set module time to unix timestamp. Not included in state response.	
 mainseg | 0 to info.leds.maxseg-1 | Main Segment | Sets which segment ID is the main segment	
 seg | Array of segment objects | Segments are individual parts of the LED strip. In 0.9.0 this will enables running different effects on different parts of the strip.	
-playlist | object | [Custom preset playlists](https://github.com/Aircoookie/WLED/wiki/JSON-API#playlists). Not included in state response (available since 0.11.0)	
+playlist | object | [Custom preset playlists](#playlists). Not included in state response (available since 0.11.0)	
 
 #### Contents of the segment object	
 

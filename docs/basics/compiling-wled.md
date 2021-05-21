@@ -57,7 +57,7 @@ Library Name | Platform
 
 All other dependencies are included with WLED for convenience.
 
-- Now compile and flash the software! Make sure you erase everything when you flash! (If your board config does not provide this option, you can `Sketch -> Export compiled Binary` and upload with [any ESP flashing tool](https://github.com/Aircoookie/WLED/wiki/Install-WLED-binary).)
+- Now compile and flash the software! Make sure you erase everything when you flash! (If your board config does not provide this option, you can `Sketch -> Export compiled Binary` and upload with [any ESP flashing tool](/basics/install-binary).)
 
 ### Compilation settings (Arduino IDE)
 ESP8266:

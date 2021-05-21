@@ -20,7 +20,7 @@ WLED will subscribe to up to six topics to change the state of the lights.
 - **[mqttDeviceTopic]/col**\
   -> Send color as HEX (#WWRRGGBB or #RRGGBB) or 32bit DEC. Hex has '#','h' or 'H' as prefix.
 - **[mqttDeviceTopic]/api**\
-  -> Send an API call (using the [HTTP API](https://github.com/Aircoookie/WLED/wiki/HTTP-request-API) or, since 0.11, JSON API syntax). You may omit the "win" and just send e.g. "FX=73"
+  -> Send an API call (using the [HTTP API](/interfaces/http-api) or, since 0.11, JSON API syntax). You may omit the "win" and just send e.g. "FX=73"
 
 - **[mqttGroupTopic]**  
 - **[mqttGroupTopic]/col**  

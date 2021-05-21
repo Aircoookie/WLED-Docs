@@ -15,7 +15,7 @@ As you increase the number of LEDs, you increase the amps your power supply will
 
 For example, if you want to power your LEDs off a sealed lead acid battery (e.g. a car battery), you need to be very careful about current. These kinds of batteries can supply hundreds of amps, so you need to ensure that you use fuses along the way to protect against shorts. If you're using USB pocket chargers on the other hand, they tend to be current limited (most provide only 1-2A max) so you can worry less about fusing there.
 
-Make sure to also check out this [great list of resources to help you learn](https://github.com/Aircoookie/WLED/wiki/Learning-the-ropes)!
+Make sure to also check out this [great list of resources to help you learn](/basics/tutorials)!
 
 # Small Setups (< 30 RGB LEDs)
 

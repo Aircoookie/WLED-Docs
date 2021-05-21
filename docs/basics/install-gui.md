@@ -11,7 +11,7 @@ You can find precompiled .bin files on the <a href="../releases">release page</a
 `WLED_[...]_ESP[...].bin`
 
 If you are not sure what binary you should use look at this page:
-[What binary should I use?](https://github.com/Aircoookie/WLED/wiki/Install-WLED-binary#what-binary-should-i-use)
+[What binary should I use?](/basics/install-binary#what-binary-should-i-use)
 
 ## 2. Downloading the Flash Download Tools
 Espressif has an official GUI tool for Windows.
@@ -41,4 +41,4 @@ Now a new window opens.
 
 Now the firmware will be flashed to the ESP. When the firmware flashing was successful you see this: <img src="https://github.com/WoodyLetsCode/ESP-RGB-Controller/raw/master/images/ESP8266%20DownloadTool_finish.png" width="50px">. Finally restart your board.
 
-**Next steps:** [Quick start guide](https://github.com/Aircoookie/WLED/wiki#quick-start-guide)
+**Next steps:** [Quick start guide](/basics/getting-started)

@@ -11,49 +11,49 @@ This page will continually get updated with questions often asked.
 
 ### Installation
 
-- [What binary should I use?](https://github.com/Aircoookie/WLED/wiki/Install-WLED-binary#what-binary-should-i-use)
-- [I've flashed a bin, but i get no response at all](FAQ#ive-flashed-a-bin-but-i-get-no-response-at-all)
+- [What binary should I use?](#what-binary-should-i-use)
+- [I've flashed a bin, but i get no response at all](#ive-flashed-a-bin-but-i-get-no-response-at-all)
 
 ### Connection issues
 
-- [Once I attach LEDs, I can't connect to the ESP anymore!](FAQ#once-i-attach-leds-i-cant-connect-to-the-esp-anymore)
-- [I have entered my WiFi credentials and rebooted, but I can not connect to the module now!](FAQ#i-have-entered-my-wifi-credentials-and-rebooted-but-i-can-not-connect-to-the-module-now)
-- [The module once was connected, but I can no longer reach it.](FAQ#the-module-once-was-connected-but-i-can-no-longer-reach-it)
-- [The wled-xxx.local address (mDNS) does not work.](FAQ#the-wled-xxxlocal-address-mdns-does-not-work)
-- [Is it safe to do a port forwarding to the public internet to control the lights from anywhere?](https://github.com/Aircoookie/WLED/wiki/Security)
-- [My device is unresponsive or animations lag!](FAQ#my-device-is-unresponsive-or-animations-lag)
-- [I'm having a bootloop! (LEDs turn on every ~5seconds)](FAQ#im-having-a-bootloop-leds-turn-on-every-5seconds)
-- [Still having connection issues/connection dropping: what more can i check?](FAQ#still-having-connection-issuesconnection-dropping-what-more-can-i-check)
+- [Once I attach LEDs, I can't connect to the ESP anymore!](#once-i-attach-leds-i-cant-connect-to-the-esp-anymore)
+- [I have entered my WiFi credentials and rebooted, but I can not connect to the module now!](#i-have-entered-my-wifi-credentials-and-rebooted-but-i-can-not-connect-to-the-module-now)
+- [The module once was connected, but I can no longer reach it.](#the-module-once-was-connected-but-i-can-no-longer-reach-it)
+- [The wled-xxx.local address (mDNS) does not work.](#the-wled-xxxlocal-address-mdns-does-not-work)
+- [Is it safe to do a port forwarding to the public internet to control the lights from anywhere?](/advanced/security)
+- [My device is unresponsive or animations lag!](#my-device-is-unresponsive-or-animations-lag)
+- [I'm having a bootloop! (LEDs turn on every ~5seconds)](#im-having-a-bootloop-leds-turn-on-every-5seconds)
+- [Still having connection issues/connection dropping: what more can i check?](#still-having-connection-issuesconnection-dropping-what-more-can-i-check)
 
 ### Compilation issues
 
-- [When compiling WLED in VS Code using platformio, I get an error.](FAQ#when-compiling-wled-in-vs-code-using-platformio-i-get-an-error)
+- [When compiling WLED in VS Code using platformio, I get an error.](#when-compiling-wled-in-vs-code-using-platformio-i-get-an-error)
 
 ### LED issues
 
-- [My LEDs don't turn on at all.](FAQ#my-leds-dont-turn-on-at-all)
-- [My LEDs don't get as bright as they should!](FAQ#my-leds-dont-get-as-bright-as-they-should)
-- [My LEDs are unable to be set into an consistent solid color.](FAQ#my-leds-are-unable-to-be-set-into-an-consistent-solid-color)
-- [When I select green, the LEDs turn red!](FAQ#when-i-select-green-the-leds-turn-red)
-- [My LEDs act funny and flicker randomly.](FAQ#my-leds-act-funny-and-flicker-randomly)
-- [Not all my LEDs turn on.](FAQ#not-all-my-leds-turn-on)
-- [How to turn off the bright blue onboard LED?](FAQ#how-to-turn-off-the-bright-blue-onboard-led)
-- [Why is gpio2/D4 the default LED pin?](FAQ#why-is-gpio2d4-the-default-led-pin)
-- [Why can I only use 500 LEDs on the ESP8266 GPIO pin 3?](FAQ#why-can-i-only-use-500-leds-on-the-esp8266-gpio-pin-3)
-- [What LED strip hardware is supported by WLED?](FAQ#what-led-strip-hardware-is-supported-by-wled)
+- [My LEDs don't turn on at all.](#my-leds-dont-turn-on-at-all)
+- [My LEDs don't get as bright as they should!](#my-leds-dont-get-as-bright-as-they-should)
+- [My LEDs are unable to be set into an consistent solid color.](#my-leds-are-unable-to-be-set-into-an-consistent-solid-color)
+- [When I select green, the LEDs turn red!](#when-i-select-green-the-leds-turn-red)
+- [My LEDs act funny and flicker randomly.](#my-leds-act-funny-and-flicker-randomly)
+- [Not all my LEDs turn on.](#not-all-my-leds-turn-on)
+- [How to turn off the bright blue onboard LED?](#how-to-turn-off-the-bright-blue-onboard-led)
+- [Why is gpio2/D4 the default LED pin?](#why-is-gpio2d4-the-default-led-pin)
+- [Why can I only use 500 LEDs on the ESP8266 GPIO pin 3?](#why-can-i-only-use-500-leds-on-the-esp8266-gpio-pin-3)
+- [What LED strip hardware is supported by WLED?](#what-led-strip-hardware-is-supported-by-wled)
 
 ### General questions
 
-- [What does the name WLED mean?](FAQ#what-does-the-name-wled-mean)
-- [What is the difference between the brightness sliders in the web UI?](FAQ#what-is-the-difference-between-the-brightness-sliders-in-the-web-ui)
-- [My Segments are gone after a reboot!](FAQ#my-segments-are-gone-after-a-reboot)
-- [May I sell a product running WLED?](FAQ#may-i-sell-a-product-running-wled)
+- [What does the name WLED mean?](#what-does-the-name-wled-mean)
+- [What is the difference between the brightness sliders in the web UI?](#what-is-the-difference-between-the-brightness-sliders-in-the-web-ui)
+- [My Segments are gone after a reboot!](#my-segments-are-gone-after-a-reboot)
+- [May I sell a product running WLED?](#may-i-sell-a-product-running-wled)
 
 ### My question or solution is not on this page
 
 - [Check out the WLED forum!](https://wled.discourse.group/)
-- [Look through the Issues](FAQ#look-through-the-issues)
-- [If I report a new Issue, what do i need to share?](FAQ#if-i-report-a-new-issue-what-do-i-need-to-share)
+- [Look through the Issues](#look-through-the-issues)
+- [If I report a new Issue, what do i need to share?](#if-i-report-a-new-issue-what-do-i-need-to-share)
 
 
 
@@ -61,7 +61,7 @@ This page will continually get updated with questions often asked.
 
 ### What binary should I use?
 
-Please see [this page](https://github.com/Aircoookie/WLED/wiki/Install-WLED-binary#what-binary-should-i-use).
+Please see [this page](/basics/install-binary#what-binary-should-i-use).
 
 
 ### I've flashed a bin, but i get no response at all
@@ -100,7 +100,7 @@ I highly recommend you install the WLED app, which makes automatic discovery eas
 
 ### Is it safe to do a port forwarding to the public internet to control the lights from anywhere?
 
-See [this](https://github.com/Aircoookie/WLED/wiki/Security) page.
+See [this](/advanced/security) page.
 
 
 ### My device is unresponsive or animations lag!
@@ -283,7 +283,7 @@ When you create a ticket, please share:
 - Specifications of your power supply (max. current/voltage)
 - how you wired up all components (a diagram and/or picture often helps)
 - the BIN-file you tried to flash (version and file name) or your IDE version if compiling from source
-- Have you followed the quick start and compile settings at https://github.com/Aircoookie/WLED/wiki ?
+- Have you followed the quick start and compile settings at https://docs.wled.me ?
 - Has it worked before?
 - Does it works without any LEDs connected? (for instance the controller just connected to your PC over USB)
 - Are you using/trying to use DHCP or static IP?

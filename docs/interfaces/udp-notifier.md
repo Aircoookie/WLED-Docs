@@ -76,7 +76,7 @@ Byte Index | Var Name | Description | Notifier Version
 19 | effectPalette | FastLED palette | 5
 20-23 | - | Zeros | -
 
-*The notifier protocol is only used if this byte is 0. Otherwise, one of the [UDP Realtime](https://github.com/Aircoookie/WLED/wiki/UDP-Realtime-Control) protocols will be used.
+*The notifier protocol is only used if this byte is 0. Otherwise, one of the [UDP Realtime](/interfaces/udp-realtime) protocols will be used.
 
 **The callMode variable specifies the reason for the notification.
 Every color update has the potential to trigger a notification.

@@ -17,7 +17,7 @@ As of version 0.9.2 WLED supports DMX output via MAX485. This is great for contr
 * type of fixture
 
 #### software setup
-For the DMX feature to work, you'll need to compile WLED from source. It's not a big deal, you can do it! [Here](https://github.com/Aircoookie/WLED/wiki) is the Quick Start guide. There you'll find the section "i want to modify WLED".
+For the DMX feature to work, you'll need to compile WLED from source. It's not a big deal, you can do it! [Here](/basics/getting-started) is the Quick Start guide. There you'll find the section "i want to modify WLED".
 
 1. make sure, you can compile the latest version of WLED without any issues. Then continue.
 

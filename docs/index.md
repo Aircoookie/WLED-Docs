@@ -55,9 +55,9 @@ A fast and feature-rich implementation of an ESP8266/ESP32 webserver to control 
 
 ## 📲 Quick start guide and documentation
 
-See the [wiki](https://github.com/Aircoookie/WLED/wiki)!
+See the [getting started](/basics/getting-started) page!
 
-[On this page](https://github.com/Aircoookie/WLED/wiki/Learning-the-ropes) you can find excellent tutorials made by the community and helpful tools to help you get your new lamp up and running!
+[On this page](/basics/tutorials) you can find excellent tutorials made by the community and helpful tools to help you get your new lamp up and running!
 
 ## 🖼️ Images
 <img src="/assets/images/ui/headers/macbook-pro-space-gray-on-the-wooden-table.jpg" width="50%"><img src="assets/images/ui/headers/walking-with-iphone-x.jpg" width="50%">
@@ -88,7 +88,7 @@ Any | 5v 3-pin ARGB for PC | Any PC RGB device that supports the 5v 3-pin ARGB m
 ## ✌️ Other
 
 Licensed under the MIT license  
-Credits [here](https://github.com/Aircoookie/WLED/wiki/Contributors-&-About)!
+Credits [here](/about/contributors)!
 
 Uses Linearicons by Perxis!
 

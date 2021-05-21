@@ -5,7 +5,7 @@ hide:
   # - toc
 ---
 
-See [Presets](https://github.com/Aircoookie/WLED/wiki/Presets) for 0.11.0+.
+See [Presets](/features/presets) for 0.11.0+.
 
 You are able to set custom actions ("Macros") in Time & Macro settings for the following events:
 
@@ -17,7 +17,7 @@ You are able to set custom actions ("Macros") in Time & Macro settings for the f
 - Timed light duration over
 - Device (re)boot (up to 0.10.2, use LED settings `Boot preset` in 0.11)
 
-Each macro has the format of a standard [HTTP API call](https://github.com/Aircoookie/WLED/wiki/HTTP-request-API) without the IP. Optionally, the "win&" may be omitted.
+Each macro has the format of a standard [HTTP API call](/interfaces/http-api) without the IP. Optionally, the "win&" may be omitted.
 For example, the macro "A=255" sets the brightness to maximum. "R=255&G=160&B=0" sets the color to orange.
 You can specify up to 16 macros. (up to 250 in WLED 0.11 since the Macro functionality has been merged into the Presets feature)
 

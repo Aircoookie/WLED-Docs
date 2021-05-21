@@ -9,14 +9,14 @@ WLED's HTTP API allows you to set many properties of your lights, even more than
 
 _Unsure how all this API stuff works? Check out [this amazing guide](https://tynick.com/blog/01-28-2020/controlling-wled-with-raspberry-pi-using-the-wled-api/) by tynick!_
 
-**Notice: While this API is not deprecated, it is highly recommended to use the [JSON API](https://github.com/Aircoookie/WLED/wiki/JSON-API) instead of the HTTP API for new integrations, as it is structured in a better way and allows efficient use of newer features like segments, presets, and playlists.**
+**Notice: While this API is not deprecated, it is highly recommended to use the [JSON API](/interfaces/json-api) instead of the HTTP API for new integrations, as it is structured in a better way and allows efficient use of newer features like segments, presets, and playlists.**
 
 The basic URL scheme is: `[ipadress]/win`. This will return an XML file with some current values (see bottom of page).
 Parameters can be added to control some of the variables.
 - Example (AP): `192.168.4.1/win&A=255` sets the brightness to maximum
 - Example (mdns): `led.local/win&A=128&FX=0` sets the brightness to half and the effect to Solid
 
-In conjunction with a [router port forwarding](https://github.com/Aircoookie/WLED/wiki/Remote-Access-and-IFTTT) this can be used to automate WLED, for example via IFTTT.
+In conjunction with a [router port forwarding](/advanced/remote-access-ifttt) this can be used to automate WLED, for example via IFTTT.
 
 Add one or multiple of the following parameters after the base URL/IP to change values:
 (if the parameter is unknown or the value illegal nothing will happen)
@@ -101,7 +101,7 @@ Parameter | Value Range | Description | Since Version
 &M= | 0 to 16 | Apply macro (deprecated, added for compatibility with pre-0.11 automations) | 0.5.0
 
 ## Segments
-It is highly recommended to use the [JSON API](https://github.com/Aircoookie/WLED/wiki/JSON-API) when dealing with Segments.
+It is highly recommended to use the [JSON API](/interfaces/json-api) when dealing with Segments.
 
 Parameter | Value Range | Description | Since Version
 | --- | --- | --- | --- |
