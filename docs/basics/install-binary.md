@@ -48,7 +48,7 @@ If your device is already running a firmware with built-in OTA capability, you c
 
 I always recommend to use the latest release. Starting from WLED 0.12.0, pins can be configured in LED settings and specific binaries for different LED pins or types are no longer needed. Please use the following binary for these boards respectively:
 
-Binary Name | For devices
+| Binary Name | For devices |
 | --- | --- |
 | WLED_0.x.x_ESP8266.bin | NodeMCU, Wemos D1 mini, ESP-12, all ESP8266 with 4MB flash. Recommended.
 | WLED_0.x.x_ESP32.bin | All ESP32 devices (try [this](https://github.com/Aircoookie/WLED/issues/517#issuecomment-571333712) if the WLED-AP doesn't appear after flashing) |
@@ -58,7 +58,7 @@ Binary Name | For devices
 
 Legacy binary format (up to 0.11.1)
 
-Binary Name | For devices
+| Binary Name | For devices |
 | --- | --- |
 | WLED_0.x.x_ESP8266_1M_ota.bin | ESP-01 (black PCB), most Sonoff devices, ESP8265, all ESP8266 with 1MB flash. This binary has some interfaces disabled (Alexa, Blynk, Hue sync, Infrared) in order for wireless updates to continue working. |
 | WLED_0.x.x_ESP8266_1M_full.bin | ESP-01 (black PCB), most Sonoff devices, ESP8265, all ESP8266 with 1MB flash. This binary has the full feature set, but wireless updates will not work. |
