@@ -1,5 +1,5 @@
 ---
-title: Basic Usage
+title: Tutorials
 hide:
   # - navigation
   # - toc
