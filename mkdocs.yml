@@ -75,7 +75,7 @@ nav:
     - Web GUI Sitemap: features/subpages.md
   - Interfaces: 
     - Blynk: interfaces/blynk.md
-    - DMX: interfaces/dmx.md
+    - DMX: interfaces/dmx-output.md
     - E1.31 (DMX) / Art-Net: interfaces/e1.31-dmx.md
     - HTTP Request API: interfaces/http-api.md
     - JSON API: interfaces/json-api.md
