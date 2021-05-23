@@ -14,7 +14,7 @@
       
         
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/ui/akemi/998_led_nodemcu.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4+insiders-2.7.2">
     
     
@@ -825,7 +825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../interfaces/dmx.md" class="md-nav__link">
+      <a href="../../interfaces/dmx-output/" class="md-nav__link">
         DMX
       </a>
     </li>
@@ -1251,7 +1251,10 @@
                 
                 
                 <h1 id="welcome-to-the-wled-wiki">Welcome to the WLED wiki!</h1>
+<div class="admonition info">
+<p class="admonition-title">Version Info</p>
 <p>Unless noted otherwise, all information applies to the latest release (v0.11.0).</p>
+</div>
 <h3 id="quick-start-guide">Quick start guide:</h3>
 <p><strong>1.</strong> Connect a  WS2812B-compatible RGB(W) led strip to <code>GPIO2</code>. On most ESP8266 based development boards this pin is labeled <code>D4</code>, on ESP32 based boards use <code>D2</code> or <code>G2</code> or <code>2</code>. <em>If this wire cannot be kept short, use a <a href="/basics/compatible-hardware#levelshifters">level shifter/translator</a>.</em> Optionally connect a normally open pushbutton to <code>GPIO0</code> (NodeMCU/Wemos pin <code>D3</code><!-- What pin for ESP32? -->) and ground.<br />
 <strong>Note:</strong> Board pin naming varies depending on the manufacturer. Please use the board pinout from the <em>specific</em> board you purchased and use the GPIO PINS to reference this guide. Make sure to connect ESP and LED-strip grounds together.</p>

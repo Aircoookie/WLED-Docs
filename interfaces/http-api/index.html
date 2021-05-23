@@ -14,7 +14,7 @@
       
         
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/ui/akemi/998_led_nodemcu.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4+insiders-2.7.2">
     
     
@@ -771,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dmx.md" class="md-nav__link">
+      <a href="../dmx-output/" class="md-nav__link">
         DMX
       </a>
     </li>
@@ -1371,7 +1371,10 @@
                   <h1>HTTP Request API</h1>
                 
                 <p>WLED's HTTP API allows you to set many properties of your lights, even more than the index page UI supports, via a simple GET web request.</p>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
 <p><em>Unsure how all this API stuff works? Check out <a href="https://tynick.com/blog/01-28-2020/controlling-wled-with-raspberry-pi-using-the-wled-api/">this amazing guide</a> by tynick!</em></p>
+</div>
 <p><strong>Notice: While this API is not deprecated, it is highly recommended to use the <a href="/interfaces/json-api">JSON API</a> instead of the HTTP API for new integrations, as it is structured in a better way and allows efficient use of newer features like segments, presets, and playlists.</strong></p>
 <p>The basic URL scheme is: <code>[ipadress]/win</code>. This will return an XML file with some current values (see bottom of page).
 Parameters can be added to control some of the variables.
@@ -1392,85 +1395,85 @@ Parameters can be added to control some of the variables.
 </thead>
 <tbody>
 <tr>
-<td>&amp;A=</td>
+<td><code>&amp;A=</code></td>
 <td>0 to 255</td>
 <td>Master brightness</td>
 <td>0.2</td>
 </tr>
 <tr>
-<td>&amp;T=</td>
+<td><code>&amp;T=</code></td>
 <td>0, 1, or 2</td>
 <td>Master Off/On/Toggle</td>
 <td>0.3</td>
 </tr>
 <tr>
-<td>&amp;R=</td>
+<td><code>&amp;R=</code></td>
 <td>0 to 255</td>
 <td>Primary Red value</td>
 <td>0.2</td>
 </tr>
 <tr>
-<td>&amp;G=</td>
+<td><code>&amp;G=</code></td>
 <td>0 to 255</td>
 <td>Primary Green value</td>
 <td>0.2</td>
 </tr>
 <tr>
-<td>&amp;B=</td>
+<td><code>&amp;B=</code></td>
 <td>0 to 255</td>
 <td>Primary Blue value</td>
 <td>0.2</td>
 </tr>
 <tr>
-<td>&amp;W=</td>
+<td><code>&amp;W=</code></td>
 <td>0 to 255</td>
 <td>Primary White value</td>
 <td>0.4</td>
 </tr>
 <tr>
-<td>&amp;FX=</td>
+<td><code>&amp;FX=</code></td>
 <td>0 to 101</td>
 <td>LED Effect Index</td>
 <td>0.3</td>
 </tr>
 <tr>
-<td>&amp;SX=</td>
+<td><code>&amp;SX=</code></td>
 <td>0 to 255</td>
 <td>Effect Speed</td>
 <td>0.3</td>
 </tr>
 <tr>
-<td>&amp;IX=</td>
+<td><code>&amp;IX=</code></td>
 <td>0 to 255</td>
 <td>Effect Intensity</td>
 <td>0.5.0</td>
 </tr>
 <tr>
-<td>&amp;FP=</td>
+<td><code>&amp;FP=</code></td>
 <td>0 to 46</td>
 <td>FastLED Palette</td>
 <td>0.8.0</td>
 </tr>
 <tr>
-<td>&amp;NL=</td>
+<td><code>&amp;NL=</code></td>
 <td>0 to 255</td>
 <td>Nightlight active and duration in minutes</td>
 <td>0.3</td>
 </tr>
 <tr>
-<td>&amp;ND</td>
+<td><code>&amp;ND</code></td>
 <td>none</td>
 <td>Toggles nightlight on but uses default duration</td>
 <td>0.6.3</td>
 </tr>
 <tr>
-<td>&amp;NT=</td>
+<td><code>&amp;NT=</code></td>
 <td>0 to 255</td>
 <td>Nightlight target brightness</td>
 <td>0.5.0</td>
 </tr>
 <tr>
-<td>&amp;NF=</td>
+<td><code>&amp;NF=</code></td>
 <td>0 to 2</td>
 <td>Fade Nightlight, 1 = fade brightness only,<br/>2 = additionaly fade color from primary to secondary color</td>
 <td>0.5.0</td>
@@ -1489,73 +1492,73 @@ Parameters can be added to control some of the variables.
 </thead>
 <tbody>
 <tr>
-<td>&amp;CL=</td>
+<td><code>&amp;CL=</code></td>
 <td>HEX/DEC</td>
 <td>Primary color</td>
 <td>0.8.0</td>
 </tr>
 <tr>
-<td>&amp;C2=</td>
+<td><code>&amp;C2=</code></td>
 <td>HEX/DEC</td>
 <td>Secondary color</td>
 <td>0.8.0</td>
 </tr>
 <tr>
-<td>&amp;C3=</td>
+<td><code>&amp;C3=</code></td>
 <td>HEX/DEC</td>
 <td>Third color</td>
 <td>0.8.0</td>
 </tr>
 <tr>
-<td>&amp;R2=</td>
+<td><code>&amp;R2=</code></td>
 <td>0 to 255</td>
 <td>Secondary Red value</td>
 <td>0.4</td>
 </tr>
 <tr>
-<td>&amp;G2=</td>
+<td><code>&amp;G2=</code></td>
 <td>0 to 255</td>
 <td>Secondary Green value</td>
 <td>0.4</td>
 </tr>
 <tr>
-<td>&amp;B2=</td>
+<td><code>&amp;B2=</code></td>
 <td>0 to 255</td>
 <td>Secondary Blue value</td>
 <td>0.4</td>
 </tr>
 <tr>
-<td>&amp;W2=</td>
+<td><code>&amp;W2=</code></td>
 <td>0 to 255</td>
 <td>Secondary White value</td>
 <td>0.4</td>
 </tr>
 <tr>
-<td>&amp;HU=</td>
+<td><code>&amp;HU=</code></td>
 <td>0 to 65535</td>
 <td>Hue</td>
 <td>0.5.1</td>
 </tr>
 <tr>
-<td>&amp;SA=</td>
+<td><code>&amp;SA=</code></td>
 <td>0 to 255</td>
 <td>Saturation (only in conjunction with Hue)</td>
 <td>0.5.1</td>
 </tr>
 <tr>
-<td>&amp;H2</td>
+<td><code>&amp;H2</code></td>
 <td>none</td>
 <td>Hue + Saturation will set secondary color</td>
 <td>0.5.1</td>
 </tr>
 <tr>
-<td>&amp;SR=</td>
+<td><code>&amp;SR=</code></td>
 <td>0 or 1</td>
 <td>Set Primary/Secondary color to random hue</td>
 <td>0.4</td>
 </tr>
 <tr>
-<td>&amp;SC</td>
+<td><code>&amp;SC</code></td>
 <td>none</td>
 <td>Swap primary and secondary color</td>
 <td>0.4</td>
@@ -1578,28 +1581,28 @@ Parameters can be added to control some of the variables.
 </thead>
 <tbody>
 <tr>
-<td>&amp;LX=</td>
+<td><code>&amp;LX=</code></td>
 <td>BBBGGGRRR</td>
 <td>0 - 100100100</td>
 <td>Loxone RGB value for primary color. Each color (<code>RRR</code>,<code>GGG</code>,<code>BBB</code>) is specified in the range from 0 to 100%.</td>
 <td>0.11</td>
 </tr>
 <tr>
-<td>&amp;LX=</td>
+<td><code>&amp;LX=</code></td>
 <td>20bbbtttt</td>
 <td>200002700 - 201006500</td>
 <td>Loxone brightness and color temperature values for primary color. Brightness <code>bbb</code> is specified in the range 0 to 100%. <code>tttt</code> defines the color temperature in the range from 2700 to 6500 Kelvin.</td>
 <td>0.11</td>
 </tr>
 <tr>
-<td>&amp;LY=</td>
+<td><code>&amp;LY=</code></td>
 <td>BBBGGGRRR</td>
 <td>0 - 100100100</td>
 <td>Loxone RGB value for secondary color. Each color (<code>RRR</code>,<code>GGG</code>,<code>BBB</code>) is specified in the range from 0 to 100%.</td>
 <td>0.11</td>
 </tr>
 <tr>
-<td>&amp;LY=</td>
+<td><code>&amp;LY=</code></td>
 <td>20bbbtttt</td>
 <td>200002700 - 201006500</td>
 <td>Loxone brightness and color temperature values for secondary color. Brightness <code>bbb</code> is specified in the range 0 to 100%. <code>tttt</code> defines the color temperature in the range from 2700 to 6500 Kelvin.</td>
@@ -1619,25 +1622,25 @@ Parameters can be added to control some of the variables.
 </thead>
 <tbody>
 <tr>
-<td>&amp;RN=</td>
+<td><code>&amp;RN=</code></td>
 <td>0 or 1</td>
 <td>Receive UDP Notifications</td>
 <td>0.3</td>
 </tr>
 <tr>
-<td>&amp;SN=</td>
+<td><code>&amp;SN=</code></td>
 <td>0 or 1</td>
 <td>Send UDP Notifications</td>
 <td>0.3</td>
 </tr>
 <tr>
-<td>&amp;NN</td>
+<td><code>&amp;NN</code></td>
 <td>none</td>
 <td>No notification for this request</td>
 <td>0.3</td>
 </tr>
 <tr>
-<td>&amp;HP=</td>
+<td><code>&amp;HP=</code></td>
 <td>0 to 99</td>
 <td>Sets Hue polling light ID (0 is off)</td>
 <td>0.5.1</td>
@@ -1656,49 +1659,49 @@ Parameters can be added to control some of the variables.
 </thead>
 <tbody>
 <tr>
-<td>&amp;PS=</td>
+<td><code>&amp;PS=</code></td>
 <td>1 to 16</td>
 <td>Saves current setup to preset</td>
 <td>0.4</td>
 </tr>
 <tr>
-<td>&amp;PL=</td>
+<td><code>&amp;PL=</code></td>
 <td>0 to 16</td>
 <td>Applies entire preset</td>
 <td>0.4</td>
 </tr>
 <tr>
-<td>&amp;CY=</td>
+<td><code>&amp;CY=</code></td>
 <td>0, 1, or 2</td>
 <td>Preset cycle (2 to toggle)</td>
 <td>0.6.3</td>
 </tr>
 <tr>
-<td>&amp;PA=</td>
+<td><code>&amp;PA=</code></td>
 <td>0 or 1</td>
 <td>Presets apply brightness</td>
 <td>0.7.0</td>
 </tr>
 <tr>
-<td>&amp;P1=</td>
+<td><code>&amp;P1=</code></td>
 <td>1 to 16</td>
 <td>First cycle preset</td>
 <td>0.6.3</td>
 </tr>
 <tr>
-<td>&amp;P2=</td>
+<td><code>&amp;P2=</code></td>
 <td>1 to 16</td>
 <td>Last cycle preset</td>
 <td>0.6.3</td>
 </tr>
 <tr>
-<td>&amp;PT=</td>
+<td><code>&amp;PT=</code></td>
 <td>50 to 65000</td>
 <td>Cycle time in each preset (ms)</td>
 <td>0.6.3</td>
 </tr>
 <tr>
-<td>&amp;TT=</td>
+<td><code>&amp;TT=</code></td>
 <td>0 to 65000</td>
 <td>Set transition time (ms)</td>
 <td>0.6.3</td>
@@ -1717,7 +1720,7 @@ Parameters can be added to control some of the variables.
 </thead>
 <tbody>
 <tr>
-<td>&amp;M=</td>
+<td><code>&amp;M=</code></td>
 <td>0 to 16</td>
 <td>Apply macro (deprecated, added for compatibility with pre-0.11 automations)</td>
 <td>0.5.0</td>
@@ -1737,55 +1740,55 @@ Parameters can be added to control some of the variables.
 </thead>
 <tbody>
 <tr>
-<td>&amp;SM=</td>
+<td><code>&amp;SM=</code></td>
 <td>0 to 9</td>
 <td>Set the main segment (values are reported to XML)</td>
 <td>0.9.0</td>
 </tr>
 <tr>
-<td>&amp;SS=</td>
+<td><code>&amp;SS=</code></td>
 <td>0 to 9</td>
 <td>Select segment to apply THIS api call to</td>
 <td>0.9.0</td>
 </tr>
 <tr>
-<td>&amp;SV=</td>
+<td><code>&amp;SV=</code></td>
 <td>0, 1, or 2</td>
 <td>Set segment selected (2 unselects others)</td>
 <td>0.9.0</td>
 </tr>
 <tr>
-<td>&amp;S=</td>
+<td><code>&amp;S=</code></td>
 <td>0 to ledcount-1</td>
 <td>Set segment start</td>
 <td>0.9.0</td>
 </tr>
 <tr>
-<td>&amp;S2=</td>
+<td><code>&amp;S2=</code></td>
 <td>0 to ledcount</td>
 <td>Set segment stop</td>
 <td>0.9.0</td>
 </tr>
 <tr>
-<td>&amp;GP=</td>
+<td><code>&amp;GP=</code></td>
 <td>1 to 255</td>
 <td>Set segment grouping</td>
 <td>0.9.1</td>
 </tr>
 <tr>
-<td>&amp;SP=</td>
+<td><code>&amp;SP=</code></td>
 <td>0 to 255</td>
 <td>Set segment spacing</td>
 <td>0.9.1</td>
 </tr>
 <tr>
-<td>&amp;RV=</td>
+<td><code>&amp;RV=</code></td>
 <td>0 or 1</td>
 <td>Reverse/Flip Segment direction</td>
 <td>0.9.1</td>
 </tr>
 <tr>
-<td>&amp;SB=</td>
+<td><code>&amp;SB=</code></td>
 <td>0 to 255</td>
 <td>Segment brightness</td>
 <td>0.10.0</td>
@@ -1804,97 +1807,97 @@ Parameters can be added to control some of the variables.
 </thead>
 <tbody>
 <tr>
-<td>&amp;RB</td>
+<td><code>&amp;RB</code></td>
 <td>none</td>
 <td>Reboot WLED</td>
 <td>0.10.0 (?)</td>
 </tr>
 <tr>
-<td>&amp;ST=</td>
+<td><code>&amp;ST=</code></td>
 <td>32bit</td>
 <td>Current UTC time in Unix epoch</td>
 <td>0.4</td>
 </tr>
 <tr>
-<td>&amp;CT=</td>
+<td><code>&amp;CT=</code></td>
 <td>32bit</td>
 <td>UTC time for countdown end</td>
 <td>0.4</td>
 </tr>
 <tr>
-<td>&amp;MD=</td>
+<td><code>&amp;MD=</code></td>
 <td>0 or 1</td>
 <td>Set slider mode to RGB/HSB</td>
 <td>0.3</td>
 </tr>
 <tr>
-<td>&amp;AX=</td>
+<td><code>&amp;AX=</code></td>
 <td>0 to 255</td>
 <td>Debug feature, can be configured for general IO</td>
 <td>0.3</td>
 </tr>
 <tr>
-<td>&amp;IN</td>
+<td><code>&amp;IN</code></td>
 <td>none</td>
 <td>Server will not respond to this request (internal)</td>
 <td>0.3</td>
 </tr>
 <tr>
-<td>&amp;OL=</td>
+<td><code>&amp;OL=</code></td>
 <td>0 to 255</td>
 <td>Experimental overlays</td>
 <td>0.3</td>
 </tr>
 <tr>
-<td>&amp;L=</td>
+<td><code>&amp;L=</code></td>
 <td>0 to 255</td>
 <td>Lock pixel</td>
 <td>0.4</td>
 </tr>
 <tr>
-<td>&amp;L2=</td>
+<td><code>&amp;L2=</code></td>
 <td>0 to 255</td>
 <td>Lock pixel range L to L2</td>
 <td>0.4</td>
 </tr>
 <tr>
-<td>&amp;UL</td>
+<td><code>&amp;UL</code></td>
 <td>none</td>
 <td>Unlock instead (used in conjunction with L and L2)</td>
 <td>0.4</td>
 </tr>
 <tr>
-<td>&amp;NX=</td>
+<td><code>&amp;NX=</code></td>
 <td>String 1..6</td>
 <td>Cronixie clockface</td>
 <td>0.4</td>
 </tr>
 <tr>
-<td>&amp;NM=</td>
+<td><code>&amp;NM=</code></td>
 <td>0 or 1</td>
 <td>Cronixie Time or Countdown mode</td>
 <td>0.4</td>
 </tr>
 <tr>
-<td>&amp;NB=</td>
+<td><code>&amp;NB=</code></td>
 <td>0 or 1</td>
 <td>Cronixie Backlight</td>
 <td>0.4</td>
 </tr>
 <tr>
-<td>&amp;IT</td>
+<td><code>&amp;IT</code></td>
 <td>none</td>
 <td>Include UI color theme in API response</td>
 <td>0.8.2</td>
 </tr>
 <tr>
-<td>&amp;RD=</td>
+<td><code>&amp;RD=</code></td>
 <td>0 or 1</td>
 <td>Toggle realtime UDP</td>
 <td>0.8.4</td>
 </tr>
 <tr>
-<td>&amp;LO=</td>
+<td><code>&amp;LO=</code></td>
 <td>0-2</td>
 <td>Live data override. 0 is off, 1 is override until live data ends, 2 is override until ESP reboot</td>
 <td>0.10.2</td>

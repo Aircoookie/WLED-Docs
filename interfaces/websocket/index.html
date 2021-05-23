@@ -14,7 +14,7 @@
       
         
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/ui/akemi/998_led_nodemcu.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4+insiders-2.7.2">
     
     
@@ -766,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dmx.md" class="md-nav__link">
+      <a href="../dmx-output/" class="md-nav__link">
         DMX
       </a>
     </li>
@@ -1155,7 +1155,10 @@
                 
                   <h1>Websocket</h1>
                 
-                <p>Since WLED 0.10.2, a WebSocket server is enabled by default and can be used to access a subset of the <a href="/interfaces/json-api">JSON API</a>.</p>
+                <div class="admonition info">
+<p class="admonition-title">Version Info</p>
+<p>Since WLED 0.10.2, a WebSocket server is enabled by default and can be used to access a subset of the <a href="/interfaces/json-api">JSON API</a>.</p>
+</div>
 <p>The server is available at the <code>/ws</code> endpoint, you can access it like <code>ws://[WLED-IP]/ws</code>.</p>
 <p>You may send any JSON state update to the socket.
 On change of the lighting state, the server will send a JSON object containing the state and info objects (this is equivalent to HTTP GET <code>/json/si</code>) to all connected clients. This object will also be sent to a client upon connecting.</p>

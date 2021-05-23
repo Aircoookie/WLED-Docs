@@ -14,7 +14,7 @@
       
         
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/ui/akemi/998_led_nodemcu.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4+insiders-2.7.2">
     
     
@@ -766,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dmx.md" class="md-nav__link">
+      <a href="../dmx-output/" class="md-nav__link">
         DMX
       </a>
     </li>
@@ -1155,11 +1155,17 @@
                 
                   <h1>MQTT</h1>
                 
-                <p><strong>Notice:</strong> The MQTT implementation is currently being <strong>restructured</strong> to provide a better experience for users of Home Assistant and other automation software. <strong>This will be a breaking change</strong>. For details regarding the rework, please see <a href="https://github.com/Aircoookie/WLED/issues/207">#207</a>!</p>
+                <div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Notice:</strong> The MQTT implementation is currently being <strong>restructured</strong> to provide a better experience for users of Home Assistant and other automation software. <strong>This will be a breaking change</strong>. For details regarding the rework, please see <a href="https://github.com/Aircoookie/WLED/issues/207">#207</a>!</p>
+</div>
 <p>WLED versions from 0.8.0 up are able to connect to an MQTT broker for smart home control.
 Connection to both domains and IP servers is supported on port 1883.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>Secure connections are not currently supported. I recommend only connecting to local MQTT brokers.
 In v0.8.4-0.8.6 only, WLED supports MQTT autodiscovery by the HomeAssistant software. This has been removed because of bootloop issues and in favor of the native HomeAssistant integration.</p>
+</div>
 <p>WLED will subscribe to up to six topics to change the state of the lights.</p>
 <ul>
 <li><strong>[mqttDeviceTopic]</strong>\
