@@ -10,8 +10,8 @@ theme:
   name: material
   custom_dir: docs/assets/overrides
   language: en
-  logo: assets/images/ui/akemi/998_led_nodemcu.png
-  favicon: assets/images/ui/akemi/000_base.png
+  favicon: assets/images/ui/akemi/998_led_nodemcu.png
+  logo: assets/images/ui/akemi/000_base.png
   icon: 
     repo: fontawesome/brands/github
   features: 
