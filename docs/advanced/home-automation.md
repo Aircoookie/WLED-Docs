@@ -11,20 +11,17 @@ You can use any API WLED provides (JSON, HTTP, UDP, MQTT), JSON is preferred. Th
 [HomeAssistant and NodeRED flows](https://github.com/Snipercaine/WLED-HomeAssistant)
 
 ## Domoticz:
-Please see https://github.com/frustreermeneer/domoticz-wled-plugin !
+Please see [here](https://github.com/frustreermeneer/domoticz-wled-plugin) !
 
 ## Openhab: 
-The connection is made via MQTT broker & Openhab MQTT Binding (2.5x)
+The connection is made via MQTT broker & Openhab MQTT Binding (2.5x)with configuration files 
 
-with configuration files 
-Please find the details in 
-https://community.openhab.org/t/wled-control-without-the-binding/101120
+Please find the details [here](https://community.openhab.org/t/wled-control-without-the-binding/101120)
 
-With Pre-configured Binding 
-https://community.openhab.org/t/wled-a-binding-for-controlling-led-strips-and-strings-from-an-opensource-esp8266-project/87286
+[With Pre-configured Binding](https://community.openhab.org/t/wled-a-binding-for-controlling-led-strips-and-strings-from-an-opensource-esp8266-project/87286)
 
 ## Indigo Domotics:
-Please see https://www.indigodomo.com/pluginstore/214/ !
+Please see [here](https://www.indigodomo.com/pluginstore/214/) !
 
 ## Home Assistant
 
