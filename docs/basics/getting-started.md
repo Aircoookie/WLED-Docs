@@ -7,7 +7,8 @@ hide:
 
 # Welcome to the WLED wiki!
 
-Unless noted otherwise, all information applies to the latest release (v0.11.0).
+!!! info
+    Unless noted otherwise, all information applies to the latest release (v0.11.0).
 
 ### Quick start guide:
 

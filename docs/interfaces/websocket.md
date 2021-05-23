@@ -5,7 +5,8 @@ hide:
   # - toc
 ---
 
-Since WLED 0.10.2, a WebSocket server is enabled by default and can be used to access a subset of the [JSON API](/interfaces/json-api).
+!!! info "Version Info"
+    Since WLED 0.10.2, a WebSocket server is enabled by default and can be used to access a subset of the [JSON API](/interfaces/json-api).
 
 The server is available at the `/ws` endpoint, you can access it like `ws://[WLED-IP]/ws`.
 

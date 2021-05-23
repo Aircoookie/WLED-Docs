@@ -5,13 +5,15 @@ hide:
   # - toc
 ---
 
-**Notice:** The MQTT implementation is currently being **restructured** to provide a better experience for users of Home Assistant and other automation software. **This will be a breaking change**. For details regarding the rework, please see [#207](https://github.com/Aircoookie/WLED/issues/207)!
+!!! important
+    **Notice:** The MQTT implementation is currently being **restructured** to provide a better experience for users of Home Assistant and other automation software. **This will be a breaking change**. For details regarding the rework, please see [#207](https://github.com/Aircoookie/WLED/issues/207)!
 
 WLED versions from 0.8.0 up are able to connect to an MQTT broker for smart home control.
 Connection to both domains and IP servers is supported on port 1883.
 
-Secure connections are not currently supported. I recommend only connecting to local MQTT brokers.
-In v0.8.4-0.8.6 only, WLED supports MQTT autodiscovery by the HomeAssistant software. This has been removed because of bootloop issues and in favor of the native HomeAssistant integration.
+!!! warning
+    Secure connections are not currently supported. I recommend only connecting to local MQTT brokers.
+    In v0.8.4-0.8.6 only, WLED supports MQTT autodiscovery by the HomeAssistant software. This has been removed because of bootloop issues and in favor of the native HomeAssistant integration.
 
 WLED will subscribe to up to six topics to change the state of the lights.
 

@@ -5,9 +5,10 @@ hide:
   # - toc
 ---
 
-This page lists some third-party software that can interface with WLED!
+!!! note ""
+    Still under construction, feel free to add to the list!
 
-### Still under construction, feel free to add to the list!
+This page lists some third-party software that can interface with WLED!
 
 ## Controllers
 Controllers use the WLED API to change the current light settings.

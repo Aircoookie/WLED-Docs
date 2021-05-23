@@ -5,7 +5,8 @@ hide:
   # - toc
 ---
 
-### Still under construction, feel free to add to the list! 
+!!! note ""
+    Still under construction, feel free to add to the list! 
 
 This page lists some third-party hardware and/or tools that are working with WLED!
 

@@ -4,9 +4,9 @@ hide:
   # - navigation
   # - toc
 ---
-
-Starting from version 0.8.4, WLED implements a powerful JSON API over HTTP.	
-It is accessible using the `/json` subpage.	
+!!! info "Version Info"
+    Starting from version 0.8.4, WLED implements a powerful JSON API over HTTP.	
+    It is accessible using the `/json` subpage.	
 
 ### Obtaining light information	
 Sending a GET request will return an object similar to the sample below.	

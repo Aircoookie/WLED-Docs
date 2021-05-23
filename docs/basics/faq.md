@@ -4,8 +4,8 @@ hide:
   # - navigation
   # - toc
 ---
-
-This page will continually get updated with questions often asked.
+!!! tip ""
+    This page will continually get updated with questions often asked.
 
 ## Contents
 

@@ -6,7 +6,9 @@ hide:
 ---
 
 ### DMX output
-As of version 0.9.2 WLED supports DMX output via MAX485. This is great for controlling DMX LED PAR lamps with WLED patterns.
+
+!!! info "Version Info"
+    As of version 0.9.2 WLED supports DMX output via MAX485. This is great for controlling DMX LED PAR lamps with WLED patterns.
 
 #### features and limitations
 * up to 15 DMX channels per fixture
