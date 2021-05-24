@@ -39,18 +39,18 @@ A fast and feature-rich implementation of an ESP8266/ESP32 webserver to control 
 - Filesystem-based config for easier backup of presets and settings  
 
 ## 💡 Supported light control interfaces
-- WLED app for [Android](https://play.google.com/store/apps/details?id=com.aircoookie.WLED) and [iOS](https://apps.apple.com/us/app/wled/id1475695033)
-- JSON and HTTP request APIs  
-- MQTT  
-- Blynk IoT  
-- E1.31, Art-Net, DDP and TPM2.net
+- [WLED app](https://github.com/Aircoookie/WLED-App) for [Android](https://play.google.com/store/apps/details?id=com.aircoookie.WLED) and [iOS](https://apps.apple.com/us/app/wled/id1475695033)
+- [JSON](/interfaces/json-api.md) and [HTTP request](/interfaces/http-api.md) APIs  
+- [MQTT](/interfaces/mqtt.md)  
+- [Blynk IoT](/interfaces/blynk.md)  
+- [E1.31](/interfaces/e1.31-dmx.md), [Art-Net](/interfaces/e1.31-dmx.md), DDP and [TPM2.net](/interfaces/udp-realtime.md)
 - [Hyperion](https://github.com/hyperion-project/hyperion.ng)
-- UDP realtime  
-- Alexa voice control (including dimming and color)  
-- Sync to Philips hue lights  
+- [UDP realtime](/interfaces/udp-realtime.md)
+- [Alexa voice control (including dimming and color)](/advanced/remote-access-ifttt.md)
+- [Sync to Philips Hue lights](/interfaces/philips-hue.md)
 - Adalight (PC ambilight via serial) and TPM2  
-- Sync color of multiple WLED devices (UDP notifier)  
-- Infrared remotes (24-key RGB, receiver required)  
+- [Sync color of multiple WLED devices (UDP notifier)](/interfaces/udp-notifier.md)
+- [Infrared remotes (24-key RGB, receiver required)](/interfaces/infrared.md)
 - Simple timers/schedules (time from NTP, timezones/DST supported)  
 
 ## 📲 Quick start guide and documentation
