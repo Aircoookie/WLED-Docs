@@ -36,7 +36,8 @@ A fast and feature-rich implementation of an ESP8266/ESP32 webserver to control 
 - Full OTA software updatability (HTTP + ArduinoOTA), password protectable  
 - Configurable analog clock + support for the Cronixie kit by Diamex  
 - Configurable Auto Brightness limit for safer operation  
-- Filesystem-based config for easier backup of presets and settings  
+- Filesystem-based config for easier backup of presets and settings 
+- Native [Home-Assistant integration](https://www.home-assistant.io/integrations/wled/): [![](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start?domain=wled)
 
 ## 💡 Supported light control interfaces
 - [WLED app](https://github.com/Aircoookie/WLED-App) for [Android](https://play.google.com/store/apps/details?id=com.aircoookie.WLED) and [iOS](https://apps.apple.com/us/app/wled/id1475695033)
