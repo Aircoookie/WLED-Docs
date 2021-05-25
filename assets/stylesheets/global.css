@@ -9,11 +9,13 @@
   padding: 0 .8rem;
 }
 
+.announce {
+  background-color: var(--md-footer-bg-color);
+}
+
 .cx-announce {
   float: right;
   margin: 0 0 .6rem 0;
-  vertical-align: text-top;
-
 }
 
 .md-typeset .discord {
