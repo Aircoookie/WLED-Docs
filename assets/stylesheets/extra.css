@@ -12,8 +12,9 @@
   --md-default-fg-color--lighter:  hsla(var(--md-hue),75%,90%,0.32); /*edit pen*/
   --md-default-fg-color--lightest: hsla(var(--md-hue),75%,90%,0.12); /*?*/
   --md-default-bg-color: #2c2f33; /* discord */
-  
   --ac-header-color: #222222;
+  --md-footer-bg-color: rgba(26, 27, 35, 0.87);
+
 }
 
 .md-tabs {
