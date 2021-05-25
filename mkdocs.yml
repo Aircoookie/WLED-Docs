@@ -21,7 +21,7 @@ theme:
     - navigation.tabs
     # - toc.integrate
   palette:
-    - scheme: slate
+    - scheme: wled
       primary: cyan #mostly overriden in extra.css
       accent: orange
       toggle: 
