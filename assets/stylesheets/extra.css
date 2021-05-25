@@ -3,8 +3,8 @@
 
 [data-md-color-scheme="slate"] {
   --md-hue: 232; /* [0, 360] */
-  /*--md-primary-fg-color: #FFAA00; /*WLED Orange*/
-  --md-primary-fg-color: #7289DA; /*Blurple*/
+  --md-primary-fg-color: #FFAA00; /*WLED Orange*/
+  /*--md-primary-fg-color: #7289DA; /*Blurple*/
   --md-primary-fg-color--light: #555;
   --md-primary-fg-color--dark:  #999;
   --md-default-fg-color:           hsla(var(--md-hue),75%,95%,1); /*text*/
@@ -13,6 +13,13 @@
   --md-default-fg-color--lightest: hsla(var(--md-hue),75%,90%,0.12); /*?*/
   --md-default-bg-color: #2c2f33; /* discord */
   
-  // Typeset `a` color shades
-  --md-typeset-a-color:  #FFAA00; /*WLED Orange*/
+  --ac-header-color: #222222;
+}
+
+.md-tabs {
+  background-color: var(--ac-header-color, var(--md-primary-fg-color));
+}
+
+.md-header {
+  background-color: var(--ac-header-color, var(--md-primary-fg-color));
 }
