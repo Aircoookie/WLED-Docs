@@ -1,7 +1,7 @@
 
 /* Custom color scheme */
 
-[data-md-color-scheme="slate"] {
+[data-md-color-scheme="wled"] {
   --md-hue: 232; /* [0, 360] */
   --md-primary-fg-color: #FFAA00; /*WLED Orange*/
   /*--md-primary-fg-color: #7289DA; /*Blurple*/
