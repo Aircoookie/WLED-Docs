@@ -22,7 +22,7 @@ theme:
     # - toc.integrate
   palette:
     - scheme: slate
-      primary: cyan
+      primary: cyan #mostly overriden in extra.css
       accent: orange
       toggle: 
         icon: material/weather-sunny
@@ -51,6 +51,12 @@ extra:
       name: Gitpod
     - icon: fontawesome/brands/instagram
       link: https://www.instagram.com/wled_project/
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/results?search_query=WLED
+    - icon: fontawesome/solid/tshirt
+      link: https://wled.teemill.com/
+    - icon: fontawesome/solid/heart
+      link: https://paypal.me/aircoookie/
 extra_css:
   - assets/stylesheets/global.css
   - assets/stylesheets/extra.css
