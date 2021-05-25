@@ -10,28 +10,29 @@ theme:
   name: material
   custom_dir: docs/assets/overrides
   language: en
-  favicon: assets/images/ui/akemi/998_led_nodemcu.png
-  logo: assets/images/ui/akemi/000_base.png
+  favicon: assets/images/ui/aircoookie/blurple.png
+  logo: assets/images/ui/akemi/001_cheerful.png
   icon: 
     repo: fontawesome/brands/github
   features: 
     - navigation.top
     # - navigation.expand
+    - navigation.instant
     - navigation.tabs
     # - toc.integrate
   palette:
     - scheme: slate
-      primary: red
-      accent: blue
+      primary: cyan
+      accent: orange
       toggle: 
-        icon: material/toggle-switch-off-outline
+        icon: material/weather-sunny
         name: Light Mode
     - scheme: default
-      primary: deep orange
-      accent: blue
+      primary: orange
+      accent: orange
       toggle: 
-        icon: material/toggle-switch
-        name: Light Mode
+        icon: material/weather-night
+        name: Dark Mode
 plugins: 
   - search
 markdown_extensions:
@@ -48,8 +49,11 @@ extra:
     - icon: fontawesome/solid/code
       link: https://gitpod.io/#https://github.com/Aircoookie/WLED
       name: Gitpod
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/wled_project/
 extra_css:
   - assets/stylesheets/global.css
+  - assets/stylesheets/extra.css
 extra_javascript:
   - assets/js/newtab.js
 nav:
