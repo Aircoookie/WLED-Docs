@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.5">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.6">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.bde7dde4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.875de78c.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
         
       
     
@@ -416,21 +416,21 @@
       
         <li class="md-nav__item">
   <a href="#quick-start-guide" class="md-nav__link">
-    Quick start guide:
+    Quick start guide
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#default-gpio-usage" class="md-nav__link">
-    Default GPIO Usage:
+    Default GPIO Usage
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#software-update-procedure" class="md-nav__link">
-    Software update procedure:
+    Software update procedure
   </a>
   
 </li>
@@ -1094,21 +1094,21 @@
       
         <li class="md-nav__item">
   <a href="#quick-start-guide" class="md-nav__link">
-    Quick start guide:
+    Quick start guide
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#default-gpio-usage" class="md-nav__link">
-    Default GPIO Usage:
+    Default GPIO Usage
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#software-update-procedure" class="md-nav__link">
-    Software update procedure:
+    Software update procedure
   </a>
   
 </li>
@@ -1135,7 +1135,7 @@
 <p class="admonition-title">Version Info</p>
 <p>Unless noted otherwise, all information applies to the latest release (v0.12.0).</p>
 </div>
-<h3 id="quick-start-guide">Quick start guide:</h3>
+<h3 id="quick-start-guide">Quick start guide</h3>
 <p><strong>1.</strong> Connect a  WS2812B-compatible RGB(W) led strip to <code>GPIO2</code>. On most ESP8266 based development boards this pin is labeled <code>D4</code>, on ESP32 based boards use <code>D2</code> or <code>G2</code> or <code>2</code>. <em>If this wire cannot be kept short, use a <a href="/basics/compatible-hardware#levelshifters">level shifter/translator</a>.</em> Optionally connect a normally open pushbutton to <code>GPIO0</code> (NodeMCU/Wemos pin <code>D3</code><!-- What pin for ESP32? -->) and ground.<br />
 <strong>Note:</strong> Board pin naming varies depending on the manufacturer. Please use the board pinout from the <em>specific</em> board you purchased and use the GPIO PINS to reference this guide. Make sure to connect ESP and LED-strip grounds together.</p>
 <p><img alt="" src="https://i.ibb.co/WFc797W/connections.jpg" /></p>
@@ -1149,7 +1149,11 @@ You can also just scan this QR code: <br />
 <p>Go to the IP <code>4.3.2.1</code> in your browser. You should also be able to use the embedded DNS server and connect to <code>wled.me</code> if in access point mode.</p>
 <p><strong>4.</strong> Click on the cog icon to edit settings like connecting the module to your home WiFi.</p>
 <p><strong>5.</strong> Check your router device list for the IP of the WLED device inside your local network. For easier discovery, use the WLED app! Have fun with the software!</p>
-<h3 id="default-gpio-usage">Default GPIO Usage:</h3>
+<h3 id="default-gpio-usage">Default GPIO Usage</h3>
+<div class="admonition info">
+<p class="admonition-title">These are only defaults</p>
+<p>All pins can be changed in the Hardware section of LED settings. Please note that these are GPIO numbers, please consult a pinout for your board to find the labeled pin (e.g D4 = GPIO2 on most ESP8266 boards)</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -1186,7 +1190,7 @@ You can also just scan this QR code: <br />
 </tr>
 </tbody>
 </table>
-<h3 id="software-update-procedure">Software update procedure:</h3>
+<h3 id="software-update-procedure">Software update procedure</h3>
 <p>Method 1: Reflash the new update like a new install (see above).</p>
 <p>Method 2: The software has an integrated OTA software update capability.
 First you have to enable it by typing in the correct OTA passphrase (default: "wledota") in the settings menu.
@@ -1331,7 +1335,7 @@ If you try to access the update page now, you should see the message "OTA lock a
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.a1609d9a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.34eae1b6.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
