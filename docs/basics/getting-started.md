@@ -10,7 +10,7 @@ hide:
 !!! info "Version Info"
     Unless noted otherwise, all information applies to the latest release (v0.12.0).
 
-### Quick start guide:
+### Quick start guide
 
 **1.** Connect a  WS2812B-compatible RGB(W) led strip to `GPIO2`. On most ESP8266 based development boards this pin is labeled `D4`, on ESP32 based boards use `D2` or `G2` or `2`. _If this wire cannot be kept short, use a [level shifter/translator](/basics/compatible-hardware#levelshifters)._ Optionally connect a normally open pushbutton to `GPIO0` (NodeMCU/Wemos pin `D3`<!-- What pin for ESP32? -->) and ground.  
 **Note:** Board pin naming varies depending on the manufacturer. Please use the board pinout from the _specific_ board you purchased and use the GPIO PINS to reference this guide. Make sure to connect ESP and LED-strip grounds together.
@@ -35,7 +35,11 @@ Go to the IP `4.3.2.1` in your browser. You should also be able to use the embed
 
 **5.** Check your router device list for the IP of the WLED device inside your local network. For easier discovery, use the WLED app! Have fun with the software!
 
-### Default GPIO Usage:
+### Default GPIO Usage
+
+!!! info "These are only defaults"
+    All pins can be changed in the Hardware section of LED settings. Please note that these are GPIO numbers, please consult a pinout for your board to find the labeled pin (e.g D4 = GPIO2 on most ESP8266 boards)
+
 | Device | GPIO | Notes |
 |---|---|---|
 LED Data | 2 |
@@ -44,7 +48,7 @@ Button | 0 | Not used when using Clock line
 IR Remote| 4 |
 Relay | 12 |
 
-### Software update procedure:
+### Software update procedure
 
 Method 1: Reflash the new update like a new install (see above).
 
