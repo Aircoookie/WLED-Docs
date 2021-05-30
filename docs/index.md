@@ -2,7 +2,7 @@
 title: Welcome to WLED
 hide:
   # - navigation
-  # - toc
+  - toc
 ---
 
 <p align="center">
