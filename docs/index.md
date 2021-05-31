@@ -1,7 +1,7 @@
 ---
 title: Welcome to WLED
 hide:
-  # - navigation
+  - navigation
   - toc
 ---
 
