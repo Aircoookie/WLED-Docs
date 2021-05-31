@@ -45,6 +45,7 @@ hide:
 ### General questions
 
 - [What does the name WLED mean?](#what-does-the-name-wled-mean)
+- [What do the WLED version names mean?](#what-do-the-wled-version-names-mean)
 - [What is the difference between the brightness sliders in the web UI?](#what-is-the-difference-between-the-brightness-sliders-in-the-web-ui)
 - [My Segments are gone after a reboot!](#my-segments-are-gone-after-a-reboot)
 - [May I sell a product running WLED?](#may-i-sell-a-product-running-wled)
@@ -239,6 +240,19 @@ Beside the **digital addressable** LED strips the good old **analog** LED strips
 
 WiFi Lighting Effects Driver. Also it has LED in the name and is similar to the official term for WiFi, WLAN!
 
+
+### What do the WLED version names mean?
+
+WLED version names are Japanese! Here is a nice list of their meanings:
+
+| Version | Name | Kanji | Meaning |
+|---|---|---|---|
+0.10 | Namigai | 浪貝 | Geoduck (don't google it!)
+0.11.0 | Mirai | 未来 | Future 
+0.11.1 | Fumikiri | 踏切 | Railroad crossing
+0.12 | Hikari | 光 | Light
+0.13 | Toki | 時 | Time
+N/A | Kuuhaku | 空白 | Blank
 
 ### What is the difference between the brightness sliders in the web UI?
 
