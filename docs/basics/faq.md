@@ -23,6 +23,7 @@ hide:
 - [Is it safe to do a port forwarding to the public internet to control the lights from anywhere?](/advanced/security)
 - [My device is unresponsive or animations lag!](#my-device-is-unresponsive-or-animations-lag)
 - [I'm having a bootloop! (LEDs turn on every ~5seconds)](#im-having-a-bootloop-leds-turn-on-every-5seconds)
+- [I am running realtime (e.g. E1.31) and not all of my LEDs are driven fluently!](#i-am-running-realtime-eg-e131-and-not-all-of-my-leds-are-driven-fluently)
 - [Still having connection issues/connection dropping: what more can i check?](#still-having-connection-issuesconnection-dropping-what-more-can-i-check)
 
 ### Compilation issues
@@ -120,6 +121,18 @@ Please open an issue or message me on Discord to resolve your issue. Most of the
 
 Try disabling "Emulate Alexa device" in Sync settings before entering your home Wifi credentials.
 Check whether mDNS is on or off and toggle it: does it make a difference? Same for 'NTP'. Same for 'Sync Send'. Check your router: is your 2.4Ghz on band 1: if not, try it please. If you have the possibility to try another 8266, please try it.
+
+### I am running realtime (e.g. E1.31) and not all of my LEDs are driven fluently!
+
+Realtime effect streaming uses a rather large bandwidth as data is transmitted uncompressed. For example, to drive 1000 LEDs at 30 fps, you will need a data rate of 720 kBit/s, which is difficult to achieve with most cheap ESP boards over WiFi.
+Even if you split the total amount of LEDs across multiple controllers, your WiFi network could become the limiting factor quickly.
+The best way to ensure a low-latency, reliable, fluid stream when using large quantities of LEDs is to invest in a wired Ethernet ESP32 board like QuinLED-Dig boards with ethernet or the Olimex ESP32-POE.
+
+There is a 9 DMX universe limit by default in WLED. You can raise it in line 240 of const.h (E131_MAX_UNIVERSE_COUNT 9) and compile your own binary, but the performance of 2000 LEDs over WiFi will likely not be good unless you use an Ethernet enabled board.
+
+If Ethernet is not an option, decrease your LED count as far as possible, lower the frame rate in the sending software and make sure the WiFi signal reception of the board is good. Even without Ethernet, a board with an external antenna is significantly better than a PCB antenna board.
+
+Furthermore I suggest using the DDP protocol if available in your sender software (available in xLights). DDP has a smaller packet header and because of the reduced overhead the fluidity of your animations will be a bit better.
 
 ## Compilation issues
 
