@@ -694,6 +694,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#i-am-running-realtime-eg-e131-and-not-all-of-my-leds-are-driven-fluently" class="md-nav__link">
+    I am running realtime (e.g. E1.31) and not all of my LEDs are driven fluently!
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1601,6 +1608,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#i-am-running-realtime-eg-e131-and-not-all-of-my-leds-are-driven-fluently" class="md-nav__link">
+    I am running realtime (e.g. E1.31) and not all of my LEDs are driven fluently!
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1882,6 +1896,7 @@
 <li><a href="/advanced/security">Is it safe to do a port forwarding to the public internet to control the lights from anywhere?</a></li>
 <li><a href="#my-device-is-unresponsive-or-animations-lag">My device is unresponsive or animations lag!</a></li>
 <li><a href="#im-having-a-bootloop-leds-turn-on-every-5seconds">I'm having a bootloop! (LEDs turn on every ~5seconds)</a></li>
+<li><a href="#i-am-running-realtime-eg-e131-and-not-all-of-my-leds-are-driven-fluently">I am running realtime (e.g. E1.31) and not all of my LEDs are driven fluently!</a></li>
 <li><a href="#still-having-connection-issuesconnection-dropping-what-more-can-i-check">Still having connection issues/connection dropping: what more can i check?</a></li>
 </ul>
 <h3 id="compilation-issues">Compilation issues</h3>
@@ -1947,6 +1962,13 @@ Maybe you are also using a very high amount of LEDs. 750 is the recommended maxi
 <h3 id="still-having-connection-issuesconnection-dropping-what-more-can-i-check">Still having connection issues/connection dropping: what more can i check?</h3>
 <p>Try disabling "Emulate Alexa device" in Sync settings before entering your home Wifi credentials.
 Check whether mDNS is on or off and toggle it: does it make a difference? Same for 'NTP'. Same for 'Sync Send'. Check your router: is your 2.4Ghz on band 1: if not, try it please. If you have the possibility to try another 8266, please try it.</p>
+<h3 id="i-am-running-realtime-eg-e131-and-not-all-of-my-leds-are-driven-fluently">I am running realtime (e.g. E1.31) and not all of my LEDs are driven fluently!</h3>
+<p>Realtime effect streaming uses a rather large bandwidth as data is transmitted uncompressed. For example, to drive 1000 LEDs at 30 fps, you will need a data rate of 720 kBit/s, which is difficult to achieve with most cheap ESP boards over WiFi.
+Even if you split the total amount of LEDs across multiple controllers, your WiFi network could become the limiting factor quickly.
+The best way to ensure a low-latency, reliable, fluid stream when using large quantities of LEDs is to invest in a wired Ethernet ESP32 board like QuinLED-Dig boards with ethernet or the Olimex ESP32-POE.</p>
+<p>There is a 9 DMX universe limit by default in WLED. You can raise it in line 240 of const.h (E131_MAX_UNIVERSE_COUNT 9) and compile your own binary, but the performance of 2000 LEDs over WiFi will likely not be good unless you use an Ethernet enabled board.</p>
+<p>If Ethernet is not an option, decrease your LED count as far as possible, lower the frame rate in the sending software and make sure the WiFi signal reception of the board is good. Even without Ethernet, a board with an external antenna is significantly better than a PCB antenna board.</p>
+<p>Furthermore I suggest using the DDP protocol if available in your sender software (available in xLights). DDP has a smaller packet header and because of the reduced overhead the fluidity of your animations will be a bit better.</p>
 <h2 id="compilation-issues_1">Compilation issues</h2>
 <h3 id="when-compiling-wled-in-vs-code-using-platformio-i-get-an-error">When compiling WLED in VS Code using platformio, I get an error.</h3>
 <p>Try building again. If the error says the <code>wled00.ino.cpp</code> or <code>.sconsign27.db.dblite</code> file could not be found, this often helps.
