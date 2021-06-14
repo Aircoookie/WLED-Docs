@@ -11,19 +11,19 @@
         <meta name="author" content="Christian Schwinne (Aircoookie)">
       
       
-      <link rel="icon" href="/assets/images/ui/aircoookie/blurple.png">
+      <link rel="icon" href="../assets/images/ui/aircoookie/blurple.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
     
     
       
-        <title>WLED Project</title>
+        <title>Install WLED Binary - WLED Project</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
         
       
     
@@ -38,9 +38,9 @@
     
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/global.css">
+      <link rel="stylesheet" href="../assets/stylesheets/global.css">
     
-      <link rel="stylesheet" href="/assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
     
     
       
@@ -61,7 +61,7 @@
     <body dir="ltr" data-md-color-scheme="wled" data-md-color-primary="cyan" data-md-color-accent="orange">
   
     
-    <script>function __prefix(e){return new URL("/",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
       <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
@@ -69,6 +69,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#flashing-method-1-esptool" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -91,9 +96,9 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/index.html" title="WLED Project" class="md-header__button md-logo" aria-label="WLED Project" data-md-component="logo">
+    <a href="../index.html" title="WLED Project" class="md-header__button md-logo" aria-label="WLED Project" data-md-component="logo">
       
-  <img src="/assets/images/ui/akemi/001_cheerful.png" alt="logo">
+  <img src="../assets/images/ui/akemi/001_cheerful.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -109,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Install WLED Binary
             
           </span>
         </div>
@@ -202,7 +207,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/index.html" class="md-tabs__link">
+    <a href="../index.html" class="md-tabs__link">
       Welcome
     </a>
   </li>
@@ -211,13 +216,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="/basics/getting-started.html" class="md-tabs__link">
+      <a href="getting-started.html" class="md-tabs__link md-tabs__link--active">
         Basics
       </a>
     </li>
@@ -233,7 +240,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/features/effects-palettes.html" class="md-tabs__link">
+      <a href="../features/effects-palettes.html" class="md-tabs__link">
         Features
       </a>
     </li>
@@ -249,7 +256,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/interfaces/blynk.html" class="md-tabs__link">
+      <a href="../interfaces/blynk.html" class="md-tabs__link">
         Interfaces
       </a>
     </li>
@@ -265,7 +272,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/advanced/home-automation.html" class="md-tabs__link">
+      <a href="../advanced/home-automation.html" class="md-tabs__link">
         Advanced
       </a>
     </li>
@@ -281,7 +288,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/about/contributors.html" class="md-tabs__link">
+      <a href="../about/contributors.html" class="md-tabs__link">
         About
       </a>
     </li>
@@ -308,9 +315,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/index.html" title="WLED Project" class="md-nav__button md-logo" aria-label="WLED Project" data-md-component="logo">
+    <a href="../index.html" title="WLED Project" class="md-nav__button md-logo" aria-label="WLED Project" data-md-component="logo">
       
-  <img src="/assets/images/ui/akemi/001_cheerful.png" alt="logo">
+  <img src="../assets/images/ui/akemi/001_cheerful.png" alt="logo">
 
     </a>
     WLED Project
@@ -339,7 +346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         Welcome
       </a>
     </li>
@@ -352,12 +359,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         Basics
@@ -375,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/basics/getting-started.html" class="md-nav__link">
+      <a href="getting-started.html" class="md-nav__link">
         Getting Started
       </a>
     </li>
@@ -408,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/basics/compatible-hardware.html" class="md-nav__link">
+      <a href="compatible-hardware.html" class="md-nav__link">
         Hardware
       </a>
     </li>
@@ -420,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/basics/compatible-software.html" class="md-nav__link">
+      <a href="compatible-software.html" class="md-nav__link">
         Software
       </a>
     </li>
@@ -436,12 +445,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
       
       <label class="md-nav__link" for="__nav_2_3">
         Installation
@@ -457,11 +468,88 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/basics/install-binary.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Install WLED Binary
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="install-binary.html" class="md-nav__link md-nav__link--active">
         Install WLED Binary
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#flashing-method-1-esptool" class="md-nav__link">
+    Flashing method 1: esptool
+  </a>
+  
+    <nav class="md-nav" aria-label="Flashing method 1: esptool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esp8266" class="md-nav__link">
+    ESP8266
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esp32" class="md-nav__link">
+    ESP32
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flashing-method-2-esp-home-flasher-tool" class="md-nav__link">
+    Flashing method 2: ESP Home Flasher tool
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flashing-method-3-ota-update" class="md-nav__link">
+    Flashing method 3: OTA update
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-binary-should-i-use" class="md-nav__link">
+    What binary should I use?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -471,7 +559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/basics/install-gui.html" class="md-nav__link">
+      <a href="install-gui.html" class="md-nav__link">
         Install using ESP GUI
       </a>
     </li>
@@ -483,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/basics/compiling-wled.html" class="md-nav__link">
+      <a href="compiling-wled.html" class="md-nav__link">
         Compiling WLED
       </a>
     </li>
@@ -501,7 +589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/basics/tutorials.html" class="md-nav__link">
+      <a href="tutorials.html" class="md-nav__link">
         Tutorials
       </a>
     </li>
@@ -513,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/basics/faq.html" class="md-nav__link">
+      <a href="faq.html" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -555,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/features/effects-palettes.html" class="md-nav__link">
+      <a href="../features/effects-palettes.html" class="md-nav__link">
         Effects & Palettes
       </a>
     </li>
@@ -567,7 +655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/features/macros.html" class="md-nav__link">
+      <a href="../features/macros.html" class="md-nav__link">
         Macros
       </a>
     </li>
@@ -579,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/features/presets.html" class="md-nav__link">
+      <a href="../features/presets.html" class="md-nav__link">
         Presets
       </a>
     </li>
@@ -591,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/features/segments.html" class="md-nav__link">
+      <a href="../features/segments.html" class="md-nav__link">
         Segments
       </a>
     </li>
@@ -603,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/features/settings.html" class="md-nav__link">
+      <a href="../features/settings.html" class="md-nav__link">
         Settings
       </a>
     </li>
@@ -615,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/features/multi-strip.html" class="md-nav__link">
+      <a href="../features/multi-strip.html" class="md-nav__link">
         Multi-strip Support
       </a>
     </li>
@@ -627,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/features/relay-control.html" class="md-nav__link">
+      <a href="../features/relay-control.html" class="md-nav__link">
         Relay Control
       </a>
     </li>
@@ -639,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/features/subpages.html" class="md-nav__link">
+      <a href="../features/subpages.html" class="md-nav__link">
         Web GUI Sitemap
       </a>
     </li>
@@ -681,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interfaces/blynk.html" class="md-nav__link">
+      <a href="../interfaces/blynk.html" class="md-nav__link">
         Blynk
       </a>
     </li>
@@ -693,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interfaces/dmx-output.html" class="md-nav__link">
+      <a href="../interfaces/dmx-output.html" class="md-nav__link">
         DMX
       </a>
     </li>
@@ -705,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interfaces/e1.31-dmx.html" class="md-nav__link">
+      <a href="../interfaces/e1.31-dmx.html" class="md-nav__link">
         E1.31 (DMX) / Art-Net
       </a>
     </li>
@@ -717,7 +805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interfaces/http-api.html" class="md-nav__link">
+      <a href="../interfaces/http-api.html" class="md-nav__link">
         HTTP Request API
       </a>
     </li>
@@ -729,7 +817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interfaces/json-api.html" class="md-nav__link">
+      <a href="../interfaces/json-api.html" class="md-nav__link">
         JSON API
       </a>
     </li>
@@ -741,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interfaces/mqtt.html" class="md-nav__link">
+      <a href="../interfaces/mqtt.html" class="md-nav__link">
         MQTT
       </a>
     </li>
@@ -753,7 +841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interfaces/infrared.html" class="md-nav__link">
+      <a href="../interfaces/infrared.html" class="md-nav__link">
         Infrared
       </a>
     </li>
@@ -765,7 +853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interfaces/philips-hue.html" class="md-nav__link">
+      <a href="../interfaces/philips-hue.html" class="md-nav__link">
         Philips Hue
       </a>
     </li>
@@ -777,7 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interfaces/udp-notifier.html" class="md-nav__link">
+      <a href="../interfaces/udp-notifier.html" class="md-nav__link">
         WLED UDP Sync
       </a>
     </li>
@@ -789,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interfaces/udp-realtime.html" class="md-nav__link">
+      <a href="../interfaces/udp-realtime.html" class="md-nav__link">
         UDP Realtime / tpm2.net
       </a>
     </li>
@@ -801,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interfaces/websocket.html" class="md-nav__link">
+      <a href="../interfaces/websocket.html" class="md-nav__link">
         Websocket
       </a>
     </li>
@@ -843,7 +931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/home-automation.html" class="md-nav__link">
+      <a href="../advanced/home-automation.html" class="md-nav__link">
         Home Automation
       </a>
     </li>
@@ -855,7 +943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/remote-access-ifttt.html" class="md-nav__link">
+      <a href="../advanced/remote-access-ifttt.html" class="md-nav__link">
         Remote Access / IFTTT
       </a>
     </li>
@@ -867,7 +955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/security.html" class="md-nav__link">
+      <a href="../advanced/security.html" class="md-nav__link">
         Security
       </a>
     </li>
@@ -879,7 +967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/wiring.html" class="md-nav__link">
+      <a href="../advanced/wiring.html" class="md-nav__link">
         Wiring Protips
       </a>
     </li>
@@ -891,7 +979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/compile-wled.html" class="md-nav__link">
+      <a href="../advanced/compile-wled.html" class="md-nav__link">
         Compile WLED
       </a>
     </li>
@@ -903,7 +991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/custom-features.html" class="md-nav__link">
+      <a href="../advanced/custom-features.html" class="md-nav__link">
         Custom Features
       </a>
     </li>
@@ -915,7 +1003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/esp32-recovery.html" class="md-nav__link">
+      <a href="../advanced/esp32-recovery.html" class="md-nav__link">
         ESP32 Recovery
       </a>
     </li>
@@ -927,7 +1015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/mapping.html" class="md-nav__link">
+      <a href="../advanced/mapping.html" class="md-nav__link">
         Mapping
       </a>
     </li>
@@ -969,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/about/contributors.html" class="md-nav__link">
+      <a href="../about/contributors.html" class="md-nav__link">
         Contributors & Credits
       </a>
     </li>
@@ -981,7 +1069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/about/privacy-policy.html" class="md-nav__link">
+      <a href="../about/privacy-policy.html" class="md-nav__link">
         Privacy Policy
       </a>
     </li>
@@ -993,7 +1081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/about/roadmap.html" class="md-nav__link">
+      <a href="../about/roadmap.html" class="md-nav__link">
         Upcoming Features
       </a>
     </li>
@@ -1013,11 +1101,198 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#flashing-method-1-esptool" class="md-nav__link">
+    Flashing method 1: esptool
+  </a>
+  
+    <nav class="md-nav" aria-label="Flashing method 1: esptool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esp8266" class="md-nav__link">
+    ESP8266
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esp32" class="md-nav__link">
+    ESP32
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flashing-method-2-esp-home-flasher-tool" class="md-nav__link">
+    Flashing method 2: ESP Home Flasher tool
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flashing-method-3-ota-update" class="md-nav__link">
+    Flashing method 3: OTA update
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-binary-should-i-use" class="md-nav__link">
+    What binary should I use?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                  <a href="https://github.com/Aircoookie/WLED-Docs/edit/master/docs/basics/install-binary.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Install WLED Binary</h1>
+                
+                <h3 id="flashing-method-1-esptool">Flashing method 1: esptool</h3>
+<ul>
+<li>First of all, please follow the steps to install esptool.py <a href="https://github.com/espressif/esptool">here</a>.</li>
+<li>Download the latest <a href="https://github.com/Aircoookie/WLED/releases">release binary</a> file!</li>
+<li>Make sure only one ESP device/microcontroller is connected to your computer! Otherwise you could accidentally overwrite the wrong one. If you know the serial port, you can also add the <code>-port COM3</code> attribute after <code>write_flash</code></li>
+<li>Execute this command:</li>
+</ul>
+<h4 id="esp8266">ESP8266</h4>
+<pre><code>esptool.py write_flash 0x0 ./WLED_XXX.bin
+</code></pre>
+<h4 id="esp32">ESP32</h4>
+<p>(you will need to have a bootloader installed)</p>
+<pre><code>esptool.py write_flash 0x10000 ./WLED_XXX.bin 
+</code></pre>
+<p>If the ESP32 is new, you will need to flash the bootloader first. This bootloader should be addressed to 0x00000 and the firmware to 0x10000. This is not required if you had an Arduino sketch running on it before. You can find the bootloader file in the assets for the <a href="https://github.com/Aircoookie/WLED/releases/tag/v0.9.1">0.9.1 release</a>.</p>
+<pre><code>esptool.py write_flash 0x0 ./esp32_bootloader.bin
+</code></pre>
+<p>When esptool.py says <code>Connecting...</code>, some ESP32 boards require you to hold the boot button (to the right of the USB port) for a few seconds<br />
+- If you experience issues, run this command before trying <code>write_flash</code> again (Note: this will erase all settings stored on the ESP!)</p>
+<pre><code>esptool.py erase_flash
+</code></pre>
+<h3 id="flashing-method-2-esp-home-flasher-tool">Flashing method 2: <a href="https://github.com/esphome/esphome-flasher/releases">ESP Home Flasher</a> tool</h3>
+<p>This is a GUI-based tool recommended by some users as easier to use than esptool.
+For some ESP32 boards, you might have to press some buttons after uploading:</p>
+<blockquote>
+<p>Hold both buttons down, plug it in, start flashing, then when is tries to detect, let go of the button to the left of the USB as you look at it, then when it detects the board type, let go of the other button.</p>
+</blockquote>
+<p>If running windows, you need a driver from here: https://www.wemos.cc/en/latest/ch340_driver.html before your computer will show the COM port in ESPhome Flasher. With a Wemos D1 mini you do not need to hold down the reset button while flashing.</p>
+<h3 id="flashing-method-3-ota-update">Flashing method 3: OTA update</h3>
+<p>You can alternatively use my <a href="https://github.com/Aircoookie/ESP8266MinimalHTTPUpdater">basic HTTP OTA updater</a> sketch and upload the binary! This requires the Arduino IDE and ESP8266 core installed.
+If your device is already running a firmware with built-in OTA capability, you can probably use that as well.</p>
+<h3 id="what-binary-should-i-use">What binary should I use?</h3>
+<p>I always recommend to use the latest release. Starting from WLED 0.12.0, pins can be configured in LED settings and specific binaries for different LED pins or types are no longer needed. Please use the following binary for these boards respectively:</p>
+<table>
+<thead>
+<tr>
+<th>Binary Name</th>
+<th>For devices</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WLED_0.x.x_ESP8266.bin</td>
+<td>NodeMCU, Wemos D1 mini, ESP-12, all ESP8266 with 4MB flash. Recommended.</td>
+</tr>
+<tr>
+<td>WLED_0.x.x_ESP32.bin</td>
+<td>All ESP32 devices (try <a href="https://github.com/Aircoookie/WLED/issues/517#issuecomment-571333712">this</a> if the WLED-AP doesn't appear after flashing)</td>
+</tr>
+<tr>
+<td>WLED_0.x.x_ESP32_Ethernet.bin</td>
+<td>ESP32 devices with an Ethernet interface. Also works with WiFi only.</td>
+</tr>
+<tr>
+<td>WLED_0.x.x_ESP01.bin</td>
+<td>ESP-01 (black PCB), most Sonoff devices, ESP8265, all ESP8266 with 1MB flash. This binary has the full feature set, but wireless updates will not work.</td>
+</tr>
+<tr>
+<td>esp32_bootloader.bin</td>
+<td>Not a WLED release. To be flashed to a brand new ESP32 before flashing the WLED binary itself.</td>
+</tr>
+</tbody>
+</table>
+<p>Legacy binary format (up to 0.11.1)</p>
+<table>
+<thead>
+<tr>
+<th>Binary Name</th>
+<th>For devices</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WLED_0.x.x_ESP8266_1M_ota.bin</td>
+<td>ESP-01 (black PCB), most Sonoff devices, ESP8265, all ESP8266 with 1MB flash. This binary has some interfaces disabled (Alexa, Blynk, Hue sync, Infrared) in order for wireless updates to continue working.</td>
+</tr>
+<tr>
+<td>WLED_0.x.x_ESP8266_1M_full.bin</td>
+<td>ESP-01 (black PCB), most Sonoff devices, ESP8265, all ESP8266 with 1MB flash. This binary has the full feature set, but wireless updates will not work.</td>
+</tr>
+<tr>
+<td>WLED_0.x.x_ESP8266_512k.bin</td>
+<td>ESP-01 (blue PCB), older Sonoff devices, all ESP8266 with 512kB flash. Interfaces (Alexa, Blynk, Hue sync, Infrared) disabled, no OTA. Support will not be possible in future versions.</td>
+</tr>
+<tr>
+<td>WLED_0.x.x_ESP8266_ledpinY.bin</td>
+<td>Custom build for 4MB flash ESP8266 and WS2812B. LED pin is changed (default is GPIO2). (This is GPIOY and not DY for the D to GPIO mapping, check your boards spec!)</td>
+</tr>
+<tr>
+<td>WLED_0.x.x_ESP8266_apa102.bin</td>
+<td>Custom build for 4MB flash ESP8266 and APA102 LEDs (clock pin GPIO0, data GPIO2).</td>
+</tr>
+<tr>
+<td>WLED_0.x.x_ESP8266_ws2801.bin</td>
+<td>Custom build for 4MB flash ESP8266 and WS2801 LEDs (clock pin GPIO0, data GPIO2).</td>
+</tr>
+<tr>
+<td>WLED_0.x.x_ESP32_ledpinY.bin</td>
+<td>Custom build for ESP32 and WS2812b. LED pin is changed (default is GPIO2). LED pin 16 is useful for the QuinLed-Dig-Uno board with ESP32.</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+              
+              
+                
+
 
               
             </article>
@@ -1032,6 +1307,41 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="compatible-software.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Software" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Software
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="install-gui.html" class="md-footer__link md-footer__link--next" aria-label="Next: Install using ESP GUI" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Install using ESP GUI
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1110,12 +1420,12 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "/assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
       
-        <script src="/assets/js/newtab.js"></script>
+        <script src="../assets/js/newtab.js"></script>
       
     
   </body>

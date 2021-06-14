@@ -11,19 +11,19 @@
         <meta name="author" content="Christian Schwinne (Aircoookie)">
       
       
-      <link rel="icon" href="/assets/images/ui/aircoookie/blurple.png">
+      <link rel="icon" href="../assets/images/ui/aircoookie/blurple.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
     
     
       
-        <title>WLED Project</title>
+        <title>Compiling WLED - WLED Project</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
         
       
     
@@ -38,9 +38,9 @@
     
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/global.css">
+      <link rel="stylesheet" href="../assets/stylesheets/global.css">
     
-      <link rel="stylesheet" href="/assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
     
     
       
@@ -61,7 +61,7 @@
     <body dir="ltr" data-md-color-scheme="wled" data-md-color-primary="cyan" data-md-color-accent="orange">
   
     
-    <script>function __prefix(e){return new URL("/",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
       <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
@@ -69,6 +69,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#installation-guide-platformio-recommended" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -91,9 +96,9 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/index.html" title="WLED Project" class="md-header__button md-logo" aria-label="WLED Project" data-md-component="logo">
+    <a href="../index.html" title="WLED Project" class="md-header__button md-logo" aria-label="WLED Project" data-md-component="logo">
       
-  <img src="/assets/images/ui/akemi/001_cheerful.png" alt="logo">
+  <img src="../assets/images/ui/akemi/001_cheerful.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -109,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Compiling WLED
             
           </span>
         </div>
@@ -202,7 +207,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/index.html" class="md-tabs__link">
+    <a href="../index.html" class="md-tabs__link">
       Welcome
     </a>
   </li>
@@ -211,13 +216,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="/basics/getting-started.html" class="md-tabs__link">
+      <a href="getting-started.html" class="md-tabs__link md-tabs__link--active">
         Basics
       </a>
     </li>
@@ -233,7 +240,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/features/effects-palettes.html" class="md-tabs__link">
+      <a href="../features/effects-palettes.html" class="md-tabs__link">
         Features
       </a>
     </li>
@@ -249,7 +256,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/interfaces/blynk.html" class="md-tabs__link">
+      <a href="../interfaces/blynk.html" class="md-tabs__link">
         Interfaces
       </a>
     </li>
@@ -265,7 +272,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/advanced/home-automation.html" class="md-tabs__link">
+      <a href="../advanced/home-automation.html" class="md-tabs__link">
         Advanced
       </a>
     </li>
@@ -281,7 +288,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/about/contributors.html" class="md-tabs__link">
+      <a href="../about/contributors.html" class="md-tabs__link">
         About
       </a>
     </li>
@@ -308,9 +315,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/index.html" title="WLED Project" class="md-nav__button md-logo" aria-label="WLED Project" data-md-component="logo">
+    <a href="../index.html" title="WLED Project" class="md-nav__button md-logo" aria-label="WLED Project" data-md-component="logo">
       
-  <img src="/assets/images/ui/akemi/001_cheerful.png" alt="logo">
+  <img src="../assets/images/ui/akemi/001_cheerful.png" alt="logo">
 
     </a>
     WLED Project
@@ -339,7 +346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         Welcome
       </a>
     </li>
@@ -352,12 +359,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         Basics
@@ -375,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/basics/getting-started.html" class="md-nav__link">
+      <a href="getting-started.html" class="md-nav__link">
         Getting Started
       </a>
     </li>
@@ -408,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/basics/compatible-hardware.html" class="md-nav__link">
+      <a href="compatible-hardware.html" class="md-nav__link">
         Hardware
       </a>
     </li>
@@ -420,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/basics/compatible-software.html" class="md-nav__link">
+      <a href="compatible-software.html" class="md-nav__link">
         Software
       </a>
     </li>
@@ -436,12 +445,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
       
       <label class="md-nav__link" for="__nav_2_3">
         Installation
@@ -459,7 +470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/basics/install-binary.html" class="md-nav__link">
+      <a href="install-binary.html" class="md-nav__link">
         Install WLED Binary
       </a>
     </li>
@@ -471,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/basics/install-gui.html" class="md-nav__link">
+      <a href="install-gui.html" class="md-nav__link">
         Install using ESP GUI
       </a>
     </li>
@@ -481,11 +492,68 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/basics/compiling-wled.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Compiling WLED
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="compiling-wled.html" class="md-nav__link md-nav__link--active">
         Compiling WLED
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-guide-platformio-recommended" class="md-nav__link">
+    Installation guide (PlatformIO, recommended)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilation-guide-platformio" class="md-nav__link">
+    Compilation guide (PlatformIO)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilation-guide-arduino-ide-not-recommended" class="md-nav__link">
+    Compilation guide (Arduino IDE, not recommended)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilation-settings-arduino-ide" class="md-nav__link">
+    Compilation settings (Arduino IDE)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -501,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/basics/tutorials.html" class="md-nav__link">
+      <a href="tutorials.html" class="md-nav__link">
         Tutorials
       </a>
     </li>
@@ -513,7 +581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/basics/faq.html" class="md-nav__link">
+      <a href="faq.html" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -555,7 +623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/features/effects-palettes.html" class="md-nav__link">
+      <a href="../features/effects-palettes.html" class="md-nav__link">
         Effects & Palettes
       </a>
     </li>
@@ -567,7 +635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/features/macros.html" class="md-nav__link">
+      <a href="../features/macros.html" class="md-nav__link">
         Macros
       </a>
     </li>
@@ -579,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/features/presets.html" class="md-nav__link">
+      <a href="../features/presets.html" class="md-nav__link">
         Presets
       </a>
     </li>
@@ -591,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/features/segments.html" class="md-nav__link">
+      <a href="../features/segments.html" class="md-nav__link">
         Segments
       </a>
     </li>
@@ -603,7 +671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/features/settings.html" class="md-nav__link">
+      <a href="../features/settings.html" class="md-nav__link">
         Settings
       </a>
     </li>
@@ -615,7 +683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/features/multi-strip.html" class="md-nav__link">
+      <a href="../features/multi-strip.html" class="md-nav__link">
         Multi-strip Support
       </a>
     </li>
@@ -627,7 +695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/features/relay-control.html" class="md-nav__link">
+      <a href="../features/relay-control.html" class="md-nav__link">
         Relay Control
       </a>
     </li>
@@ -639,7 +707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/features/subpages.html" class="md-nav__link">
+      <a href="../features/subpages.html" class="md-nav__link">
         Web GUI Sitemap
       </a>
     </li>
@@ -681,7 +749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interfaces/blynk.html" class="md-nav__link">
+      <a href="../interfaces/blynk.html" class="md-nav__link">
         Blynk
       </a>
     </li>
@@ -693,7 +761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interfaces/dmx-output.html" class="md-nav__link">
+      <a href="../interfaces/dmx-output.html" class="md-nav__link">
         DMX
       </a>
     </li>
@@ -705,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interfaces/e1.31-dmx.html" class="md-nav__link">
+      <a href="../interfaces/e1.31-dmx.html" class="md-nav__link">
         E1.31 (DMX) / Art-Net
       </a>
     </li>
@@ -717,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interfaces/http-api.html" class="md-nav__link">
+      <a href="../interfaces/http-api.html" class="md-nav__link">
         HTTP Request API
       </a>
     </li>
@@ -729,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interfaces/json-api.html" class="md-nav__link">
+      <a href="../interfaces/json-api.html" class="md-nav__link">
         JSON API
       </a>
     </li>
@@ -741,7 +809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interfaces/mqtt.html" class="md-nav__link">
+      <a href="../interfaces/mqtt.html" class="md-nav__link">
         MQTT
       </a>
     </li>
@@ -753,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interfaces/infrared.html" class="md-nav__link">
+      <a href="../interfaces/infrared.html" class="md-nav__link">
         Infrared
       </a>
     </li>
@@ -765,7 +833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interfaces/philips-hue.html" class="md-nav__link">
+      <a href="../interfaces/philips-hue.html" class="md-nav__link">
         Philips Hue
       </a>
     </li>
@@ -777,7 +845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interfaces/udp-notifier.html" class="md-nav__link">
+      <a href="../interfaces/udp-notifier.html" class="md-nav__link">
         WLED UDP Sync
       </a>
     </li>
@@ -789,7 +857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interfaces/udp-realtime.html" class="md-nav__link">
+      <a href="../interfaces/udp-realtime.html" class="md-nav__link">
         UDP Realtime / tpm2.net
       </a>
     </li>
@@ -801,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interfaces/websocket.html" class="md-nav__link">
+      <a href="../interfaces/websocket.html" class="md-nav__link">
         Websocket
       </a>
     </li>
@@ -843,7 +911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/home-automation.html" class="md-nav__link">
+      <a href="../advanced/home-automation.html" class="md-nav__link">
         Home Automation
       </a>
     </li>
@@ -855,7 +923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/remote-access-ifttt.html" class="md-nav__link">
+      <a href="../advanced/remote-access-ifttt.html" class="md-nav__link">
         Remote Access / IFTTT
       </a>
     </li>
@@ -867,7 +935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/security.html" class="md-nav__link">
+      <a href="../advanced/security.html" class="md-nav__link">
         Security
       </a>
     </li>
@@ -879,7 +947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/wiring.html" class="md-nav__link">
+      <a href="../advanced/wiring.html" class="md-nav__link">
         Wiring Protips
       </a>
     </li>
@@ -891,7 +959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/compile-wled.html" class="md-nav__link">
+      <a href="../advanced/compile-wled.html" class="md-nav__link">
         Compile WLED
       </a>
     </li>
@@ -903,7 +971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/custom-features.html" class="md-nav__link">
+      <a href="../advanced/custom-features.html" class="md-nav__link">
         Custom Features
       </a>
     </li>
@@ -915,7 +983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/esp32-recovery.html" class="md-nav__link">
+      <a href="../advanced/esp32-recovery.html" class="md-nav__link">
         ESP32 Recovery
       </a>
     </li>
@@ -927,7 +995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/mapping.html" class="md-nav__link">
+      <a href="../advanced/mapping.html" class="md-nav__link">
         Mapping
       </a>
     </li>
@@ -969,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/about/contributors.html" class="md-nav__link">
+      <a href="../about/contributors.html" class="md-nav__link">
         Contributors & Credits
       </a>
     </li>
@@ -981,7 +1049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/about/privacy-policy.html" class="md-nav__link">
+      <a href="../about/privacy-policy.html" class="md-nav__link">
         Privacy Policy
       </a>
     </li>
@@ -993,7 +1061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/about/roadmap.html" class="md-nav__link">
+      <a href="../about/roadmap.html" class="md-nav__link">
         Upcoming Features
       </a>
     </li>
@@ -1013,11 +1081,179 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-guide-platformio-recommended" class="md-nav__link">
+    Installation guide (PlatformIO, recommended)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilation-guide-platformio" class="md-nav__link">
+    Compilation guide (PlatformIO)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilation-guide-arduino-ide-not-recommended" class="md-nav__link">
+    Compilation guide (Arduino IDE, not recommended)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilation-settings-arduino-ide" class="md-nav__link">
+    Compilation settings (Arduino IDE)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                  <a href="https://github.com/Aircoookie/WLED-Docs/edit/master/docs/basics/compiling-wled.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Compiling WLED</h1>
+                
+                <p>You want to add custom features to WLED, use non-default pins, or add in a usermod? You've found the right place!</p>
+<p>WLED has come to rely on so many dependencies in the latest versions that building with the Arduino IDE is no longer recommended.
+Instead, installing Visual Studio Code and its PlatformIO (PIO) extension is easier, as it will install the ESP Arduino core, all the required libraries and the correct compilation settings for you automatically.</p>
+<h3 id="installation-guide-platformio-recommended">Installation guide (PlatformIO, recommended)</h3>
+<ol>
+<li>Make sure Git client is installed on your system. If it isn't, you can get it <a href="https://git-scm.com/downloads">here</a>.</li>
+<li>Download and install the free <a href="https://code.visualstudio.com/">Visual Studio Code</a> by Microsoft.</li>
+<li>Open VS Code and go to the Extensions manager (the icon with the stacked blocks in the left bar)</li>
+<li>Search for <code>platformio ide</code> and install the PlatformIO extension</li>
+<li>Download the WLED source code by executing <code>git clone https://github.com/Aircoookie/WLED.git</code> in some folder. Alternatively fork the WLED project first and download it from your fork</li>
+<li>Go to <code>File -&gt; Open Folder</code> and open that root WLED folder (the one that contains <code>platformio.ini</code>, <em>NOT</em> the <code>wled00</code> folder)</li>
+</ol>
+<h3 id="compilation-guide-platformio">Compilation guide (PlatformIO)</h3>
+<ol>
+<li>In VS Code, open the file <code>platformio.ini</code>.</li>
+<li>Add a semicolon in front of the line that says <code>default_envs = travis_esp8266, travis_esp32</code> to comment it out.</li>
+<li>Select your build environment by un-commenting one of the lines starting with <code>; default_envs =</code>.<br />
+Please remove <em>BOTH</em> the <code>;</code> and the whitespace behind it to correctly uncomment the line.<br />
+For most ESP8266 boards, the <code>d1_mini</code> environment is best.  </li>
+<li>
+<p>In the blue bottom bar, hit the checkmark to compile WLED or the arrow pointing right to compile and upload!  </p>
+<p><a href="https://i.imgur.com/mZYo4KJ.jpg">Picture Guide</a></p>
+</li>
+</ol>
+<p>Success! </p>
+<p>If you get one of these two errors, hit the checkmark icon once again to compile and that time the code should build without problems! 
+- <code>error: wled00\wled00.ino.cpp: No such file or directory</code>
+- <code>FileNotFoundError: [WinError 2] The system cannot find the file specified: '[...].sconsign37.dblite'</code></p>
+<h3 id="compilation-guide-arduino-ide-not-recommended">Compilation guide (Arduino IDE, not recommended)</h3>
+<ul>
+<li>
+<p>Follow a guide to setup your Arduino IDE (I am using version 1.8.9) with the ESP8266 libraries.
+For current compiles I recommend the latest Arduino core version 2.7.4. If you do not wish to install all libraries manually it is recommended to download the PlatformIO extension for VS Code (see above).</p>
+</li>
+<li>
+<p>You will need to install a few libraries:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Library Name</th>
+<th>Platform</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/Makuna/NeoPixelBus">NeoPixelBus</a> (2.6.0)</td>
+<td>All</td>
+</tr>
+<tr>
+<td><a href="https://github.com/FastLED/FastLED">FastLED</a></td>
+<td>All</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Aircoookie/ESPAsyncWebServer">ESPAsyncWebServer Aircoookie fork</a> (2.0.0)</td>
+<td>All</td>
+</tr>
+<tr>
+<td><a href="https://github.com/crankyoldgit/IRremoteESP8266">IRRemoteESP8266</a></td>
+<td>All</td>
+</tr>
+<tr>
+<td><a href="https://github.com/me-no-dev/ESPAsyncTCP">ESPAsyncTCP</a></td>
+<td>ESP8266 only</td>
+</tr>
+<tr>
+<td><a href="https://github.com/me-no-dev/ESPAsyncUDP">ESPAsyncUDP</a></td>
+<td>ESP8266 only</td>
+</tr>
+<tr>
+<td><a href="https://github.com/me-no-dev/AsyncTCP">AsyncTCP for ESP32</a></td>
+<td>ESP32 only</td>
+</tr>
+<tr>
+<td><a href="https://github.com/lorol/LITTLEFS">LITTLEFS_esp32</a>*</td>
+<td>ESP32 only</td>
+</tr>
+</tbody>
+</table>
+<p>* Please see <a href="https://github.com/lorol/LITTLEFS#installation">the installation guide</a>. You might need to enable a define in the library code.</p>
+<p>All other dependencies are included with WLED for convenience.</p>
+<ul>
+<li>Now compile and flash the software! Make sure you erase everything when you flash! (If your board config does not provide this option, you can <code>Sketch -&gt; Export compiled Binary</code> and upload with <a href="/basics/install-binary">any ESP flashing tool</a>.)</li>
+</ul>
+<h3 id="compilation-settings-arduino-ide">Compilation settings (Arduino IDE)</h3>
+<p>ESP8266:
+- Arduino Core v2.7.4
+- Board: NodeMCU 1.0 (ESP-12E module) (or select your ESP board)
+- CPU frequency: 80 MHz
+- Flash size : 4MB (1MB SPIFFS)
+- LwIP variant: v1.4 Higher Bandwidth (try 2 if you experience issues)
+- Upload speed: Any, 921600 recommended</p>
+<p>ESP8266-07 (External Antenna):
+- Variants have 512kB or 1MB flash
+- Be sure to use DOUT mode when flashing
+- Flash Size 1MB (128k SPIFFS)
+- 512kB variant no longer compatible</p>
+<p>ESP-07s (External Antenna):
+- Variant have 4MB flash
+- Settings as for NodeMCU or Wemos</p>
+<p>ESP32:
+- Arduino Core v1.0.4</p>
+                
+                  
+                
+              
+              
+                
+
 
               
             </article>
@@ -1032,6 +1268,41 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="install-gui.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Install using ESP GUI" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Install using ESP GUI
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="tutorials.html" class="md-footer__link md-footer__link--next" aria-label="Next: Tutorials" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Tutorials
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1110,12 +1381,12 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "/assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
       
-        <script src="/assets/js/newtab.js"></script>
+        <script src="../assets/js/newtab.js"></script>
       
     
   </body>
