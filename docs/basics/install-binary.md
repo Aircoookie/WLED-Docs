@@ -5,7 +5,16 @@ hide:
   # - toc
 ---
 
-### Flashing method 1: esptool
+### Flashing method 1: WLED web installer
+
+!!! tip
+  This is by far the easiest and fastest way to get WLED up and running!
+
+Make sure you are running a recent desktop Chrome or Edge browser and head over to the [installer site](https://install.wled.me)!
+If you are updating an existing version of WLED, make sure to uncheck "Clean install" so that your settings are kept.
+This installer is not yet available for ESPs with flash chips smaller than 4MB (e.g. ESP01)
+
+### Flashing method 2: esptool
 
 - First of all, please follow the steps to install esptool.py [here](https://github.com/espressif/esptool).
 - Download the latest [release binary](https://github.com/Aircoookie/WLED/releases) file!
@@ -31,7 +40,7 @@ When esptool.py says `Connecting...`, some ESP32 boards require you to hold the 
 esptool.py erase_flash
 ```
 
-### Flashing method 2: [ESP Home Flasher](https://github.com/esphome/esphome-flasher/releases) tool
+### Flashing method 3: [ESP Home Flasher](https://github.com/esphome/esphome-flasher/releases) tool
 
 This is a GUI-based tool recommended by some users as easier to use than esptool.
 For some ESP32 boards, you might have to press some buttons after uploading:
