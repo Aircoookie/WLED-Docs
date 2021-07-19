@@ -41,17 +41,17 @@ A fast and feature-rich implementation of an ESP8266/ESP32 webserver to control 
 
 ## 💡 Supported light control interfaces
 - [WLED app](https://github.com/Aircoookie/WLED-App) for [Android](https://play.google.com/store/apps/details?id=com.aircoookie.WLED) and [iOS](https://apps.apple.com/us/app/wled/id1475695033)
-- [JSON](/interfaces/json-api.md) and [HTTP request](/interfaces/http-api.md) APIs  
-- [MQTT](/interfaces/mqtt.md)  
-- [Blynk IoT](/interfaces/blynk.md)  
-- [E1.31](/interfaces/e1.31-dmx.md), [Art-Net](/interfaces/e1.31-dmx.md), DDP and [TPM2.net](/interfaces/udp-realtime.md)
-- [Hyperion](https://github.com/hyperion-project/hyperion.ng)
-- [UDP realtime](/interfaces/udp-realtime.md)
-- [Alexa voice control (including dimming and color)](/advanced/remote-access-ifttt.md)
-- [Sync to Philips Hue lights](/interfaces/philips-hue.md)
+- [JSON](/interfaces/json-api) and [HTTP request](/interfaces/http-api) APIs  
+- [MQTT](/interfaces/mqtt)  
+- [Blynk IoT](/interfaces/blynk)  
+- [E1.31](/interfaces/e1.31-dmx), [Art-Net](/interfaces/e1.31-dmx), DDP and [TPM2.net](/interfaces/udp-realtime)
+- [Hyperion](https://github.com/hyperion-project/hyperion)
+- [UDP realtime](/interfaces/udp-realtime)
+- [Alexa voice control (including dimming and color)](/advanced/remote-access-ifttt)
+- [Sync to Philips Hue lights](/interfaces/philips-hue)
 - Adalight (PC ambilight via serial) and TPM2  
-- [Sync color of multiple WLED devices (UDP notifier)](/interfaces/udp-notifier.md)
-- [Infrared remotes (24-key RGB, receiver required)](/interfaces/infrared.md)
+- [Sync color of multiple WLED devices (UDP notifier)](/interfaces/udp-notifier)
+- [Infrared remotes (24-key RGB, receiver required)](/interfaces/infrared)
 - Simple timers/schedules (time from NTP, timezones/DST supported)  
 
 ## 📲 Quick start guide and documentation
