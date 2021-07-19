@@ -140,26 +140,26 @@ This is the XML file sent as response to every API call.
 
 | Parameter | Value Range | Description |
 | --- | --- | --- |
-\<ac> | 0 to 255 | Master Brightness
-\<cl> | 3x 0..255 | Primary Color RGB
-\<cs> | 3x 0..255 | Secondary RGB
-\<ns> | 0 or 1 | Notification Sending on
-\<nr> | 0 or 1 | Notification Receive on
-\<nl> | 0 or 1 | Nightlight active
-\<nf> | 0 or 2 | Nightlight Fade type
-\<nd> | 0 to 255 | Nightlight delay
-\<nt> | 0 to 255 | Nightlight target brightness
-\<fx> | 0 to 73 | Effect index
-\<sx> | 0 to 255 | Effect speed
-\<ix> | 0 to 255 | Effect intensity
-\<fp> | 0 to 43 | FastLED palette
-\<wv> | -1 to 255 | Primary White value
-\<ws> | 0 to 255 | Secondary White
-\<ps> | 0 to 255 | Current Preset
-\<cy> | 0 or 1 | Preset Cycling enabled
-\<md> | 0 or 1 | RGB or HSB UI mode
-\<ds> | String 0..32 | Server description
-\<ss> | 0 to 12 | Segment ID
+ac | 0 to 255 | Master Brightness
+cl | 3x 0..255 | Primary Color RGB
+cs | 3x 0..255 | Secondary RGB
+ns | 0 or 1 | Notification Sending on
+nr | 0 or 1 | Notification Receive on
+nl | 0 or 1 | Nightlight active
+nf | 0 or 2 | Nightlight Fade type
+nd | 0 to 255 | Nightlight delay
+nt | 0 to 255 | Nightlight target brightness
+fx | 0 to 73 | Effect index
+sx | 0 to 255 | Effect speed
+ix | 0 to 255 | Effect intensity
+fp | 0 to 43 | FastLED palette
+wv | -1 to 255 | Primary White value
+ws | 0 to 255 | Secondary White
+ps | 0 to 255 | Current Preset
+cy | 0 or 1 | Preset Cycling enabled
+md | 0 or 1 | RGB or HSB UI mode
+ds | String 0..32 | Server description
+ss | 0 to 12 | Segment ID
 
 ## In-/decrementing values
 
