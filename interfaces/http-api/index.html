@@ -1270,7 +1270,7 @@ Parameters can be added to control some of the variables.
 (if the parameter is unknown or the value illegal nothing will happen)</p>
 <h2 id="led-control">LED control</h2>
 <p>Parameter | Value Range | Description | Since Version
-| --- | --- | --- | --- |
+|---|---|---|---|
 &amp;A= | 0 to 255 | Master brightness | 0.2
 &amp;T= | 0, 1, or 2 | Master Off/On/Toggle | 0.3
 &amp;R= | 0 to 255 | Primary Red value | 0.2
@@ -1287,7 +1287,7 @@ Parameters can be added to control some of the variables.
 &amp;NF= | 0 to 2 | Fade Nightlight, 1 = fade brightness only,<br/>2 = additionaly fade color from primary to secondary color | 0.5.0</p>
 <h2 id="advanced">Advanced</h2>
 <p>Parameter | Value Range | Description | Since Version
-| --- | --- | --- | --- |
+|---|---|---|---|
 &amp;CL= | HEX/DEC | Primary color | 0.8.0
 &amp;C2= | HEX/DEC | Secondary color | 0.8.0
 &amp;C3= | HEX/DEC | Third color | 0.8.0
@@ -1304,57 +1304,22 @@ Parameters can be added to control some of the variables.
 <p>Hex values need to be prefaced with the character h or H. The normal format is <code>RRGGBB</code>. If the led strip is RGBW, the hex format is <code>WWRRGGBB</code>. Note: In the UI the format is <code>RRGGBBWW</code>, so the values cannot be copied without a transformation.</p>
 <h3 id="loxone-commands">Loxone commands</h3>
 <p>Loxone offers two commands. One for RGB values and one for brightness and color temperature.</p>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Syntax</th>
-<th>Range</th>
-<th>Description</th>
-<th>Since Version</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>&amp;LX=</td>
-<td>BBBGGGRRR</td>
-<td>0 - 100100100</td>
-<td>Loxone RGB value for primary color. Each color (<code>RRR</code>,<code>GGG</code>,<code>BBB</code>) is specified in the range from 0 to 100%.</td>
-<td>0.11</td>
-</tr>
-<tr>
-<td>&amp;LX=</td>
-<td>20bbbtttt</td>
-<td>200002700 - 201006500</td>
-<td>Loxone brightness and color temperature values for primary color. Brightness <code>bbb</code> is specified in the range 0 to 100%. <code>tttt</code> defines the color temperature in the range from 2700 to 6500 Kelvin.</td>
-<td>0.11</td>
-</tr>
-<tr>
-<td>&amp;LY=</td>
-<td>BBBGGGRRR</td>
-<td>0 - 100100100</td>
-<td>Loxone RGB value for secondary color. Each color (<code>RRR</code>,<code>GGG</code>,<code>BBB</code>) is specified in the range from 0 to 100%.</td>
-<td>0.11</td>
-</tr>
-<tr>
-<td>&amp;LY=</td>
-<td>20bbbtttt</td>
-<td>200002700 - 201006500</td>
-<td>Loxone brightness and color temperature values for secondary color. Brightness <code>bbb</code> is specified in the range 0 to 100%. <code>tttt</code> defines the color temperature in the range from 2700 to 6500 Kelvin.</td>
-<td>0.11</td>
-</tr>
-</tbody>
-</table>
+<p>| Parameter | Syntax | Range | Description | Since Version |
+|---|---|---|---|
+&amp;LX= | BBBGGGRRR | 0 - 100100100 | Loxone RGB value for primary color. Each color (<code>RRR</code>,<code>GGG</code>,<code>BBB</code>) is specified in the range from 0 to 100%. | 0.11
+&amp;LX= | 20bbbtttt | 200002700 - 201006500 | Loxone brightness and color temperature values for primary color. Brightness <code>bbb</code> is specified in the range 0 to 100%. <code>tttt</code> defines the color temperature in the range from 2700 to 6500 Kelvin. | 0.11
+&amp;LY= | BBBGGGRRR | 0 - 100100100 | Loxone RGB value for secondary color. Each color (<code>RRR</code>,<code>GGG</code>,<code>BBB</code>) is specified in the range from 0 to 100%. | 0.11
+&amp;LY= | 20bbbtttt | 200002700 - 201006500 | Loxone brightness and color temperature values for secondary color. Brightness <code>bbb</code> is specified in the range 0 to 100%. <code>tttt</code> defines the color temperature in the range from 2700 to 6500 Kelvin. | 0.11</p>
 <h2 id="notifications">Notifications</h2>
 <p>Parameter | Value Range | Description | Since Version
-| --- | --- | --- | --- |
+|---|---|---|---|
 &amp;RN= | 0 or 1 | Receive UDP Notifications | 0.3
 &amp;SN= | 0 or 1 | Send UDP Notifications | 0.3
 &amp;NN | none | No notification for this request | 0.3
 &amp;HP= | 0 to 99 | Sets Hue polling light ID (0 is off) | 0.5.1</p>
 <h2 id="presets">Presets</h2>
 <p>Parameter | Value Range | Description | Since Version
-| --- | --- | --- | --- |
+|---|---|---|---|
 &amp;PS= | 1 to 16 | Saves current setup to preset | 0.4
 &amp;PL= | 1 to 250 | Applies entire preset | 0.4
 &amp;P1= | 1 to 249 | First cycle preset | 0.6.3
@@ -1362,12 +1327,12 @@ Parameters can be added to control some of the variables.
 &amp;TT= | 0 to 65000 | Set transition time (ms) | 0.6.3</p>
 <h2 id="macros">Macros</h2>
 <p>Parameter | Value Range | Description | Since Version
-| --- | --- | --- | --- |
+|---|---|---|---|
 &amp;M= | 1 to 16 | Apply macro (deprecated, added for compatibility with pre-0.11 automations) | 0.5.0</p>
 <h2 id="segments">Segments</h2>
 <p>It is highly recommended to use the <a href="/interfaces/json-api">JSON API</a> when dealing with Segments.</p>
 <p>Parameter | Value Range | Description | Since Version
-| --- | --- | --- | --- |
+|---|---|---|---|
 &amp;SM= | 0 to 9 | Set the main segment (values are reported to XML) | 0.9.0
 &amp;SS= | 0 to 9 | Select segment to apply THIS api call to | 0.9.0
 &amp;SV= | 0, 1, or 2 | Set segment selected (2 unselects others) | 0.9.0
@@ -1379,7 +1344,7 @@ Parameters can be added to control some of the variables.
 &amp;SB= | 0 to 255 | Segment brightness | 0.10.0</p>
 <h2 id="general-and-experimental">General and Experimental</h2>
 <p>Parameter | Value Range | Description | Since Version
-| --- | --- | --- | --- |
+|---|---|---|---|
 &amp;RB | none | Reboot WLED | 0.10.0 (?)
 &amp;ST= | 32bit | Current UTC time in Unix epoch | 0.4
 &amp;CT= | 32bit | UTC time for countdown end | 0.4
@@ -1399,7 +1364,7 @@ Parameters can be added to control some of the variables.
 <h2 id="xml-response">XML response</h2>
 <p>This is the XML file sent as response to every API call.</p>
 <p>Parameter | Value Range | Description
-| --- | --- | --- |
+|---|---|---|---|
 \<ac> | 0 to 255 | Master Brightness
 \<cl> | 3x 0..255 | Primary Color RGB
 \<cs> | 3x 0..255 | Secondary RGB
