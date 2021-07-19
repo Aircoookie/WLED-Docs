@@ -26,7 +26,7 @@ Add one or multiple of the following parameters after the base URL/IP to change 
 ## LED control
 
 Parameter | Value Range | Description | Since Version
-| --- | --- | --- | --- |
+|---|---|---|---|
 &A= | 0 to 255 | Master brightness | 0.2
 &T= | 0, 1, or 2 | Master Off/On/Toggle | 0.3
 &R= | 0 to 255 | Primary Red value | 0.2
@@ -45,7 +45,7 @@ Parameter | Value Range | Description | Since Version
 ## Advanced
 
 Parameter | Value Range | Description | Since Version
-| --- | --- | --- | --- |
+|---|---|---|---|
 &CL= | HEX/DEC | Primary color | 0.8.0
 &C2= | HEX/DEC | Secondary color | 0.8.0
 &C3= | HEX/DEC | Third color | 0.8.0
@@ -68,7 +68,7 @@ Hex values need to be prefaced with the character h or H. The normal format is `
 Loxone offers two commands. One for RGB values and one for brightness and color temperature.
 
 | Parameter | Syntax | Range | Description | Since Version |
-|---|---|---|---|---|
+|---|---|---|---|
 &LX= | BBBGGGRRR | 0 - 100100100 | Loxone RGB value for primary color. Each color (`RRR`,`GGG`,`BBB`) is specified in the range from 0 to 100%. | 0.11
 &LX= | 20bbbtttt | 200002700 - 201006500 | Loxone brightness and color temperature values for primary color. Brightness `bbb` is specified in the range 0 to 100%. `tttt` defines the color temperature in the range from 2700 to 6500 Kelvin. | 0.11
 &LY= | BBBGGGRRR | 0 - 100100100 | Loxone RGB value for secondary color. Each color (`RRR`,`GGG`,`BBB`) is specified in the range from 0 to 100%. | 0.11
@@ -77,7 +77,7 @@ Loxone offers two commands. One for RGB values and one for brightness and color 
 ## Notifications
 
 Parameter | Value Range | Description | Since Version
-| --- | --- | --- | --- |
+|---|---|---|---|
 &RN= | 0 or 1 | Receive UDP Notifications | 0.3
 &SN= | 0 or 1 | Send UDP Notifications | 0.3
 &NN | none | No notification for this request | 0.3
@@ -86,7 +86,7 @@ Parameter | Value Range | Description | Since Version
 ## Presets
 
 Parameter | Value Range | Description | Since Version
-| --- | --- | --- | --- |
+|---|---|---|---|
 &PS= | 1 to 16 | Saves current setup to preset | 0.4
 &PL= | 1 to 250 | Applies entire preset | 0.4
 &P1= | 1 to 249 | First cycle preset | 0.6.3
@@ -96,14 +96,14 @@ Parameter | Value Range | Description | Since Version
 ## Macros
 
 Parameter | Value Range | Description | Since Version
-| --- | --- | --- | --- |
+|---|---|---|---|
 &M= | 1 to 16 | Apply macro (deprecated, added for compatibility with pre-0.11 automations) | 0.5.0
 
 ## Segments
 It is highly recommended to use the [JSON API](/interfaces/json-api) when dealing with Segments.
 
 Parameter | Value Range | Description | Since Version
-| --- | --- | --- | --- |
+|---|---|---|---|
 &SM= | 0 to 9 | Set the main segment (values are reported to XML) | 0.9.0
 &SS= | 0 to 9 | Select segment to apply THIS api call to | 0.9.0
 &SV= | 0, 1, or 2 | Set segment selected (2 unselects others) | 0.9.0
@@ -117,7 +117,7 @@ Parameter | Value Range | Description | Since Version
 ## General and Experimental
 
 Parameter | Value Range | Description | Since Version
-| --- | --- | --- | --- |
+|---|---|---|---|
 &RB | none | Reboot WLED | 0.10.0 (?)
 &ST= | 32bit | Current UTC time in Unix epoch | 0.4
 &CT= | 32bit | UTC time for countdown end | 0.4
@@ -139,7 +139,7 @@ Parameter | Value Range | Description | Since Version
 This is the XML file sent as response to every API call.
 
 Parameter | Value Range | Description
-| --- | --- | --- |
+|---|---|---|---|
 \<ac> | 0 to 255 | Master Brightness
 \<cl> | 3x 0..255 | Primary Color RGB
 \<cs> | 3x 0..255 | Secondary RGB
