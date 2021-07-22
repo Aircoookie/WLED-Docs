@@ -11,6 +11,7 @@ This page is to honor the work of all the people who helped to make WLED what it
 Everyone you see on the Contributors page and:  
 8bitbrett made the WiFi auto connect QR code with the Aircoookie/WLED logo!  
 adamo made the animated Discord server logo!  
+[@blazoncek](https://github.com/blazoncek) makes countless new features and improvements to many parts of WLED!
 [@debsahu](https://github.com/debsahu) provided the HomeAssistant autodiscovery and a lot of help with PIO!  
 [@frenck](https://github.com/frenck) made an amazing, stable and feature-packed native integration with HomeAssistant!  
 [@photocromax]() is helping bringing the Live visualization feature to life and added GIF previews to the doc!  
@@ -32,6 +33,7 @@ DrZzs (Justin A.)
 Dylan L.  
 Fil  
 Quindor (Andries F.)  
+Tonyno
 
 ### Used Libraries and Dependencies	
 [ESP8266](https://github.com/esp8266/Arduino)/[ESP32](https://github.com/espressif/arduino-esp32) Arduino Core   
