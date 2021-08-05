@@ -102,13 +102,13 @@ To restore, use the `Choose file` and `Upload` buttons.
 WLED supports schedules - that is, applying presets at a certain time automatically.
 Here is a simple guide to get it set up quickly!
 - Creates the preset(s) you want to load at specific time(s)  
-- Note the preset ID - the small gray number to the left of the preset name (or, in the bottom of the preset menu)
-- Go to the `Time & Macros` section in the WLED settings.
+- Note the preset ID - the small gray number to the left of the preset name (or, in the bottom of the preset menu)  
+- Go to the `Time & Macros` section in the WLED settings.  
 - Make sure the time displayed is correct and accurate. It is highly recommended to enable NTP for a reliable schedule. Do not forget to set the correct timezone.
-If applicable, daylight saving time is handled automatically.
-- Scroll down to `Time-controlled presets`. There are 8 different timer slots available.
-- Enter the hour, minute, and weekdays you want the preset to activate. In the `Preset` column, enter the preset ID you noted earlier.
-- Save the settings page! You have successfully set up a schedule :) 
+If applicable, daylight saving time is handled automatically.  
+- Scroll down to `Time-controlled presets`. There are 8 different timer slots available.  
+- Enter the hour, minute, and weekdays you want the preset to activate. In the `Preset` column, enter the preset ID you noted earlier.  
+- Save the settings page! You have successfully set up a schedule :)  
 
 !!! info "Note"
     This only applies the preset at the _start_ of the specified minute. If you set up two presets, one to turn on the light at 7 and another to turn it off at 8,
