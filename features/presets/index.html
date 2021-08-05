@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.0">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.fe914879.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1118c9be.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ba0d045b.min.css">
@@ -677,6 +677,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#applying-presets-at-a-certain-time-of-day" class="md-nav__link">
+    Applying presets at a certain time of day
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -690,8 +697,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#preset-cycle" class="md-nav__link">
-    Preset cycle
+  <a href="#preset-cycle-up-to-0121" class="md-nav__link">
+    Preset cycle (up to 0.12.1)
   </a>
   
 </li>
@@ -1204,6 +1211,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#applying-presets-at-a-certain-time-of-day" class="md-nav__link">
+    Applying presets at a certain time of day
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1217,8 +1231,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#preset-cycle" class="md-nav__link">
-    Preset cycle
+  <a href="#preset-cycle-up-to-0121" class="md-nav__link">
+    Preset cycle (up to 0.12.1)
   </a>
   
 </li>
@@ -1299,19 +1313,40 @@ And if you ever need to downgrade to v0.10 for some reason, they will still be t
 <p>Obtaining the preset list is possible with the /presets.json file
 Seeing the name of the current preset with the API only is not possible, you can only obtain its ID. Then you'd need some code to match it with the entries from presets.json (this is also what the UI does).  See section "Backing up/restoring presets".</p>
 <h4 id="saving-named-presets">Saving named presets</h4>
-<p>Save a named preset with {"psave":<preset number here>;"n":"Preset name","ib":true,"sb":true}</p>
+<p>Save a named preset with <code>{"psave":&lt;preset number here&gt;;"n":"Preset name","ib":true,"sb":true}</code></p>
 <h4 id="backing-uprestoring-presets">Backing up/restoring presets</h4>
 <p>To backup all presets, go to <code>[WLED-IP]/edit</code> (OTA lock must be off), right click the <code>presets.json</code> file and download!<br />
 To restore, use the <code>Choose file</code> and <code>Upload</code> buttons.  </p>
+<h4 id="applying-presets-at-a-certain-time-of-day">Applying presets at a certain time of day</h4>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you want to create a preset that turns on the light to the last effect displayed, uncheck <code>Use current state</code> and enter <code>T=1</code> into the API Command field.</p>
+</div>
+<p>WLED supports schedules - that is, applying presets at a certain time automatically.
+Here is a simple guide to get it set up quickly!
+- Creates the preset(s) you want to load at specific time(s)<br />
+- Note the preset ID - the small gray number to the left of the preset name (or, in the bottom of the preset menu)
+- Go to the <code>Time &amp; Macros</code> section in the WLED settings.
+- Make sure the time displayed is correct and accurate. It is highly recommended to enable NTP for a reliable schedule. Do not forget to set the correct timezone.
+If applicable, daylight saving time is handled automatically.
+- Scroll down to <code>Time-controlled presets</code>. There are 8 different timer slots available.
+- Enter the hour, minute, and weekdays you want the preset to activate. In the <code>Preset</code> column, enter the preset ID you noted earlier.
+- Save the settings page! You have successfully set up a schedule :) </p>
+<div class="admonition info">
+<p class="admonition-title">Note</p>
+<p>This only applies the preset at the <em>start</em> of the specified minute. If you set up two presets, one to turn on the light at 7 and another to turn it off at 8,
+if WLED is booted at 7:30, the light will not turn on. This should not be an issue in most applications.</p>
+</div>
 <h3 id="earlier-versions-up-to-010">Earlier versions (up to 0.10)</h3>
 <p>There are 16 preset slots in total.
 In 0.9.0, the last preset (16) is capable of saving the entire segment configuration. All other presets only save a single segment (main segment, the first one by default) and restore that preset to all selected segments.</p>
 <p>In the Favorites tab, the number buttons from 1-16 are the different save slots. Find a config you like, then toggle <em>Saving mode</em> on and click on a number to save the preset to that slot. If <em>Saving mode</em> is toggled off, you can restore presets with a single click.</p>
-<h3 id="preset-cycle">Preset cycle</h3>
+<h3 id="preset-cycle-up-to-0121">Preset cycle (up to 0.12.1)</h3>
 <p>With this feature, you can create an animation by automatically swapping between presets within a specified range.
 Keep in mind that any changes you make to effects/colors will be overridden once the system applies the next preset.</p>
 <p>If you want to start the preset cycle on boot, go to LED settings and tick "Save current preset cycle configuration as boot default</p>
 <p>To modify the duration of the preset cycle, ensure the preset cycle box is unchecked before entering a new time value. Once updated, the preset cycle can be enabled again"</p>
+<p>Playlists supersede Preset cycle in 0.13.</p>
                 
                   
                 
@@ -1447,10 +1482,10 @@ Keep in mind that any changes you make to effects/colors will be overridden once
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.716f8af4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.2b46852b.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
