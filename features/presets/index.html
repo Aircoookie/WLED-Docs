@@ -1322,16 +1322,18 @@ To restore, use the <code>Choose file</code> and <code>Upload</code> buttons.  <
 <p class="admonition-title">Tip</p>
 <p>If you want to create a preset that turns on the light to the last effect displayed, uncheck <code>Use current state</code> and enter <code>T=1</code> into the API Command field.</p>
 </div>
-<p>WLED supports schedules - that is, applying presets at a certain time automatically.
-Here is a simple guide to get it set up quickly!
-- Creates the preset(s) you want to load at specific time(s)<br />
-- Note the preset ID - the small gray number to the left of the preset name (or, in the bottom of the preset menu)<br />
-- Go to the <code>Time &amp; Macros</code> section in the WLED settings.<br />
-- Make sure the time displayed is correct and accurate. It is highly recommended to enable NTP for a reliable schedule. Do not forget to set the correct timezone.
-If applicable, daylight saving time is handled automatically.<br />
-- Scroll down to <code>Time-controlled presets</code>. There are 8 different timer slots available.<br />
-- Enter the hour, minute, and weekdays you want the preset to activate. In the <code>Preset</code> column, enter the preset ID you noted earlier.<br />
-- Save the settings page! You have successfully set up a schedule :)  </p>
+<p>WLED supports schedules - that is, applying presets at a certain time automatically.<br />
+Here is a simple guide to get it set up quickly!  </p>
+<ul>
+<li>Creates the preset(s) you want to load at specific time(s)  </li>
+<li>Note the preset ID - the small gray number to the left of the preset name (or, in the bottom of the preset menu)  </li>
+<li>Go to the <code>Time &amp; Macros</code> section in the WLED settings.  </li>
+<li>Make sure the time displayed is correct and accurate. It is highly recommended to enable NTP for a reliable schedule. Do not forget to set the correct timezone.
+If applicable, daylight saving time is handled automatically.  </li>
+<li>Scroll down to <code>Time-controlled presets</code>. There are 8 different timer slots available.  </li>
+<li>Enter the hour, minute, and weekdays you want the preset to activate. In the <code>Preset</code> column, enter the preset ID you noted earlier.  </li>
+<li>Save the settings page! You have successfully set up a schedule :)  </li>
+</ul>
 <div class="admonition info">
 <p class="admonition-title">Note</p>
 <p>This only applies the preset at the <em>start</em> of the specified minute. If you set up two presets, one to turn on the light at 7 and another to turn it off at 8,
