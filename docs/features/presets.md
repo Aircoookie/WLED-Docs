@@ -87,12 +87,32 @@ Seeing the name of the current preset with the API only is not possible, you can
 
 #### Saving named presets
 
-Save a named preset with {"psave":<preset number here>;"n":"Preset name","ib":true,"sb":true}
+Save a named preset with `{"psave":<preset number here>;"n":"Preset name","ib":true,"sb":true}`
 
 #### Backing up/restoring presets
 
 To backup all presets, go to `[WLED-IP]/edit` (OTA lock must be off), right click the `presets.json` file and download!  
 To restore, use the `Choose file` and `Upload` buttons.  
+
+#### Applying presets at a certain time of day
+
+!!! tip
+    If you want to create a preset that turns on the light to the last effect displayed, uncheck `Use current state` and enter `T=1` into the API Command field.
+    
+WLED supports schedules - that is, applying presets at a certain time automatically.
+Here is a simple guide to get it set up quickly!
+- Creates the preset(s) you want to load at specific time(s)  
+- Note the preset ID - the small gray number to the left of the preset name (or, in the bottom of the preset menu)
+- Go to the `Time & Macros` section in the WLED settings.
+- Make sure the time displayed is correct and accurate. It is highly recommended to enable NTP for a reliable schedule. Do not forget to set the correct timezone.
+If applicable, daylight saving time is handled automatically.
+- Scroll down to `Time-controlled presets`. There are 8 different timer slots available.
+- Enter the hour, minute, and weekdays you want the preset to activate. In the `Preset` column, enter the preset ID you noted earlier.
+- Save the settings page! You have successfully set up a schedule :) 
+
+!!! info "Note"
+    This only applies the preset at the _start_ of the specified minute. If you set up two presets, one to turn on the light at 7 and another to turn it off at 8,
+    if WLED is booted at 7:30, the light will not turn on. This should not be an issue in most applications.
 
 ### Earlier versions (up to 0.10)
 
@@ -101,7 +121,7 @@ In 0.9.0, the last preset (16) is capable of saving the entire segment configura
 
 In the Favorites tab, the number buttons from 1-16 are the different save slots. Find a config you like, then toggle _Saving mode_ on and click on a number to save the preset to that slot. If _Saving mode_ is toggled off, you can restore presets with a single click.
 
-### Preset cycle
+### Preset cycle (up to 0.12.1)
 
 With this feature, you can create an animation by automatically swapping between presets within a specified range.
 Keep in mind that any changes you make to effects/colors will be overridden once the system applies the next preset.
@@ -109,3 +129,5 @@ Keep in mind that any changes you make to effects/colors will be overridden once
 If you want to start the preset cycle on boot, go to LED settings and tick "Save current preset cycle configuration as boot default
 
 To modify the duration of the preset cycle, ensure the preset cycle box is unchecked before entering a new time value. Once updated, the preset cycle can be enabled again"
+
+Playlists supersede Preset cycle in 0.13.
