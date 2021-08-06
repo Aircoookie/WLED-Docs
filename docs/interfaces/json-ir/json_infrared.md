@@ -114,7 +114,7 @@ You should get a 24-bit hex encoded integer. If you get 0xFFFFFFFF, that means t
   }, 
   "0xFF9867": {
     "Bright+"
-    "cmnt": "smaller steps at beginning, larger steps at the end"
+    "cmnt": "smaller steps at beginning, larger steps at the end",
     "cmd": "!incBrightness"
   },
   "0xF78877": {
