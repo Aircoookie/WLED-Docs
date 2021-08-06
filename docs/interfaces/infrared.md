@@ -22,6 +22,7 @@ To use IR remote go to `Settings`, `Sync Interfaces` and change the value for `I
 4. white 44-key IR remote with up/down arrows for the colors R,G and B
 5. white 21-key IR remote with R,G,B + 9 color-tones
 6. black 6-key IR remote with CH up/down + Vol up/down
+7. [JSON IR remote](json-ir/json_infrared.md) - Easily configure and use any IR remote.
 
 ### How to add custom codes
 
