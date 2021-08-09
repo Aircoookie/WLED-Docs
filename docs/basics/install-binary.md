@@ -48,7 +48,7 @@ For some ESP32 boards, you might have to press some buttons after uploading:
 
 If running windows, you need a driver from here: https://www.wemos.cc/en/latest/ch340_driver.html before your computer will show the COM port in ESPhome Flasher. With a Wemos D1 mini you do not need to hold down the reset button while flashing.
 
-### Flashing method 3: OTA update
+### Flashing method 4: OTA update
 
  You can alternatively use my [basic HTTP OTA updater](https://github.com/Aircoookie/ESP8266MinimalHTTPUpdater) sketch and upload the binary! This requires the Arduino IDE and ESP8266 core installed.
 If your device is already running a firmware with built-in OTA capability, you can probably use that as well.
