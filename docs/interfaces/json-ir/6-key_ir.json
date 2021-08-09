@@ -16,6 +16,7 @@
     "label": "Channel -",
     "pos": "3x1",
     "cmnt": "Bright -",
+    "rpt": true,
     "cmd": "!decBrightness"
   },
   "0xFFCF30": {

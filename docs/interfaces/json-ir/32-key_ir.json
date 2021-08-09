@@ -14,13 +14,13 @@
     "label": "Auto",
     "pos": "1x3",
     "cmnt": "Toggle preset cycle",
-    "cmd": "CY=2"
+    "cmd": "CY=2&PT=60000"
   },
   "0xFF609F": {
     "label": "Mode",
     "pos": "1x4",
     "cmnt": "Cycle effects",
-    "cmd": "FX=~&CY=0"
+    "cmd": "FX=~"
   },
   "0xFF906F": {
     "label": "4H",
@@ -141,13 +141,13 @@
     "label": "Strobe",
     "pos": "7x1",
     "cmnt": "Dancing Shadows",
-    "cmd": "FX=112&CY=0"
+    "cmd": "FX=112"
   },
   "0xFF28D7": {
     "label": "In Waves",
     "pos": "7x2",
     "cmnt": "Noise 1",
-    "cmd": "FX=70&CY=0"
+    "cmd": "FX=70"
   },
   "0xFFF00F": {
     "label": "Speed +",
@@ -163,24 +163,24 @@
     "label": "Jump",
     "pos": "8x1",
     "cmnt": "Colortwinkles",
-    "cmd": "FX=74&CY=0"
+    "cmd": "FX=74"
   },
   "0xFF12ED": {
     "label": "Fade",
     "pos": "8x2",
     "cmnt": "Sunrise",
-    "cmd": "FX=104&CY=0"
+    "cmd": "FX=104"
   },
   "0xFF2AD5": {
     "label": "Flash",
     "pos": "8x3",
     "cmnt": "Railway",
-    "cmd": "FX=78&CY=0"
+    "cmd": "FX=78"
   },
   "0xFFA05F": {
     "label": "Chase Flash",
     "pos": "8x4",
     "cmnt": "Washing Machine",
-    "cmd": "FX=113&CY=0"
+    "cmd": "FX=113"
   }
 }

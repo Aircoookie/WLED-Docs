@@ -176,19 +176,19 @@
     "label": "Jump3",
     "pos": "9x1",
     "cmnt": "Colortwinkles",
-    "cmd": "CY=0&FX=74"
+    "cmd": "FX=74"
   },
   "0xFFB04F": {
     "label": "Fade3",
     "pos": "9x2",
     "cmnt": "Rain",
-    "cmd": "CY=0&FX=43"
+    "cmd": "FX=43"
   },
   "0xFF708F": {
     "label": "Jump7",
     "pos": "9x3",
     "cmnt": "Sinelon Dual",
-    "cmd": "CY=0&FX=93"
+    "cmd": "FX=93"
   },
   "0xFFF00F": {
     "label": "Quick",
@@ -200,24 +200,24 @@
     "label": "Fade",
     "pos": "10x1",
     "cmnt": "Lighthouse",
-    "cmd": "CY=0&FX=41"
+    "cmd": "FX=41"
   },
   "0xFF906F": {
     "label": "Flash",
     "pos": "10x2",
     "cmnt": "Cycle Effects",
-    "cmd": "CY=0&FX=~"
+    "cmd": "FX=~"
   },
   "0xFF50AF": {
     "label": "Auto",
     "pos": "10x3",
     "cmnt": "Toggle preset cycle",
-    "cmd": "CY=2"
+    "cmd": "CY=2&PT=60000"
   },
   "0xFFD02F": {
     "label": "Slow",
     "pos": "10x4",
     "cmnt": "Sinelon Dual",
-    "cmd": "CY=0&FX=93"
+    "cmd": "FX=93"
   }
 }

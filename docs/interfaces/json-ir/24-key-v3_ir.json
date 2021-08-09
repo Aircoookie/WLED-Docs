@@ -108,7 +108,7 @@
   "0xF76897": {
     "label": "Cycle",
     "cmnt": "Toggle preset cycle",
-    "cmd": "CY=1&PT=60000"
+    "cmd": "CY=2&PT=60000"
   },
   "0xF7E817": {
     "label": "Intensity -",

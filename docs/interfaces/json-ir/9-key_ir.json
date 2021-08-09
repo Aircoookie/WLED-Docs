@@ -2,6 +2,7 @@
   "remote": "9-key",
   "0xFF629D": {
     "label": "Power",
+    "rpt": true,
     "cmd": "T=2"
   },
   "0xFF22DD": {
@@ -42,6 +43,6 @@
   "0xFF18E7": {
     "label": "Select",
     "cmnt": "Cycle effects",
-    "cmd": "CY=0&FX=~"
+    "cmd": "FX=~"
   }
 }

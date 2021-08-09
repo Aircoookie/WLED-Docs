@@ -138,19 +138,19 @@
     "label": "Jump3",
     "pos": "7x1",
     "cmnt": "Colortwinkles",
-    "cmd": "CY=0&FX=74"
+    "cmd": "FX=74"
   },
   "0xFFA857": {
     "label": "Fade3",
     "pos": "7x2",
     "cmnt": "Rain",
-    "cmd": "CY=0&FX=43"
+    "cmd": "FX=43"
   },
   "0xFF6897": {
     "label": "Flash",
     "pos": "7x3",
     "cmnt": "Cycle Effects",
-    "cmd": "CY=0&FX=~"
+    "cmd": "FX=~"
   },
   "0xFFE817": {
     "label": "Quick",
@@ -162,19 +162,19 @@
     "label": "Jump7",
     "pos": "8x1",
     "cmnt": "Sinelon Dual",
-    "cmd": "CY=0&FX=93"
+    "cmd": "FX=93"
   },
   "0xFF8877": {
     "label": "Fade7",
     "pos": "8x2",
     "cmnt": "Lighthouse",
-    "cmd": "CY=0&FX=41"
+    "cmd": "FX=41"
   },
   "0xFF48B7": {
     "label": "Auto",
     "pos": "8x3",
     "cmnt": "Toggle preset cycle",
-    "cmd": "CY=2"
+    "cmd": "CY=2&PT=60000"
   },
   "0xFFC837": {
     "label": "Slow",
@@ -186,13 +186,13 @@
     "label": "Custom1",
     "pos": "9x1",
     "cmnt": "Noise 1",
-    "cmd": "CY=0&FX=70"
+    "cmd": "FX=70"
   },
   "0xFFB04F": {
     "label": "Custom2",
     "pos": "9x2",
     "cmnt": "Dancing Shadows",
-    "cmd": "CY=0&FX=112"
+    "cmd": "FX=112"
   },
   "0xFF708F": {
     "label": "Music +",
@@ -210,13 +210,13 @@
     "label": "Custom3",
     "pos": "10x1",
     "cmnt": "Twinklefox",
-    "cmd": "CY=0&FX=80"
+    "cmd": "FX=80"
   },
   "0xFF906F": {
     "label": "Custom4",
     "pos": "10x2",
     "cmnt": "Twinklecat",
-    "cmd": "CY=0&FX=81"
+    "cmd": "FX=81"
   },
   "0xFF50AF": {
     "label": "Music -",

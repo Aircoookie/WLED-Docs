@@ -191,7 +191,7 @@
     "label": "Auto",
     "pos": "9x4",
     "cmnt": "Toggle preset cycle",
-    "cmd": "CY=2"
+    "cmd": "CY=2&PT=60000"
   },
   "0xFF10EF": {
     "label": "Diy4",
@@ -212,7 +212,7 @@
     "label": "Flash",
     "pos": "10x4",
     "cmnt": "Cycle Effects",
-    "cmd": "CY=0&FX=~"
+    "cmd": "FX=~"
   },
   "0xFF20DF": {
     "label": "Jump3",
