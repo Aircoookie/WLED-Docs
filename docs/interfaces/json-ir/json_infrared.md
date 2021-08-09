@@ -7,7 +7,7 @@ hide:
 
 
 !!! info "Version Info"
-    Since v0.13.0, infrared control for any IR remote compatible with your IR reciever with JSON remote. 
+    Since v0.13.0, infrared control for any IR remote compatible with your IR receiver with JSON remote. 
 
 A dedicated infrared receiver module is required.
 (KY-022 or TSOP38238 are confirmed to work and inexpensive)
@@ -86,13 +86,18 @@ IR recv
 
 You should get a 24-bit hex encoded integer. If you get 0xFFFFFFFF, that means the button has been pressed repeatedly or held down. Try tapping quickly.
 
+### Tips
+* Map `play` or `auto` buttons to a playlist. (They currently just turn on preset cycling `CY=1`) You can define the playlist in ir.json as in the sample below, or save a playlist as a preset and load that.
+* Save your 'every day' presets in one range of ids, maybe 1-30; your 'holiday' presets in another range, maybe 31-40. Then you can devote two buttons to cycle through presets. In our example, the command on the 'holiday cycle' button would be `P1=31&P2=40&PL=~`
+* You can also group your presets by color; for instance reddish animations in 1-10, greenish in 11-20, bluish in 21-30. The 44-key remote has up and down arrows for red, green and blue. So the command on the 'blue down' button would be `P1=21&P2=30&PL=~-` 
+
 
 ```ir.json sample 
 {
   "0xF740BF": {
     "label": "On/Off",
     "cmd": "T=2",
-	"rpt": true
+    "rpt": true
   },
   "0xF700FF": {
     "label": "Speed +",
@@ -110,6 +115,7 @@ You should get a 24-bit hex encoded integer. If you get 0xFFFFFFFF, that means t
   },
   "0xF730CF": {
     "label": "Play",
+    "cmnt": "prime example of a playlist that cycles every 180 seconds and continues to repeat"
     "cmd": {"playlist":{"ps":[1,3,5,7,11,13,17],"dur": 1800,"transition":7,"repeat":0,"end":0}}
   }, 
   "0xFF9867": {
@@ -121,9 +127,9 @@ You should get a 24-bit hex encoded integer. If you get 0xFFFFFFFF, that means t
     "label": "Mode1",
     "cmnt": "Preset 1, fallback to Saw - Party if it doesn't exist",
     "cmd": "!presetFallback",
-	"PL": 1,
-	"FX": 16,
-	"FX": 6
+    "PL": 1,
+    "FX": 16,
+    "FX": 6
   },
 }
 ```
