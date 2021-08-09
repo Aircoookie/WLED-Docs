@@ -115,7 +115,7 @@ You should get a 24-bit hex encoded integer. If you get 0xFFFFFFFF, that means t
   },
   "0xF730CF": {
     "label": "Play",
-    "cmnt": "prime example of a playlist that cycles every 180 seconds and continues to repeat"
+    "cmnt": "prime example of a playlist that cycles every 180 seconds and continues to repeat",
     "cmd": {"playlist":{"ps":[1,3,5,7,11,13,17],"dur": 1800,"transition":7,"repeat":0,"end":0}}
   }, 
   "0xFF9867": {
