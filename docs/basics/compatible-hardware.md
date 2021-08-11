@@ -13,7 +13,7 @@ This page lists some third-party hardware and/or tools that are working with WLE
 Please use a decent and neutral description when adding things to this list.
 
 ## Addressable LED Strips
-Type | Voltage | Comments
+| Type | Voltage | Comments |
 |---|---|---|
 WS2812B | 5v |
 WS2813 | 5v | 
@@ -29,7 +29,7 @@ GS8208 | 12v |
 
 ## ESP8266/ESP32 boards
 
-Name | Chip | Description
+| Name | Chip | Description |
 |---|---|---|
 [Wemos D1 mini](https://docs.wemos.cc/en/latest/d1/d1_mini.html) | ESP8266 | An affordable ESP8266 development board. Aircoookie's recommendation for running WLED. Current version: 3.1.0
 [Wemos D1 mini Pro](https://docs.wemos.cc/en/latest/d1/d1_mini_pro.html) | ESP8266 | A newer development board with an external antenna connector. Works very well with WLED. Recommended if your signal strength is too low with another board. Current version: 2.0.0. Version 1.0.0 has the same form factor as the D1 mini.
@@ -55,7 +55,7 @@ NodeMCU-32s | ESP32 | The most common ESP32 development board. Works well, depen
 
 ## Useful boards and addons
 
-Name | Description
+| Name | Description |
 |---|---|
 [QuinLED Dig-Uno](https://quinled.info/2018/09/15/quinled-dig-uno/) | **2021 updated version!** DIY/Pre-Assembled board for digital LED driving. Integrated level shifters, temperature sensor option, Auto 5v-24v compatibility, pull-up/down GPIO and safety features such as a onboard fuse. Recommended to use (and comes with) with [custom QuinLED-ESP32](https://quinled.info/quinled-esp32/). <br />Pre-assembled and pre-flashed with WLED [available to buy!](https://quinled.info/pre-assembled-quinled-dig-uno/)
 [QuinLED Dig-Quad](https://quinled.info/2020/06/17/quinled-dig-quad/) | **2021 updated version!** DIY/Pre-Assembled board for 4 (5) channel digital LED driving. Integrated level shifters, temperature sensor option, Auto 5v-24v compatibility, pull-up/down GPIO and power distribution terminals with 5x onboard fuses for easy LED power injection. Recommended to use (and comes with) with [custom QuinLED-ESP32](https://quinled.info/quinled-esp32/). <br />Pre-assembled and pre-flashed with WLED [available to buy!](https://quinled.info/pre-assembled-quinled-dig-quad/)
@@ -75,7 +75,7 @@ Name | Description
 
 ## Levelshifters
 
-Name | Description
+| Name | Description |
 |---|---|
 SN74AHCT125N | Aircoookie's recommended levelshifter. Used on the QuinLed Dig-Uno and <a href="https://github.com/srg74/WLED-wemos-shield">WLED Wemos shield</a>.
 SN74HCT125N | Slower, cheaper version. Works just as well for WS2812, but not recommended for APA102.
@@ -85,7 +85,7 @@ NB: I2C shifters are too slow for wled, so don't use them.
 
 ## USB/TTL adapters
 
-Name | Description
+| Name | Description |
 |---|---|
 [CH340](https://www.aliexpress.com/item/32761423124.html) | CH340 module instead of CP2102, PL2303 or FTDI/FTDT. The CH340 can deliver more current which is needed while the flash process depending on the board type. The timing is also much more stable. **For boards with an USB/TTL adapter onboard this is NOT needed**
 [ESP uploader](https://github.com/srg74/ESP-uploader) |  CP2102N module. Same USB to UART converter as many recent Dev boards using. Featuring latest USB-C connector. For use with many ESP32, ESP8266, ESP8255 and Tuya based modules. 3.3V logic and 5V power pass through for custom boards.
