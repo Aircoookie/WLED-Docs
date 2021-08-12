@@ -148,6 +148,9 @@ id | 0 to info.maxseg -1 | Zero-indexed ID of the segment. May be omitted, in th
 start | 0 to info.leds.count -1 | LED the segment starts at.	
 stop | 0 to info.leds.count | LED the segment stops at, not included in range. If _stop_ is set to a lower or equal value than _start_ (setting to `0` is recommended), the segment is invalidated and deleted.	
 len | 0 to info.leds.count | Length of the segment (_stop_ - _start_). _stop_ has preference, so if it is included, _len_ is ignored.	
+grp | 0 to 255 | Grouping (how many consecutive LEDs of the same segment will be grouped to the same color)
+spc | 0 to 255 | Spacing (how many LEDs are turned off and skipped between each group)
+of | -len+1 to len | Offset (how many LEDs to rotate the virtual start of the segments, available since 0.13.0)
 col | array of colors | Array that has up to 3 color arrays as elements, the primary, secondary (background) and tertiary colors of the segment. Each color is an array of 3 or 4 bytes, which represent an RGB(W) color.	
 fx | 0 to info.fxcount -1 | ID of the effect.	
 sx | 0 to 255 | Relative effect speed	
