@@ -1538,6 +1538,21 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 <td>Mirrors the segment (available since 0.10.2)</td>
 </tr>
 <tr>
+<td>grp</td>
+<td>0 to 255</td>
+<td>Grouping (how many consecutive LEDs of the same segment will be grouped to the same color)</td>
+</tr>
+<tr>
+<td>spc</td>
+<td>0 to 255</td>
+<td>Spacing (how many LEDs are turned off and skipped between each group)</td>
+</tr>
+<tr>
+<td>of</td>
+<td>-len+1 to len</td>
+<td>Offset (how many LEDs to rotate the virtual start of the segments, available since 0.13.0)</td>
+</tr>
+<tr>
 <td>lx</td>
 <td><code>BBBGGGRRR</code>: 0 - 100100100</td>
 <td>Loxone RGB value for primary color. Each color (<code>RRR</code>,<code>GGG</code>,<code>BBB</code>) is specified in the range from 0 to 100%.</td>
