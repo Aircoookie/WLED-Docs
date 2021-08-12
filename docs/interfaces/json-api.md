@@ -161,6 +161,9 @@ rev | bool | Flips the segment, causing animations to change direction.
 on | bool | Turns on and off the individual segment. (available since 0.10.0)	
 bri | 0 to 255 | Sets the individual segment brightness (available since 0.10.0)	
 mi | bool | Mirrors the segment (available since 0.10.2)	
+grp | 0 to 255 | Grouping (how many consecutive LEDs of the same segment will be grouped to the same color)  
+spc | 0 to 255 | Spacing (how many LEDs are turned off and skipped between each group)  
+of | -len+1 to len | Offset (how many LEDs to rotate the virtual start of the segments, available since 0.13.0)  
 lx | `BBBGGGRRR`: 0 - 100100100 | Loxone RGB value for primary color. Each color (`RRR`,`GGG`,`BBB`) is specified in the range from 0 to 100%.	
 lx | `20bbbtttt`: 200002700 - 201006500 | Loxone brightness and color temperature values for primary color. Brightness `bbb` is specified in the range 0 to 100%. `tttt` defines the color temperature in the range from 2700 to 6500 Kelvin. (available since 0.11.0, not included in state response)	
 ly | `BBBGGGRRR`: 0 - 100100100 | Loxone RGB value for secondary color. Each color (`RRR`,`GGG`,`BBB`) is specified in the range from 0 to 100%.	
