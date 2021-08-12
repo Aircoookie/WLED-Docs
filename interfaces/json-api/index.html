@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.3">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
     
     
       
@@ -78,8 +78,8 @@
     </div>
     <div data-md-component="announce">
       
-        <aside class="md-announce">
-          <div class="md-announce__inner md-grid md-typeset">
+        <aside class="md-banner md-announce">
+          <div class="md-banner__inner md-announce__inner md-grid md-typeset">
             
 <p class="cx-announce">
   <span class="md-announce">
@@ -1473,6 +1473,21 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 <td>Length of the segment (<em>stop</em> - <em>start</em>). <em>stop</em> has preference, so if it is included, <em>len</em> is ignored.</td>
 </tr>
 <tr>
+<td>grp</td>
+<td>0 to 255</td>
+<td>Grouping (how many consecutive LEDs of the same segment will be grouped to the same color)</td>
+</tr>
+<tr>
+<td>spc</td>
+<td>0 to 255</td>
+<td>Spacing (how many LEDs are turned off and skipped between each group)</td>
+</tr>
+<tr>
+<td>of</td>
+<td>-len+1 to len</td>
+<td>Offset (how many LEDs to rotate the virtual start of the segments, available since 0.13.0)</td>
+</tr>
+<tr>
 <td>col</td>
 <td>array of colors</td>
 <td>Array that has up to 3 color arrays as elements, the primary, secondary (background) and tertiary colors of the segment. Each color is an array of 3 or 4 bytes, which represent an RGB(W) color.</td>
@@ -1944,7 +1959,7 @@ This feature is available in build 200829 and above.    </p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.29db7785.min.js"></script>
+      <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
