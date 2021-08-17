@@ -1066,6 +1066,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#irjson-sample" class="md-nav__link">
+    ir.json sample
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1149,46 +1156,47 @@ open Arduino or VSCode serial monitor. Then press each button and record the cod
 <li>Save your 'every day' presets in one range of ids, maybe 1-30; your 'holiday' presets in another range, maybe 31-40. Then you can devote two buttons to cycle through presets. In our example, the command on the 'holiday cycle' button would be <code>P1=31&amp;P2=40&amp;PL=~</code></li>
 <li>You can also group your presets by color; for instance reddish animations in 1-10, greenish in 11-20, bluish in 21-30. The 44-key remote has up and down arrows for red, green and blue. So the command on the 'blue down' button would be <code>P1=21&amp;P2=30&amp;PL=~-</code> </li>
 </ul>
-<p><code>ir.json sample 
-{
-  "0xF740BF": {
-    "label": "On/Off",
-    "cmd": "T=2",
-    "rpt": true
+<h3 id="irjson-sample">ir.json sample</h3>
+<pre><code class="language-json">{
+  &quot;0xF740BF&quot;: {
+    &quot;label&quot;: &quot;On/Off&quot;,
+    &quot;cmd&quot;: &quot;T=2&quot;,
+    &quot;rpt&quot;: true
   },
-  "0xF700FF": {
-    "label": "Speed +",
-    "cmd": "SX=~16"
+  &quot;0xF700FF&quot;: {
+    &quot;label&quot;: &quot;Speed +&quot;,
+    &quot;cmd&quot;: &quot;SX=~16&quot;
   },
-  "0xF720DF": {
-    "label": "Red",
-    "cmnt": "Lava palette + primary, secondary and tertiary colors",
-    "cmd": "FP=8&amp;CL=hFF7F00&amp;C2=hFF0000&amp;C3=hCC3D60"
+  &quot;0xF720DF&quot;: {
+    &quot;label&quot;: &quot;Red&quot;,
+    &quot;cmnt&quot;: &quot;Lava palette + primary, secondary and tertiary colors&quot;,
+    &quot;cmd&quot;: &quot;FP=8&amp;CL=hFF7F00&amp;C2=hFF0000&amp;C3=hCC3D60&quot;
   }, 
-  "0xF710EF": {
-    "label": "Timer1",
-    "cmnt": "Timer 60 min",
-    "cmd": "NL=60&amp;NT=0"
+  &quot;0xF710EF&quot;: {
+    &quot;label&quot;: &quot;Timer1&quot;,
+    &quot;cmnt&quot;: &quot;Timer 60 min&quot;,
+    &quot;cmd&quot;: &quot;NL=60&amp;NT=0&quot;
   },
-  "0xF730CF": {
-    "label": "Play",
-    "cmnt": "prime example of a playlist that cycles every 180 seconds and continues to repeat",
-    "cmd": {"playlist":{"ps":[1,3,5,7,11,13,17],"dur": 1800,"transition":7,"repeat":0,"end":0}}
+  &quot;0xF730CF&quot;: {
+    &quot;label&quot;: &quot;Play&quot;,
+    &quot;cmnt&quot;: &quot;prime example of a playlist that cycles every 180 seconds and continues to repeat&quot;,
+    &quot;cmd&quot;: {&quot;playlist&quot;:{&quot;ps&quot;:[1,3,5,7,11,13,17],&quot;dur&quot;: 1800,&quot;transition&quot;:7,&quot;repeat&quot;:0,&quot;end&quot;:0}}
   }, 
-  "0xFF9867": {
-    "Bright+"
-    "cmnt": "smaller steps at beginning, larger steps at the end",
-    "cmd": "!incBrightness"
+  &quot;0xFF9867&quot;: {
+    &quot;Bright+&quot;
+    &quot;cmnt&quot;: &quot;smaller steps at beginning, larger steps at the end&quot;,
+    &quot;cmd&quot;: &quot;!incBrightness&quot;
   },
-  "0xF78877": {
-    "label": "Mode1",
-    "cmnt": "Preset 1, fallback to Saw - Party if it doesn't exist",
-    "cmd": "!presetFallback",
-    "PL": 1,
-    "FX": 16,
-    "FX": 6
+  &quot;0xF78877&quot;: {
+    &quot;label&quot;: &quot;Mode1&quot;,
+    &quot;cmnt&quot;: &quot;Preset 1, fallback to Saw - Party if it doesn't exist&quot;,
+    &quot;cmd&quot;: &quot;!presetFallback&quot;,
+    &quot;PL&quot;: 1,
+    &quot;FX&quot;: 16,
+    &quot;FX&quot;: 6
   },
-}</code></p>
+}
+</code></pre>
                 
                   
                 
