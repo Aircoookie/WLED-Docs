@@ -6,7 +6,7 @@ hide:
 ---
 
 ## 1. Downloading the firmware bin file
-You can find precompiled .bin files on the <a href="../releases">release page</a>. Be sure to download the latest version. This file looks something like this:
+You can find precompiled .bin files on the <a href="https://bin.wled.me">release page</a>. Be sure to download the latest version. This file looks something like this:
 
 `WLED_[...]_ESP[...].bin`
 
@@ -16,7 +16,8 @@ If you are not sure what binary you should use look at this page:
 ## 2. Downloading the Flash Download Tools
 Espressif has an official GUI tool for Windows.
 It has a lot of options and can be used for the ESP8266 and ESP32.
-You can find it on Espressif's download page here: https://www.espressif.com/en/support/download/other-tools<br>(if the link changed, just search for `esp flash download tool`)
+You can find it on Espressif's download page [here](https://www.espressif.com/en/support/download/other-tools)!
+<br>(if the link changed, just search for `esp flash download tool` on Google)
 
 <img src="https://github.com/WoodyLetsCode/ESP-RGB-Controller/raw/master/images/ESP%20Flash%20Download%20Tools.png">
 
