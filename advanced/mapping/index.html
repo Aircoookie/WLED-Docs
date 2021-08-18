@@ -1143,17 +1143,17 @@ Use this edit page to create a file called <code>ledmap.json</code>.</p>
 If your <code>ledmap.json</code> file is not working, check for white-spaces where they should not be. The LED positions are zero-indexed.</p>
 <h3 id="examples">Examples</h3>
 <p>In the below example (formatted multiple ways), we remap a strip of four LEDs from a physical order of 0 1 2 3 into a new order of 0 2 1 3.</p>
-<pre><code>{"map":[0,2,1,3]}
+<div class="highlight"><pre><span></span><code>{&quot;map&quot;:[0,2,1,3]}
 
-{"map":[
+{&quot;map&quot;:[
 0,2,1,3
 ]}
 
-{"map":[
+{&quot;map&quot;:[
 0,2,
 1,3
 ]}
-</code></pre>
+</code></pre></div>
 <p>This is another example that switches direction every 5 LEDs.
 It could be formatted any of the three ways demonstrated above.</p>
 <pre><code class="language-json">{&quot;map&quot;:[0, 1, 2, 3, 4, 9, 8, 7, 6, 5, 10, 11, 12, 13, 14,
