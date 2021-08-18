@@ -26,7 +26,7 @@ http://[controller-ip]/edit.
 ### Preconfigured Remotes
 LED remotes typically are not sold separately. But you can purchase with an RGB controller for $2-4 on AliExpress and $5-10 on Amazon. 
 When purchasing a remote, be sure that it is an infrared (IR) remote and not a radio (RF) remote as they are not supported at this time.
-
+The linked files all have unique names. Be sure to rename to ir.json when uploading to your ESP.
 
 [![44 key remote](44-key.png)](https://www.aliexpress.com/item/32714274390.html)
 44-key white 
@@ -45,7 +45,7 @@ When purchasing a remote, be sure that it is an infrared (IR) remote and not a r
 32-key [ir.json](32-key_ir.json) (commonly sold with fairy string lights)
 
 [![24 key white remote](24-key.png)](https://www.aliexpress.com/item/4001348058175.html)  
-24-key (very common, but buttons need repurposed to be very useful with WLED)
+24-key (very common, but buttons need repurposed to be very useful with WLED)  
 *    [ir.json v1](24-key_ir.json) gray buttons load presets 1-4  
 *    [ir.json v2](24-key-v2_ir.json) gray buttons cycle effects, palettes and change speed  
 
@@ -65,18 +65,17 @@ When purchasing a remote, be sure that it is an infrared (IR) remote and not a r
 ### Editing ir.json
 First see if a JSON file already exists for your remote. If not, see if there is a JSON file for a remote with 
 the same number of buttons. Often remotes with the same number of buttons have different labels but emit the 
-same codes. The keys are the hex encoded IR codes emitted for each button.  The keys are strings and case is important, 
+same codes. The JSON keys are the hex encoded IR codes emitted by each button.  The keys are strings and case is important, 
 be sure to use the same format as the sample below. It is also the same format used when codes are echoed on the serial console. 
 
-In the JSON document, each button object should have `cmd` key containing the HTTP request or JSON API command. If an IR remote button is pressed rapidly, 
-subsequent presses have a different code. If your command is repeatable but does not contain the "~" character, add a "rpt" attribute with a value of true.
+In the JSON document, each button object should have a `cmd` attribute containing the HTTP request or JSON API command. In addition to HTTP and JSON API commands, several C functions are supported (!incBrightness, !decBrightness, !presetFallback).
+The !incBrightness and !decBrightness functions, take smaller steps at the dim end of the range with progressively larger steps at the bright end.
+The !presetFallback function applies a preset (attribute PL) and falls back to the specified effect and palette (attributes FX and FP) if preset does not exist. (see sample below)
+
+If an IR remote button is pressed rapidly or held down, subsequent presses have a different code. If your command is repeatable but does not contain the "~" character and is not calling incBrightness or decBrightness, then add a "rpt" attribute with a value of true. 
 Label and position attributes are ignored by WLED but useful when making edits. 
 
-In addition to HTTP and JSON API commands, several C functions are supported (!incBrightness, !decBrightness, !presetFallback).
-The incBrightness and decBrightness functions, take smaller steps at the dim end of the range with progressively larger steps at the bright end.
-The presetFallback function applies a preset (attribute PL) and falls back to the specified effect and palette (attributes FX and FP) if preset does not exist.
-
-If an ir.json file does not already exist for your remote, you will need to determine what code each button emits. To do this, connect your EPS to a computer and 
+If an ir.json file does not already exist for your remote, you will need to determine what code each button emits. To do this, connect your ESP8266 or ESP32 to a computer and 
 open Arduino or VSCode serial monitor. Then press each button and record the code printed on the serial monitor. You should see something like this:
 
 ```
@@ -91,9 +90,8 @@ You should get a 24-bit hex encoded integer. If you get 0xFFFFFFFF, that means t
 * Save your 'every day' presets in one range of ids, maybe 1-30; your 'holiday' presets in another range, maybe 31-40. Then you can devote two buttons to cycle through presets. In our example, the command on the 'holiday cycle' button would be `P1=31&P2=40&PL=~`
 * You can also group your presets by color; for instance reddish animations in 1-10, greenish in 11-20, bluish in 21-30. The 44-key remote has up and down arrows for red, green and blue. So the command on the 'blue down' button would be `P1=21&P2=30&PL=~-` 
 
-### ir.json sample
-
-``` json
+### ir.json sample 
+<pre>
 {
   "0xF740BF": {
     "label": "On/Off",
@@ -133,5 +131,4 @@ You should get a 24-bit hex encoded integer. If you get 0xFFFFFFFF, that means t
     "FX": 6
   },
 }
-```
-
+</pre>
