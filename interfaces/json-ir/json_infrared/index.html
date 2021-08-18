@@ -1108,7 +1108,8 @@ You can upload and edit ir.json from the /edit page, which can be reached by goi
 http://[controller-ip]/edit.</p>
 <h3 id="preconfigured-remotes">Preconfigured Remotes</h3>
 <p>LED remotes typically are not sold separately. But you can purchase with an RGB controller for $2-4 on AliExpress and $5-10 on Amazon. 
-When purchasing a remote, be sure that it is an infrared (IR) remote and not a radio (RF) remote as they are not supported at this time.</p>
+When purchasing a remote, be sure that it is an infrared (IR) remote and not a radio (RF) remote as they are not supported at this time.
+The linked files all have unique names. Be sure to rename to ir.json when uploading to your ESP.</p>
 <p><a href="https://www.aliexpress.com/item/32714274390.html"><img alt="44 key remote" src="../44-key.png" /></a>
 44-key white 
 <a href="../44-key_ir.json">ir.json</a></p>
@@ -1121,9 +1122,9 @@ When purchasing a remote, be sure that it is an infrared (IR) remote and not a r
 <p><img alt="32 key remote" src="../32-key.png" /> 
 32-key <a href="../32-key_ir.json">ir.json</a> (commonly sold with fairy string lights)</p>
 <p><a href="https://www.aliexpress.com/item/4001348058175.html"><img alt="24 key white remote" src="../24-key.png" /></a><br />
-24-key (very common, but buttons need repurposed to be very useful with WLED)
-*    <a href="../24-key_ir.json">ir.json v1</a> gray buttons load presets 1-4<br />
-*    <a href="../24-key-v2_ir.json">ir.json v2</a> gray buttons cycle effects, palettes and change speed  </p>
+24-key (very common, but buttons need repurposed to be very useful with WLED)<br />
+<em>    <a href="../24-key_ir.json">ir.json v1</a> gray buttons load presets 1-4<br />
+</em>    <a href="../24-key-v2_ir.json">ir.json v2</a> gray buttons cycle effects, palettes and change speed  </p>
 <p><img alt="24 key music remote" src="../24-key-v3.png" />
 24-key music
 <a href="../24-key-v3_ir.json">ir.json v3</a></p>
@@ -1136,15 +1137,14 @@ When purchasing a remote, be sure that it is an infrared (IR) remote and not a r
 <h3 id="editing-irjson">Editing ir.json</h3>
 <p>First see if a JSON file already exists for your remote. If not, see if there is a JSON file for a remote with 
 the same number of buttons. Often remotes with the same number of buttons have different labels but emit the 
-same codes. The keys are the hex encoded IR codes emitted for each button.  The keys are strings and case is important, 
+same codes. The JSON keys are the hex encoded IR codes emitted by each button.  The keys are strings and case is important, 
 be sure to use the same format as the sample below. It is also the same format used when codes are echoed on the serial console. </p>
-<p>In the JSON document, each button object should have <code>cmd</code> key containing the HTTP request or JSON API command. If an IR remote button is pressed rapidly, 
-subsequent presses have a different code. If your command is repeatable but does not contain the "~" character, add a "rpt" attribute with a value of true.
+<p>In the JSON document, each button object should have a <code>cmd</code> attribute containing the HTTP request or JSON API command. In addition to HTTP and JSON API commands, several C functions are supported (!incBrightness, !decBrightness, !presetFallback).
+The !incBrightness and !decBrightness functions, take smaller steps at the dim end of the range with progressively larger steps at the bright end.
+The !presetFallback function applies a preset (attribute PL) and falls back to the specified effect and palette (attributes FX and FP) if preset does not exist. (see sample below)</p>
+<p>If an IR remote button is pressed rapidly or held down, subsequent presses have a different code. If your command is repeatable but does not contain the "~" character and is not calling incBrightness or decBrightness, then add a "rpt" attribute with a value of true. 
 Label and position attributes are ignored by WLED but useful when making edits. </p>
-<p>In addition to HTTP and JSON API commands, several C functions are supported (!incBrightness, !decBrightness, !presetFallback).
-The incBrightness and decBrightness functions, take smaller steps at the dim end of the range with progressively larger steps at the bright end.
-The presetFallback function applies a preset (attribute PL) and falls back to the specified effect and palette (attributes FX and FP) if preset does not exist.</p>
-<p>If an ir.json file does not already exist for your remote, you will need to determine what code each button emits. To do this, connect your EPS to a computer and 
+<p>If an ir.json file does not already exist for your remote, you will need to determine what code each button emits. To do this, connect your ESP8266 or ESP32 to a computer and 
 open Arduino or VSCode serial monitor. Then press each button and record the code printed on the serial monitor. You should see something like this:</p>
 <pre><code>IR recv
 0xFFDE10
@@ -1157,46 +1157,47 @@ open Arduino or VSCode serial monitor. Then press each button and record the cod
 <li>You can also group your presets by color; for instance reddish animations in 1-10, greenish in 11-20, bluish in 21-30. The 44-key remote has up and down arrows for red, green and blue. So the command on the 'blue down' button would be <code>P1=21&amp;P2=30&amp;PL=~-</code> </li>
 </ul>
 <h3 id="irjson-sample">ir.json sample</h3>
-<pre><code class="language-json">{
-  &quot;0xF740BF&quot;: {
-    &quot;label&quot;: &quot;On/Off&quot;,
-    &quot;cmd&quot;: &quot;T=2&quot;,
-    &quot;rpt&quot;: true
+<pre>
+{
+  "0xF740BF": {
+    "label": "On/Off",
+    "cmd": "T=2",
+    "rpt": true
   },
-  &quot;0xF700FF&quot;: {
-    &quot;label&quot;: &quot;Speed +&quot;,
-    &quot;cmd&quot;: &quot;SX=~16&quot;
+  "0xF700FF": {
+    "label": "Speed +",
+    "cmd": "SX=~16"
   },
-  &quot;0xF720DF&quot;: {
-    &quot;label&quot;: &quot;Red&quot;,
-    &quot;cmnt&quot;: &quot;Lava palette + primary, secondary and tertiary colors&quot;,
-    &quot;cmd&quot;: &quot;FP=8&amp;CL=hFF7F00&amp;C2=hFF0000&amp;C3=hCC3D60&quot;
+  "0xF720DF": {
+    "label": "Red",
+    "cmnt": "Lava palette + primary, secondary and tertiary colors",
+    "cmd": "FP=8&CL=hFF7F00&C2=hFF0000&C3=hCC3D60"
   }, 
-  &quot;0xF710EF&quot;: {
-    &quot;label&quot;: &quot;Timer1&quot;,
-    &quot;cmnt&quot;: &quot;Timer 60 min&quot;,
-    &quot;cmd&quot;: &quot;NL=60&amp;NT=0&quot;
+  "0xF710EF": {
+    "label": "Timer1",
+    "cmnt": "Timer 60 min",
+    "cmd": "NL=60&NT=0"
   },
-  &quot;0xF730CF&quot;: {
-    &quot;label&quot;: &quot;Play&quot;,
-    &quot;cmnt&quot;: &quot;prime example of a playlist that cycles every 180 seconds and continues to repeat&quot;,
-    &quot;cmd&quot;: {&quot;playlist&quot;:{&quot;ps&quot;:[1,3,5,7,11,13,17],&quot;dur&quot;: 1800,&quot;transition&quot;:7,&quot;repeat&quot;:0,&quot;end&quot;:0}}
+  "0xF730CF": {
+    "label": "Play",
+    "cmnt": "prime example of a playlist that cycles every 180 seconds and continues to repeat",
+    "cmd": {"playlist":{"ps":[1,3,5,7,11,13,17],"dur": 1800,"transition":7,"repeat":0,"end":0}}
   }, 
-  &quot;0xFF9867&quot;: {
-    &quot;Bright+&quot;
-    &quot;cmnt&quot;: &quot;smaller steps at beginning, larger steps at the end&quot;,
-    &quot;cmd&quot;: &quot;!incBrightness&quot;
+  "0xFF9867": {
+    "Bright+"
+    "cmnt": "smaller steps at beginning, larger steps at the end",
+    "cmd": "!incBrightness"
   },
-  &quot;0xF78877&quot;: {
-    &quot;label&quot;: &quot;Mode1&quot;,
-    &quot;cmnt&quot;: &quot;Preset 1, fallback to Saw - Party if it doesn't exist&quot;,
-    &quot;cmd&quot;: &quot;!presetFallback&quot;,
-    &quot;PL&quot;: 1,
-    &quot;FX&quot;: 16,
-    &quot;FX&quot;: 6
+  "0xF78877": {
+    "label": "Mode1",
+    "cmnt": "Preset 1, fallback to Saw - Party if it doesn't exist",
+    "cmd": "!presetFallback",
+    "PL": 1,
+    "FX": 16,
+    "FX": 6
   },
 }
-</code></pre>
+</pre>
                 
                   
                 
