@@ -93,7 +93,7 @@ You should get a 24-bit hex encoded integer. If you get 0xFFFFFFFF, that means t
 
 ### ir.json sample
 
-```json
+``` json
 {
   "0xF740BF": {
     "label": "On/Off",
