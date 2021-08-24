@@ -214,6 +214,7 @@ brand | string | The producer/vendor of the light. Always `WLED` for standard in
 product | string | The product name. Always `FOSS` for standard installations.	
 btype | string | The origin of the build. `src` if a release version is compiled from source, `bin` for an official release image, `dev` for a development build (regardless of src/bin origin) and `exp` for experimental versions. `ogn` if the image is flashed to hardware by the vendor. _Removed as of v0.10_	
 mac | string | The hexadecimal hardware MAC address of the light, lowercase and without colons.	
+ip | string | The IP address of this instance. Empty string if not connected. (since 0.13.0) 
 
 #### Per-segment individual LED control	
 
