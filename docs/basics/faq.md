@@ -48,7 +48,7 @@ hide:
 - [What does the name WLED mean?](#what-does-the-name-wled-mean)
 - [What do the WLED version names mean?](#what-do-the-wled-version-names-mean)
 - [What is the difference between the brightness sliders in the web UI?](#what-is-the-difference-between-the-brightness-sliders-in-the-web-ui)
-- [My are gone after a reboot!](#my-segments-are-gone-after-a-reboot)
+- [My Segments are gone after a reboot!](#my-segments-are-gone-after-a-reboot)
 - [May I sell a product running WLED?](#may-i-sell-a-product-running-wled)
 
 ### My question or solution is not on this page
