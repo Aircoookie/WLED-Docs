@@ -48,7 +48,7 @@ hide:
 - [What does the name WLED mean?](#what-does-the-name-wled-mean)
 - [What do the WLED version names mean?](#what-do-the-wled-version-names-mean)
 - [What is the difference between the brightness sliders in the web UI?](#what-is-the-difference-between-the-brightness-sliders-in-the-web-ui)
-- [My Segments are gone after a reboot!](#my-segments-are-gone-after-a-reboot)
+- [My are gone after a reboot!](#my-segments-are-gone-after-a-reboot)
 - [May I sell a product running WLED?](#may-i-sell-a-product-running-wled)
 
 ### My question or solution is not on this page
@@ -280,10 +280,10 @@ There is a third brightness slider in each Segment panel. This serves the same p
 
 Segments are non-persistant by default. If you want to load your preset at every startup, just do the following:
 - Set your segments up as desired
-- Go into the Favorites tab in the web UI, click the save checkbox and save the config to preset slot number `16`
-- In LED settings, set `Boot Preset` to `16`
+- Go into the Favorites tab in the web UI, click the save checkbox and save the config to a preset and keep the ID in mind (e.g. `1`)
+- In LED settings, set `Boot Preset` to the preset-number you created (e.g. `1`)
 
-This will be improved in a future release, so that you will be able to save multiple segment configurations!
+Note: In very old versions of WLED it was only possible to save segments to preset `16`
 
 ### May I sell a product running WLED?
 
