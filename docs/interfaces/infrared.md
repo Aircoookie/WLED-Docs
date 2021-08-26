@@ -13,6 +13,9 @@ A dedicated infrared receiver module is required.
 (KY-022 or TSOP38238 are confirmed to work and inexpensive)
 
 The default sensor pin is GPIO4. It can be changed in the Wled settings.
+On ESP8266, it's recommended to use pins GPIO1, GPIO2, GPIO3 for the LED output if you want to use IR.
+(These pins use [DMA/UART](https://github.com/Makuna/NeoPixelBus/wiki/ESP8266-NeoMethods) control, 
+other pins will use bit-banging, which results in unreliable IR data decoding.) 
 
 ### Supported IR remotes
 To use IR remote go to `Settings`, `Sync Interfaces` and change the value for `Infrared receiver type` according to the IR remote type of the following list:
