@@ -9,7 +9,7 @@ You can use the free (if you only use it for 1 WLED light) IoT cloud Blynk to co
 
 With Blynk, you can also even control your lights when you are not connected to your home network!
 
-# Installation
+## Installation
 
 - Download the Blynk app from the [Play Store](https://play.google.com/store/apps/details?id=cc.blynk) or the [App Store](https://itunes.apple.com/us/app/blynk-iot-for-arduino-esp32/id808760481?mt=8)
 - Scan this QR code with the app:
