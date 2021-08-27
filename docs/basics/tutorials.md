@@ -22,7 +22,7 @@ No worries, we have collected a few helpful links for you to learn more about th
 [Holiday LEDs Step-by-step with WLED & Home Assistant](https://youtu.be/zepNvlN4gEc) | KPeyanski | Video (20:38) | Complete and great wiring, installation and HA setup tutorial
 [HOW-TO: Holiday LED Strip Lights, Home Assistant and WLED](https://peyanski.com/holiday-led-strip-lights-home-assistant-and-wled/) | KPeyanski | Article | Same as the above video, but in text form!
 [Smart Ping Pong LED Lamp - Quick&Simple DIY](https://www.youtube.com/watch?v=WlkMbNnIECM) | bitluni | Video (18:19) | Construction, wiring and flashing of a cool looking and easy to make lamp
-[ESP8266 based LED controller for WS2812b strip. WLED Firmware + OpenHAB (in Russian)](https://www.youtube.com/watch?v=K4ioTt3XvGc) | Room31 | Video (17:04) | 
+[ESP8266 based LED controller for WS2812b strip. WLED Firmware + OpenHAB (in Russian)](https://www.youtube.com/watch?v=K4ioTt3XvGc) | Room31 | Video (17:04) |
 [How to use WLED on an ESP32 (german)](https://www.adlerweb.info/blog/2020/11/01/bitbastelei-409-ws2812b-neopixel-mit-wled-einfach-steuern/ ) | Bitbastelei/Adlerweb | Video (11:00) |
 [DIY Ambilight using WLED and a Relay](https://wiki.faked.org/DIY_Ambilight) | jangrewe | Article | Wiki page with schematics and instructions for Hyperion, etc. |
 
@@ -47,7 +47,7 @@ No worries, we have collected a few helpful links for you to learn more about th
 [Soldering Tutorial Part 2](https://www.youtube.com/watch?v=fYz5nIHH0iY) | EEVblog | Video (34:05) | Detailed tutorial on soldering, see parts 1 and 3 for even more info)
 [Voltage Drop Calculator](https://www.rapidtables.com/calc/wire/voltage-drop-calculator.html) | | Tool | |
 [Another Voltage Drop Calculator](https://www.calculator.net/voltage-drop-calculator.html) | | Tool | |
-[Pixel/Bullet Voltage Drop Calc](http://spikerlights.com/calcpower.aspx) | | Tool |5 and 12V| 
+[Pixel/Bullet Voltage Drop Calc](http://spikerlights.com/calcpower.aspx) | | Tool |5 and 12V|
 [Combined Wire Gauge Calculator](https://www.wirebarn.com/Combined-Wire-Gauge-Calculator_ep_42.html) | | Tool | |
 [Wire Size/Ampacity](https://www.powerstream.com/Wire_Size.htm)| | Tool|Use chassis wiring
-_Add more categories as needed :)_
+_Add more categories as needed :)
