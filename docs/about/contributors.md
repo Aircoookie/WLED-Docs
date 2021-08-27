@@ -15,7 +15,7 @@ adamo made the animated Discord server logo!
 [@blazoncek](https://github.com/blazoncek) makes countless new features and improvements to many parts of WLED!
 [@debsahu](https://github.com/debsahu) provided the HomeAssistant autodiscovery and a lot of help with PIO!  
 [@frenck](https://github.com/frenck) made an amazing, stable and feature-packed native integration with HomeAssistant!  
-[@photocromax] is helping bringing the Live visualization feature to life and added GIF previews to the doc!  
+[@photocromax](https://github.com/photocromax) is helping bringing the Live visualization feature to life and added GIF previews to the doc!  
 [@raymiec](https://github.com/raymiec)  is currently working on creating the best clients for Android and iOS!  
 [@StormPie](https://github.com/stormpie), the creator of the awesome mobile UI!  
 [@timothybrown](https://github.com/timothybrown) added MQTT authentication!  
