@@ -22,21 +22,30 @@ This installer is not yet available for ESPs with flash chips smaller than 4MB (
 - Execute this command:
 
 #### ESP8266
-```
+
+```bash
 esptool.py write_flash 0x0 ./WLED_XXX.bin
 ```
+
 #### ESP32
+
 (you will need to have a bootloader installed)
-```
+
+```bash
 esptool.py write_flash 0x10000 ./WLED_XXX.bin 
 ```
+
 If the ESP32 is new, you will need to flash the bootloader first. This bootloader should be addressed to 0x00000 and the firmware to 0x10000. This is not required if you had an Arduino sketch running on it before. You can find the bootloader file in the assets for the [0.9.1 release](https://github.com/Aircoookie/WLED/releases/tag/v0.9.1).
-```
+
+```bash
 esptool.py write_flash 0x0 ./esp32_bootloader.bin
 ```
+
 When esptool.py says `Connecting...`, some ESP32 boards require you to hold the boot button (to the right of the USB port) for a few seconds  
+
 - If you experience issues, run this command before trying `write_flash` again (Note: this will erase all settings stored on the ESP!)
-```
+
+```bash
 esptool.py erase_flash
 ```
 
@@ -46,7 +55,7 @@ This is a GUI-based tool recommended by some users as easier to use than esptool
 For some ESP32 boards, you might have to press some buttons after uploading:
 > Hold both buttons down, plug it in, start flashing, then when is tries to detect, let go of the button to the left of the USB as you look at it, then when it detects the board type, let go of the other button.
 
-If running windows, you need a driver from here: https://www.wemos.cc/en/latest/ch340_driver.html before your computer will show the COM port in ESPhome Flasher. With a Wemos D1 mini you do not need to hold down the reset button while flashing.
+If running windows, you need a driver from here: <https://www.wemos.cc/en/latest/ch340_driver.html> before your computer will show the COM port in ESPhome Flasher. With a Wemos D1 mini you do not need to hold down the reset button while flashing.
 
 ### Flashing method 4: OTA update
 
@@ -76,4 +85,3 @@ Legacy binary format (up to 0.11.1)
 | WLED_0.x.x_ESP8266_apa102.bin | Custom build for 4MB flash ESP8266 and APA102 LEDs (clock pin GPIO0, data GPIO2).
 | WLED_0.x.x_ESP8266_ws2801.bin | Custom build for 4MB flash ESP8266 and WS2801 LEDs (clock pin GPIO0, data GPIO2).
 | WLED_0.x.x_ESP32_ledpinY.bin | Custom build for ESP32 and WS2812b. LED pin is changed (default is GPIO2). LED pin 16 is useful for the QuinLed-Dig-Uno board with ESP32. |
-
