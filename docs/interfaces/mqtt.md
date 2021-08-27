@@ -31,7 +31,7 @@ WLED will subscribe to up to six topics to change the state of the lights.
 The topic paths [mqttDeviceTopic] and [mqttGroupTopic] are customizable in Sync settings.  
 If [mqttGroupTopic] is left empty, it will not subscribe to anything. An empty [mqttDeviceTopic] will instead be replaced with the default "wled/macaddr".  
 [mqttDeviceTopic] is intended to be unique to one WLED device and just control that device.  
-[mqttGroupTopic] is intended to control a group of or all WLED devices. 
+[mqttGroupTopic] is intended to control a group of or all WLED devices.
 
 UDP notifications will be sent just as if the change was done via the UI or HTTP API.
 

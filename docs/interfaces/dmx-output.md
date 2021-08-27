@@ -11,6 +11,7 @@ hide:
     As of version 0.9.2 WLED supports DMX output via MAX485. This is great for controlling DMX LED PAR lamps with WLED patterns.
 
 #### features and limitations
+
 * up to 15 DMX channels per fixture
 * channels can be set to dimmer (brightness), red, green, blue, white, 0, 255
 * supports channel spacing between fixtures
@@ -19,6 +20,7 @@ hide:
 * type of fixture
 
 #### software setup
+
 For the DMX feature to work, you'll need to compile WLED from source. It's not a big deal, you can do it! [Here](/basics/getting-started) is the Quick Start guide. There you'll find the section "i want to modify WLED".
 
 1. make sure, you can compile the latest version of WLED without any issues. Then continue.
@@ -35,19 +37,15 @@ For the DMX feature to work, you'll need to compile WLED from source. It's not a
 
 5. Grab the manual for your lamp and maybe some snacks, look up the dmx channels and set everything up accordingly.
 
-
-
 #### hardware setup
 
-The DMX output uses a MAX485 transceiver connected to the TX-pin of the ESP8266. 
+The DMX output uses a MAX485 transceiver connected to the TX-pin of the ESP8266.
 
-I am currently working on an open source PCB design to go along with this feature. 
+I am currently working on an open source PCB design to go along with this feature.
 
 Until then, i can recommend [this](https://robertoostenveld.nl/art-net-to-dmx512-with-esp8266/) tutorial by [Robert Oostenveld](https://robertoostenveld.nl/). Only the hardware side, of course.
 
 If you need to use another pin for output than the TX-pin, you'll need to change this in the ESP-Dmx library itself. This setting is located in ESP-Dmx/src/ESPDMX.cpp on line 29.
-
-
 
 #### questions
 
