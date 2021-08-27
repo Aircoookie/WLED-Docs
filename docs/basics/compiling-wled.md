@@ -12,6 +12,7 @@ WLED has come to rely on so many dependencies in the latest versions that buildi
 Instead, installing Visual Studio Code and its PlatformIO (PIO) extension is easier, as it will install the ESP Arduino core, all the required libraries and the correct compilation settings for you automatically.
 
 ### Installation guide (PlatformIO, recommended)
+
 0. Make sure Git client is installed on your system. If it isn't, you can get it [here](https://git-scm.com/downloads).
 1. Download and install the free [Visual Studio Code](https://code.visualstudio.com/) by Microsoft.
 2. Open VS Code and go to the Extensions manager (the icon with the stacked blocks in the left bar)
@@ -20,6 +21,7 @@ Instead, installing Visual Studio Code and its PlatformIO (PIO) extension is eas
 5. Go to `File -> Open Folder` and open that root WLED folder (the one that contains `platformio.ini`, _NOT_ the `wled00` folder)
 
 ### Compilation guide (PlatformIO)
+
 1. In VS Code, open the file `platformio.ini`.
 2. Add a semicolon in front of the line that says `default_envs = travis_esp8266, travis_esp32` to comment it out.
 3. Select your build environment by un-commenting one of the lines starting with `; default_envs =`.  
@@ -29,9 +31,10 @@ For most ESP8266 boards, the `d1_mini` environment is best.
 
      [Picture Guide](https://i.imgur.com/mZYo4KJ.jpg)
 
-Success! 
- 
+Success!
+
 If you get one of these two errors, hit the checkmark icon once again to compile and that time the code should build without problems! 
+
 - `error: wled00\wled00.ino.cpp: No such file or directory`
 - `FileNotFoundError: [WinError 2] The system cannot find the file specified: '[...].sconsign37.dblite'`
 
@@ -60,7 +63,9 @@ All other dependencies are included with WLED for convenience.
 - Now compile and flash the software! Make sure you erase everything when you flash! (If your board config does not provide this option, you can `Sketch -> Export compiled Binary` and upload with [any ESP flashing tool](/basics/install-binary).)
 
 ### Compilation settings (Arduino IDE)
+
 ESP8266:
+
 - Arduino Core v2.7.4
 - Board: NodeMCU 1.0 (ESP-12E module) (or select your ESP board)
 - CPU frequency: 80 MHz
@@ -69,14 +74,17 @@ ESP8266:
 - Upload speed: Any, 921600 recommended
 
 ESP8266-07 (External Antenna):
+
 - Variants have 512kB or 1MB flash
 - Be sure to use DOUT mode when flashing
 - Flash Size 1MB (128k SPIFFS)
 - 512kB variant no longer compatible
 
 ESP-07s (External Antenna):
+
 - Variant have 4MB flash
 - Settings as for NodeMCU or Wemos
 
 ESP32:
+
 - Arduino Core v1.0.4
