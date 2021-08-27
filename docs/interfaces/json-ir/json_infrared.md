@@ -80,7 +80,7 @@ Label and position attributes are ignored by WLED but useful when making edits.
 If an ir.json file does not already exist for your remote, you will need to determine what code each button emits. To do this, connect your ESP8266 or ESP32 to a computer and
 open Arduino or VSCode serial monitor. Then press each button and record the code printed on the serial monitor. You should see something like this:
 
-```
+```bash
 IR recv
 0xFFDE10
 ```
