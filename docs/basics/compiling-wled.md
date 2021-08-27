@@ -33,7 +33,7 @@ For most ESP8266 boards, the `d1_mini` environment is best.
 
 Success!
 
-If you get one of these two errors, hit the checkmark icon once again to compile and that time the code should build without problems! 
+If you get one of these two errors, hit the checkmark icon once again to compile and that time the code should build without problems!
 
 - `error: wled00\wled00.ino.cpp: No such file or directory`
 - `FileNotFoundError: [WinError 2] The system cannot find the file specified: '[...].sconsign37.dblite'`

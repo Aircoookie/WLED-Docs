@@ -5,7 +5,7 @@ hide:
   # - toc
 ---
 
-# Welcome to the WLED wiki!
+## Welcome to the WLED wiki!
 
 !!! info "Version Info"
     Unless noted otherwise, all information applies to the latest release (v0.12.0).

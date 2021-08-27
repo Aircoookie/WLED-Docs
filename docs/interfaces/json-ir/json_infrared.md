@@ -22,11 +22,11 @@ remote to any HTTP request API or JSON API command.
 
 The map of IR codes to API commands is stored on your ESP's file system in `ir.json`.
 You can upload and edit ir.json from the /edit page, which can be reached by going to
-http://[controller-ip]/edit.
+`http://[controller-ip]/edit`.
 
 ### Preconfigured Remotes
 
-LED remotes typically are not sold separately. But you can purchase with an RGB controller for $2-4 on AliExpress and $5-10 on Amazon. 
+LED remotes typically are not sold separately. But you can purchase with an RGB controller for $2-4 on AliExpress and $5-10 on Amazon.
 When purchasing a remote, be sure that it is an infrared (IR) remote and not a radio (RF) remote as they are not supported at this time.
 The linked files all have unique names. Be sure to rename to ir.json when uploading to your ESP.
 
