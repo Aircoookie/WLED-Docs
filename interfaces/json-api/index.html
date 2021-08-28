@@ -1216,100 +1216,102 @@
                 
                 <div class="admonition info">
 <p class="admonition-title">Version Info</p>
-<p>Starting from version 0.8.4, WLED implements a powerful JSON API over HTTP. 
-It is accessible using the <code>/json</code> subpage. </p>
+<p>Starting from version 0.8.4, WLED implements a powerful JSON API over HTTP.
+It is accessible using the <code>/json</code> subpage.</p>
 </div>
 <h3 id="obtaining-light-information">Obtaining light information</h3>
-<p>Sending a GET request will return an object similar to the sample below.  <br />
-The response consists of four objects:<br />
-- <code>state</code> contains the current state of the light. All values may be modified by the client (see below) 
-- <code>info</code> contains general information about the device. No value can be modified using this API.  <br />
-- <code>effects</code> contains an array of the effect mode names<br />
-- <code>palettes</code> contains an array of the palette names </p>
-<p>You may also obtain those objects individually using the URLs <code>/json/state</code> <code>/json/info</code> <code>/json/eff</code>, and <code>/json/pal</code>   </p>
+<p>Sending a GET request will return an object similar to the sample below
+The response consists of four objects:</p>
+<ul>
+<li><code>state</code> contains the current state of the light. All values may be modified by the client (see below)</li>
+<li><code>info</code> contains general information about the device. No value can be modified using this API</li>
+<li><code>effects</code> contains an array of the effect mode names</li>
+<li><code>palettes</code> contains an array of the palette names</li>
+</ul>
+<p>You may also obtain those objects individually using the URLs <code>/json/state</code> <code>/json/info</code> <code>/json/eff</code>, and <code>/json/pal</code></p>
 <h3 id="setting-new-values">Setting new values</h3>
-<p>Sending a POST request to <code>/json</code> or <code>/json/state</code> with (parts of) the state object will update the respective values.<br />
-Example: <code>{"on":true,"bri":255}</code> sets the brightness to maximum. <code>{"seg":[{"col":[[0,255,200]]}]}</code> sets the color of the first segment to teal. </p>
-<p>Sample JSON API response (v0.8.4):  </p>
-<pre><code class="language-json">{   
-  &quot;state&quot;: {    
-    &quot;on&quot;: true, 
-    &quot;bri&quot;: 127, 
-    &quot;transition&quot;: 7,    
-    &quot;ps&quot;: -1,   
-    &quot;pl&quot;: -1,   
-    &quot;nl&quot;: { 
-      &quot;on&quot;: false,  
-      &quot;dur&quot;: 60,    
-      &quot;fade&quot;: true, 
-      &quot;tbri&quot;: 0 
-    },  
-    &quot;udpn&quot;: {   
-      &quot;send&quot;: false,    
-      &quot;recv&quot;: true  
-    },  
-    &quot;seg&quot;: [{   
-      &quot;start&quot;: 0,   
-      &quot;stop&quot;: 20,   
-      &quot;len&quot;: 20,    
-      &quot;col&quot;: [  
-        [255, 160, 0, 0],   
-        [0, 0, 0, 0],   
-        [0, 0, 0, 0]    
-      ],    
-      &quot;fx&quot;: 0,  
-      &quot;sx&quot;: 127,    
-      &quot;ix&quot;: 127,    
-      &quot;pal&quot;: 0, 
-      &quot;sel&quot;: true,  
-      &quot;rev&quot;: false, 
-      &quot;cln&quot;: -1 
-    }]  
-  },    
-  &quot;info&quot;: { 
-    &quot;ver&quot;: &quot;0.8.4&quot;, 
-    &quot;vid&quot;: 1903252, 
-    &quot;leds&quot;: {   
-      &quot;count&quot;: 20,  
-      &quot;rgbw&quot;: true, 
-      &quot;pin&quot;: [2],   
-      &quot;pwr&quot;: 0, 
-      &quot;maxpwr&quot;: 65000,  
-      &quot;maxseg&quot;: 1   
-    },  
-    &quot;name&quot;: &quot;WLED Light&quot;,   
-    &quot;udpport&quot;: 21324,   
-    &quot;live&quot;: false,  
-    &quot;fxcount&quot;: 80,  
-    &quot;palcount&quot;: 47, 
-    &quot;arch&quot;: &quot;esp8266&quot;,  
-    &quot;core&quot;: &quot;2_4_2&quot;,    
-    &quot;freeheap&quot;: 13264,  
-    &quot;uptime&quot;: 17985,    
-    &quot;opt&quot;: 127, 
-    &quot;brand&quot;: &quot;WLED&quot;,    
-    &quot;product&quot;: &quot;DIY light&quot;, 
-    &quot;btype&quot;: &quot;src&quot;, 
-    &quot;mac&quot;: &quot;60019423b441&quot;   
-  },    
-  &quot;effects&quot;: [  
-    &quot;Solid&quot;, &quot;Blink&quot;, &quot;Breathe&quot;, &quot;Wipe&quot;, &quot;Wipe Random&quot;, &quot;Random Colors&quot;, &quot;Sweep&quot;, &quot;Dynamic&quot;, &quot;Colorloop&quot;, &quot;Rainbow&quot;,    
-    &quot;Scan&quot;, &quot;Dual Scan&quot;, &quot;Fade&quot;, &quot;Chase&quot;, &quot;Chase Rainbow&quot;, &quot;Running&quot;, &quot;Saw&quot;, &quot;Twinkle&quot;, &quot;Dissolve&quot;, &quot;Dissolve Rnd&quot;, 
-    &quot;Sparkle&quot;, &quot;Dark Sparkle&quot;, &quot;Sparkle+&quot;, &quot;Strobe&quot;, &quot;Strobe Rainbow&quot;, &quot;Mega Strobe&quot;, &quot;Blink Rainbow&quot;, &quot;Android&quot;, &quot;Chase&quot;, &quot;Chase Random&quot;,  
-    &quot;Chase Rainbow&quot;, &quot;Chase Flash&quot;, &quot;Chase Flash Rnd&quot;, &quot;Rainbow Runner&quot;, &quot;Colorful&quot;, &quot;Traffic Light&quot;, &quot;Sweep Random&quot;, &quot;Running 2&quot;, &quot;Red &amp; Blue&quot;, &quot;Stream&quot;,  
-    &quot;Scanner&quot;, &quot;Lighthouse&quot;, &quot;Fireworks&quot;, &quot;Rain&quot;, &quot;Merry Christmas&quot;, &quot;Fire Flicker&quot;, &quot;Gradient&quot;, &quot;Loading&quot;, &quot;In Out&quot;, &quot;In In&quot;,  
-    &quot;Out Out&quot;, &quot;Out In&quot;, &quot;Circus&quot;, &quot;Halloween&quot;, &quot;Tri Chase&quot;, &quot;Tri Wipe&quot;, &quot;Tri Fade&quot;, &quot;Lightning&quot;, &quot;ICU&quot;, &quot;Multi Comet&quot;, 
-    &quot;Dual Scanner&quot;, &quot;Stream 2&quot;, &quot;Oscillate&quot;, &quot;Pride 2015&quot;, &quot;Juggle&quot;, &quot;Palette&quot;, &quot;Fire 2012&quot;, &quot;Colorwaves&quot;, &quot;BPM&quot;, &quot;Fill Noise&quot;, &quot;Noise 1&quot;,  
-    &quot;Noise 2&quot;, &quot;Noise 3&quot;, &quot;Noise 4&quot;, &quot;Colortwinkle&quot;, &quot;Lake&quot;, &quot;Meteor&quot;, &quot;Smooth Meteor&quot;, &quot;Railway&quot;, &quot;Ripple&quot; 
-  ],    
-  &quot;palettes&quot;: [ 
-    &quot;Default&quot;, &quot;Random Cycle&quot;, &quot;Primary Color&quot;, &quot;Based on Primary&quot;, &quot;Set Colors&quot;, &quot;Based on Set&quot;, &quot;Party&quot;, &quot;Cloud&quot;, &quot;Lava&quot;, &quot;Ocean&quot;,    
-    &quot;Forest&quot;, &quot;Rainbow&quot;, &quot;Rainbow Bands&quot;, &quot;Sunset&quot;, &quot;Rivendell&quot;, &quot;Breeze&quot;, &quot;Red &amp; Blue&quot;, &quot;Yellowout&quot;, &quot;Analogous&quot;, &quot;Splash&quot;,    
-    &quot;Pastel&quot;, &quot;Sunset 2&quot;, &quot;Beech&quot;, &quot;Vintage&quot;, &quot;Departure&quot;, &quot;Landscape&quot;, &quot;Beach&quot;, &quot;Sherbet&quot;, &quot;Hult&quot;, &quot;Hult 64&quot;,  
-    &quot;Drywet&quot;, &quot;Jul&quot;, &quot;Grintage&quot;, &quot;Rewhi&quot;, &quot;Tertiary&quot;, &quot;Fire&quot;, &quot;Icefire&quot;, &quot;Cyane&quot;, &quot;Light Pink&quot;, &quot;Autumn&quot;,   
-    &quot;Magenta&quot;, &quot;Magred&quot;, &quot;Yelmag&quot;, &quot;Yelblu&quot;, &quot;Orange &amp; Teal&quot;, &quot;Tiamat&quot;, &quot;April Night&quot;   
-  ] 
-}   
+<p>Sending a POST request to <code>/json</code> or <code>/json/state</code> with (parts of) the state object will update the respective values.
+Example: <code>{"on":true,"bri":255}</code> sets the brightness to maximum. <code>{"seg":[{"col":[[0,255,200]]}]}</code> sets the color of the first segment to teal.</p>
+<p>Sample JSON API response (v0.8.4):</p>
+<pre><code class="language-json">{
+  &quot;state&quot;: {
+    &quot;on&quot;: true,
+    &quot;bri&quot;: 127,
+    &quot;transition&quot;: 7,
+    &quot;ps&quot;: -1,
+    &quot;pl&quot;: -1,
+    &quot;nl&quot;: {
+      &quot;on&quot;: false,
+      &quot;dur&quot;: 60,
+      &quot;fade&quot;: true,
+      &quot;tbri&quot;: 0
+    },
+    &quot;udpn&quot;: {
+      &quot;send&quot;: false,
+      &quot;recv&quot;: true
+    },
+    &quot;seg&quot;: [{
+      &quot;start&quot;: 0,
+      &quot;stop&quot;: 20,
+      &quot;len&quot;: 20,
+      &quot;col&quot;: [
+        [255, 160, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0]
+      ],
+      &quot;fx&quot;: 0,
+      &quot;sx&quot;: 127,
+      &quot;ix&quot;: 127,
+      &quot;pal&quot;: 0,
+      &quot;sel&quot;: true,
+      &quot;rev&quot;: false,
+      &quot;cln&quot;: -1
+    }]
+  },
+  &quot;info&quot;: {
+    &quot;ver&quot;: &quot;0.8.4&quot;,
+    &quot;vid&quot;: 1903252,
+    &quot;leds&quot;: {
+      &quot;count&quot;: 20,
+      &quot;rgbw&quot;: true,
+      &quot;pin&quot;: [2],
+      &quot;pwr&quot;: 0,
+      &quot;maxpwr&quot;: 65000,
+      &quot;maxseg&quot;: 1
+    },
+    &quot;name&quot;: &quot;WLED Light&quot;,
+    &quot;udpport&quot;: 21324,
+    &quot;live&quot;: false,
+    &quot;fxcount&quot;: 80,
+    &quot;palcount&quot;: 47,
+    &quot;arch&quot;: &quot;esp8266&quot;,
+    &quot;core&quot;: &quot;2_4_2&quot;,
+    &quot;freeheap&quot;: 13264,
+    &quot;uptime&quot;: 17985,
+    &quot;opt&quot;: 127,
+    &quot;brand&quot;: &quot;WLED&quot;,
+    &quot;product&quot;: &quot;DIY light&quot;,
+    &quot;btype&quot;: &quot;src&quot;,
+    &quot;mac&quot;: &quot;60019423b441&quot;
+  },
+  &quot;effects&quot;: [
+    &quot;Solid&quot;, &quot;Blink&quot;, &quot;Breathe&quot;, &quot;Wipe&quot;, &quot;Wipe Random&quot;, &quot;Random Colors&quot;, &quot;Sweep&quot;, &quot;Dynamic&quot;, &quot;Colorloop&quot;, &quot;Rainbow&quot;,
+    &quot;Scan&quot;, &quot;Dual Scan&quot;, &quot;Fade&quot;, &quot;Chase&quot;, &quot;Chase Rainbow&quot;, &quot;Running&quot;, &quot;Saw&quot;, &quot;Twinkle&quot;, &quot;Dissolve&quot;, &quot;Dissolve Rnd&quot;,
+    &quot;Sparkle&quot;, &quot;Dark Sparkle&quot;, &quot;Sparkle+&quot;, &quot;Strobe&quot;, &quot;Strobe Rainbow&quot;, &quot;Mega Strobe&quot;, &quot;Blink Rainbow&quot;, &quot;Android&quot;, &quot;Chase&quot;, &quot;Chase Random&quot;,
+    &quot;Chase Rainbow&quot;, &quot;Chase Flash&quot;, &quot;Chase Flash Rnd&quot;, &quot;Rainbow Runner&quot;, &quot;Colorful&quot;, &quot;Traffic Light&quot;, &quot;Sweep Random&quot;, &quot;Running 2&quot;, &quot;Red &amp; Blue&quot;,&quot;Stream&quot;,
+    &quot;Scanner&quot;, &quot;Lighthouse&quot;, &quot;Fireworks&quot;, &quot;Rain&quot;, &quot;Merry Christmas&quot;, &quot;Fire Flicker&quot;, &quot;Gradient&quot;, &quot;Loading&quot;, &quot;In Out&quot;, &quot;In In&quot;,
+    &quot;Out Out&quot;, &quot;Out In&quot;, &quot;Circus&quot;, &quot;Halloween&quot;, &quot;Tri Chase&quot;, &quot;Tri Wipe&quot;, &quot;Tri Fade&quot;, &quot;Lightning&quot;, &quot;ICU&quot;, &quot;Multi Comet&quot;,
+    &quot;Dual Scanner&quot;, &quot;Stream 2&quot;, &quot;Oscillate&quot;, &quot;Pride 2015&quot;, &quot;Juggle&quot;, &quot;Palette&quot;, &quot;Fire 2012&quot;, &quot;Colorwaves&quot;, &quot;BPM&quot;, &quot;Fill Noise&quot;, &quot;Noise 1&quot;,
+    &quot;Noise 2&quot;, &quot;Noise 3&quot;, &quot;Noise 4&quot;, &quot;Colortwinkle&quot;, &quot;Lake&quot;, &quot;Meteor&quot;, &quot;Smooth Meteor&quot;, &quot;Railway&quot;, &quot;Ripple&quot;
+  ],
+  &quot;palettes&quot;: [
+    &quot;Default&quot;, &quot;Random Cycle&quot;, &quot;Primary Color&quot;, &quot;Based on Primary&quot;, &quot;Set Colors&quot;, &quot;Based on Set&quot;, &quot;Party&quot;, &quot;Cloud&quot;, &quot;Lava&quot;, &quot;Ocean&quot;,
+    &quot;Forest&quot;, &quot;Rainbow&quot;, &quot;Rainbow Bands&quot;, &quot;Sunset&quot;, &quot;Rivendell&quot;, &quot;Breeze&quot;, &quot;Red &amp; Blue&quot;, &quot;Yellowout&quot;, &quot;Analogous&quot;, &quot;Splash&quot;,
+    &quot;Pastel&quot;, &quot;Sunset 2&quot;, &quot;Beech&quot;, &quot;Vintage&quot;, &quot;Departure&quot;, &quot;Landscape&quot;, &quot;Beach&quot;, &quot;Sherbet&quot;, &quot;Hult&quot;, &quot;Hult 64&quot;,
+    &quot;Drywet&quot;, &quot;Jul&quot;, &quot;Grintage&quot;, &quot;Rewhi&quot;, &quot;Tertiary&quot;, &quot;Fire&quot;, &quot;Icefire&quot;, &quot;Cyane&quot;, &quot;Light Pink&quot;, &quot;Autumn&quot;,
+    &quot;Magenta&quot;, &quot;Magred&quot;, &quot;Yelmag&quot;, &quot;Yelblu&quot;, &quot;Orange &amp; Teal&quot;, &quot;Tiamat&quot;, &quot;April Night&quot;
+  ]
+}
 </code></pre>
 <h3 id="overview-of-values">Overview of values</h3>
 <h4 id="state-object">State object</h4>
@@ -1330,12 +1332,12 @@ Example: <code>{"on":true,"bri":255}</code> sets the brightness to maximum. <cod
 <tr>
 <td>bri</td>
 <td>0 to 255</td>
-<td>Brightness of the light. If <em>on</em> is <code>false</code>, contains last brightness when light was on (aka brightness when <em>on</em> is set to true). Setting <em>bri</em> to 0 is supported but it is recommended to use the range 1-255 and use <code>on: false</code> to turn off. The state response will never have the value <code>0</code> for <em>bri</em>.</td>
+<td>Brightness of the light. If <em>on</em> is <code>false</code>, contains last brightness when light was on (aka brightness when <em>on</em> is set to true. Setting <em>bri</em> to 0 is supported but it is recommended to use the range 1-255 and use <code>on: false</code> to turn off. The state response will never havethe value <code>0</code> for <em>bri</em>.</td>
 </tr>
 <tr>
 <td>transition</td>
 <td>0 to 255</td>
-<td>Duration of the crossfade between different colors/brightness levels. One unit is 100ms, so a value of <code>4</code> results in a transition of 400ms.</td>
+<td>Duration of the crossfade between different colors/brightness levels. One unit is 100ms, so a value of <code>4</code> results in atransition of 400ms.</td>
 </tr>
 <tr>
 <td>tt</td>
@@ -1375,7 +1377,7 @@ Example: <code>{"on":true,"bri":255}</code> sets the brightness to maximum. <cod
 <tr>
 <td>nl.fade</td>
 <td>bool</td>
-<td>If <code>true</code>, the light will gradually dim over the course of the nightlight duration. If <code>false</code>, it will instantly turn to the target brightness once the duration has elapsed. <em>Deprecated, removal in 0.12.0</em> (use mode instead)</td>
+<td>If <code>true</code>, the light will gradually dim over the course of the nightlight duration. If <code>false</code>, it will instantly turn to thetarget brightness once the duration has elapsed. <em>Deprecated, removal in 0.12.0</em> (use mode instead)</td>
 </tr>
 <tr>
 <td>nl.mode</td>
@@ -1405,7 +1407,7 @@ Example: <code>{"on":true,"bri":255}</code> sets the brightness to maximum. <cod
 <tr>
 <td>v</td>
 <td>bool</td>
-<td>If set to <em>true</em> in a JSON POST command, the response will contain the full JSON state object. Not included in state response.</td>
+<td>If set to <em>true</em> in a JSON POST command, the response will contain the full JSON state object. Not included in state response</td>
 </tr>
 <tr>
 <td>rb</td>
@@ -1430,7 +1432,7 @@ Example: <code>{"on":true,"bri":255}</code> sets the brightness to maximum. <cod
 <tr>
 <td>seg</td>
 <td>Array of segment objects</td>
-<td>Segments are individual parts of the LED strip. In 0.9.0 this will enables running different effects on different parts of the strip.</td>
+<td>Segments are individual parts of the LED strip. In 0.9.0 this will enables running different effects on differentparts of the strip.</td>
 </tr>
 <tr>
 <td>playlist</td>
@@ -1440,9 +1442,9 @@ Example: <code>{"on":true,"bri":255}</code> sets the brightness to maximum. <cod
 </tbody>
 </table>
 <h4 id="contents-of-the-segment-object">Contents of the segment object</h4>
-<p><strong>Notice:</strong> <em>start</em>, <em>stop</em>, and <em>len</em> are not changeable in  0.8.4. Any segment with <em>id</em> &gt; 0 is ignored.<br />
-Unless stated otherwise, every value may be changed via an HTTP POST request. <br />
-The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent releases.  </p>
+<p><strong>Notice:</strong> <em>start</em>, <em>stop</em>, and <em>len</em> are not changeable in  0.8.4. Any segment with <em>id</em> &gt; 0 is ignored.
+Unless stated otherwise, every value may be changed via an HTTP POST request.
+The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent releases.</p>
 <table>
 <thead>
 <tr>
@@ -1580,7 +1582,7 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 </tbody>
 </table>
 <h4 id="info-object">Info object</h4>
-<p>No value may be changed by means of this API.   </p>
+<p>No value may be changed by means of this API.</p>
 <table>
 <thead>
 <tr>
@@ -1788,34 +1790,34 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 </tbody>
 </table>
 <h4 id="per-segment-individual-led-control">Per-segment individual LED control</h4>
-<p>Using the <code>i</code> property of the segment object, you can set the LED colors in the segment using the JSON API. 
-Keep in mind that this is non-persistent, if the light is turned off the segment will return to effect mode.  <br />
-The segment is blanked out when using individual control, the set effect will not run.<br />
-To disable, change any property of the segment or turn off the light.   </p>
-<p>To set individual LEDs starting from the beginning, use an array of Color arrays. <br />
-<code>{"seg":{"i":[[255,0,0], [0,255,0], [0,0,255]]}}</code> will set the first LED red, the second green and the third blue.  </p>
-<p>To set individual LEDs, use the LED index followed by its Color array.    <br />
-<code>{"seg":{"i":[0,[255,0,0], 2,[0,255,0], 4,[0,0,255]]}}</code> is the same as above, but leaves blank spaces between the lit LEDs. </p>
-<p>To set ranges of LEDs, use the LED start and stop index followed by its Color array.  <br />
-<code>{"seg":{"i":[0,8,[255,0,0], 10,18,[0,0,255]]}}</code> sets the first eight LEDs to red, leaves out two, and sets another 8 to blue.  </p>
-<p>Keep in mind that the LED indices are segment-based, so LED 0 is the first LED of the segment, not of the entire strip. 
-Segment features, including Grouping, Spacing, Mirroring and Reverse are functional.  <br />
-This feature is available in build 200829 and above.    </p>
+<p>Using the <code>i</code> property of the segment object, you can set the LED colors in the segment using the JSON API.
+Keep in mind that this is non-persistent, if the light is turned off the segment will return to effect mode.
+The segment is blanked out when using individual control, the set effect will not run.
+To disable, change any property of the segment or turn off the light.</p>
+<p>To set individual LEDs starting from the beginning, use an array of Color arrays.<br />
+<code>{"seg":{"i":[[255,0,0], [0,255,0], [0,0,255]]}}</code> will set the first LED red, the second green and the third blue.</p>
+<p>To set individual LEDs, use the LED index followed by its Color array.<br />
+<code>{"seg":{"i":[0,[255,0,0], 2,[0,255,0], 4,[0,0,255]]}}</code> is the same as above, but leaves blank spaces between the lit LEDs.</p>
+<p>To set ranges of LEDs, use the LED start and stop index followed by its Color array.<br />
+<code>{"seg":{"i":[0,8,[255,0,0], 10,18,[0,0,255]]}}</code> sets the first eight LEDs to red, leaves out two, and sets another 8 to blue.</p>
+<p>Keep in mind that the LED indices are segment-based, so LED 0 is the first LED of the segment, not of the entire strip.
+Segment features, including Grouping, Spacing, Mirroring and Reverse are functional.
+This feature is available in build 200829 and above.</p>
 <h4 id="playlists">Playlists</h4>
-<p>(beta, available since 0.11.0)  </p>
-<p>Sample playlist API call:   </p>
-<pre><code class="language-json">{   
-  &quot;playlist&quot;: { 
-    &quot;ps&quot;: [26, 20, 18, 20], 
-    &quot;dur&quot;: [30, 20, 10, 50],    
-    &quot;transition&quot;: 0,    
-    &quot;repeat&quot;: 10,   
-    &quot;end&quot;: 21   
-  } 
-}   
+<p>(beta, available since 0.11.0)</p>
+<p>Sample playlist API call:</p>
+<pre><code class="language-json">{
+  &quot;playlist&quot;: {
+    &quot;ps&quot;: [26, 20, 18, 20],
+    &quot;dur&quot;: [30, 20, 10, 50],
+    &quot;transition&quot;: 0,
+    &quot;repeat&quot;: 10,
+    &quot;end&quot;: 21
+  }
+}
 </code></pre>
-<p>This example applies preset ID 26 for 3 seconds, then preset 20 for 2 seconds, then preset 18 for 1 second, lastly preset 20 again for 5 seconds. This repeats 10 times, then preset 21 is applied. </p>
-<p>Playlist object:    </p>
+<p>This example applies preset ID 26 for 3 seconds, then preset 20 for 2 seconds, then preset 18 for 1 second, lastly preset 20 again for 5 seconds.This repeats 10 times, then preset 21 is applied.</p>
+<p>Playlist object:</p>
 <table>
 <thead>
 <tr>
@@ -1830,7 +1832,7 @@ This feature is available in build 200829 and above.    </p>
 </tr>
 <tr>
 <td>dur</td>
-<td>Array of time each preset should be kept, in tenths of seconds. If only one integer is supplied, all presets will be kept for that time. Defaults to 10 seconds if not provided.</td>
+<td>Array of time each preset should be kept, in tenths of seconds. If only one integer is supplied, all presets will be kept for that time.Defaults to 10 seconds if not provided.</td>
 </tr>
 <tr>
 <td>transition</td>

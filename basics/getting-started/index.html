@@ -394,8 +394,6 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Getting Started
@@ -411,8 +409,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -421,23 +417,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#welcome-to-the-wled-wiki" class="md-nav__link">
+    Welcome to the WLED wiki!
+  </a>
+  
+    <nav class="md-nav" aria-label="Welcome to the WLED wiki!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#quick-start-guide" class="md-nav__link">
     Quick start guide
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#default-gpio-usage" class="md-nav__link">
     Default GPIO Usage
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#software-update-procedure" class="md-nav__link">
     Software update procedure
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1089,8 +1098,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1099,23 +1106,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#welcome-to-the-wled-wiki" class="md-nav__link">
+    Welcome to the WLED wiki!
+  </a>
+  
+    <nav class="md-nav" aria-label="Welcome to the WLED wiki!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#quick-start-guide" class="md-nav__link">
     Quick start guide
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#default-gpio-usage" class="md-nav__link">
     Default GPIO Usage
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#software-update-procedure" class="md-nav__link">
     Software update procedure
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1136,7 +1156,9 @@
                   </a>
                 
                 
-                <h1 id="welcome-to-the-wled-wiki">Welcome to the WLED wiki!</h1>
+                  <h1>Getting Started</h1>
+                
+                <h2 id="welcome-to-the-wled-wiki">Welcome to the WLED wiki!</h2>
 <div class="admonition info">
 <p class="admonition-title">Version Info</p>
 <p>Unless noted otherwise, all information applies to the latest release (v0.12.0).</p>
@@ -1144,14 +1166,14 @@
 <h3 id="quick-start-guide">Quick start guide</h3>
 <p><strong>1.</strong> Connect a  WS2812B-compatible RGB(W) led strip to <code>GPIO2</code>. On most ESP8266 based development boards this pin is labeled <code>D4</code>, on ESP32 based boards use <code>D2</code> or <code>G2</code> or <code>2</code>. <em>If this wire cannot be kept short, use a <a href="/basics/compatible-hardware#levelshifters">level shifter/translator</a>.</em> Optionally connect a normally open pushbutton to <code>GPIO0</code> (NodeMCU/Wemos pin <code>D3</code><!-- What pin for ESP32? -->) and ground.<br />
 <strong>Note:</strong> Board pin naming varies depending on the manufacturer. Please use the board pinout from the <em>specific</em> board you purchased and use the GPIO PINS to reference this guide. Make sure to connect ESP and LED-strip grounds together.</p>
-<p><img alt="" src="https://i.ibb.co/WFc797W/connections.jpg" /></p>
+<p><img alt="Connection schematics" src="https://i.ibb.co/WFc797W/connections.jpg" /></p>
 <p><strong>2.</strong> Flash the software to your ESP module! There are two options for this step:</p>
 <p><a href="/basics/install-binary">I just want to use WLED! (install release binary)</a></p>
 <p><a href="/basics/compiling-wled">I want to modify WLED (compile from source code)</a></p>
 <p>If everything worked the first thirty LEDs will light up in bright orange to stimulate courage, friendliness and success!</p>
 <p><strong>3.</strong> Use a WiFi device to connect to the access point <code>WLED-AP</code> using the default password <code>wled1234</code>.
-You can also just scan this QR code: <br />
-<img alt="" src="https://i.ibb.co/h2YswXK/WLED-QR-Connect-WB.png" /></p>
+You can also just scan this QR code:
+<img alt="QR-Code" src="https://i.ibb.co/h2YswXK/WLED-QR-Connect-WB.png" /></p>
 <p>Go to the IP <code>4.3.2.1</code> in your browser. You should also be able to use the embedded DNS server and connect to <code>wled.me</code> if in access point mode.</p>
 <p><strong>4.</strong> Click on the cog icon to edit settings like connecting the module to your home WiFi.</p>
 <p><strong>5.</strong> Check your router device list for the IP of the WLED device inside your local network. For easier discovery, use the WLED app! Have fun with the software!</p>

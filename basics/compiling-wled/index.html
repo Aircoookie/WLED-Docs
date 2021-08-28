@@ -1172,10 +1172,12 @@ For most ESP8266 boards, the <code>d1_mini</code> environment is best.  </li>
 <p><a href="https://i.imgur.com/mZYo4KJ.jpg">Picture Guide</a></p>
 </li>
 </ol>
-<p>Success! </p>
-<p>If you get one of these two errors, hit the checkmark icon once again to compile and that time the code should build without problems! 
-- <code>error: wled00\wled00.ino.cpp: No such file or directory</code>
-- <code>FileNotFoundError: [WinError 2] The system cannot find the file specified: '[...].sconsign37.dblite'</code></p>
+<p>Success!</p>
+<p>If you get one of these two errors, hit the checkmark icon once again to compile and that time the code should build without problems!</p>
+<ul>
+<li><code>error: wled00\wled00.ino.cpp: No such file or directory</code></li>
+<li><code>FileNotFoundError: [WinError 2] The system cannot find the file specified: '[...].sconsign37.dblite'</code></li>
+</ul>
 <h3 id="compilation-guide-arduino-ide-not-recommended">Compilation guide (Arduino IDE, not recommended)</h3>
 <ul>
 <li>
@@ -1234,23 +1236,31 @@ For current compiles I recommend the latest Arduino core version 2.7.4. If you d
 <li>Now compile and flash the software! Make sure you erase everything when you flash! (If your board config does not provide this option, you can <code>Sketch -&gt; Export compiled Binary</code> and upload with <a href="/basics/install-binary">any ESP flashing tool</a>.)</li>
 </ul>
 <h3 id="compilation-settings-arduino-ide">Compilation settings (Arduino IDE)</h3>
-<p>ESP8266:
-- Arduino Core v2.7.4
-- Board: NodeMCU 1.0 (ESP-12E module) (or select your ESP board)
-- CPU frequency: 80 MHz
-- Flash size : 4MB (1MB SPIFFS)
-- LwIP variant: v1.4 Higher Bandwidth (try 2 if you experience issues)
-- Upload speed: Any, 921600 recommended</p>
-<p>ESP8266-07 (External Antenna):
-- Variants have 512kB or 1MB flash
-- Be sure to use DOUT mode when flashing
-- Flash Size 1MB (128k SPIFFS)
-- 512kB variant no longer compatible</p>
-<p>ESP-07s (External Antenna):
-- Variant have 4MB flash
-- Settings as for NodeMCU or Wemos</p>
-<p>ESP32:
-- Arduino Core v1.0.4</p>
+<p>ESP8266:</p>
+<ul>
+<li>Arduino Core v2.7.4</li>
+<li>Board: NodeMCU 1.0 (ESP-12E module) (or select your ESP board)</li>
+<li>CPU frequency: 80 MHz</li>
+<li>Flash size : 4MB (1MB SPIFFS)</li>
+<li>LwIP variant: v1.4 Higher Bandwidth (try 2 if you experience issues)</li>
+<li>Upload speed: Any, 921600 recommended</li>
+</ul>
+<p>ESP8266-07 (External Antenna):</p>
+<ul>
+<li>Variants have 512kB or 1MB flash</li>
+<li>Be sure to use DOUT mode when flashing</li>
+<li>Flash Size 1MB (128k SPIFFS)</li>
+<li>512kB variant no longer compatible</li>
+</ul>
+<p>ESP-07s (External Antenna):</p>
+<ul>
+<li>Variant have 4MB flash</li>
+<li>Settings as for NodeMCU or Wemos</li>
+</ul>
+<p>ESP32:</p>
+<ul>
+<li>Arduino Core v1.0.4</li>
+</ul>
                 
                   
                 

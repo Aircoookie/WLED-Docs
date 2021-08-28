@@ -1295,7 +1295,7 @@
                   <h1>E1.31 (DMX) / Art-Net</h1>
                 
                 <h2 id="e131">E1.31</h2>
-<p>WLED supports the E1.31 (sACN) realtime light protocol. </p>
+<p>WLED supports the E1.31 (sACN) realtime light protocol.</p>
 <div class="admonition info">
 <p class="admonition-title">Version Info</p>
 <p><strong>As of WLED v0.10.0, Art-Net is alternatively supported.</strong> All information on this page applies for Art-Net as well.
@@ -1308,19 +1308,19 @@ You will need to switch to DDP mode in Sync settings and reboot once.  </p>
 </div>
 <h3 id="features">Features</h3>
 <ul>
-<li>170 LEDs (510 DMX channels) are supported per universe. </li>
+<li>170 LEDs (510 DMX channels) are supported per universe.</li>
 <li>You can use up to 9 adjacent universes which is a total of more than the maximum 1500 LEDs WLED can drive.</li>
 </ul>
 <h3 id="general-recommendations">General Recommendations</h3>
 <ul>
 <li>For a fluent 25ms (40fps) or more framerate, it is recommended to use no more than 3 universes (510 LEDs).</li>
 <li>It is not recommended to try and have multiple E1.31 sources send to a single WLED controller at the same time. It will impact performance and there is no priority handling implemented. WLED is only meant to handle a single source at a time.</li>
-<li>Configure WLED to connect to <a href="/features/settings#wifi-settings">a WiFi Network</a>. It was observed that sending E1.31 from a computer to WLED when accessed as access point (WLED-AP) may not work, see <a href="https://wled.discourse.group/t/sending-e1-31-when-in-ap-mode-may-not-work/407">forum post</a>. </li>
+<li>Configure WLED to connect to <a href="/features/settings#wifi-settings">a WiFi Network</a>. It was observed that sending E1.31 from a computer to WLED when accessed as access point (WLED-AP) may not work, see <a href="https://wled.discourse.group/t/sending-e1-31-when-in-ap-mode-may-not-work/407">forum post</a>.</li>
 <li>When using an ESP32, disabling WiFi sleep in the WiFi settings of WLED can reduce/eliminate visual stuttering/lag of effects, and significantly reduce ping times. Note: disabling WiFi will increase power consumption.</li>
 </ul>
 <h3 id="using-ledfx">Using LedFX</h3>
 <p>We highly recommend the <a href="https://github.com/LedFx/LedFx">LedFx project</a> in combination with WLED!
-Configure WLED first, ensure devices are powered on and connected to your WiFi. 
+Configure WLED first, ensure devices are powered on and connected to your WiFi.
 To add WLED devices, in the 'Device Management', click on the Find WLED devices button.
 If you want to manually add devices, use more than 170 LEDs with LedFx, you need to go to additional settings and set "Universe Size" to 510 when adding the WLED device!</p>
 <h2 id="settings">Settings</h2>

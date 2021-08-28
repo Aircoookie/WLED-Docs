@@ -1266,9 +1266,11 @@
 <p>While this API is not deprecated, it is highly recommended to use the <a href="/interfaces/json-api">JSON API</a> instead of the HTTP API for new integrations, as it is structured in a better way and allows efficient use of newer features like segments, presets, and playlists.</p>
 </div>
 <p>The basic URL scheme is: <code>[ipadress]/win</code>. This will return an XML file with some current values (see bottom of page).
-Parameters can be added to control some of the variables.
-- Example (AP): <code>192.168.4.1/win&amp;A=255</code> sets the brightness to maximum
-- Example (mdns): <code>led.local/win&amp;A=128&amp;FX=0</code> sets the brightness to half and the effect to Solid</p>
+Parameters can be added to control some of the variables.</p>
+<ul>
+<li>Example (AP): <code>192.168.4.1/win&amp;A=255</code> sets the brightness to maximum</li>
+<li>Example (mdns): <code>led.local/win&amp;A=128&amp;FX=0</code> sets the brightness to half and the effect to Solid</li>
+</ul>
 <p>In conjunction with a <a href="/advanced/remote-access-ifttt">router port forwarding</a> this can be used to automate WLED, for example via IFTTT.</p>
 <p>Add one or multiple of the following parameters after the base URL/IP to change values:
 (if the parameter is unknown or the value illegal nothing will happen)</p>
@@ -1364,8 +1366,14 @@ Parameters can be added to control some of the variables.
 <tr>
 <td>&amp;NF=</td>
 <td>0 to 2</td>
-<td>Fade Nightlight, 1 = fade brightness only,<br/>2 = additionaly fade color from primary to secondary color</td>
+<td>Fade Nightlight, 1 = fade brightness only,</td>
+<td></td>
+</tr>
+<tr>
+<td>2 = additionaly fade color from primary to secondary color</td>
 <td>0.5.0</td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>

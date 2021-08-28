@@ -70,6 +70,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#installation" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -696,9 +701,37 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Blynk
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Blynk
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1029,6 +1062,36 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -1043,12 +1106,13 @@
                 
                 <p>You can use the free (if you only use it for 1 WLED light) IoT cloud Blynk to control your WLED Lights with the beautiful Blynk app for Android and iOS!</p>
 <p>With Blynk, you can also even control your lights when you are not connected to your home network!</p>
-<p><strong>Installation</strong></p>
+<h2 id="installation">Installation</h2>
 <ul>
 <li>Download the Blynk app from the <a href="https://play.google.com/store/apps/details?id=cc.blynk">Play Store</a> or the <a href="https://itunes.apple.com/us/app/blynk-iot-for-arduino-esp32/id808760481?mt=8">App Store</a></li>
-<li>Scan this QR code with the app:
-<br>
-<img alt="" src="https://image.ibb.co/d4ASAp/clone_936213617.png" width="250px;" /></li>
+<li>Scan this QR code with the app:</li>
+</ul>
+<p><img alt="QR-Code" src="https://image.ibb.co/d4ASAp/clone_936213617.png" /></p>
+<ul>
 <li>Paste the device auth token Blynk sends to your e-mail into the WLED sync settings (only one ESP!)</li>
 </ul>
 <p>You can use the sync button in Blynk to sync other WLED ESPs, just like with the web UIs!</p>
