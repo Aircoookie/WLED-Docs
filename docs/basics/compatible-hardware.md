@@ -16,15 +16,16 @@ Please use a decent and neutral description when adding things to this list.
 
 | Type | Voltage | Comments |
 |---|---|---|
+WS2811 | 5v | usually found in IP68 sealed 12mm pixel strings
 WS2812B | 5v |
 WS2813 | 5v |
 SK6812 | 5v | RGBW
-APA102 | 5v | C/D
-WS2801 | 5v | C/D
-LPD8806 | 5v | C/D
+APA102 | 5v | needs Clock/Data
+WS2801 | 5v | needs Clock/Data
+LPD8806 | 5v | needs Clock/Data
 TM1814 | 12v | RGBW
-WS2811 | 12v | 3-LED segments, has data-line resistor
-WS2815 | 12v |
+WS2811 | 12v | usually 3-LED segments, has data-line resistor
+WS2815 | 12v | has a backup data line
 GS8208 | 12v |
 
 ## ESP8266/ESP32 boards
@@ -35,7 +36,7 @@ GS8208 | 12v |
 [Wemos D1 mini Pro](https://docs.wemos.cc/en/latest/d1/d1_mini_pro.html) | ESP8266 | A newer development board with an external antenna connector. Works very well with WLED. Recommended if your signal strength is too low with another board. Current version: 2.0.0. Version 1.0.0 has the same form factor as the D1 mini.
 [NodeMCU](https://github.com/nodemcu/nodemcu-devkit-v1.0) | ESP8266 | Another popular ESP8266 development board. A bit bigger than the D1 and has pins pre-soldered. There are multiple versions with slight differences, not all are tested.
 [Heltec WiFi Kit 8](https://heltec.org/project/wifi-kit-8/) | ESP8266 | Another alternative of ESP8266 board. OLED display 128X32 pixel, battery charger on board. Almost the same functionality and price as the Wemos board. Plus it can be used in projects with external batteries.
-ESP-01 | ESP8266 | One of the first and cheapest ESP8266 boards available. **_Not recommended for WLED_** (needs external USB/serial chip, voltage converter, only has 1mb of flash, so soon no wireless updates possible)
+ESP-01 | ESP8266 | One of the first and cheapest ESP8266 boards available. **_Not recommended for general WLED installs_** (needs external USB/serial chip, voltage converter, only has 1mb of flash, so soon no wireless updates possible)
 [Shelly RGBW2](https://shelly.cloud/wifi-smart-shelly-rgbw-2/) | ESP8266 | For "analog" LED use only! Runs on 12-24VDC. One button and one input. Pins: R=12, G=15, B=14, W=4. _Finished, commercial product that can be flashed._ [Binary code fork is here](https://github.com/srg74/WLED/tree/ShellyRGBW2) and [firmware is here](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/Shelly_RGBW2)
 [H803 WiFi](https://github.com/srg74/WLED/wiki/H803WiFi) | ESP8266 | ESP8266EX based controller with level shifter inside. Data pin GPIO1 Clock pin GPIO14. Tested with WS2813 strip and [Firmware fork is here](https://github.com/srg74/WLED/tree/H803WF).
 [D1 mini-style ESP32](https://acrobotic.com/products/acr-00024) | ESP32 | A nice compact ESP32 development board. D1 mini compatible layout.
