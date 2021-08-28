@@ -1158,7 +1158,7 @@ You can also just scan this QR code: <br />
 <h3 id="default-gpio-usage">Default GPIO Usage</h3>
 <div class="admonition info">
 <p class="admonition-title">These are only defaults</p>
-<p>All pins can be changed in the Hardware section of LED settings. Please note that these are GPIO numbers, please consult a pinout for your board to find the labeled pin (e.g D4 = GPIO2 on most ESP8266 boards)</p>
+<p>All pins can be changed in the Hardware section of LED settings. Please note that these are GPIO numbers, please consult a pinout for your board to find the labeled pin (e.g <code>D4</code> = <code>GPIO2</code> on most ESP8266 boards). When using an ESP8266 board, it's recommended to use pins <code>GPIO1</code>, <code>GPIO2</code>, or <code>GPIO3</code> for LED Data; using other pins will require <em>bit-bangging</em> and may cause slow performance and/or issues elsewhere (such as with IR decoding).</p>
 </div>
 <table>
 <thead>
