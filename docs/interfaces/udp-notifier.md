@@ -19,6 +19,7 @@ In UI settings, you can set whether this button only turns on/off sending (defau
 If your sync settings are not the way you like on boot, check the `WLED Broadcast` section in Sync settings, where you can specify what is sent and received by default:
 
 #### Receiving settings
+
 | Setting | Description |
 | --- | --- |
 Receive Brightness | If there is a sync notification, whether its brightness should be applied
@@ -30,6 +31,7 @@ If all checkboxes are disabled, nothing is received by default after each boot. 
 A sync receiver will not assume the state of the last sender directly after booting, a new packet must be send for it to react.
 
 #### Sending settings
+
 | Setting | Description |
 | --- | --- |
 Send on direct change | Whether to send a sync notification when state changed via the web UI or API
@@ -38,7 +40,7 @@ Send Alexa notifications | Whether to send sync after changed by Alexa (you may 
 Send Hue notifications | Whether to send sync after a connected Philips light changed
 Send Macro notifications | Whether to send sync after a macro was triggered
 Send notifications twice | Sends notifications twice (if you have issues with UDP packet loss)
- 
+
 The quick toggle in the main UI will only apply to direct changes (UI + API), all other sync type sending behavior remains unaffected.
 
 You can easily group WLED devices (for example all in one room) by changing the UDP port of all devices you want in that group.

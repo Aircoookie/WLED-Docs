@@ -5,7 +5,7 @@ hide:
   # - toc
 ---
 
-# Welcome to the WLED wiki!
+## Welcome to the WLED wiki!
 
 !!! info "Version Info"
     Unless noted otherwise, all information applies to the latest release (v0.12.0).
@@ -15,7 +15,7 @@ hide:
 **1.** Connect a  WS2812B-compatible RGB(W) led strip to `GPIO2`. On most ESP8266 based development boards this pin is labeled `D4`, on ESP32 based boards use `IO16` or `G16` or `16`. _If this wire cannot be kept short, use a [level shifter/translator](/basics/compatible-hardware#levelshifters)._ Optionally connect a normally open pushbutton to `GPIO0` (NodeMCU/Wemos pin `D3`, on ESP32 use `IO17`) and ground.
 **Note:** Board pin naming varies depending on the manufacturer. Please use the board pinout from the _specific_ board you purchased and use the GPIO PINS to reference this guide. Make sure to connect ESP and LED-strip grounds together.
 
-![](https://i.ibb.co/WFc797W/connections.jpg)
+![Connection schematics](https://i.ibb.co/WFc797W/connections.jpg)
 
 **2.** Flash the software to your ESP module! There are two options for this step:
 
@@ -27,7 +27,7 @@ If everything worked the first thirty LEDs will light up in bright orange to sti
 
 **3.** Use a WiFi device to connect to the access point `WLED-AP` using the default password `wled1234`.
 You can also just scan this QR code:
-![](https://i.ibb.co/h2YswXK/WLED-QR-Connect-WB.png)
+![QR-Code](https://i.ibb.co/h2YswXK/WLED-QR-Connect-WB.png)
 
 Go to the IP `4.3.2.1` in your browser. You should also be able to use the embedded DNS server and connect to `wled.me` if in access point mode.
 

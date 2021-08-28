@@ -83,7 +83,6 @@ Byte | Description
 5 + n*3 | Green Value
 6 + n*3 | Blue Value
 
-
 When realtime mode starts, all LEDs will be black. However, you don't have to change all LEDs using one packet.
 Changing a single LED therefore only requires a packet of 2+4 bytes. All LEDs maintain their color until it is changed or the module exits WARLS mode because of a timeout.
 

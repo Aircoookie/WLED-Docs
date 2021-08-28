@@ -54,7 +54,7 @@ Use Gamma for color | Y/N | Will correct colors to match those on a monitor. Str
 Brightness factor | 1..255 | Factor to change master brightness if it is to dim/bright for a certain configuration
 Crossfade | Y/N | Whether to have a smooth fading transitional effect when changing colors/brightness
 Transition time | 0..65535 | How many milliseconds the transition lasts
-Enable transition for secondary color | Y/N | 
+Enable transition for secondary color | Y/N |
 Enable Palette transitions | Y/N | Enable transitions for palettes (not affected by transition time)
 Timed light duration | 1..255 | How long the nightlight should stay on
 Target brightness | 0..255 | What brightness the light should have after time is over. 0=off.
@@ -96,7 +96,7 @@ E1.31 start universe | 1..63000 | Only applies for multicast. If you want to set
 Timeout | 100..65000 | Time after which to resume normal mode once stream has stopped. 65000 will keep the data indefinitely
 Force max brightness | Y/N | Realtime stream with max. brightness (unless limited by power brightness limiter)
 Disable realtime gamma correction | Y/N | Check if your host software does gamma correction already
-Realtime LED offset | -255..255 | Shift the realtime input by how many LEDs 
+Realtime LED offset | -255..255 | Shift the realtime input by how many LEDs
 Emulate Alexa device | Y/N | Allows you to control the light via the Amazon Echo voice assistant. Requires reboot
 Alexa Invocation name | String 1..32 | The name you want the device to have for control via Alexa. Choose something easy she can understand
 Device Auth token | String 40 | You will get this in an e-mail during Blynk setup
@@ -150,7 +150,7 @@ Enable ArduinoOTA | Y/N | Useful for developers. Be careful, can even be left on
 
 ## In-depth setting documentation
 
-### LED settings
+### In-depth LED settings
 
 #### Auto-calculate white channel from RGB modes
 
