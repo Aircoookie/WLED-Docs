@@ -7,7 +7,7 @@ hide:
 
 WLED's HTTP API allows you to set many properties of your lights, even more than the index page UI supports, via a simple GET web request.
 
-!!! help 
+!!! help
     _Unsure how all this API stuff works? Check out [this amazing guide](https://tynick.com/blog/01-28-2020/controlling-wled-with-raspberry-pi-using-the-wled-api/) by tynick!_
 
 !!! hint
@@ -15,6 +15,7 @@ WLED's HTTP API allows you to set many properties of your lights, even more than
 
 The basic URL scheme is: `[ipadress]/win`. This will return an XML file with some current values (see bottom of page).
 Parameters can be added to control some of the variables.
+
 - Example (AP): `192.168.4.1/win&A=255` sets the brightness to maximum
 - Example (mdns): `led.local/win&A=128&FX=0` sets the brightness to half and the effect to Solid
 
@@ -40,7 +41,8 @@ Add one or multiple of the following parameters after the base URL/IP to change 
 &NL= | 0 to 255 | Nightlight active and duration in minutes | 0.3
 &ND | none | Toggles nightlight on but uses default duration | 0.6.3
 &NT= | 0 to 255 | Nightlight target brightness | 0.5.0
-&NF= | 0 to 2 | Fade Nightlight, 1 = fade brightness only,<br/>2 = additionaly fade color from primary to secondary color | 0.5.0
+&NF= | 0 to 2 | Fade Nightlight, 1 = fade brightness only,
+2 = additionaly fade color from primary to secondary color | 0.5.0
 
 ## Advanced
 
@@ -100,6 +102,7 @@ Loxone offers two commands. One for RGB values and one for brightness and color 
 &M= | 1 to 16 | Apply macro (deprecated, added for compatibility with pre-0.11 automations) | 0.5.0
 
 ## Segments
+
 It is highly recommended to use the [JSON API](/interfaces/json-api) when dealing with Segments.
 
 | Parameter | Value Range | Description | Since Version |
@@ -136,6 +139,7 @@ It is highly recommended to use the [JSON API](/interfaces/json-api) when dealin
 &LO= | 0-2 | Live data override. 0 is off, 1 is override until live data ends, 2 is override until ESP reboot | 0.10.2
 
 ## XML response
+
 This is the XML file sent as response to every API call.
 
 | Parameter | Value Range | Description |

@@ -15,6 +15,7 @@ A dedicated infrared receiver module is required.
 The default sensor pin is GPIO4. It can be changed in the Wled settings.
 
 ### Supported IR remotes
+
 To use IR remote go to `Settings`, `Sync Interfaces` and change the value for `Infrared receiver type` according to the IR remote type of the following list:
 
 1. white 24-key IR remote with R,G,B + 12 color-tones  

@@ -39,6 +39,7 @@ Access with \<ESP-IP\>/path (Example: **192.168.8.4/settings**)
 /edit | SPIFFS page (if USEFS) | Yes | 0.2
 
 #### Removed sites
+
 | Path | Description | OTA rights required | Versions |
 | --- | --- | --- | --- |
 /list | Lists SPIFFS contents (if USEFS) | Yes | 0.2-0.8.3
@@ -47,4 +48,3 @@ Access with \<ESP-IP\>/path (Example: **192.168.8.4/settings**)
 /build | Returns details about the build | No | 0.5.0-0.8.3
 /cleareeprom | Resets to factory defaults | Yes | 0.3-0.6.4
 /down | Kills software. Hard reset required. | Yes | 0.3-0.6.4
-
