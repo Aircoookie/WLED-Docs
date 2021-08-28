@@ -6,7 +6,7 @@ hide:
 ---
 
 !!! note ""
-    Still under construction, feel free to add to the list! 
+    Still under construction, feel free to add to the list!
 
 This page lists some third-party hardware and/or tools that are working with WLED!
 
@@ -15,15 +15,16 @@ Please use a decent and neutral description when adding things to this list.
 ## Addressable LED Strips
 | Type | Voltage | Comments |
 |---|---|---|
+WS2811 | 5v | usually found in IP68 sealed 12mm pixel strings
 WS2812B | 5v |
-WS2813 | 5v | 
+WS2813 | 5v |
 SK6812 | 5v | RGBW
-APA102 | 5v | C/D
-WS2801 | 5v | C/D
-LPD8806 | 5v | C/D
+APA102 | 5v | needs Clock/Data
+WS2801 | 5v | needs Clock/Data
+LPD8806 | 5v | needs Clock/Data
 TM1814 | 12v | RGBW
-WS2811 | 12v | 3-LED segments, has data-line resistor
-WS2815 | 12v | 
+WS2811 | 12v | usually 3-LED segments, has data-line resistor
+WS2815 | 12v | has a backup data line
 GS8208 | 12v |
 
 
@@ -35,7 +36,7 @@ GS8208 | 12v |
 [Wemos D1 mini Pro](https://docs.wemos.cc/en/latest/d1/d1_mini_pro.html) | ESP8266 | A newer development board with an external antenna connector. Works very well with WLED. Recommended if your signal strength is too low with another board. Current version: 2.0.0. Version 1.0.0 has the same form factor as the D1 mini.
 [NodeMCU](https://github.com/nodemcu/nodemcu-devkit-v1.0) | ESP8266 | Another popular ESP8266 development board. A bit bigger than the D1 and has pins pre-soldered. There are multiple versions with slight differences, not all are tested.
 [Heltec WiFi Kit 8](https://heltec.org/project/wifi-kit-8/) | ESP8266 | Another alternative of ESP8266 board. OLED display 128X32 pixel, battery charger on board. Almost the same functionality and price as the Wemos board. Plus it can be used in projects with external batteries.
-ESP-01 | ESP8266 | One of the first and cheapest ESP8266 boards available. **_Not recommended for WLED_** (needs external USB/serial chip, voltage converter, only has 1mb of flash, so soon no wireless updates possible)
+ESP-01 | ESP8266 | One of the first and cheapest ESP8266 boards available. **_Not recommended for general WLED installs_** (needs external USB/serial chip, voltage converter, only has 1mb of flash, so no wireless updates possible)
 [Shelly RGBW2](https://shelly.cloud/wifi-smart-shelly-rgbw-2/) | ESP8266 | For "analog" LED use only! Runs on 12-24VDC. One button and one input. Pins: R=12, G=15, B=14, W=4. _Finished, commercial product that can be flashed._ <a href=https://github.com/srg74/WLED/tree/ShellyRGBW2>Binary code fork is here</a> and <a href=https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/Shelly_RGBW2>firmware is here</a>
 [H803 WiFi](https://github.com/srg74/WLED/wiki/H803WiFi) | ESP8266 | ESP8266EX based controller with level shifter inside. Data pin GPIO1 Clock pin GPIO14. Tested with WS2813 strip and <a href=https://github.com/srg74/WLED/tree/H803WF>Firmware fork is here</a>.
 [D1 mini-style ESP32](https://acrobotic.com/products/acr-00024) | ESP32 | A nice compact ESP32 development board. D1 mini compatible layout.
@@ -43,7 +44,7 @@ ESP-01 | ESP8266 | One of the first and cheapest ESP8266 boards available. **_No
 NodeMCU-32s | ESP32 | The most common ESP32 development board. Works well, depending on the board you might have to press the "Boot" button while USB flashing
 [Olimex ESP32 POE](https://www.olimex.com/Products/IoT/ESP32/ESP32-POE) | ESP32 | Ethernet (PoE) and WiFi, though usage of the ethernet port requires a custom compile. The PoE should not be used to power LEDs due to a maximum throughput of 4W. For most installations, standard ethernet should be used, supplying power through the 5V pin.
 [WT32-ETH01](https://www.aliexpress.com/wholesale?&SearchText=wt32-eth01) | ESP32 | **Under development!** Ethernet (non-PoE) and WiFi enabled alternative to the Olimex boards, for 1/4 the cost. Features no PoE, and requires initial flashing of a custom compiled image using a FTDI or similar USB to serial converter.
-[Merkury MI-BW210-999W](https://www.walmart.com/ip/Merkury-Innovations-A21-Smart-Light-Bulb-75W-Color-LED-2-Pack/669037420) | ESP8285 | Tuya Style WiFi Led light bulb, Warm White + RGB. There are two versions of this same bulb sold in the same packaging only way to check is to look at the bulb, EBEQPW92 uses PWM led control and is compatible with WLED however EBEQPW06 uses an SM16716 chip and is not currently compatible with WLED. Managed to flash using tuya-convert and a custom WLED build with the following analog pinout: B:4, G:5, R:13, W:14. Extras disabled to allow OTA, OTA only way to flash this, programming headers are not internally available. 
+[Merkury MI-BW210-999W](https://www.walmart.com/ip/Merkury-Innovations-A21-Smart-Light-Bulb-75W-Color-LED-2-Pack/669037420) | ESP8285 | Tuya Style WiFi Led light bulb, Warm White + RGB. There are two versions of this same bulb sold in the same packaging only way to check is to look at the bulb, EBEQPW92 uses PWM led control and is compatible with WLED however EBEQPW06 uses an SM16716 chip and is not currently compatible with WLED. Managed to flash using tuya-convert and a custom WLED build with the following analog pinout: B:4, G:5, R:13, W:14. Extras disabled to allow OTA, OTA only way to flash this, programming headers are not internally available.
 [Adafruit Feather Huzzah](https://learn.adafruit.com/adafruit-feather-huzzah-esp8266) | ESP8266 | General-purpose ESP8266 Board with USB, battery connector, etc.
 [SP501e](https://www.amazon.com/RGBZONE-Controller-Compatible-Addressable-WS2812bB/dp/B07S3Z8GSH) | ESP8285 | 8285-based 1M Controller that supports both Addressable and PWM-based RGBWW LED strips. _Note that recent versions have 2M._ 5-24v DC input, 55mm x 26mm, sold under BTF lighting, RGBZone, etc. Vendors all list 'Fairynest' as the supporting mobile application. Board is silk screened with 'SP5XXe' but no other markings. RS232 pads are exposed on the back-side of the board with GND and GPIO0 right next to each other and thus Flash access fairly straight forward. GPIO 0 must be pulled to GND at boot and throughout the flashing process.  I/O configuration: LEDPIN is 'GPIO03' for Addressable, BTNPIN is GPIO 1. PWM pin out for RGBWW: CW: 14, WW: 12, B: 13, R: 15 and G: GPIO04. Flashed via PlatformIO, ESPHome and Tasmotizer. Pics of board here: https://github.com/Operation760/SP501e-RGB-LED-Controller-/blob/master/SP501e_top_bottom_traced.jpg  Flashing Connections: https://github.com/tonyn0/sp501e-flashing/blob/main/sp501e%20flash.png
 [SP108e v2](https://www.amazon.de/dp/B07KW1W68R) | ESP8285 | Hardware-Modification required and different versions exists! 8285-based 2M Controller that supports addressable RGBWW LED strips, also with CLK line (like ATA102). 5-24v DC input, 85mm x 45mm x 23mm. Vendors list spledapps 'Led Shop' as the supporting mobile application. Board is silk screened with 'SP108e'. No pads are exposed and a second processor is used to control the LEDs. Pin7 of that processor needs to be grounded to hold it in reset state. Then you can connect GPIO0 to GND and TX, RX, VCC, GND for flashing. Connect GPIO2 to R4 for DATA out and GPIO13 to R3 for CLK out. Flashed via PlatformIO, esptool. OTA updates work. Pics of pinout here: https://github.com/psxde/sp108e-led-controller/raw/main/sp108ev2_inside.png
