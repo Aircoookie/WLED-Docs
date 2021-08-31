@@ -51,6 +51,10 @@ When purchasing a remote, be sure that it is an infrared (IR) remote and not a r
 *    [ir.json v1](24-key_ir.json) gray buttons load presets 1-4  
 *    [ir.json v2](24-key-v2_ir.json) gray buttons cycle effects, palettes and change speed  
 
+[![24 key grey remote](24-key-grey.png)](https://www.aliexpress.com/item/4000704528801.html)
+24-key grey
+[ir.json](24-key-grey_ir.json)
+
 ![24 key music remote](24-key-v3.png)
 24-key music
 [ir.json v3](24-key-v3_ir.json)
