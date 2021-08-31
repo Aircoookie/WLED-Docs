@@ -156,7 +156,7 @@ hide:
 | 18 | Analoguous | Red running on blue<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_18.gif)
 | 19 | Splash | Vibrant pink and magenta<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_19.gif)
 | 20 | Pastel | Different hues with very little saturation<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_20.gif)
-| 21 | Sunset 2 | Yellow and white runnung on dim blue<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_21.gif)
+| 21 | Sunset 2 | Yellow and white running on dim blue<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_21.gif)
 | 22 | Beech | Different shades of light blue<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_22.gif)
 | 23 | Vintage | Warm white running on very dim red<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_23.gif)
 | 24 | Departure | Greens and white fading out<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_24.gif)
@@ -191,3 +191,18 @@ hide:
 | 53 | C9 New | C9, but brighter and with a less purple blue
 | 54 | Temperature | Temperature mapping
 | 55 | Aurora 2 | Aurora with some pinks & blue
+| 56 | Retro Clown | Yellow to purple gradient
+| 57 | Candy | Vivid yellows, magenta, salmon and blues
+| 58 | Toxy Reaf | Vivid aqua to purple gradient
+| 59 | Fairy Reaf | Bright aqua to purple gradient
+| 60 | Semi Blue | Dark blues with a bright blue burst
+| 61 | Pink Candy | White, pinks and purple
+| 62 | Red Reaf | Blue, aqua and red gradient
+| 63 | Aqua Flash | Aqua gradient with a flash of yellow and white
+| 64 | Yelblu Hot | Yellow, red, blue spectrum  
+| 65 | Lite Light | Faint white and purple
+| 66 | Red Flash | Red gradient with burst of white in the center 
+| 67 | Blink Red | Dark blue to dark red gradient with burst of purple
+| 68 | Red Shift | Vibrant yellow to blue gradient with magenta, purple and red 
+| 69 | Red Tide | Waves of yellow, orange and red
+| 70 | Candy2 | Faded gradient of yellow, salmon and blue
