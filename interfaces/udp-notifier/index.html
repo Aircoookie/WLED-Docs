@@ -840,6 +840,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sync-groups" class="md-nav__link">
+    Sync groups
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1127,6 +1134,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sync-groups" class="md-nav__link">
+    Sync groups
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1158,11 +1172,7 @@
                 
                   <h1>WLED UDP Sync</h1>
                 
-                <div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p><em>Note: this page is now out of date, see updated functionality in the code (<a href="https://github.com/Aircoookie/WLED/blob/master/wled00/udp.cpp">udp.cpp</a>)</em></p>
-</div>
-<h3 id="usage">Usage</h3>
+                <h3 id="usage">Usage</h3>
 <p>The UDP notifier function of WLED makes it easy to sync multiple lights to the same color/effect, enabled by default.
 You can set the specific behavior of it in Sync settings, also you can choose if all aspects or only brightness/color/effects are applied.</p>
 <p>Additionally, there is a "Sync" quick toggle for it in the main control UI!
@@ -1230,7 +1240,16 @@ In UI settings, you can set whether this button only turns on/off sending (defau
 </table>
 <p>The quick toggle in the main UI will only apply to direct changes (UI + API), all other sync type sending behavior remains unaffected.</p>
 <p>You can easily group WLED devices (for example all in one room) by changing the UDP port of all devices you want in that group.</p>
+<h4 id="sync-groups">Sync groups</h4>
+<p>From v0.13.0, 8 Sync groups are available. This allows syncing select instances only without changing the UDP port.<br />
+For example, you might use one sync group per room you use WLED devices in.<br />
+Make sure the sender and receiver you want to sync both have the same sync group ticked (a sender can send to multiple groups and a receiver can listen to multiple groups).  </p>
+<p>Sync packets received from pre-0.13.0 instances are treated as if sent in sync group 1 only.</p>
 <h3 id="protocol-description">Protocol description</h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><em>Note: this info is partly out of date, see updated functionality in the code (<a href="https://github.com/Aircoookie/WLED/blob/master/wled00/udp.cpp">udp.cpp</a>)</em></p>
+</div>
 <p>When enabled, the module where a value was changed will send an UDP broadcast to a port (default 21324).
 Other modules that listen on this port will set themselves to the same color.</p>
 <p>For interoperability, the protocol was designed so that even modules with different WLED versions can sync.
