@@ -13,7 +13,7 @@ and the colors ![primary](https://raw.githubusercontent.com/scottrbailey/WLED-Ut
 ![tertiary](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/color_3.gif) tertiary colors
 
 
-| EffectID | Name | Description | Intensity slider effect
+| EffectID | Name | Description | Intensity slider effect 
 | ---: | --- | --- | ---
 | 0 | Solid | Solid primary color on all LEDs <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_000.gif) | -
 | 1 | Blink | Blinks between primary and secondary color <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_001.gif) | Duty cycle of blinking
@@ -26,7 +26,7 @@ and the colors ![primary](https://raw.githubusercontent.com/scottrbailey/WLED-Ut
 | 8 | Colorloop | Cycle all LEDs through the rainbow colors <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_008.gif) | 0-127: Pastel colors 128-255: Saturated colors
 | 9 | Rainbow | Displays rainbow colors along the whole strip <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_009.gif) | Number of rainbows
 | 10 | Scan | A single primary colored light wanders between start and end <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_010.gif) | Scan dot size
-| 11 | Dual Scan | Same as Scan but uses two lights starting at both ends <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_011.gif) | scan dot size
+| 11 | Scan Dual | Same as Scan but uses two lights starting at both ends <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_011.gif) | scan dot size
 | 12 | Fade | Fades smoothly between primary and secondary color <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_012.gif) | -
 | 13 | Theater | Pattern of one lit and two unlit LEDs running <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_013.gif) | Gap in lights
 | 14 | Theater Rainbow | Same as Theater but uses colors of the rainbow <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_014.gif) | -
@@ -59,7 +59,7 @@ and the colors ![primary](https://raw.githubusercontent.com/scottrbailey/WLED-Ut
 | 41 | Lighthouse | Dot moves from start to end, leaving behing a fading trail <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_041.gif) | Fade rate
 | 42 | Fireworks | Random color blobs light up, then fade again <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_042.gif) | Amount of fireworks
 | 43 | Rain | Like Fireworks, but the blobs move <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_043.gif) | Amout of Rain
-| 44 | Merry Christmas | Running 2, but always uses red and green <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_044.gif) | Amount of LEDs lit/unlit
+| 44 | Tetrix | Falling blocks stack <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_044.gif) | -
 | 45 | Fire Flicker | LEDs randomly flickering <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_045.gif) | Flickering intensity
 | 46 | Gradient | Moves a saturation gradient of the primary color along the strip <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_046.gif) | Gradient width
 | 47 | Loading | Moves a sawtooth pattern along the strip <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_047.gif) | Width
@@ -67,7 +67,7 @@ and the colors ![primary](https://raw.githubusercontent.com/scottrbailey/WLED-Ut
 | 49 | Police All | Two areas, one red and one blue, sweeping<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_049.gif) | -
 | 50 | Two Dots | Like Police, but with custom colors<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_050.gif) | Size of dots
 | 51 | Two Areas | Like Police All, but with custom colors<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_051.gif) | -
-| 52 | Circus | Pattern of secondary, red and white <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_052.gif) | Width of pattern
+| 52 | Running Dual | Sine waves in both directions <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_052.gif) |  Number of waves
 | 53 | Halloween | Running 2, but always uses orange and purple <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_053.gif) | Amount of LEDs lit/unlit
 | 54 | Tri Chase | Like Chase, but with 3 colors <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_054.gif) | Width of pattern
 | 55 | Tri Wipe | Like Wipe but turns LEDs off as "third color" <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_055.gif) | -
@@ -141,10 +141,10 @@ and the colors ![primary](https://raw.githubusercontent.com/scottrbailey/WLED-Ut
 | ---: | --- | ---
 | 0 | Default | The palette is automatically selected depending on the effect. For most effects, this is the primary color<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_00.gif)
 | 1 | Random Cycle | The palette changes to a random one every few seconds. Subject to change<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_01.gif)
-| 2 | Primary color | A palette consisting only of the primary color<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_02.gif)
-| 3 | Based on primary | Consists of the primary color, as well as a slightly desaturated version and black<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_03.gif)
-| 4 | Set colors | A palette which is a mixture of all segment colors<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_04.gif)
-| 5 | Based on set | Contains primary, secondary colors and a desaturated version<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_05.gif)
+| 2 | Color 1 | A palette consisting only of the primary color<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_02.gif)
+| 3 | Colors 1 & 2 | Consists of the primary and secondary color<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_03.gif)
+| 4 | Color Gradient | A palette which is a mixture of all segment colors<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_04.gif)
+| 5 | Colors Only | Contains primary, secondary and tertiary colors<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_05.gif)
 | 6 | Party | Rainbow without green hues<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_06.gif)
 | 7 | Cloud | Gray-blueish colors<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_07.gif)
 | 8 | Lava | Dark red, yellow and bright white<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_08.gif)
