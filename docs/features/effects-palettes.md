@@ -22,7 +22,7 @@ hide:
 | 8 | Colorloop | Cycle all LEDs through the rainbow colors <br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/FX_8.gif) | 0-127: Pastel colors 128-255: Saturated colors
 | 9 | Rainbow | Displays rainbow colors along the whole strip <br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/FX_9.gif) | Number of rainbows
 | 10 | Scan | A single primary colored light wanders between start and end <br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/FX_10.gif) | Scan dot size
-| 11 | Dual Scan | Same as Scan but uses two lights starting at both ends <br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/FX_11.gif) | scan dot size
+| 11 | Scan Dual | Same as Scan but uses two lights starting at both ends <br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/FX_11.gif) | scan dot size
 | 12 | Fade | Fades smoothly between primary and secondary color <br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/FX_12.gif) | -
 | 13 | Theater | Pattern of one lit and two unlit LEDs running <br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/FX_13.gif) | Gap in lights
 | 14 | Theater Rainbow | Same as Theater but uses colors of the rainbow <br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/FX_14.gif) | -
@@ -55,7 +55,7 @@ hide:
 | 41 | Lighthouse | Dot moves from start to end, leaving behing a fading trail <br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/FX_41.gif) | Fade rate
 | 42 | Fireworks | Random color blobs light up, then fade again <br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/FX_42.gif) | Amount of fireworks
 | 43 | Rain | Like Fireworks, but the blobs move <br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/FX_43.gif) | Amout of Rain
-| 44 | Merry Christmas | Running 2, but always uses red and green <br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/FX_44.gif) | Amount of LEDs lit/unlit
+| 44 | Tetrix | Falling blocks stack  <br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/FX_44.gif) | Amount of LEDs lit/unlit
 | 45 | Fire Flicker | LEDs randomly flickering <br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/FX_45.gif) | Flickering intensity
 | 46 | Gradient | Moves a saturation gradient of the primary color along the strip <br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/FX_46.gif) | Gradient width
 | 47 | Loading | Moves a sawtooth pattern along the strip <br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/FX_47.gif) | Width
@@ -63,7 +63,7 @@ hide:
 | 49 | Police All | Two areas, one red and one blue, sweeping | -
 | 50 | Two Dots | Like Police, but with custom colors | Size of dots
 | 51 | Two Areas | Like Police All, but with custom colors | -
-| 52 | Circus | Pattern of secondary, red and white <br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/FX_52.gif) | Width of pattern
+| 52 | Running Dual | Sine waves in both directions <br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/FX_52.gif) | Number of waves
 | 53 | Halloween | Running 2, but always uses orange and purple <br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/FX_53.gif) | Amount of LEDs lit/unlit
 | 54 | Tri Chase | Like Chase, but with 3 colors <br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/FX_54.gif) | Width of pattern
 | 55 | Tri Wipe | Like Wipe but turns LEDs off as "third color" <br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/FX_55.gif) | -
@@ -137,10 +137,10 @@ hide:
 | ---: | --- | ---
 | 0 | Default | The palette is automatically selected depending on the effect. For most effects, this is the primary color<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_0.gif)
 | 1 | Random Cycle | The palette changes to a random one every few seconds. Subject to change<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_1.gif)
-| 2 | Primary color | A palette consisting only of the primary color<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_2.gif)
-| 3 | Based on primary | Consists of the primary color, as well as a slightly desaturated version and black<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_3.gif)
-| 4 | Set colors | A palette which is a mixture of all segment colors<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_4.gif)
-| 5 | Based on set | Contains primary, secondary colors and a desaturated version<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_5.gif)
+| 2 | Color 1 | A palette consisting only of the primary color<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_2.gif)
+| 3 | Colors 1 & 2 | Consists of the primary color, as well as a slightly desaturated version and black<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_3.gif)
+| 4 | Color Gradient | A palette which is a mixture of all segment colors<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_4.gif)
+| 5 | Colors Only | Contains primary, secondary colors and a desaturated version<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_5.gif)
 | 6 | Party | Rainbow without green hues<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_6.gif)
 | 7 | Cloud | Gray-blueish colors<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_7.gif)
 | 8 | Lava | Dark red, yellow and bright white<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_8.gif)
@@ -169,7 +169,7 @@ hide:
 | 31 | Jul | Pastel green and red <br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_31.gif)
 | 32 | Grintage | Yellow fading out<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_32.gif)
 | 33 | Rewhi | Bright orange on desaturated purple<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_33.gif)
-| 34 | Tertiary | Red, green and blue gradien<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_34.gif)
+| 34 | Tertiary | Red, green and blue gradient<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_34.gif)
 | 35 | Fire | White, yellow and fading red gradient<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_35.gif)
 | 36 | Icefire | Same as Fire, but with blue colors<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_36.gif)
 | 37 | Cyane | Desaturated pastel colors<br />![](https://raw.githubusercontent.com/photocromax/WLED-live-visualizations/master/GIF/PAL_37.gif)
