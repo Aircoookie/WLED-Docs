@@ -13,7 +13,7 @@ and the colors ![primary](https://raw.githubusercontent.com/scottrbailey/WLED-Ut
 ![tertiary](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/color_3.gif) tertiary colors
 
 
-| EffectID | Name | Description | Intensity slider effect
+| EffectID | Name | Description | Intensity slider effect 
 | ---: | --- | --- | ---
 | 0 | Solid | Solid primary color on all LEDs <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_000.gif) | -
 | 1 | Blink | Blinks between primary and secondary color <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_001.gif) | Duty cycle of blinking
