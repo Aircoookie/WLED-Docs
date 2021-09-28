@@ -24,13 +24,13 @@ WLED will subscribe to up to six topics to change the state of the lights.
 - **[mqttDeviceTopic]/api**\
   -> Send an API call (using the [HTTP API](/interfaces/http-api) or, since 0.11, JSON API syntax). You may omit the "win" and just send e.g. "FX=73"
 
-- **[mqttGroupTopic]**  
-- **[mqttGroupTopic]/col**  
+- **[mqttGroupTopic]**
+- **[mqttGroupTopic]/col**
 - **[mqttGroupTopic]/api**
 
-The topic paths [mqttDeviceTopic] and [mqttGroupTopic] are customizable in Sync settings.  
-If [mqttGroupTopic] is left empty, it will not subscribe to anything. An empty [mqttDeviceTopic] will instead be replaced with the default "wled/macaddr".  
-[mqttDeviceTopic] is intended to be unique to one WLED device and just control that device.  
+The topic paths [mqttDeviceTopic] and [mqttGroupTopic] are customizable in Sync settings.
+If [mqttGroupTopic] is left empty, it will not subscribe to anything. An empty [mqttDeviceTopic] will instead be replaced with the default "wled/macaddr".
+[mqttDeviceTopic] is intended to be unique to one WLED device and just control that device.
 [mqttGroupTopic] is intended to control a group of or all WLED devices.
 
 UDP notifications will be sent just as if the change was done via the UI or HTTP API.
@@ -47,3 +47,5 @@ Additionally, on light change, WLED will publish to 3 topics for MQTT clients to
   -> Contains XML API response (same as HTTP API)
 
 There is support for client ID and authentication, but this is presently transmitted over an unencrypted connection, so please **do not** use the same password for other services.
+
+**Attention:** The maximal length of a MQTT messages for WLED is 1024 bytes.
