@@ -161,9 +161,9 @@
     "cmd": "!decBrightness"
   },
   "0xFFC837": {
-    "label": "Bright-",
+    "label": "Bright+",
     "pos": "8x4",
-    "cmd": "!decBrightness"
+    "cmd": "!incBrightness"
   },
   "0xFF30CF": {
     "label": "Music-",
