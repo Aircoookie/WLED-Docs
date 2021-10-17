@@ -31,6 +31,7 @@ If everything worked the first thirty LEDs will light up in bright orange to sti
 
 **3.** Use a WiFi device to connect to the access point `WLED-AP` using the default password `wled1234`.
 You can also just scan this QR code:
+
 ![QR-Code](https://i.ibb.co/h2YswXK/WLED-QR-Connect-WB.png)
 
 Go to the IP `4.3.2.1` in your browser. You should also be able to use the embedded DNS server and connect to `wled.me` if in access point mode.
