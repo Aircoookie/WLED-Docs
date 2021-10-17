@@ -5,7 +5,7 @@ hide:
   # - toc
 ---
 !!! info
-    See [Presets](/features/presets) for 0.11.0+.
+    Also see [Presets](/features/presets) for 0.11.0+.
 
 You are able to set custom actions ("Macros") in Time & Macro settings for the following events:
 
