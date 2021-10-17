@@ -18,6 +18,7 @@ hide:
 ![Connection schematics](https://i.ibb.co/WFc797W/connections.jpg)
 
 For analog use, the IRLZ44N is a good MOSFET to use. Partial, example circuit...
+
 ![Connection schematics Analog](https://i.ibb.co/86vsym1/image.png)
 
 **2.** Flash the software to your ESP module! There are two options for this step:
