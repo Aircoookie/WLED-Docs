@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8b42a75e.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.db9e7362.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -1156,7 +1156,7 @@
                 
                 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>See <a href="/features/presets">Presets</a> for 0.11.0+.</p>
+<p>Also see <a href="/features/presets">Presets</a> for 0.11.0+.</p>
 </div>
 <p>You are able to set custom actions ("Macros") in Time &amp; Macro settings for the following events:</p>
 <ul>
@@ -1173,10 +1173,11 @@ For example, the macro "A=255" sets the brightness to maximum. "R=255&amp;G=160&
 You can specify up to 16 macros. (up to 250 in WLED 0.11 since the Macro functionality has been merged into the Presets feature)</p>
 <p>Examples of how to use API-calls and define macros can be found in <a href="https://github.com/Aircoookie/WLED/issues/801#issuecomment-635600255">this issue</a> and <a href="https://github.com/Aircoookie/WLED/issues/199#issuecomment-520143239">in this one</a>.</p>
 <p>The simplest macro example is getting a button to do your bidding.  The default pin to which a button can be connected is GPIO 0 (D3 on NodeMCU, D1 Mini and others).  This pin is ideally pulled high to 3.3V with a 10k resistor and the configured macro executes when the pin is pulled low (grounded). The desired macro is entered on the Time/Macros configuration page and then assigned to a short, long or double press. Like this:
-<img alt="how to wire a button to D3 and set up a macro" src="https://user-images.githubusercontent.com/40203361/64235553-e3c41300-cef8-11e9-833f-c5062aaba124.jpg" />
-The "T=2" macro toggles power to the LEDs (in this case long press).
+<img alt="how to wire a button to D3 and set up a macro" src="https://user-images.githubusercontent.com/40203361/64235553-e3c41300-cef8-11e9-833f-c5062aaba124.jpg" /></p>
+<p>The "T=2" macro toggles power to the LEDs (in this case long press).
 The "FX=~" macro steps through the effects (in this case short press).</p>
-<p>The default (built-in) actions are short-press: toggle on/off and long-press: select random color.</p>
+<p>You can set a preset to "win&amp;P1=1&amp;P2=3&amp;PL=~", enter the preset number for your button, and this will step through presets 1 and 3. Change the "3" to whatever your highest preset is that you want to include.</p>
+<p>The default (built-in) actions for Button 0 are short-press: toggle on/off and long-press: select random color.</p>
                 
                   
                 
@@ -1314,10 +1315,10 @@ The "FX=~" macro steps through the effects (in this case short press).</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.1e84347e.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
