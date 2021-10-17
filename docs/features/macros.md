@@ -29,7 +29,7 @@ The simplest macro example is getting a button to do your bidding.  The default 
 The "T=2" macro toggles power to the LEDs (in this case long press).
 The "FX=~" macro steps through the effects (in this case short press).
 
-You can set a preset to "win&P1=1&P2=3&PL=~", enter the preset number for your button and this will step through presets 1 and 3. Change the "3" to whatever your highest preset is that you want to include.
+You can set a preset to "win&P1=1&P2=3&PL=~", enter the preset number for your button, and this will step through presets 1 and 3. Change the "3" to whatever your highest preset is that you want to include.
 
 The default (built-in) actions for Button 0 are short-press: toggle on/off and long-press: select random color.
 
