@@ -25,7 +25,11 @@ Examples of how to use API-calls and define macros can be found in [this issue](
 
 The simplest macro example is getting a button to do your bidding.  The default pin to which a button can be connected is GPIO 0 (D3 on NodeMCU, D1 Mini and others).  This pin is ideally pulled high to 3.3V with a 10k resistor and the configured macro executes when the pin is pulled low (grounded). The desired macro is entered on the Time/Macros configuration page and then assigned to a short, long or double press. Like this:
 ![how to wire a button to D3 and set up a macro](https://user-images.githubusercontent.com/40203361/64235553-e3c41300-cef8-11e9-833f-c5062aaba124.jpg)
+
 The "T=2" macro toggles power to the LEDs (in this case long press).
 The "FX=~" macro steps through the effects (in this case short press).
 
-The default (built-in) actions are short-press: toggle on/off and long-press: select random color.
+You can set a preset to "win&P1=1&P2=3&PL=~", enter the preset number for your button and this will step through presets 1 and 3. Change the "3" to whatever your highest preset is that you want to include.
+
+The default (built-in) actions for Button 0 are short-press: toggle on/off and long-press: select random color.
+
