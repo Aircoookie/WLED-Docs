@@ -17,12 +17,12 @@ Connection to both domains and IP servers is supported on port 1883.
 
 WLED will subscribe to up to six topics to change the state of the lights.
 
-- **[mqttDeviceTopic]**\
+- **[mqttDeviceTopic]**  
   -> Send brightness as ASCII number 0-255 or the strings "ON", "OFF", and "T" (for toggle)
-- **[mqttDeviceTopic]/col**\
+- **[mqttDeviceTopic]/col**  
   -> Send color as HEX (#WWRRGGBB or #RRGGBB) or 32bit DEC. Hex has '#','h' or 'H' as prefix.
-- **[mqttDeviceTopic]/api**\
-  -> Send an API call (using the [HTTP API](/interfaces/http-api) or, since 0.11, JSON API syntax). You may omit the "win" and just send e.g. "FX=73"
+- **[mqttDeviceTopic]/api**  
+  -> Send an API call (using the [HTTP API](/interfaces/http-api) or, since 0.11, [JSON API](https://github.com/Aircoookie/WLED/wiki/JSON-API) syntax). You may omit the "win" and just send e.g. "FX=73"
 
 - **[mqttGroupTopic]**
 - **[mqttGroupTopic]/col**
@@ -37,15 +37,16 @@ UDP notifications will be sent just as if the change was done via the UI or HTTP
 
 Additionally, on light change, WLED will publish to 3 topics for MQTT clients to query the state of the light.
 
-- **[mqttDeviceTopic]/g**\
+- **[mqttDeviceTopic]/g**  
   -> Contains current brightness as ASCII number 0-255
 
-- **[mqttDeviceTopic]/c**\
+- **[mqttDeviceTopic]/c**  
   -> Contains current color as HEX (#RRGGBB if white is 0, else #WWRRGGBB)
 
-- **[mqttDeviceTopic]/v**\
+- **[mqttDeviceTopic]/v**  
   -> Contains XML API response (same as HTTP API)
 
 There is support for client ID and authentication, but this is presently transmitted over an unencrypted connection, so please **do not** use the same password for other services.
 
-**Attention:** The maximal length of a MQTT messages for WLED is 1024 bytes.
+!!! warning "Attention"
+    The maximal length of a MQTT messages for WLED is 1024 bytes.
