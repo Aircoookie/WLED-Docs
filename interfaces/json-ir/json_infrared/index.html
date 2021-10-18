@@ -1266,9 +1266,9 @@ If your command is repeatable but does not contain the "~" character and is not 
 Label and position attributes are ignored by WLED but useful when making edits. </p>
 <p>If an ir.json file does not already exist for your remote, you will need to determine what code each button emits. To do this, connect your ESP8266 or ESP32 to a computer and 
 open Arduino or VSCode serial monitor. Then press each button and record the code printed on the serial monitor. You should see something like this:</p>
-<pre><code class="language-bash">IR recv
+<div class="highlight"><pre><span></span><code>IR recv
 0xFFDE10
-</code></pre>
+</code></pre></div>
 <p>You should get a 24-bit hex encoded integer. If you get 0xFFFFFFFF, that means the button has been pressed repeatedly or held down. Try tapping quickly.</p>
 <h3 id="tips">Tips</h3>
 <ul>
@@ -1278,46 +1278,46 @@ open Arduino or VSCode serial monitor. Then press each button and record the cod
 <li>Most of the 24-key and fewer remotes are designed with analog LEDs in mind and do not have very useful labels for WLED. With JSON IR and a fine-tip Sharpie, you can repurpose buttons to make them more useful.</li>
 </ul>
 <h3 id="irjson-sample">ir.json sample</h3>
-<pre><code class="language-json">{
-  &quot;0xF740BF&quot;: {
-    &quot;label&quot;: &quot;On/Off&quot;,
-    &quot;cmd&quot;: &quot;T=2&quot;,
-    &quot;rpt&quot;: true
-  },
-  &quot;0xF700FF&quot;: {
-    &quot;label&quot;: &quot;Speed +&quot;,
-    &quot;cmd&quot;: &quot;SX=~16&quot;
-  },
-  &quot;0xF720DF&quot;: {
-    &quot;label&quot;: &quot;Red&quot;,
-    &quot;cmnt&quot;: &quot;Lava palette + primary, secondary and tertiary colors&quot;,
-    &quot;cmd&quot;: &quot;FP=8&amp;CL=hFF7F00&amp;C2=hFF0000&amp;C3=hCC3D60&quot;
-  }, 
-  &quot;0xF710EF&quot;: {
-    &quot;label&quot;: &quot;Timer1&quot;,
-    &quot;cmnt&quot;: &quot;Timer 60 min&quot;,
-    &quot;cmd&quot;: &quot;NL=60&amp;NT=0&quot;
-  },
-  &quot;0xF730CF&quot;: {
-    &quot;label&quot;: &quot;Play&quot;,
-    &quot;cmnt&quot;: &quot;prime example of a playlist that cycles every 180 seconds and continues to repeat&quot;,
-    &quot;cmd&quot;: {&quot;playlist&quot;:{&quot;ps&quot;:[1,3,5,7,11,13,17],&quot;dur&quot;: 1800,&quot;transition&quot;:7,&quot;repeat&quot;:0,&quot;end&quot;:0}}
-  }, 
-  &quot;0xFF9867&quot;: {
-    &quot;Bright+&quot;
-    &quot;cmnt&quot;: &quot;smaller steps at beginning, larger steps at the end&quot;,
-    &quot;cmd&quot;: &quot;!incBrightness&quot;
-  },
-  &quot;0xF78877&quot;: {
-    &quot;label&quot;: &quot;DIY1&quot;,
-    &quot;cmnt&quot;: &quot;Preset 1, fallback to Saw(16) - Party(6) if it doesn't exist&quot;,
-    &quot;cmd&quot;: &quot;!presetFallback&quot;,
-    &quot;PL&quot;: 1,
-    &quot;FX&quot;: 16,
-    &quot;FP&quot;: 6
-  },
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;0xF740BF&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;On/Off&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cmd&quot;</span><span class="p">:</span> <span class="s2">&quot;T=2&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rpt&quot;</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;0xF700FF&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Speed +&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cmd&quot;</span><span class="p">:</span> <span class="s2">&quot;SX=~16&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;0xF720DF&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Red&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cmnt&quot;</span><span class="p">:</span> <span class="s2">&quot;Lava palette + primary, secondary and tertiary colors&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cmd&quot;</span><span class="p">:</span> <span class="s2">&quot;FP=8&amp;CL=hFF7F00&amp;C2=hFF0000&amp;C3=hCC3D60&quot;</span>
+  <span class="p">},</span> 
+  <span class="nt">&quot;0xF710EF&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Timer1&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cmnt&quot;</span><span class="p">:</span> <span class="s2">&quot;Timer 60 min&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cmd&quot;</span><span class="p">:</span> <span class="s2">&quot;NL=60&amp;NT=0&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;0xF730CF&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Play&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cmnt&quot;</span><span class="p">:</span> <span class="s2">&quot;prime example of a playlist that cycles every 180 seconds and continues to repeat&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cmd&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;playlist&quot;</span><span class="p">:{</span><span class="nt">&quot;ps&quot;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">17</span><span class="p">],</span><span class="nt">&quot;dur&quot;</span><span class="p">:</span> <span class="mi">1800</span><span class="p">,</span><span class="nt">&quot;transition&quot;</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span><span class="nt">&quot;repeat&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">}}</span>
+  <span class="p">},</span> 
+  <span class="nt">&quot;0xFF9867&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;Bright+&quot;</span>
+    <span class="nt">&quot;cmnt&quot;</span><span class="p">:</span> <span class="s2">&quot;smaller steps at beginning, larger steps at the end&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cmd&quot;</span><span class="p">:</span> <span class="s2">&quot;!incBrightness&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;0xF78877&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;DIY1&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cmnt&quot;</span><span class="p">:</span> <span class="s2">&quot;Preset 1, fallback to Saw(16) - Party(6) if it doesn&#39;t exist&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cmd&quot;</span><span class="p">:</span> <span class="s2">&quot;!presetFallback&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;PL&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;FX&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+    <span class="nt">&quot;FP&quot;</span><span class="p">:</span> <span class="mi">6</span>
+  <span class="p">},</span>
+<span class="p">}</span>
+</code></pre></div>
                 
                   
                 

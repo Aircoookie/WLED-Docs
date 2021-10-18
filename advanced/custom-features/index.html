@@ -1342,34 +1342,34 @@ However, for basic color and brightness changes, these are the most important:</
 </table>
 <p>After updating the color, you must call the <code>colorUpdated(int)</code> method. If you want to send a notification with the new color to other ESPs, use <code>colorUpdated(NOTIFIER_CALL_MODE_DIRECT_CHANGE)</code>, otherwise <code>colorUpdated(NOTIFIER_CALL_MODE_NO_NOTIFY)</code>.</p>
 <h3 id="timing">Timing</h3>
-<p>If you'd just like a simple modification that requires timing (like sending a request every 2 seconds), please <strong>never</strong> use the <code>delay()</code> function in your <code>userLoop()</code>! It will block everything else and WLED will become unresponsive and effects won't work! Instead, try this instead:</p>
-<pre><code class="language-cpp">long lastTime = 0;
-int delayMs = 2000; //we want to do something every 2 seconds
+<p>If you'd just like a simple modification that requires timing (like sending a request every 2 seconds), please <strong>never</strong> use the <code>delay()</code> function in your <code>userLoop()</code>! It will block everything else and WLED will become unresponsive and effects won't work! Instead, try this instead:
+<div class="highlight"><pre><span></span><code><span class="kt">long</span><span class="w"> </span><span class="n">lastTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">delayMs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2000</span><span class="p">;</span><span class="w"> </span><span class="c1">//we want to do something every 2 seconds</span>
 
-void userLoop()
-{
-  if (millis()-lastTime &gt; delayMs)
-  {
-    lastTime = millis();
-    //do something you want to do every 2 seconds
-  }
-}
-</code></pre>
+<span class="kt">void</span><span class="w"> </span><span class="nf">userLoop</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">millis</span><span class="p">()</span><span class="o">-</span><span class="n">lastTime</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">delayMs</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">lastTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">millis</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//do something you want to do every 2 seconds</span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></p>
 <h3 id="internal-segments-api">Internal Segments API</h3>
 <p>You can use Segments from your code to set different parts of the strip to different colors or effects. <br />
 This can be very useful for highly customized installations, clocks, ...   </p>
 <p>To set a segment, use <code>strip.setSegment(id, start, stop);</code>, where <em>id</em> is the segment ID, <em>start</em> is the first LED of the segment and <em>stop</em> is the LED after the last one in the segment.</p>
-<p>To edit the configuration of a segment, use:</p>
-<pre><code class="language-cpp">WS2812FX::Segment&amp; seg = strip.getSegment(id);
-//set color (i=0 is primary, i=1 secondary i=2 tertiary)
-seg.colors[i] = ((myWhite &lt;&lt; 24) | ((myRed&amp;0xFF) &lt;&lt; 16) | ((myGreen&amp;0xFF) &lt;&lt; 8) | ((myBlue&amp;0xFF)));
-//set effect config
-seg.mode = myFxI;
-seg.speed = mySpeed;
-seg.intensity = myIntensity;
-seg.palette = myPaletteId;
-</code></pre>
-<p>Keep in mind that this will not cause interface updates as of 0.8.6. For that, you still need to use <code>colorUpdated(NOTIFIER_CALL_MODE_DIRECT_CHANGE)</code></p>
+<p>To edit the configuration of a segment, use:
+<div class="highlight"><pre><span></span><code><span class="n">WS2812FX</span><span class="o">::</span><span class="n">Segment</span><span class="o">&amp;</span><span class="w"> </span><span class="n">seg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strip</span><span class="p">.</span><span class="n">getSegment</span><span class="p">(</span><span class="n">id</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//set color (i=0 is primary, i=1 secondary i=2 tertiary)</span>
+<span class="n">seg</span><span class="p">.</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="n">myWhite</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">24</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">((</span><span class="n">myRed</span><span class="o">&amp;</span><span class="mh">0xFF</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">((</span><span class="n">myGreen</span><span class="o">&amp;</span><span class="mh">0xFF</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">((</span><span class="n">myBlue</span><span class="o">&amp;</span><span class="mh">0xFF</span><span class="p">)));</span><span class="w"></span>
+<span class="c1">//set effect config</span>
+<span class="n">seg</span><span class="p">.</span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myFxI</span><span class="p">;</span><span class="w"></span>
+<span class="n">seg</span><span class="p">.</span><span class="n">speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mySpeed</span><span class="p">;</span><span class="w"></span>
+<span class="n">seg</span><span class="p">.</span><span class="n">intensity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myIntensity</span><span class="p">;</span><span class="w"></span>
+<span class="n">seg</span><span class="p">.</span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myPaletteId</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+Keep in mind that this will not cause interface updates as of 0.8.6. For that, you still need to use <code>colorUpdated(NOTIFIER_CALL_MODE_DIRECT_CHANGE)</code></p>
 <h3 id="create-custom-effects">Create custom effects</h3>
 <p>It is possible to create your own effects and add them to the FX library.
 The relevant files for that are <code>FX.cpp</code> and <code>FX.h</code>.</p>
@@ -1404,15 +1404,15 @@ The relevant files for that are <code>FX.cpp</code> and <code>FX.h</code>.</p>
 <p>If you programmed a nice effect you want to share, submit a pull request!</p>
 <h3 id="changing-web-ui">Changing Web UI</h3>
 <p>In order to conserve space, the Web UI interface is represented as a series of wled00/html_ui.h, wled00/html_settings.h and wled00/html_other.h files which contain C/C++ strings with specific parts of the Web UI.</p>
-<p>These files are automatically created from source files available in wled00/data folder. To generate files, install <a href="https://nodejs.org/en/download/">NodeJS 11.0+</a> globally. After that, recreate <code>html_*.h</code> files by running in the repo directory:</p>
-<pre><code>&gt; npm install
+<p>These files are automatically created from source files available in wled00/data folder. To generate files, install <a href="https://nodejs.org/en/download/">NodeJS 11.0+</a> globally. After that, recreate <code>html_*.h</code> files by running in the repo directory:
+<div class="highlight"><pre><span></span><code>&gt; npm install
 &gt; npm run build
-</code></pre>
+</code></pre></div></p>
 <p>If you want to test changes to the UI, it is easiest to work with the local <code>wled00/data/index.htm</code> file. You just need to enter the IP address of a WLED 0.10.0 or newer instance into the popup. If you accidentally input an incorrect IP or want to test with a different instance, clear the local storage (in Chrome: Developer Tools -&gt; Application -&gt; Local Storage)</p>
-<p>If you continuously modify files in the wled00/data directory, you want to monitor these changes to make local html_*.h files being updated automatically. To do this, run this in repo directory:</p>
-<pre><code>&gt; npm run dev
-</code></pre>
-<p>This will start monitoring wled00/data folder for changes.</p>
+<p>If you continuously modify files in the wled00/data directory, you want to monitor these changes to make local html_*.h files being updated automatically. To do this, run this in repo directory:
+<div class="highlight"><pre><span></span><code>&gt; npm run dev
+</code></pre></div>
+This will start monitoring wled00/data folder for changes.</p>
 <p><strong>WARNING!!</strong> Be careful with changing the javascript in HTML files! For example <code>function GetV() {}</code> must be the last javascript function in the <code>&lt;script&gt;</code> element as it will be replaced by automatically generated code to fetch relevant settings from EEPROM. See <code>tools/cdata.js</code> for the replacement rules which run for every *.htm file in <code>wled00/data</code>.</p>
 <p>Recompile and flash WLED!</p>
                 

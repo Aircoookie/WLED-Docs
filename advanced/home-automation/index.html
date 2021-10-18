@@ -1323,13 +1323,13 @@ integration will be available.</p>
 <p>Alternatively, MQTT can be used (not recommended).
 Auto discovery is no longer supported since version 0.9 of WLED.
 In case you want to configure the device manually:</p>
-<pre><code>light:
+<p><div class="highlight"><pre><span></span><code>light:
   - platform: mqtt
     name: &quot;Kitchen Floor Lights&quot;
     command_topic: &quot;wled/all&quot;
     brightness_command_topic: &quot;wled/all&quot;
     rgb_command_topic: &quot;wled/all/col&quot;
-    rgb_command_template: &quot;{{ '#%02x%02x%02x' | format(red, green, blue)}}&quot;
+    rgb_command_template: &quot;{{ &#39;#%02x%02x%02x&#39; | format(red, green, blue)}}&quot;
     effect_command_topic : &quot;wled/all/api&quot;
     effect_list:
     - &quot;FX=0&quot;
@@ -1373,50 +1373,50 @@ In case you want to configure the device manually:</p>
     - &quot;FX=38&quot;
     - &quot;FX=39&quot;
     - &quot;FX=40&quot;
-</code></pre>
-<p>by @acid2000</p>
-<p>Config json which is sent via autodiscovery:</p>
-<pre><code class="language-json">{
-    &quot;name&quot;: &quot;WLED Light&quot;,
-    &quot;stat_t&quot;: &quot;wled/840d8e989815/c&quot;,
-    &quot;cmd_t&quot;: &quot;wled/840d8e989815&quot;,
-    &quot;rgb_stat_t&quot;: &quot;wled/840d8e989815/c&quot;,
-    &quot;rgb_cmd_t&quot;: &quot;wled/840d8e989815/col&quot;,
-    &quot;bri_cmd_t&quot;: &quot;wled/840d8e989815&quot;,
-    &quot;bri_stat_t&quot;: &quot;wled/840d8e989815/g&quot;,
-    &quot;fx_cmd_t&quot;: &quot;wled/840d8e989815/api&quot;,
-    &quot;fx_stat_t&quot;: &quot;wled/840d8e989815/api&quot;,
-    &quot;bri_val_tpl&quot;: &quot;{{value}}&quot;,
-    &quot;rgb_cmd_tpl&quot;: &quot;{{'#%02x%02x%02x' | format(red, green, blue)}}&quot;,
-    &quot;rgb_val_tpl&quot;: &quot;{{value[1:3]|int(base=16)}},{{value[3:5]|int(base=16)}},{{value[5:7]|int(base=16)}}&quot;,
-    &quot;qos&quot;: 0,
-    &quot;opt&quot;: true,
-    &quot;pl_on&quot;: &quot;ON&quot;,
-    &quot;pl_off&quot;: &quot;OFF&quot;,
-    &quot;fx_val_tpl&quot;: &quot;{{value}}&quot;,
-    &quot;fx_list&quot;: [
-        &quot;[FX=00] Solid&quot;, &quot;[FX=01] Blink&quot;, &quot;[FX=02] Breathe&quot;, &quot;[FX=03] Wipe&quot;, &quot;[FX=04] Wipe Random&quot;, 
-        &quot;[FX=05] Random Colors&quot;, &quot;[FX=06] Sweep&quot;, &quot;[FX=07] Dynamic&quot;, &quot;[FX=08] Colorloop&quot;, 
-        &quot;[FX=09] Rainbow&quot;, &quot;[FX=10] Scan&quot;, &quot;[FX=11] Dual Scan&quot;, &quot;[FX=12] Fade&quot;, &quot;[FX=13] Chase&quot;, 
-        &quot;[FX=14] Chase Rainbow&quot;, &quot;[FX=15] Running&quot;, &quot;[FX=16] Saw&quot;, &quot;[FX=17] Twinkle&quot;, &quot;[FX=18] Dissolve&quot;,
-        &quot;[FX=19] Dissolve Rnd&quot;, &quot;[FX=20] Sparkle&quot;, &quot;[FX=21] Dark Sparkle&quot;, &quot;[FX=22] Sparkle+&quot;, 
-        &quot;[FX=23] Strobe&quot;, &quot;[FX=24] Strobe Rainbow&quot;, &quot;[FX=25] Mega Strobe&quot;, &quot;[FX=26] Blink Rainbow&quot;, 
-        &quot;[FX=27] Android&quot;, &quot;[FX=28] Chase&quot;, &quot;[FX=29] Chase Random&quot;, &quot;[FX=30] Chase Rainbow&quot;, 
-        &quot;[FX=31] Chase Flash&quot;, &quot;[FX=32] Chase Flash Rnd&quot;, &quot;[FX=33] Rainbow Runner&quot;, &quot;[FX=34] Colorful&quot;, 
-        &quot;[FX=35] Traffic Light&quot;, &quot;[FX=36] Sweep Random&quot;, &quot;[FX=37] Running 2&quot;, &quot;[FX=38] Red &amp; Blue&quot;, 
-        &quot;[FX=39] Stream&quot;, &quot;[FX=40] Scanner&quot;, &quot;[FX=41] Lighthouse&quot;, &quot;[FX=42] Fireworks&quot;, &quot;[FX=43] Rain&quot;, 
-        &quot;[FX=44] Merry Christmas&quot;, &quot;[FX=45] Fire Flicker&quot;, &quot;[FX=46] Gradient&quot;, &quot;[FX=47] Loading&quot;, 
-        &quot;[FX=48] In Out&quot;, &quot;[FX=49] In In&quot;, &quot;[FX=50] Out Out&quot;, &quot;[FX=51] Out In&quot;, &quot;[FX=52] Circus&quot;, 
-        &quot;[FX=53] Halloween&quot;, &quot;[FX=54] Tri Chase&quot;, &quot;[FX=55] Tri Wipe&quot;, &quot;[FX=56] Tri Fade&quot;, 
-        &quot;[FX=57] Lightning&quot;, &quot;[FX=58] ICU&quot;, &quot;[FX=59] Multi Comet&quot;, &quot;[FX=60] Dual Scanner&quot;, 
-        &quot;[FX=61] Stream 2&quot;, &quot;[FX=62] Oscillate&quot;, &quot;[FX=63] Pride 2015&quot;, &quot;[FX=64] Juggle&quot;, 
-        &quot;[FX=65] Palette&quot;, &quot;[FX=66] Fire 2012&quot;, &quot;[FX=67] Colorwaves&quot;, &quot;[FX=68] BPM&quot;, 
-        &quot;[FX=69] Fill Noise&quot;, &quot;[FX=70] Noise 1&quot;, &quot;[FX=71] Noise 2&quot;, &quot;[FX=72] Noise 3&quot;, &quot;[FX=73] Noise 4&quot;,
-        &quot;[FX=74] Colortwinkle&quot;, &quot;[FX=75] Lake&quot;, &quot;[FX=76] Meteor&quot;, &quot;[FX=77] Smooth Meteor&quot;, 
-        &quot;[FX=78] Railway&quot;, &quot;[FX=79] Ripple&quot;
-    ]
-}
-</code></pre>
+</code></pre></div>
+by @acid2000</p>
+<p>Config json which is sent via autodiscovery:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;WLED Light&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;stat_t&quot;</span><span class="p">:</span> <span class="s2">&quot;wled/840d8e989815/c&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cmd_t&quot;</span><span class="p">:</span> <span class="s2">&quot;wled/840d8e989815&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rgb_stat_t&quot;</span><span class="p">:</span> <span class="s2">&quot;wled/840d8e989815/c&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rgb_cmd_t&quot;</span><span class="p">:</span> <span class="s2">&quot;wled/840d8e989815/col&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;bri_cmd_t&quot;</span><span class="p">:</span> <span class="s2">&quot;wled/840d8e989815&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;bri_stat_t&quot;</span><span class="p">:</span> <span class="s2">&quot;wled/840d8e989815/g&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fx_cmd_t&quot;</span><span class="p">:</span> <span class="s2">&quot;wled/840d8e989815/api&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fx_stat_t&quot;</span><span class="p">:</span> <span class="s2">&quot;wled/840d8e989815/api&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;bri_val_tpl&quot;</span><span class="p">:</span> <span class="s2">&quot;{{value}}&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rgb_cmd_tpl&quot;</span><span class="p">:</span> <span class="s2">&quot;{{&#39;#%02x%02x%02x&#39; | format(red, green, blue)}}&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rgb_val_tpl&quot;</span><span class="p">:</span> <span class="s2">&quot;{{value[1:3]|int(base=16)}},{{value[3:5]|int(base=16)}},{{value[5:7]|int(base=16)}}&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;qos&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;opt&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;pl_on&quot;</span><span class="p">:</span> <span class="s2">&quot;ON&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;pl_off&quot;</span><span class="p">:</span> <span class="s2">&quot;OFF&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fx_val_tpl&quot;</span><span class="p">:</span> <span class="s2">&quot;{{value}}&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fx_list&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;[FX=00] Solid&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=01] Blink&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=02] Breathe&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=03] Wipe&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=04] Wipe Random&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;[FX=05] Random Colors&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=06] Sweep&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=07] Dynamic&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=08] Colorloop&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;[FX=09] Rainbow&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=10] Scan&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=11] Dual Scan&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=12] Fade&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=13] Chase&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;[FX=14] Chase Rainbow&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=15] Running&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=16] Saw&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=17] Twinkle&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=18] Dissolve&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;[FX=19] Dissolve Rnd&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=20] Sparkle&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=21] Dark Sparkle&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=22] Sparkle+&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;[FX=23] Strobe&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=24] Strobe Rainbow&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=25] Mega Strobe&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=26] Blink Rainbow&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;[FX=27] Android&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=28] Chase&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=29] Chase Random&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=30] Chase Rainbow&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;[FX=31] Chase Flash&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=32] Chase Flash Rnd&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=33] Rainbow Runner&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=34] Colorful&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;[FX=35] Traffic Light&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=36] Sweep Random&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=37] Running 2&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=38] Red &amp; Blue&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;[FX=39] Stream&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=40] Scanner&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=41] Lighthouse&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=42] Fireworks&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=43] Rain&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;[FX=44] Merry Christmas&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=45] Fire Flicker&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=46] Gradient&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=47] Loading&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;[FX=48] In Out&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=49] In In&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=50] Out Out&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=51] Out In&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=52] Circus&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;[FX=53] Halloween&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=54] Tri Chase&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=55] Tri Wipe&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=56] Tri Fade&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;[FX=57] Lightning&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=58] ICU&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=59] Multi Comet&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=60] Dual Scanner&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;[FX=61] Stream 2&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=62] Oscillate&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=63] Pride 2015&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=64] Juggle&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;[FX=65] Palette&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=66] Fire 2012&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=67] Colorwaves&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=68] BPM&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;[FX=69] Fill Noise&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=70] Noise 1&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=71] Noise 2&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=72] Noise 3&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=73] Noise 4&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;[FX=74] Colortwinkle&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=75] Lake&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=76] Meteor&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=77] Smooth Meteor&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;[FX=78] Railway&quot;</span><span class="p">,</span> <span class="s2">&quot;[FX=79] Ripple&quot;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
                 
                   
                 

@@ -1346,86 +1346,86 @@ The response consists of four objects:</p>
 <p>Sending a POST request to <code>/json</code> or <code>/json/state</code> with (parts of) the state object will update the respective values.
 Example: <code>{"on":true,"bri":255}</code> sets the brightness to maximum. <code>{"seg":[{"col":[[0,255,200]]}]}</code> sets the color of the first segment to teal.</p>
 <p>Sample JSON API response (v0.8.4):</p>
-<pre><code class="language-json">{
-  &quot;state&quot;: {
-    &quot;on&quot;: true,
-    &quot;bri&quot;: 127,
-    &quot;transition&quot;: 7,
-    &quot;ps&quot;: -1,
-    &quot;pl&quot;: -1,
-    &quot;nl&quot;: {
-      &quot;on&quot;: false,
-      &quot;dur&quot;: 60,
-      &quot;fade&quot;: true,
-      &quot;tbri&quot;: 0
-    },
-    &quot;udpn&quot;: {
-      &quot;send&quot;: false,
-      &quot;recv&quot;: true
-    },
-    &quot;seg&quot;: [{
-      &quot;start&quot;: 0,
-      &quot;stop&quot;: 20,
-      &quot;len&quot;: 20,
-      &quot;col&quot;: [
-        [255, 160, 0, 0],
-        [0, 0, 0, 0],
-        [0, 0, 0, 0]
-      ],
-      &quot;fx&quot;: 0,
-      &quot;sx&quot;: 127,
-      &quot;ix&quot;: 127,
-      &quot;pal&quot;: 0,
-      &quot;sel&quot;: true,
-      &quot;rev&quot;: false,
-      &quot;cln&quot;: -1
-    }]
-  },
-  &quot;info&quot;: {
-    &quot;ver&quot;: &quot;0.8.4&quot;,
-    &quot;vid&quot;: 1903252,
-    &quot;leds&quot;: {
-      &quot;count&quot;: 20,
-      &quot;rgbw&quot;: true,
-      &quot;pin&quot;: [2],
-      &quot;pwr&quot;: 0,
-      &quot;maxpwr&quot;: 65000,
-      &quot;maxseg&quot;: 1
-    },
-    &quot;name&quot;: &quot;WLED Light&quot;,
-    &quot;udpport&quot;: 21324,
-    &quot;live&quot;: false,
-    &quot;fxcount&quot;: 80,
-    &quot;palcount&quot;: 47,
-    &quot;arch&quot;: &quot;esp8266&quot;,
-    &quot;core&quot;: &quot;2_4_2&quot;,
-    &quot;freeheap&quot;: 13264,
-    &quot;uptime&quot;: 17985,
-    &quot;opt&quot;: 127,
-    &quot;brand&quot;: &quot;WLED&quot;,
-    &quot;product&quot;: &quot;DIY light&quot;,
-    &quot;btype&quot;: &quot;src&quot;,
-    &quot;mac&quot;: &quot;60019423b441&quot;
-  },
-  &quot;effects&quot;: [
-    &quot;Solid&quot;, &quot;Blink&quot;, &quot;Breathe&quot;, &quot;Wipe&quot;, &quot;Wipe Random&quot;, &quot;Random Colors&quot;, &quot;Sweep&quot;, &quot;Dynamic&quot;, &quot;Colorloop&quot;, &quot;Rainbow&quot;,
-    &quot;Scan&quot;, &quot;Dual Scan&quot;, &quot;Fade&quot;, &quot;Chase&quot;, &quot;Chase Rainbow&quot;, &quot;Running&quot;, &quot;Saw&quot;, &quot;Twinkle&quot;, &quot;Dissolve&quot;, &quot;Dissolve Rnd&quot;,
-    &quot;Sparkle&quot;, &quot;Dark Sparkle&quot;, &quot;Sparkle+&quot;, &quot;Strobe&quot;, &quot;Strobe Rainbow&quot;, &quot;Mega Strobe&quot;, &quot;Blink Rainbow&quot;, &quot;Android&quot;, &quot;Chase&quot;, &quot;Chase Random&quot;,
-    &quot;Chase Rainbow&quot;, &quot;Chase Flash&quot;, &quot;Chase Flash Rnd&quot;, &quot;Rainbow Runner&quot;, &quot;Colorful&quot;, &quot;Traffic Light&quot;, &quot;Sweep Random&quot;, &quot;Running 2&quot;, &quot;Red &amp; Blue&quot;,&quot;Stream&quot;,
-    &quot;Scanner&quot;, &quot;Lighthouse&quot;, &quot;Fireworks&quot;, &quot;Rain&quot;, &quot;Merry Christmas&quot;, &quot;Fire Flicker&quot;, &quot;Gradient&quot;, &quot;Loading&quot;, &quot;In Out&quot;, &quot;In In&quot;,
-    &quot;Out Out&quot;, &quot;Out In&quot;, &quot;Circus&quot;, &quot;Halloween&quot;, &quot;Tri Chase&quot;, &quot;Tri Wipe&quot;, &quot;Tri Fade&quot;, &quot;Lightning&quot;, &quot;ICU&quot;, &quot;Multi Comet&quot;,
-    &quot;Dual Scanner&quot;, &quot;Stream 2&quot;, &quot;Oscillate&quot;, &quot;Pride 2015&quot;, &quot;Juggle&quot;, &quot;Palette&quot;, &quot;Fire 2012&quot;, &quot;Colorwaves&quot;, &quot;BPM&quot;, &quot;Fill Noise&quot;, &quot;Noise 1&quot;,
-    &quot;Noise 2&quot;, &quot;Noise 3&quot;, &quot;Noise 4&quot;, &quot;Colortwinkle&quot;, &quot;Lake&quot;, &quot;Meteor&quot;, &quot;Smooth Meteor&quot;, &quot;Railway&quot;, &quot;Ripple&quot;
-  ],
-  &quot;palettes&quot;: [
-    &quot;Default&quot;, &quot;Random Cycle&quot;, &quot;Primary Color&quot;, &quot;Based on Primary&quot;, &quot;Set Colors&quot;, &quot;Based on Set&quot;, &quot;Party&quot;, &quot;Cloud&quot;, &quot;Lava&quot;, &quot;Ocean&quot;,
-    &quot;Forest&quot;, &quot;Rainbow&quot;, &quot;Rainbow Bands&quot;, &quot;Sunset&quot;, &quot;Rivendell&quot;, &quot;Breeze&quot;, &quot;Red &amp; Blue&quot;, &quot;Yellowout&quot;, &quot;Analogous&quot;, &quot;Splash&quot;,
-    &quot;Pastel&quot;, &quot;Sunset 2&quot;, &quot;Beech&quot;, &quot;Vintage&quot;, &quot;Departure&quot;, &quot;Landscape&quot;, &quot;Beach&quot;, &quot;Sherbet&quot;, &quot;Hult&quot;, &quot;Hult 64&quot;,
-    &quot;Drywet&quot;, &quot;Jul&quot;, &quot;Grintage&quot;, &quot;Rewhi&quot;, &quot;Tertiary&quot;, &quot;Fire&quot;, &quot;Icefire&quot;, &quot;Cyane&quot;, &quot;Light Pink&quot;, &quot;Autumn&quot;,
-    &quot;Magenta&quot;, &quot;Magred&quot;, &quot;Yelmag&quot;, &quot;Yelblu&quot;, &quot;Orange &amp; Teal&quot;, &quot;Tiamat&quot;, &quot;April Night&quot;
-  ]
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;on&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;bri&quot;</span><span class="p">:</span> <span class="mi">127</span><span class="p">,</span>
+    <span class="nt">&quot;transition&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+    <span class="nt">&quot;ps&quot;</span><span class="p">:</span> <span class="mi">-1</span><span class="p">,</span>
+    <span class="nt">&quot;pl&quot;</span><span class="p">:</span> <span class="mi">-1</span><span class="p">,</span>
+    <span class="nt">&quot;nl&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;on&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;dur&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+      <span class="nt">&quot;fade&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;tbri&quot;</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;udpn&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;send&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;recv&quot;</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;seg&quot;</span><span class="p">:</span> <span class="p">[{</span>
+      <span class="nt">&quot;start&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;stop&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="nt">&quot;len&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="nt">&quot;col&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">[</span><span class="mi">255</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;fx&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;sx&quot;</span><span class="p">:</span> <span class="mi">127</span><span class="p">,</span>
+      <span class="nt">&quot;ix&quot;</span><span class="p">:</span> <span class="mi">127</span><span class="p">,</span>
+      <span class="nt">&quot;pal&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;sel&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;rev&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;cln&quot;</span><span class="p">:</span> <span class="mi">-1</span>
+    <span class="p">}]</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;ver&quot;</span><span class="p">:</span> <span class="s2">&quot;0.8.4&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;vid&quot;</span><span class="p">:</span> <span class="mi">1903252</span><span class="p">,</span>
+    <span class="nt">&quot;leds&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;count&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="nt">&quot;rgbw&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;pin&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+      <span class="nt">&quot;pwr&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;maxpwr&quot;</span><span class="p">:</span> <span class="mi">65000</span><span class="p">,</span>
+      <span class="nt">&quot;maxseg&quot;</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;WLED Light&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;udpport&quot;</span><span class="p">:</span> <span class="mi">21324</span><span class="p">,</span>
+    <span class="nt">&quot;live&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;fxcount&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="nt">&quot;palcount&quot;</span><span class="p">:</span> <span class="mi">47</span><span class="p">,</span>
+    <span class="nt">&quot;arch&quot;</span><span class="p">:</span> <span class="s2">&quot;esp8266&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;core&quot;</span><span class="p">:</span> <span class="s2">&quot;2_4_2&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;freeheap&quot;</span><span class="p">:</span> <span class="mi">13264</span><span class="p">,</span>
+    <span class="nt">&quot;uptime&quot;</span><span class="p">:</span> <span class="mi">17985</span><span class="p">,</span>
+    <span class="nt">&quot;opt&quot;</span><span class="p">:</span> <span class="mi">127</span><span class="p">,</span>
+    <span class="nt">&quot;brand&quot;</span><span class="p">:</span> <span class="s2">&quot;WLED&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;product&quot;</span><span class="p">:</span> <span class="s2">&quot;DIY light&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;btype&quot;</span><span class="p">:</span> <span class="s2">&quot;src&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;mac&quot;</span><span class="p">:</span> <span class="s2">&quot;60019423b441&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;effects&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;Solid&quot;</span><span class="p">,</span> <span class="s2">&quot;Blink&quot;</span><span class="p">,</span> <span class="s2">&quot;Breathe&quot;</span><span class="p">,</span> <span class="s2">&quot;Wipe&quot;</span><span class="p">,</span> <span class="s2">&quot;Wipe Random&quot;</span><span class="p">,</span> <span class="s2">&quot;Random Colors&quot;</span><span class="p">,</span> <span class="s2">&quot;Sweep&quot;</span><span class="p">,</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span> <span class="s2">&quot;Colorloop&quot;</span><span class="p">,</span> <span class="s2">&quot;Rainbow&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Scan&quot;</span><span class="p">,</span> <span class="s2">&quot;Dual Scan&quot;</span><span class="p">,</span> <span class="s2">&quot;Fade&quot;</span><span class="p">,</span> <span class="s2">&quot;Chase&quot;</span><span class="p">,</span> <span class="s2">&quot;Chase Rainbow&quot;</span><span class="p">,</span> <span class="s2">&quot;Running&quot;</span><span class="p">,</span> <span class="s2">&quot;Saw&quot;</span><span class="p">,</span> <span class="s2">&quot;Twinkle&quot;</span><span class="p">,</span> <span class="s2">&quot;Dissolve&quot;</span><span class="p">,</span> <span class="s2">&quot;Dissolve Rnd&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Sparkle&quot;</span><span class="p">,</span> <span class="s2">&quot;Dark Sparkle&quot;</span><span class="p">,</span> <span class="s2">&quot;Sparkle+&quot;</span><span class="p">,</span> <span class="s2">&quot;Strobe&quot;</span><span class="p">,</span> <span class="s2">&quot;Strobe Rainbow&quot;</span><span class="p">,</span> <span class="s2">&quot;Mega Strobe&quot;</span><span class="p">,</span> <span class="s2">&quot;Blink Rainbow&quot;</span><span class="p">,</span> <span class="s2">&quot;Android&quot;</span><span class="p">,</span> <span class="s2">&quot;Chase&quot;</span><span class="p">,</span> <span class="s2">&quot;Chase Random&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Chase Rainbow&quot;</span><span class="p">,</span> <span class="s2">&quot;Chase Flash&quot;</span><span class="p">,</span> <span class="s2">&quot;Chase Flash Rnd&quot;</span><span class="p">,</span> <span class="s2">&quot;Rainbow Runner&quot;</span><span class="p">,</span> <span class="s2">&quot;Colorful&quot;</span><span class="p">,</span> <span class="s2">&quot;Traffic Light&quot;</span><span class="p">,</span> <span class="s2">&quot;Sweep Random&quot;</span><span class="p">,</span> <span class="s2">&quot;Running 2&quot;</span><span class="p">,</span> <span class="s2">&quot;Red &amp; Blue&quot;</span><span class="p">,</span><span class="s2">&quot;Stream&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Scanner&quot;</span><span class="p">,</span> <span class="s2">&quot;Lighthouse&quot;</span><span class="p">,</span> <span class="s2">&quot;Fireworks&quot;</span><span class="p">,</span> <span class="s2">&quot;Rain&quot;</span><span class="p">,</span> <span class="s2">&quot;Merry Christmas&quot;</span><span class="p">,</span> <span class="s2">&quot;Fire Flicker&quot;</span><span class="p">,</span> <span class="s2">&quot;Gradient&quot;</span><span class="p">,</span> <span class="s2">&quot;Loading&quot;</span><span class="p">,</span> <span class="s2">&quot;In Out&quot;</span><span class="p">,</span> <span class="s2">&quot;In In&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Out Out&quot;</span><span class="p">,</span> <span class="s2">&quot;Out In&quot;</span><span class="p">,</span> <span class="s2">&quot;Circus&quot;</span><span class="p">,</span> <span class="s2">&quot;Halloween&quot;</span><span class="p">,</span> <span class="s2">&quot;Tri Chase&quot;</span><span class="p">,</span> <span class="s2">&quot;Tri Wipe&quot;</span><span class="p">,</span> <span class="s2">&quot;Tri Fade&quot;</span><span class="p">,</span> <span class="s2">&quot;Lightning&quot;</span><span class="p">,</span> <span class="s2">&quot;ICU&quot;</span><span class="p">,</span> <span class="s2">&quot;Multi Comet&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Dual Scanner&quot;</span><span class="p">,</span> <span class="s2">&quot;Stream 2&quot;</span><span class="p">,</span> <span class="s2">&quot;Oscillate&quot;</span><span class="p">,</span> <span class="s2">&quot;Pride 2015&quot;</span><span class="p">,</span> <span class="s2">&quot;Juggle&quot;</span><span class="p">,</span> <span class="s2">&quot;Palette&quot;</span><span class="p">,</span> <span class="s2">&quot;Fire 2012&quot;</span><span class="p">,</span> <span class="s2">&quot;Colorwaves&quot;</span><span class="p">,</span> <span class="s2">&quot;BPM&quot;</span><span class="p">,</span> <span class="s2">&quot;Fill Noise&quot;</span><span class="p">,</span> <span class="s2">&quot;Noise 1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Noise 2&quot;</span><span class="p">,</span> <span class="s2">&quot;Noise 3&quot;</span><span class="p">,</span> <span class="s2">&quot;Noise 4&quot;</span><span class="p">,</span> <span class="s2">&quot;Colortwinkle&quot;</span><span class="p">,</span> <span class="s2">&quot;Lake&quot;</span><span class="p">,</span> <span class="s2">&quot;Meteor&quot;</span><span class="p">,</span> <span class="s2">&quot;Smooth Meteor&quot;</span><span class="p">,</span> <span class="s2">&quot;Railway&quot;</span><span class="p">,</span> <span class="s2">&quot;Ripple&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;palettes&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;Default&quot;</span><span class="p">,</span> <span class="s2">&quot;Random Cycle&quot;</span><span class="p">,</span> <span class="s2">&quot;Primary Color&quot;</span><span class="p">,</span> <span class="s2">&quot;Based on Primary&quot;</span><span class="p">,</span> <span class="s2">&quot;Set Colors&quot;</span><span class="p">,</span> <span class="s2">&quot;Based on Set&quot;</span><span class="p">,</span> <span class="s2">&quot;Party&quot;</span><span class="p">,</span> <span class="s2">&quot;Cloud&quot;</span><span class="p">,</span> <span class="s2">&quot;Lava&quot;</span><span class="p">,</span> <span class="s2">&quot;Ocean&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Forest&quot;</span><span class="p">,</span> <span class="s2">&quot;Rainbow&quot;</span><span class="p">,</span> <span class="s2">&quot;Rainbow Bands&quot;</span><span class="p">,</span> <span class="s2">&quot;Sunset&quot;</span><span class="p">,</span> <span class="s2">&quot;Rivendell&quot;</span><span class="p">,</span> <span class="s2">&quot;Breeze&quot;</span><span class="p">,</span> <span class="s2">&quot;Red &amp; Blue&quot;</span><span class="p">,</span> <span class="s2">&quot;Yellowout&quot;</span><span class="p">,</span> <span class="s2">&quot;Analogous&quot;</span><span class="p">,</span> <span class="s2">&quot;Splash&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Pastel&quot;</span><span class="p">,</span> <span class="s2">&quot;Sunset 2&quot;</span><span class="p">,</span> <span class="s2">&quot;Beech&quot;</span><span class="p">,</span> <span class="s2">&quot;Vintage&quot;</span><span class="p">,</span> <span class="s2">&quot;Departure&quot;</span><span class="p">,</span> <span class="s2">&quot;Landscape&quot;</span><span class="p">,</span> <span class="s2">&quot;Beach&quot;</span><span class="p">,</span> <span class="s2">&quot;Sherbet&quot;</span><span class="p">,</span> <span class="s2">&quot;Hult&quot;</span><span class="p">,</span> <span class="s2">&quot;Hult 64&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Drywet&quot;</span><span class="p">,</span> <span class="s2">&quot;Jul&quot;</span><span class="p">,</span> <span class="s2">&quot;Grintage&quot;</span><span class="p">,</span> <span class="s2">&quot;Rewhi&quot;</span><span class="p">,</span> <span class="s2">&quot;Tertiary&quot;</span><span class="p">,</span> <span class="s2">&quot;Fire&quot;</span><span class="p">,</span> <span class="s2">&quot;Icefire&quot;</span><span class="p">,</span> <span class="s2">&quot;Cyane&quot;</span><span class="p">,</span> <span class="s2">&quot;Light Pink&quot;</span><span class="p">,</span> <span class="s2">&quot;Autumn&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Magenta&quot;</span><span class="p">,</span> <span class="s2">&quot;Magred&quot;</span><span class="p">,</span> <span class="s2">&quot;Yelmag&quot;</span><span class="p">,</span> <span class="s2">&quot;Yelblu&quot;</span><span class="p">,</span> <span class="s2">&quot;Orange &amp; Teal&quot;</span><span class="p">,</span> <span class="s2">&quot;Tiamat&quot;</span><span class="p">,</span> <span class="s2">&quot;April Night&quot;</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="overview-of-values">Overview of values</h3>
 <h4 id="state-object">State object</h4>
 <table>
@@ -1919,16 +1919,16 @@ This feature is available in build 200829 and above.</p>
 <h4 id="playlists">Playlists</h4>
 <p>(beta, available since 0.11.0)</p>
 <p>Sample playlist API call:</p>
-<pre><code class="language-json">{
-  &quot;playlist&quot;: {
-    &quot;ps&quot;: [26, 20, 18, 20],
-    &quot;dur&quot;: [30, 20, 10, 50],
-    &quot;transition&quot;: 0,
-    &quot;repeat&quot;: 10,
-    &quot;end&quot;: 21
-  }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;playlist&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;ps&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">26</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span>
+    <span class="nt">&quot;dur&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">],</span>
+    <span class="nt">&quot;transition&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;repeat&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="nt">&quot;end&quot;</span><span class="p">:</span> <span class="mi">21</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>This example applies preset ID 26 for 3 seconds, then preset 20 for 2 seconds, then preset 18 for 1 second, lastly preset 20 again for 5 seconds.This repeats 10 times, then preset 21 is applied.</p>
 <p>Playlist object:</p>
 <table>
