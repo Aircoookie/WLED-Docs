@@ -1463,7 +1463,7 @@ Example: <code>{"on":true,"bri":255}</code> sets the brightness to maximum. <cod
 <td>ID of currently set preset.</td>
 </tr>
 <tr>
-<td>~~pss~~</td>
+<td><del>pss</del></td>
 <td>0 to 65535</td>
 <td>Bitwise indication of preset slots (0 - vacant, 1 - written). Always 0 in 0.11. Not changable. <em>Removed as of v0.11.1</em></td>
 </tr>
@@ -1488,7 +1488,7 @@ Example: <code>{"on":true,"bri":255}</code> sets the brightness to maximum. <cod
 <td>Duration of nightlight in minutes</td>
 </tr>
 <tr>
-<td>~~nl.fade~~</td>
+<td><del>nl.fade</del></td>
 <td>bool</td>
 <td>If <code>true</code>, the light will gradually dim over the course of the nightlight duration. If <code>false</code>, it will instantly turn to thetarget brightness once the duration has elapsed. <em>Removed in 0.13.0</em> (use mode instead)</td>
 </tr>
@@ -1741,7 +1741,7 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 <td><code>true</code> if a white channel slider should be displayed. <em>(available since 0.10.0)</em></td>
 </tr>
 <tr>
-<td>~~leds.pin~~</td>
+<td><del>leds.pin</del></td>
 <td>byte array</td>
 <td>LED strip pin(s). Always one element. <em>Removed as of v0.13</em></td>
 </tr>
@@ -1886,7 +1886,7 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 <td>The product name. Always <code>FOSS</code> for standard installations.</td>
 </tr>
 <tr>
-<td>~~btype~~</td>
+<td><del>btype</del></td>
 <td>string</td>
 <td>The origin of the build. <code>src</code> if a release version is compiled from source, <code>bin</code> for an official release image, <code>dev</code> for a development build (regardless of src/bin origin) and <code>exp</code> for experimental versions. <code>ogn</code> if the image is flashed to hardware by the vendor. <em>Removed as of v0.10</em></td>
 </tr>
