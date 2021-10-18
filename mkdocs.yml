@@ -39,6 +39,7 @@ markdown_extensions:
   - admonition
   - attr_list
   - pymdownx.highlight
+  - pymdownx.superfences
 extra:
   social:
     - icon: fontawesome/brands/discord
