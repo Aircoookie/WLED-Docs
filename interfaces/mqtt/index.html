@@ -1167,13 +1167,13 @@ In v0.8.4-0.8.6 only, WLED supports MQTT autodiscovery by the HomeAssistant soft
 </div>
 <p>WLED will subscribe to up to six topics to change the state of the lights.</p>
 <ul>
-<li><strong>[mqttDeviceTopic]</strong>\
+<li><strong>[mqttDeviceTopic]</strong><br />
   -&gt; Send brightness as ASCII number 0-255 or the strings "ON", "OFF", and "T" (for toggle)</li>
-<li><strong>[mqttDeviceTopic]/col</strong>\
+<li><strong>[mqttDeviceTopic]/col</strong><br />
   -&gt; Send color as HEX (#WWRRGGBB or #RRGGBB) or 32bit DEC. Hex has '#','h' or 'H' as prefix.</li>
 <li>
-<p><strong>[mqttDeviceTopic]/api</strong>\
-  -&gt; Send an API call (using the <a href="/interfaces/http-api">HTTP API</a> or, since 0.11, JSON API syntax). You may omit the "win" and just send e.g. "FX=73"</p>
+<p><strong>[mqttDeviceTopic]/api</strong><br />
+  -&gt; Send an API call (using the <a href="/interfaces/http-api">HTTP API</a> or, since 0.11, <a href="https://github.com/Aircoookie/WLED/wiki/JSON-API">JSON API</a> syntax). You may omit the "win" and just send e.g. "FX=73"</p>
 </li>
 <li>
 <p><strong>[mqttGroupTopic]</strong></p>
@@ -1189,20 +1189,23 @@ If [mqttGroupTopic] is left empty, it will not subscribe to anything. An empty [
 <p>Additionally, on light change, WLED will publish to 3 topics for MQTT clients to query the state of the light.</p>
 <ul>
 <li>
-<p><strong>[mqttDeviceTopic]/g</strong>\
+<p><strong>[mqttDeviceTopic]/g</strong><br />
   -&gt; Contains current brightness as ASCII number 0-255</p>
 </li>
 <li>
-<p><strong>[mqttDeviceTopic]/c</strong>\
+<p><strong>[mqttDeviceTopic]/c</strong><br />
   -&gt; Contains current color as HEX (#RRGGBB if white is 0, else #WWRRGGBB)</p>
 </li>
 <li>
-<p><strong>[mqttDeviceTopic]/v</strong>\
+<p><strong>[mqttDeviceTopic]/v</strong><br />
   -&gt; Contains XML API response (same as HTTP API)</p>
 </li>
 </ul>
 <p>There is support for client ID and authentication, but this is presently transmitted over an unencrypted connection, so please <strong>do not</strong> use the same password for other services.</p>
-<p><strong>Attention:</strong> The maximal length of a MQTT messages for WLED is 1024 bytes.</p>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>The maximal length of a MQTT messages for WLED is 1024 bytes.</p>
+</div>
                 
                   
                 
