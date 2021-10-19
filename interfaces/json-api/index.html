@@ -1345,6 +1345,11 @@ The response consists of four objects:</p>
 <h3 id="setting-new-values">Setting new values</h3>
 <p>Sending a POST request to <code>/json</code> or <code>/json/state</code> with (parts of) the state object will update the respective values.
 Example: <code>{"on":true,"bri":255}</code> sets the brightness to maximum. <code>{"seg":[{"col":[[0,255,200]]}]}</code> sets the color of the first segment to teal.</p>
+<div class="admonition tldr">
+<p class="admonition-title">CURL example</p>
+<p>This will toggle on and off and return the new state (v0.13+):
+<code>curl -X POST "http://[WLED-IP]/json/state" -d '{"on":"t","v":true}' -H "Content-Type: application/json"</code></p>
+</div>
 <p>Sample JSON API response (v0.8.4):</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="p">{</span>
