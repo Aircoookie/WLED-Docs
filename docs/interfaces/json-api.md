@@ -25,6 +25,10 @@ You may also obtain those objects individually using the URLs `/json/state` `/js
 Sending a POST request to `/json` or `/json/state` with (parts of) the state object will update the respective values.
 Example: `{"on":true,"bri":255}` sets the brightness to maximum. `{"seg":[{"col":[[0,255,200]]}]}` sets the color of the first segment to teal.
 
+!!! tldr "CURL example"
+    This will toggle on and off and return the new state (v0.13+):
+    `curl -X POST "http://[WLED-IP]/json/state" -d '{"on":"t","v":true}' -H "Content-Type: application/json"`
+
 Sample JSON API response (v0.8.4):
 
 ```json
