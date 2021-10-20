@@ -7,7 +7,7 @@ hide:
 
 
 !!! info "Version Info"
-    Since v0.8.2, infrared control from various IT remotes is supported for ESP8266 and since v0.9.0 for ESP32, too.
+    Since v0.8.2, infrared control from various IR remotes is supported for ESP8266 and since v0.9.0 for ESP32, too.
 
 A dedicated infrared receiver module is required.
 (KY-022 or TSOP38238 are confirmed to work and inexpensive)
