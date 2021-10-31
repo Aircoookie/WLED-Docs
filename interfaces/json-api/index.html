@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.db9e7362.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -829,6 +829,8 @@
       </a>
       
         
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1235,6 +1237,8 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1695,7 +1699,7 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 <tr>
 <td>i</td>
 <td>array</td>
-<td><a href="https://github.com/Aircoookie/WLED/wiki/JSON-API#per-segment-individual-led-control">Individual LED control</a>. Not included in state response <em>(available since 0.10.2)</em></td>
+<td><a href="https://kno.wled.ge/interfaces/json-api/#per-segment-individual-led-control">Individual LED control</a>. Not included in state response <em>(available since 0.10.2)</em></td>
 </tr>
 </tbody>
 </table>
@@ -1912,17 +1916,17 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 Keep in mind that this is non-persistent, if the light is turned off the segment will return to effect mode.
 The segment is blanked out when using individual control, the set effect will not run.
 To disable, change any property of the segment or turn off the light.</p>
-<p>To set individual LEDs starting from the beginning, use an array of Color arrays.<br />
+<p>To set individual LEDs starting from the beginning, use an array of Color arrays.
 <code>{"seg":{"i":[[255,0,0], [0,255,0], [0,0,255]]}}</code> will set the first LED red, the second green and the third blue.</p>
-<p>To set individual LEDs, use the LED index followed by its Color array.<br />
+<p>To set individual LEDs, use the LED index followed by its Color array.
 <code>{"seg":{"i":[0,[255,0,0], 2,[0,255,0], 4,[0,0,255]]}}</code> is the same as above, but leaves blank spaces between the lit LEDs.</p>
-<p>To set ranges of LEDs, use the LED start and stop index followed by its Color array.<br />
+<p>To set ranges of LEDs, use the LED start and stop index followed by its Color array.
 <code>{"seg":{"i":[0,8,[255,0,0], 10,18,[0,0,255]]}}</code> sets the first eight LEDs to red, leaves out two, and sets another 8 to blue.</p>
 <p>Keep in mind that the LED indices are segment-based, so LED 0 is the first LED of the segment, not of the entire strip.
 Segment features, including Grouping, Spacing, Mirroring and Reverse are functional.
 This feature is available in build 200829 and above.</p>
 <h4 id="playlists">Playlists</h4>
-<p>(beta, available since 0.11.0)</p>
+<p>(Available since 0.11.0)</p>
 <p>Sample playlist API call:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;playlist&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -2103,10 +2107,10 @@ This feature is available in build 200829 and above.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.1e84347e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
