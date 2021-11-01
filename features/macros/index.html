@@ -70,6 +70,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#macros" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -626,9 +631,60 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Macros
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Macros
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#macros" class="md-nav__link">
+    Macros
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    Buttons
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analog-button" class="md-nav__link">
+    Analog button
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-brightness" class="md-nav__link">
+    Global Brightness
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1142,6 +1198,59 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#macros" class="md-nav__link">
+    Macros
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    Buttons
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analog-button" class="md-nav__link">
+    Analog button
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-brightness" class="md-nav__link">
+    Global Brightness
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -1158,6 +1267,7 @@
 <p class="admonition-title">Info</p>
 <p>Also see <a href="/features/presets">Presets</a> for 0.11.0+.</p>
 </div>
+<h2 id="macros"><strong>Macros</strong></h2>
 <p>You are able to set custom actions ("Macros") in Time &amp; Macro settings for the following events:</p>
 <ul>
 <li>Specific time of day</li>
@@ -1178,6 +1288,60 @@ You can specify up to 16 macros. (up to 250 in WLED 0.11 since the Macro functio
 The "FX=~" macro steps through the effects (in this case short press).</p>
 <p>You can set a preset to "win&amp;P1=1&amp;P2=3&amp;PL=~", enter the preset number for your button, and this will step through presets 1 and 3. Change the "3" to whatever your highest preset is that you want to include.</p>
 <p>The default (built-in) actions for Button 0 are short-press: toggle on/off and long-press: select random color.</p>
+<h2 id="buttons"><strong>Buttons</strong></h2>
+<p>Multiple buttons are implemented since 0.13 and allow a few different types of buttons to be connected to the ESP:</p>
+<ul>
+<li>momentary push-buttons that short GPIO pin to ground</li>
+<li>momentary push-buttons that short GPIO pin to +3.3V (inverted)</li>
+<li>switches (be careful with selection of GPIO for switch since some GPIOs will prevent successful boot of ESP if held LOW or HIGH at boot)</li>
+<li>PIR switch AKA motion detection sensor (they set GPIO HIGH when motion is detected, this type of buttons will also trigger MQTT message with /motion topic)</li>
+<li>some GPIO pins on ESP32 can act as momentary touch buttons with no additional hardware</li>
+<li>analog "buttons" (also with inverted logic) those can be used as potentiometers or analog input buttons
+Button GPIO pin and type can be selected in LED Settings page.</li>
+</ul>
+<p>Each momentary button can have 3 different <a href="https://github.com/Aircoookie/WLED/wiki/Presets">Presets</a> assigned, for short press, long press or double press. For switch type buttons you can assign only 2 presets, one for transition of switch from LOW to HIGH and second for the opposite transition from HIGH to LOW. Selecting 0 for preset will set default action. If you find that default action is inverted for switch, please create presets for On and Off actions and assign them appropriately.</p>
+<p>For assigning <a href="https://github.com/Aircoookie/WLED/wiki/Presets">Presets</a> to buttons use Time &amp; Macros settings page.</p>
+<h2 id="analog-button"><strong>Analog button</strong></h2>
+<p>Starting in WLED 0.13, analog "buttons" (e.g. a potentiometer) are supported. With the Short and Long columns set to 0, Set the Double column in Button Actions to one of these values to configure:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Global brightness</td>
+<td>250</td>
+</tr>
+<tr>
+<td>Effect speed</td>
+<td>249</td>
+</tr>
+<tr>
+<td>Effect intensity</td>
+<td>248</td>
+</tr>
+<tr>
+<td>Palette</td>
+<td>247</td>
+</tr>
+<tr>
+<td>Primary color hue</td>
+<td>200</td>
+</tr>
+<tr>
+<td>Segment N opacity</td>
+<td>0-32</td>
+</tr>
+</tbody>
+</table>
+<p>This potentiometer should be supplied 3.3V and GND, with it's output supplied to A0 (or any other ADC pin you specify), reccomended 10KΩ or greater. </p>
+<h2 id="global-brightness"><strong>Global Brightness</strong></h2>
+<p>Users planning to use a potentiometer for global brightness should be aware that wled is configured to turn off when the potentiometer is adjusted to either extreme - both maximum and minimum adjustments. Users who desire to disable this functionality may do so on the hardware side by adding resistors between the potentiometer and the rails.</p>
+<p>Adding a resistor between the potentiometer and 3.3V prevents A0 from fully reaching 3.3V and allows the potentiometer to be adjusted to the maximum adjustment without powering off wled. A value of 7.5%-10% of the potentiometer value should be sufficient for this (~750Ω for a 10KΩ potentiometer). Similarly, added resistance between the potentiometer and GND prevents A0 from reaching 0V, and allows the potentiometer to be adjusted to the minimum adjustment without powering off wled. A value of 3-5% of the potentiometer value should be sufficient (~500Ω for a 10KΩ potentiomenter).</p>
+<p>In both instances, the added resistances will slightly reduce the overall adjustment range, with a larger reduction for larger resistor choices. As such, A user who desires the maximum possible adjustment range should determine their needed resistance values experimentally by installing the potentiometer, adjusting for stable behavior at the desired extrema, measuring the voltage on A0, using the voltage divider equation to determine the optimal resistance, then retesting for confirmation.</p>
                 
                   
                 
