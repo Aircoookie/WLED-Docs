@@ -38,6 +38,7 @@ For further buttons, the default action for short press is cycling effects, long
 ## Buttons
 
 Multiple buttons are implemented since 0.13 and allow a few different types of buttons to be connected to the ESP:
+
 - momentary push-buttons that short GPIO pin to ground
 - momentary push-buttons that short GPIO pin to +3.3V (inverted)
 - switches (be careful with selection of GPIO for switch since some GPIOs will prevent successful boot of ESP if held LOW or HIGH at boot)
