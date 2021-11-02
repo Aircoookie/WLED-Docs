@@ -1288,13 +1288,15 @@ The "FX=~" macro steps through the effects (in this case short press).</p>
 Long-pressing for more than 6 seconds will open the WLED-AP with the default password (<code>wled1234</code>).<br />
 For further buttons, the default action for short press is cycling effects, long press ramp brightness, and double press cycle palettes.</p>
 <h2 id="buttons">Buttons</h2>
-<p>Multiple buttons are implemented since 0.13 and allow a few different types of buttons to be connected to the ESP:
-- momentary push-buttons that short GPIO pin to ground
-- momentary push-buttons that short GPIO pin to +3.3V (inverted)
-- switches (be careful with selection of GPIO for switch since some GPIOs will prevent successful boot of ESP if held LOW or HIGH at boot)
-- PIR switch AKA motion detection sensor (they set GPIO HIGH when motion is detected, this type of buttons will also trigger MQTT message with /motion topic)
-- some GPIO pins on ESP32 can act as momentary touch buttons with no additional hardware
-- analog "buttons" (also with inverted logic) those can be used as potentiometers or analog input buttons</p>
+<p>Multiple buttons are implemented since 0.13 and allow a few different types of buttons to be connected to the ESP:</p>
+<ul>
+<li>momentary push-buttons that short GPIO pin to ground</li>
+<li>momentary push-buttons that short GPIO pin to +3.3V (inverted)</li>
+<li>switches (be careful with selection of GPIO for switch since some GPIOs will prevent successful boot of ESP if held LOW or HIGH at boot)</li>
+<li>PIR switch AKA motion detection sensor (they set GPIO HIGH when motion is detected, this type of buttons will also trigger MQTT message with /motion topic)</li>
+<li>some GPIO pins on ESP32 can act as momentary touch buttons with no additional hardware</li>
+<li>analog "buttons" (also with inverted logic) those can be used as potentiometers or analog input buttons</li>
+</ul>
 <p>Button GPIO pin and type can be selected in the <em>LED Settings</em> page.</p>
 <p>Each momentary button can have 3 different <a href="/features/presets">Presets</a> assigned, for short press, long press or double press. For switch type buttons you can assign only 2 presets, one for transition of switch from LOW to HIGH and second for the opposite transition from HIGH to LOW.
 Selecting 0 for preset will use the <em>default</em> action. If you find that the default action is <em>inverted</em> for switch, please create presets for On and Off actions and assign them appropriately.</p>
