@@ -5,13 +5,13 @@ hide:
   # - toc
 ---
 
+!!! hint
+    While this API is not deprecated, it is highly recommended to use the [JSON API](/interfaces/json-api) instead of the HTTP API for new integrations, as it is structured in a better way and allows efficient use of newer features like segments, presets, and playlists.
+
 WLED's HTTP API allows you to set many properties of your lights, even more than the index page UI supports, via a simple GET web request.
 
 !!! help
     _Unsure how all this API stuff works? Check out [this amazing guide](https://tynick.com/blog/01-28-2020/controlling-wled-with-raspberry-pi-using-the-wled-api/) by tynick!_
-
-!!! hint
-    While this API is not deprecated, it is highly recommended to use the [JSON API](/interfaces/json-api) instead of the HTTP API for new integrations, as it is structured in a better way and allows efficient use of newer features like segments, presets, and playlists.
 
 The basic URL scheme is: `[ipadress]/win`. This will return an XML file with some current values (see bottom of page).
 Parameters can be added to control some of the variables.
