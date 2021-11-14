@@ -1373,14 +1373,14 @@
                 
                   <h1>HTTP Request API</h1>
                 
-                <p>WLED's HTTP API allows you to set many properties of your lights, even more than the index page UI supports, via a simple GET web request.</p>
+                <div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>While this API is not deprecated, it is highly recommended to use the <a href="/interfaces/json-api">JSON API</a> instead of the HTTP API for new integrations, as it is structured in a better way and allows efficient use of newer features like segments, presets, and playlists.</p>
+</div>
+<p>WLED's HTTP API allows you to set many properties of your lights, even more than the index page UI supports, via a simple GET web request.</p>
 <div class="admonition help">
 <p class="admonition-title">Help</p>
 <p><em>Unsure how all this API stuff works? Check out <a href="https://tynick.com/blog/01-28-2020/controlling-wled-with-raspberry-pi-using-the-wled-api/">this amazing guide</a> by tynick!</em></p>
-</div>
-<div class="admonition hint">
-<p class="admonition-title">Hint</p>
-<p>While this API is not deprecated, it is highly recommended to use the <a href="/interfaces/json-api">JSON API</a> instead of the HTTP API for new integrations, as it is structured in a better way and allows efficient use of newer features like segments, presets, and playlists.</p>
 </div>
 <p>The basic URL scheme is: <code>[ipadress]/win</code>. This will return an XML file with some current values (see bottom of page).
 Parameters can be added to control some of the variables.</p>
