@@ -1499,7 +1499,7 @@ Example: <code>{"on":true,"bri":255}</code> sets the brightness to maximum. <cod
 <tr>
 <td><del>nl.fade</del></td>
 <td>bool</td>
-<td>If <code>true</code>, the light will gradually dim over the course of the nightlight duration. If <code>false</code>, it will instantly turn to thetarget brightness once the duration has elapsed. <em>Removed in 0.13.0</em> (use mode instead)</td>
+<td>If <code>true</code>, the light will gradually dim over the course of the nightlight duration. If <code>false</code>, it will instantly turn to the target brightness once the duration has elapsed. <em>Removed in 0.13.0</em> (use mode instead)</td>
 </tr>
 <tr>
 <td>nl.mode</td>
@@ -1510,6 +1510,11 @@ Example: <code>{"on":true,"bri":255}</code> sets the brightness to maximum. <cod
 <td>nl.tbri</td>
 <td>0 to 255</td>
 <td>Target brightness of nightlight feature</td>
+</tr>
+<tr>
+<td>nl.rem</td>
+<td>-1 to 15300</td>
+<td>Remaining nightlight duration in seconds, -1 if not active. Only in state response, can not be set.</td>
 </tr>
 <tr>
 <td>udpn.send</td>
@@ -1660,21 +1665,6 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 <td>mi</td>
 <td>bool</td>
 <td>Mirrors the segment (available since 0.10.2)</td>
-</tr>
-<tr>
-<td>grp</td>
-<td>0 to 255</td>
-<td>Grouping (how many consecutive LEDs of the same segment will be grouped to the same color)</td>
-</tr>
-<tr>
-<td>spc</td>
-<td>0 to 255</td>
-<td>Spacing (how many LEDs are turned off and skipped between each group)</td>
-</tr>
-<tr>
-<td>of</td>
-<td>-len+1 to len</td>
-<td>Offset (how many LEDs to rotate the virtual start of the segments, available since 0.13.0)</td>
 </tr>
 <tr>
 <td>lx</td>
@@ -1868,6 +1858,11 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 <td>core</td>
 <td>string</td>
 <td>Version of the underlying (Arduino core) SDK.</td>
+</tr>
+<tr>
+<td>lwip</td>
+<td>0, 1, or 2</td>
+<td>Version of LwIP. 1 or 2 on ESP8266, 0 (does not apply) on ESP32. <em>Deprecated, removal in 0.14.0</em></td>
 </tr>
 <tr>
 <td>freeheap</td>
