@@ -129,9 +129,10 @@ psave | 1 to 16 (250 in 0.11) | Save current light config to specified preset sl
 pl | -1 to 0 | ID of currently set playlist. For now, this sets the preset cycle feature, `-1` is off and `0` is on.
 nl.on | bool | Nightlight currently active
 nl.dur | 1 to 255 | Duration of nightlight in minutes
-~~nl.fade~~ | bool | If `true`, the light will gradually dim over the course of the nightlight duration. If `false`, it will instantly turn to thetarget brightness once the duration has elapsed. _Removed in 0.13.0_ (use mode instead)
+~~nl.fade~~ | bool | If `true`, the light will gradually dim over the course of the nightlight duration. If `false`, it will instantly turn to the target brightness once the duration has elapsed. _Removed in 0.13.0_ (use mode instead)
 nl.mode | 0 to 3 | Nightlight mode (0: instant, 1: fade, 2: color fade, 3: sunrise) (available since 0.10.2)
 nl.tbri | 0 to 255 | Target brightness of nightlight feature
+nl.rem | -1 to 15300 | Remaining nightlight duration in seconds, -1 if not active. Only in state response, can not be set.
 udpn.send | bool | Send WLED broadcast (UDP sync) packet on state change
 udpn.recv | bool | Receive broadcast packets
 udpn.nn | bool | Don't send a broadcast packet (applies to just the current API call). Not included in state response.
@@ -168,9 +169,6 @@ rev | bool | Flips the segment, causing animations to change direction.
 on | bool | Turns on and off the individual segment. (available since 0.10.0)
 bri | 0 to 255 | Sets the individual segment brightness (available since 0.10.0)
 mi | bool | Mirrors the segment (available since 0.10.2)
-grp | 0 to 255 | Grouping (how many consecutive LEDs of the same segment will be grouped to the same color)
-spc | 0 to 255 | Spacing (how many LEDs are turned off and skipped between each group)
-of | -len+1 to len | Offset (how many LEDs to rotate the virtual start of the segments, available since 0.13.0)
 lx | `BBBGGGRRR`: 0 - 100100100 | Loxone RGB value for primary color. Each color (`RRR`,`GGG`,`BBB`) is specified in the range from 0 to 100%.
 lx | `20bbbtttt`: 200002700 - 201006500 | Loxone brightness and color temperature values for primary color. Brightness `bbb` is specified in the range 0 to 100%. `tttt` defines the color temperature in the range from 2700 to 6500 Kelvin. (available since 0.11.0, not included in state response)
 ly | `BBBGGGRRR`: 0 - 100100100 | Loxone RGB value for secondary color. Each color (`RRR`,`GGG`,`BBB`) is specified in the range from 0 to 100%.
@@ -214,6 +212,7 @@ fs.pmt | uint32 | Unix timestamp for the last modification to the `presets.json`
 ndc | -1 to 255 | Number of other WLED devices discovered on the network. -1 if Node discovery disabled. (since 0.12.0)
 arch | string | Name of the platform.
 core | string | Version of the underlying (Arduino core) SDK.
+lwip | 0, 1, or 2 | Version of LwIP. 1 or 2 on ESP8266, 0 (does not apply) on ESP32. _Deprecated, removal in 0.14.0_
 freeheap | uint32 | Bytes of heap memory (RAM) currently available. Problematic if <`10k`.
 uptime | uint32 | Time since the last boot/reset in seconds.
 opt | uint16 | Used for debugging purposes only.
