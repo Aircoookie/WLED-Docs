@@ -39,9 +39,9 @@ Tonyno
 
 ### Used Libraries and Dependencies
 
-[ESP8266](https://github.com/esp8266/Arduino)/[ESP32](https://github.com/espressif/arduino-esp32) Arduino Core
-[NeoPixelBus](https://github.com/svenihoney/NeoPixelBus) by Makuna (svenihoney fork)  
-[FastLED](https://github.com/FastLED/FastLED/) library
+[ESP8266](https://github.com/esp8266/Arduino)/[ESP32](https://github.com/espressif/arduino-esp32) Arduino Core  
+[NeoPixelBus](https://github.com/Makuna/NeoPixelBus) by Makuna  
+[FastLED](https://github.com/FastLED/FastLED/) library  
 [ESPAsyncTCP](https://github.com/me-no-dev/ESPAsyncTCP) by me-no-dev  
 [ESPAsyncUDP](https://github.com/me-no-dev/ESPAsyncUDP) by me-no-dev (as of 0.9.0)  
 [ESPAsyncWebServer](https://github.com/me-no-dev/ESPAsyncWebServer) by me-no-dev  
