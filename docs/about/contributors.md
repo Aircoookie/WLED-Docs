@@ -46,19 +46,19 @@ Tonyno
 [ESPAsyncUDP](https://github.com/me-no-dev/ESPAsyncUDP) by me-no-dev (as of 0.9.0)  
 [ESPAsyncWebServer](https://github.com/me-no-dev/ESPAsyncWebServer) by me-no-dev  
 [ArduinoJSON](https://github.com/bblanchon/ArduinoJson) by bblanchon  
-[async-mqtt-client](https://github.com/marvinroger/async-mqtt-client) by marvinroger
-[WS2812FX](https://github.com/kitesurfer1404/WS2812FX) by kitesurfer1404 (modified)
-[IRremoteESP8266](https://github.com/markszabo/IRremoteESP8266) by markszabo (optional)
-[Timezone](https://github.com/JChristensen/Timezone) by JChristensen
-[Blynk](https://github.com/blynkkk/blynk-library) library (compacted)
-[E1.31](https://github.com/forkineye/E131) library by forkineye (modified)
-[Espalexa](https://github.com/Aircoookie/Espalexa) by Aircoookie (modified)
-Many included FastLED effects are modified versions of [kriegsman](https://gist.github.com/kriegsman/)'s gists!
+[async-mqtt-client](https://github.com/marvinroger/async-mqtt-client) by marvinroger  
+[WS2812FX](https://github.com/kitesurfer1404/WS2812FX) by kitesurfer1404 (modified)  
+[IRremoteESP8266](https://github.com/markszabo/IRremoteESP8266) by markszabo (optional)  
+[Timezone](https://github.com/JChristensen/Timezone) by JChristensen  
+[Blynk](https://github.com/blynkkk/blynk-library) library (compacted)  
+[E1.31](https://github.com/forkineye/E131) library by forkineye (modified)  
+[Espalexa](https://github.com/Aircoookie/Espalexa) by Aircoookie (modified)  
+Many included FastLED effects are modified versions of [kriegsman](https://gist.github.com/kriegsman/)'s gists!  
 
 [WebServer_tng](https://github.com/bbx10/WebServer_tng) by bbx10 (ESP32, up to 0.8.3)  
 [PubSubClient](https://github.com/knolleary/pubsubclient) by knolleary (modified, up to 0.8.3)  
 
-[![badge](https://img.shields.io/badge/badges-by%20shields.io-blue.svg?style=flat-square)](https://shields.io)
+[![badge](https://img.shields.io/badge/badges-by%20shields.io-blue.svg?style=flat-square)](https://shields.io)  
 [iro.js](https://iro.js.org/) colorpicker by James Daniel!  
 Classic UI icons by [Linearicons](https://linearicons.com) created by [Perxis](https://perxis.com)!  
 
