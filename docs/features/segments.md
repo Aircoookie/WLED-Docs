@@ -29,15 +29,15 @@ To illustrate this, we can create a segment with 12 LEDS (physically referred to
 
 |Setting|LED Output|
 | :---: | --- |
-|Grouping 1<br /> Spacing 0|![](https://github.com/twlare/WLEDDocs/blob/master/G1S0A.png) |
-|Grouping 2<br /> Spacing 0|![](https://github.com/twlare/WLEDDocs/blob/master/G2S0Virtual.png) |
+|Grouping 1<br /> Spacing 0| ![](https://github.com/twlare/WLEDDocs/blob/master/G1S0A.png) |
+|Grouping 2<br /> Spacing 0| ![](https://github.com/twlare/WLEDDocs/blob/master/G2S0Virtual.png) |
 
 As the pattern cycles, the group of LEDs will move together.
 
 |Setting|LED Output|
 | :---: | --- |
-|Grouping 1<br /> Spacing 0|![](https://github.com/twlare/WLEDDocs/blob/master/G1S0Cycle.gif) |
-|Grouping 2<br /> Spacing 0|![](https://github.com/twlare/WLEDDocs/blob/master/G2S0Cycle.gif) |
+|Grouping 1<br /> Spacing 0| ![](https://github.com/twlare/WLEDDocs/blob/master/G1S0Cycle.gif) |
+|Grouping 2<br /> Spacing 0| ![](https://github.com/twlare/WLEDDocs/blob/master/G2S0Cycle.gif) |
 
 Spacing controls the space or gap between LEDs. The default spacing is zero, so normally there is no space between LEDs. When Spacing is set to one, every other LED will be lit. The number of _virtual_ LEDs in the strip will be half the number of physical LEDs.
 
@@ -45,20 +45,20 @@ Again, we can create a segment with 12 LEDS (physically referred to as LED 0 to 
 
 |Setting|LED Output|
 | :---: | --- |
-|Grouping 1<br /> Spacing 0|![](https://github.com/twlare/WLEDDocs/blob/master/G1S0A.png) |
-|Grouping 1<br /> Spacing 1|![](https://github.com/twlare/WLEDDocs/blob/master/G1S1Virtual.png) |
+|Grouping 1<br /> Spacing 0| ![](https://github.com/twlare/WLEDDocs/blob/master/G1S0A.png) |
+|Grouping 1<br /> Spacing 1| ![](https://github.com/twlare/WLEDDocs/blob/master/G1S1Virtual.png) |
 
 As the pattern cycles, only the virtual LEDs will be lit - the blank LEDs in between the virtual LEDs will always be off.
 
 |Setting|LED Output|
 | :---: | --- |
-|Grouping 1<br /> Spacing 0|![](https://github.com/twlare/WLEDDocs/blob/master/G1S0Cycle.gif) |
-|Grouping 1<br /> Spacing 1|![](https://github.com/twlare/WLEDDocs/blob/master/G1S1Cycle.gif) |
+|Grouping 1<br /> Spacing 0| ![](https://github.com/twlare/WLEDDocs/blob/master/G1S0Cycle.gif) |
+|Grouping 1<br /> Spacing 1| ![](https://github.com/twlare/WLEDDocs/blob/master/G1S1Cycle.gif) |
 
 Grouping and Spacing can be combined to create many different custom LED layouts. In the example below, the strip of 12 physical LEDs has been configured to function as four virtual LEDs with a small gap between them.
 
 |Setting|LED Output|
 | :---: | --- |
-|Grouping 2<br /> Spacing 1|![](https://github.com/twlare/WLEDDocs/blob/master/G2S1A.png) |
-|Grouping 2<br /> Spacing 1|![](https://github.com/twlare/WLEDDocs/blob/master/G2S1Cycle.gif) |
+|Grouping 2<br /> Spacing 1| ![](https://github.com/twlare/WLEDDocs/blob/master/G2S1A.png) |
+|Grouping 2<br /> Spacing 1| ![](https://github.com/twlare/WLEDDocs/blob/master/G2S1Cycle.gif) |
 
