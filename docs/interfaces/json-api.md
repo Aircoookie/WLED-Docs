@@ -160,10 +160,10 @@ grp | 0 to 255 | Grouping (how many consecutive LEDs of the same segment will be
 spc | 0 to 255 | Spacing (how many LEDs are turned off and skipped between each group)
 of | -len+1 to len | Offset (how many LEDs to rotate the virtual start of the segments, available since 0.13.0)
 col | array of colors | Array that has up to 3 color arrays as elements, the primary, secondary (background) and tertiary colors of the segment. Each color is an array of 3 or 4 bytes, which represent an RGB(W) color.
-fx | 0 to info.fxcount -1 | ID of the effect.
+fx | 0 to info.fxcount -1 | ID of the effect or ~ to increment, ~- to decrement, or r for random.
 sx | 0 to 255 | Relative effect speed
 ix | 0 to 255 | Effect intensity
-pal | 0 to info.palcount -1 | ID of the color palette
+pal | 0 to info.palcount -1 | ID of the color palette or ~ to increment, ~- to decrement, or r for random.
 sel | bool | `true` if the segment is selected. Selected segments will have their state (color/FX) updated by APIs that don't support segments (currently any API except this JSON API). If no segment is selected, the first segment (_id_:`0`) will behave as if selected. WLED will report the state of the first (lowest _id_) segment that is selected to APIs (UDP sync, HTTP, MQTT, Blynk...).
 rev | bool | Flips the segment, causing animations to change direction.
 on | bool | Turns on and off the individual segment. (available since 0.10.0)
