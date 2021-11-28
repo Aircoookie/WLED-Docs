@@ -52,13 +52,8 @@ NodeMCU-32s | ESP32 | The most common ESP32 development board. Works well, depen
 [RE5V1C](https://www.itead.cc/sonoff-re5v1c.html) | ESP8285 | 5v DC input - onboard 10A relay
 [TwilightLord-ESP32](https://www.tindie.com/products/22968/)| ESP32 | ESP32 Dev Board with latest WROOM-32E module, USB Type-C, 800mA LDO, 8MB flash and PTC fused. D1 Mini32 form factor and compatible pin out.[16MB Flash version also available](https://www.tindie.com/products/23037/)
 [TwilightLord-ESP32 Ethernet Shield](https://www.tindie.com/products/23050/)| Ethernet Shield (10/100Mbps) for ESP32 boards. Stackable with D1 Mini32 form factor boards.
-[QuinLED-ESP32](https://quinled.info/quinled-esp32/)| Custom design D1 Mini32 formfactor ESP32 module | Fed up with the bad quality of generic ESP32 modules on the market, designed my own "beefed up" version.
-
-Available in multiple versions:
-
-* QuinLED-ESP32-AB (Antenna Board)
-* QuinLED-ESP32-AE (Antenna External)
-* QuinLED-ESP32-ABE (Antenna Board + Ethernet)
+[QuinLED-ESP32](https://quinled.info/quinled-esp32/)| Custom design D1 Mini32 formfactor ESP32 module | Fed up with the bad quality of generic ESP32 modules on the market, designed my own "beefed up" version. Available in multiple versions: QuinLED-ESP32-AB (Antenna Board), QuinLED-ESP32-AE (Antenna External), QuinLED-ESP32-ABE (Antenna Board + Ethernet)
+[LedBox V2](https://stanleyprojects.com/projects/ledbox_v2/) | ESP32 | LedBox V2 by StanleyProjects is a fully contained, sound reactive, ESP32 based module for controlling 5-12V addressable LED strips (WS2812, SK6812, etc.), supporting both 3-(VDD,DAT,GND) and 4-(VDD,DAT,CLK,GND) pin configuration. It includes a digital MEMS microphone, button and IR control, and a safety resettable fuse, all in a compact 3D printable case. It is fully compatible with <a href=https://github.com/Aircoookie/WLED>WLED</a> and <a href=https://github.com/atuline/WLED>sound reactive WLED fork</a>.
 
 ## Useful boards and addons
 
@@ -78,10 +73,8 @@ Pre-assembled and pre-flashed with WLED [available to buy!](https://quinled.info
 [ESPthings.io ET-AL01](https://www.espthings.io/AL01) | DIY board for 5 Analog channels and/or up to 5 Digital LED channels (or a combination of the latter as required), Integrated level shifter, 5v/12/24v compatibility, 4x pull-up/down GPIO, serial interface and power distribution terminals. Can be used with Wemos D1-style ESP8266 or ESP32 boards.
 [Cadsbi Motion Smart](https://www.cadsbi-shop.de/shop/led-beleuchtungscontroller/cadsbi-motion-smart/) | Ready to use solution with 3 output ports, an external antenna, in a high quality metal enclosure
 [WiFi Controlled Desk Lamp](https://github.com/stanoba/wifi-desk-lamp) | Open source PCB for WLED
-[My Baby's Got LED](https://tindie.com/products/mcqn_ltd/my-babys-got-led/)| [Certified open hardware](https://certification.oshwa.org/uk000030.html). Easy plug-and-play WLED board for those that don't want to figure out the hardware - you won't even need a screwdriver to get started. PC power supply ([ATX](https://en.wikipedia.org/wiki/ATX#:~:text=An%20ATX%20power%20supply%20provides,the%20original%2020-pin%20version.)) powers three 5V injection points on 8A fuses.
-For sale now on [Tindie](https://tindie.com/products/mcqn_ltd/my-babys-got-led/)! Full details on [the github repo](https://github.com/mcqn/my-babys-got-led) and [maker's website](https://mcqn.com/ibal223/).
+[My Baby's Got LED](https://tindie.com/products/mcqn_ltd/my-babys-got-led/)| [Certified open hardware](https://certification.oshwa.org/uk000030.html). Easy plug-and-play WLED board for those that don't want to figure out the hardware - you won't even need a screwdriver to get started. PC power supply ([ATX](https://en.wikipedia.org/wiki/ATX#:~:text=An%20ATX%20power%20supply%20provides,the%20original%2020-pin%20version.)) powers three 5V injection points on 8A fuses. For sale now on [Tindie](https://tindie.com/products/mcqn_ltd/my-babys-got-led/)! Full details on [the github repo](https://github.com/mcqn/my-babys-got-led) and [maker's website](https://mcqn.com/ibal223/).
 [Luminxa v2.2.2](https://luminxa.com/product/luminxa-2-2-2/) | ESP32 | ESP32 Based board with 12 WS2812 LEDs Onboard (6 on each side) + Gyro Sensor (Business project)
-[LedBox V2](https://stanleyprojects.com/projects/ledbox_v2/) | ESP32 | LedBox V2 by StanleyProjects is a small ESP32 based module for controlling 5-12V addressable LED strips (WS2812, SK6812, etc.), including digital MEMS microphone, button and IR control, safety resettable fuse, and a 3D printable case. It is fully compatible with [WLED](https://github.com/Aircoookie/WLED) and [sound reactive WLED fork](https://github.com/atuline/WLED).
 
 ## Levelshifters
 
