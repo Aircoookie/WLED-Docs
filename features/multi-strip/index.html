@@ -1270,21 +1270,21 @@
   <h1>Multi-strip Support</h1>
 
 <h2 id="multi-strip-support">Multi strip support</h2>
-<p>Starting in WLED 0.12.0, you are able to connect to multiple LED output from one ESP!
-Pins and lengths can be easily configured in LED settings, you do not need to re-compile for your specific setup. Custom binaries for pins are now also a thing of the past!</p>
-<p>There are a few specifics and tips to keep in mind when designing your setup:</p>
+<p>Starting in WLED 0.12.0, you are able to use multiple LED outputs from one ESP board!
+Pins and LED nubers can be easily configured in LED settings, you don't need to re-compile code for your specific setup. Custom binaries for multiple pins are now also a thing of the past!</p>
+<p>There are a few tips and recomendations to keep in mind when designing your setup:</p>
 <h3 id="general">General</h3>
 <ul>
 <li>It is highly recommended to use an ESP32 when using more than 1 output</li>
-<li>You may freely choose the model, pins, length and color order of your LED strips at runtime in the LED settings page</li>
-<li>It is recommeded to dimension the power supply correctly according to your setup and disable the WLED brightness limiter setting to increase framerate with very large LED counts</li>
+<li>You may freely choose the LEDs type, pin numbers, length and color order of your LED strips at runtime in the LED settings page</li>
+<li>Highly recommeded to size power supply correctly according to your setup and disable the WLED brightness limiter setting to increase framerate with very large LED counts</li>
 <li>Most strip types have yet to be tested. Add confirmed working below:</li>
 <li>Confirmed working: WS281x, SK6812 RGBW, PWM white</li>
 </ul>
 <h3 id="esp8266">ESP8266</h3>
 <ul>
 <li>There is a maximum of 3 strips supported.</li>
-<li>It is highly recommended to use two specific LED pins, GPIO1 (TX) and GPIO2 (D4), since they allow for hardware driving.</li>
+<li>Although is highly recommended to use two specific LED pins, GPIO1 (TX) and GPIO2 (D4), since they allow for hardware driving.</li>
 <li>It is recommended to use 512 LEDs/pin for good performance for a total of 1024 LEDs.</li>
 <li>800 LEDs/pin for a total of 1600 has been confirmed working, but is not recommended for good performance and reliability.</li>
 <li>Using GPIO1 will disable serial debugging. If you need it, you can't use a strip on this pin.</li>
