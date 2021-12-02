@@ -12,7 +12,10 @@ hide:
 A dedicated infrared receiver module is required.
 (KY-022 or TSOP38238 are confirmed to work and inexpensive)
 
-The default sensor pin is GPIO4. It can be changed in the Wled settings.
+The default sensor pin is GPIO4. It can be changed in LED settings.
+
+!!! warning
+    IR receiving will not work on ESP8266 if you use any LED pin other than GPIO 1, 2, or 3 for _digital_ LED strips.
 
 ### Supported IR remotes
 
