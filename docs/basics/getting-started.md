@@ -49,9 +49,9 @@ Go to the IP `4.3.2.1` in your browser. You should also be able to use the embed
 
 | Function | GPIO | Notes |
 |---|---|---|
-LED Data | 2 | 16 on ESP32
-Button | 0 | 17 on ESP32
-IR Remote| 4 |
+LED Data | 2 | 
+Button | 0 | 
+IR Remote| N/A | Suggested: 4
 Relay | 12 |
 
 ### Software update procedure
