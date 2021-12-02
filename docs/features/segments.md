@@ -77,4 +77,4 @@ A negative offset value is allowed and represents an offset starting from the la
 
 ![](https://github.com/twlare/WLEDDocs/raw/master/LED2to1.png)
 
-The offset values is prioritized over grouping and/or spacing. For For example, if the offset is 2, grouping 4 and spacing 1, the first group of 4 LEDs will start at the physical position number 2.
+The offset values is prioritized over grouping and/or spacing. For example, if the offset is 2, grouping 4 and spacing 1, the first group of 4 LEDs will start at the physical position number 2.
