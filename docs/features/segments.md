@@ -63,13 +63,13 @@ Grouping and Spacing can be combined to create many different custom LED layouts
 |Grouping 2<br /> Spacing 1| ![](https://github.com/twlare/WLEDDocs/raw/master/G2S1Cycle.gif) |
 
 ## Offset in a segment
-By default effects start in the first LED in the segment and finish in the last one. If the offset parameter in a segment is used, the effect start will be moved by the number of positions entered, it will continue to the last LED and then finish with the initial positions that were skipped.
+By default effects start in the first LED in the segment and finish in the last one. If the offset parameter in a segment is used, the effect start will be moved by the number of positions entered. It will continue to the last LED and then finish with the initial positions that were skipped.
 
 For instance, let's assume assume a strip of 12 LEDs with the positions numbered as follows (like the examples above):
 
 ![](https://github.com/twlare/WLEDDocs/raw/master/LEDS12.png)
 
-A skip value of 5 will make the effect start in the physical position 5, continue to position 11 and then finish with positions 0 through 4, like this:
+An offset value of 5 will make the effect start in the physical position 5, continue to position 11 and then finish with positions 0 through 4, like this:
 
 ![](https://github.com/twlare/WLEDDocs/raw/master/LED7to6.png)
 
