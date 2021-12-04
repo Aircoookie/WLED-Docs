@@ -30,7 +30,7 @@ GS8208 | 12v |
 
 ## Controllers with WLED pre-installed
 
-!!! info
+!!! check "Info"
     Unless otherwise noted, controllers feature everything you need for most WLED setups, except a power supply, wiring and fuses, and of course the LEDs themselves!
     
 | Name | Description |
@@ -57,8 +57,8 @@ Pre-assembled and pre-flashed with WLED [available to buy!](https://quinled.info
 !!! warning
     If the controller does not have a USB port and no firmware supporting wireless updates pre-installed, installing WLED to it requires an FTDI flasher and in some cases, soldering.
 
-| Name | Description |
-|---|---|
+| Name | Chip | Description |
+|---|---|---|
 [SP501e](https://www.amazon.com/RGBZONE-Controller-Compatible-Addressable-WS2812bB/dp/B07S3Z8GSH) | ESP8285 | 8285-based 1M Controller that supports both Addressable and PWM-based RGBWW LED strips. _Note that recent versions have 2M._ 5-24v DC input, 55mm x 26mm, sold under BTF lighting, RGBZone, etc. Vendors all list 'Fairynest' as the supporting mobile application. Board is silk screened with 'SP5XXe' but no other markings. RS232 pads are exposed on the back-side of the board with GND and GPIO0 right next to each other and thus Flash access fairly straight forward. GPIO 0 must be pulled to GND at boot and throughout the flashing process.  I/O configuration: LEDPIN is 'GPIO03' for Addressable, BTNPIN is GPIO 1. PWM pin out for RGBWW: CW: 14, WW: 12, B: 13, R: 15 and G: GPIO04. Flashed via PlatformIO, ESPHome and Tasmotizer. Pics of board here: <https://github.com/Operation760/SP501e-RGB-LED-Controller-/blob/master/SP501e_top_bottom_traced.jpg>  Flashing Connections: <https://github.com/tonyn0/sp501e-flashing/blob/main/sp501e%20flash.png>
 [SP511e](https://www.aliexpress.com/item/32820185063.html) | ESP8285 | An ESP8285 2MB controller with 3 case buttons, built in mic, IR receiver, 38 key remote, and dual outputs. The dual outputs are connected to the same data pin. There is a step-by-step guide for [Installing WLED on SP511E Controller](https://github.com/scottrbailey/WLED-Utils/blob/gh-pages/sp511e_wled.md).
 [SP108e v2](https://www.amazon.de/dp/B07KW1W68R) | ESP8285 | Hardware-Modification required and different versions exists! 8285-based 2M Controller that supports addressable RGBWW LED strips, also with CLK line (like ATA102). 5-24v DC input, 85mm x 45mm x 23mm. Vendors list spledapps 'Led Shop' as the supporting mobile application. Board is silk screened with 'SP108e'. No pads are exposed and a second processor is used to control the LEDs. Pin7 of that processor needs to be grounded to hold it in reset state. Then you can connect GPIO0 to GND and TX, RX, VCC, GND for flashing. Connect GPIO2 to R4 for DATA out and GPIO13 to R3 for CLK out. Flashed via PlatformIO, esptool. OTA updates work. Pics of pinout here: <https://github.com/psxde/sp108e-led-controller/raw/main/sp108ev2_inside.png>
@@ -70,7 +70,7 @@ Pre-assembled and pre-flashed with WLED [available to buy!](https://quinled.info
     Unless noted otherwise, ready to use products (bulbs, kits, ...)
 
 | Name | Chip | Description |
-|---|---|
+|---|---|---|
 [Athom 7W bulb](https://www.aliexpress.com/item/1005003512202231.html) | ESP8266 (2M flash) | 7W bulb with RGB, warm white, and cold white LEDs. Compatible with all voltages, available form factors E27, B22 and [GU10](https://www.aliexpress.com/item/1005003512212258.html)
 
 ## Other products WLED can be installed to
@@ -82,7 +82,7 @@ Pre-assembled and pre-flashed with WLED [available to buy!](https://quinled.info
 
 ## Raw ESP8266/ESP32 boards
 
-!!! warning
+!!! tip
     While these can work like the controllers above without extra hardware, you might get flickering without adding an external levelshifter. Using them without a controller board/shield is only recommended if you like tinkering with electronic projects.
 
 | Name | Chip | Description |
