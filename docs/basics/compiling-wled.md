@@ -22,6 +22,9 @@ Instead, installing Visual Studio Code and its PlatformIO (PIO) extension is eas
 
 ### Compilation guide (PlatformIO)
 
+!!! tip
+    Make sure Git Client is installed on your system. You can get it [here](https://git-scm.com/downloads).
+
 1. In VS Code, open the file `platformio.ini`.
 2. Add a semicolon in front of the line that says `default_envs = travis_esp8266, travis_esp32` to comment it out.
 3. Select your build environment by un-commenting one of the lines starting with `; default_envs =`.  

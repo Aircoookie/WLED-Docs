@@ -7,23 +7,23 @@ hide:
 
 ## Multi strip support
 
-Starting in WLED 0.12.0, you are able to connect to multiple LED output from one ESP!
-Pins and lengths can be easily configured in LED settings, you do not need to re-compile for your specific setup. Custom binaries for pins are now also a thing of the past!
+Starting in WLED 0.12.0, you are able to use multiple LED outputs from one ESP board!
+Pins and LED nubers can be easily configured in LED settings, you don't need to re-compile code for your specific setup. Custom binaries for multiple pins are now also a thing of the past!
 
-There are a few specifics and tips to keep in mind when designing your setup:
+There are a few tips and recomendations to keep in mind when designing your setup:
 
 ### General
 
 - It is highly recommended to use an ESP32 when using more than 1 output
-- You may freely choose the model, pins, length and color order of your LED strips at runtime in the LED settings page
-- It is recommeded to dimension the power supply correctly according to your setup and disable the WLED brightness limiter setting to increase framerate with very large LED counts
+- You may freely choose the LEDs type, pin numbers, length and color order of your LED strips at runtime in the LED settings page
+- Highly recommeded to size power supply correctly according to your setup and disable the WLED brightness limiter setting to increase framerate with very large LED counts
 - Most strip types have yet to be tested. Add confirmed working below:
 - Confirmed working: WS281x, SK6812 RGBW, PWM white
 
 ### ESP8266
 
 - There is a maximum of 3 strips supported.
-- It is highly recommended to use two specific LED pins, GPIO1 (TX) and GPIO2 (D4), since they allow for hardware driving.
+- Although is highly recommended to use two specific LED pins, GPIO1 (TX) and GPIO2 (D4), since they allow for hardware driving.
 - It is recommended to use 512 LEDs/pin for good performance for a total of 1024 LEDs.
 - 800 LEDs/pin for a total of 1600 has been confirmed working, but is not recommended for good performance and reliability.
 - Using GPIO1 will disable serial debugging. If you need it, you can't use a strip on this pin.
