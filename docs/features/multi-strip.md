@@ -23,7 +23,7 @@ There are a few tips and recomendations to keep in mind when designing your setu
 ### ESP8266
 
 - There is a maximum of 3 strips supported.
-- Although is highly recommended to use two specific LED pins, GPIO1 (TX) and GPIO2 (D4), since they allow for hardware driving.
+- It is highly recommended to use two specific LED pins, GPIO1 (TX) and GPIO2 (D4), since they allow for hardware driving.
 - It is recommended to use 512 LEDs/pin for good performance for a total of 1024 LEDs.
 - 800 LEDs/pin for a total of 1600 has been confirmed working, but is not recommended for good performance and reliability.
 - Using GPIO1 will disable serial debugging. If you need it, you can't use a strip on this pin.
