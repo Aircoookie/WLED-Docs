@@ -67,15 +67,6 @@ WS2815 | 12v | has a backup data line
 [SP501e](https://www.amazon.com/RGBZONE-Controller-Compatible-Addressable-WS2812bB/dp/B07S3Z8GSH) | ESP8285 | 8285-based 1M Controller that supports both Addressable and PWM-based RGBWW LED strips. _Note that recent versions have 2M._ 5-24v DC input, 55mm x 26mm, sold under BTF lighting, RGBZone, etc. Vendors all list 'Fairynest' as the supporting mobile application. Board is silk screened with 'SP5XXe' but no other markings. Serial pads are exposed on the back-side of the board with GND and GPIO0 right next to each other and thus Flash access fairly straight forward. GPIO 0 must be pulled to GND at boot and throughout the flashing process.  I/O configuration: LEDPIN is 'GPIO03' for Addressable, BTNPIN is GPIO 1. PWM pin out for RGBWW: CW: 14, WW: 12, B: 13, R: 15 and G: 4. Flashed via PlatformIO, ESPHome and Tasmotizer. Pics of board here: <https://github.com/Operation760/SP501e-RGB-LED-Controller-/blob/master/SP501e_top_bottom_traced.jpg>  Flashing Connections: <https://github.com/tonyn0/sp501e-flashing/blob/main/sp501e%20flash.png>
 [SP511e](https://www.aliexpress.com/item/32820185063.html) | ESP8285 | An ESP8285 2MB controller with 3 case buttons, built in mic, IR receiver, 38 key remote, and dual outputs. The dual outputs are connected to the same data pin. There is a step-by-step guide for [Installing WLED on SP511E Controller](https://github.com/scottrbailey/WLED-Utils/blob/gh-pages/sp511e_wled.md).
 
-## Products with WLED pre-installed
-
-!!! info
-    Unless noted otherwise, ready to use products (bulbs, kits, ...)
-
-| Name | Chip | Description |
-|---|---|---|
-[Athom 7W bulb](https://www.aliexpress.com/item/1005003512202231.html) | ESP8266 (2M flash) | 7W bulb with RGB, warm white, and cold white LEDs. Compatible with all voltages, available form factors E27, B22 and [GU10](https://www.aliexpress.com/item/1005003512212258.html)
-[Athom LED Strip Controller](https://www.athom.tech/blank-1/wled-2812b-led-strip-controller) | |
 ## Other products WLED can be installed to
 
 | Name | Chip | Description |
