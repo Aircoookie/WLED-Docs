@@ -11,7 +11,7 @@
       
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.0">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
@@ -19,10 +19,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.82f3c0b9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.9204c3b2.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -488,20 +488,6 @@
         <li class="md-nav__item">
   <a href="#products-with-wled-pre-installed" class="md-nav__link">
     Products with WLED pre-installed
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#other-products-wled-can-be-installed-to" class="md-nav__link">
-    Other products WLED can be installed to
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#raw-esp8266esp32-boards" class="md-nav__link">
-    Raw ESP8266/ESP32 boards
   </a>
   
 </li>
@@ -1282,20 +1268,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#other-products-wled-can-be-installed-to" class="md-nav__link">
-    Other products WLED can be installed to
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#raw-esp8266esp32-boards" class="md-nav__link">
-    Raw ESP8266/ESP32 boards
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#useful-boards-and-addons" class="md-nav__link">
     Useful boards and addons
   </a>
@@ -1513,7 +1485,7 @@ Please carefully compare all items in the category you are interested in, and yo
 <tr>
 <td><a href="https://www.amazon.com/RGBZONE-Controller-Compatible-Addressable-WS2812bB/dp/B07S3Z8GSH">SP501e</a></td>
 <td>ESP8285</td>
-<td>8285-based 1M Controller that supports both Addressable and PWM-based RGBWW LED strips. <em>Note that recent versions have 2M.</em> 5-24v DC input, 55mm x 26mm, sold under BTF lighting, RGBZone, etc. Vendors all list 'Fairynest' as the supporting mobile application. Board is silk screened with 'SP5XXe' but no other markings. RS232 pads are exposed on the back-side of the board with GND and GPIO0 right next to each other and thus Flash access fairly straight forward. GPIO 0 must be pulled to GND at boot and throughout the flashing process.  I/O configuration: LEDPIN is 'GPIO03' for Addressable, BTNPIN is GPIO 1. PWM pin out for RGBWW: CW: 14, WW: 12, B: 13, R: 15 and G: GPIO04. Flashed via PlatformIO, ESPHome and Tasmotizer. Pics of board here: <a href="https://github.com/Operation760/SP501e-RGB-LED-Controller-/blob/master/SP501e_top_bottom_traced.jpg">https://github.com/Operation760/SP501e-RGB-LED-Controller-/blob/master/SP501e_top_bottom_traced.jpg</a>  Flashing Connections: <a href="https://github.com/tonyn0/sp501e-flashing/blob/main/sp501e%20flash.png">https://github.com/tonyn0/sp501e-flashing/blob/main/sp501e%20flash.png</a></td>
+<td>8285-based 1M Controller that supports both Addressable and PWM-based RGBWW LED strips. <em>Note that recent versions have 2M.</em> 5-24v DC input, 55mm x 26mm, sold under BTF lighting, RGBZone, etc. Vendors all list 'Fairynest' as the supporting mobile application. Board is silk screened with 'SP5XXe' but no other markings. Serial pads are exposed on the back-side of the board with GND and GPIO0 right next to each other and thus Flash access fairly straight forward. GPIO 0 must be pulled to GND at boot and throughout the flashing process.  I/O configuration: LEDPIN is 'GPIO03' for Addressable, BTNPIN is GPIO 1. PWM pin out for RGBWW: CW: 14, WW: 12, B: 13, R: 15 and G: 4. Flashed via PlatformIO, ESPHome and Tasmotizer. Pics of board here: <a href="https://github.com/Operation760/SP501e-RGB-LED-Controller-/blob/master/SP501e_top_bottom_traced.jpg">https://github.com/Operation760/SP501e-RGB-LED-Controller-/blob/master/SP501e_top_bottom_traced.jpg</a>  Flashing Connections: <a href="https://github.com/tonyn0/sp501e-flashing/blob/main/sp501e%20flash.png">https://github.com/tonyn0/sp501e-flashing/blob/main/sp501e%20flash.png</a></td>
 </tr>
 <tr>
 <td><a href="https://www.aliexpress.com/item/32820185063.html">SP511e</a></td>
@@ -1541,9 +1513,18 @@ Please carefully compare all items in the category you are interested in, and yo
 <td>ESP8266 (2M flash)</td>
 <td>7W bulb with RGB, warm white, and cold white LEDs. Compatible with all voltages, available form factors E27, B22 and <a href="https://www.aliexpress.com/item/1005003512212258.html">GU10</a></td>
 </tr>
+<tr>
+<td><a href="https://www.athom.tech/blank-1/wled-2812b-led-strip-controller">Athom LED Strip Controller</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>## Other products WLED can be installed to</td>
+<td></td>
+<td></td>
+</tr>
 </tbody>
 </table>
-<h2 id="other-products-wled-can-be-installed-to">Other products WLED can be installed to</h2>
 <table>
 <thead>
 <tr>
@@ -1563,9 +1544,18 @@ Please carefully compare all items in the category you are interested in, and yo
 <td>ESP8266</td>
 <td>For "analog" LED use only! Runs on 12-24VDC. One button and one input. Pins: R=12, G=15, B=14, W=4. <em>Finished, commercial product that can be flashed.</em> <a href="https://github.com/srg74/WLED/tree/ShellyRGBW2">Binary code fork is here</a> and <a href="https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/Shelly_RGBW2">firmware is here</a></td>
 </tr>
+<tr>
+<td><a href="https://www.athom.tech/blank-1/15w-color-bulb">Athom 15W bulb</a></td>
+<td>ESP8266 (2M flash)</td>
+<td>15W bulb with RGB, warm white, and cold white LEDs. Compatible with all voltages, available form factors E27, B22 and <a href="https://www.aliexpress.com/item/1005003512212258.html">GU10</a></td>
+</tr>
+<tr>
+<td>## Raw ESP8266/ESP32 boards</td>
+<td></td>
+<td></td>
+</tr>
 </tbody>
 </table>
-<h2 id="raw-esp8266esp32-boards">Raw ESP8266/ESP32 boards</h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>While these can work like the controllers above without extra hardware, you might get flickering without adding an external levelshifter. Using them without a controller board/shield is only recommended if you like tinkering with electronic projects.</p>
@@ -1679,6 +1669,10 @@ Please carefully compare all items in the category you are interested in, and yo
 <tr>
 <td>TXS0102</td>
 <td>A bidirectional levelshifter that works well with WLED.</td>
+</tr>
+<tr>
+<td><a href="https://www.pixelcontroller.com/store/controllers/53-falcon-picap.html">F-Amp</a></td>
+<td>Level shifter/data booster</td>
 </tr>
 </tbody>
 </table>
@@ -1873,10 +1867,10 @@ Please carefully compare all items in the category you are interested in, and yo
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.cefbb252.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.17f42bbf.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
