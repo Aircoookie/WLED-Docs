@@ -20,7 +20,7 @@ Controllers use the WLED API to change the current light settings.
 [Home Assistant](https://www.home-assistant.io/integrations/wled/) | Versatile and feature rich home automation system. Out-of-the-box WLED integration with automatic discovery.
 [ioBroker adapter](https://github.com/iobroker-community-adapters/ioBroker.wled) | Versatile and feature rich home automation system. Out-of-the-box WLED integration with automatic discovery.
 [openHAB](https://community.openhab.org/t/wled-a-binding-for-controlling-led-strips-and-strings-from-an-opensource-esp8266-project/87286) | Another more professional feature rich home automation system. WLED integration made easy. [Link 2](https://community.openhab.org/t/solved-wled-please-make-this-work-in-openhab/82783) |
-| [node-red-contrib-wled](https://flows-new.nodered.org/node/node-red-contrib-wled) | [Node-RED](https://nodered.org) nodes for WLED |
+| [node-red-contrib-wled](https://flows.nodered.org/node/node-red-contrib-wled) | [Node-RED](https://nodered.org) nodes for WLED |
 | [Lumia Stream](https://lumiastream.com/) | Allows for control of your lights from streaming software |
 | [OctoPrint-WLED](https://plugins.octoprint.org/plugins/wled) | Connect your [OctoPrint](https://octoprint.org) install to your WLED install using this plugin to show things like printer status, progress and more! |
 
