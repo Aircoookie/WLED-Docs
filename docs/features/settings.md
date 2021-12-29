@@ -128,9 +128,9 @@ Countdown mode | Y/N | Allows to have a visual countdown towards a specific date
 API macro fields | 16x String 0..64 | Allows you to define custom API calls which can be triggered by events
 Boot Macro | 0..16 | Which macro to trigger after WiFi connected (0 is default action)
 Alexa On/Off Macros | 2x 0..16 | Which macros to trigger when turning on/off via Alexa
-Button Macro | 0..16 | Macro to trigger if button is short pressed
-Long Press | 0..16 | Macro to trigger if button is long pressed (>0.7s)
-Double press | 0..16 | Macro for double click on button
+Button Macro | 0..16 | Macro to trigger if button is short pressed. Default action is on/off toggle.
+Long Press | 0..16 | Macro to trigger if button is long pressed (>0.7s).  Default action is random color.
+Double press | 0..16 | Macro for double click on button.
 Countdown-Over Macro | 0..16 | Macro to trigger when the countdown is over
 Timed-Light-Over Macro | 0..16 | Macro to trigger when timed light is done
 
