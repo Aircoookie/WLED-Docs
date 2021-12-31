@@ -1274,45 +1274,45 @@ open Arduino or VSCode serial monitor. Then press each button and record the cod
 <li>Most of the 24-key and fewer remotes are designed with analog LEDs in mind and do not have very useful labels for WLED. With JSON IR and a fine-tip Sharpie, you can repurpose buttons to make them more useful.</li>
 </ul>
 <h3 id="irjson-sample">ir.json sample</h3>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;0xF740BF&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;On/Off&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cmd&quot;</span><span class="p">:</span> <span class="s2">&quot;T=2&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;rpt&quot;</span><span class="p">:</span> <span class="kc">true</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;0xF700FF&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Speed +&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cmd&quot;</span><span class="p">:</span> <span class="s2">&quot;SX=~16&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;0xF720DF&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Red&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cmnt&quot;</span><span class="p">:</span> <span class="s2">&quot;Lava palette + primary, secondary and tertiary colors&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cmd&quot;</span><span class="p">:</span> <span class="s2">&quot;FP=8&amp;CL=hFF7F00&amp;C2=hFF0000&amp;C3=hCC3D60&quot;</span>
-  <span class="p">},</span> 
-  <span class="nt">&quot;0xF710EF&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Timer1&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cmnt&quot;</span><span class="p">:</span> <span class="s2">&quot;Timer 60 min&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cmd&quot;</span><span class="p">:</span> <span class="s2">&quot;NL=60&amp;NT=0&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;0xF730CF&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Play&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cmnt&quot;</span><span class="p">:</span> <span class="s2">&quot;prime example of a playlist that cycles every 180 seconds and continues to repeat&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cmd&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;playlist&quot;</span><span class="p">:{</span><span class="nt">&quot;ps&quot;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">17</span><span class="p">],</span><span class="nt">&quot;dur&quot;</span><span class="p">:</span> <span class="mi">1800</span><span class="p">,</span><span class="nt">&quot;transition&quot;</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span><span class="nt">&quot;repeat&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">}}</span>
-  <span class="p">},</span> 
-  <span class="nt">&quot;0xFF9867&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Bright+&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cmnt&quot;</span><span class="p">:</span> <span class="s2">&quot;smaller steps at beginning, larger steps at the end&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cmd&quot;</span><span class="p">:</span> <span class="s2">&quot;!incBrightness&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;0xF78877&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;DIY1&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cmnt&quot;</span><span class="p">:</span> <span class="s2">&quot;Preset 1, fallback to Saw(16) - Party(6) if it doesn&#39;t exist&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cmd&quot;</span><span class="p">:</span> <span class="s2">&quot;!presetFallback&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;PL&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="nt">&quot;FX&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
-    <span class="nt">&quot;FP&quot;</span><span class="p">:</span> <span class="mi">6</span>
-  <span class="p">},</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;0xF740BF&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;On/Off&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;T=2&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;rpt&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;0xF700FF&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Speed +&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SX=~16&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;0xF720DF&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Red&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;cmnt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Lava palette + primary, secondary and tertiary colors&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FP=8&amp;CL=hFF7F00&amp;C2=hFF0000&amp;C3=hCC3D60&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"> </span>
+<span class="w">  </span><span class="nt">&quot;0xF710EF&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Timer1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;cmnt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Timer 60 min&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NL=60&amp;NT=0&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;0xF730CF&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Play&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;cmnt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;prime example of a playlist that cycles every 180 seconds and continues to repeat&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;playlist&quot;</span><span class="p">:{</span><span class="nt">&quot;ps&quot;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">17</span><span class="p">],</span><span class="nt">&quot;dur&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1800</span><span class="p">,</span><span class="nt">&quot;transition&quot;</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span><span class="nt">&quot;repeat&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">}}</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"> </span>
+<span class="w">  </span><span class="nt">&quot;0xFF9867&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bright+&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;cmnt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;smaller steps at beginning, larger steps at the end&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;!incBrightness&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;0xF78877&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DIY1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;cmnt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Preset 1, fallback to Saw(16) - Party(6) if it doesn&#39;t exist&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;!presetFallback&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;PL&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;FX&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;FP&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 
               
