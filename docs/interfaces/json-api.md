@@ -133,6 +133,7 @@ nl.dur | 1 to 255 | Duration of nightlight in minutes
 nl.mode | 0 to 3 | Nightlight mode (0: instant, 1: fade, 2: color fade, 3: sunrise) (available since 0.10.2)
 nl.tbri | 0 to 255 | Target brightness of nightlight feature
 nl.rem | -1 to 15300 | Remaining nightlight duration in seconds, -1 if not active. Only in state response, can not be set.
+ol.clock | bool | Clock overlay on/off
 udpn.send | bool | Send WLED broadcast (UDP sync) packet on state change
 udpn.recv | bool | Receive broadcast packets
 udpn.nn | bool | Don't send a broadcast packet (applies to just the current API call). Not included in state response.
