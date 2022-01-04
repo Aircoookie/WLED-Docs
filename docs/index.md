@@ -46,7 +46,7 @@ A fast and feature-rich implementation of an ESP8266/ESP32 webserver to control 
 - [MQTT](/interfaces/mqtt)  
 - [Blynk IoT](/interfaces/blynk)  
 - [E1.31](/interfaces/e1.31-dmx), [Art-Net](/interfaces/e1.31-dmx), DDP and [TPM2.net](/interfaces/udp-realtime)
-- [Hyperion](https://github.com/hyperion-project/hyperion)
+- [Hyperion](https://github.com/hyperion-project/hyperion.ng)
 - [UDP realtime](/interfaces/udp-realtime)
 - [Alexa voice control (including dimming and color)](/advanced/remote-access-ifttt)
 - [Sync to Philips Hue lights](/interfaces/philips-hue)
