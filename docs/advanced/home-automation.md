@@ -13,12 +13,12 @@ You can use any API WLED provides (JSON, HTTP, UDP, MQTT), JSON is preferred. Th
 ## Domoticz:
 Please see [here](https://github.com/frustreermeneer/domoticz-wled-plugin) !
 
-## Openhab: 
-The connection is made via MQTT broker & Openhab MQTT Binding (2.5x)with configuration files 
+## openHAB: 
 
+In openHAB 3 based environments you are able to use the native [openHAB WLED Binding](https://www.openhab.org/addons/bindings/wled/), which also supports discovery of your WLED devices.
+
+For older openHAB (2.5.x) environmantes the connection can be configured via MQTT broker & Openhab MQTT Binding (2.5x) with configuration files 
 Please find the details [here](https://community.openhab.org/t/wled-control-without-the-binding/101120)
-
-[With Pre-configured Binding](https://community.openhab.org/t/wled-a-binding-for-controlling-led-strips-and-strings-from-an-opensource-esp8266-project/87286)
 
 ## Indigo Domotics:
 Please see [here](https://www.indigodomo.com/pluginstore/214/) !
