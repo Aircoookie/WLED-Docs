@@ -11,7 +11,7 @@
       
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.4">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.5">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.bb3983ee.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ee0f47ba.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
@@ -60,7 +60,7 @@
   
     
     
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -977,7 +977,7 @@
       
         <li class="md-nav__item">
   <a href="#openhab" class="md-nav__link">
-    Openhab:
+    openHAB:
   </a>
   
 </li>
@@ -1238,7 +1238,7 @@
       
         <li class="md-nav__item">
   <a href="#openhab" class="md-nav__link">
-    Openhab:
+    openHAB:
   </a>
   
 </li>
@@ -1301,10 +1301,10 @@ You can use any API WLED provides (JSON, HTTP, UDP, MQTT), JSON is preferred. Th
 <p><a href="https://github.com/Snipercaine/WLED-HomeAssistant">HomeAssistant and NodeRED flows</a></p>
 <h2 id="domoticz">Domoticz:</h2>
 <p>Please see <a href="https://github.com/frustreermeneer/domoticz-wled-plugin">here</a> !</p>
-<h2 id="openhab">Openhab:</h2>
-<p>The connection is made via MQTT broker &amp; Openhab MQTT Binding (2.5x)with configuration files </p>
-<p>Please find the details <a href="https://community.openhab.org/t/wled-control-without-the-binding/101120">here</a></p>
-<p><a href="https://community.openhab.org/t/wled-a-binding-for-controlling-led-strips-and-strings-from-an-opensource-esp8266-project/87286">With Pre-configured Binding</a></p>
+<h2 id="openhab">openHAB:</h2>
+<p>In openHAB 3 based environments you are able to use the native <a href="https://www.openhab.org/addons/bindings/wled/">openHAB WLED Binding</a>, which also supports discovery of your WLED devices.</p>
+<p>For older openHAB (2.5.x) environmantes the connection can be configured via MQTT broker &amp; Openhab MQTT Binding (2.5x) with configuration files 
+Please find the details <a href="https://community.openhab.org/t/wled-control-without-the-binding/101120">here</a></p>
 <h2 id="indigo-domotics">Indigo Domotics:</h2>
 <p>Please see <a href="https://www.indigodomo.com/pluginstore/214/">here</a> !</p>
 <h2 id="home-assistant">Home Assistant</h2>
@@ -1542,10 +1542,10 @@ by @acid2000</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.361d90f1.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.b6ff8c07.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.289a2a4b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5e13d264.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
