@@ -108,6 +108,7 @@ ESP-01 | ESP8266 | One of the first and cheapest ESP8266 boards available. **_No
 | Name | Description |
 |---|---|
 SN74AHCT125N | Aircoookie's recommended levelshifter. Used on the QuinLed Dig-Uno and [WLED Wemos shield](https://github.com/srg74/WLED-wemos-shield).
+74AHCT32 | Same pinout as above can be used. This is just an OR gate, but any AHCT gate can be used if inputs are connected appropriately. ;)
 SN74HCT125N | Slower, cheaper version. Works just as well for WS2812, but not recommended for APA102.
 TXS0102 | A bidirectional levelshifter that works well with WLED.
 [F-Amp](https://www.pixelcontroller.com/store/controllers/53-falcon-picap.html) | Level shifter/data booster
