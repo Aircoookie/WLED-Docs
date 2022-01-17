@@ -287,8 +287,10 @@ As such, it is unlikely to match the _actual_ color temperature output by the li
 
 In the future, an option to specify the Kelvin temperatures of the utilized hardware may be added, once this is done, a color temperature can be set to more accurately match other lights.
 
-Therefore, for forward compatibility, your integration should expect both either a 0-255 value for `seg.cct`, in which case it is a relative value, or an absolute Kelvin value in the range 1000-20000 K. In case a Kelvin value is provided, you can consider the color temperature as accurate, which is not possible with relative 0-255 values as the Kelvin points of the white channels are unknown.  
+Therefore, for forward compatibility, your integration should expect both either a 0-255 value for `seg.cct`, in which case it is a relative value, or an absolute Kelvin value in the range 1000-16000 K. In case a Kelvin value is provided, you can consider the color temperature as accurate, which is not possible with relative 0-255 values as the Kelvin points of the white channels are unknown.  
 It is preferred that you set a new CCT value in the same range as received from WLED, that is, use 0-255 if the original value was within this range, and 1000-20000 K otherwise.
+
+If your code relies on absolute Kelvin values, a reasonable estimate for the warm white point (relative `0`) could be 2700K, while cold white (relative `255`) could commonly be 6500K.
 
 ##### Effect of the seg.cct value
 
