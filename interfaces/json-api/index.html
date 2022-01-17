@@ -709,6 +709,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/cct/" class="md-nav__link">
+        White handling
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -890,6 +904,33 @@
   <a href="#playlists" class="md-nav__link">
     Playlists
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cct-control" class="md-nav__link">
+    CCT control
+  </a>
+  
+    <nav class="md-nav" aria-label="CCT control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-value-ranges" class="md-nav__link">
+    Supported value ranges
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effect-of-the-segcct-value" class="md-nav__link">
+    Effect of the seg.cct value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1300,6 +1341,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#cct-control" class="md-nav__link">
+    CCT control
+  </a>
+  
+    <nav class="md-nav" aria-label="CCT control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-value-ranges" class="md-nav__link">
+    Supported value ranges
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effect-of-the-segcct-value" class="md-nav__link">
+    Effect of the seg.cct value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1647,17 +1715,22 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 <tr>
 <td>on</td>
 <td>bool</td>
-<td>Turns on and off the individual segment. (available since 0.10.0)</td>
+<td>Turns on and off the individual segment. <em>(available since 0.10.0)</em></td>
 </tr>
 <tr>
 <td>bri</td>
 <td>0 to 255</td>
-<td>Sets the individual segment brightness (available since 0.10.0)</td>
+<td>Sets the individual segment brightness <em>(available since 0.10.0)</em></td>
 </tr>
 <tr>
 <td>mi</td>
 <td>bool</td>
-<td>Mirrors the segment (available since 0.10.2)</td>
+<td>Mirrors the segment <em>(available since 0.10.2)</em></td>
+</tr>
+<tr>
+<td>cct</td>
+<td>0 to 255 <em>or</em> 1900 to 10091</td>
+<td>White spectrum <a href="#cct-control">color temperature</a> <em>(available since 0.13.0)</em></td>
 </tr>
 <tr>
 <td>lx</td>
@@ -1682,7 +1755,7 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 <tr>
 <td>i</td>
 <td>array</td>
-<td><a href="https://kno.wled.ge/interfaces/json-api/#per-segment-individual-led-control">Individual LED control</a>. Not included in state response <em>(available since 0.10.2)</em></td>
+<td><a href="#per-segment-individual-led-control">Individual LED control</a>. Not included in state response <em>(available since 0.10.2)</em></td>
 </tr>
 </tbody>
 </table>
@@ -1711,6 +1784,11 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 <td><em>leds</em></td>
 <td>object</td>
 <td>Contains info about the LED setup.</td>
+</tr>
+<tr>
+<td>leds.cct</td>
+<td>bool</td>
+<td><code>true</code> if the light supports <a href="#cct-control">color temperature control</a> <em>(available since 0.13.0)</em></td>
 </tr>
 <tr>
 <td>leds.count</td>
@@ -1958,6 +2036,22 @@ This feature is available in build 200829 and above.</p>
 </tr>
 </tbody>
 </table>
+<h4 id="cct-control">CCT control</h4>
+<p>Please also see the <a href="/features/cct">general info about CCT</a>.</p>
+<h5 id="supported-value-ranges">Supported value ranges</h5>
+<p>Given that the white spectrum handling is agnostic to the true color temperature of the LEDs used, a relative range is preferred for the time being, where a value of <code>0</code> indicates the warmest possible color temperature, while a value of <code>255</code> indicates the coldest temperature.</p>
+<p>It is also possible to pass a value in the range of <code>1900</code> to <code>10091</code>, in which case it is treated as a Kelvin color temperature, where <code>1900</code> is mapped to a relative value of <code>0</code> and <code>10091</code> to a relative value of <code>255</code>.</p>
+<p>As such, it is unlikely to match the <em>actual</em> color temperature output by the light, therefore the relative values 0-255 are preferred for the time being.</p>
+<p>In the future, an option to specify the Kelvin temperatures of the utilized hardware may be added, once this is done, a color temperature can be set to more accurately match other lights.</p>
+<p>Therefore, for forward compatibility, your integration should expect both either a 0-255 value for <code>seg.cct</code>, in which case it is a relative value, or an absolute Kelvin value in the range 1000-20000 K. In case a Kelvin value is provided, you can consider the color temperature as accurate, which is not possible with relative 0-255 values as the Kelvin points of the white channels are unknown.<br />
+It is preferred that you set a new CCT value in the same range as received from WLED, that is, use 0-255 if the original value was within this range, and 1000-20000 K otherwise.</p>
+<h5 id="effect-of-the-segcct-value">Effect of the seg.cct value</h5>
+<p><code>seg.cct</code> can always be set, but only has an effect on the physical state of the light if one or both of the following conditions is met:</p>
+<ul>
+<li>White Balance correction is enabled</li>
+<li>A bus supporting CCT is configured and <code>Calculate CCT from RGB</code> is <em>not</em> enabled</li>
+</ul>
+<p>CCT support is indicated by <code>info.leds.cct</code> being <code>true</code>, in which case you can regard the instance as a CCT light and e.g. display a color temperature control.</p>
 
               
             </article>

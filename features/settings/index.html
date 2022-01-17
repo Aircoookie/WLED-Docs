@@ -745,39 +745,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#in-depth-setting-documentation" class="md-nav__link">
-    In-depth setting documentation
-  </a>
-  
-    <nav class="md-nav" aria-label="In-depth setting documentation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#in-depth-led-settings" class="md-nav__link">
-    In-depth LED settings
-  </a>
-  
-    <nav class="md-nav" aria-label="In-depth LED settings">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#auto-calculate-white-channel-from-rgb-modes" class="md-nav__link">
-    Auto-calculate white channel from RGB modes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -823,6 +790,20 @@
     <li class="md-nav__item">
       <a href="../subpages/" class="md-nav__link">
         Web GUI Sitemap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cct/" class="md-nav__link">
+        White handling
       </a>
     </li>
   
@@ -1324,39 +1305,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#in-depth-setting-documentation" class="md-nav__link">
-    In-depth setting documentation
-  </a>
-  
-    <nav class="md-nav" aria-label="In-depth setting documentation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#in-depth-led-settings" class="md-nav__link">
-    In-depth LED settings
-  </a>
-  
-    <nav class="md-nav" aria-label="In-depth LED settings">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#auto-calculate-white-channel-from-rgb-modes" class="md-nav__link">
-    Auto-calculate white channel from RGB modes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1512,7 +1460,7 @@ This documentation applies to WLED 0.8.5.</p>
 <tr>
 <td>Auto-calculate white</td>
 <td>select</td>
-<td>Get white channel from RGB automatically (only applicable for RGBW) <a href="https://github.com/Aircoookie/WLED/wiki/Settings#auto-calculate-white-channel-from-rgb-modes">Details</a></td>
+<td>Get white channel from RGB automatically (only applicable for RGBW) <a href="/features/cct/#auto-white-handling">Details</a></td>
 </tr>
 <tr>
 <td>Turn on after power up</td>
@@ -1933,13 +1881,6 @@ This documentation applies to WLED 0.8.5.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="in-depth-setting-documentation">In-depth setting documentation</h2>
-<h3 id="in-depth-led-settings">In-depth LED settings</h3>
-<h4 id="auto-calculate-white-channel-from-rgb-modes">Auto-calculate white channel from RGB modes</h4>
-<p><code>Accurate</code> will subtract the calculated white value from the RGB channels which gets rid of the "RGB-white"  but means that the light is less bright with only the white channel and not the RGB channels being utilized for pure white.<br />
-<code>Brighter</code> will do the exact opposite and not touch the RGB channels at all, just mix in the dedicated white.<br />
-<code>Dual</code> and <code>None</code> will display a white channel slider in the UI to set the value manually, but when set to 0 the white channel will be off in <code>None</code> mode and use the Brighter calculation method in <code>Dual</code> mode.<br />
-Lastly, <code>Legacy</code> is the old method. It only applies to the 3 main colors, but is also quite accurate. <code>Accurate</code> and <code>Brighter</code> methods are applied on a per-pixel basis, so they also work in color palettes!</p>
 
               
             </article>

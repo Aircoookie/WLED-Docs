@@ -15,7 +15,7 @@
     
     
       
-        <title>WLED UDP Sync - WLED Project</title>
+        <title>White handling - WLED Project</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#usage" class="md-skip">
+        <a href="#white-channels-handling" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              WLED UDP Sync
+              White handling
             
           </span>
         </div>
@@ -236,13 +236,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../features/effects-palettes/" class="md-tabs__link">
+      <a href="../effects-palettes/" class="md-tabs__link md-tabs__link--active">
         Features
       </a>
     </li>
@@ -252,15 +254,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../blynk/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../interfaces/blynk/" class="md-tabs__link">
         Interfaces
       </a>
     </li>
@@ -575,12 +575,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -603,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/effects-palettes/" class="md-nav__link">
+      <a href="../effects-palettes/" class="md-nav__link">
         Effects & Palettes
       </a>
     </li>
@@ -617,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/macros/" class="md-nav__link">
+      <a href="../macros/" class="md-nav__link">
         Macros
       </a>
     </li>
@@ -631,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/presets/" class="md-nav__link">
+      <a href="../presets/" class="md-nav__link">
         Presets
       </a>
     </li>
@@ -645,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/segments/" class="md-nav__link">
+      <a href="../segments/" class="md-nav__link">
         Segments
       </a>
     </li>
@@ -659,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/settings/" class="md-nav__link">
+      <a href="../settings/" class="md-nav__link">
         Settings
       </a>
     </li>
@@ -673,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/multi-strip/" class="md-nav__link">
+      <a href="../multi-strip/" class="md-nav__link">
         Multi-strip Support
       </a>
     </li>
@@ -687,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/relay-control/" class="md-nav__link">
+      <a href="../relay-control/" class="md-nav__link">
         Relay Control
       </a>
     </li>
@@ -701,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/subpages/" class="md-nav__link">
+      <a href="../subpages/" class="md-nav__link">
         Web GUI Sitemap
       </a>
     </li>
@@ -713,11 +715,96 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../features/cct/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          White handling
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         White handling
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#white-channels-handling" class="md-nav__link">
+    White channel(s) handling
+  </a>
+  
+    <nav class="md-nav" aria-label="White channel(s) handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auto-white-handling" class="md-nav__link">
+    Auto white handling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#white-balance-correction" class="md-nav__link">
+    White Balance correction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cct-handling" class="md-nav__link">
+    CCT handling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cct-additive-blending" class="md-nav__link">
+    CCT additive blending
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ic-cct" class="md-nav__link">
+    IC CCT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cct-in-the-json-api" class="md-nav__link">
+    CCT in the JSON API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -735,14 +822,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
@@ -765,7 +850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blynk/" class="md-nav__link">
+      <a href="../../interfaces/blynk/" class="md-nav__link">
         Blynk
       </a>
     </li>
@@ -779,7 +864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dmx-output/" class="md-nav__link">
+      <a href="../../interfaces/dmx-output/" class="md-nav__link">
         DMX
       </a>
     </li>
@@ -793,7 +878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../e1.31-dmx/" class="md-nav__link">
+      <a href="../../interfaces/e1.31-dmx/" class="md-nav__link">
         E1.31 (DMX) / Art-Net
       </a>
     </li>
@@ -807,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http-api/" class="md-nav__link">
+      <a href="../../interfaces/http-api/" class="md-nav__link">
         HTTP Request API
       </a>
     </li>
@@ -821,7 +906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../json-api/" class="md-nav__link">
+      <a href="../../interfaces/json-api/" class="md-nav__link">
         JSON API
       </a>
     </li>
@@ -835,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mqtt/" class="md-nav__link">
+      <a href="../../interfaces/mqtt/" class="md-nav__link">
         MQTT
       </a>
     </li>
@@ -849,7 +934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infrared/" class="md-nav__link">
+      <a href="../../interfaces/infrared/" class="md-nav__link">
         Infrared
       </a>
     </li>
@@ -863,7 +948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../philips-hue/" class="md-nav__link">
+      <a href="../../interfaces/philips-hue/" class="md-nav__link">
         Philips Hue
       </a>
     </li>
@@ -875,82 +960,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          WLED UDP Sync
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../interfaces/udp-notifier/" class="md-nav__link">
         WLED UDP Sync
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-    <nav class="md-nav" aria-label="Usage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#receiving-settings" class="md-nav__link">
-    Receiving settings
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sending-settings" class="md-nav__link">
-    Sending settings
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sync-groups" class="md-nav__link">
-    Sync groups
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#protocol-description" class="md-nav__link">
-    Protocol description
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -962,7 +976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../udp-realtime/" class="md-nav__link">
+      <a href="../../interfaces/udp-realtime/" class="md-nav__link">
         UDP Realtime / tpm2.net
       </a>
     </li>
@@ -976,7 +990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../websocket/" class="md-nav__link">
+      <a href="../../interfaces/websocket/" class="md-nav__link">
         Websocket
       </a>
     </li>
@@ -1237,43 +1251,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
+  <a href="#white-channels-handling" class="md-nav__link">
+    White channel(s) handling
   </a>
   
-    <nav class="md-nav" aria-label="Usage">
+    <nav class="md-nav" aria-label="White channel(s) handling">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#receiving-settings" class="md-nav__link">
-    Receiving settings
+  <a href="#auto-white-handling" class="md-nav__link">
+    Auto white handling
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sending-settings" class="md-nav__link">
-    Sending settings
+  <a href="#white-balance-correction" class="md-nav__link">
+    White Balance correction
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sync-groups" class="md-nav__link">
-    Sync groups
+  <a href="#cct-handling" class="md-nav__link">
+    CCT handling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cct-additive-blending" class="md-nav__link">
+    CCT additive blending
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ic-cct" class="md-nav__link">
+    IC CCT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cct-in-the-json-api" class="md-nav__link">
+    CCT in the JSON API
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#protocol-description" class="md-nav__link">
-    Protocol description
-  </a>
   
 </li>
       
@@ -1289,340 +1317,70 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/Aircoookie/WLED-Docs/edit/master/docs/interfaces/udp-notifier.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/Aircoookie/WLED-Docs/edit/master/docs/features/cct.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-  <h1>WLED UDP Sync</h1>
+  <h1>White handling</h1>
 
-<h3 id="usage">Usage</h3>
-<p>The UDP notifier function of WLED makes it easy to sync multiple lights to the same color/effect, enabled by default.
-You can set the specific behavior of it in Sync settings, also you can choose if all aspects or only brightness/color/effects are applied.</p>
-<p>Additionally, there is a "Sync" quick toggle for it in the main control UI!
-In UI settings, you can set whether this button only turns on/off sending (default) or also receiving, with the option <code>Sync button toggles both send and receive</code>.</p>
-<p>If your sync settings are not the way you like on boot, check the <code>WLED Broadcast</code> section in Sync settings, where you can specify what is sent and received by default:</p>
-<h4 id="receiving-settings">Receiving settings</h4>
+<h3 id="white-channels-handling">White channel(s) handling</h3>
+<p>Besides addressable RGB and RGBW bus types, WLED 0.13.0 also supports PWM CCT (correlated color temperature) lights.</p>
+<h4 id="auto-white-handling">Auto white handling</h4>
+<p>Many effects and realtime sources are based on an RGB color model, which necessitates a method to calculate a white channel value from the RGB value for lights that support more than RGB.</p>
+<p>WLED offers four auto white modes, one of which can be selected in LED settings using the option <code>Auto-calculate white channel from RGB</code>. This option is only shown if at least one bus with White channel support is present.</p>
 <table>
 <thead>
 <tr>
-<th>Setting</th>
+<th>Auto White mode</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Receive Brightness</td>
-<td>If there is a sync notification, whether its brightness should be applied</td>
+<td>Accurate</td>
+<td>This mode subtracts the calculated white value from the RGB channels. This gets rid of the "RGB-white" but means that the light is less bright with only the white channel and not the RGB channels being utilized for pure white.</td>
 </tr>
 <tr>
-<td>Color</td>
-<td>Whether the color of the synced device should be applied</td>
+<td>Brighter</td>
+<td>This does the exact opposite and not touch the RGB channels at all, just mix in the dedicated white.</td>
 </tr>
 <tr>
-<td>Effects</td>
-<td>Whether the effect settings should be applied</td>
+<td>None</td>
+<td>No auto white calculation is performed. The white channel of colors can be manually set using the <code>White channel</code> slider in the user interface, RGB-only effects and most realtime sources will leave the white channel off.</td>
+</tr>
+<tr>
+<td>Dual</td>
+<td>The <code>White channel</code> slider is present in the UI and works the same as in <code>None</code> mode, however if the slider value is 0 (far left), the <code>Brighter</code> mode is used for auto white calculation. This is the default auto white mode.</td>
 </tr>
 </tbody>
 </table>
-<p>If all checkboxes are disabled, nothing is received by default after each boot. If the sync is toggled on in the main UI <em>and</em> the corresponding checkbox in UI settings is checked, everything is received.</p>
-<p>A sync receiver will not assume the state of the last sender directly after booting, a new packet must be send for it to react.</p>
-<h4 id="sending-settings">Sending settings</h4>
-<table>
-<thead>
-<tr>
-<th>Setting</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Send on direct change</td>
-<td>Whether to send a sync notification when state changed via the web UI or API</td>
-</tr>
-<tr>
-<td>Send on button press</td>
-<td>Whether to send sync when toggled by the physical hardware button</td>
-</tr>
-<tr>
-<td>Send Alexa notifications</td>
-<td>Whether to send sync after changed by Alexa (you may use Alexa groups instead)</td>
-</tr>
-<tr>
-<td>Send Hue notifications</td>
-<td>Whether to send sync after a connected Philips light changed</td>
-</tr>
-<tr>
-<td>Send Macro notifications</td>
-<td>Whether to send sync after a macro was triggered</td>
-</tr>
-<tr>
-<td>Send notifications twice</td>
-<td>Sends notifications twice (if you have issues with UDP packet loss)</td>
-</tr>
-</tbody>
-</table>
-<p>The quick toggle in the main UI will only apply to direct changes (UI + API), all other sync type sending behavior remains unaffected.</p>
-<p>You can easily group WLED devices (for example all in one room) by changing the UDP port of all devices you want in that group.</p>
-<h4 id="sync-groups">Sync groups</h4>
-<p>From v0.13.0, 8 Sync groups are available. This allows syncing select instances only without changing the UDP port.<br />
-For example, you might use one sync group per room you use WLED devices in.<br />
-Make sure the sender and receiver you want to sync both have the same sync group ticked (a sender can send to multiple groups and a receiver can listen to multiple groups).  </p>
-<p>Sync packets received from pre-0.13.0 instances are treated as if sent in sync group 1 only.</p>
-<h3 id="protocol-description">Protocol description</h3>
+<p><code>Accurate</code> and <code>Brighter</code> methods are applied on a per-pixel basis, so they also work in color palettes and realtime effects!</p>
+<h4 id="white-balance-correction">White Balance correction</h4>
+<p>If enabled in LED settings, WB correction allows either making all pixels colder or warmer on a per-segment basis using a slider in the main user interface.<br />
+This is applied to the RGB color only, after the auto white channel calculation.</p>
+<h4 id="cct-handling">CCT handling</h4>
+<p>WLED starting with version 0.13.0 also supports bus types with two white channels, one with a warm color temperature (e.g. 2700 Kelvin, reddish white) and one with a cold white color temperature (e.g. 8000 Kelvin, bluish white).</p>
+<p>Since as of the release of version 0.13.0 no adjustable CCT addressable LEDs are supported*, this only applies to PWM analog LED outputs.</p>
+<p><em>*SK6812 WWA (with 3 channels, warm white, cold white and amber) are supported, but treated as if RGB using the <code>WS281x</code> bus type. White spectrum support for this LED type will be added at a later point.</em></p>
+<p>The overall brightness of the white channels is determined from the auto-white calculation outlined above, and as such is identical in behavior to that of single white channel busses.</p>
+<p>The color temperature is set either on a per-segment basis via a dedicated slider in the UI, or if <code>Calculate CCT from RGB</code> is enabled in LED settings, is estimated on a per-pixel basis from the set RGB color (e.g. setting Red results in the warmest, setting Blue results in the coldest possible white).
+The former has the advantage of granular white spectrum control independent of the set RGB color, while the latter enables control of the color temperature from all effects and realtime sources.</p>
+<h4 id="cct-additive-blending">CCT additive blending</h4>
+<p>Setting this to 0% results in a more even brightness output across the supported temperature range, as the fading between the warm and cold white channels is linear.</p>
+<p>Setting this to 100% results in the highest peak brightness output at the neutral white point (CCT value <code>127</code>), as both white channels are active at 100%.</p>
+<p><img alt="" src="/assets/images/content/wledcct.png" /></p>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><em>Note: this info is partly out of date, see updated functionality in the code (<a href="https://github.com/Aircoookie/WLED/blob/master/wled00/udp.cpp">udp.cpp</a>)</em></p>
+<p class="admonition-title">Warning<p>Make sure your setup can handle driving both white channels at maximum output simultaneously. This results in a higher heat output and might reduce the lifetime of your LEDs. For example, bulbs by Athom are designed for linear blending (0%) and may be damaged by attempting to use additive blending.</p>
+</p>
 </div>
-<p>When enabled, the module where a value was changed will send an UDP broadcast to a port (default 21324).
-Other modules that listen on this port will set themselves to the same color.</p>
-<p>For interoperability, the protocol was designed so that even modules with different WLED versions can sync.
-Therefore, if a WLED 0.4 system receives a WLED 0.3 UDP notification it will apply the primary color but keep its current secondary color.</p>
-<p>The UDP packet is currently 24 bytes long. It is laid out in the following:</p>
-<table>
-<thead>
-<tr>
-<th>Byte Index</th>
-<th>Var Name</th>
-<th>Description</th>
-<th>Notifier Version</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>-</td>
-<td>Packet Purpose Byte*</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>callMode</td>
-<td>Packet Reason**</td>
-<td>0</td>
-</tr>
-<tr>
-<td>2</td>
-<td>bri</td>
-<td>Master Brightness</td>
-<td>0</td>
-</tr>
-<tr>
-<td>3</td>
-<td>col[0]</td>
-<td>Primary Red Value</td>
-<td>0</td>
-</tr>
-<tr>
-<td>4</td>
-<td>col[1]</td>
-<td>Primary Green Value</td>
-<td>0</td>
-</tr>
-<tr>
-<td>5</td>
-<td>col[2]</td>
-<td>Primary Blue Value</td>
-<td>0</td>
-</tr>
-<tr>
-<td>6</td>
-<td>nightlightActive</td>
-<td>Nightlight running?</td>
-<td>0</td>
-</tr>
-<tr>
-<td>7</td>
-<td>nightlightDelayMins</td>
-<td>Nightlight Time</td>
-<td>0</td>
-</tr>
-<tr>
-<td>8</td>
-<td>effectCurrent</td>
-<td>Effect Index</td>
-<td>0</td>
-</tr>
-<tr>
-<td>9</td>
-<td>effectSpeed</td>
-<td>Effect Speed</td>
-<td>0</td>
-</tr>
-<tr>
-<td>10</td>
-<td>white</td>
-<td>Primary White Value</td>
-<td>1</td>
-</tr>
-<tr>
-<td>11</td>
-<td>-</td>
-<td>Version Byte***</td>
-<td>1</td>
-</tr>
-<tr>
-<td>12</td>
-<td>colSec[0]</td>
-<td>Secondary Red Value</td>
-<td>2</td>
-</tr>
-<tr>
-<td>13</td>
-<td>colSec[1]</td>
-<td>Secondary Green Value</td>
-<td>2</td>
-</tr>
-<tr>
-<td>14</td>
-<td>colSec[2]</td>
-<td>Secondary Blue Value</td>
-<td>2</td>
-</tr>
-<tr>
-<td>15</td>
-<td>whiteSec</td>
-<td>Secondary White Value</td>
-<td>2</td>
-</tr>
-<tr>
-<td>16</td>
-<td>effectIntensity</td>
-<td>Effect Intensity</td>
-<td>3</td>
-</tr>
-<tr>
-<td>17</td>
-<td>transitionDelay</td>
-<td>Transition Duration Upper</td>
-<td>4</td>
-</tr>
-<tr>
-<td>18</td>
-<td>transitionDelay</td>
-<td>Transition Duration Lower</td>
-<td>4</td>
-</tr>
-<tr>
-<td>19</td>
-<td>effectPalette</td>
-<td>FastLED palette</td>
-<td>5</td>
-</tr>
-<tr>
-<td>20-23</td>
-<td>-</td>
-<td>Zeros</td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
-<p>*The notifier protocol is only used if this byte is 0. Otherwise, one of the <a href="/interfaces/udp-realtime">UDP Realtime</a> protocols will be used.</p>
-<p>**The callMode variable specifies the reason for the notification.
-Every color update has the potential to trigger a notification.</p>
-<table>
-<thead>
-<tr>
-<th>callMode</th>
-<th>Description</th>
-<th>Behavior</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>Initial Boot</td>
-<td>Do not notify</td>
-</tr>
-<tr>
-<td>1</td>
-<td>Direct Change via UI or API</td>
-<td>notifyDirect?</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Button was pressed</td>
-<td>notifyButton?</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Update by other notification</td>
-<td>Do not notify</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Nightlight activated</td>
-<td>notifyDirect?</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Other (Req. with &amp;NN)</td>
-<td>Do not notify</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Effect changed</td>
-<td>notifyDirect?</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Hue light changed</td>
-<td>notifyHue?</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Preset Cycle active</td>
-<td>notifyDirect?</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Updated via Blynk</td>
-<td>notifyDirect?</td>
-</tr>
-</tbody>
-</table>
-<p>***This is the version of the UDP protocol.</p>
-<table>
-<thead>
-<tr>
-<th>UDP Version</th>
-<th>Description</th>
-<th>WLED Version</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>Basic Support</td>
-<td>0.3</td>
-</tr>
-<tr>
-<td>1</td>
-<td>White Value supported</td>
-<td>0.4p</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Secondary Color supported</td>
-<td>0.4</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Effect Intensity supported</td>
-<td>0.5.0</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Transition Time supported</td>
-<td>0.6.0</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Palettes supported</td>
-<td>0.8.0</td>
-</tr>
-</tbody>
-</table>
+<p>You can limit the maximum allowed additive blending at build time using the <code>WLED_MAX_CCT_BLEND</code> macro.<br />
+For example, add <code>-D WLED_MAX_CCT_BLEND=0</code> to your build flags to force linear blending only.</p>
+<h4 id="ic-cct">IC CCT</h4>
+<p>By default, PWM CCT bus types set the value of the warm and cold white channels.<br />
+If your hardware uses an IC that controls the color temperature based on one PWM signal and the overall brightness on the other, please use the build flag <code>-D WLED_USE_IC_CCT</code> in a custom compilation. (the 15W bulb by Athom uses this method)</p>
+<h4 id="cct-in-the-json-api">CCT in the JSON API</h4>
+<p>Please see <a href="/interfaces/json-api/#cct-control">here</a> for more info on how to handle WLED CCT from integrations.</p>
 
               
             </article>
@@ -1641,7 +1399,7 @@ Every color update has the potential to trigger a notification.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../philips-hue/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Philips Hue" rel="prev">
+        <a href="../subpages/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Web GUI Sitemap" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1650,20 +1408,20 @@ Every color update has the potential to trigger a notification.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Philips Hue
+              Web GUI Sitemap
             </div>
           </div>
         </a>
       
       
         
-        <a href="../udp-realtime/" class="md-footer__link md-footer__link--next" aria-label="Next: UDP Realtime / tpm2.net" rel="next">
+        <a href="../../interfaces/blynk/" class="md-footer__link md-footer__link--next" aria-label="Next: Blynk" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              UDP Realtime / tpm2.net
+              Blynk
             </div>
           </div>
           <div class="md-footer__button md-icon">
