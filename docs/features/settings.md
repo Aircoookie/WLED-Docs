@@ -45,7 +45,7 @@ LED voltage | select | Voltage/type of LEDs
 Custom max. current | 1..255 | Custom current per LED on full white
 4-channel LEDs (RGBW) | Y/N | Support for SK6812 LEDs with white channel
 Color order | select | If your LEDs display incorrect colors (red and green swapped), try changing it
-Auto-calculate white | select | Get white channel from RGB automatically (only applicable for RGBW) [Details](https://github.com/Aircoookie/WLED/wiki/Settings#auto-calculate-white-channel-from-rgb-modes)
+Auto-calculate white | select | Get white channel from RGB automatically (only applicable for RGBW) [Details](/features/cct/#auto-white-handling)
 Turn on after power up | Y/N | Whether the lights should turn on after a reset
 Apply preset | 0..16 | Preset to load at boot (0 = none)
 Set current preset cycle... | Y/N | The current preset cycle configuration will be used as boot default
@@ -148,13 +148,3 @@ Factory reset | Y/N | Deletes all custom settings data (passwords, configuration
 Manual OTA | - | If OTA is enabled, you can upload new binary firmware
 Enable ArduinoOTA | Y/N | Useful for developers. Be careful, can even be left on when OTA locked!
 
-## In-depth setting documentation
-
-### In-depth LED settings
-
-#### Auto-calculate white channel from RGB modes
-
-`Accurate` will subtract the calculated white value from the RGB channels which gets rid of the "RGB-white"  but means that the light is less bright with only the white channel and not the RGB channels being utilized for pure white.  
-`Brighter` will do the exact opposite and not touch the RGB channels at all, just mix in the dedicated white.  
-`Dual` and `None` will display a white channel slider in the UI to set the value manually, but when set to 0 the white channel will be off in `None` mode and use the Brighter calculation method in `Dual` mode.  
-Lastly, `Legacy` is the old method. It only applies to the 3 main colors, but is also quite accurate. `Accurate` and `Brighter` methods are applied on a per-pixel basis, so they also work in color palettes!

@@ -166,14 +166,15 @@ ix | 0 to 255 | Effect intensity
 pal | 0 to info.palcount -1 | ID of the color palette or ~ to increment, ~- to decrement, or r for random.
 sel | bool | `true` if the segment is selected. Selected segments will have their state (color/FX) updated by APIs that don't support segments (currently any API except this JSON API). If no segment is selected, the first segment (_id_:`0`) will behave as if selected. WLED will report the state of the first (lowest _id_) segment that is selected to APIs (UDP sync, HTTP, MQTT, Blynk...).
 rev | bool | Flips the segment, causing animations to change direction.
-on | bool | Turns on and off the individual segment. (available since 0.10.0)
-bri | 0 to 255 | Sets the individual segment brightness (available since 0.10.0)
-mi | bool | Mirrors the segment (available since 0.10.2)
+on | bool | Turns on and off the individual segment. _(available since 0.10.0)_
+bri | 0 to 255 | Sets the individual segment brightness _(available since 0.10.0)_
+mi | bool | Mirrors the segment _(available since 0.10.2)_
+cct | 0 to 255 _or_ 1900 to 10091 | White spectrum [color temperature](#cct-control) _(available since 0.13.0)_
 lx | `BBBGGGRRR`: 0 - 100100100 | Loxone RGB value for primary color. Each color (`RRR`,`GGG`,`BBB`) is specified in the range from 0 to 100%.
 lx | `20bbbtttt`: 200002700 - 201006500 | Loxone brightness and color temperature values for primary color. Brightness `bbb` is specified in the range 0 to 100%. `tttt` defines the color temperature in the range from 2700 to 6500 Kelvin. (available since 0.11.0, not included in state response)
 ly | `BBBGGGRRR`: 0 - 100100100 | Loxone RGB value for secondary color. Each color (`RRR`,`GGG`,`BBB`) is specified in the range from 0 to 100%.
 ly | `20bbbtttt`: 200002700 - 201006500 | Loxone brightness and color temperature values for secondary color. Brightness `bbb` is specified in the range 0 to 100%. `tttt` defines the color temperature in the range from 2700 to 6500 Kelvin. _(available since 0.11.0, not included in state response)_
-i | array | [Individual LED control](https://kno.wled.ge/interfaces/json-api/#per-segment-individual-led-control). Not included in state response _(available since 0.10.2)_
+i | array | [Individual LED control](#per-segment-individual-led-control). Not included in state response _(available since 0.10.2)_
 
 #### Info object
 
@@ -184,6 +185,7 @@ No value may be changed by means of this API.
 ver | string | Version name.
 vid | uint32 | Build ID (YYMMDDB, B = daily build index).
 _leds_ | object | Contains info about the LED setup.
+leds.cct | bool | `true` if the light supports [color temperature control](#cct-control) _(available since 0.13.0)_
 leds.count | 1 to 1200 | Total LED count.
 leds.fps | 0 to 255 | Current frames per second. _(available since 0.12.0)_
 leds.rgbw | bool | `true` if LEDs are 4-channel (RGBW).
@@ -271,3 +273,28 @@ dur | Array of time each preset should be kept, in tenths of seconds. If only on
 transition | Array of time each preset should transition to the next one, in tenths of seconds. If only one integer is supplied, all presets will transition for that time. Defaults to the current transition time if not provided.
 repeat | How many times the entire playlist should cycle before finishing. Set to `0` for an indefinite cycle. Default to indefinite if not provided.
 end | Single preset ID to apply after the playlist finished. Has no effect when an indefinite cycle is set. If not provided, the light will stay on the last preset of the playlist.
+
+#### CCT control
+
+Please also see the [general info about CCT](/features/cct).
+##### Supported value ranges
+
+Given that the white spectrum handling is agnostic to the true color temperature of the LEDs used, a relative range is preferred for the time being, where a value of `0` indicates the warmest possible color temperature, while a value of `255` indicates the coldest temperature.
+
+It is also possible to pass a value in the range of `1900` to `10091`, in which case it is treated as a Kelvin color temperature, where `1900` is mapped to a relative value of `0` and `10091` to a relative value of `255`.
+
+As such, it is unlikely to match the _actual_ color temperature output by the light, therefore the relative values 0-255 are preferred for the time being.
+
+In the future, an option to specify the Kelvin temperatures of the utilized hardware may be added, once this is done, a color temperature can be set to more accurately match other lights.
+
+Therefore, for forward compatibility, your integration should expect both either a 0-255 value for `seg.cct`, in which case it is a relative value, or an absolute Kelvin value in the range 1000-20000 K. In case a Kelvin value is provided, you can consider the color temperature as accurate, which is not possible with relative 0-255 values as the Kelvin points of the white channels are unknown.  
+It is preferred that you set a new CCT value in the same range as received from WLED, that is, use 0-255 if the original value was within this range, and 1000-20000 K otherwise.
+
+##### Effect of the seg.cct value
+
+`seg.cct` can always be set, but only has an effect on the physical state of the light if one or both of the following conditions is met:
+
+- White Balance correction is enabled
+- A bus supporting CCT is configured and `Calculate CCT from RGB` is _not_ enabled
+
+CCT support is indicated by `info.leds.cct` being `true`, in which case you can regard the instance as a CCT light and e.g. display a color temperature control.

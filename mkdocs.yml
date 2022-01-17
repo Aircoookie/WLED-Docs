@@ -87,6 +87,7 @@ nav:
     - Multi-strip Support: features/multi-strip.md
     - Relay Control: features/relay-control.md
     - Web GUI Sitemap: features/subpages.md
+    - White handling: features/cct.md
   - Interfaces: 
     - Blynk: interfaces/blynk.md
     - DMX: interfaces/dmx-output.md
