@@ -1265,7 +1265,7 @@ Use this edit page to create a file called <code>ledmap.json</code>.</p>
 <p><code>ledmap.json</code> file needs to be a JSON formatted file with the the key being "map" and the value being an array of numbers representing the new order of pixels. The <em>position</em> of values in the array is the "natural" order of LEDs and the value entered is the new position.</p>
 <p>The ArduinoJSON library is <strong><em>*</em>extremely</strong>*** white-space sensitive.
 If your <code>ledmap.json</code> file is not working, check for white-spaces where they should not be. The LED positions are zero-indexed.</p>
-<p>Multiple maps are supported in the latest versions by using 'ledmapx.json' where x is a number. Maps can be selected in a preset using '{"ledmap":x,...' at the start.</p>
+<p>Multiple maps are supported in the latest versions by using <code>ledmapx.json</code> where x is a number. Maps can be selected in a preset using <code>{"ledmap":x,...</code>.</p>
 <h3 id="examples">Examples</h3>
 <p>In the below example (formatted multiple ways), we remap a strip of four LEDs from a physical order of 0 1 2 3 into a new order of 0 2 1 3.</p>
 <div class="highlight"><pre><span></span><code>{&quot;map&quot;:[0,2,1,3]}
