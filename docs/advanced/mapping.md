@@ -20,7 +20,7 @@ Use this edit page to create a file called `ledmap.json`.
 The ArduinoJSON library is *****extremely***** white-space sensitive.
 If your `ledmap.json` file is not working, check for white-spaces where they should not be. The LED positions are zero-indexed.
 
-Multiple maps are supported in the latest versions by using 'ledmapx.json" where x is a number. Maps can be selected in a preset using '{"ledmap":x,...' at the start.
+Multiple maps are supported in the latest versions by using 'ledmapx.json' where x is a number. Maps can be selected in a preset using '{"ledmap":x,...' at the start.
 
 ### Examples 
 In the below example (formatted multiple ways), we remap a strip of four LEDs from a physical order of 0 1 2 3 into a new order of 0 2 1 3.
