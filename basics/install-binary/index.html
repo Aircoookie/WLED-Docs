@@ -1358,6 +1358,10 @@ This installer is not yet available for ESPs with flash chips smaller than 4MB (
 <div class="highlight"><pre><span></span><code>esptool.py erase_flash
 </code></pre></div>
 <h3 id="flashing-method-3-esp-home-flasher-tool">Flashing method 3: <a href="https://github.com/esphome/esphome-flasher/releases">ESP Home Flasher</a> tool</h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>On ESP32, this will make the filesystem very small (61kB), which leads to issues making presets. Please consider using the web installer or esptool.</p>
+</div>
 <p>This is a GUI-based tool recommended by some users as easier to use than esptool.
 For some ESP32 boards, you might have to press some buttons after uploading:</p>
 <blockquote>
