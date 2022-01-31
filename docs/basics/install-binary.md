@@ -51,6 +51,9 @@ esptool.py erase_flash
 
 ### Flashing method 3: [ESP Home Flasher](https://github.com/esphome/esphome-flasher/releases) tool
 
+!!! warning
+    On ESP32, this will make the filesystem very small (61kB), which leads to issues making presets. Please consider using the web installer or esptool.
+
 This is a GUI-based tool recommended by some users as easier to use than esptool.
 For some ESP32 boards, you might have to press some buttons after uploading:
 > Hold both buttons down, plug it in, start flashing, then when is tries to detect, let go of the button to the left of the USB as you look at it, then when it detects the board type, let go of the other button.
