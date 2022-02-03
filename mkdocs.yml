@@ -40,6 +40,7 @@ markdown_extensions:
   - attr_list
   - pymdownx.highlight
   - pymdownx.superfences
+  - pymdownx.details
   - pymdownx.tilde
 extra:
   social:
