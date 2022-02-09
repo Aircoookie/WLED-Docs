@@ -11,7 +11,7 @@
       
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.9">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.10">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.2b4465f4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d6be258b.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
@@ -1163,11 +1163,12 @@
 
   <h1>Relay Control</h1>
 
-<p>LED strips still use power when seemingly switched off. In case you want to prevent that, you have several ways of totally switching off power (including manually switching off the power), one of which is adding a relay to your circuit. GPIO12 (Pin D6 on many devices) is toggled by WLED when WLED is turned on/off (in the UI, or through other interfaces). This lets you control a relay through your WLED flashed controller.
-GPIO12 can be easily changed to any other available GPIO pin in LED Preferences page.</p>
-<p>When you decide that you want WLED to control a relay, make sure you buy a suitable relay. Check what voltage you can supply from your controller to relay (available 3.3V or 5V pin or different voltage from external power source), and make sure the relay can be controlled by voltage level your board is providing  (3.3V CMOS, 5V TTL). Note, some relays come with a jumper that lets you configure whether the relay switches at high or low level of signal, giving you maximum flexibility.</p>
-<p><a href="https://www.geekering.com/?p=187">This page</a> gives a clear description using a light bulb instead of a LED strip. And instead of the D1 mentioned in that story, with WLED, you use GPIO12.</p>
-<p>The default WLED behavior is to turn GPIO12 on (high) when the LEDs are on and off (low) when the LEDs are off. This behaviour can be changed in the LED Preferences page. Many relays are powered when the signal is LOW. See <a href="https://github.com/Aircoookie/WLED/issues/631#issuecomment-605512524">this thread</a>.</p>
+<p>Digital LED strips still use power when seemingly switched off, about 1W per 200 LEDs. In case you want to prevent that, you can completely cut power to the LEDs by adding a relay to your circuit. It is toggled by WLED when WLED is turned on/off (in the UI, or through other interfaces).
+No pin is allocated for a relay by default, but can be easily set in the LED preferences page.
+Previously, GPIO12 (Pin D6 on many devices) was set as the default and is confirmed to work well on most boards except the ESP32-C3.</p>
+<p>When you decide that you want WLED to control a relay, make sure you buy a suitable relay board. Check what voltage you can supply from your controller to relay (available 3.3V or 5V pin or different voltage from external power source), and make sure the relay can be controlled by voltage level your board is providing  (3.3V CMOS, 5V TTL). Note, some relays come with a jumper that lets you configure whether the relay switches at high or low level of signal, giving you maximum flexibility.</p>
+<p><a href="https://www.geekering.com/?p=187">This page</a> gives a clear description using a light bulb instead of a LED strip. And instead of the D1 mentioned there, with WLED, you use the pin you set.</p>
+<p>The default WLED behavior is to turn the relay pin on (high) when the LEDs are on and off (low) when the LEDs are off. This can be changed in the LED Preferences page. Many relays are powered when the signal is LOW. See <a href="https://github.com/Aircoookie/WLED/issues/631#issuecomment-605512524">this thread</a>.</p>
 <p>Sometimes people ask whether they can control more than one relay through WLED, including controlling this all via Alexa. Controlling an extra relay separately from the RGB lights is not something WLED is designed to do, however you can modify the code to add that functionality. For that, make sure you can compile WLED from source unmodified first. Then, change #define ESPALEXA_MAXDEVICES 1 in line 71 of the wled.h file to 2. After that, just follow the API documentation on https://github.com/Aircoookie/Espalexa to add a new EspalexaDevice to the alexa.cpp file</p>
 <p>Second option for controlling multiple relays is using a Multi Relay usermod. As with Alexa you will need to compile WLED from source an include Multi Relay usermod either by including <code>-D USERMOD_MULTI_RELAY</code> in PlatformIO.ini or adding <code>#define USERMOD_MULTI_RELAY</code> in <code>wled.h</code> or <code>my_config.h</code>. You can also override default number of relays by defining <code>MULTI_RELAY_MAX_RELAYS</code>. Configuring usermod is done using Usermod settings page where you can define GPIO pins used, wether relay activates on HIGH or LOW logic, if the activation has any delay and if the relay can be controlled from the outside using MQTT message (external).
 MQTT topic for controlling relays is <code>wled/[device]/relay/[relay_id]/command</code> and accepts <code>on</code>, <code>off</code> and <code>toggle</code> messages. When the relay changes state a message with <code>on</code> or <code>off</code> is sent with the topic <code>wled/[device]/relay/[relay_id]</code>.</p>
@@ -1299,10 +1300,10 @@ MQTT topic for controlling relays is <code>wled/[device]/relay/[relay_id]/comman
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.092fa1f6.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.960e086b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e3b2bf44.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
