@@ -25,6 +25,7 @@ No worries, we have collected a few helpful links for you to learn more about th
 [ESP8266 based LED controller for WS2812b strip. WLED Firmware + OpenHAB (in Russian)](https://www.youtube.com/watch?v=K4ioTt3XvGc) | Room31 | Video (17:04) |
 [How to use WLED on an ESP32 (german)](https://www.adlerweb.info/blog/2020/11/01/bitbastelei-409-ws2812b-neopixel-mit-wled-einfach-steuern/ ) | Bitbastelei/Adlerweb | Video (11:00) |
 [DIY Ambilight using WLED and a Relay](https://wiki.faked.org/DIY_Ambilight) | jangrewe | Article | Wiki page with schematics and instructions for Hyperion, etc. |
+[Adding Smarts and Color to an IKEA Lamp](https://apop.tech/posts/adding-smarts-and-color-to-an-ikea-lamp/) | apop880 | Article | Tutorial on upgrading a basic IKEA lamp with WLED |
 
 ### Digital LED knowledge
 
@@ -50,4 +51,5 @@ No worries, we have collected a few helpful links for you to learn more about th
 [Pixel/Bullet Voltage Drop Calc](http://spikerlights.com/calcpower.aspx) | | Tool |5 and 12V|
 [Combined Wire Gauge Calculator](https://www.wirebarn.com/Combined-Wire-Gauge-Calculator_ep_42.html) | | Tool | |
 [Wire Size/Ampacity](https://www.powerstream.com/Wire_Size.htm)| | Tool|Use chassis wiring
-_Add more categories as needed :)
+
+_Add more categories as needed :)_
