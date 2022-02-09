@@ -1307,21 +1307,21 @@ You can also just scan this QR code:</p>
 <h3 id="default-gpio-usage">Default GPIO Usage</h3>
 <div class="admonition info">
 <p class="admonition-title">These are only defaults</p>
-<p>All pins can be changed in the Hardware section of LED settings. Please note that these are GPIO numbers, please consult a pinout for your board to find the labeled pin (e.g <code>D4</code> = <code>GPIO2</code> on most ESP8266 boards). When using an ESP8266 board, it's recommended to use pins <code>GPIO1</code>, <code>GPIO2</code>, or <code>GPIO3</code> for LED Data; using other pins will require <em>bit-bangging</em> and may cause slow performance and/or issues elsewhere (such as with IR decoding).</p>
+<p>All pins can be changed in the Hardware section of LED settings. Please note that these are GPIO numbers, please consult a pinout for your board to find the labeled pin (e.g <code>D4</code> = <code>GPIO2</code> on most ESP8266 boards). When using an ESP8266 board, it's recommended to use pins <code>GPIO1</code>, <code>GPIO2</code>, or <code>GPIO3</code> for LED Data; using other pins will require <em>bit-banging</em> and may cause slow performance and/or issues elsewhere (such as with IR decoding).</p>
 </div>
 <table>
 <thead>
 <tr>
 <th>Function</th>
 <th>GPIO</th>
-<th>Notes</th>
+<th>Suggested pin</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>LED Data</td>
 <td>2</td>
-<td></td>
+<td>ESP8266: 1, 2 (3 if &lt;= 100 LEDs), ESP32: 1, 2, 3, 4, 16</td>
 </tr>
 <tr>
 <td>Button</td>
@@ -1330,13 +1330,13 @@ You can also just scan this QR code:</p>
 </tr>
 <tr>
 <td>IR Remote</td>
-<td>N/A</td>
-<td>Suggested: 4</td>
+<td>None</td>
+<td>4</td>
 </tr>
 <tr>
 <td>Relay</td>
+<td>None</td>
 <td>12</td>
-<td></td>
 </tr>
 </tbody>
 </table>
