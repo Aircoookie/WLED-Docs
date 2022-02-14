@@ -29,6 +29,7 @@ WS2813 | 5v |
 APA102 | 5v | needs Clock/Data
 LPD8806 | 5v | needs Clock/Data
 WS2801 | 5v | needs Clock/Data
+SK9822 | 5v | needs Clock/Data
 GS8208 | 12v |
 TM1814 | 12v | RGBW
 WS2811 | 12v | usually 3-LED segments, has data-line resistor
@@ -57,6 +58,7 @@ WS2815 | 12v | has a backup data line
 [WLAN Pixel Controller](https://shop.codm.de/automation/pixel/30/wlan-pixel-controller) | Fully completed and control PCB with level shifter pre-flashed with WLED!
 [WLED Wemos shield](https://github.com/srg74/WLED-wemos-shield) | DIY board, 100% compatible with WLED project and WLED [sound reactive fork](https://github.com/atuline/WLED). Integrated level shifter, 4 outputs for LEDs strips, 1 fused out for LED strip, resettable fuse for the development board, exposed I2C interface for display or sensors, relay for energy-saving and 1-wire temperature sensor. Exposed pins for Analog and Digital microphones. Works with Wemos D1 mini and D1-style ESP32 boards. [Firmware is here](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_wemos_shield).
 [WLED waterproof controller with external antenna](https://github.com/srg74/Controller-for-WLED-firmware) | DIY board, designed for use outside permanently and for longer range Wi-Fi connection. No SMD components means it is easier to solder for DIYers. 100% compatible with WLED project. Level shifter, fuse for LED strip, resettable fuse for Wi-Fi module, exposed I2C interface for display or sensors, relay for energy-saving and 1-wire temperature sensor. Build around ESP-07S module. [Firmware is here](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_wemos_shield)
+[Yet Another WLED Controller](https://github.com/lizardsystems/yawl-controller) | Small and simple device for 5V addressable LED strips with minimum components and fully assembled by PCB manufacturing service in standard case. [Firmware is here](https://github.com/lizardsystems/yawl-controller/tree/main/firmware/WLED)
 
 
 ## Controllers WLED can be installed to
@@ -114,6 +116,7 @@ ESP-01 | ESP8266 | One of the first and cheapest ESP8266 boards available. **_No
 SN74AHCT125N | Aircoookie's recommended levelshifter. Used on the QuinLed Dig-Uno and [WLED Wemos shield](https://github.com/srg74/WLED-wemos-shield).
 74AHCT32 | Same pinout as above can be used. This is just an OR gate, but any AHCT gate can be used if inputs are connected appropriately. ;)
 SN74HCT125N | Slower, cheaper version. Works just as well for WS2812, but not recommended for APA102.
+SN74LVC2T45 | Modern bus transceiver with voltage translation [Yet Another WLED Controller](https://github.com/lizardsystems/yawl-controller)
 TXS0102 | A bidirectional levelshifter that works well with WLED.
 [F-Amp](https://www.pixelcontroller.com/store/controllers/53-falcon-picap.html) | Level shifter/data booster
 
