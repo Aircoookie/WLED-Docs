@@ -66,7 +66,11 @@ Palette | 247
 Primary color hue | 200
 Segment N opacity | 0-32
 
-This potentiometer should be supplied 3.3V and GND, with it's output supplied to A0 (or any other ADC pin you specify), reccomended 10KΩ or greater. 
+This potentiometer should be supplied 3.3V and GND, with it's output supplied to A0 (or any other ADC pin you specify), recommended 10KΩ or greater. 
+
+!!! info "Do not use ESP32 ADC2 GPIO pins for analog buttons"
+    On ESP8266, you can only have a single analog button on pin A0, the pin set in the settings UI is ignored.  
+    On ESP32, only ADC1 pins will work for analog input while WiFi is active (pins 32-39). ADC2 pins will not work.
 
 ### Global brightness
 
