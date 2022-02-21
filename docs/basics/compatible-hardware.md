@@ -13,12 +13,12 @@ This page lists some third-party hardware and/or tools that are working with WLE
 Please use a decent and neutral description when adding things to this list.
 
 !!! tip
-    Lists are in alphabetical order. The posistion of an item in the list does not indicate how good it is or if it will fit your use case.
+    Lists are in alphabetical order. The position of an item in the list does not indicate how good it is or if it will fit your use case.
     Please carefully compare all items in the category you are interested in, and you should find the one that suits your needs best in just a few minutes! 
 
 ## Addressable LED Strips
 
-Sorting: 5v data only, 5v Data + Clock, 12v data only
+Sorting: 5v data only, 5v Data + Clock, 12v data only, non-addressable analog PWM
 
 | Type | Voltage | Comments |
 |---|---|---|
@@ -34,6 +34,7 @@ GS8208 | 12v |
 TM1814 | 12v | RGBW
 WS2811 | 12v | usually 3-LED segments, has data-line resistor
 WS2815 | 12v | has a backup data line
+Analog PWM | Usually 12v/24v | Needs additional hardware (MOSFETs). Needs 3-4 pins per separately controllable strip
 
 ## Controllers with WLED pre-installed
 
@@ -108,6 +109,14 @@ ESP-01 | ESP8266 | One of the first and cheapest ESP8266 boards available. **_No
 
 [TwilightLord-ESP32 Ethernet Shield](https://www.tindie.com/products/23050/)| Ethernet Shield (10/100Mbps) for ESP32 boards. Stackable with D1 Mini32 form factor boards.
 [Wemos D1 mini Level Shifter Shield](https://www.tindie.com/products/jasoncoon/wemos-d1-mini-esp8266-level-shifter-mini-shield/) | A level shifter shield (74HCT125) - by Evil Genius Labs LLC.
+
+## Compatible PC RGB Fans and ARGB accessories
+
+| Brand | Model | Comments |
+|---|---|---|
+Corsair | HD120 Fan | Uses WS2812B, data-in only
+PCCOOLER | Moonlight 5-pack Fans | Uses WS2812B, includes Data-out connector to keep each fan uniquely addressable if wired in series like traditional LED strips
+Any | 5v 3-pin ARGB for PC | Any PC RGB device that supports the 5v 3-pin ARGB motherboard header should work fine with WLED. All the major motherboard vendors support the Corsair HD120 and PCCOOLER fans listed, so we can safely assume any device that supports motherboard ARGB 5V 3-Pin standard will work with WLED.
 
 ## Levelshifters
 
