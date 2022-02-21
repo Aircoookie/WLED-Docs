@@ -507,6 +507,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#compatible-pc-rgb-fans-and-argb-accessories" class="md-nav__link">
+    Compatible PC RGB Fans and ARGB accessories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#levelshifters" class="md-nav__link">
     Levelshifters
   </a>
@@ -1317,6 +1324,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#compatible-pc-rgb-fans-and-argb-accessories" class="md-nav__link">
+    Compatible PC RGB Fans and ARGB accessories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#levelshifters" class="md-nav__link">
     Levelshifters
   </a>
@@ -1364,11 +1378,11 @@
 <p>Please use a decent and neutral description when adding things to this list.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Lists are in alphabetical order. The posistion of an item in the list does not indicate how good it is or if it will fit your use case.
+<p>Lists are in alphabetical order. The position of an item in the list does not indicate how good it is or if it will fit your use case.
 Please carefully compare all items in the category you are interested in, and you should find the one that suits your needs best in just a few minutes! </p>
 </div>
 <h2 id="addressable-led-strips">Addressable LED Strips</h2>
-<p>Sorting: 5v data only, 5v Data + Clock, 12v data only</p>
+<p>Sorting: 5v data only, 5v Data + Clock, 12v data only, non-addressable analog PWM</p>
 <table>
 <thead>
 <tr>
@@ -1437,6 +1451,11 @@ Please carefully compare all items in the category you are interested in, and yo
 <td>WS2815</td>
 <td>12v</td>
 <td>has a backup data line</td>
+</tr>
+<tr>
+<td>Analog PWM</td>
+<td>Usually 12v/24v</td>
+<td>Needs additional hardware (MOSFETs). Needs 3-4 pins per separately controllable strip</td>
 </tr>
 </tbody>
 </table>
@@ -1680,6 +1699,33 @@ Please carefully compare all items in the category you are interested in, and yo
 <h2 id="useful-boards-and-addons">Useful boards and addons</h2>
 <p><a href="https://www.tindie.com/products/23050/">TwilightLord-ESP32 Ethernet Shield</a>| Ethernet Shield (10/100Mbps) for ESP32 boards. Stackable with D1 Mini32 form factor boards.
 <a href="https://www.tindie.com/products/jasoncoon/wemos-d1-mini-esp8266-level-shifter-mini-shield/">Wemos D1 mini Level Shifter Shield</a> | A level shifter shield (74HCT125) - by Evil Genius Labs LLC.</p>
+<h2 id="compatible-pc-rgb-fans-and-argb-accessories">Compatible PC RGB Fans and ARGB accessories</h2>
+<table>
+<thead>
+<tr>
+<th>Brand</th>
+<th>Model</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Corsair</td>
+<td>HD120 Fan</td>
+<td>Uses WS2812B, data-in only</td>
+</tr>
+<tr>
+<td>PCCOOLER</td>
+<td>Moonlight 5-pack Fans</td>
+<td>Uses WS2812B, includes Data-out connector to keep each fan uniquely addressable if wired in series like traditional LED strips</td>
+</tr>
+<tr>
+<td>Any</td>
+<td>5v 3-pin ARGB for PC</td>
+<td>Any PC RGB device that supports the 5v 3-pin ARGB motherboard header should work fine with WLED. All the major motherboard vendors support the Corsair HD120 and PCCOOLER fans listed, so we can safely assume any device that supports motherboard ARGB 5V 3-Pin standard will work with WLED.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="levelshifters">Levelshifters</h2>
 <table>
 <thead>
