@@ -140,7 +140,7 @@ v | bool | If set to _true_ in a JSON POST command, the response will contain th
 rb | bool | If set to _true_, device will reboot immediately. Not included in state response.
 lor | 0, 1, or 2 | Live data override. 0 is off, 1 is override until live data ends, 2 is override until ESP reboot (available since 0.10.0)
 time | uint32 | Set module time to unix timestamp. Not included in state response.
-mainseg | 0 to info.leds.maxseg-1 | Main Segment | Sets which segment ID is the main segment
+mainseg | 0 to info.leds.maxseg-1 | Main Segment | Sets which segment ID is the main segment. The main segment's values are the ones sent by UDP sync, and in case no segment is selected, all changes done via the `"seg":{}` syntax without a segment `id` specified are applied to the main segment. If the main segment is deleted, the first active segment becomes the new main segment.
 seg | Array of segment objects | Segments are individual parts of the LED strip. In 0.9.0 this will enables running different effects on differentparts of the strip.
 playlist | object | [Custom preset playlists](#playlists). Not included in state response (available since 0.11.0)
 
@@ -152,7 +152,7 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 
 | JSON key | Value range | Description
 | --- | --- | --- |
-id | 0 to info.maxseg -1 | Zero-indexed ID of the segment. May be omitted, in that case the ID will be inferred from the order of the segment objects in the _seg_ array. As such, not included in state response.
+id | 0 to info.maxseg -1 | Zero-indexed ID of the segment. May be omitted, in that case the ID will be inferred from the order of the segment objects in the _seg_ array.
 start | 0 to info.leds.count -1 | LED the segment starts at.
 stop | 0 to info.leds.count | LED the segment stops at, not included in range. If _stop_ is set to a lower or equal value than _start_ (setting to `0` is recommended), the segment is invalidated and deleted.
 len | 0 to info.leds.count | Length of the segment (_stop_ - _start_). _stop_ has preference, so if it is included, _len_ is ignored.
@@ -185,15 +185,17 @@ No value may be changed by means of this API.
 ver | string | Version name.
 vid | uint32 | Build ID (YYMMDDB, B = daily build index).
 _leds_ | object | Contains info about the LED setup.
-leds.cct | bool | `true` if the light supports [color temperature control](#cct-control) _(available since 0.13.0)_
+leds.cct | bool | `true` if the light supports [color temperature control](#cct-control) _(available since 0.13.0, deprecated, use info.leds.lc)_
 leds.count | 1 to 1200 | Total LED count.
 leds.fps | 0 to 255 | Current frames per second. _(available since 0.12.0)_
-leds.rgbw | bool | `true` if LEDs are 4-channel (RGBW).
-leds.wv | bool | `true` if a white channel slider should be displayed. _(available since 0.10.0)_
+leds.rgbw | bool | `true` if LEDs are 4-channel (RGB + White). _(deprecated, use info.leds.lc)_
+leds.wv | bool | `true` if a white channel slider should be displayed. _(available since 0.10.0, deprecated, use info.leds.lc)_
 ~~leds.pin~~ | byte array | LED strip pin(s). Always one element. _Removed as of v0.13_
 leds.pwr | 0 to 65000 | Current LED power usage in milliamps as determined by the ABL. `0` if ABL is disabled.
 leds.maxpwr | 0 to 65000 | Maximum power budget in milliamps for the ABL. `0` if ABL is disabled.
 leds.maxseg | byte | Maximum number of segments supported by this version.
+leds.lc | byte | Logical AND of all active segment's virtual light capabilities
+leds.seglc | byte array | Per-segment virtual light capabilities
 str | bool | If `true`, an UI with only a single button for toggling sync should toggle receive+send, otherwise send only
 name | string | Friendly name of the light. Intended for display in lists and titles.
 udpport | uint16 | The UDP port for realtime packets and WLED broadcast.
@@ -226,9 +228,9 @@ ip | string | The IP address of this instance. Empty string if not connected. (s
 
 #### Per-segment individual LED control
 
-Using the `i` property of the segment object, you can set the LED colors in the segment using the JSON API.
-Keep in mind that this is non-persistent, if the light is turned off the segment will return to effect mode.
-The segment is blanked out when using individual control, the set effect will not run.
+Using the `i` property of the segment object, you can set the LED colors in the segment using the JSON API.  
+Keep in mind that this is non-persistent, if the light is turned off the segment will return to effect mode.  
+The segment is blanked out when using individual control, the set effect will not run.   
 To disable, change any property of the segment or turn off the light.
 
 To set individual LEDs starting from the beginning, use an array of Color arrays.
@@ -243,6 +245,9 @@ To set ranges of LEDs, use the LED start and stop index followed by its Color ar
 Keep in mind that the LED indices are segment-based, so LED 0 is the first LED of the segment, not of the entire strip.
 Segment features, including Grouping, Spacing, Mirroring and Reverse are functional.
 This feature is available in build 200829 and above.
+
+!!! info "Brightness interaction"
+    For your colors to apply correctly, make sure the desired brightness is set beforehand. Turning on the LEDs from an off state and setting individual LEDs in the same JSON request will _not_ work!
 
 #### Playlists
 
