@@ -1660,7 +1660,7 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 <tr>
 <td>id</td>
 <td>0 to info.maxseg -1</td>
-<td>Zero-indexed ID of the segment. May be omitted, in that case the ID will be inferred from the order of the segment objects in the <em>seg</em> array. As such, not included in state response.</td>
+<td>Zero-indexed ID of the segment. May be omitted, in that case the ID will be inferred from the order of the segment objects in the <em>seg</em> array.</td>
 </tr>
 <tr>
 <td>start</td>
@@ -1803,7 +1803,7 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 <tr>
 <td>leds.cct</td>
 <td>bool</td>
-<td><code>true</code> if the light supports <a href="#cct-control">color temperature control</a> <em>(available since 0.13.0)</em></td>
+<td><code>true</code> if the light supports <a href="#cct-control">color temperature control</a> <em>(available since 0.13.0, deprecated, use info.leds.lc)</em></td>
 </tr>
 <tr>
 <td>leds.count</td>
@@ -1818,12 +1818,12 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 <tr>
 <td>leds.rgbw</td>
 <td>bool</td>
-<td><code>true</code> if LEDs are 4-channel (RGBW).</td>
+<td><code>true</code> if LEDs are 4-channel (RGB + White). <em>(deprecated, use info.leds.lc)</em></td>
 </tr>
 <tr>
 <td>leds.wv</td>
 <td>bool</td>
-<td><code>true</code> if a white channel slider should be displayed. <em>(available since 0.10.0)</em></td>
+<td><code>true</code> if a white channel slider should be displayed. <em>(available since 0.10.0, deprecated, use info.leds.lc)</em></td>
 </tr>
 <tr>
 <td><del>leds.pin</del></td>
@@ -1844,6 +1844,16 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 <td>leds.maxseg</td>
 <td>byte</td>
 <td>Maximum number of segments supported by this version.</td>
+</tr>
+<tr>
+<td>leds.lc</td>
+<td>byte</td>
+<td>Logical AND of all active segment's virtual light capabilities</td>
+</tr>
+<tr>
+<td>leds.seglc</td>
+<td>byte array</td>
+<td>Per-segment virtual light capabilities</td>
 </tr>
 <tr>
 <td>str</td>
@@ -1993,9 +2003,9 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 </tbody>
 </table>
 <h4 id="per-segment-individual-led-control">Per-segment individual LED control</h4>
-<p>Using the <code>i</code> property of the segment object, you can set the LED colors in the segment using the JSON API.
-Keep in mind that this is non-persistent, if the light is turned off the segment will return to effect mode.
-The segment is blanked out when using individual control, the set effect will not run.
+<p>Using the <code>i</code> property of the segment object, you can set the LED colors in the segment using the JSON API.<br />
+Keep in mind that this is non-persistent, if the light is turned off the segment will return to effect mode.<br />
+The segment is blanked out when using individual control, the set effect will not run. <br />
 To disable, change any property of the segment or turn off the light.</p>
 <p>To set individual LEDs starting from the beginning, use an array of Color arrays.
 <code>{"seg":{"i":[[255,0,0], [0,255,0], [0,0,255]]}}</code> will set the first LED red, the second green and the third blue.</p>
@@ -2006,6 +2016,10 @@ To disable, change any property of the segment or turn off the light.</p>
 <p>Keep in mind that the LED indices are segment-based, so LED 0 is the first LED of the segment, not of the entire strip.
 Segment features, including Grouping, Spacing, Mirroring and Reverse are functional.
 This feature is available in build 200829 and above.</p>
+<div class="admonition info">
+<p class="admonition-title">Brightness interaction</p>
+<p>For your colors to apply correctly, make sure the desired brightness is set beforehand. Turning on the LEDs from an off state and setting individual LEDs in the same JSON request will <em>not</em> work!</p>
+</div>
 <h4 id="playlists">Playlists</h4>
 <p>(Available since 0.11.0)</p>
 <p>Sample playlist API call:</p>
