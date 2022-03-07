@@ -186,7 +186,7 @@ If you have more and can power them, go to LED settings and increase the LED cou
 Please also enter the milliamp rating of your 5v power supply for optimal brightness in the field below it.
 Do not increase the mA number if you power LEDs directly from the 5V pin of the ESP!
 
-WLED supports up to 1500 individual LEDs right now (recommended maximum is 750 LEDs).
+See [here](https://kno.wled.ge/features/multi-strip/) for maximum recommended LED counts.
 
 #### Reason 2
 
@@ -194,7 +194,9 @@ An LED in your chain may be broken. Try another strip or removing the first LED 
 
 ### How to turn off the bright blue onboard LED?
 
-This LED can be very distracting. Unfortunately it can't easily be disabled as it shares the gpio2/D4 pin with the LED output. Currently there are 3 workarounds:
+This LED can be very distracting. Unfortunately it can't easily be disabled as it shares the gpio2/D4 pin with the LED output.  
+It is turned off together with your LEDs (unless they require `Off Refresh` to be active)  
+Currently there are 3 workarounds:
 
 - Cover the LED
 - Remove the LED permanently (desolder or apply pressure with e.g. a flathead screwdriver)
