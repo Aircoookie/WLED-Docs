@@ -1619,6 +1619,11 @@ Example: <code>{"on":true,"bri":255}</code> sets the brightness to maximum. <cod
 <td>If set to <em>true</em>, device will reboot immediately. Not included in state response.</td>
 </tr>
 <tr>
+<td>live</td>
+<td>bool</td>
+<td>If set to <em>true</em>, enters realtime mode and blanks the LEDs. The realtime timeout option does not have an effect when this command is used, WLED will stay in realtime mode until the state (color/effect/segments, excluding brightness) is changed. It is expected that <code>{"live":false}</code> is sent once live data sending is terminated. Not included in state response.</td>
+</tr>
+<tr>
 <td>lor</td>
 <td>0, 1, or 2</td>
 <td>Live data override. 0 is off, 1 is override until live data ends, 2 is override until ESP reboot (available since 0.10.0)</td>
