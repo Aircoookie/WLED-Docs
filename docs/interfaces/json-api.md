@@ -164,7 +164,7 @@ fx | 0 to info.fxcount -1 | ID of the effect or ~ to increment, ~- to decrement,
 sx | 0 to 255 | Relative effect speed
 ix | 0 to 255 | Effect intensity
 pal | 0 to info.palcount -1 | ID of the color palette or ~ to increment, ~- to decrement, or r for random.
-sel | bool | `true` if the segment is selected. Selected segments will have their state (color/FX) updated by APIs that don't support segments (currently any API except this JSON API). If no segment is selected, the first segment (_id_:`0`) will behave as if selected. WLED will report the state of the first (lowest _id_) segment that is selected to APIs (UDP sync, HTTP, MQTT, Blynk...).
+sel | bool | `true` if the segment is selected. Selected segments will have their state (color/FX) updated by APIs that don't support segments (e.g. UDP sync, HTTP API). If no segment is selected, the first segment (_id_:`0`) will behave as if selected. WLED will report the state of the first (lowest _id_) segment that is selected to APIs (HTTP, MQTT, Blynk...), or `mainseg` in case no segment is selected and for the UDP API. Live data is always applied to all LEDs regardless of segment configuration.
 rev | bool | Flips the segment, causing animations to change direction.
 on | bool | Turns on and off the individual segment. _(available since 0.10.0)_
 bri | 0 to 255 | Sets the individual segment brightness _(available since 0.10.0)_
