@@ -1721,7 +1721,7 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 <tr>
 <td>sel</td>
 <td>bool</td>
-<td><code>true</code> if the segment is selected. Selected segments will have their state (color/FX) updated by APIs that don't support segments (currently any API except this JSON API). If no segment is selected, the first segment (<em>id</em>:<code>0</code>) will behave as if selected. WLED will report the state of the first (lowest <em>id</em>) segment that is selected to APIs (UDP sync, HTTP, MQTT, Blynk...).</td>
+<td><code>true</code> if the segment is selected. Selected segments will have their state (color/FX) updated by APIs that don't support segments (e.g. UDP sync, HTTP API). If no segment is selected, the first segment (<em>id</em>:<code>0</code>) will behave as if selected. WLED will report the state of the first (lowest <em>id</em>) segment that is selected to APIs (HTTP, MQTT, Blynk...), or <code>mainseg</code> in case no segment is selected and for the UDP API. Live data is always applied to all LEDs regardless of segment configuration.</td>
 </tr>
 <tr>
 <td>rev</td>
