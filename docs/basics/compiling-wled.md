@@ -91,3 +91,4 @@ ESP-07s (External Antenna):
 ESP32:
 
 - Arduino Core v1.0.4
+Note : NpbWrapper is no longer being used in 013.0.b7  
