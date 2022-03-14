@@ -19,6 +19,8 @@ hide:
 
 If using an ESP8266 and LEDs that have clock and data, use GPIO1 (TxD) for clock and GPIO2 (D4) for data.
 
+For safe operation it is recommended to dimension wireing correctly and eventually to integrate fuses. Please refer to ![LED power, wireing and fuse calculator](https://wled-calculator.github.io/).
+
 For analog use, the IRLZ44N or STP55NF06L is a good MOSFET to use. Partial, example circuit...
 
 ![Connection schematics Analog](https://i.ibb.co/86vsym1/image.png)
