@@ -1,5 +1,5 @@
 ---
-title: Compile WLED
+title: Compiling WLED
 hide:
   # - navigation
   # - toc

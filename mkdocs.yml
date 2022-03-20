@@ -76,7 +76,7 @@ nav:
     - Installation:
       - Install WLED Binary: basics/install-binary.md
       - Install using ESP GUI: basics/install-gui.md
-      - Compiling WLED: basics/compiling-wled.md
+      - Compiling WLED: advanced/compiling-wled.md
     - Tutorials: basics/tutorials.md
     - FAQ: basics/faq.md
   - Features:
@@ -107,7 +107,7 @@ nav:
     - Remote Access / IFTTT: advanced/remote-access-ifttt.md
     - Security: advanced/security.md
     - Wiring Protips: advanced/wiring.md
-    - Compile WLED: advanced/compile-wled.md
+    - Compiling WLED: advanced/compiling-wled.md
     - Custom Features: advanced/custom-features.md
     - ESP32 Recovery: advanced/esp32-recovery.md
     - Mapping: advanced/mapping.md
