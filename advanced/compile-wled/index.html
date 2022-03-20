@@ -264,15 +264,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../home-automation/" class="md-tabs__link md-tabs__link--active">
+      <a href="../home-automation/" class="md-tabs__link">
         Advanced
       </a>
     </li>
@@ -516,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basics/compiling-wled/" class="md-nav__link">
+      <a href="../compiling-wled/" class="md-nav__link">
         Compiling WLED
       </a>
     </li>
@@ -933,14 +931,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
       
@@ -1017,19 +1013,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Compile WLED
+    <li class="md-nav__item">
+      <a href="../compiling-wled/" class="md-nav__link">
+        Compiling WLED
       </a>
-      
     </li>
   
 
@@ -1179,44 +1167,7 @@
 
   <h1>Compile WLED</h1>
 
-<p>A lot of people ask how they can compile their own WLED .bin file, whether it be for a custom pins or analog LEDs, so this picture guide will show how to do it.</p>
-<p>First, download the latest source code from <a href="https://github.com/Aircoookie/WLED">https://github.com/Aircoookie/WLED</a> under the <code>Code</code> dropdown menu.</p>
-<p><img alt="" src="https://i.ibb.co/2hnGhyb/Screen-Shot-2020-11-03-at-5-25-18-PM.png" /></p>
-<p>Then download, install and open VSCode (https://code.visualstudio.com/download) and install the PlatformIO IDE extension from the VSCode Settings &gt; Extensions menu.</p>
-<p><img alt="" src="https://i.ibb.co/SNv8TtH/Screen-Shot-2020-11-03-at-6-27-58-PM.png" /></p>
-<p>After PlatformIO IDE is installed, restart VSCode and open your unzipped WLED source code folder.</p>
-<p><img alt="" src="https://i.ibb.co/pXs1G0j/Screen-Shot-2020-11-03-at-5-27-03-PM.png" />
-<img alt="" src="https://i.ibb.co/10ykGxk/Screen-Shot-2020-11-03-at-5-27-17-PM.png" /></p>
-<p>Now you need to find which GPIO pins go to which color and make these adjustments in your code.</p>
-<ul>
-<li>PWM1 - Red</li>
-<li>PWM2 - Blue</li>
-<li>PWM3 - Green</li>
-<li>PWM4 - White1</li>
-<li>PWM5 - White2</li>
-</ul>
-<p>The best place to find your pins is the Tasmota device repo. https://templates.blakadder.com </p>
-<p><img alt="" src="https://i.ibb.co/51k3ck2/Screen-Shot-2020-11-03-at-7-43-25-PM.png" /></p>
-<p>Above you can see which GPIO pin goes to each PWM channel.</p>
-<p>Insert this information into the <code>NpbWrapper.h</code> file back in VSCode.</p>
-<p><img alt="" src="https://i.ibb.co/tpHgGRx/Screen-Shot-2020-11-03-at-5-30-36-PM.png" /></p>
-<p>Now you can adjust your build flags in the <code>platformio.ini</code> if you want to enable our disable certain things. </p>
-<p><img alt="" src="https://i.ibb.co/wQKNcwk/Screen-Shot-2020-11-03-at-5-32-20-PM.png" /></p>
-<p>Now click the PlatformIO logo in the left side bar and find <code>env:esp8285_4CH_MagicHome</code> and then click <code>General</code> &gt; <code>Build</code></p>
-<p><img alt="" src="https://i.ibb.co/rbB9vLy/Screen-Shot-2020-11-03-at-5-32-57-PM.png" />
-<img alt="" src="https://i.ibb.co/30sRrDM/Screen-Shot-2020-11-03-at-5-33-25-PM.png" /></p>
-<p>It will probably fail the first time. Just click build again.</p>
-<p><img alt="" src="https://i.ibb.co/WGPcNnn/Screen-Shot-2020-11-03-at-5-35-28-PM.png" /></p>
-<p>It might fail again. Third times a charm.</p>
-<p><img alt="" src="https://i.ibb.co/727JZKx/Screen-Shot-2020-11-03-at-5-35-48-PM.png" /></p>
-<p>There we go!</p>
-<p><img alt="" src="https://i.ibb.co/QdW361W/Screen-Shot-2020-11-03-at-5-36-18-PM.png" /></p>
-<p>The .bin file is located in a hidden folder called <code>.pio</code> in your WLED folder. Since it's in a hidden folder you have to move it out to use it.</p>
-<p>All that's left to do is flash this .bin file onto your esp chip and then connect it to wifi. </p>
-<p>Here's a good video tutorial on how to flash a MagicHome controller like the one pictured above. https://www.youtube.com/watch?v=qgBAU39v07k </p>
-<p>You just need to use the <code>firmware.bin</code> instead. </p>
-<p><img alt="" src="https://i.ibb.co/bdj0WNb/Screen-Shot-2020-11-03-at-5-38-43-PM.png" /></p>
-<p>I prefer to use ESPHome-Flasher just because that's what I've had the best luck with. https://github.com/esphome/esphome-flasher/releases</p>
+<p>Moved, see <a href="/advanced/compiling-wled">How to compile WLED</a></p>
 
               
             </article>
@@ -1231,41 +1182,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../wiring/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Wiring Protips" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Wiring Protips
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../custom-features/" class="md-footer__link md-footer__link--next" aria-label="Next: Custom Features" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Custom Features
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
