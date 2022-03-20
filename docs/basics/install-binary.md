@@ -49,6 +49,8 @@ When esptool.py says `Connecting...`, some ESP32 boards require you to hold the 
 esptool.py erase_flash
 ```
 
+If you have a MagicHome controller, here is a [good video tutorial](https://www.youtube.com/watch?v=qgBAU39v07k) on how to flash it.
+
 ### Flashing method 3: [ESP Home Flasher](https://github.com/esphome/esphome-flasher/releases) tool
 
 !!! warning
