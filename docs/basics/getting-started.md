@@ -17,7 +17,9 @@ hide:
 
 ![Connection schematics](https://i.ibb.co/k9Jgr8S/connections.jpg)
 
-If using an ESP8266 and LEDs that have clock and data, use GPIO1 (TxD) for clock and GPIO2 (D4) for data.
+If using an ESP8266 and LEDs that have clock and data, you can either use hardware SPI (mostly faster) or software SPI.
+  - hardware SPI: use `GPIO14` (SCLK) for clock and `GPIO13` (MOSI) for data.
+  - software SPI: since all pins can be changed in the Hardware section of LED settings, you can use any pins. Recommend is to use `GPIO1` (TxD) for clock and `GPIO2` (D4) for data. 
 
 For safe operation it is recommended to dimension your wiring correctly and to integrate fuses.  
 To help you out, you may refer to this [LED power, wiring and fuse calculator](https://wled-calculator.github.io/).
