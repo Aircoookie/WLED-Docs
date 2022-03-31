@@ -44,3 +44,8 @@ There are a few tips and recomendations to keep in mind when designing your setu
 - For okay performance, you can use 800 LEDs/pin with 6 outputs for a total of 4800 LEDs.
 - ESP32 can calculate about 65k-85k LEDs per second (that means 1000 LEDs @~70fps, 2000 LEDs @~35fps, 4000 LEDs @~18fps)
 - 4 outputs seem to be the sweet spot. 
+
+### Virtual LEDs (DDP)
+
+You can now add virtual LEDs which are distributed across one or more ESPs. Select DDP RGB (Network) as the LED type and enter the LED count and IP address for each. An ESP32 is best for this role, but you can use up to 300 LEDs with an ESP8266. Note that this is only RGB data (no white) for now.
+
