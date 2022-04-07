@@ -4,14 +4,14 @@ name: Auto-Build Documentation using MkDocs
 # events but only for the master branch
 on:
   push:
-    branches: [master]
+    branches: [main]
 
 jobs:
   build:
     name: Build and Deploy Documentation
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Master
+      - name: Checkout Main
         uses: actions/checkout@v2
 
       - name: Set up Python 3.7
