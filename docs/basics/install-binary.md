@@ -29,16 +29,17 @@ esptool.py write_flash 0x0 ./WLED_XXX.bin
 
 #### ESP32
 
-(you will need to have a bootloader installed)
+Firstly, flash the version 4 bootloader file, which you can find [here](https://github.com/Aircoookie/WLED/releases/download/v0.13.1/esp32_bootloader_v4.bin).  
+This step only has to be done once, to update afterwards the booloader does not have to be re-installed.
+
+```bash
+esptool.py write_flash 0x0 ./esp32_bootloader_v4.bin
+```
+
+Now you can flash the actual firmware binary. Keep in mind the bootloader needs to have a flash offset of 0, but the firmware 0x10000.
 
 ```bash
 esptool.py write_flash 0x10000 ./WLED_XXX.bin 
-```
-
-If the ESP32 is new, you will need to flash the bootloader first. This bootloader should be addressed to 0x00000 and the firmware to 0x10000. This is not required if you had an Arduino sketch running on it before. You can find the bootloader file in the assets for the [0.9.1 release](https://github.com/Aircoookie/WLED/releases/tag/v0.9.1).
-
-```bash
-esptool.py write_flash 0x0 ./esp32_bootloader.bin
 ```
 
 When esptool.py says `Connecting...`, some ESP32 boards require you to hold the boot button (to the right of the USB port) for a few seconds  
