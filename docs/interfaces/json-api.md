@@ -280,6 +280,37 @@ transition | Array of time each preset should transition to the next one, in ten
 repeat | How many times the entire playlist should cycle before finishing. Set to `0` for an indefinite cycle. Default to indefinite if not provided.
 end | Single preset ID to apply after the playlist finished. Has no effect when an indefinite cycle is set. If not provided, the light will stay on the last preset of the playlist.
 
+#### Light capabilities
+
+In order to e.g. only show color controls relevant to a given setup, it is necessary to obtain the color capabilities of the light.  
+The `info.leds.seglc` array can be used to do so on a per-segment level. It contains `n+1` 8-bit integers, where `n` is the `id` of the last _active_ segment,
+each index corresponds to the segment with that ID.  
+This integer indicates whether a given segment supports (24 bit) RGB colors, an extra (8 bit) white channel and/or adjustable color temperature (CCT):
+
+Bit | Capability
+|---|---|
+0 | Segment supports RGB color
+1 | Segment supports white channel
+2 | Segment supports color temperature
+3-7 | Reserved (expect any value)
+
+Therefore:
+
+`lc` value | Capabilities
+|---|---|
+0 | None. Indicates a segment that does not have a bus within its range, e.g. because it is not active.
+1 | Supports RGB
+2 | Supports white channel only
+3 | Supports RGBW
+4 | Supports CCT only, no white channel (unused)
+5 | Supports CCT + RGB, no white channel (unused)
+6 | Supports CCT (including white channel) 
+7 | Supports CCT (including white channel) + RGB
+
+Note that CCT is controllable per-segment, while RGB color and white channel have 3 color slots each per segment.  
+  
+`info.leds.lc` contains this info on a global level, and is a bitwise AND of the per-segment light capability values.  
+
 #### CCT control
 
 Please also see the [general info about CCT](/features/cct).
