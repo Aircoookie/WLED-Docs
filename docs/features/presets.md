@@ -114,6 +114,15 @@ If applicable, daylight saving time is handled automatically.
 !!! info "Note"
     This only applies the preset at the _start_ of the specified minute. If you set up two presets, one to turn on the light at 7 and another to turn it off at 8,
     if WLED is booted at 7:30, the light will not turn on. This should not be an issue in most applications.
+    
+#### Applying presets at sunrise and sunset
+    
+Applying a preset at sunrise and/or sunset is also supported, the last two timed preset slots are used for this.  
+To calculate the times, WLED needs your location. This is possible with the "Get Location" button in Time & Macro settings if accessed via a browser. If you are using the WLED app, you will need to open [locate.wled.me](https://locate.wled.me/) in your browser and copy the coordinates over to the settings page manually.  
+With the Minutes input field, you may specify an offset of up to 59 minutes before or 59 minutes after the actual sunrise/set time.
+
+!!! warning "Location"
+    Sunrise and sunset calculation do not work if you live in the polar circles (latitude >66.6N or >66.6S).
 
 ### Earlier versions (up to 0.10)
 
