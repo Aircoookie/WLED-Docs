@@ -285,19 +285,19 @@ end | Single preset ID to apply after the playlist finished. Has no effect when 
 In order to e.g. only show color controls relevant to a given setup, it is necessary to obtain the color capabilities of the light.  
 The `info.leds.seglc` array can be used to do so on a per-segment level. It contains `n+1` 8-bit integers, where `n` is the `id` of the last _active_ segment,
 each index corresponds to the segment with that ID.  
-This integer indicates whether a given segment supports (24 bit) RGB colors, an extra (8 bit) white channel and/or adjustable color temperature (CCT):
+This integer indicates whether a given segment supports (24 bit) RGB colors, an extra (8 bit) white channel and/or adjustable color temperature (CCT):  
 
-Bit | Capability
-|---|---|
+| Bit | Capability
+| --- | --- |
 0 | Segment supports RGB color
 1 | Segment supports white channel
 2 | Segment supports color temperature
 3-7 | Reserved (expect any value)
 
-Therefore:
+Therefore:  
 
-`lc` value | Capabilities
-|---|---|
+| `lc` value | Capabilities
+| --- | --- |
 0 | None. Indicates a segment that does not have a bus within its range, e.g. because it is not active.
 1 | Supports RGB
 2 | Supports white channel only
