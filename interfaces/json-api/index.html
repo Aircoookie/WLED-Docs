@@ -2089,24 +2089,76 @@ This feature is available in build 200829 and above.</p>
 <p>In order to e.g. only show color controls relevant to a given setup, it is necessary to obtain the color capabilities of the light.<br />
 The <code>info.leds.seglc</code> array can be used to do so on a per-segment level. It contains <code>n+1</code> 8-bit integers, where <code>n</code> is the <code>id</code> of the last <em>active</em> segment,
 each index corresponds to the segment with that ID.<br />
-This integer indicates whether a given segment supports (24 bit) RGB colors, an extra (8 bit) white channel and/or adjustable color temperature (CCT):</p>
-<p>Bit | Capability
-|---|---|
-0 | Segment supports RGB color
-1 | Segment supports white channel
-2 | Segment supports color temperature
-3-7 | Reserved (expect any value)</p>
-<p>Therefore:</p>
-<p><code>lc</code> value | Capabilities
-|---|---|
-0 | None. Indicates a segment that does not have a bus within its range, e.g. because it is not active.
-1 | Supports RGB
-2 | Supports white channel only
-3 | Supports RGBW
-4 | Supports CCT only, no white channel (unused)
-5 | Supports CCT + RGB, no white channel (unused)
-6 | Supports CCT (including white channel) 
-7 | Supports CCT (including white channel) + RGB</p>
+This integer indicates whether a given segment supports (24 bit) RGB colors, an extra (8 bit) white channel and/or adjustable color temperature (CCT):  </p>
+<table>
+<thead>
+<tr>
+<th>Bit</th>
+<th>Capability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Segment supports RGB color</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Segment supports white channel</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Segment supports color temperature</td>
+</tr>
+<tr>
+<td>3-7</td>
+<td>Reserved (expect any value)</td>
+</tr>
+</tbody>
+</table>
+<p>Therefore:  </p>
+<table>
+<thead>
+<tr>
+<th><code>lc</code> value</th>
+<th>Capabilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>None. Indicates a segment that does not have a bus within its range, e.g. because it is not active.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Supports RGB</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Supports white channel only</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Supports RGBW</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Supports CCT only, no white channel (unused)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Supports CCT + RGB, no white channel (unused)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Supports CCT (including white channel)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Supports CCT (including white channel) + RGB</td>
+</tr>
+</tbody>
+</table>
 <p>Note that CCT is controllable per-segment, while RGB color and white channel have 3 color slots each per segment.  </p>
 <p><code>info.leds.lc</code> contains this info on a global level, and is a bitwise AND of the per-segment light capability values.  </p>
 <h4 id="cct-control">CCT control</h4>
