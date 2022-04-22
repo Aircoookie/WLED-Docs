@@ -30,7 +30,7 @@ esptool.py write_flash 0x0 ./WLED_XXX.bin
 #### ESP32
 
 Firstly, flash the version 4 bootloader file, which you can find [here](https://github.com/Aircoookie/WLED/releases/download/v0.13.1/esp32_bootloader_v4.bin).  
-This step only has to be done once, to update afterwards the booloader does not have to be re-installed.
+This step only has to be done once, to update afterwards the bootloader does not have to be re-installed.
 
 ```bash
 esptool.py write_flash 0x0 ./esp32_bootloader_v4.bin
@@ -59,13 +59,13 @@ If you have a MagicHome controller, here is a [good video tutorial](https://www.
 
 This is a GUI-based tool recommended by some users as easier to use than esptool.
 For some ESP32 boards, you might have to press some buttons after uploading:
-> Hold both buttons down, plug it in, start flashing, then when is tries to detect, let go of the button to the left of the USB as you look at it, then when it detects the board type, let go of the other button.
+> Hold both buttons down, plug it in, start flashing, then when it tries to detect, let go of the button to the left of the USB as you look at it, then when it detects the board type, let go of the other button.
 
-If running windows, you need a driver from here: <https://www.wemos.cc/en/latest/ch340_driver.html> before your computer will show the COM port in ESPhome Flasher. With a Wemos D1 mini you do not need to hold down the reset button while flashing.
+If running Windows, you need a driver from here: <https://www.wemos.cc/en/latest/ch340_driver.html> before your computer will show the COM port in ESPhome Flasher. With a Wemos D1 mini you do not need to hold down the reset button while flashing.
 
 ### Flashing method 4: OTA update
 
- You can alternatively use my [basic HTTP OTA updater](https://github.com/Aircoookie/ESP8266MinimalHTTPUpdater) sketch and upload the binary! This requires the Arduino IDE and ESP8266 core installed.
+You can alternatively use my [basic HTTP OTA updater](https://github.com/Aircoookie/ESP8266MinimalHTTPUpdater) sketch and upload the binary! This requires the Arduino IDE and ESP8266 core installed.
 If your device is already running a firmware with built-in OTA capability, you can probably use that as well.
 
 ### What binary should I use?
