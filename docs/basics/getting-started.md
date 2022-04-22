@@ -32,7 +32,7 @@ For analog use, the IRLZ44N or STP55NF06L is a good MOSFET to use. Partial, exam
 
 [I just want to use WLED! (install release binary)](/basics/install-binary)
 
-[I want to modify WLED (compile from source code)](/basics/compiling-wled)
+[I want to modify WLED (compile from source code)](/advanced/compiling-wled)
 
 If everything worked the first thirty LEDs will light up in bright orange to stimulate courage, friendliness and success!
 
