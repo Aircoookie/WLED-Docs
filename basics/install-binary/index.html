@@ -1362,7 +1362,7 @@ This installer is not yet available for ESPs with flash chips smaller than 4MB (
 </code></pre></div>
 <h4 id="esp32">ESP32</h4>
 <p>Firstly, flash the version 4 bootloader file, which you can find <a href="https://github.com/Aircoookie/WLED/releases/download/v0.13.1/esp32_bootloader_v4.bin">here</a>.<br />
-This step only has to be done once, to update afterwards the booloader does not have to be re-installed.</p>
+This step only has to be done once, to update afterwards the bootloader does not have to be re-installed.</p>
 <div class="highlight"><pre><span></span><code>esptool.py write_flash 0x0 ./esp32_bootloader_v4.bin
 </code></pre></div>
 <p>Now you can flash the actual firmware binary. Keep in mind the bootloader needs to have a flash offset of 0, but the firmware 0x10000.</p>
@@ -1383,9 +1383,9 @@ This step only has to be done once, to update afterwards the booloader does not 
 <p>This is a GUI-based tool recommended by some users as easier to use than esptool.
 For some ESP32 boards, you might have to press some buttons after uploading:</p>
 <blockquote>
-<p>Hold both buttons down, plug it in, start flashing, then when is tries to detect, let go of the button to the left of the USB as you look at it, then when it detects the board type, let go of the other button.</p>
+<p>Hold both buttons down, plug it in, start flashing, then when it tries to detect, let go of the button to the left of the USB as you look at it, then when it detects the board type, let go of the other button.</p>
 </blockquote>
-<p>If running windows, you need a driver from here: <a href="https://www.wemos.cc/en/latest/ch340_driver.html">https://www.wemos.cc/en/latest/ch340_driver.html</a> before your computer will show the COM port in ESPhome Flasher. With a Wemos D1 mini you do not need to hold down the reset button while flashing.</p>
+<p>If running Windows, you need a driver from here: <a href="https://www.wemos.cc/en/latest/ch340_driver.html">https://www.wemos.cc/en/latest/ch340_driver.html</a> before your computer will show the COM port in ESPhome Flasher. With a Wemos D1 mini you do not need to hold down the reset button while flashing.</p>
 <h3 id="flashing-method-4-ota-update">Flashing method 4: OTA update</h3>
 <p>You can alternatively use my <a href="https://github.com/Aircoookie/ESP8266MinimalHTTPUpdater">basic HTTP OTA updater</a> sketch and upload the binary! This requires the Arduino IDE and ESP8266 core installed.
 If your device is already running a firmware with built-in OTA capability, you can probably use that as well.</p>
