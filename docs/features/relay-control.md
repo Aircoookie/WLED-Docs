@@ -20,7 +20,7 @@ Sometimes people ask whether they can control more than one relay through WLED, 
 Second option for controlling multiple relays is using a Multi Relay usermod. As with Alexa you will need to compile WLED from source an include Multi Relay usermod either by including `-D USERMOD_MULTI_RELAY` in PlatformIO.ini or adding `#define USERMOD_MULTI_RELAY` in `wled.h` or `my_config.h`. You can also override default number of relays by defining `MULTI_RELAY_MAX_RELAYS`. Configuring usermod is done using Usermod settings page where you can define GPIO pins used, wether relay activates on HIGH or LOW logic, if the activation has any delay and if the relay can be controlled from the outside using MQTT message (external).
 MQTT topic for controlling relays is `wled/[device]/relay/[relay_id]/command` and accepts `on`, `off` and `toggle` messages. When the relay changes state a message with `on` or `off` is sent with the topic `wled/[device]/relay/[relay_id]`.
 
-### How To: Use WLED to switch external relay with PIR sensor without affecting WLED state
+How To: Use WLED to switch external relay with PIR sensor without affecting WLED state
 
 If you do not want PIR (motion) sensor attached to WLED controller to trigger change of WLED state, but still want to control a legacy light, fan, etc. use the Multi Relay usermod and another relay attached to WLED controller. Create two presets for relay control (shown for switching relay off) and set up PIR and multi relay usermods as shown.
 
