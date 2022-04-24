@@ -19,3 +19,15 @@ Sometimes people ask whether they can control more than one relay through WLED, 
 
 Second option for controlling multiple relays is using a Multi Relay usermod. As with Alexa you will need to compile WLED from source an include Multi Relay usermod either by including `-D USERMOD_MULTI_RELAY` in PlatformIO.ini or adding `#define USERMOD_MULTI_RELAY` in `wled.h` or `my_config.h`. You can also override default number of relays by defining `MULTI_RELAY_MAX_RELAYS`. Configuring usermod is done using Usermod settings page where you can define GPIO pins used, wether relay activates on HIGH or LOW logic, if the activation has any delay and if the relay can be controlled from the outside using MQTT message (external).
 MQTT topic for controlling relays is `wled/[device]/relay/[relay_id]/command` and accepts `on`, `off` and `toggle` messages. When the relay changes state a message with `on` or `off` is sent with the topic `wled/[device]/relay/[relay_id]`.
+
+### How To: Use WLED to switch external relay with PIR sensor without affecting WLED state
+
+If you do not want PIR (motion) sensor attached to WLED controller to trigger change of WLED state, but still want to control a legacy light, fan, etc. use the Multi Relay usermod and another relay attached to WLED controller. Create two presets for relay control (shown for switching relay off) and set up PIR and multi relay usermods as shown.
+
+![image](https://user-images.githubusercontent.com/59397047/164982222-a55b2702-b21f-4245-96fb-a90d165de85c.png)
+
+If you do not want button relay control just leave relay button at -1, the same goes for PIR sensor parameters (leave nighttime-only and/or off-only unchecked). Adjust preset numbers and GPIO pins to your liking. Multi relay usermod can also switch relay using MQTT messages or HTTP requests (check source code for available commands). Of course if you configured MQTT on your WLED device PIR sensor usermod will publish /motion topic to MQTT broker for your HA integration.
+
+![image](https://user-images.githubusercontent.com/59397047/164982233-5057bcef-48fe-4e52-a2c3-f8c7856a2f8a.png)
+
+![image](https://user-images.githubusercontent.com/59397047/164982248-769f6307-62cc-4c01-bed6-05602a6da1e8.png)
