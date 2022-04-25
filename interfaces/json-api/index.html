@@ -2284,7 +2284,7 @@ To allow read access to sensor data via the JSON API in a standardized way, the 
 <tr>
 <td>tc</td>
 <td>number</td>
-<td>Seconds of WLED <code>uptime</code></td>
+<td>Seconds of WLED <code>uptime</code> when the value last changed substantially. The threshold for a "substantial" change is up to the implementation. This can for example be used to find when a PIR sensor was last activated.</td>
 </tr>
 <tr>
 <td>tm</td>
@@ -2311,6 +2311,11 @@ To allow read access to sensor data via the JSON API in a standardized way, the 
 <td>number</td>
 <td>Absolute uncertainty of the measurement</td>
 </tr>
+<tr>
+<td>model</td>
+<td>string</td>
+<td>Identification of the sensor hardware used</td>
+</tr>
 </tbody>
 </table>
 <h4 id="sensor-types">Sensor types</h4>
@@ -2318,9 +2323,9 @@ To allow read access to sensor data via the JSON API in a standardized way, the 
 <table>
 <thead>
 <tr>
-<th>Type ID String</th>
-<th>Measurement Type</th>
-<th>Default Unit</th>
+<th>Type ID string</th>
+<th>Measurement type</th>
+<th>Default unit</th>
 </tr>
 </thead>
 <tbody>
