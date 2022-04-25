@@ -366,8 +366,7 @@ The object may contain the following properties, of which all are optional, exce
 | --- | --- | --- |
 type | string | The type of the sensor.
 n | string | The name of the sensor. If omitted, the client may generate a suitable name (e.g. "Temperature sensor 1") 
-val | any | The most current sensor reading. May be of any JSON type depending on the type of the sensor, this is a number for all sensor types pre-defined below except for the `"b"` and `"CL"` types and custom type sensors.
-`null` if the reading is invalid, either due to an error or because the first reading has not yet completed.
+val | any | The most current sensor reading. May be of any JSON type depending on the type of the sensor, this is a number for all sensor types pre-defined below except for the `"b"` and `"CL"` types and custom type sensors. `null` if the reading is invalid, either due to an error or because the first reading has not yet completed.
 unit | string | An explicit human-readable unit string for the measurement. If omitted, the default for the sensor type is used.
 error | int or string | If present and not `null`,`false`,`0` or an empty string, a sensor error is indicated. May either be an integer error code or an error string.
 tc | number | Seconds of WLED `uptime` 
@@ -383,29 +382,28 @@ These are the standardized sensor types that may be implemented by usermods:
 
 | Type ID String | Measurement Type | Default Unit
 | --- | --- | --- |
-"" | Invalid sensor (reserved) | - 
-"b" | Button/Boolean | true/false
-"c" | Custom user-defined sensor | -
-"q" | Electric charge | As
-"t" | Time | s
-"BL"| Battery Level | %
-"CL"| 24-bit RGB color | hex string
-"E" | Energy (`ts` property required) | J
-"I" | Electric current | A
-"J" | Illuminance | lx
-"L" | Distance | m
-"Lp"| Sound pressure level | dB
-"M" | Mass | kg
-"N" | Number/count | -
-"P" | Power | W
-"Pe"| General purpose percentage | %
-"PL"| Power Level (signal strength) | dBm
-"Pr"| Pressure | Pa
-"R" | Electric Resistance | Ohms
-"RH"| Relative Humidity | %
-"T" | Temperature | °C
-"U" | Voltage | V
-any string starting with an uppercase letter and longer than 2 characters | Custom user-defined sensor type | -
-all other strings | Reserved | -
+"" (empty string) | Invalid sensor (reserved) | - 
+b | Button/Boolean | true/false
+c | Custom user-defined sensor | -
+q | Electric charge | As
+t | Time | s
+BL| Battery Level | %
+CL| 24-bit RGB color | hex string
+E | Energy (`ts` property required) | J
+I | Electric current | A
+J | Illuminance | lx
+L | Distance | m
+Lp| Sound pressure level | dB
+M | Mass | kg
+N | Number/count | -
+P | Power | W
+Pe| General purpose percentage | %
+PL| Power Level (signal strength) | dBm
+Pr| Pressure | Pa
+R | Electric Resistance | Ohms
+RH| Relative Humidity | %
+T | Temperature | °C
+U | Voltage | V
+(other strings) | Reserved, let us know if you need a new type added | -
 
 If a client is only interested in certain sensor types (e.g. Temperature), it may disregard all other sensor objects.
