@@ -2269,12 +2269,7 @@ To allow read access to sensor data via the JSON API in a standardized way, the 
 <tr>
 <td>val</td>
 <td>any</td>
-<td>The most current sensor reading. May be of any JSON type depending on the type of the sensor, this is a number for all sensor types pre-defined below except for the <code>"b"</code> and <code>"CL"</code> types and custom type sensors.</td>
-</tr>
-<tr>
-<td><code>null</code> if the reading is invalid, either due to an error or because the first reading has not yet completed.</td>
-<td></td>
-<td></td>
+<td>The most current sensor reading. May be of any JSON type depending on the type of the sensor, this is a number for all sensor types pre-defined below except for the <code>"b"</code> and <code>"CL"</code> types and custom type sensors. <code>null</code> if the reading is invalid, either due to an error or because the first reading has not yet completed.</td>
 </tr>
 <tr>
 <td>unit</td>
@@ -2330,123 +2325,118 @@ To allow read access to sensor data via the JSON API in a standardized way, the 
 </thead>
 <tbody>
 <tr>
-<td>""</td>
+<td>"" (empty string)</td>
 <td>Invalid sensor (reserved)</td>
 <td>-</td>
 </tr>
 <tr>
-<td>"b"</td>
+<td>b</td>
 <td>Button/Boolean</td>
 <td>true/false</td>
 </tr>
 <tr>
-<td>"c"</td>
+<td>c</td>
 <td>Custom user-defined sensor</td>
 <td>-</td>
 </tr>
 <tr>
-<td>"q"</td>
+<td>q</td>
 <td>Electric charge</td>
 <td>As</td>
 </tr>
 <tr>
-<td>"t"</td>
+<td>t</td>
 <td>Time</td>
 <td>s</td>
 </tr>
 <tr>
-<td>"BL"</td>
+<td>BL</td>
 <td>Battery Level</td>
 <td>%</td>
 </tr>
 <tr>
-<td>"CL"</td>
+<td>CL</td>
 <td>24-bit RGB color</td>
 <td>hex string</td>
 </tr>
 <tr>
-<td>"E"</td>
+<td>E</td>
 <td>Energy (<code>ts</code> property required)</td>
 <td>J</td>
 </tr>
 <tr>
-<td>"I"</td>
+<td>I</td>
 <td>Electric current</td>
 <td>A</td>
 </tr>
 <tr>
-<td>"J"</td>
+<td>J</td>
 <td>Illuminance</td>
 <td>lx</td>
 </tr>
 <tr>
-<td>"L"</td>
+<td>L</td>
 <td>Distance</td>
 <td>m</td>
 </tr>
 <tr>
-<td>"Lp"</td>
+<td>Lp</td>
 <td>Sound pressure level</td>
 <td>dB</td>
 </tr>
 <tr>
-<td>"M"</td>
+<td>M</td>
 <td>Mass</td>
 <td>kg</td>
 </tr>
 <tr>
-<td>"N"</td>
+<td>N</td>
 <td>Number/count</td>
 <td>-</td>
 </tr>
 <tr>
-<td>"P"</td>
+<td>P</td>
 <td>Power</td>
 <td>W</td>
 </tr>
 <tr>
-<td>"Pe"</td>
+<td>Pe</td>
 <td>General purpose percentage</td>
 <td>%</td>
 </tr>
 <tr>
-<td>"PL"</td>
+<td>PL</td>
 <td>Power Level (signal strength)</td>
 <td>dBm</td>
 </tr>
 <tr>
-<td>"Pr"</td>
+<td>Pr</td>
 <td>Pressure</td>
 <td>Pa</td>
 </tr>
 <tr>
-<td>"R"</td>
+<td>R</td>
 <td>Electric Resistance</td>
 <td>Ohms</td>
 </tr>
 <tr>
-<td>"RH"</td>
+<td>RH</td>
 <td>Relative Humidity</td>
 <td>%</td>
 </tr>
 <tr>
-<td>"T"</td>
+<td>T</td>
 <td>Temperature</td>
 <td>°C</td>
 </tr>
 <tr>
-<td>"U"</td>
+<td>U</td>
 <td>Voltage</td>
 <td>V</td>
 </tr>
 <tr>
-<td>any string starting with an uppercase letter and longer than 2 characters</td>
-<td>Custom user-defined sensor type</td>
-<td>-</td>
-</tr>
-<tr>
-<td>all other strings</td>
-<td>Reserved</td>
+<td>(other strings)</td>
+<td>Reserved, let us know if you need a new type added</td>
 <td>-</td>
 </tr>
 </tbody>
