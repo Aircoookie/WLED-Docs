@@ -337,3 +337,75 @@ If your code relies on absolute Kelvin values, a reasonable estimate for the war
 - A bus supporting CCT is configured and `Calculate CCT from RGB` is _not_ enabled
 
 CCT support is indicated by `info.leds.cct` being `true`, in which case you can regard the instance as a CCT light and e.g. display a color temperature control.
+
+### Sensors
+
+!!! warning
+    This section about the Sensor API is a DRAFT specification. It is not yet implemented and subject to change.
+
+Various types of sensors (e.g. for Temperature, light intensity, PIR) may be added to WLED via usermods.
+To allow read access to sensor data via the JSON API in a standardized way, the `info.sensor` array is used.
+
+If the `info.sensor` array is missing or empty, no sensor values are exposed.
+
+#### Sensor object
+
+Each sensor/measurement is represented by an object within the `info.sensor` array.
+
+For example,
+
+```json
+{"type":"T","n":"Outside","val":12}
+```
+
+refers to a 12 °C temperature measurement in Celsius with the sensor name "Outside".
+
+The object may contain the following properties, of which all are optional, except `type`.
+
+| JSON key | Value range | Description
+| --- | --- | --- |
+type | string | The type of the sensor.
+n | string | The name of the sensor. If omitted, the client may generate a suitable name (e.g. "Temperature sensor 1") 
+val | any | The most current sensor reading. May be of any JSON type depending on the type of the sensor, this is a number for all sensor types pre-defined below except for the `"b"` and `"CL"` types and custom type sensors.
+`null` if the reading is invalid, either due to an error or because the first reading has not yet completed.
+unit | string | An explicit human-readable unit string for the measurement. If omitted, the default for the sensor type is used.
+error | int or string | If present and not `null`,`false`,`0` or an empty string, a sensor error is indicated. May either be an integer error code or an error string.
+tc | number | Seconds of WLED `uptime` 
+tm | number | Seconds of WLED `uptime` when the last reading given by `val` was obtained.
+ts | number | Seconds of WLED `uptime` at the first measurement / start of measurement period. (required for Energy sensor type)
+min | number | Lower bound of possible value range
+max | number | Upper bound of possible value range
+u | number | Absolute uncertainty of the measurement
+
+#### Sensor types
+
+These are the standardized sensor types that may be implemented by usermods:
+
+| Type ID String | Measurement Type | Default Unit
+| --- | --- | --- |
+"" | Invalid sensor (reserved) | - 
+"b" | Button/Boolean | true/false
+"c" | Custom user-defined sensor | -
+"q" | Electric charge | As
+"t" | Time | s
+"BL"| Battery Level | %
+"CL"| 24-bit RGB color | hex string
+"E" | Energy (`ts` property required) | J
+"I" | Electric current | A
+"J" | Illuminance | lx
+"L" | Distance | m
+"Lp"| Sound pressure level | dB
+"M" | Mass | kg
+"N" | Number/count | -
+"P" | Power | W
+"Pe"| General purpose percentage | %
+"PL"| Power Level (signal strength) | dBm
+"Pr"| Pressure | Pa
+"R" | Electric Resistance | Ohms
+"RH"| Relative Humidity | %
+"T" | Temperature | °C
+"U" | Voltage | V
+any string starting with an uppercase letter and longer than 2 characters | Custom user-defined sensor type | -
+all other strings | Reserved | -
+
+If a client is only interested in certain sensor types (e.g. Temperature), it may disregard all other sensor objects.
