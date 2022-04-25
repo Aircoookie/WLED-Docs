@@ -11,7 +11,7 @@
       
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.11">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.120efc48.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c5ef100.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
@@ -961,6 +961,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sensors" class="md-nav__link">
+    Sensors
+  </a>
+  
+    <nav class="md-nav" aria-label="Sensors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sensor-object" class="md-nav__link">
+    Sensor object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-types" class="md-nav__link">
+    Sensor types
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1394,6 +1421,33 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensors" class="md-nav__link">
+    Sensors
+  </a>
+  
+    <nav class="md-nav" aria-label="Sensors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sensor-object" class="md-nav__link">
+    Sensor object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-types" class="md-nav__link">
+    Sensor types
+  </a>
   
 </li>
         
@@ -2178,6 +2232,226 @@ It is preferred that you set a new CCT value in the same range as received from 
 <li>A bus supporting CCT is configured and <code>Calculate CCT from RGB</code> is <em>not</em> enabled</li>
 </ul>
 <p>CCT support is indicated by <code>info.leds.cct</code> being <code>true</code>, in which case you can regard the instance as a CCT light and e.g. display a color temperature control.</p>
+<h3 id="sensors">Sensors</h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This section about the Sensor API is a DRAFT specification. It is not yet implemented and subject to change.</p>
+</div>
+<p>Various types of sensors (e.g. for Temperature, light intensity, PIR) may be added to WLED via usermods.
+To allow read access to sensor data via the JSON API in a standardized way, the <code>info.sensor</code> array is used.</p>
+<p>If the <code>info.sensor</code> array is missing or empty, no sensor values are exposed.</p>
+<h4 id="sensor-object">Sensor object</h4>
+<p>Each sensor/measurement is represented by an object within the <code>info.sensor</code> array.</p>
+<p>For example,</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;T&quot;</span><span class="p">,</span><span class="nt">&quot;n&quot;</span><span class="p">:</span><span class="s2">&quot;Outside&quot;</span><span class="p">,</span><span class="nt">&quot;val&quot;</span><span class="p">:</span><span class="mi">12</span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>refers to a 12 °C temperature measurement in Celsius with the sensor name "Outside".</p>
+<p>The object may contain the following properties, of which all are optional, except <code>type</code>.</p>
+<table>
+<thead>
+<tr>
+<th>JSON key</th>
+<th>Value range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>The type of the sensor.</td>
+</tr>
+<tr>
+<td>n</td>
+<td>string</td>
+<td>The name of the sensor. If omitted, the client may generate a suitable name (e.g. "Temperature sensor 1")</td>
+</tr>
+<tr>
+<td>val</td>
+<td>any</td>
+<td>The most current sensor reading. May be of any JSON type depending on the type of the sensor, this is a number for all sensor types pre-defined below except for the <code>"b"</code> and <code>"CL"</code> types and custom type sensors.</td>
+</tr>
+<tr>
+<td><code>null</code> if the reading is invalid, either due to an error or because the first reading has not yet completed.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>unit</td>
+<td>string</td>
+<td>An explicit human-readable unit string for the measurement. If omitted, the default for the sensor type is used.</td>
+</tr>
+<tr>
+<td>error</td>
+<td>int or string</td>
+<td>If present and not <code>null</code>,<code>false</code>,<code>0</code> or an empty string, a sensor error is indicated. May either be an integer error code or an error string.</td>
+</tr>
+<tr>
+<td>tc</td>
+<td>number</td>
+<td>Seconds of WLED <code>uptime</code></td>
+</tr>
+<tr>
+<td>tm</td>
+<td>number</td>
+<td>Seconds of WLED <code>uptime</code> when the last reading given by <code>val</code> was obtained.</td>
+</tr>
+<tr>
+<td>ts</td>
+<td>number</td>
+<td>Seconds of WLED <code>uptime</code> at the first measurement / start of measurement period. (required for Energy sensor type)</td>
+</tr>
+<tr>
+<td>min</td>
+<td>number</td>
+<td>Lower bound of possible value range</td>
+</tr>
+<tr>
+<td>max</td>
+<td>number</td>
+<td>Upper bound of possible value range</td>
+</tr>
+<tr>
+<td>u</td>
+<td>number</td>
+<td>Absolute uncertainty of the measurement</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sensor-types">Sensor types</h4>
+<p>These are the standardized sensor types that may be implemented by usermods:</p>
+<table>
+<thead>
+<tr>
+<th>Type ID String</th>
+<th>Measurement Type</th>
+<th>Default Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>""</td>
+<td>Invalid sensor (reserved)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>"b"</td>
+<td>Button/Boolean</td>
+<td>true/false</td>
+</tr>
+<tr>
+<td>"c"</td>
+<td>Custom user-defined sensor</td>
+<td>-</td>
+</tr>
+<tr>
+<td>"q"</td>
+<td>Electric charge</td>
+<td>As</td>
+</tr>
+<tr>
+<td>"t"</td>
+<td>Time</td>
+<td>s</td>
+</tr>
+<tr>
+<td>"BL"</td>
+<td>Battery Level</td>
+<td>%</td>
+</tr>
+<tr>
+<td>"CL"</td>
+<td>24-bit RGB color</td>
+<td>hex string</td>
+</tr>
+<tr>
+<td>"E"</td>
+<td>Energy (<code>ts</code> property required)</td>
+<td>J</td>
+</tr>
+<tr>
+<td>"I"</td>
+<td>Electric current</td>
+<td>A</td>
+</tr>
+<tr>
+<td>"J"</td>
+<td>Illuminance</td>
+<td>lx</td>
+</tr>
+<tr>
+<td>"L"</td>
+<td>Distance</td>
+<td>m</td>
+</tr>
+<tr>
+<td>"Lp"</td>
+<td>Sound pressure level</td>
+<td>dB</td>
+</tr>
+<tr>
+<td>"M"</td>
+<td>Mass</td>
+<td>kg</td>
+</tr>
+<tr>
+<td>"N"</td>
+<td>Number/count</td>
+<td>-</td>
+</tr>
+<tr>
+<td>"P"</td>
+<td>Power</td>
+<td>W</td>
+</tr>
+<tr>
+<td>"Pe"</td>
+<td>General purpose percentage</td>
+<td>%</td>
+</tr>
+<tr>
+<td>"PL"</td>
+<td>Power Level (signal strength)</td>
+<td>dBm</td>
+</tr>
+<tr>
+<td>"Pr"</td>
+<td>Pressure</td>
+<td>Pa</td>
+</tr>
+<tr>
+<td>"R"</td>
+<td>Electric Resistance</td>
+<td>Ohms</td>
+</tr>
+<tr>
+<td>"RH"</td>
+<td>Relative Humidity</td>
+<td>%</td>
+</tr>
+<tr>
+<td>"T"</td>
+<td>Temperature</td>
+<td>°C</td>
+</tr>
+<tr>
+<td>"U"</td>
+<td>Voltage</td>
+<td>V</td>
+</tr>
+<tr>
+<td>any string starting with an uppercase letter and longer than 2 characters</td>
+<td>Custom user-defined sensor type</td>
+<td>-</td>
+</tr>
+<tr>
+<td>all other strings</td>
+<td>Reserved</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>If a client is only interested in certain sensor types (e.g. Temperature), it may disregard all other sensor objects.</p>
 
               
             </article>
@@ -2309,7 +2583,7 @@ It is preferred that you set a new CCT value in the same range as received from 
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      <script src="../../assets/javascripts/bundle.748e2769.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
