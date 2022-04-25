@@ -369,18 +369,19 @@ n | string | The name of the sensor. If omitted, the client may generate a suita
 val | any | The most current sensor reading. May be of any JSON type depending on the type of the sensor, this is a number for all sensor types pre-defined below except for the `"b"` and `"CL"` types and custom type sensors. `null` if the reading is invalid, either due to an error or because the first reading has not yet completed.
 unit | string | An explicit human-readable unit string for the measurement. If omitted, the default for the sensor type is used.
 error | int or string | If present and not `null`,`false`,`0` or an empty string, a sensor error is indicated. May either be an integer error code or an error string.
-tc | number | Seconds of WLED `uptime` 
+tc | number | Seconds of WLED `uptime` when the value last changed substantially. The threshold for a "substantial" change is up to the implementation. This can for example be used to find when a PIR sensor was last activated. 
 tm | number | Seconds of WLED `uptime` when the last reading given by `val` was obtained.
 ts | number | Seconds of WLED `uptime` at the first measurement / start of measurement period. (required for Energy sensor type)
 min | number | Lower bound of possible value range
 max | number | Upper bound of possible value range
 u | number | Absolute uncertainty of the measurement
+model | string | Identification of the sensor hardware used
 
 #### Sensor types
 
 These are the standardized sensor types that may be implemented by usermods:
 
-| Type ID String | Measurement Type | Default Unit
+| Type ID string | Measurement type | Default unit
 | --- | --- | --- |
 "" (empty string) | Invalid sensor (reserved) | - 
 b | Button/Boolean | true/false
