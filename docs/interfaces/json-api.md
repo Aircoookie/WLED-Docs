@@ -251,7 +251,7 @@ This feature is available in build 200829 and above.
     For your colors to apply correctly, make sure the desired brightness is set beforehand. Turning on the LEDs from an off state and setting individual LEDs in the same JSON request will _not_ work!
 
 #### Turning Individual Segments On/Off
-Use: `{"seg":{"id":X,"on":"t"}}` and replace X with your desired segment.
+Use: `{"seg":[{"id":X,"on":"t"}]}` and replace X with your desired segment.
 
 #### Playlists
 
