@@ -916,6 +916,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#turning-individual-segments-onoff" class="md-nav__link">
+    Turning Individual Segments On/Off
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#playlists" class="md-nav__link">
     Playlists
   </a>
@@ -1379,6 +1386,13 @@
           <li class="md-nav__item">
   <a href="#per-segment-individual-led-control" class="md-nav__link">
     Per-segment individual LED control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#turning-individual-segments-onoff" class="md-nav__link">
+    Turning Individual Segments On/Off
   </a>
   
 </li>
@@ -2094,6 +2108,8 @@ This feature is available in build 200829 and above.</p>
 <p class="admonition-title">Brightness interaction</p>
 <p>For your colors to apply correctly, make sure the desired brightness is set beforehand. Turning on the LEDs from an off state and setting individual LEDs in the same JSON request will <em>not</em> work!</p>
 </div>
+<h4 id="turning-individual-segments-onoff">Turning Individual Segments On/Off</h4>
+<p>Use: <code>{"seg":{"id":X,"on":"t"}}</code> and replace X with your desired segment.</p>
 <h4 id="playlists">Playlists</h4>
 <p>(Available since 0.11.0)</p>
 <p>Sample playlist API call:</p>
