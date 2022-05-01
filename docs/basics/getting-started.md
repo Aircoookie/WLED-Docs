@@ -26,7 +26,7 @@ To help you out, you may refer to this [LED power, wiring and fuse calculator](h
 
 For analog use, the IRLZ44N or STP55NF06L is a good MOSFET to use. Partial, example circuit...
 
-![Connection schematics Analog](https://i.ibb.co/86vsym1/image.png)
+![Connection schematics Analog](https://i.ibb.co/86vsym1/image.png) ![image](https://user-images.githubusercontent.com/59397047/166152797-111eccae-1942-45d2-8980-1b584ebdeaf9.png)
 
 **2.** Flash the software to your ESP module! There are two options for this step:
 
