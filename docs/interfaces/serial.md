@@ -46,6 +46,27 @@ To get the colors currently displayed by LEDs:
 For both of these methods, you may need to increase the baud rate if you have a large amount of LEDs.  
 However, tpm2 requires on average 2-4x less bandwidth than JSON, and should therefore be preferred if your application can parse binary data.
 
+#### Changing Baud Rate
+
+There are 2 main method for changing Baud Rate for the serial connection
+- Persistant: Configure in App under [Sync Interfaces](/features/settings/#sync-settings). This setting will persist, and WLED will use specified Baud Rate from this point forward.
+- Temporary: Utilizing the serial connection at the existing Baud Rate, send the specific command byte to have WLED temporarily change to new Baud Rate. This Baud Rate is temporary and will be reset to default or peristant setting on reboot.
+
+Byte | Baud Rate
+--- | ---
+`0xB0` | 115200
+`0xB1` | 230400
+`0xB2` | 460800
+`0xB3` | 500000
+`0xB4` | 576000
+`0xB5` | 921600
+`0xB6` | 1000000
+`0xB7` | 1500000
+- *Note:* Keep at 115200 to use Improv. Some boards may not support high rates.
+        
+        
+        
+
 #### Debugging
 
 Compile with the `-D WLED_DEBUG` build flag to enable serial debugging using `DEBUG_PRINTLN(x)` macros.  
