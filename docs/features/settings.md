@@ -111,6 +111,7 @@ Receive On/Off | Y/N | Turn on/off like the hue light
 Brightness | Y/N | Set brightness to that of the hue light
 Color | Y/N | Set color to that of the hue light
 Hue status | - | Shows the current connection status to a hue bridge
+Baud rate | Various | Set the default Serial connection Baud Rate
 
 ### Time settings
 
