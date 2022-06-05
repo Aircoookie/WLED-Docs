@@ -144,6 +144,7 @@ time | uint32 | Set module time to unix timestamp. Not included in state respons
 mainseg | 0 to info.leds.maxseg-1 | Main Segment | Sets which segment ID is the main segment. The main segment's values are the ones sent by UDP sync, and in case no segment is selected, all changes done via the `"seg":{}` syntax without a segment `id` specified are applied to the main segment. If the main segment is deleted, the first active segment becomes the new main segment.
 seg | Array of segment objects | Segments are individual parts of the LED strip. In 0.9.0 this will enables running different effects on differentparts of the strip.
 playlist | object | [Custom preset playlists](#playlists). Not included in state response (available since 0.11.0)
+tb | uint32 | Sets timebase for effects. Not reported.
 
 #### Contents of the segment object
 
