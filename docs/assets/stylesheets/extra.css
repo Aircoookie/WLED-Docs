@@ -8,16 +8,17 @@
   --md-primary-fg-color--light: #555;
   --md-primary-fg-color--dark:  #999;
   --md-default-fg-color:           hsla(var(--md-hue),75%,95%,1); /*text*/
+  --md-typeset-color: var(--md-default-fg-color); /*text*/
   --md-default-fg-color--light:    hsla(var(--md-hue),5%,70%,1); /*heading*/
   --md-default-fg-color--lighter:  hsla(var(--md-hue),75%,90%,0.32); /*edit pen*/
   --md-default-fg-color--lightest: hsla(var(--md-hue),75%,90%,0.12); /*?*/
   --md-default-bg-color: #2c2f33; /* discord */
-  color: #FFFFFF; /* kludge to fix dark font */
   --ac-header-color: #1d1f21; /* title header */
   --md-footer-bg-color: #1d1f21; /* discord link header and footer */
   --md-code-bg-color: #42464c;
   --md-code-fg-color: #FFF;
   --md-admonition-bg-color: #35383d;
+  --md-admonition-fg-color: var(--md-default-fg-color);
   --md-typeset-table-color: #42464c;
   --md-code-hl-keyword-color: #a5d6ff;
   --md-code-hl-number-color: #79c0ff;
