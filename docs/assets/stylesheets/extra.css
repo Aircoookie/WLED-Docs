@@ -8,6 +8,7 @@
   --md-primary-fg-color--light: #555;
   --md-primary-fg-color--dark:  #999;
   --md-default-fg-color:           hsla(var(--md-hue),75%,95%,1); /*text*/
+  --md-typeset-color: var(--md-default-fg-color); /*text*/
   --md-default-fg-color--light:    hsla(var(--md-hue),5%,70%,1); /*heading*/
   --md-default-fg-color--lighter:  hsla(var(--md-hue),75%,90%,0.32); /*edit pen*/
   --md-default-fg-color--lightest: hsla(var(--md-hue),75%,90%,0.12); /*?*/
