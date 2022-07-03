@@ -18,6 +18,7 @@
   --md-code-bg-color: #42464c;
   --md-code-fg-color: #FFF;
   --md-admonition-bg-color: #35383d;
+  --md-admonition-fg-color: var(--md-default-fg-color);
   --md-typeset-table-color: #42464c;
   --md-code-hl-keyword-color: #a5d6ff;
   --md-code-hl-number-color: #79c0ff;
