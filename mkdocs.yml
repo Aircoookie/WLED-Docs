@@ -111,6 +111,7 @@ nav:
     - Custom Features: advanced/custom-features.md
     - ESP32 Recovery: advanced/esp32-recovery.md
     - Mapping: advanced/mapping.md
+    - Virtual LEDs: advanced/ddp.md
   - About: 
     - Contributors & Credits: about/contributors.md
     - Privacy Policy: about/privacy-policy.md
