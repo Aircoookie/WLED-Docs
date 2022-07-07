@@ -50,7 +50,7 @@ and the colors ![primary](https://raw.githubusercontent.com/scottrbailey/WLED-Ut
 | 32 | Chase Flash Rnd | Like Chase Flash, but the 2 LEDs flash in random colors and leaves a random color behind <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_032.gif) | -
 | 33 | Rainbow Runner | Like Chase, but the 2 LEDs light up in rainbow colors and leave a primary color trail <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_033.gif) | Size of chaser
 | 34 | Colorful | Shifting Red-Amber-Green-Blue pattern <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_034.gif) | 0-127: Pastel colors 128-255: Saturated colors
-| 35 | Traffic Light | Emulates a traffic light <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_035.gif) | -
+| 35 | Traffic Light | Emulates a traffic light <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_035.gif) | Over 140 skips red / yellow transition
 | 36 | Sweep Random | Like Sweep, but uses random colors <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_036.gif) | Smoothness
 | 37 | Running 2 | Pattern of n LEDs primary and n LEDs secondary moves along the strip <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_037.gif) | Amount of LEDs lit/unlit
 | 38 | Aurora | Simulation of the Aurora Borealis <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_038.gif) | Number of waves 
