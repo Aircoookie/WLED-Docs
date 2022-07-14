@@ -44,3 +44,4 @@ It could be formatted any of the three ways demonstrated above.
 {"map":[0, 1, 2, 3, 4, 9, 8, 7, 6, 5, 10, 11, 12, 13, 14,
 19, 18, 17, 16, 15, 20, 21, 22, 23, 24, 29, 28, 27, 26, 25]}
 ```
+Finally, it is important to remember that if the physical strip has 50 pixels in total, the "map" array needs to include all 50 pixels.
