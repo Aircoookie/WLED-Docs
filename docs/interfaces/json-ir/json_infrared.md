@@ -63,6 +63,10 @@ When purchasing a remote, be sure that it is an infrared (IR) remote and not a r
 21-key
 [ir.json](21-key_ir.json)
 
+![image](https://user-images.githubusercontent.com/59397047/180650647-982701e9-55a6-43d5-8573-47e249a03ae0.png)
+18-Key Silver
+[ir.json](18-key-ir.json)
+
 [![6 key remote](6-key.png)](https://www.aliexpress.com/item/33014078844.html)
 6-key
 [ir.json](6-key_ir.json)
