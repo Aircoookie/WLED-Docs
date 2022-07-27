@@ -24,7 +24,7 @@ Controllers use the WLED API to change the current light settings.
 | [OctoPrint-WLED](https://plugins.octoprint.org/plugins/wled) | Connect your [OctoPrint](https://octoprint.org) install to your WLED install using this plugin to show things like printer status, progress and more! |
 [openHAB](https://community.openhab.org/t/wled-a-binding-for-controlling-led-strips-and-strings-from-an-opensource-esp8266-project/87286) | Another more professional feature rich home automation system. WLED integration made easy. [Link 2](https://community.openhab.org/t/solved-wled-please-make-this-work-in-openhab/82783) |
 [WLED-GUI](https://github.com/WoodyLetsCode/WLED-GUI) | This is a cross-platform desktop app for WLED. You can use it on Windows, Linux and Mac.
-[wledQuickControl](https://github.com/satrik/wledQuickControl) | macOS 11.0+ Menu Bar app for controlling power and brightness
+[wledQuickControl](https://github.com/satrik/wledQuickControl) | macOS 11.0+ Menu Bar app for controlling power and brightness.
 
 ## Sources
 
