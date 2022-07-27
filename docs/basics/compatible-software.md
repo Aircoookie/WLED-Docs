@@ -17,6 +17,7 @@ Controllers use the WLED API to change the current light settings.
 | Name | Description |
 |---|---|
 [Home Assistant](https://www.home-assistant.io/integrations/wled/) | Versatile and feature rich home automation system. Out-of-the-box WLED integration with automatic discovery.
+[Homey pro with the D.A.L.O.R App](https://homey.app/en-us/app/com.sdn.neopixel-on-rest/D.A.L.O.R/) | Home automation system, WLED integration via the D.A.L.O.R. app  with automatic discovery.
 [ioBroker adapter](https://github.com/iobroker-community-adapters/ioBroker.wled) | Versatile and feature rich home automation system. Out-of-the-box WLED integration with automatic discovery.
 | [Lumia Stream](https://lumiastream.com/) | Allows for control of your lights from streaming software |
 | [node-red-contrib-wled](https://flows.nodered.org/node/node-red-contrib-wled) | [Node-RED](https://nodered.org) nodes for WLED |
