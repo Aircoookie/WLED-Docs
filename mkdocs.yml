@@ -107,6 +107,7 @@ nav:
     - Remote Access / IFTTT: advanced/remote-access-ifttt.md
     - Security: advanced/security.md
     - Wiring Protips: advanced/wiring.md
+    - Long Data Lines: advanced/longdata.md
     - Compiling WLED: advanced/compiling-wled.md
     - Custom Features: advanced/custom-features.md
     - ESP32 Recovery: advanced/esp32-recovery.md
