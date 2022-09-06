@@ -177,6 +177,7 @@ lx | `20bbbtttt`: 200002700 - 201006500 | Loxone brightness and color temperatur
 ly | `BBBGGGRRR`: 0 - 100100100 | Loxone RGB value for secondary color. Each color (`RRR`,`GGG`,`BBB`) is specified in the range from 0 to 100%.
 ly | `20bbbtttt`: 200002700 - 201006500 | Loxone brightness and color temperature values for secondary color. Brightness `bbb` is specified in the range 0 to 100%. `tttt` defines the color temperature in the range from 2700 to 6500 Kelvin. _(available since 0.11.0, not included in state response)_
 i | array | [Individual LED control](#per-segment-individual-led-control). Not included in state response _(available since 0.10.2)_
+frz | bool | freezes/unfreezes the current effect
 
 #### Info object
 
