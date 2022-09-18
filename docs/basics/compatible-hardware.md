@@ -136,7 +136,7 @@ SN74AHCT125N | Aircoookie's recommended levelshifter. Used on the QuinLed Dig-Un
 SN74HCT125N | Slower, cheaper version. Works just as well for WS2812, but not recommended for APA102.
 SN74LVC2T45 | Modern bus transceiver with voltage translation [Yet Another WLED Controller](https://github.com/lizardsystems/yawl-controller)
 TXS0102 | A bidirectional levelshifter that works well with WLED.
-[F-Amp](https://www.pixelcontroller.com/store/controllers/53-falcon-picap.html) | Level shifter/data booster
+[F-Amp](https://www.pixelcontroller.com/store/products/53-falcon-picap.html) | Level shifter/data booster
 
 !!! warning
     I2C shifters are generally too slow for WLED, so don't use them.
