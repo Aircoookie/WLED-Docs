@@ -25,16 +25,16 @@ Sorting: 5v data only, 5v Data + Clock, 12v data only, non-addressable analog PW
 SK6812 | 5v | RGBW
 WS2811 | 5v | usually found in IP68 sealed 12mm pixel strings
 WS2812B | 5v |
-WS2813 | 5v |
-APA102 | 5v | needs Clock/Data
-LPD8806 | 5v | needs Clock/Data
-WS2801 | 5v | needs Clock/Data
-SK9822 | 5v | needs Clock/Data
+WS2813 | 5v | has a backup data line
+APA102 | 5v | using 2 data pins, Clock and Data
+LPD8806 | 5v | using 2 data pins, Clock and Data
+WS2801 | 5v | using 2 data pins, Clock and Data
+SK9822 | 5v | using 2 data pins, Clock and Data
 GS8208 | 12v |
 TM1814 | 12v | RGBW
 WS2811 | 12v | usually 3-LED segments, has data-line resistor
 WS2815 | 12v | has a backup data line
-Analog PWM | Usually 12v/24v | Needs additional hardware (MOSFETs). Needs 3-4 pins per separately controllable strip
+Analog PWM | Usually 12v/24v | Needs additional circuits (MOSFETs). Needs 3 or 4 pins for 1 LED strip
 
 ## Controllers with WLED pre-installed
 
