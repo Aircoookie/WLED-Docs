@@ -136,7 +136,7 @@ SN74AHCT125N | Aircoookie's recommended levelshifter. Used on the QuinLed Dig-Un
 SN74HCT125N | Slower, cheaper version. Works just as well for WS2812, but not recommended for APA102.
 SN74LVC2T45 | Modern bus transceiver with voltage translation [Yet Another WLED Controller](https://github.com/lizardsystems/yawl-controller)
 TXS0102 | A bidirectional levelshifter that works well with WLED.
-[F-Amp](https://www.pixelcontroller.com/store/products/53-falcon-picap.html) | Level shifter/data booster
+[F-Amp](https://www.pixelcontroller.com/store/controllers/53-falcon-picap.html) | Level shifter/data booster
 
 !!! warning
     I2C shifters are generally too slow for WLED, so don't use them.
@@ -161,3 +161,4 @@ Sorting: Sensors, Displays, Actuators
 [SSD1306](https://www.aliexpress.com/wholesale?catId=0&SearchText=SSD1306) | I2C & SPI display, can be used with _4 Line Display_ usermod.
 [5V relay](https://www.aliexpress.com/wholesale?catId=0&SearchText=5v+relay+module) | Relay module. Some will require 5V to trigger so you will need level-shifted output (similar as for LEDs) for proper functionality or a circuit with transistor or MOSFET.
 DS18B20 | Recommended temperature sensor for use with WLED. Compatible with the [Temperature usermod](https://github.com/Aircoookie/WLED/tree/master/usermods/Temperature)
+[Display shield](https://www.tindie.com/products/27112/) | Various configurations. Compatible with the [ESP32 WLED dev board](https://www.tindie.com/products/27056/) also can be used with ESP32 mini dev boards.
