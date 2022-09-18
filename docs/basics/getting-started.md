@@ -24,7 +24,7 @@ If using an ESP8266 and LEDs that have clock and data, you can either use hardwa
 For safe operation it is recommended to dimension your wiring correctly and to integrate fuses.  
 To help you out, you may refer to this [LED power, wiring and fuse calculator](https://wled-calculator.github.io/).
 
-For analog use, the IRLZ44N or STP55NF06L is a good MOSFET to use. Partial, example circuit...
+For analog use, the MOSFETs IRLZ44N or STP55NF06L is a good candidates to use. Partial, example circuit...
 
 ![Connection schematics Analog](https://i.ibb.co/86vsym1/image.png) ![image](https://user-images.githubusercontent.com/59397047/166152797-111eccae-1942-45d2-8980-1b584ebdeaf9.png)
 
