@@ -17,10 +17,10 @@ Commonly known as RS485, differential pair transmission for LED's takes the sing
 The distance between the Tx and Rx devices can easily be 30m.  With Cat5e UTP wire you can reliably reach 150m or more.
 
 Note, there is no need for a level shifter with the Tx module.  Typical transmitters are spec'd for a minimum 2.4V High level input which is well within the output range of a 3.3V MCU.
-The only other thing to note about the TxRx pair is that they usually require 5V to operate and often have a 120 ohm termination resistor across the A+,B- connections. Those resistors are important to maintain the integrity of the tranmitted data.
+The only other thing to note about the TxRx pair is that they usually require 5V to operate and often have a 120 ohm termination resistor across the A+,B- connections. Those resistors are important to maintain the integrity of the transmitted data.
 
 A TxRx pair can also be used in the middle of a run of LED's when the distance to the next strip is long.  Just put a Tx unit at the end of the first strip and the Rx unit at the start of the next strip.
 
-The individual Tx and Rx units are fairly inexpensive and can found on Amazon or via Aliexpress usually for less than $2 USD each.
+The individual Tx and Rx units are fairly inexpensive and can found on Amazon or via Aliexpress usually for less than $2 USD each (try "RS485 TTL interface").
 
 
