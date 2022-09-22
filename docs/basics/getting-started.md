@@ -41,13 +41,13 @@ You can also just scan this QR code:
 
 ![QR-Code](https://i.ibb.co/h2YswXK/WLED-QR-Connect-WB.png)
 
-Go to the IP `4.3.2.1` in your browser to view the module's controls. You should also be able to use the embedded DNS server and connect to `wled.me` if in access point mode.
+Go to the IP `4.3.2.1` in your browser to control your lights! You should also be able to connect to `wled.me` if in access point mode (embedded DNS server).
 
 ### Wifi Setup
 
 To connect your WLED module to your home Wifi:
 
-**1.** Click on the Gear Cog icon to edit your WLED module settings and choose 'Wifi Setup'.
+**1.** Click on the _Config_ (gear) icon to edit your WLED module settings and choose 'Wifi Setup'.
 
 **2.** For most home networks, simply enter your Wifi network's name and network password. You can also change the mDNS address for your WLED module here.
 
@@ -55,7 +55,7 @@ To connect your WLED module to your home Wifi:
 
 **4.** Reconnect your device to your home's Wifi network.
 
-**5.** Check your router device list for the IP of the WLED device inside your local network. For easier and automatic discovery, use the WLED app! Have fun with the software!
+**5.**  Check the device list in your router's user interface for the IP of the WLED device within your local network. For easy automatic discovery, use the WLED app! Have fun with the WLED software!
 
 ### Default GPIO Usage
 
