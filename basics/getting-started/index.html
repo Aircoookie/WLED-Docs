@@ -1339,14 +1339,14 @@
 <p>Unless noted otherwise, all information applies to the latest release (v0.13.3).</p>
 </div>
 <h3 id="quick-start-guide">Quick start guide</h3>
-<p><strong>1.</strong> Connect a  WS2812B-compatible RGB(W) led strip to <code>GPIO2</code>. On most ESP8266 based development boards this pin is labeled <code>D4</code>, on ESP32 based boards use <code>IO16</code> or <code>G16</code> or <code>16</code>. <em>If this wire cannot be kept short, use a <a href="/basics/compatible-hardware#levelshifters">level shifter/translator</a>.</em> Optionally connect a normally open pushbutton to <code>GPIO0</code> (NodeMCU/Wemos pin <code>D3</code>, on ESP32 use <code>IO17</code>) and ground for <a href="/features/macros">configurable actions</a>.
+<p><strong>1.</strong> Connect a  WS2812B-compatible RGB(W) led strip to <code>GPIO2</code>. On most ESP8266 based development boards this pin is labeled <code>D4</code>, on ESP32 based boards use <code>IO16</code> or <code>G16</code> or <code>16</code>. <em>If the connecting wire cannot be kept short, use a <a href="/basics/compatible-hardware#levelshifters">level shifter/translator</a>.</em> Optionally connect a normally open pushbutton to <code>GPIO0</code> (NodeMCU/Wemos pin <code>D3</code>, on ESP32 use <code>IO17</code>) and ground for <a href="/features/macros">configurable actions</a>.
 <strong>Note:</strong> Board pin naming varies depending on the manufacturer. Please use the board pinout from the <em>specific</em> board you purchased and use the GPIO PINS to reference this guide. <em>Make sure to connect ESP and LED-strip grounds together!</em></p>
 <p><img alt="Connection schematics" src="https://i.ibb.co/k9Jgr8S/connections.jpg" /></p>
-<p>If using an ESP8266 and LEDs that have clock and data, you can either use hardware SPI (mostly faster) or software SPI.
+<p>While using an ESP8266 and LEDs that have clock and data, you can either use hardware SPI (mostly faster) or software SPI.
   - hardware SPI: use <code>GPIO14</code> (SCLK) for clock and <code>GPIO13</code> (MOSI) for data.
   - software SPI: since all pins can be changed in the Hardware section of LED settings, you can use any pins. Recommend is to use <code>GPIO1</code> (TxD) for clock and <code>GPIO2</code> (D4) for data. </p>
-<p>For safe operation it is recommended to dimension your wiring correctly and to integrate fuses.<br />
-To help you out, you may refer to this <a href="https://wled-calculator.github.io/">LED power, wiring and fuse calculator</a>.</p>
+<p>For safe operation it is recommended to size your power wires correctly and to integrate fuses.<br />
+For reference, you may use this <a href="https://wled-calculator.github.io/">LED power, wiring and fuse calculator</a>.</p>
 <p>For analog LEDs, the MOSFETs IRLZ44N or STP55NF06L are good candidates. Partial, example circuit...</p>
 <p><img alt="Connection schematics Analog" src="https://i.ibb.co/86vsym1/image.png" /> <img alt="image" src="https://user-images.githubusercontent.com/59397047/166152797-111eccae-1942-45d2-8980-1b584ebdeaf9.png" /></p>
 <p><strong>2.</strong> Flash the software to your ESP module! There are two options for this step:</p>
@@ -1357,8 +1357,8 @@ To help you out, you may refer to this <a href="https://wled-calculator.github.i
 You can also just scan this QR code:</p>
 <p><img alt="QR-Code" src="https://i.ibb.co/h2YswXK/WLED-QR-Connect-WB.png" /></p>
 <p>Go to the IP <code>4.3.2.1</code> in your browser. You should also be able to use the embedded DNS server and connect to <code>wled.me</code> if in access point mode.</p>
-<p><strong>4.</strong> Click on the cog icon to edit settings like connecting the module to your home WiFi.</p>
-<p><strong>5.</strong> Check your router device list for the IP of the WLED device inside your local network. For easier discovery, use the WLED app! Have fun with the software!</p>
+<p><strong>4.</strong> Click on the <em>Config</em> (gear) icon to edit settings like connecting the module to your home WiFi.</p>
+<p><strong>5.</strong> Check the device list in your router's user interface for the IP of the WLED device within your local network. For easier discovery, use the WLED app! Have fun with the WLED software!</p>
 <h3 id="default-gpio-usage">Default GPIO Usage</h3>
 <div class="admonition info">
 <p class="admonition-title">These are only defaults</p>
@@ -1396,8 +1396,8 @@ You can also just scan this QR code:</p>
 </tbody>
 </table>
 <h3 id="software-update-procedure">Software update procedure</h3>
-<p>Method 1: Reflash the new update like a new install (see above).</p>
-<p>Method 2: The software has an integrated OTA software update capability.
+<p>Method 1: Reflashing the new update like a new install (see above).</p>
+<p>Method 2: The software has an integrated <em>OTA software update</em> capability.
 First you have to enable it by typing in the correct OTA passphrase (default: "wledota") in the settings menu.
 Remove the tick in the checkbox "OTA locked". Then save settings and reboot the ESP.
 Then you can select "Manual OTA update" in Security settings and upload a <a href="https://github.com/Aircoookie/WLED/releases">release binary</a>.
@@ -1407,7 +1407,7 @@ If you try to access the update page now, you should see the message "OTA lock a
 <p>Method 3: ArduinoOTA is also supported.</p>
 <div class="admonition info">
 <p class="admonition-title">If you own multiple devices and want to update them</p>
-<p>Since v0.13 of WLED the source code includes shell/command prompt scripts which allow you to update multiple devices with a single command. Please check <code>tools</code> subfolder for <code>multi-update</code> scripts (.cmd or .sh). You will need to modify them to include IP addresses of your devices and intended firmware binary file for each device. If you are using Windows make sure you install <code>curl</code> utility somewhere in your <code>PATH</code> (curl is included with Windows 10 since build 17063). This will only work if "OTA Lock" is disabled.</p>
+<p>Since v0.13 of WLED source code includes shell/command prompt scripts which is allow you to update multiple devices with a single command. Please check <code>tools</code> subfolder for <code>multi-update</code> scripts (.cmd or .sh). You will need to modify them to include IP addresses of your WLED devices and assign firmware binary file for each device. If you are using Windows, make sure you install <code>curl</code> utility somewhere in your <code>PATH</code> (curl is included with Windows 10 since build 17063). This will only work if "OTA Lock" is disabled.</p>
 </div>
 
 
