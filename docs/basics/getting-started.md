@@ -12,7 +12,7 @@ hide:
 
 ### Quick start guide
 
-**1.** Connect a  WS2812B-compatible RGB(W) led strip to `GPIO2`. On most ESP8266 based development boards this pin is labeled `D4`, on ESP32 based boards use `IO16` or `G16` or `16`. _If connection wire cannot be kept short, use a [level shifter/translator](/basics/compatible-hardware#levelshifters)._ Optionally connect a normally open pushbutton to `GPIO0` (NodeMCU/Wemos pin `D3`, on ESP32 use `IO17`) and ground for [configurable actions](/features/macros).
+**1.** Connect a  WS2812B-compatible RGB(W) led strip to `GPIO2`. On most ESP8266 based development boards this pin is labeled `D4`, on ESP32 based boards use `IO16` or `G16` or `16`. _If the connecting wire cannot be kept short, use a [level shifter/translator](/basics/compatible-hardware#levelshifters)._ Optionally connect a normally open pushbutton to `GPIO0` (NodeMCU/Wemos pin `D3`, on ESP32 use `IO17`) and ground for [configurable actions](/features/macros).
 **Note:** Board pin naming varies depending on the manufacturer. Please use the board pinout from the _specific_ board you purchased and use the GPIO PINS to reference this guide. _Make sure to connect ESP and LED-strip grounds together!_
 
 ![Connection schematics](https://i.ibb.co/k9Jgr8S/connections.jpg)
@@ -21,8 +21,8 @@ While using an ESP8266 and LEDs that have clock and data, you can either use har
   - hardware SPI: use `GPIO14` (SCLK) for clock and `GPIO13` (MOSI) for data.
   - software SPI: since all pins can be changed in the Hardware section of LED settings, you can use any pins. Recommend is to use `GPIO1` (TxD) for clock and `GPIO2` (D4) for data. 
 
-For safe operation it is recommended to size your power carrying wires correctly and to integrate fuses.  
-For reference, you may use to this [LED power, wiring and fuse calculator](https://wled-calculator.github.io/).
+For safe operation it is recommended to size your power wires correctly and to integrate fuses.  
+For reference, you may use this [LED power, wiring and fuse calculator](https://wled-calculator.github.io/).
 
 For analog use, the IRLZ44N or STP55NF06L is a good MOSFET to use. Partial, example circuit...
 
@@ -43,9 +43,9 @@ You can also just scan this QR code:
 
 Go to the IP `4.3.2.1` in your browser. You should also be able to use the embedded DNS server and connect to `wled.me` if in access point mode.
 
-**4.** Click on the _Config_ icon to edit settings like connecting the module to your home WiFi.
+**4.** Click on the _Config_ (gear) icon to edit settings like connecting the module to your home WiFi.
 
-**5.** Check on your router device list for the IP of the WLED device inside of your local network. For easier discovery, use the WLED app! Have fun with the WLED software!
+**5.** Check the device list in your router's user interface for the IP of the WLED device within your local network. For easier discovery, use the WLED app! Have fun with the WLED software!
 
 ### Default GPIO Usage
 
