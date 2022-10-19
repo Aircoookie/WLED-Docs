@@ -5,7 +5,7 @@ hide:
   # - toc
 ---
 
-## 1. Downloading the firmware bin file
+## 1. Downloading WLED firmware bin file
 
 You can find precompiled .bin files on the [official release page](https://bin.wled.me). Also available [alternative with precompiled usermods](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware)
 
