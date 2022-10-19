@@ -50,6 +50,7 @@ Analog PWM | Usually 12v/24v | Needs additional circuits (MOSFETs). Needs 3 or 4
 [Athom High Power Addressable LED Strip Controller](https://www.athom.tech/blank-1/wled-high-power-led-strip-controller) | Higher power options than the above system. Supports optional clock output.
 [Athom RGBW Light Strip Controller](https://www.athom.tech/blank-1/wled-rgbw-light-strip-controller) | Has outputs for individual color channels.
 [Cadsbi Motion Smart](https://www.cadsbi-shop.de/shop/led-beleuchtungscontroller/cadsbi-motion-smart/) | Ready to use solution with 3 output ports, an external antenna, in a high quality metal enclosure
+[ESP8266 Pixel Controller](https://www.maltepoeggel.de/?site=pixelcontroller) | DIY board for 5V/12V LED strips with TTL or RS485 output using a Wemos D1 mini, integrated fuse, pluggable terminal block, 3D printed module case
 [ESPthings.io ET-AL01](https://www.espthings.io/AL01) | DIY board for 5 Analog channels and/or up to 5 Digital LED channels (or a combination of the latter as required), Integrated level shifter, 5v/12/24v compatibility, 4x pull-up/down GPIO, serial interface and power distribution terminals. Can be used with Wemos D1-style ESP8266 or ESP32 boards.
 [IOT4WLED](https://iot4.eu/product/iot4wled/) | Ready to use hardware for WLED!
 [Laterna](https://github.com/Planet-Laterna/Laterna) | Based on an ESP32 for digital LED and RBG/RGBW LED strips with support for 5V, 12V and 24V LED strips. (Up to 4 channels)
