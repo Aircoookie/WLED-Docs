@@ -14,18 +14,26 @@ If you are not sure what binary you should use look at this page:
 
 ## 2. Downloading the ESP WLED Flasher
 
-You can find download flasher [here](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher)!
+You can find and download flasher [here](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher)!
 
-After downloading the file, unzip it and start
+After downloading a file, unzip it and start
 
 ## 3. Flashing firmware bin files
 
-<img src="https://github.com/srg74/WLED-wemos-shield/raw/master/resources/Images/Flasher1.png" align="right">After flasher start, choose `Serial port` it will a port your board is connected to.
+When flasher start, choose `Serial port` (it must be a port your board is connected to).
 
-<img src="https://github.com/srg74/WLED-wemos-shield/raw/master/resources/Images/Flasher2.png" align="right">Next , choose `downloaded BIN file`.
+![](https://github.com/srg74/WLED-wemos-shield/raw/master/resources/Images/Flasher1.png)
 
-<img src="https://github.com/srg74/WLED-wemos-shield/raw/master/resources/Images/Flasher3.png" align="right">Press `Flash ESP`.
+Next , choose `downloaded BIN file`.
 
-<img src="https://github.com/srg74/WLED-wemos-shield/raw/master/resources/Images/Flasher4.png" align="right">Now the firmware will be flashed to the ESP. Wait until process is finished and you will see `ADA` message.
+![](https://github.com/srg74/WLED-wemos-shield/raw/master/resources/Images/Flasher2.png)
+
+Click on `Flash ESP`.
+
+![](https://github.com/srg74/WLED-wemos-shield/raw/master/resources/Images/Flasher3.png)
+
+Now WLED firmware will be flashed to the ESP. Wait until process is finished and you will see `ADA` message.
+
+![](https://github.com/srg74/WLED-wemos-shield/raw/master/resources/Images/Flasher4.png)
 
 **Next steps:** [Quick start guide](/basics/getting-started)
