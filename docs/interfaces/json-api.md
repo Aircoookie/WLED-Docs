@@ -4,9 +4,9 @@ hide:
   # - navigation
   # - toc
 ---
-!!! info "Version Info"
-    Starting from version 0.8.4, WLED implements a powerful JSON API over HTTP.
-    It is accessible using the `/json` subpage.
+
+WLED versions since 0.8.4 implement a powerful JSON API over HTTP.  
+It is accessible using the `/json` subpage.
 
 ### Obtaining light information
 
@@ -18,7 +18,13 @@ The response consists of four objects:
 - `effects` contains an array of the effect mode names
 - `palettes` contains an array of the palette names
 
-You may also obtain those objects individually using the URLs `/json/state` `/json/info` `/json/eff`, and `/json/pal`
+You may also obtain those objects individually using the URLs `/json/state` `/json/info` `/json/eff`, and `/json/pal`.
+
+!!! info "Reserved effect IDs"
+    In WLED versions 0.14+, some effects are unsupported in certain builds (e.g. some audio reactive effects may only work on ESP32).
+    In order for each effect to have an unique ID on all devices, having unsupported ones in between supported ones is possible.
+    If called, these will fallback to the Solid effect, in the effects list they have the name `RSVD` or `-`.
+    To improve user experience, it is recommended to remove effects with the names `RSVD` or `-` form the UI effect selection.
 
 ### Setting new values
 
