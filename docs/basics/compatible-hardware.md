@@ -22,7 +22,7 @@ Sorting: 5v data only, 5v Data + Clock, 12v data only, non-addressable analog PW
 
 | Type | Voltage | Comments |
 |---|---|---|
-SK6812 | 5v | RGBW
+SK6812 | 5v/12v | RGBW
 WS2811 | 5v | usually found in IP68 sealed 12mm pixel strings
 WS2812B | 5v |
 WS2813 | 5v | has a backup data line
