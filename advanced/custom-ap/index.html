@@ -15,7 +15,7 @@
     
     
       
-        <title>Mapping - WLED Project</title>
+        <title>Custom Access Point SSID and Password - WLED Project</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#what-is-it" class="md-skip">
+        <a href="#modifying-the-access-point-ssid" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Mapping
+              Custom Access Point SSID and Password
             
           </span>
         </div>
@@ -1085,62 +1085,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Mapping
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../mapping/" class="md-nav__link">
         Mapping
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-it" class="md-nav__link">
-    What is it?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-do-we-do-it" class="md-nav__link">
-    How do we do it?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1164,11 +1113,69 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../custom-ap/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Custom Access Point Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Custom Access Point Configuration
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modifying-the-access-point-ssid" class="md-nav__link">
+    Modifying the Access Point SSID
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifying-the-access-point-password" class="md-nav__link">
+    Modifying the Access Point Password
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifying-the-access-point-ssid-to-be-unique" class="md-nav__link">
+    Modifying the Access Point SSID to be Unique
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1281,22 +1288,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-it" class="md-nav__link">
-    What is it?
+  <a href="#modifying-the-access-point-ssid" class="md-nav__link">
+    Modifying the Access Point SSID
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-do-we-do-it" class="md-nav__link">
-    How do we do it?
+  <a href="#modifying-the-access-point-password" class="md-nav__link">
+    Modifying the Access Point Password
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
+  <a href="#modifying-the-access-point-ssid-to-be-unique" class="md-nav__link">
+    Modifying the Access Point SSID to be Unique
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
   </a>
   
 </li>
@@ -1315,41 +1329,57 @@
                 
                   
 
-  <a href="https://github.com/Aircoookie/WLED-Docs/edit/main/docs/advanced/mapping.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/Aircoookie/WLED-Docs/edit/main/docs/advanced/custom-ap.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>Mapping</h1>
+  <h1>Custom Access Point Configuration</h1>
 
-<p>WLED now has the ability to remap your LED strip programmatically.</p>
-<h3 id="what-is-it">What is it?</h3>
-<p>This allows us to treat the WLED strip as if it is wired in any way - we can then use the mapping feature to address the strip in any order. This allows for matrix support, serpentine runs and such.</p>
-<h3 id="how-do-we-do-it">How do we do it?</h3>
-<p>Navigate to the edit page for your WLED device by adding <code>/edit</code> to its' address - for example, https://my-led-device.local/edit
-Use this edit page to create a file called <code>ledmap.json</code>.</p>
-<p><code>ledmap.json</code> file needs to be a JSON formatted file with the the key being "map" and the value being an array of numbers representing the new order of pixels. The <em>position</em> of values in the array is the "natural" order of LEDs and the value entered is the new position.</p>
-<p>The ArduinoJSON library is <strong><em>*</em>extremely</strong>*** white-space sensitive.
-If your <code>ledmap.json</code> file is not working, check for white-spaces where they should not be. The LED positions are zero-indexed.</p>
-<p>Multiple maps are supported in the latest versions by using <code>ledmapx.json</code> where x is a number. Maps can be selected in a preset using <code>{"ledmap":x,...</code>.</p>
-<h3 id="examples">Examples</h3>
-<p>In the below example (formatted multiple ways), we remap a strip of four LEDs from a physical order of 0 1 2 3 into a new order of 0 2 1 3.</p>
-<div class="highlight"><pre><span></span><code>{&quot;map&quot;:[0,2,1,3]}
-
-{&quot;map&quot;:[
-0,2,1,3
-]}
-
-{&quot;map&quot;:[
-0,2,
-1,3
-]}
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><em>Note: These options change the documented access point name and password. The WLED community does not recommend changing these settings unless you are familiar with the risks.</em></p>
+</div>
+<p>Three compile time defines are available to modify the access point name. These are <code>WLED_AP_SSID</code>, <code>WLED_AP_PASS</code>, and <code>WLED_AP_SSID_UNIQUE</code>. Defining <code>WLED_AP_SSID</code> will set the SSID to the value of the define. Defining <code>WLED_AP_PASS</code> will set the password to the value of the define. Defining <code>WLED_AP_SSID_UNIQUE</code> will append the last 6 digits of the MAC address to the SSID.</p>
+<p><code>WLED_AP_SSID</code> and <code>WLED_AP_PASS</code> are string values, and as such need to be defined with <code>"</code> surrounding them. For example, <code>#define WLED_AP_SSID "MyWLED"</code> or <code>-D WLED_AP_SSID='"MyWLED"'</code> in the <code>build_flags</code> of <code>platformio.ini</code>.</p>
+<h3 id="modifying-the-access-point-ssid">Modifying the Access Point SSID</h3>
+<p>Defining <code>WLED_AP_SSID</code> will set the SSID to the value of the define. This is useful to set a device specific access point name. For example, if you have multiple WLED devices, you can set the SSID to the device name.</p>
+<p><code>WLED_AP_SSID</code> is a string value, and as such needs to be defined with <code>"</code> surrounding it. For example, <code>#define WLED_AP_SSID "MyWLED"</code> or <code>-D WLED_AP_SSID='"MyWLED"'</code> in the <code>build_flags</code> of <code>platformio.ini</code>.</p>
+<h3 id="modifying-the-access-point-password">Modifying the Access Point Password</h3>
+<p>Defining <code>WLED_AP_PASS</code> will set the password to the value of the define. This is useful to set a device specific access point password. For example, if you have multiple WLED devices, you can set the password to the device name.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+</div>
+<p>If <code>WLED_AP_PASS</code> is defined, but <code>WLED_AP_SSID</code> is not, the compilation will fail. Ensure you define both <code>WLED_AP_SSID</code> and <code>WLED_AP_PASS</code> if you wish to change the access point password.</p>
+<p><code>WLED_AP_PASS</code> is a string value, and as such needs to be defined with <code>"</code> surrounding it. For example, <code>#define WLED_AP_PASS "MyWLEDPass"</code> or <code>-D WLED_AP_PASS='"MyWLEDPass"'</code> in the <code>build_flags</code> of <code>platformio.ini</code>.</p>
+<h3 id="modifying-the-access-point-ssid-to-be-unique">Modifying the Access Point SSID to be Unique</h3>
+<p>Defining <code>WLED_AP_SSID_UNIQUE</code> will append the last 6 digits of the MAC address to the SSID. This is useful to set a device specific access point name with a common prefix. For example, if you have multiple WLED devices, you can set the SSID to <code>ChristmasTree-</code> followed by the last 6 digits of the MAC address.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+</div>
+<p>If <code>WLED_AP_SSID_UNIQUE</code> is defined, but <code>WLED_AP_SSID</code> is not, the compilation will fail. Ensure you define both <code>WLED_AP_SSID</code> and <code>WLED_AP_SSID_UNIQUE</code> if you wish to change the access point SSID to be unique.</p>
+<p><code>WLED_AP_SSID_UNIQUE</code> is a boolean value, and as such only needs to be defined or not. For example, <code>#define WLED_AP_SSID_UNIQUE</code> or <code>-D WLED_AP_SSID_UNIQUE</code> in the <code>build_flags</code> of <code>platformio.ini</code>.</p>
+<h3 id="example">Example</h3>
+<p>For custom devices in <code>platformio_override.ini</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">[env:mywled]</span><span class="w"></span>
+<span class="na">board</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">esp32dev</span><span class="w"></span>
+<span class="na">platform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">${esp32.platform}</span><span class="w"></span>
+<span class="na">platform_packages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">${esp32.platform_packages}</span><span class="w"></span>
+<span class="na">build_unflags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">${common.build_unflags}</span><span class="w"></span>
+<span class="na">build_flags</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">    </span><span class="na">${common.build_flags_esp32}</span><span class="w"></span>
+<span class="w">    </span><span class="na">-D WLED_AP_SSID_UNIQUE</span><span class="w"></span>
+<span class="w">    </span><span class="na">-D WLED_AP_SSID</span><span class="o">=</span><span class="s">&#39;&quot;MyWLED&quot;&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="na">-D WLED_AP_PASS</span><span class="o">=</span><span class="s">&#39;&quot;MyWLEDPass&quot;&#39;</span><span class="w"></span>
+<span class="na">lib_deps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">${esp32.lib_deps}</span><span class="w"></span>
+<span class="na">monitor_filters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">esp32_exception_decoder</span><span class="w"></span>
+<span class="na">board_build.partitions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">${esp32.default_partitions}</span><span class="w"></span>
 </code></pre></div>
-<p>This is another example that switches direction every 5 LEDs.
-It could be formatted any of the three ways demonstrated above.</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;map&quot;</span><span class="p">:[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"></span>
-<span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w"> </span><span class="mi">29</span><span class="p">,</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">]}</span><span class="w"></span>
+<p>In <code>my_config.h</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#define WLED_AP_SSID_UNIQUE</span>
+<span class="cp">#define WLED_AP_SSID &quot;MyWLED&quot;</span>
+<span class="cp">#define WLED_AP_PASS &quot;MyWLEDPass&quot;</span>
 </code></pre></div>
 
 
@@ -1376,7 +1406,7 @@ It could be formatted any of the three ways demonstrated above.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../esp32-recovery/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ESP32 Recovery" rel="prev">
+        <a href="../ddp/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Virtual LEDs" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1385,20 +1415,20 @@ It could be formatted any of the three ways demonstrated above.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              ESP32 Recovery
+              Virtual LEDs
             </div>
           </div>
         </a>
       
       
         
-        <a href="../ddp/" class="md-footer__link md-footer__link--next" aria-label="Next: Virtual LEDs" rel="next">
+        <a href="../../about/contributors/" class="md-footer__link md-footer__link--next" aria-label="Next: Contributors &amp; Credits" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Virtual LEDs
+              Contributors & Credits
             </div>
           </div>
           <div class="md-footer__button md-icon">
