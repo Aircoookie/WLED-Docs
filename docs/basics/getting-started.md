@@ -41,6 +41,9 @@ You can also just scan this QR code:
 
 ![QR-Code](https://i.ibb.co/h2YswXK/WLED-QR-Connect-WB.png)
 
+!!! tip "WLED-AP is not showing up!"
+    If you do not see the `WLED-AP` SSID, the default SSID may have been changed at [compile time](/advanced/custom-ap).
+
 Go to the IP `4.3.2.1` in your browser to control your lights! You should also be able to connect to `wled.me` if in access point mode (embedded DNS server).
 
 ### Wifi Setup

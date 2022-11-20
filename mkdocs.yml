@@ -113,6 +113,7 @@ nav:
     - ESP32 Recovery: advanced/esp32-recovery.md
     - Mapping: advanced/mapping.md
     - Virtual LEDs: advanced/ddp.md
+    - Custom Access Point Configuration: advanced/custom-ap.md
   - About: 
     - Contributors & Credits: about/contributors.md
     - Privacy Policy: about/privacy-policy.md
