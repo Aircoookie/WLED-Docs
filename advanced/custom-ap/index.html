@@ -1351,14 +1351,10 @@
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 </div>
-<p>If <code>WLED_AP_PASS</code> is defined, but <code>WLED_AP_SSID</code> is not, the compilation will fail. Ensure you define both <code>WLED_AP_SSID</code> and <code>WLED_AP_PASS</code> if you wish to change the access point password.</p>
+<p>If <code>WLED_AP_PASS</code> is defined, but <code>WLED_AP_SSID</code> is not, the compilation will fail. Ensure you define both <code>WLED_AP_SSID</code> and <code>WLED_AP_PASS</code> if you wish to change the access point password. Please also change the SSID if you wish to set a custom password.</p>
 <p><code>WLED_AP_PASS</code> is a string value, and as such needs to be defined with <code>"</code> surrounding it. For example, <code>#define WLED_AP_PASS "MyWLEDPass"</code> or <code>-D WLED_AP_PASS='"MyWLEDPass"'</code> in the <code>build_flags</code> of <code>platformio.ini</code>.</p>
 <h3 id="modifying-the-access-point-ssid-to-be-unique">Modifying the Access Point SSID to be Unique</h3>
 <p>Defining <code>WLED_AP_SSID_UNIQUE</code> will append the last 6 digits of the MAC address to the SSID. This is useful to set a device specific access point name with a common prefix. For example, if you have multiple WLED devices, you can set the SSID to <code>ChristmasTree-</code> followed by the last 6 digits of the MAC address.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-</div>
-<p>If <code>WLED_AP_SSID_UNIQUE</code> is defined, but <code>WLED_AP_SSID</code> is not, the compilation will fail. Ensure you define both <code>WLED_AP_SSID</code> and <code>WLED_AP_SSID_UNIQUE</code> if you wish to change the access point SSID to be unique.</p>
 <p><code>WLED_AP_SSID_UNIQUE</code> is a boolean value, and as such only needs to be defined or not. For example, <code>#define WLED_AP_SSID_UNIQUE</code> or <code>-D WLED_AP_SSID_UNIQUE</code> in the <code>build_flags</code> of <code>platformio.ini</code>.</p>
 <h3 id="example">Example</h3>
 <p>For custom devices in <code>platformio_override.ini</code>:</p>
