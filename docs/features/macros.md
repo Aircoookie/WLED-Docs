@@ -39,8 +39,8 @@ For further buttons, the default action for short press is cycling effects, long
 
 Multiple buttons are implemented since 0.13 and allow a few different types of buttons to be connected to the ESP:
 
-- momentary push-buttons that short GPIO pin to ground
-- momentary push-buttons that short GPIO pin to +3.3V (inverted)
+- momentary push-buttons that are normally open and short GPIO pin to ground (active low)
+- momentary push-buttons that are normally closed and release the connection from GPIO pin to GND (inverted, active high)
 - switches (be careful with selection of GPIO for switch since some GPIOs will prevent successful boot of ESP if held LOW or HIGH at boot)
 - PIR switch AKA motion detection sensor (they set GPIO HIGH when motion is detected, this type of buttons will also trigger MQTT message with /motion topic)
 - some GPIO pins on ESP32 can act as momentary touch buttons with no additional hardware
