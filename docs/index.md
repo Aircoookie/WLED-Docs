@@ -81,7 +81,7 @@ See the [getting started](/basics/getting-started) page!
 
 ## 🖼️ User interface
 
-<img src="/assets/images/ui/headers/macbook-pro-space-gray-on-the-wooden-table.jpg" width="50%"><img src="assets/images/ui/headers/walking-with-iphone-x.jpg" width="50%">
+<img src="assets/images/ui/headers/macbook-pro-space-gray-on-the-wooden-table.jpg" width="50%"><img src="assets/images/ui/headers/walking-with-iphone-x.jpg" width="50%">
 
 ## 💾 Compatible hardware
 

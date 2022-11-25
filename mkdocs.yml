@@ -79,6 +79,7 @@ nav:
       - Compiling WLED: advanced/compiling-wled.md
     - Tutorials: basics/tutorials.md
     - FAQ: basics/faq.md
+    - Fork comparison: basics/fork-comparison.md
   - Features:
     - Effects & Palettes: features/effects-palettes.md
     - Macros: features/macros.md
