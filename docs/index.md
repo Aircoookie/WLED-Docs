@@ -1,5 +1,5 @@
 ---
-title: Welcome to WLED
+title: Welcome to WLED MoonModules & Sound Reactive
 hide:
   - navigation
   - toc

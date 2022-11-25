@@ -1,4 +1,4 @@
-site_name: WLED Project
+site_name: WLED Project (MM & SR Fork)
 site_author: Christian Schwinne (Aircoookie)
 #site_url: https://wled.app
 repo_name: WLED
@@ -45,8 +45,8 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/discord
-      link: https://discord.gg/KuqP7NE
-      name: Discord
+      link: https://discord.gg/K9JBvgNG
+      name: Discord SR
     - icon: fontawesome/brands/discourse
       link: https://wled.discourse.group/
       name: Forum
