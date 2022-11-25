@@ -18,7 +18,19 @@ hide:
   
 # Welcome to WLED MoonModules
 
-WLED MoonModules is a fork of Aircoookie WLED.
+MoonModules/WLED is a fork from Aircoookie/WLED which contains latest merge of v0.14 of WLED with additional features (see [Merge-history](https://github.com/MoonModules/WLED/wiki/Merge-history)). 
+
+This fork is created by members of the Atuline/WLED team to make development against v0.14 possible while still preserving Atuline/WLED v0.13 as a stable and supported version. The Atuline/WLED fork is also called WLED SR (Sound Reactive).
+
+Our latest work can be found here: [mdev](https://github.com/MoonModules/WLED/tree/mdev). You can compile it yourself using PlatformIO.ini entry `esp32_4MB_max`, or get a build from [Serg74](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/experimental/Firmware/AudioReactive) (daily) or [wladi](https://wled-install.github.io) (periodically). 
+
+See [Features](https://github.com/MoonModules/WLED/wiki/Features) for an overview what is in the pipeline.
+
+Disclaimer: using this software is the users responsibility as it is not bug free. Therefore contributors of this repo are not reliable for anything including but not limited to spontaneous combustion of the entire led strip, the house and the inevitable heat death of the universe
+
+Join the Discord server to discuss everything about WLED MM and SR!
+
+<a href="https://discord.gg/K9JBvgNG"><img src="https://discordapp.com/api/guilds/473448917040758787/widget.png?style=banner2" width="25%"></a>
 
 WLED Aircoookie welcome 👇
 
@@ -80,9 +92,9 @@ See [here](/basics/compatible-hardware)!
 Licensed under the MIT license  
 Credits [here](/about/contributors)!
 
-Join the Discord server to discuss everything about WLED MM and SR!
+Join the Discord server to discuss everything about WLED!
 
-<a href="https://discord.gg/K9JBvgNG"><img src="https://discordapp.com/api/guilds/473448917040758787/widget.png?style=banner2" width="25%"></a>
+<a href="https://discord.gg/KuqP7NE"><img src="https://discordapp.com/api/guilds/473448917040758787/widget.png?style=banner2" width="25%"></a>
 
 Check out the WLED [Discourse forum](https://wled.discourse.group)!  
 You can also send me mails to [dev.aircoookie@gmail.com](mailto:dev.aircoookie@gmail.com), but please only do so if you want to talk to me privately.  
