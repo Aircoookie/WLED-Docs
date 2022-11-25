@@ -2,10 +2,10 @@ site_name: WLED Project
 site_author: Christian Schwinne (Aircoookie)
 #site_url: https://wled.app
 repo_name: WLED
-repo_url: https://github.com/Aircoookie/WLED
+repo_url: https://github.com/MoonModules/WLED
 repo_title: WLED Repository
 #copyright: Copyright &copy; 2016-2021 Christian Schwinne, Contributors
-edit_uri: https://github.com/Aircoookie/WLED-Docs/edit/main/docs
+edit_uri: https://github.com/MoonModules/WLED-Docs/edit/main/docs
 theme:
   name: material
   custom_dir: docs/assets/overrides
@@ -51,7 +51,7 @@ extra:
       link: https://wled.discourse.group/
       name: Forum
     - icon: fontawesome/solid/code
-      link: https://gitpod.io/#https://github.com/Aircoookie/WLED
+      link: https://gitpod.io/#https://github.com/MoonModules/WLED
       name: Gitpod
     - icon: fontawesome/brands/instagram
       link: https://www.instagram.com/wled_project/
