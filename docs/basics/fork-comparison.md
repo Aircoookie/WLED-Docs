@@ -30,3 +30,4 @@ ESP32-S3 | No | Yes | Experimental
 ESP32-S2 and <br/>ESP32-C3 | No | Experimental | Experimental
 ESP8266 | No | No | Yes but no Audio Reactive for 8266
 Ledmaps in presets | Yes | No (wait for upstream fix) | No
+
