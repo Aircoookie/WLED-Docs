@@ -115,9 +115,9 @@ nav:
     - Virtual LEDs: advanced/ddp.md
     - Custom Access Point Configuration: advanced/custom-ap.md
   - MoonModules: 
-    - Home Automation: advanced/home-automation.md
+    - Custom Effects: moonmodules/custom-effects.md
   - WLEDSR: 
-    - Home Automation: advanced/home-automation.md
+    - Digital Microphone Hookup: wledsr/digital-microphone-hookup.md
   - About: 
     - Contributors & Credits: about/contributors.md
     - Privacy Policy: about/privacy-policy.md
