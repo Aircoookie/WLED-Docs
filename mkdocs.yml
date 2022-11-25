@@ -114,6 +114,10 @@ nav:
     - Mapping: advanced/mapping.md
     - Virtual LEDs: advanced/ddp.md
     - Custom Access Point Configuration: advanced/custom-ap.md
+  - MoonModules: 
+    - Home Automation: advanced/home-automation.md
+  - WLEDSR: 
+    - Home Automation: advanced/home-automation.md
   - About: 
     - Contributors & Credits: about/contributors.md
     - Privacy Policy: about/privacy-policy.md
