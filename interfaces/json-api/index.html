@@ -923,13 +923,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#turning-individual-segments-onoff" class="md-nav__link">
-    Turning Individual Segments On/Off
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#playlists" class="md-nav__link">
     Playlists
   </a>
@@ -961,6 +954,54 @@
           <li class="md-nav__item">
   <a href="#effect-of-the-segcct-value" class="md-nav__link">
     Effect of the seg.cct value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effect-metadata" class="md-nav__link">
+    Effect metadata
+  </a>
+  
+    <nav class="md-nav" aria-label="Effect metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#effect-parameters" class="md-nav__link">
+    Effect parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colors" class="md-nav__link">
+    Colors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#palette" class="md-nav__link">
+    Palette
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flags" class="md-nav__link">
+    Flags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaults" class="md-nav__link">
+    Defaults
   </a>
   
 </li>
@@ -1440,13 +1481,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#turning-individual-segments-onoff" class="md-nav__link">
-    Turning Individual Segments On/Off
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#playlists" class="md-nav__link">
     Playlists
   </a>
@@ -1478,6 +1512,54 @@
           <li class="md-nav__item">
   <a href="#effect-of-the-segcct-value" class="md-nav__link">
     Effect of the seg.cct value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effect-metadata" class="md-nav__link">
+    Effect metadata
+  </a>
+  
+    <nav class="md-nav" aria-label="Effect metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#effect-parameters" class="md-nav__link">
+    Effect parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colors" class="md-nav__link">
+    Colors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#palette" class="md-nav__link">
+    Palette
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flags" class="md-nav__link">
+    Flags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaults" class="md-nav__link">
+    Defaults
   </a>
   
 </li>
@@ -1562,7 +1644,8 @@ To improve user experience, it is recommended to remove effects with the names <
 </div>
 <h3 id="setting-new-values">Setting new values</h3>
 <p>Sending a POST request to <code>/json</code> or <code>/json/state</code> with (parts of) the state object will update the respective values.
-Example: <code>{"on":true,"bri":255}</code> sets the brightness to maximum. <code>{"seg":[{"col":[[0,255,200]]}]}</code> sets the color of the first segment to teal.</p>
+Example: <code>{"on":true,"bri":255}</code> sets the brightness to maximum. <code>{"seg":[{"col":[[0,255,200]]}]}</code> sets the color of the first segment to teal.
+<code>{"seg":[{"id":X,"on":"t"}]}</code> and replacing X with the desired segment ID will toggle on or off that segment.</p>
 <div class="admonition tldr">
 <p class="admonition-title">CURL example</p>
 <p>This will toggle on and off and return the new state (v0.13+):
@@ -2173,8 +2256,6 @@ This feature is available in build 200829 and above.</p>
 <p class="admonition-title">Brightness interaction</p>
 <p>For your colors to apply correctly, make sure the desired brightness is set beforehand. Turning on the LEDs from an off state and setting individual LEDs in the same JSON request will <em>not</em> work!</p>
 </div>
-<h4 id="turning-individual-segments-onoff">Turning Individual Segments On/Off</h4>
-<p>Use: <code>{"seg":[{"id":X,"on":"t"}]}</code> and replace X with your desired segment.</p>
 <h4 id="playlists">Playlists</h4>
 <p>(Available since 0.11.0)</p>
 <p>Sample playlist API call:</p>
@@ -2313,6 +2394,187 @@ It is preferred that you set a new CCT value in the same range as received from 
 <li>A bus supporting CCT is configured and <code>Calculate CCT from RGB</code> is <em>not</em> enabled</li>
 </ul>
 <p>CCT support is indicated by <code>info.leds.cct</code> being <code>true</code>, in which case you can regard the instance as a CCT light and e.g. display a color temperature control.</p>
+<h4 id="effect-metadata">Effect metadata</h4>
+<div class="admonition tip">
+<p class="admonition-title">Why effect metadata?</p>
+<p>Prior to 0.14, user interfaces showed Speed and Intensity slider, palette controls, and all three color slots regardless of the effect selected.
+This may cause confusion to the user because controls are displayed that have no immediate effect in the current configuration.
+Effect metadata allows you to dynamically hide certain controls, so that the user only sees controls actually utilized by the selected effect mode.</p>
+</div>
+<p>Starting with WLED 0.14, effect metadata is available under the <code>/json/fxdata</code> URL.<br />
+This returns an array of strings with <code>info.fxcount</code> entries.
+The string at a given index corresponds to the metadata of the effect with the same ID as that index.
+Metadata is stored in a memory-optimized string format, for example the Aurora effect has the metadata <code>!,!;;!;1;sx=24,pal=50</code>.</p>
+<p>The metadata string consists of up to five sections, separated by semicolons:
+<code>&lt;Effect parameters&gt;;&lt;Colors&gt;;&lt;Palette&gt;;&lt;Flags&gt;;&lt;Defaults&gt;</code></p>
+<h5 id="effect-parameters">Effect parameters</h5>
+<p>The first section specifies the number and labels of effect parameters (e.g. speed, intensity).
+Up to 5 sliders and 3 checkboxes are supported (<code>sx</code>,<code>ix</code>,<code>c1</code>,<code>c2</code>,<code>c3</code>,<code>o1</code>,<code>o2</code>,<code>o3</code> parameters in the <code>seg</code> object).
+Slider/checkbox labels are comma separated.
+An empty or missing label disables this control.
+<code>!</code> specifies the default label is used:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default tooltip label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sx</td>
+<td>Effect speed</td>
+</tr>
+<tr>
+<td>ix</td>
+<td>Effect intensity</td>
+</tr>
+<tr>
+<td>c1</td>
+<td>Custom 1</td>
+</tr>
+<tr>
+<td>c2</td>
+<td>Custom 2</td>
+</tr>
+<tr>
+<td>c3</td>
+<td>Custom 3</td>
+</tr>
+<tr>
+<td>o1</td>
+<td>Option 1</td>
+</tr>
+<tr>
+<td>o2</td>
+<td>Option 2</td>
+</tr>
+<tr>
+<td>o3</td>
+<td>Option 3</td>
+</tr>
+</tbody>
+</table>
+<p>The fallback value if this section is missing is two sliders, Effect speed and Effect intensity.</p>
+<p>Examples:  </p>
+<table>
+<thead>
+<tr>
+<th>Parameter string</th>
+<th>Displayed controls</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;empty&gt;</code></td>
+<td>No effect parameters</td>
+</tr>
+<tr>
+<td>!</td>
+<td>1 slider: Effect speed</td>
+</tr>
+<tr>
+<td>!,!</td>
+<td>2 sliders: Effect speed + Effect intensity</td>
+</tr>
+<tr>
+<td>!,Phase</td>
+<td>2 sliders: Effect speed + Phase</td>
+</tr>
+<tr>
+<td>,Saturation,,,,Invert</td>
+<td>1 slider (sets <code>ix</code> parameter) and 1 checkbox: Saturation + Invert</td>
+</tr>
+<tr>
+<td>,,,,,Random colors</td>
+<td>1 checkbox: Random colors</td>
+</tr>
+</tbody>
+</table>
+<h5 id="colors">Colors</h5>
+<p>Up to 3 colors can be used. Please note that only the first two characters of the label are visible in the WLED UI.<br />
+<code>!</code> specifies the default label is used. The default labels for the color slots are <code>Fx</code>, <code>Bg</code>, and <code>Cs</code>.</p>
+<p>The fallback value if this section is missing is 3 colors: <code>Fx</code> + <code>Bg</code> + <code>Cs</code>.</p>
+<p>Examples:  </p>
+<table>
+<thead>
+<tr>
+<th>Colors string</th>
+<th>Displayed controls</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;empty&gt;</code></td>
+<td>No color controls</td>
+</tr>
+<tr>
+<td>!</td>
+<td>1 color: Fx</td>
+</tr>
+<tr>
+<td>,!</td>
+<td>1 color: Bg</td>
+</tr>
+<tr>
+<td>!,!</td>
+<td>2 colors: Fx + Bg</td>
+</tr>
+<tr>
+<td>1,2,3</td>
+<td>3 colors: 1 + 2 + 3</td>
+</tr>
+</tbody>
+</table>
+<h5 id="palette">Palette</h5>
+<p>If empty, the effect does not use palettes. If <code>!</code>, palette selection is enabled.</p>
+<p>The fallback value if this section is missing is palette selection enabled.</p>
+<h5 id="flags">Flags</h5>
+<p>Flags allow filtering for effects with certain characteristics.
+They are a single character each and not comma-separated.
+Currently, the following flags are specified:</p>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Effect characteristic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Effect works well on a single LED. If flag 0 is present, flags 1/2/3 are omitted. (unused)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Effect is optimized for use on 1D LED strips.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Effect requires a 2D matrix setup (unless flag 1 is also present)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Effect requires a 3D cube (unless flags 1 and/or 2 are also present) (unused)</td>
+</tr>
+<tr>
+<td>v</td>
+<td>Effect is audio reactive, reacts to amplitude/volume.</td>
+</tr>
+<tr>
+<td>f</td>
+<td>Effect is audio reactive, reacts to audio frequency distribution.</td>
+</tr>
+</tbody>
+</table>
+<p>For example, a Flag string of <code>2v</code> denotes a volume reactive effect that is to be used on 2D matrices.</p>
+<p>The fallback value if this section is missing is <code>1</code>, i.e. a 1D optimized effect.</p>
+<h5 id="defaults">Defaults</h5>
+<p>Defaults are values for effect parameters that work particularly well on that effect.
+They are set automatically when the effect is loaded.
+To specify defaults, use the standard segment parameter name (e.g. <code>ix</code>) followed by an <code>=</code> and the default value.
+For example, <code>sx=24,pal=50</code> sets the effect speed to 24 (slow) and the palette to ID 50 (Aurora).</p>
+<p>If no default is specified for a given parameter, it retains the current value.</p>
 <h3 id="sensors">Sensors</h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
