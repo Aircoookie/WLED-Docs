@@ -13,6 +13,10 @@ Feature | [WLED SR 0.13](https://github.com/atuline/WLED/tree/dev) | [MoonModule
 Feature | MM | Upstream | AC
 |---|---|---|---|
 0.14 architecture | No | Yes (upstream frequently merged) | Yes
+
+Feature | MM | Upstream | AC
+|---|---|---|---|
+0.14 architecture | No | Yes (upstream frequently merged) | Yes
 Usermods have own pages in main config menu | Audio Reactive only | Yes | No
 Segments 2D aware | No (XY calculated, mirror not working) | Yes | Yes
 Audio reactive | Core | Usermod | Usermod
@@ -22,8 +26,6 @@ High Definition audio analysis, 32 channel GEQ | No |  Yes (WIP) for ESP32 and E
 Custom Effects | Yes | Yes as a usermod! | No
 Effect ID's | 0.13 compatible | 0.13 compatible (recommended!) | Changed, old SR presets will not work.
 Expand 1D effects | No | Yes (+ Circles and Block) | Yes
-
-
 Extended hw info | basic | Yes | No
 JSON Mapping on 1D effects | No | Yes | No
 Games usermod (3D to 2D, gyro) | No | Yes (WIP) | No

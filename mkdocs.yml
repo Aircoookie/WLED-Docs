@@ -1,5 +1,5 @@
-site_name: WLED Project (MM & SR Fork)
-site_author: Christian Schwinne (Aircoookie)
+site_name: WLED MoonModules Project
+site_author: Ewoud Wijma (ewowi)
 #site_url: https://wled.app
 repo_name: WLED
 repo_url: https://github.com/MoonModules/WLED
@@ -68,6 +68,7 @@ extra_javascript:
   - assets/js/newtab.js
 nav:
   - Welcome: index.md
+    - Fork comparison: basics/fork-comparison.md
   - Basics:
     - Getting Started: basics/getting-started.md
     - Compatibility:
@@ -79,7 +80,6 @@ nav:
       - Compiling WLED: advanced/compiling-wled.md
     - Tutorials: basics/tutorials.md
     - FAQ: basics/faq.md
-    - Fork comparison: basics/fork-comparison.md
   - Features:
     - Effects & Palettes: features/effects-palettes.md
     - Macros: features/macros.md
@@ -117,8 +117,15 @@ nav:
     - Custom Access Point Configuration: advanced/custom-ap.md
   - MoonModules: 
     - Custom Effects: moonmodules/custom-effects.md
-  - WLEDSR: 
-    - Digital Microphone Hookup: wledsr/digital-microphone-hookup.md
+    - Multiple Segment Effects: wip/md
+  - 2D: 
+    - 2D Settings: wip.md
+  - Sound Reactive: 
+    - Sound Settings: wip.md
+    - UDP Sound sync: wip.md
+    - Digital Microphone Hookup: soundreactive/digital-microphone-hookup.md
+    - Analog Audio Input Options: wip.md
+    - Using my PC for the Sound: wip.md
   - About: 
     - Contributors & Credits: about/contributors.md
     - Privacy Policy: about/privacy-policy.md
