@@ -124,14 +124,10 @@ nav:
     - Multiple Segment Effects: moonmodules/wip.md
   - 2D: 
     - 2D Settings: 2D/2d-settings.md
-    - 3D Settings: 2D/wip.md
+    - Ledmaps: 2D/wip.md
   - Sound Reactive: 
     - Sound Settings: soundreactive/sound-reactive-settings.md
     - UDP Sound sync: soundreactive/wip.md
     - Digital Microphone Hookup: soundreactive/digital-microphone-hookup.md
     - Analog Audio Input Options: soundreactive/wip.md
     - Using my PC for the Sound: soundreactive/wip.md
-  - About: 
-    - Contributors & Credits: about/contributors.md
-    - Privacy Policy: about/privacy-policy.md
-    - Upcoming Features: about/roadmap.md
