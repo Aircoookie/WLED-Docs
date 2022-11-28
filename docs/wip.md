@@ -1,8 +1,8 @@
 ---
 title: Work in Progress
 hide:
-  - navigation
-  - toc
+  # - navigation
+  # - toc
 ---
 
 This page is work in progress
