@@ -67,9 +67,7 @@ extra_css:
 extra_javascript:
   - assets/js/newtab.js
 nav:
-  - Welcome: 
-    - Intro: index.md
-    - Fork comparison: basics/fork-comparison.md
+  - Welcome: index.md
   - Basics:
     - Getting Started: basics/getting-started.md
     - Compatibility:
@@ -117,10 +115,12 @@ nav:
     - Virtual LEDs: advanced/ddp.md
     - Custom Access Point Configuration: advanced/custom-ap.md
   - MoonModules: 
+    - Fork comparison: basics/fork-comparison.md
     - Custom Effects: moonmodules/custom-effects.md
-    - Multiple Segment Effects: wip/md
+    - Multiple Segment Effects: wip.md
   - 2D: 
     - 2D Settings: wip.md
+    - 3D Settings: wip.md
   - Sound Reactive: 
     - Sound Settings: wip.md
     - UDP Sound sync: wip.md
