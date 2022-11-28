@@ -22,6 +22,8 @@ High Definition audio analysis, 32 channel GEQ | No |  Yes (WIP) for ESP32 and E
 Custom Effects | Yes | Yes as a usermod! | No
 Effect ID's | 0.13 compatible | 0.13 compatible (recommended!) | Changed, old SR presets will not work.
 Expand 1D effects | No | Yes (+ Circles and Block) | Yes
+
+
 Extended hw info | basic | Yes | No
 JSON Mapping on 1D effects | No | Yes | No
 Games usermod (3D to 2D, gyro) | No | Yes (WIP) | No
