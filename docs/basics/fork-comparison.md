@@ -9,6 +9,9 @@ What are the differences between WLED SR, upstream AC WLED, and MoonModules fork
 
 | Feature | [WLED SR 0.13](https://github.com/atuline/WLED/tree/dev) | [MoonModules WLED 0.14](https://github.com/MoonModules/WLED/tree/mdev) | [Upstream WLED 0.14](https://github.com/Aircoookie/WLED) |
 0.14 architecture | No | Yes (upstream frequently merged) | Yes
+
+| Feature | WLED SR 0.13 | MoonModules WLED 0.14 | Upstream WLED 0.14 |
+0.14 architecture | No | Yes (upstream frequently merged) | Yes
 Usermods have own pages in main config menu | Audio Reactive only | Yes | No
 Segments 2D aware | No (XY calculated, mirror not working) | Yes | Yes
 Audio reactive | Core | Usermod | Usermod
