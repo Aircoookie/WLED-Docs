@@ -67,7 +67,8 @@ extra_css:
 extra_javascript:
   - assets/js/newtab.js
 nav:
-  - Welcome: index.md
+  - Welcome: 
+    - Intro: index.md
     - Fork comparison: basics/fork-comparison.md
   - Basics:
     - Getting Started: basics/getting-started.md
