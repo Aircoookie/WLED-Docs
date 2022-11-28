@@ -7,5 +7,4 @@ hide:
 
 This page is work in progress
 
-Check https://github.com/atuline/WLED/wiki/
-
+Check [WLED Atuline Wiki](https://github.com/atuline/WLED/wiki/) for original content
