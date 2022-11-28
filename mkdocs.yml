@@ -119,10 +119,10 @@ nav:
     - Custom Effects: moonmodules/custom-effects.md
     - Multiple Segment Effects: wip.md
   - 2D: 
-    - 2D Settings: wip.md
+    - 2D Settings: 2D/2d-settings.md
     - 3D Settings: wip.md
   - Sound Reactive: 
-    - Sound Settings: wip.md
+    - Sound Settings: soundreactive/sound-reactive-settings.md
     - UDP Sound sync: wip.md
     - Digital Microphone Hookup: soundreactive/digital-microphone-hookup.md
     - Analog Audio Input Options: wip.md

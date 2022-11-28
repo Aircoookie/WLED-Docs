@@ -5,23 +5,9 @@ hide:
   # - toc
 ---
 
-## What are the differences between WLED SR, upstream AC WLED, and MoonModules fork?
+What are the differences between WLED SR, upstream AC WLED, and MoonModules fork?
 
-
-Feature | [WLED SR 0.13](https://github.com/atuline/WLED/tree/dev) | [MoonModules WLED 0.14](https://github.com/MoonModules/WLED/tree/mdev) | [Upstream WLED 0.14](https://github.com/Aircoookie/WLED) 
-
-| Type | Voltage | Comments |
-|---|---|---|
-SK6812 | 5v | RGBW
-WS2811 | 5v | usually found in IP68 sealed 12mm pixel strings
-WS2812B | 5v |
-
-Feature | MM | Upstream | AC
-|---|---|---|---|
-0.14 architecture | No | Yes (upstream frequently merged) | Yes
-
-| Feature | MM | Upstream | AC |
-|---|---|---|---|
+| Feature | [WLED SR 0.13](https://github.com/atuline/WLED/tree/dev) | [MoonModules WLED 0.14](https://github.com/MoonModules/WLED/tree/mdev) | [Upstream WLED 0.14](https://github.com/Aircoookie/WLED) |
 0.14 architecture | No | Yes (upstream frequently merged) | Yes
 Usermods have own pages in main config menu | Audio Reactive only | Yes | No
 Segments 2D aware | No (XY calculated, mirror not working) | Yes | Yes
