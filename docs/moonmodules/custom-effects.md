@@ -8,28 +8,7 @@ hide:
 
 ![unknown](https://user-images.githubusercontent.com/91616163/197343053-f7deb257-5fd3-40f2-8ffd-31c06f02f12a.png)
 
-
-- [Custom effects](#custom-effects)
-- [Quick start](#quick-start)
-- [Running examples](#running-examples)
-- [Create your own Custom Effects](#create-your-own-custom-effects)
-  * [Components](#components)
-  * [Functions and variables](#functions-and-variables)
-    + [WLED general](#wled-general)
-    + [WLED SR](#wled-sr)
-    + [Custom Effects](#custom-effects)
-    + [Math](#math)
-    + [Time](#time)
-    + [Pixelblase support](#pixelblase-support)
-    + [Serial output](#serial-output)
-    + [Details](#details)
-  * [Implementation of variables and functions](#implementation-of-variables-and-functions)
-- [Current limitations](#current-limitations)
-- [trouble shooting](#trouble-shooting)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
-# Custom effects
+## Custom effects
 
 Custom effects are effects which are not compiled in the WLED repository but specified by a file (program file) which is interpreted in real time.
 
@@ -37,7 +16,7 @@ The big advantage of this is that effects are not limited by what is made by WLE
 
 A disadvantage is that the file needs to be loaded, examined and then run in real-time which is 'per definition' slower then pre-compiled code, although performance is promising already and will get better over time.
 
-# Quick start
+## Quick start
 To get your first Custom Effect running, perform the following steps
 
 * In tab effects, select '⚙️ Custom Effect'
@@ -56,7 +35,7 @@ To get your first Custom Effect running, perform the following steps
 * Click on Load template to get a 'hello world' example
 * Press save and the template will be executed
 
-# Running examples
+## Running examples
 
 Custom Effects examples are stored in [Github repository](https://github.com/MoonModules/WLED-Effects/tree/master/CustomEffects/wled)
 
@@ -68,7 +47,7 @@ Alternatively, if you want all the effects in this folder at once, go to the Cus
 
 ![Examples presets](https://github.com/MoonModules/WLED-Effects/blob/master/Images//ExamplesPreset.PNG?raw=true)
 
-# Create your own Custom Effects
+## Create your own Custom Effects
 
 A Custom Effects program typically looks like this:
 
@@ -76,7 +55,7 @@ A Custom Effects program typically looks like this:
 
 A program contains structures like if statements, for loops, assignments, calls (e.g. renderFrame) etc., commands like setPixelcolor and variables like ledCount.
 
-## Components
+### Components
 * program: Once every effect. Can contain global variables and internal functions. There are 2 special internal functions: renderFrame and renderLed
 
 * Global variables: Once every effect, reused between functions. Variables (global and local) are defined by using an assignment e.g. t=0
@@ -85,12 +64,12 @@ A program contains structures like if statements, for loops, assignments, calls 
 
 * renderLed: Once every led within a frame
 
-## Functions and variables
+### Functions and variables
 
 Functions and variables give access to the WLED functionality. The list of functions and variables will grow as we go.
 A function has parameters (even empty parameters) e.g. setPixelColor(x,y), variables haven't e.g. ledCount.
 
-### WLED general
+#### WLED general
 
     "ledCount": {},
     "setPixelColor": {"pixelNr":"int", "color":"int"},
@@ -108,7 +87,7 @@ A function has parameters (even empty parameters) e.g. setPixelColor(x,y), varia
     "speedSlider": {"return":"uint8"},
     "intensitySlider": {"return":"uint8"},
 
-### WLED SR
+#### WLED SR
     "beatSin": { "bpm":"uint16", "lowest":"uint8", "highest":"uint8", "timebase":"uint32", "phase_offset":"uint8"},
     "fadeToBlackBy": {"fadeBy":"uint8"},
     "iNoise": {"x":"uint32", "y":"uint32"},
@@ -119,13 +98,13 @@ A function has parameters (even empty parameters) e.g. setPixelColor(x,y), varia
     "custom3Slider": {"return":"uint8"},
     "sampleAvg": {"return": "double"},
 
-### Custom Effects
+#### Custom Effects
     "counter": {"return": "uint32"},
 
     "shift": {"delta": "int"},
     "circle2D": {"degrees": "int"}, 
 
-### Math
+#### Math
     "constrain": {"amt":"any", "low":"any", "high":"any"},
     "map": {"x":"int", "in_min":"int", "in_max":"int", "out_min":"int", "out_max":"int"},
     "seed": {"seed": "uint16"},
@@ -136,22 +115,22 @@ A function has parameters (even empty parameters) e.g. setPixelColor(x,y), varia
     "min": {"value1": "double", "value2": "double", "return": "double"},
     "max": {"value1": "double", "value2": "double", "return": "double"},
 
-### Time
+#### Time
     "hour": {"return":"uint8"},
     "minute": {"return":"uint8"},
     "second": {"return":"uint8"},
     "millis": {"return": "uint32"},
 
-### Pixelblase support
+#### Pixelblase support
     "time": {"inVal":"double", "return": "double"},
     "triangle": {"t":"double", "return": "double"},
     "wave": {"v":"double", "return": "double"},
     "square": {"v":"double", "t":"double", "return": "double"},
 
-### Serial output
+#### Serial output
     "printf": {"args": "__VA_ARGS__"}
 
-### Details
+#### Details
 * ledcount: number of leds within(!) a segment 
 * setpixelColor: currently the second parameter is color from palette!
 * leds: one or 2 dimensional array: One index for led strips and 2 indexes for panels. If the leds variable is used an implicit setPixels(leds) will be done each frame! 
@@ -162,7 +141,7 @@ A function has parameters (even empty parameters) e.g. setPixelColor(x,y), varia
 * hour/minute/second: current time (set in time preferences)
 * printf: currently no real printf: prints numbers, max 3
 
-## Implementation of variables and functions
+### Implementation of variables and functions
 
 All variables and values are internally stored as doubles and where needed converted to (unsigned) integers, e.g. to WLED functions or operators like %.
 
@@ -170,13 +149,13 @@ Technical details about external variables and functions can be found in arti_wl
 
 ![Function implementation](https://github.com/MoonModules/WLED-Effects/blob/master/Images/Function%20implementation.PNG?raw=true)
 
-# Current limitations
+## Current limitations
 
 * Only 1 segment
 * no unary operators like - (use 0-1) and ++, --
 * no strings
 
 
-# trouble shooting
+## trouble shooting
 
 * effect crashes: most likely too deeply nested commands (e.g. pixbri = (sin(startVal + millis()/(255- freq)) + 1) * 128), try to split up in more lines.
