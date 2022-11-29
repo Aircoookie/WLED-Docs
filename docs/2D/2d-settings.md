@@ -1,5 +1,5 @@
 ---
-title: Digital Microphone Hookup
+title: 2D Settings
 hide:
   # - navigation
   # - toc
@@ -16,7 +16,7 @@ The sound reactive fork of WLED supports multiple layouts of a 2D matrix led pan
 
 A specific led is identified by led[x,y] where led[0,0] is in the top left corner (logical layer)
 
-Setting name | Value Range | Description | Master/Dev
+| Setting name | Value Range | Description | Master/Dev |
 |---|---|---|---|
 Width| 1..x | Width of the matrix | Master
 Height| 1..y | Height of the matrix | Master
@@ -25,7 +25,8 @@ Note: width x height should match LED count!
 
 ### 2D Panels
 A matrix is made of 1 or more identical physical led panels (physical layer)
-Setting name | Value Range | Description | Master/Dev
+
+| Setting name | Value Range | Description | Master/Dev |
 |---|---|---|---|
 Multiple panels| Y/N | No if only one panel, yes if more than one | Dev
 Horizontal panels| 1..x | Number of panels side by side | Dev 
@@ -40,7 +41,7 @@ Specify how a led panel is wired.
 
 This is in most cases different from the logical layer (first led top left). Parameters here translate the logical layer (led[x,y]) to the physical layer (led[0] .. led[n]). 
 
-Setting name | Value Range | Description | Master/Dev
+| Setting name | Value Range | Description | Master/Dev |
 |---|---|---|---|
 First led position| Top/Bottom & Left/Right | Where is the first led positioned | Dev (replacing flipmajor/minor)
 Orientation| Horizontal / Vertical | Are rows of leds wired horizontal or vertical | Dev (replacing rowMajor)
