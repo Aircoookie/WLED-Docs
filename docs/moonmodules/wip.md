@@ -12,9 +12,7 @@ Check [WLED MoonModules Wiki](https://github.com/MoonModules/WLED/wiki/) for ori
 
 Template text:
 
-# Fork specific info
+## Fork specific info
 
-## WLED SR
+### WLED SR
 
-### Segments
-Only stop X and Y, calculate using following tables

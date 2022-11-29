@@ -121,10 +121,12 @@ nav:
   - MoonModules: 
     - Fork comparison: basics/fork-comparison.md
     - Custom Effects: moonmodules/custom-effects.md
-    - Platform io entries: moonmodules/platformio-entries.md
+    - Platformio entries: moonmodules/platformio-entries.md
     - Multiple Segment Effects: moonmodules/wip.md
   - 2D: 
+    - Introduction: 2D/introduction.md
     - 2D Settings: 2D/2d-settings.md
+    - 2D Segments: 2D/2d-segments.md
     - Ledmaps: 2D/wip.md
   - Sound Reactive: 
     - Sound Settings: soundreactive/sound-reactive-settings.md

@@ -12,7 +12,9 @@ Check [WLED Atuline Wiki](https://github.com/atuline/WLED/wiki/) for original co
 
 Template text:
 
-## Fork specific info
+# Fork specific info
 
-### WLED SR
+## WLED SR
 
+### Segments
+Only stop X and Y, calculate using following tables
