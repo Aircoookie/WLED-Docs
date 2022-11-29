@@ -121,6 +121,7 @@ nav:
   - MoonModules: 
     - Fork comparison: basics/fork-comparison.md
     - Custom Effects: moonmodules/custom-effects.md
+    - Platform io entries: moonmodules/platformio-entries.md
     - Multiple Segment Effects: moonmodules/wip.md
   - 2D: 
     - 2D Settings: 2D/2d-settings.md
