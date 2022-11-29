@@ -35,7 +35,7 @@ A segment can be rotated 90º degrees and reversed on the X or Y-axis and can be
 
 The following table shows the effect setting these values:
 
-Value | Rotation | Reverse X | Reverse Y| Effect
+| Value | Rotation | Reverse X | Reverse Y| Effect |
 |---|---|---|---|---|
 0|-|-|-|0º rotation and no reverse
 1|-|-|+|Reverse horizontal
