@@ -25,7 +25,6 @@ Remarks:
 
 ## To do
 * Remove / evaluate (commented) settings from base entries and move to common settings:
-* Above structure is in current setup repeated for other boards / frameworks. Need to find a way to not repeat all of this, e.g. by replacing brown and blue settings by others... 
 
 `  -D WLED_USE_MY_CONFIG 
   -D WLED_WATCHDOG_TIMEOUT=0 #-D WLED_DISABLE_BROWNOUT_DET
@@ -41,6 +40,7 @@ Remarks:
   ; -D MIC_LOGGER`
 
 * Cleanup / convert old entries
+* Above structure is in current setup repeated for other boards / frameworks. Need to find a way to not repeat all of this, e.g. by replacing brown and blue settings by others... 
 
 ## Fork specific info
 
