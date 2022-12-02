@@ -39,6 +39,6 @@
 h2,h3,h4 { /*H1 not working here, see above*/
   color: red;
 }
-.md-nav__link--active, .md-tabs__link--active, .md-nav__item--active {
+.md-nav__link--active, .md-tabs__link--active {
   color: red;
 }
