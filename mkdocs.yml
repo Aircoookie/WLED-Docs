@@ -120,6 +120,7 @@ nav:
     - Upcoming Features: about/roadmap.md
   - MoonModules: 
     - Fork comparison: moonmodules/fork-comparison.md
+    - Merge history: moonmodules/merge-history.md
     - Mappings: moonmodules/mappings.md
     - Custom Effects: moonmodules/custom-effects.md
     - Platformio entries: moonmodules/platformio-entries.md
