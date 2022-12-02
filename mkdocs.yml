@@ -119,7 +119,8 @@ nav:
     - Privacy Policy: about/privacy-policy.md
     - Upcoming Features: about/roadmap.md
   - MoonModules: 
-    - Fork comparison: basics/fork-comparison.md
+    - Fork comparison: moonmodules/fork-comparison.md
+    - Mappings: moonmodules/mappings.md
     - Custom Effects: moonmodules/custom-effects.md
     - Platformio entries: moonmodules/platformio-entries.md
     - Multiple Segment Effects: moonmodules/wip.md
