@@ -125,6 +125,7 @@ nav:
     - Custom Effects: moonmodules/custom-effects.md
     - Platformio entries: moonmodules/platformio-entries.md
     - Multiple Segment Effects: moonmodules/wip.md
+    - Preset API commands: moonmodules/preset-api-commands.md
   - 2D: 
     - Introduction: 2D/introduction.md
     - 2D Settings: 2D/2d-settings.md
