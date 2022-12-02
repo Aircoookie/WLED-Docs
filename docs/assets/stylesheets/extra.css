@@ -24,6 +24,7 @@
   --md-code-hl-number-color: #79c0ff;
   --md-code-hl-name-color: #79c0ff;
   --md-code-hl-string-color: #23995e;
+  --md-nav__link--active: red;
 }
 
 .md-tabs {
@@ -36,5 +37,8 @@
 
 /* MoonModules */
 h1,h2,h3,h4 {
+  color: red;
+}
+.md-nav__link--active, .md-tabs__link--active {
   color: red;
 }
