@@ -42,7 +42,13 @@ This is color_fade_pulse (by @atuline) with Circles expansion:
 
 ### five
 
-<video src="https://user-images.githubusercontent.com/1737159/202907087-6b25d88f-f43f-4d6d-9c39-21a7e9f4a5db.mov" autoplay>
+<video width="160" autoplay src="https://user-images.githubusercontent.com/1737159/202907087-6b25d88f-f43f-4d6d-9c39-21a7e9f4a5db.mov"></video>
+
+### six
+
+<video width="160" autoplay>
+<source src="https://user-images.githubusercontent.com/1737159/204777643-a93413a8-b430-4499-a9b9-64acd55a351c.mp4" type="video/mp4">
+</video>
 
 ## November 20, 2022
 
@@ -56,7 +62,7 @@ Audioreactive palettes by NetMindz
 
 <img width="296" alt="image" src="https://user-images.githubusercontent.com/1737159/202859807-b33ad565-ddf1-450e-9f0b-27d54b5dd0d8.png">
 
-<img width="296" alt="image" src="https://user-images.githubusercontent.com/1737159/202907087-6b25d88f-f43f-4d6d-9c39-21a7e9f4a5db.mov" type="video/mp4">
+<video width="296" autoplay src="https://user-images.githubusercontent.com/1737159/202907087-6b25d88f-f43f-4d6d-9c39-21a7e9f4a5db.mov">text</video>
 
 ## November 18, 2022
 Extended mic settings in platformIO
