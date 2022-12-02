@@ -9,7 +9,7 @@
   --md-primary-fg-color--dark:  #999;
   --md-default-fg-color:           hsla(var(--md-hue),75%,95%,1); /*text*/
   --md-typeset-color: var(--md-default-fg-color); /*text*/
-  --md-default-fg-color--light:   red; /* hsla(var(--md-hue),5%,70%,1); /*heading*/
+  --md-default-fg-color--light:   red; /* hsla(var(--md-hue),5%,70%,1); /*heading WLEDMM this makes H1 red*/
   --md-default-fg-color--lighter:  hsla(var(--md-hue),75%,90%,0.32); /*edit pen*/
   --md-default-fg-color--lightest: hsla(var(--md-hue),75%,90%,0.12); /*?*/
   --md-default-bg-color: #2c2f33; /* discord */
@@ -20,6 +20,7 @@
   --md-admonition-bg-color: #35383d;
   --md-admonition-fg-color: var(--md-default-fg-color);
   --md-typeset-table-color: #42464c;
+  --md-typeset-a-color: red; /* WLEDMM */
   --md-code-hl-keyword-color: #a5d6ff;
   --md-code-hl-number-color: #79c0ff;
   --md-code-hl-name-color: #79c0ff;
@@ -36,13 +37,9 @@
 }
 
 /* MoonModules */
-/* h1,h2,h3,h4 {
-  color: red;
-} */
-.md-nav__link--active, .md-tabs__link--active {
+h2,h3,h4 { /*H1 not working here, see above*/
   color: red;
 }
-
-/* .md-typeset h1 {
+.md-nav__link--active, .md-tabs__link--active, .md-nav__item--active {
   color: red;
-} */
+}
