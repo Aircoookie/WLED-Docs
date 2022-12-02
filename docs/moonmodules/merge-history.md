@@ -19,36 +19,7 @@ And combining Custom Effects with [1D expansions](https://github.com/MoonModules
 
 This is color_fade_pulse (by @atuline) with Circles expansion:
 
-### one
-
-<img width="160" alt="video" src="https://user-images.githubusercontent.com/1737159/204777643-a93413a8-b430-4499-a9b9-64acd55a351c.mp4" type="video/mp4">
-
-### two
-
-<video width="160" alt="video" autoplay>
-<source src="https://user-images.githubusercontent.com/1737159/204777643-a93413a8-b430-4499-a9b9-64acd55a351c.mp4" type="video/mp4">
-</video>
-
-### three
-
-<video width="160" alt="image" autoplay>
-<source  src="https://user-images.githubusercontent.com/1737159/202907087-6b25d88f-f43f-4d6d-9c39-21a7e9f4a5db.mov" type="video/mp4">
-</video>
-
-### four
-
-<video src="https://user-images.githubusercontent.com/1737159/202907087-6b25d88f-f43f-4d6d-9c39-21a7e9f4a5db.mov" autoplay style="max-width: 160px;">
-</video>
-
-### five
-
-<video width="160" autoplay src="https://user-images.githubusercontent.com/1737159/202907087-6b25d88f-f43f-4d6d-9c39-21a7e9f4a5db.mov"></video>
-
-### six
-
-<video width="160" autoplay>
-<source src="https://user-images.githubusercontent.com/1737159/204777643-a93413a8-b430-4499-a9b9-64acd55a351c.mp4" type="video/mp4">
-</video>
+<video width="160" autoplay><source src="https://user-images.githubusercontent.com/1737159/204777643-a93413a8-b430-4499-a9b9-64acd55a351c.mp4" type="video/mp4"></video>
 
 ## November 20, 2022
 
@@ -62,7 +33,7 @@ Audioreactive palettes by NetMindz
 
 <img width="296" alt="image" src="https://user-images.githubusercontent.com/1737159/202859807-b33ad565-ddf1-450e-9f0b-27d54b5dd0d8.png">
 
-<video width="296" autoplay src="https://user-images.githubusercontent.com/1737159/202907087-6b25d88f-f43f-4d6d-9c39-21a7e9f4a5db.mov">text</video>
+<video width="296" autoplay><source src="https://user-images.githubusercontent.com/1737159/202907087-6b25d88f-f43f-4d6d-9c39-21a7e9f4a5db.mov" type="video/mp4"></video>
 
 ## November 18, 2022
 Extended mic settings in platformIO
@@ -120,7 +91,7 @@ Add Circles and Block as 1D expansion and show virtualStrip effects with ⋮⋮
 
 Tetris effect with block expansion:
 
-<img width="437" alt="image" src="https://user-images.githubusercontent.com/91013628/197814095-829ebffa-0e56-40af-a2fb-6d58c772a559.mov">
+<video width="437" autoplay><source src="https://user-images.githubusercontent.com/91013628/197814095-829ebffa-0e56-40af-a2fb-6d58c772a559.mov" type="video/mp4"></video>
 
 ## October 20, 2022
 Thanks to '_renumbered effect ID's back to WLED SR 0.13 numbering_': Add compatibility for SR/0.13 presets. This allows HB effects to be run on 0.14, however this shows that there are some shortcomings in 0.14: e.g. lissajoux not working as at should and overlapping segments not working (e.g. [Akemi from Hell](https://streamable.com/lze6gl)): November update: Lissajoux, Akemi from Hell (and others) fixed, overlapping segments working now. Check this in Led Preferences:
@@ -129,7 +100,7 @@ Thanks to '_renumbered effect ID's back to WLED SR 0.13 numbering_': Add compati
 
 (To see them fully working: load them into WLEDSR 0.13!)
 
-<img width="437" alt="image" src="https://user-images.githubusercontent.com/91013628/196901131-a10f580c-2637-4c82-8054-abb5b8de4458.mov">
+<video width="437" autoplay><source src="https://user-images.githubusercontent.com/91013628/196901131-a10f580c-2637-4c82-8054-abb5b8de4458.mov" type="video/mp4"></video>
 
 To upload HR effects put effects / presets.json in <your wled ip>/edit
 
@@ -151,7 +122,7 @@ Showing extra hardware info on Info tab
 ## October 1, 2022
 Refactored JSON Mapping: smaller memory footprint so larger mappings can be used, e.g. Snake32:
 
-<img width="405" alt="image" src="https://user-images.githubusercontent.com/91013628/193404268-fb1cccf2-56af-4045-b654-be84d5ef3c8c.mov">
+<video width="405" autoplay><source src="https://user-images.githubusercontent.com/91013628/193404268-fb1cccf2-56af-4045-b654-be84d5ef3c8c.mov" type="video/mp4"></video>
 
 Files are here: [JSONMappings](https://github.com/MoonModules/WLED-Effects/tree/master/JSONMappings)
 
@@ -165,15 +136,13 @@ Adding Frame3D class which takes a 3D coordinate and maps this to 2D matrix (usi
 Refactoring USERMOD_MPU6050_IMU (so that it works!) using latest ElectronicCats/mpu6050 library
 Embedding this usermod in games usermod and use yaw pitch and roll in Frame3D class
 
-<img width="248" alt="image" src="https://user-images.githubusercontent.com/1737159/192523682-3d8cd32d-c589-4fe2-b27e-aecb1d5fbbb0.png">    +    <img width="248" alt="image" src="https://user-images.githubusercontent.com/1737159/192525144-8d8590bf-449f-4336-975e-fced3ea34830.png">    =     <img width="248" alt="image" src="https://user-images.githubusercontent.com/1737159/192526130-64ba2903-4481-42af-a297-4f18b78ed460.mov">
+<img width="248" alt="image" src="https://user-images.githubusercontent.com/1737159/192523682-3d8cd32d-c589-4fe2-b27e-aecb1d5fbbb0.png">    +    <img width="248" alt="image" src="https://user-images.githubusercontent.com/1737159/192525144-8d8590bf-449f-4336-975e-fced3ea34830.png">    =     <video width="248"autoplay><source src="https://user-images.githubusercontent.com/1737159/192526130-64ba2903-4481-42af-a297-4f18b78ed460.mov" type="video/mp4"></video>
 
 ## September 16, 2022
 ### Adding pong
 In games usermod
 
-<img width="248" alt="image" src="https://user-images.githubusercontent.com/1737159/192528357-3cda343c-de1c-4820-adb6-fb71fdfdd1f2.mov">
-
-
+<video width="248" autoplay><source src="https://user-images.githubusercontent.com/1737159/192528357-3cda343c-de1c-4820-adb6-fb71fdfdd1f2.mov" type="video/mp4"></video>
 
 ## September 8, 2022
 ### updates from audio-reactive
@@ -222,7 +191,7 @@ Merged into upstream
 
 Strip bar has been merged to upstream, strip Arc and strip Corner (as opposed to pixel Arc and Corner, see upstream) is "waiting" in upstream branch. To be added to MoonModules.
 
-<img width="429" alt="image" src="https://user-images.githubusercontent.com/1737159/192609697-15cc43f8-157e-4a0e-8ea7-32e755bf79ef.mov">
+<video width="429" autoplay><source src="https://user-images.githubusercontent.com/1737159/192609697-15cc43f8-157e-4a0e-8ea7-32e755bf79ef.mov" type="video/mp4"></video>
 
 ### Usermod level up
 
