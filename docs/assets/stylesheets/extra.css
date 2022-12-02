@@ -9,7 +9,7 @@
   --md-primary-fg-color--dark:  #999;
   --md-default-fg-color:           hsla(var(--md-hue),75%,95%,1); /*text*/
   --md-typeset-color: var(--md-default-fg-color); /*text*/
-  --md-default-fg-color--light:    hsla(var(--md-hue),5%,70%,1); /*heading*/
+  --md-default-fg-color--light:   red; /* hsla(var(--md-hue),5%,70%,1); /*heading*/
   --md-default-fg-color--lighter:  hsla(var(--md-hue),75%,90%,0.32); /*edit pen*/
   --md-default-fg-color--lightest: hsla(var(--md-hue),75%,90%,0.12); /*?*/
   --md-default-bg-color: #2c2f33; /* discord */
@@ -36,9 +36,13 @@
 }
 
 /* MoonModules */
-h1,h2,h3,h4 {
+/* h1,h2,h3,h4 {
   color: red;
-}
+} */
 .md-nav__link--active, .md-tabs__link--active {
   color: red;
 }
+
+/* .md-typeset h1 {
+  color: red;
+} */
