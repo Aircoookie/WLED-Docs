@@ -33,10 +33,11 @@ One or multiple GPIO ports
 
 ## Fork specific info
 
-### WLED SR
-* No JSON mapping as expand1D not implemented 
+| Feature | [WLED SR 0.13](https://github.com/atuline/WLED/tree/dev) | [MoonModules WLED 0.14](https://github.com/MoonModules/WLED/tree/mdev) | [Upstream WLED 0.14](https://github.com/Aircoookie/WLED) |
+|---|---|---|---|
+JSON Mapping|No|Yes|No JSON mapping yet although it's based on an idea from AirCoookie 
+Segment to Logical|Yes|Yes|Yes
+Ledmaps|Yes|Yes|Ledmaps only for 1D, 2D not implemented (PR pending)
+Logical to Physical|Yes|Yes|Yes
+Physical to Busses|Yes|Yes|Yes
 
-### WLED AC
-
-* No JSON mapping yet although it's based on an idea from AirCoookie 
-* Ledmaps only for 1D, 2D not implemented (PR pending)

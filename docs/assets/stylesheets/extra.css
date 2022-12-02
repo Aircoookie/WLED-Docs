@@ -33,3 +33,8 @@
 .md-header {
   background-color: var(--ac-header-color, var(--md-primary-fg-color));
 }
+
+/* MoonModules */
+.h2,h3,h4 {
+  color: red;
+}
