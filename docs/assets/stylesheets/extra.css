@@ -20,6 +20,7 @@
   --md-admonition-bg-color: #35383d;
   --md-admonition-fg-color: var(--md-default-fg-color);
   --md-typeset-table-color: #42464c;
+  --md-typeset-a-color: red;
   --md-code-hl-keyword-color: #a5d6ff;
   --md-code-hl-number-color: #79c0ff;
   --md-code-hl-name-color: #79c0ff;
@@ -38,6 +39,7 @@
 h2,h3,h4 { /*H1 not working here, see above*/
   color: red;
 }
-/* .md-nav__link--active, .md-tabs__link--active, .md-nav__item--active {
+.md-nav__link--active, .md-tabs__link--active {
   color: red;
-} */
+}
+/* , .md-nav__item--active */
