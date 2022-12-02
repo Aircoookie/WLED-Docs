@@ -15,7 +15,7 @@ Custom Effect improvements:
 - Simplified [presets.json](https://github.com/MoonModules/WLED-Effects/tree/master/CustomEffects/wled) (can be downloaded directly into WLED MM in Custom Effect editor screen)
 - some bug fixes to let Custom Effects run better on 2D
 
-And combining Custom Effects with [1D expansions](https://github.com/MoonModules/WLED/wiki/Merge-history/_edit#october-21-2022) gives great results and makes Custom Effects very well performing on large 2D matrices!!!
+And combining Custom Effects with [1D expansions](#october-21-2022) gives great results and makes Custom Effects very well performing on large 2D matrices!!!
 
 This is color_fade_pulse (by @atuline) with Circles expansion:
 
