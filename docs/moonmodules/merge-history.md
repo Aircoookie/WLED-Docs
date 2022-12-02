@@ -37,7 +37,7 @@ This is color_fade_pulse (by @atuline) with Circles expansion:
 
 ### four
 
-<video src="https://user-images.githubusercontent.com/1737159/202907087-6b25d88f-f43f-4d6d-9c39-21a7e9f4a5db.mov" controls="controls" style="max-width: 730px;">
+<video src="https://user-images.githubusercontent.com/1737159/202907087-6b25d88f-f43f-4d6d-9c39-21a7e9f4a5db.mov" controls="controls" style="max-width: 160px;">
 </video>
 
 ### five
