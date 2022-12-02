@@ -25,25 +25,24 @@ This is color_fade_pulse (by @atuline) with Circles expansion:
 
 ### two
 
-<video width="160" alt="video" controls="controls">
+<video width="160" alt="video" autoplay>
 <source src="https://user-images.githubusercontent.com/1737159/204777643-a93413a8-b430-4499-a9b9-64acd55a351c.mp4" type="video/mp4">
 </video>
 
 ### three
 
-<video width="160" alt="image" controls="controls">
+<video width="160" alt="image" autoplay>
 <source  src="https://user-images.githubusercontent.com/1737159/202907087-6b25d88f-f43f-4d6d-9c39-21a7e9f4a5db.mov" type="video/mp4">
 </video>
 
 ### four
 
-<video src="https://user-images.githubusercontent.com/1737159/202907087-6b25d88f-f43f-4d6d-9c39-21a7e9f4a5db.mov" controls="controls" style="max-width: 160px;">
+<video src="https://user-images.githubusercontent.com/1737159/202907087-6b25d88f-f43f-4d6d-9c39-21a7e9f4a5db.mov" autoplay style="max-width: 160px;">
 </video>
 
 ### five
 
-<video src="https://user-images.githubusercontent.com/1737159/204777643-a93413a8-b430-4499-a9b9-64acd55a351c.mp4" controls="controls" style="max-width: 160px;">
-</video>
+<video src="https://user-images.githubusercontent.com/1737159/202907087-6b25d88f-f43f-4d6d-9c39-21a7e9f4a5db.mov" autoplay>
 
 ## November 20, 2022
 
