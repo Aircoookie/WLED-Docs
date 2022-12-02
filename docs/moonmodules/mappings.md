@@ -23,7 +23,7 @@ Both for 1 and 2D
 
 Code: uses customMappingTable
 
-See also https://moonmodules.github.io/WLED-Docs/advanced/mapping/
+See also [Advanced/Mappings](https://moonmodules.github.io/WLED-Docs/advanced/mapping/)
 
 ### Logical to Physical
 Takes into account Panel setup and Led panel layout as defined in 2D Configuration (e.g. 1st panel, 1st led, serpentine)
