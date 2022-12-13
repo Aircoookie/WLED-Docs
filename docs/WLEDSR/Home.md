@@ -1,3 +1,6 @@
+The WLEDSR help you can find here have been copied from <https://github.com/atuline/WLED/wiki>.
+These pages are here temporarily. Aim is to migrate them step by step to 0.14 general and MM specific pages.
+
 # WLED Sound Reactive Introduction
 This is a FORK of the original WLED code as found at [wled.me](http://wled.me). It provides basic sound reactivity for both the [ESP8266](https://github.com/atuline/WLED/tree/ESP8266) and [ESP32](https://github.com/atuline/WLED) platforms as well as FFT sound reactivity for the ESP32.
 
