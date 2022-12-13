@@ -24,21 +24,17 @@ SR WLED releases are also included in this web-based installer: https://wled-ins
 _Warning_: We had to change the partition size on the ESP32 in order to 'fit' all the new features. This means that the 'old way' of upgrading/flashing, no longer work unfortunately. **You cannot use ESPHome Flasher**, and you cannot use OTA from a build prior to v0.13.0-b5.
 
 1. Download [esptool](https://github.com/espressif/esptool).
-1. Download the ESP32 bootloader, such as https://github.com/Aircoookie/WLED/releases/download/v0.13.3/esp32_bootloader_v4.bin
-1. Download the sound reactive binary, such as https://github.com/atuline/WLED/releases
+1. Download the ESP32 bootloader, such as [esp32_bootloader_v4](https://github.com/Aircoookie/WLED/releases/download/v0.13.3/esp32_bootloader_v4.bin)
+1. Download the sound reactive binary, such as [Atuline releases](https://github.com/atuline/WLED/releases)
 1. Plug the ESP32 board into your computer.
 1. Optionally determine which Com port it uses. You could use NodeMCU-PyFlasher to do this, but don't flash the binary with it.
 1. Open a Command prompt on your computer.
 1. Assuming you copied esptool and both binaries to the same directory, you could clear the contents of the ESP32 with:
-
     ` esptool.exe erase_flash`
 1. Then burn the bootloader with:
-
     `esptool.exe write_flash 0x0 esp32_bootloader_v4.bin`
 1. Once complete, you can now burn the sound reactive binary with:
-
     `esptool write_flash 0x10000 soundReactive_WLED_0.13.X_ESP32.bin`
-
 1. You can optionally add the port, such as '-p COM6'.
 1. In addition, if this is the first time you've used this version, you need to go to the "Security & Updates" settings page and tick the "Factory reset" box, then select "Save & Reboot". Caveat: May not be necessary if you ran 'erase_flash' above.
 1. This will reset the EEPROM and remove any settings or presets you may have saved.
@@ -62,8 +58,8 @@ Note: If you Flash via another method, you will definitely need to perform a Fac
 You can find some unofficial SR WLED binaries, including intermediate development builds for ESP32, here:
 
 ### Installation services
-* https://wled-install.github.io
-* https://install.wled.me
+* (https://wled-install.github.io)
+* <https://install.wled.me>
 
 ### Firmware Binaries
 * https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/Sound_reactive 

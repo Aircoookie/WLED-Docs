@@ -82,9 +82,10 @@ We can also be found on reddit at [r/soundreactive](https://www.reddit.com/r/sou
 
 ### Support Forums
 
-* WLED on Reddit:	https://reddit.com/r/WLED/
-* r/soundreactive on Reddit:	https://www.reddit.com/r/soundreactive
-* WLED Discord:         https://discordapp.com/channels/473448917040758787/473448917543944193
-* WLED Soundreactive Discord:         https://discord.gg/4CQRmfR
-* WLED on Discourse:    https://wled.discourse.group/
-* FastLED on Reddit:	https://reddit.com/r/FastLED
+* [WLED on Reddit](https://reddit.com/r/WLED/)
+* [r/soundreactive on Reddit](https://www.reddit.com/r/soundreactive)
+* [WLED Discord](https://discordapp.com/channels/473448917040758787/473448917543944193)
+* [WLED Discord](https://discordapp.com/channels/473448917040758787/473448917543944193)
+* [WLED Soundreactive Discord](https://discord.gg/4CQRmfR)
+* [WLED on Discourse](https://wled.discourse.group/)
+* [FastLED on Reddit](https://reddit.com/r/FastLED)
