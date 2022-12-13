@@ -146,10 +146,10 @@ nav:
       - 2D Support: WLEDSR/2D-Support.md
 
       - Sound Settings: WLEDSR/Sound-Settings.md
-      - 2D LED Preferences: WLEDSR/2D-LED-Preferences.md
-      - Custom Effects: WLEDSR/Custom-Effects.md
+      - 2D LED Preferences: WLEDSR/LED-Preferences.md
+      - Custom Effects: WLEDSR/WLED-Custom-Effects.md
       - UDP Sound Sync: WLEDSR/UDP-Sound-Sync.md
-      - Sound Reactive Animations: WLEDSR/Sound-Reactive-Animations.md
+      - Sound Reactive Animations: WLEDSR/Reactive-Animations.md
       - Non-Reactive Animations: WLEDSR/Non-Reactive-Animations.md
 
       - Digital Microphone Hookup: WLEDSR/Digital-Microphone-Hookup.md
@@ -165,12 +165,12 @@ nav:
     - Coding and Testing:
       - WLED Programming Notes: WLEDSR/WLED-Programming-Notes.md
       - Modifying Sound Reactive WLED: WLEDSR/Modifying-Sound-Reactive-WLED.md
-      - Future Directions: WLEDSR/Future Directions.md
-      - Adding a new Settings Page: WLEDSR/Adding-a-new-Settings-Page.md
+      - Future Directions: WLEDSR/Future-Directions.md
+      - Adding a new Settings Page: WLEDSR/Adding-a-Sound-Settings-page-to-the-UI.md
       - On Lossy Colours: WLEDSR/On-Lossy-Colours.md
-      - Sliders in WLED: WLEDSR/Sliders-in-WLED.md
+      - Sliders in WLED: WLEDSR/Adding-Sliders.md
       - Testing: WLEDSR/Testing.md
 
     - Links:
-      - FastLED Wiki: WLEDSR/wip.md
+      - FastLED Wiki: https://github.com/FastLED/FastLED/wiki/Basic-usage
       - Other: WLEDSR/Other-Links.md
