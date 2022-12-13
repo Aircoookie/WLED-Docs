@@ -146,32 +146,31 @@ nav:
       - 2D Support: WLEDSR/2D-Support.md
 
       - Sound Settings: WLEDSR/Sound-Settings.md
-      - 2D LED Preferences: WLEDSR/wip.md
-      - Custom Effects: WLEDSR/wip.md
-      - UDP Sound Sync: WLEDSR/wip.md
-      - Sound Reactive Animations: WLEDSR/wip.md
-      - Non-Reactive Animations: WLEDSR/wip.md
+      - 2D LED Preferences: WLEDSR/2D-LED-Preferences.md
+      - Custom Effects: WLEDSR/Custom-Effects.md
+      - UDP Sound Sync: WLEDSR/UDP-Sound-Sync.md
+      - Sound Reactive Animations: WLEDSR/Sound-Reactive-Animations.md
+      - Non-Reactive Animations: WLEDSR/Non-Reactive-Animations.md
 
-      - Digital Microphone Hookup: WLEDSR/wip.md
-      - Analog Audio Input Options: WLEDSR/wip.md
-      - Using my PC for the Sound: WLEDSR/wip.md
-      - News: WLEDSR/wip.md
+      - Digital Microphone Hookup: WLEDSR/Digital-Microphone-Hookup.md
+      - Analog Audio Input Options: WLEDSR/Analog-Audio-Input-Options.md
+      - Using my PC for the Sound: WLEDSR/Using-my-PC-for-the-Sound.md
+      - News: WLEDSR/News.md
 
     - Technicals:
-      - It's Not Working: WLEDSR/wip.md
-      - Noise and Spikes: WLEDSR/wip.md
-      - Connectivity Issues: WLEDSR/wip.md
+      - It's Not Working: WLEDSR/My--device--is-not-working.md
+      - Noise and Spikes: WLEDSR/Noise-and-Spikes.md
+      - Connectivity Issues: WLEDSR/Connectivity-Issues.md
 
     - Coding and Testing:
-      - WLED Programming Notes: WLEDSR/wip.md
-      - Modifying Sound Reactive WLED: WLEDSR/wip.md
-      - Future Directions: WLEDSR/wip.md
-      - Adding a new Settings Page: WLEDSR/wip.md
-      - On Lossy Colours: WLEDSR/wip.md
-      - Sliders in WLED: WLEDSR/wip.md
-      - Testing: WLEDSR/wip.md
+      - WLED Programming Notes: WLEDSR/WLED-Programming-Notes.md
+      - Modifying Sound Reactive WLED: WLEDSR/Modifying-Sound-Reactive-WLED.md
+      - Future Directions: WLEDSR/Future Directions.md
+      - Adding a new Settings Page: WLEDSR/Adding-a-new-Settings-Page.md
+      - On Lossy Colours: WLEDSR/On-Lossy-Colours.md
+      - Sliders in WLED: WLEDSR/Sliders-in-WLED.md
+      - Testing: WLEDSR/Testing.md
 
     - Links:
-      - WLED Main Wiki: WLEDSR/wip.md
       - FastLED Wiki: WLEDSR/wip.md
-      - Other: WLEDSR/wip.md
+      - Other: WLEDSR/Other-Links.md
