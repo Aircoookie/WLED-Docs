@@ -139,13 +139,13 @@ nav:
     - Using my PC for the Sound: soundreactive/wip.md
   - WLED SR:
     - Basics:
-      - Introduction: WLEDSR/wip.md
-      - Installing and Compiling: WLEDSR/wip.md
-      - First Time Setup: WLEDSR/wip.md
-      - Running Sound Reactive WLED: WLEDSR/wip.md
-      - 2D Support: WLEDSR/wip.md
+      - Introduction: WLEDSR/Home.md
+      - Installing and Compiling: WLEDSR/Installing-and-Compiling.md
+      - First Time Setup: WLEDSR/First-Time-Setup.md
+      - Running Sound Reactive WLED: WLEDSR/Running-Sound-Reactive-WLED.md
+      - 2D Support: WLEDSR/2D-Support.md
 
-      - Sound Settings: WLEDSR/wip.md
+      - Sound Settings: WLEDSR/Sound-Settings.md
       - 2D LED Preferences: WLEDSR/wip.md
       - Custom Effects: WLEDSR/wip.md
       - UDP Sound Sync: WLEDSR/wip.md
