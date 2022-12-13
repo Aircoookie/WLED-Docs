@@ -4,6 +4,7 @@ This version of WLED contains sound reactive routines, which are prefaced with a
 **Caveat: As our sound reactive fork of WLED evolves, some of this content may become out of date. We'll update as we become aware of any issues.
 
 Contents:
+
 * [HTTP API Links](https://moonmodules.github.io/WLED-Docs/WLEDSR/WLED-Programming-Notes#http-api-links), [Updating FX.h](https://moonmodules.github.io/WLED-Docs/WLEDSR/WLED-Programming-Notes#updating-fxh-line-numbers-will-vary), [Updating FX.cpp](https://moonmodules.github.io/WLED-Docs/WLEDSR/WLED-Programming-Notes#updating-fxcpp)
 * [WLED Support Functions](https://moonmodules.github.io/WLED-Docs/WLEDSR/WLED-Programming-Notes#wled-support-functions)
 * [Important WLED variables](https://moonmodules.github.io/WLED-Docs/WLEDSR/WLED-Programming-Notes#important-wled-variables), [Important Structures](https://moonmodules.github.io/WLED-Docs/WLEDSR/WLED-Programming-Notes#important-structures)
@@ -16,8 +17,8 @@ Caveat: Some information on this page is in our 'dev' branch only and not yet re
 
 ## HTTP API Links
 I hope to work on an Android application in the future, so I'm keeping notes on the HTTP API.
-* https://tynick.com/blog/01-28-2020/controlling-wled-with-raspberry-pi-using-the-wled-api/
-* https://github.com/Aircoookie/WLED/wiki/HTTP-request-API
+* <https://tynick.com/blog/01-28-2020/controlling-wled-with-raspberry-pi-using-the-wled-api/>
+* <https://github.com/Aircoookie/WLED/wiki/HTTP-request-API>
 
 ## Updating FX.h (line numbers will vary)
 

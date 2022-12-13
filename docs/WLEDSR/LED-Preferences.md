@@ -1,7 +1,3 @@
-This page has moved to https://moonmodules.github.io/WLED-Docs/2D/2d-settings/
-
-Do not edit below!!
-
 ## LED Preferences for Sound Reactive WLED
 
 The sound reactive fork of WLED supports multiple layouts of a 2D matrix led panel as well as multiple identical 2D matrix led panels. Many effects were written with a 16x16 panel in mind, so some 2D effects may not display properly on a panel/matrix of a different size.
@@ -22,6 +18,7 @@ Note: width x height should match LED count!
 
 ### 2D Panels
 A matrix is made of 1 or more identical physical led panels (physical layer)
+
 |Setting name | Value Range | Description | Master/Dev|
 |---|---|---|---|
 Multiple panels| Y/N | No if only one panel, yes if more than one | Dev

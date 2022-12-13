@@ -1,7 +1,3 @@
-This page has moved to https://moonmodules.github.io/WLED-Docs/2D/introduction/
-
-Do not edit below!!
-
 ## Introduction
 
 In order to accommodate 2D effects we have modified how Segment settings are used and added 2D Matrix and panel variables on the [Led Preferences](https://moonmodules.github.io/WLED-Docs/WLEDSR/LED-Preferences) settings.
@@ -32,7 +28,7 @@ A segment can be rotated 90º degrees and reversed on the X or Y-axis and can be
 
 The following table shows the effect setting these values:
 
-Value | Rotation | Reverse X | Reverse Y| Effect
+|Value | Rotation | Reverse X | Reverse Y| Effect|
 |---|---|---|---|---|
 0|-|-|-|0º rotation and no reverse
 1|-|-|+|Reverse horizontal

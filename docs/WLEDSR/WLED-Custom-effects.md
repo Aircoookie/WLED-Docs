@@ -1,26 +1,6 @@
 ![unknown](https://user-images.githubusercontent.com/91616163/197343053-f7deb257-5fd3-40f2-8ffd-31c06f02f12a.png)
 
 
-- [Custom effects](#custom-effects)
-- [Quick start](#quick-start)
-- [Running examples](#running-examples)
-- [Create your own Custom Effects](#create-your-own-custom-effects)
-  * [Components](#components)
-  * [Functions and variables](#functions-and-variables)
-    + [WLED general](#wled-general)
-    + [WLED SR](#wled-sr)
-    + [Custom Effects](#custom-effects)
-    + [Math](#math)
-    + [Time](#time)
-    + [Pixelblase support](#pixelblase-support)
-    + [Serial output](#serial-output)
-    + [Details](#details)
-  * [Implementation of variables and functions](#implementation-of-variables-and-functions)
-- [Current limitations](#current-limitations)
-- [trouble shooting](#trouble-shooting)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 # Custom effects
 
 Custom effects are effects which are not compiled in the WLED repository but specified by a file (program file) which is interpreted in real time.

@@ -49,9 +49,11 @@ If you'd like some help with your device, these are the types of things we would
 * [See my FastLED support FAQ](http://tuline.com/fastled-support-qa/).
 
 **MAX4466/ESP32 Sampling results - Quiet room**
+
 ![MAX4466 in quiet room](https://github.com/atuline/WLED/blob/assets/media/quiet.jpg)
 
 **MAX4466/ESP32 Sampling results - Talking**
+
 ![MAX4466 talking](https://github.com/atuline/WLED/blob/assets/media/loud.jpg)
 
 The other analog input options should provide something similar.
@@ -64,7 +66,7 @@ One setting to change on 'WiFi Setup' is to check on "Disable WiFi sleep" mode.
 
 As for UDP support, this article may shed some light on the challenges:
 
-https://superuser.com/questions/1287485/udp-broadcasting-not-working-on-some-routers
+<https://superuser.com/questions/1287485/udp-broadcasting-not-working-on-some-routers>
 
 In the meantime, UDP Sound sync has been configured to transmit 50 packets per second.
 

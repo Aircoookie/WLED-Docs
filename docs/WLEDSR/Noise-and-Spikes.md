@@ -25,12 +25,12 @@ Here's some [test results](https://github.com/atuline/WLED/blob/assets/docs/Nois
 
 Here's some references:
 
-* https://www.atomic14.com/2020/09/12/esp32-audio-input.html
-* https://www.youtube.com/watch?v=pPh3_ciEmzs
-* https://www.youtube.com/watch?v=3g7l5bm7fZ8
-* https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/adc.html
-* https://www.esp32.com/viewtopic.php?t=9613
-* https://github.com/espressif/arduino-esp32/issues/92
-* https://randomnerdtutorials.com/esp32-adc-analog-read-arduino-ide/
+* <https://www.atomic14.com/2020/09/12/esp32-audio-input.html>
+* <https://www.youtube.com/watch?v=pPh3_ciEmzs>
+* <https://www.youtube.com/watch?v=3g7l5bm7fZ8>
+* <https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/adc.html>
+* <https://www.esp32.com/viewtopic.php?t=9613>
+* <https://github.com/espressif/arduino-esp32/issues/92>
+* <https://randomnerdtutorials.com/esp32-adc-analog-read-arduino-ide/>
 
 Note: According to atomic14 in the above videos, the I2S microphones do not exhibit the issues found with the analog microphones.

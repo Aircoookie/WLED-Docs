@@ -11,7 +11,7 @@ Please see [https://moonmodules.github.io/WLED-Docs/WLEDSR/Modifying-Sound-React
 
 This file is compressed and is taken from data\index.htm. Please see Aircoookie's page on 'adding your own effect:
 
-https://github.com/Aircoookie/WLED/wiki/Add-own-functionality
+<https://github.com/Aircoookie/WLED/wiki/Add-own-functionality>
 
 To serve your changes by the internal webserver, you will need to follow these or similar steps to gzip compress the index.html file:
 
@@ -24,4 +24,4 @@ Recompile and flash WLED!
 
 Here's a link to my Google document containing the changes required:
 
-https://docs.google.com/document/d/1m6dm3O_aXgJLGDJfM6E-4CHzzvU8bsaHqrs7VmisYko/edit
+<https://docs.google.com/document/d/1m6dm3O_aXgJLGDJfM6E-4CHzzvU8bsaHqrs7VmisYko/edit>
