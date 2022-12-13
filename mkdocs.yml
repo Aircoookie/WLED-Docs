@@ -137,3 +137,41 @@ nav:
     - Digital Microphone Hookup: soundreactive/digital-microphone-hookup.md
     - Analog Audio Input Options: soundreactive/wip.md
     - Using my PC for the Sound: soundreactive/wip.md
+  - WLED SR:
+    - Basics:
+      - Introduction: WLEDSR/wip.md
+      - Installing and Compiling: WLEDSR/wip.md
+      - First Time Setup: WLEDSR/wip.md
+      - Running Sound Reactive WLED: WLEDSR/wip.md
+      - 2D Support: WLEDSR/wip.md
+
+      - Sound Settings: WLEDSR/wip.md
+      - 2D LED Preferences: WLEDSR/wip.md
+      - Custom Effects: WLEDSR/wip.md
+      - UDP Sound Sync: WLEDSR/wip.md
+      - Sound Reactive Animations: WLEDSR/wip.md
+      - Non-Reactive Animations: WLEDSR/wip.md
+
+      - Digital Microphone Hookup: WLEDSR/wip.md
+      - Analog Audio Input Options: WLEDSR/wip.md
+      - Using my PC for the Sound: WLEDSR/wip.md
+      - News: WLEDSR/wip.md
+
+    - Technicals:
+      - It's Not Working: WLEDSR/wip.md
+      - Noise and Spikes: WLEDSR/wip.md
+      - Connectivity Issues: WLEDSR/wip.md
+
+    - Coding and Testing:
+      - WLED Programming Notes: WLEDSR/wip.md
+      - Modifying Sound Reactive WLED: WLEDSR/wip.md
+      - Future Directions: WLEDSR/wip.md
+      - Adding a new Settings Page: WLEDSR/wip.md
+      - On Lossy Colours: WLEDSR/wip.md
+      - Sliders in WLED: WLEDSR/wip.md
+      - Testing: WLEDSR/wip.md
+
+    - Links:
+      - WLED Main Wiki: WLEDSR/wip.md
+      - FastLED Wiki: WLEDSR/wip.md
+      - Other: WLEDSR/wip.md
