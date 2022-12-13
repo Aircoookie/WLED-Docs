@@ -11,6 +11,7 @@ hide:
 Below is in processing order
 
 ### JSON mapping
+AKA jmap
 1D expansion: maps a 1D effect to a 2D pattern
 
 ### Segment to Logical
