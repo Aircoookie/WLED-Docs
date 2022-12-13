@@ -6,7 +6,7 @@
 **Note 5:** As we continue to develop SR WLED, some animations may appear or disappear. It's still a work very much in progress. Some may only appear in the dev branch for now.    
 **Note 6:** In dev branch, sliders have been renamed from FFT Low to Custom 1, FFT High to Custom 2 and FFT Custom to Custom 3.    
 
-See also [Non reactive animations](https://github.com/atuline/WLED/wiki/Non-Reactive-Animations)   
+See also [Non reactive animations](https://moonmodules.github.io/WLED-Docs/WLEDSR/Non-Reactive-Animations)   
 
 See [List of effects and palettes](https://github.com/Aircoookie/WLED/wiki/List-of-effects-and-palettes) for AC Animations.
 

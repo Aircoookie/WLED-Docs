@@ -4,7 +4,7 @@ Do not edit below!!
 
 ## Introduction
 
-In order to accommodate 2D effects we have modified how Segment settings are used and added 2D Matrix and panel variables on the [Led Preferences](https://github.com/atuline/WLED/wiki/LED-Preferences) settings.
+In order to accommodate 2D effects we have modified how Segment settings are used and added 2D Matrix and panel variables on the [Led Preferences](https://moonmodules.github.io/WLED-Docs/WLEDSR/LED-Preferences) settings.
 Note: Currently only working in dev. You are invited to test this and give feedback on [Beta testing discord channel](https://discord.com/channels/700041398778331156/700701772838207640)
 
 ## 2D architecture
@@ -25,7 +25,7 @@ In 2D, a segment is a rectangle on a 2D matrix and 2D effects plot on this recta
 A rectangle can be defined in the Segment UI where the start led specifies the top-left and the stop led specifies the bottom-right of the rectangle.
 Multiple segments can be specified this way. Segments can overlap. In fact overlapping creates very nice effects.
 
-See [Segment start stop charts](https://github.com/atuline/WLED/wiki/2D-Support#2d-segment-start-stop-charts) to easy find matrix start and stop values
+See [Segment start stop charts](https://moonmodules.github.io/WLED-Docs/WLEDSR/2D-Support#2d-segment-start-stop-charts) to easy find matrix start and stop values
 
 ### Rotation and ReverseX/Y
 A segment can be rotated 90º degrees and reversed on the X or Y-axis and can be specified in the Segment-UI. The SegmentRotation branch of dev supports this and is currently in beta-test. This will move to dev and release over time.
@@ -45,7 +45,7 @@ Value | Rotation | Reverse X | Reverse Y| Effect
 
 ## 2D Matrices and panels
 
-See [Led Preferences](https://github.com/atuline/WLED/wiki/LED-Preferences)
+See [Led Preferences](https://moonmodules.github.io/WLED-Docs/WLEDSR/LED-Preferences)
 
 ## Technical
 

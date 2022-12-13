@@ -44,15 +44,15 @@ GPI&nbsp; 39 => ADC1_CH3, VN
 Do NOT use any of the pins from ADC2, as they will conflict with the WiFi and with I2S sampling.
 
 
-Remember to [press Reset](https://github.com/atuline/WLED/wiki/Sound-Settings#press-reset-key-after-changing-sound-source) after saving your new analog input configuration.
+Remember to [press Reset](https://moonmodules.github.io/WLED-Docs/WLEDSR/Sound-Settings#press-reset-key-after-changing-sound-source) after saving your new analog input configuration.
 
 <br/>
 
-We have observed problems when using "analog buttons" (potentiometer) together with ADC analog sound input. It seems that different drivers (I2S-ADC for sound, analogRead() for potentiometer) are getting into conflict - more details in the related [bug report for espressif software](https://github.com/espressif/arduino-esp32/issues/4782). If you plan to attach a potentiometer to your WLED device, we recommend to use an [I2S digital microphone](https://github.com/atuline/WLED/wiki/Digital-Microphone-Hookup) to avoid these problems.
+We have observed problems when using "analog buttons" (potentiometer) together with ADC analog sound input. It seems that different drivers (I2S-ADC for sound, analogRead() for potentiometer) are getting into conflict - more details in the related [bug report for espressif software](https://github.com/espressif/arduino-esp32/issues/4782). If you plan to attach a potentiometer to your WLED device, we recommend to use an [I2S digital microphone](https://moonmodules.github.io/WLED-Docs/WLEDSR/Digital-Microphone-Hookup) to avoid these problems.
 
 
 
-More information about analog inputs on our [analog microphones](https://github.com/atuline/WLED/wiki/Analog-Audio-Input-Options) page.
+More information about analog inputs on our [analog microphones](https://moonmodules.github.io/WLED-Docs/WLEDSR/Analog-Audio-Input-Options) page.
 
 <br/>
 
@@ -63,9 +63,9 @@ In order to accommodate a wide range of audio inputs, ambient environments and s
 
 See also 
 
-&rArr; [Squelch and Gain](https://github.com/atuline/WLED/wiki/Squelch-and-Gain)
+&rArr; [Squelch and Gain](https://moonmodules.github.io/WLED-Docs/WLEDSR/Squelch-and-Gain)
 
-&rArr; [Sound setting examples for common microphones](https://github.com/atuline/WLED/wiki/First-Time-Setup#sound-settings-getting-started-with-common-microphones)
+&rArr; [Sound setting examples for common microphones](https://moonmodules.github.io/WLED-Docs/WLEDSR/First-Time-Setup#sound-settings-getting-started-with-common-microphones)
 
 ## Gain
 Line-in signals are typically much lower than that of some of the microphones. Rather than use an auto gain function, you can manually adjust the gain from 1 to 255, which translates to 0.1 up to almost 6.5 gain. That's equivalent to a range of _-20dB_ up to _+16dB_.
@@ -82,7 +82,7 @@ Here's a method to setup squelch and gain for your SR WLED Device.
 5. In a quiet environment, increase and occasionally save the "squelch" incrementally until the led's are no longer flashing.
 6. Once that's done, set "gain" to 40. Make noise appropriate to your 'noisy' environment and number of led's. Then adjust/save the gain so that the led's are responding appropriately.
 7. Note that some of the animations allow further sensitivity adjustment with the 'Intensity' setting.
-8. Check out the '[Sound Reactive Animations](https://github.com/atuline/WLED/wiki/Reactive-Animations)' page to see what controls are available for each animation.
+8. Check out the '[Sound Reactive Animations](https://moonmodules.github.io/WLED-Docs/WLEDSR/Reactive-Animations)' page to see what controls are available for each animation.
 
 
 ## Voltage Fluctuation
@@ -97,16 +97,16 @@ Currently the following I2S options are available:
 
 ![WLEDSR-Sound-Setings-Digital_Part2](https://user-images.githubusercontent.com/91616163/177543015-2e862675-274d-45fa-822e-bea763ad9432.png)
 
-Some more information can be found on our [I2S digital microphones](https://github.com/atuline/WLED/wiki/Digital-Microphone-Hookup) page.
+Some more information can be found on our [I2S digital microphones](https://moonmodules.github.io/WLED-Docs/WLEDSR/Digital-Microphone-Hookup) page.
 
 _to be extended soon_
 
 ### I2S Line-in
-There are solutions available for line-in via I2S. For example, boards/shields with "es7243" chip should work already (we have a special driver for these), and we're investigating "es8388". Please check our [I2S digital microphone hookup - I2S audio boards/modules](https://github.com/atuline/WLED/wiki/Digital-Microphone-Hookup#some-i2s-audio-boards) page for more information.
+There are solutions available for line-in via I2S. For example, boards/shields with "es7243" chip should work already (we have a special driver for these), and we're investigating "es8388". Please check our [I2S digital microphone hookup - I2S audio boards/modules](https://moonmodules.github.io/WLED-Docs/WLEDSR/Digital-Microphone-Hookup#some-i2s-audio-boards) page for more information.
 <br/>
 
 ## AGC - improved Autonomous Gain Control
-We have recently improved the AGC (automatic gain control) algorithm in WLED-SR. It's not enabled by default, however we encourage you to give it a try - all sound reactive effects now support AGC, including 2D and frequency-reactive effects. The only prerequisite for using AGC is that you first adjust "Squelch" to define 'silence' (ambient noise level) in your environment - [see previous section](https://github.com/atuline/WLED/wiki/Sound-Settings/_edit#how-to).
+We have recently improved the AGC (automatic gain control) algorithm in WLED-SR. It's not enabled by default, however we encourage you to give it a try - all sound reactive effects now support AGC, including 2D and frequency-reactive effects. The only prerequisite for using AGC is that you first adjust "Squelch" to define 'silence' (ambient noise level) in your environment - [see previous section](https://moonmodules.github.io/WLED-Docs/WLEDSR/Sound-Settings/_edit#how-to).
 
 ![WLEDSR-Sound-Setings-AGC_only](https://user-images.githubusercontent.com/91616163/177599946-055ee5f1-34b9-4a23-a408-4d21500c31e7.png)
 

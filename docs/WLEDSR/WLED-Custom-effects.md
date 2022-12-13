@@ -1,7 +1,3 @@
-This page has moved to https://moonmodules.github.io/WLED-Docs/moonmodules/custom-effects/
-
-Do not edit below!!
-
 ![unknown](https://user-images.githubusercontent.com/91616163/197343053-f7deb257-5fd3-40f2-8ffd-31c06f02f12a.png)
 
 

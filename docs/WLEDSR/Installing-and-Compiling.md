@@ -3,7 +3,7 @@
 ***IMPORTANT:*** _Before attempting to compile this fork of WLED, make sure you can compile the [original WLED](https://github.com/Aircoookie/WLED) - instructions are [here](https://kno.wled.ge/advanced/compiling-wled/). 
 If you are unable to compile WLED, please consider flashing your device with [binaries](https://github.com/atuline/WLED/releases/latest) instead._
 
-If you managed to compile original WLED, test your new skills and [compile the soundreactive fork of WLED](https://github.com/atuline/WLED/wiki/Installing-and-Compiling#getting-started).
+If you managed to compile original WLED, test your new skills and [compile the soundreactive fork of WLED](https://moonmodules.github.io/WLED-Docs/WLEDSR/Installing-and-Compiling#getting-started).
 
 
 # Installing pre-built binaries

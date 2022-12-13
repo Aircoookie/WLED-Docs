@@ -56,7 +56,7 @@ Using the WLED 0.10 codebase, our code has been tested with:
 
 
 
-For more information, see our **[Analog Audio Input Options](https://github.com/atuline/WLED/wiki/Analog-Audio-Input-Options)** or **[Digital Audio Input Options](https://github.com/atuline/WLED/wiki/Digital-Microphone-Hookup)** page.
+For more information, see our **[Analog Audio Input Options](https://moonmodules.github.io/WLED-Docs/WLEDSR/Analog-Audio-Input-Options)** or **[Digital Audio Input Options](https://moonmodules.github.io/WLED-Docs/WLEDSR/Digital-Microphone-Hookup)** page.
 
 
 ## Default pins used

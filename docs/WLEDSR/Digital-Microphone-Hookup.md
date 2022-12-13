@@ -18,11 +18,11 @@ I2S digital sound modules utilize the industry-standard 24-bit [I²S interface](
 | GND | GND | GND | Gnd | ground, 0V
 
 
-See also &rArr; [Sound setting examples for common microphones](https://github.com/atuline/WLED/wiki/First-Time-Setup#sound-settings-getting-started-with-common-microphones)
+See also &rArr; [Sound setting examples for common microphones](https://moonmodules.github.io/WLED-Docs/WLEDSR/First-Time-Setup#sound-settings-getting-started-with-common-microphones)
 
 <br/>
 
-**Microphone type** ([SR-WLED sound settings](https://github.com/atuline/WLED/wiki/Sound-Settings#i2s-digital-input))
+**Microphone type** ([SR-WLED sound settings](https://moonmodules.github.io/WLED-Docs/WLEDSR/Sound-Settings#i2s-digital-input))
 * use `Generic I2S` for INMP441, ICS-43434, and other non-PDM devices
 * use `Generic I2S PDM` for PDM microphones like SPM1423
 * use `SPH0645` for adafruit SPH0645
@@ -34,7 +34,7 @@ See also &rArr; [Sound setting examples for common microphones](https://github.c
 
 <br/>
 
-Since 0.12.0, you can change I2S GPIO pins in the [Sound Settings](https://github.com/atuline/WLED/wiki/Sound-Settings) interface; on ESP32 **any** available GPIO can be used for I²S. The 'SD' signal could also be mapped to an input-only (GPI) pin _(*)_, if you are low on GPIO pins. You'll need to reboot when done with pin assignment - don't forget to "save". To reboot, please press 'reset' on your ESP32. Unfortunately a restart by software ("soft reboot") is not always sufficient to activate new driver settings.
+Since 0.12.0, you can change I2S GPIO pins in the [Sound Settings](https://moonmodules.github.io/WLED-Docs/WLEDSR/Sound-Settings) interface; on ESP32 **any** available GPIO can be used for I²S. The 'SD' signal could also be mapped to an input-only (GPI) pin _(*)_, if you are low on GPIO pins. You'll need to reboot when done with pin assignment - don't forget to "save". To reboot, please press 'reset' on your ESP32. Unfortunately a restart by software ("soft reboot") is not always sufficient to activate new driver settings.
 
 In addition to I2S microphones, there are solutions available for line-in via I2S. We already have driver support for Boards/Shields with "es7243" chip, and we're investigating "es8388". 
 

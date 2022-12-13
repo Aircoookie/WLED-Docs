@@ -140,7 +140,7 @@ nav:
 
       - Sound Settings: WLEDSR/Sound-Settings.md
       - 2D LED Preferences: WLEDSR/LED-Preferences.md
-      - Custom Effects: WLEDSR/WLED-Custom-Effects.md
+      - Custom Effects: WLEDSR/WLED-Custom-effects.md
       - UDP Sound Sync: WLEDSR/UDP-Sound-Sync.md
       - Sound Reactive Animations: WLEDSR/Reactive-Animations.md
       - Non-Reactive Animations: WLEDSR/Non-Reactive-Animations.md

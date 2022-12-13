@@ -20,7 +20,7 @@ Here's a method to setup squelch and gain for your SR WLED Device.
 5. In a quiet environment, increase and occasionally save the squelch incrementally until the led's are no longer flashing.
 6. Once that's done, make noise appropriate to your 'noisy' environment and number of led's. Then adjust/save the gain so that the led's are responding appropriately.
 7. Note that some of the animations allow further sensitivity adjustment with the 'Intensity' setting.
-8. Check out the '[Sound Reactive Animations](https://github.com/atuline/WLED/wiki/Reactive-Animations)' page to see what controls are available for each animation.
+8. Check out the '[Sound Reactive Animations](https://moonmodules.github.io/WLED-Docs/WLEDSR/Reactive-Animations)' page to see what controls are available for each animation.
 
 
 ## Voltage Fluctuation
