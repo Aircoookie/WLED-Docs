@@ -127,16 +127,9 @@ nav:
     - Multiple Segment Effects: moonmodules/wip.md
     - Preset API commands: moonmodules/preset-api-commands.md
   - 2D: 
-    - Introduction: 2D/introduction.md
-    - 2D Settings: 2D/2d-settings.md
-    - 2D Segments: 2D/2d-segments.md
-    - Ledmaps: 2D/wip.md
+    - WIP: 2D/wip.md
   - Sound Reactive: 
-    - Sound Settings: soundreactive/sound-reactive-settings.md
-    - UDP Sound sync: soundreactive/wip.md
-    - Digital Microphone Hookup: soundreactive/digital-microphone-hookup.md
-    - Analog Audio Input Options: soundreactive/wip.md
-    - Using my PC for the Sound: soundreactive/wip.md
+    - WIP: soundreactive/wip.md
   - WLED SR:
     - Basics:
       - Introduction: WLEDSR/Home.md
