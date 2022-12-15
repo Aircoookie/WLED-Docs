@@ -1,7 +1,3 @@
-This page has moved to https://moonmodules.github.io/WLED-Docs/soundreactive/sound-reactive-settings/
-
-Do not edit below!!
-
 ## Introduction
 
 _Disclaimer: The information below is for the [latest release version of SR WLED](https://github.com/atuline/WLED/releases)_. 

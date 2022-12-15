@@ -1,7 +1,3 @@
-This page has moved to https://moonmodules.github.io/WLED-Docs/soundreactive/digital-microphone-hookup/
-
-Do not edit below!!
-
 ## I2S Digital Audio
 I2S digital sound modules utilize the industry-standard 24-bit [I²S interface](https://en.m.wikipedia.org/wiki/I%C2%B2S). The I²S interface allows to connect them directly to an ESP32 (but NOT an ESP8266). The IMNP441, and also the recently tested ICS-43434 (thanks to Serg74) work very well with SR WLED, and they perform much better than any analog device at a comparable price.
 
