@@ -9,6 +9,15 @@ _history of features added to the mdev branch_
 
 Our latest work can be found here: [mdev](https://github.com/MoonModules/WLED/tree/mdev) and is based upon the latest version of 0.14. You can compile it yourself using PlatformIO.ini entry esp32_4MB_max or get a build from [Serg74](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/experimental/Firmware/AudioReactive) (daily) or [Wladi](https://wled-install.github.io) (periodically). 
 
+## Usermod specific help
+December 19, 2022
+
+<img width="229" alt="image" src="https://user-images.githubusercontent.com/91013628/208464982-5bc23d2b-780a-43b1-a05f-167d7cec6655.png">
+
+This goes to https://moonmodules.github.io/WLED-Docs/soundreactive/Sound-Settings/
+
+Also added in Weather usermod and four line display usermod (pages wip)
+
 ## Custom Effects improvements
 November 29, 2022
 
