@@ -118,6 +118,8 @@ nav:
     - Contributors & Credits: about/contributors.md
     - Privacy Policy: about/privacy-policy.md
     - Upcoming Features: about/roadmap.md
+  - Usermods: 
+      - Four Line Display: usermods/four-line-display.md
   - MoonModules: 
     - Fork comparison: moonmodules/fork-comparison.md
     - Merge history: moonmodules/merge-history.md
@@ -127,6 +129,8 @@ nav:
     - Platformio entries: moonmodules/platformio-entries.md
     - Multiple Segment Effects: moonmodules/wip.md
     - Preset API commands: moonmodules/preset-api-commands.md
+    - Usermods:
+      - Weather: moonmodules/weather-usermod.md
   - 2D: 
     - WIP: 2D/wip.md
   - Sound Reactive: 
