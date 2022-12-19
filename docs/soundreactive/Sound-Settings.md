@@ -1,7 +1,11 @@
-## Introduction
+---
+title: Work in Progress
+hide:
+  # - navigation
+  # - toc
+---
 
-_Disclaimer: The information below is for the [latest release version of SR WLED](https://github.com/atuline/WLED/releases)_. 
-_If you use an older release, you will not have all options._
+## Introduction
 
 In order to accommodate a wide range of audio inputs, ambient environments and string lengths, we have added user configurable squelch (noise reduction/suppression) and gain controls on the sound settings page that apply to all sound reactive animations.
 

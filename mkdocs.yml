@@ -130,7 +130,8 @@ nav:
   - 2D: 
     - WIP: 2D/wip.md
   - Sound Reactive: 
-    - WIP: soundreactive/wip.md
+    - Introduction: soundreactive/wip.md
+    - Sound Settings: soundreactive/Sound-Settings.md
   - WLED SR:
     - Basics:
       - Introduction: WLEDSR/Home.md
@@ -139,7 +140,6 @@ nav:
       - Running Sound Reactive WLED: WLEDSR/Running-Sound-Reactive-WLED.md
       - 2D Support: WLEDSR/2D-Support.md
 
-      - Sound Settings: WLEDSR/Sound-Settings.md
       - 2D LED Preferences: WLEDSR/LED-Preferences.md
       - Custom Effects: WLEDSR/WLED-Custom-effects.md
       - UDP Sound Sync: WLEDSR/UDP-Sound-Sync.md
