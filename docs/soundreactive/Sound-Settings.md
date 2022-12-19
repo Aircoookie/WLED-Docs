@@ -9,8 +9,7 @@ hide:
 
 In order to accommodate a wide range of audio inputs, ambient environments and string lengths, we have added user configurable squelch (noise reduction/suppression) and gain controls on the sound settings page that apply to all sound reactive animations.
 
-![WLEDSR-Sound-Setings-start](https://user-images.githubusercontent.com/91616163/202878155-5dce752b-a447-4e1f-9980-90b809d5f47c.jpg)
-
+<img width="368" alt="image" src="https://user-images.githubusercontent.com/91013628/208448097-f0824866-1a9d-4907-8863-6293d2e7e2de.png">
 
 <br/>
 
