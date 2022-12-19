@@ -5,19 +5,23 @@ hide:
   # - toc
 ---
 
+## Introduction
 MoonModules introduces a new naming convention for bin(ary) files which contains configs and presets for used hardware. It also shows the used hardware in the bin name including shield esp flash memory size, audio input.
 
-Naming convention:
+### Naming convention:
+
 * WLEDMM_ (to differentiate between WLEDSR and WLEDAC)
 * Version used. First 3 numbers are WLEDAC numbering, last is subnumbering within fork e.g. 0.14.0.10
 * Hardware config / presets e.g. wemos_shield_esp32_4MB_ICS4343x
 * min or max config, use max where possible. 
 
 Min:
+
 * USERMOD_AUDIOREACTIVE
 * USERMOD_CUSTOMEFFECTS
 
-Max
+Max:
+
 * Min
 * USERMOD_DALLASTEMPERATURE
 * USERMOD_FOUR_LINE_DISPLAY
@@ -26,6 +30,16 @@ Max
 * USERMOD_WEATHER
 * USERMOD_MPU6050_IMU
 * USERMOD_GAMES
+
+Examples:
+
+* WLEDMM_0.14.0.10_wemos_shield_esp32_16MB_max.bin
+* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_ICS4343x_max.bin
+* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_LineIn_max.bin
+* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_SPM1423_max.bin
+* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_max.bin
+
+### Bin awareness
 
 Binaries can be downloaded or compiled yourself. See below.
 
@@ -36,19 +50,11 @@ When uploading binaries in Manual OTA update , MoonModules support bin awareness
 There are currently 3 locations where bins can be downloaded:
 They can be installed using Manual OTA update from within the WLED UI or using a tool like esptool.
 
-#### [Serg](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/experimental/Firmware/AudioReactive)
+#### Serg74
+<https://github.com/srg74/WLED-wemos-shield/tree/master/resources/experimental/Firmware/AudioReactive>
 Updated frequently with dev versions. Go here for latest features
 
 <img width="366" alt="image" src="https://user-images.githubusercontent.com/1737159/207882069-31f2d8cf-6623-4d91-93df-b7f322f5fbbd.png">
-
-e.g.
-* WLEDMM_0.14.0.10_wemos_shield_esp32_16MB_max.bin
-* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_ICS4343x_max.bin
-* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_LineIn_max.bin
-* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_SPM1423_max.bin
-* WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_max.bin
-
-* To do: add more 16MB entries.
 
 #### Wladi
 <https://wled-install.github.io/>
