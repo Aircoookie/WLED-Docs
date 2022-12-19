@@ -18,7 +18,7 @@ hide:
   
 # Welcome to WLED MoonModules
 
-MoonModules/WLED is a fork from Aircoookie/WLED which contains latest merge of v0.14 of WLED with additional features (see [Merge-history](https://github.com/MoonModules/WLED/wiki/Merge-history)). 
+MoonModules/WLED is a fork from Aircoookie/WLED which contains latest merge of v0.14 of WLED with additional features (see [Merge-history](https://moonmodules.github.io/WLED-Docs/moonmodules/merge-history/). 
 
 This fork is created by members of the Atuline/WLED team to make development against v0.14 possible while still preserving Atuline/WLED v0.13 as a stable and supported version. The Atuline/WLED fork is also called WLED SR (Sound Reactive).
 
