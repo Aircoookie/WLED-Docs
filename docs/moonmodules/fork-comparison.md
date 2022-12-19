@@ -16,9 +16,8 @@ Audio reactive | Core | Usermod | Usermod
 Microphone Profiles | No | Yes | No | 
 Audio dynamics limiter | No | Yes | Yes
 High Definition audio analysis, 32 channel GEQ | No |  Yes (WIP) for ESP32 and ESP32-S3 | No
-Custom Effects | Yes | Yes as a usermod! | No
-Effect ID's | 0.13 compatible | 0.13 compatible (recommended!) | Changed, old SR presets will not work.
-Expand 1D effects | No | Yes (+ Circles and Block) | Yes
+Custom Effects | Yes | Yes | No
+Expand 1D effects | No | Yes (+ JMap, Circle and Block) | Yes
 Extended hw info | basic | Yes | No
 JSON Mapping on 1D effects | No | Yes | No
 Games usermod (3D to 2D, gyro) | No | Yes (WIP) | No
@@ -28,5 +27,6 @@ classic ESP32 | Yes | Yes | Yes
 ESP32-S3 | No | Yes | Experimental
 ESP32-S2 and ESP32-C3 | No | Experimental | Experimental
 ESP8266 | No | Yes but no Audio Reactive | Yes but no Audio Reactive
-Ledmaps 2D | Yes | Yes | No
-
+Bin Awareness | Yes | Yes | No
+Audioreactive palettes | No | Yes | No
+Extended mic settings in platformIO | No | Yes | No
