@@ -131,6 +131,7 @@ nav:
     - Preset API commands: moonmodules/preset-api-commands.md
     - Usermods:
       - Weather: moonmodules/weather-usermod.md
+    - Contribute to docs: moonmodules/contribute-pages.md
   - 2D: 
     - WIP: 2D/wip.md
   - Sound Reactive: 
