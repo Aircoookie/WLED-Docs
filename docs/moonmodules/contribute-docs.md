@@ -57,4 +57,4 @@ kno.wled.ge not supported help is in maintenance mode and can be found here:
 <https://github.com/Atuline/WLED/wiki>
 
 ### WLED AC
-Above can also be done on https://github.com/Aircoookie/WLED-Docs
+Above can also be done on <https://github.com/Aircoookie/WLED-Docs>
