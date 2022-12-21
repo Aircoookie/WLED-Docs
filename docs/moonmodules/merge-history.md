@@ -9,12 +9,17 @@ _history of features added to the mdev branch_
 
 Our latest work can be found here: [mdev](https://github.com/MoonModules/WLED/tree/mdev) and is based upon the latest version of 0.14. You can compile it yourself using PlatformIO.ini entry esp32_4MB_max or get a build from [Serg74](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/experimental/Firmware/AudioReactive) (daily) or [Wladi](https://wled-install.github.io) (periodically). 
 
+## mm.kno.wled.ge
+December 21, 2022
+
+[MoonModules pages](https://github.com/MoonModules/WLED-Docs) (wich is a fork of upstream pages) is now linked to [mm.kno.wled.ge](https://mm.kno.wled.ge) and is integrated in MoonModules WLED.
+
 ## Usermod specific help
 December 19, 2022
 
-<img width="229" alt="image" src="https://user-images.githubusercontent.com/91013628/208464982-5bc23d2b-780a-43b1-a05f-167d7cec6655.png">
+<img width="282" alt="image" src="https://user-images.githubusercontent.com/91013628/208895794-27d9920e-2316-4c98-b21a-3319954985ce.png">
 
-This goes to https://moonmodules.github.io/WLED-Docs/soundreactive/Sound-Settings/
+This goes to https://mm.kno.wled.ge/soundreactive/Sound-Settings/
 
 Also added in Weather usermod and four line display usermod (pages wip)
 
