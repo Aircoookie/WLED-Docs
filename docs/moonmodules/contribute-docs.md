@@ -19,6 +19,7 @@ You can contribute to the contents on this site as follows:
 ### Edit using github
 
 * Clone your fork (https://github.com/yourfork/WLED-Docs.git)
+<img width="340" alt="image" src="https://user-images.githubusercontent.com/91013628/208883588-b5178d04-275e-4b0e-9405-48e95f9462b4.png">
 * Make edits in your fork (https://github.com/yourfork/WLED-Docs/)
 * Commit
 
@@ -27,7 +28,8 @@ You can contribute to the contents on this site as follows:
 Go to https://yourfork.github.io/WLED-Docs
 
 * Navigate to the page you want to edit
-* Press edit button
+* Press edit icon
+<img width="58" alt="image" src="https://user-images.githubusercontent.com/91013628/208883428-325acace-7d36-4454-9894-259089ec5473.png">
 * Commit
 
 ## Workflow after commit
@@ -35,6 +37,8 @@ Go to https://yourfork.github.io/WLED-Docs
 If a commit is done a workflow will be started to create the pages.
 
 Progress can be seen in https://github.com/yourfork/WLED-Docs/actions
+
+<img width="330" alt="image" src="https://user-images.githubusercontent.com/91013628/208883889-ce1535a4-d646-42ee-9ec0-c820a0b0ff91.png">
 
 This will take some time (about 30s)
 
