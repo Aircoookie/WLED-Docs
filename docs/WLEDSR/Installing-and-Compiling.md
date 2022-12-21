@@ -1,6 +1,6 @@
 
 
-***IMPORTANT:*** _Before attempting to compile this fork of WLED, make sure you can compile the [original WLED](https://github.com/Aircoookie/WLED) - instructions are [here](https://kno.wled.ge/advanced/compiling-wled/). 
+***IMPORTANT:*** _Before attempting to compile this fork of WLED, make sure you can compile the [original WLED](https://github.com/Aircoookie/WLED) - instructions are [here](https://mm.kno.wled.ge/advanced/compiling-wled/). 
 If you are unable to compile WLED, please consider flashing your device with [binaries](https://github.com/atuline/WLED/releases/latest) instead._
 
 If you managed to compile original WLED, test your new skills and [compile the soundreactive fork of WLED](https://moonmodules.github.io/WLED-Docs/WLEDSR/Installing-and-Compiling#getting-started).
@@ -75,7 +75,7 @@ You may find old outdated binaries, or binaries that might not work on generic E
 
 ### Getting started
 
-<b>&rAarr; first read https://kno.wled.ge/advanced/compiling-wled/ </b> <br/>
+<b>&rAarr; first read https://mm.kno.wled.ge/advanced/compiling-wled/ </b> <br/>
   &rarr; use source code from https://github.com/atuline/WLED/tree/master<br/>
   &rarr; start with one of the sound reactive compile environments, like  [`env:soundReactive_esp32dev`](https://github.com/atuline/WLED/blob/3752b78d3b845f722ba043d92007cc79aa811561/platformio.ini#L444)<br/>
   &rarr; read [`wled00/wled.h`](https://github.com/atuline/WLED/blob/master/wled00/wled.h#L16), add your own settings to [`wled00/my_config.h`](https://github.com/atuline/WLED/blob/master/wled00/my_config_sample.h#L4) <br/>

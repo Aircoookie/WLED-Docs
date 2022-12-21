@@ -8,7 +8,7 @@ hide:
 By using the WLED embedded system code, the WLED iOS mobile application, the WLED Android mobile application, web client, or associated Services, no personally identifiable data is collected, transmitted and/or stored on external servers.
 No data is processed in any way not absolutely required for the operation of the Service.
 
-This https://kno.wled.ge page is hosted using GitHub Pages. While the author of this page does not collect any personally identifiable data, the service provider GitHub "may collect User Personal Information from visitors to [the] GitHub Pages website, including logs of visitor IP addresses, to comply with legal obligations, and to maintain the security and integrity of the Website and the Service." (https://docs.github.com/en/github/site-policy/github-privacy-statement#github-pages)  
+This https://mm.kno.wled.ge page is hosted using GitHub Pages. While the author of this page does not collect any personally identifiable data, the service provider GitHub "may collect User Personal Information from visitors to [the] GitHub Pages website, including logs of visitor IP addresses, to comply with legal obligations, and to maintain the security and integrity of the Website and the Service." (https://docs.github.com/en/github/site-policy/github-privacy-statement#github-pages)  
 This is outside the influence of the author.
 
 ### Overview of collected data

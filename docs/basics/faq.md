@@ -186,7 +186,7 @@ If you have more and can power them, go to LED settings and increase the LED cou
 Please also enter the milliamp rating of your 5v power supply for optimal brightness in the field below it.
 Do not increase the mA number if you power LEDs directly from the 5V pin of the ESP!
 
-See [here](https://kno.wled.ge/features/multi-strip/) for maximum recommended LED counts.
+See [here](https://mm.kno.wled.ge/features/multi-strip/) for maximum recommended LED counts.
 
 #### Reason 2
 

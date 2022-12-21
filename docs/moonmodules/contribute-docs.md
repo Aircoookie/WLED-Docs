@@ -1,12 +1,12 @@
 ---
-title: Contribute to WLED pages
+title: Contribute to WLED docs
 hide:
   # - navigation
   # - toc
 ---
 
 ## Introduction
-You can contribute to the documentation on this site as follows:
+You can contribute to the contents on this site as follows:
 
 * Create a fork
 * Edit in your fork (Commit -> workflow -> new pages)
