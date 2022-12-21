@@ -19,7 +19,7 @@ December 19, 2022
 
 <img width="282" alt="image" src="https://user-images.githubusercontent.com/91013628/208895794-27d9920e-2316-4c98-b21a-3319954985ce.png">
 
-This goes to https://mm.kno.wled.ge/soundreactive/Sound-Settings/
+This goes to <https://mm.kno.wled.ge/soundreactive/Sound-Settings/>
 
 Also added in Weather usermod and four line display usermod (pages wip)
 
