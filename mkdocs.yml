@@ -119,7 +119,7 @@ nav:
     - Privacy Policy: about/privacy-policy.md
     - Upcoming Features: about/roadmap.md
   - Usermods: 
-      - Four Line Display: usermods/four-line-display.md
+      - Four Line Display: usermods/4LineDisplay.md
   - MoonModules: 
     - Fork comparison: moonmodules/fork-comparison.md
     - Merge history: moonmodules/merge-history.md
