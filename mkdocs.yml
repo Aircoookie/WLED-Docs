@@ -130,7 +130,7 @@ nav:
     - Multiple Segment Effects: moonmodules/wip.md
     - Preset API commands: moonmodules/preset-api-commands.md
     - Usermods:
-      - Weather: moonmodules/weather-usermod.md
+      - Weather: moonmodules/Weather.md
     - Contribute to docs: moonmodules/contribute-docs.md
   - 2D: 
     - WIP: 2D/wip.md
