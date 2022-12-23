@@ -22,6 +22,8 @@ If your `ledmap.json` file is not working, check for white-spaces where they sho
 
 Multiple maps are supported in the latest versions by using `ledmapx.json` where x is a number. Maps can be selected in a preset using `{"ledmap":x,...`.
 
+Use -1 in the map for gaps/blank/nul LEDs.
+
 ### Examples 
 In the below example (formatted multiple ways), we remap a strip of four LEDs from a physical order of 0 1 2 3 into a new order of 0 2 1 3.
 

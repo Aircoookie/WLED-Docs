@@ -22,19 +22,19 @@ Sorting: 5v data only, 5v Data + Clock, 12v data only, non-addressable analog PW
 
 | Type | Voltage | Comments |
 |---|---|---|
-SK6812 | 5v | RGBW
+SK6812 | 5v/12v | RGBW
 WS2811 | 5v | usually found in IP68 sealed 12mm pixel strings
 WS2812B | 5v |
-WS2813 | 5v |
-APA102 | 5v | needs Clock/Data
-LPD8806 | 5v | needs Clock/Data
-WS2801 | 5v | needs Clock/Data
-SK9822 | 5v | needs Clock/Data
+WS2813 | 5v | has a backup data line
+APA102 | 5v | using 2 data pins, Clock and Data
+LPD8806 | 5v | using 2 data pins, Clock and Data
+WS2801 | 5v | using 2 data pins, Clock and Data
+SK9822 | 5v | using 2 data pins, Clock and Data
 GS8208 | 12v |
 TM1814 | 12v | RGBW
 WS2811 | 12v | usually 3-LED segments, has data-line resistor
 WS2815 | 12v | has a backup data line
-Analog PWM | Usually 12v/24v | Needs additional hardware (MOSFETs). Needs 3-4 pins per separately controllable strip
+Analog PWM | Usually 12v/24v | Needs additional circuits (MOSFETs). Needs 3 or 4 pins for 1 LED strip
 
 ## Controllers with WLED pre-installed
 
@@ -45,11 +45,18 @@ Analog PWM | Usually 12v/24v | Needs additional hardware (MOSFETs). Needs 3-4 pi
 |---|---|
 [ABC! WLED Controller / ESP8266](https://shop.myhome-control.de/ABC-WLED-Controller-V31-ESP8266/HW10002) | Commercial controller for 5V LED strips. Based on ESP8266 uC. Two outputs. Ready to use. Additional Relay&Fuse board available. (German shop & shipping only within Germany). A similar one is available at [WLED.SHOP](https://wled.shop/produkt/wladis-wled-controller-v31/)
 [ABC! WLED Controller / ESP32](https://shop.myhome-control.de/ABC-WLED-Controller-V41-ESP32/HW10003.1) | Commercial controller for 5V LED strips. Based on ESP32 uC. Two outputs. Option for digital microphone / sound reactive. Ready to use. Additional Relay&Fuse board available. (German shop & shipping only within Germany). A similar one is available at [WLED.SHOP](https://wled.shop/produkt/wladis-wled-controller-v40-esp32/).
-[Athom Light Strip Controller](https://www.aliexpress.com/item/1005002198527735.html) | Simple controller with enclosure for reliaby driving 3 pin 5V LEDs. Uses 2M ESP8266.
+[ABC! WLED Shield, all-purpose, for ESP8266/ESP32](https://shop.myhome-control.de/ABC-WLED-Basis-Board-fuer-5V-und-12V-LED-universell/HW10008) | Commercial WLED Shield for 5V/12V LED strips. To be used with ESP8266 or ESP32 in D1 mini format. Two outputs. Option for digital microphone / sound reactive (with ESP32). Automatic 5V/12V recognition (no jumper/switch etc. required). Enclosure is available too. German shop & shipping currently only within Germany.
+[Athom Light Strip Controller](https://www.aliexpress.com/item/1005002198527735.html) | Simple controller with enclosure for reliably driving 3 pin 5V LEDs. Uses 2M ESP8266.
+[Athom High Power Addressable LED Strip Controller](https://www.athom.tech/blank-1/wled-high-power-led-strip-controller) | Higher power options than the above system. Supports optional clock output.
+[Athom LS8P ESP32 Music Controller](https://www.athom.tech/blank-1/wled-esp32-music-addressable-led-strip-controller) | ESP32 based controller with dual output, microphone and IR. Comes with WLED preinstalled
+[Athom RGBW Light Strip Controller](https://www.athom.tech/blank-1/wled-rgbw-light-strip-controller) | Has outputs for individual color channels.
 [Cadsbi Motion Smart](https://www.cadsbi-shop.de/shop/led-beleuchtungscontroller/cadsbi-motion-smart/) | Ready to use solution with 3 output ports, an external antenna, in a high quality metal enclosure
+[ESP8266 Pixel Controller](https://www.maltepoeggel.de/?site=pixelcontroller) | DIY board for 5V/12V LED strips with TTL or RS485 output using a Wemos D1 mini, integrated fuse, pluggable terminal block, 3D printed module case
 [ESPthings.io ET-AL01](https://www.espthings.io/AL01) | DIY board for 5 Analog channels and/or up to 5 Digital LED channels (or a combination of the latter as required), Integrated level shifter, 5v/12/24v compatibility, 4x pull-up/down GPIO, serial interface and power distribution terminals. Can be used with Wemos D1-style ESP8266 or ESP32 boards.
+[ESP32 WLED pico board](https://www.tindie.com/products/28276/) | ESP32 WLED pico board,super small form factor, ready to buy on [Tindie](https://www.tindie.com/products/28276/). Integrated level shifter, exposed pins for extending functionality , on board I2S microphone, [Firmware is here](https://github.com/srg74/WLED-ESP32-pico/tree/main/Firmware). Project page is [here](https://github.com/srg74/WLED-ESP32-pico)
 [IOT4WLED](https://iot4.eu/product/iot4wled/) | Ready to use hardware for WLED!
-[Laterna](https://github.com/Planet-Laterna/Laterna) | Based on an ESP32 for digital LED and RBG/RGBW LED strops with support for 5V, 12V and 24V LED strips. (Up to 4 channels)
+[Laterna](https://github.com/Planet-Laterna/Laterna) | Based on an ESP32 for digital LED and RBG/RGBW LED strips with support for 5V, 12V and 24V LED strips. (Up to 4 channels)
+[Laterna Mini V3](https://github.com/Planet-Laterna/Laterna-mini-V3) | Small ESP32 based controller with optional digital microphone integrated for digital 5V LED strips.
 [Laterna Stick](https://github.com/Planet-Laterna/Laterna_Stick) | USB Stick like ESP32 based controller for digital 5V LED strips.
 [LedBox V2](https://stanleyprojects.com/projects/ledbox_v2/) | LedBox V2 by StanleyProjects is a fully contained, sound reactive, ESP32 based module for controlling 5-12V addressable LED strips (WS2812, SK6812, etc.), supporting both 3-(VDD,DAT,GND) and 4-(VDD,DAT,CLK,GND) pin configuration. It includes a digital MEMS microphone, button and IR control, and a safety resettable fuse, all in a compact 3D printable case. The board comes all setup, flashed with <a href=https://github.com/atuline/WLED>sound reactive WLED fork</a>, and can be purchased [here](https://www.tindie.com/products/stanleyprojects/ledbox-v2/).
 [Luminxa v2.2.2](https://luminxa.com/product/luminxa-2-2-2/) | ESP32 | ESP32 Based board with 12 WS2812 LEDs Onboard (6 on each side) + Gyro Sensor (Business project)
@@ -161,3 +168,4 @@ Sorting: Sensors, Displays, Actuators
 [SSD1306](https://www.aliexpress.com/wholesale?catId=0&SearchText=SSD1306) | I2C & SPI display, can be used with _4 Line Display_ usermod.
 [5V relay](https://www.aliexpress.com/wholesale?catId=0&SearchText=5v+relay+module) | Relay module. Some will require 5V to trigger so you will need level-shifted output (similar as for LEDs) for proper functionality or a circuit with transistor or MOSFET.
 DS18B20 | Recommended temperature sensor for use with WLED. Compatible with the [Temperature usermod](https://github.com/Aircoookie/WLED/tree/master/usermods/Temperature)
+[Display shield](https://www.tindie.com/products/27112/) | Various configurations. Compatible with the [ESP32 WLED dev board](https://www.tindie.com/products/27056/) also can be used with ESP32 mini dev boards.

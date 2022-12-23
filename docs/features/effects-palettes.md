@@ -55,8 +55,8 @@ and the colors ![primary](https://raw.githubusercontent.com/scottrbailey/WLED-Ut
 | 37 | Running 2 | Pattern of n LEDs primary and n LEDs secondary moves along the strip <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_037.gif) | Amount of LEDs lit/unlit
 | 38 | Aurora | Simulation of the Aurora Borealis <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_038.gif) | Number of waves 
 | 39 | Stream | Flush bands random hues along the string <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_039.gif) | Width of each band (lower is wider)
-| 40 | Scanner | Dot moves between ends, leaving behing a fading trail <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_040.gif) | Fade rate
-| 41 | Lighthouse | Dot moves from start to end, leaving behing a fading trail <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_041.gif) | Fade rate
+| 40 | Scanner | Dot moves between ends, leaving behind a fading trail <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_040.gif) | Fade rate
+| 41 | Lighthouse | Dot moves from start to end, leaving behind a fading trail <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_041.gif) | Fade rate
 | 42 | Fireworks | Random color blobs light up, then fade again <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_042.gif) | Amount of fireworks
 | 43 | Rain | Like Fireworks, but the blobs move <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_043.gif) | Amout of Rain
 | 44 | Tetrix | Falling blocks stack <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_044.gif) | -
@@ -132,7 +132,7 @@ and the colors ![primary](https://raw.githubusercontent.com/scottrbailey/WLED-Ut
 | 114 | Candy Cane | Running 2 in Red & White <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_114.gif) | Amount of LEDs lit/unlit
 | 115 | Blends | Blends random colors across palette <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_115.gif) | Blend speed
 | 116 | TV Simulator | TV light spill simulation <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_116.gif) | - 
-| 117 | Dynamic Smooth | Link Dynamic but with smooth palette blends <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_117.gif) | 0-127: Set single LED 128-255: Set all LEDs
+| 117 | Dynamic Smooth | Like Dynamic, but with smooth palette blends <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_117.gif) | 0-127: Set single LED 128-255: Set all LEDs
 
 
 ### Palettes
@@ -173,7 +173,7 @@ and the colors ![primary](https://raw.githubusercontent.com/scottrbailey/WLED-Ut
 | 31 | Jul | Pastel green and red <br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_31.gif)
 | 32 | Grintage | Yellow fading out<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_32.gif)
 | 33 | Rewhi | Bright orange on desaturated purple<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_33.gif)
-| 34 | Tertiary | Red, green and blue gradien<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_34.gif)
+| 34 | Tertiary | Red, green and blue gradient<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_34.gif)
 | 35 | Fire | White, yellow and fading red gradient<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_35.gif)
 | 36 | Icefire | Same as Fire, but with blue colors<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_36.gif)
 | 37 | Cyane | Desaturated pastel colors<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_37.gif)
