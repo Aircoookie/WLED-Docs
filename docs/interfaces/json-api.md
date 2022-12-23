@@ -30,6 +30,7 @@ You may also obtain those objects individually using the URLs `/json/state` `/js
 
 Sending a POST request to `/json` or `/json/state` with (parts of) the state object will update the respective values.
 Example: `{"on":true,"bri":255}` sets the brightness to maximum. `{"seg":[{"col":[[0,255,200]]}]}` sets the color of the first segment to teal.
+`{"seg":[{"id":X,"on":"t"}]}` and replacing X with the desired segment ID will toggle on or off that segment.
 
 !!! tldr "CURL example"
     This will toggle on and off and return the new state (v0.13+):
@@ -258,9 +259,6 @@ This feature is available in build 200829 and above.
 !!! info "Brightness interaction"
     For your colors to apply correctly, make sure the desired brightness is set beforehand. Turning on the LEDs from an off state and setting individual LEDs in the same JSON request will _not_ work!
 
-#### Turning Individual Segments On/Off
-Use: `{"seg":[{"id":X,"on":"t"}]}` and replace X with your desired segment.
-
 #### Playlists
 
 (Available since 0.11.0)
@@ -348,6 +346,104 @@ If your code relies on absolute Kelvin values, a reasonable estimate for the war
 - A bus supporting CCT is configured and `Calculate CCT from RGB` is _not_ enabled
 
 CCT support is indicated by `info.leds.cct` being `true`, in which case you can regard the instance as a CCT light and e.g. display a color temperature control.
+
+#### Effect metadata
+
+!!! tip "Why effect metadata?"
+    Prior to 0.14, user interfaces showed Speed and Intensity slider, palette controls, and all three color slots regardless of the effect selected.
+    This may cause confusion to the user because controls are displayed that have no immediate effect in the current configuration.
+    Effect metadata allows you to dynamically hide certain controls, so that the user only sees controls actually utilized by the selected effect mode.
+
+Starting with WLED 0.14, effect metadata is available under the `/json/fxdata` URL.  
+This returns an array of strings with `info.fxcount` entries.
+The string at a given index corresponds to the metadata of the effect with the same ID as that index.
+Metadata is stored in a memory-optimized string format, for example the Aurora effect has the metadata `!,!;;!;1;sx=24,pal=50`.
+
+The metadata string consists of up to five sections, separated by semicolons:
+`<Effect parameters>;<Colors>;<Palette>;<Flags>;<Defaults>`
+
+##### Effect parameters
+
+The first section specifies the number and labels of effect parameters (e.g. speed, intensity).
+Up to 5 sliders and 3 checkboxes are supported (`sx`,`ix`,`c1`,`c2`,`c3`,`o1`,`o2`,`o3` parameters in the `seg` object).
+Slider/checkbox labels are comma separated.
+An empty or missing label disables this control.
+`!` specifies the default label is used:
+
+| Parameter | Default tooltip label
+| --- | --- |
+sx | Effect speed
+ix | Effect intensity
+c1 | Custom 1
+c2 | Custom 2
+c3 | Custom 3
+o1 | Option 1
+o2 | Option 2
+o3 | Option 3
+
+The fallback value if this section is missing is two sliders, Effect speed and Effect intensity.
+
+Examples:  
+
+| Parameter string | Displayed controls
+| --- | --- |
+`<empty>` | No effect parameters
+! | 1 slider: Effect speed
+!,! | 2 sliders: Effect speed + Effect intensity
+!,Phase | 2 sliders: Effect speed + Phase
+,Saturation,,,,Invert | 1 slider (sets `ix` parameter) and 1 checkbox: Saturation + Invert
+,,,,,Random colors | 1 checkbox: Random colors
+
+##### Colors
+
+Up to 3 colors can be used. Please note that only the first two characters of the label are visible in the WLED UI.  
+`!` specifies the default label is used. The default labels for the color slots are `Fx`, `Bg`, and `Cs`.
+
+The fallback value if this section is missing is 3 colors: `Fx` + `Bg` + `Cs`.
+
+Examples:  
+
+| Colors string | Displayed controls
+| --- | --- |
+`<empty>` | No color controls
+! | 1 color: Fx
+,! | 1 color: Bg
+!,! | 2 colors: Fx + Bg
+1,2,3 | 3 colors: 1 + 2 + 3
+
+##### Palette
+
+If empty, the effect does not use palettes. If `!`, palette selection is enabled.
+
+The fallback value if this section is missing is palette selection enabled.
+
+##### Flags
+
+Flags allow filtering for effects with certain characteristics.
+They are a single character each and not comma-separated.
+Currently, the following flags are specified:
+
+| Flag | Effect characteristic
+| --- | --- |
+0 | Effect works well on a single LED. If flag 0 is present, flags 1/2/3 are omitted. (unused)
+1 | Effect is optimized for use on 1D LED strips.
+2 | Effect requires a 2D matrix setup (unless flag 1 is also present)
+3 | Effect requires a 3D cube (unless flags 1 and/or 2 are also present) (unused)
+v | Effect is audio reactive, reacts to amplitude/volume.
+f | Effect is audio reactive, reacts to audio frequency distribution.
+
+For example, a Flag string of `2v` denotes a volume reactive effect that is to be used on 2D matrices.
+
+The fallback value if this section is missing is `1`, i.e. a 1D optimized effect.
+
+##### Defaults
+
+Defaults are values for effect parameters that work particularly well on that effect.
+They are set automatically when the effect is loaded.
+To specify defaults, use the standard segment parameter name (e.g. `ix`) followed by an `=` and the default value.
+For example, `sx=24,pal=50` sets the effect speed to 24 (slow) and the palette to ID 50 (Aurora).
+
+If no default is specified for a given parameter, it retains the current value.
 
 ### Sensors
 
