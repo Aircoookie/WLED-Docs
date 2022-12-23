@@ -9,6 +9,13 @@ _history of features added to the mdev branch_
 
 Our latest work can be found here: [mdev](https://github.com/MoonModules/WLED/tree/mdev) and is based upon the latest version of 0.14. You can compile it yourself using PlatformIO.ini entry esp32_4MB_max or get a build from [Serg74](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/experimental/Firmware/AudioReactive) (daily) or [Wladi](https://wled-install.github.io) (periodically). 
 
+## Drop downs for pin variables
+December 23, 2022
+
+<img width="397" alt="image" src="https://user-images.githubusercontent.com/1737159/209367375-48841ac7-abc5-4f3f-ab43-16d7cdfb3a06.png">
+
+Currently implemented for AudioReactive and 4LineDisplay. Globals will follow
+
 ## mm.kno.wled.ge
 December 21, 2022
 
