@@ -30,6 +30,11 @@ This goes to <https://mm.kno.wled.ge/soundreactive/Sound-Settings/>
 
 Also added in Weather usermod and four line display usermod (pages wip)
 
+## Ledmap2D
+December 5, 2022
+In 0.14 ledmaps are only supported for 1D.
+This fix makes it work for 2D in WLED MM.
+
 ## Custom Effects improvements
 November 29, 2022
 
