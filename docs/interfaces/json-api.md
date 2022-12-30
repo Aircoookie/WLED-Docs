@@ -256,6 +256,8 @@ Keep in mind that the LED indices are segment-based, so LED 0 is the first LED o
 Segment features, including Grouping, Spacing, Mirroring and Reverse are functional.
 This feature is available in build 200829 and above.
 
+Matrices are handled as a non-serpentine layout.
+
 !!! info "Brightness interaction"
     For your colors to apply correctly, make sure the desired brightness is set beforehand. Turning on the LEDs from an off state and setting individual LEDs in the same JSON request will _not_ work!
 
