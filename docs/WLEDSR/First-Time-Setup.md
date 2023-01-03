@@ -1,7 +1,7 @@
 ## Introduction
 The sound reactive version of WLED provides all of the functionality of WLED with a few caveats:
 
-* #### Some of the default services supported by WLED such as IR, Alexa and Blynk are disabled by default. To enable them, update the definitions in wled.h and re-compile.
+* Some of the default services supported by WLED such as IR, Alexa and Blynk are disabled by default. To enable them, update the definitions in wled.h and re-compile.
 * Spurious noise and spikes have been problematic during the development of SR WLED. See 'Noise and Spikes' below for further discussion on this topic.
 * We recommend using SR WLED in STA mode, instead of the standalone AP mode (aka WLED-AP). It generates more noise.
 * If you have problems with the LED's, make sure you can successfully run the latest version of standard WLED.
