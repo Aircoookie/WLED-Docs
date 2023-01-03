@@ -11,7 +11,7 @@ MoonModules introduces a new naming convention for bin(ary) files which contains
 ### Naming convention:
 
 * WLEDMM_ (to differentiate between WLEDSR and WLEDAC)
-* Version used. First 3 numbers are WLEDAC numbering, last is subnumbering within fork e.g. 0.14.0.10
+* Version used. First 3 numbers are WLEDAC numbering, last is subnumbering within fork e.g. 0.14.0.11
 * Hardware config / presets e.g. wemos_shield_esp32_4MB_ICS4343x
 * min or max config, use max where possible. 
 
