@@ -120,6 +120,11 @@ nav:
     - Upcoming Features: about/roadmap.md
   - Usermods: 
       - Four Line Display: usermods/4LineDisplay.md
+      - Autosave: usermods/Autosave.md
+      - Battery: usermods/Battery.md
+      - BH1750: usermods/BH1750.md
+      - Rotary Encoder: usermods/Rotary-Encoder.md
+      - Animated staircase: usermods/staircase.md
   - MoonModules: 
     - Fork comparison: moonmodules/fork-comparison.md
     - Merge history: moonmodules/merge-history.md

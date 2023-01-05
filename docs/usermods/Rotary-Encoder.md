@@ -1,11 +1,11 @@
 ---
-title: Four line display
+title: Work in Progress
 hide:
   # - navigation
   # - toc
 ---
 
-## I2C 4 Line Display Usermod ALT
+## Rotary Encoder UI Usermod ALT
 
 Thank you to the authors of the original version of these usermods. It would not have been possible without them!
 "usermod_v2_four_line_display"
@@ -16,7 +16,7 @@ The display usermod UI has been completely changed.
 
 
 The changes made to the RotaryEncoder usermod were made to support the new UI in the display usermod. 
-Without the display it, functions identical to the original.
+Without the display, it functions identical to the original.
 The original "usermod_v2_auto_save" will not work with the display just yet.
 
 Press the encoder to cycle through the options:
@@ -29,9 +29,9 @@ Press the encoder to cycle through the options:
     *Saturation (only if display is used)
 
 Press and hold the encoder to display Network Info
-    if AP is active, it will display AP, SSID and password
+    if AP is active, it will display the AP, SSID and Password
 
-Also shows if the timer is enabled
+Also shows if the timer is enabled.
 
 [See the pair of usermods in action](https://www.youtube.com/watch?v=ulZnBt9z3TI)
 
@@ -52,8 +52,6 @@ Note: the Four Line Display usermod requires the libraries `U8g2` and `Wire`.
 * First public release
 
 ## Fork specific info
-
-### WLED AC
 
 ### WLED SR
 
