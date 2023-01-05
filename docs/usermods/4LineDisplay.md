@@ -1,5 +1,5 @@
 ---
-title: Four line display
+title: Usermod Four line display
 hide:
   # - navigation
   # - toc

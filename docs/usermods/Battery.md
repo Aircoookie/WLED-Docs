@@ -1,5 +1,5 @@
 ---
-title: Battery
+title: Usermod Battery
 hide:
   # - navigation
   # - toc

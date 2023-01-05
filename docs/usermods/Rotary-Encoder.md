@@ -1,5 +1,5 @@
 ---
-title: Work in Progress
+title: Usermod Rotary Encoder
 hide:
   # - navigation
   # - toc

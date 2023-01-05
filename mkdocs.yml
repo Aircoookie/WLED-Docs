@@ -125,6 +125,7 @@ nav:
       - BH1750: usermods/BH1750.md
       - Rotary Encoder: usermods/Rotary-Encoder.md
       - Animated staircase: usermods/staircase.md
+      - Temperature: usermods/Temperature.md
   - MoonModules: 
     - Fork comparison: moonmodules/fork-comparison.md
     - Merge history: moonmodules/merge-history.md
