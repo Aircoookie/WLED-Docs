@@ -126,6 +126,7 @@ nav:
       - Rotary Encoder: usermods/Rotary-Encoder.md
       - Animated staircase: usermods/staircase.md
       - Temperature: usermods/Temperature.md
+      - Global pins: usermods/globalpins.md
   - MoonModules: 
     - Fork comparison: moonmodules/fork-comparison.md
     - Merge history: moonmodules/merge-history.md

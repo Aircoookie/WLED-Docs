@@ -5,7 +5,7 @@ hide:
   # - toc
 ---
 
-# #Auto Save
+## Auto Save
 
 v2 Usermod to automatically save settings
 to preset number AUTOSAVE_PRESET_NUM after a change to any of:
