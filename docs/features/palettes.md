@@ -5,6 +5,9 @@ hide:
   # - toc
 ---
 
+!!! info "Version Info"
+    Beginning in 0.14 up to 10 [Custom Palletes](#custom-palettes) can be uploaded.
+
 | PaletteID | Name | Description
 | ---: | --- | ---
 | 0 | Default | The palette is automatically selected depending on the effect. For most effects, this is the primary color<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_00.gif)
@@ -78,3 +81,24 @@ hide:
 | 68 | Red Shift | Vibrant yellow to blue gradient with magenta, purple and red<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_68.gif) 
 | 69 | Red Tide | Waves of yellow, orange and red<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_69.gif)
 | 70 | Candy2 | Faded gradient of yellow, salmon and blue<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_70.gif)
+
+### Custom Palettes
+
+As of 0.14, up to 10 custom palettes can be uploaded by the user in JSON files named `palette0.json` through `palette9.json`
+The format closely resembles that of the palettes defined in `palettes.h`. An example of the content would be:
+```
+{"palette":[ 
+//pos,   R,   G,   B
+    0, 255,  33,   4, 
+   43, 255,  68,  25,
+   86, 255,   7,  25,
+  127, 255,  82, 103,
+  170, 255, 255, 242,
+  209,  42, 255, 22,
+  255,  87, 255, 65]}
+```
+The position is the 0-255 value for where each color should be placed.
+
+Once a palette[0-9].json file has been created, it can be uploaded to the controller using the `/edit` page (http://[controller-ip]/edit).
+The controller must be rebooted (`/win&RB`) before the newly uploaded palettes will be available. 
+After reboot, the custom palette(s) will be named `~ Custom [0-9] ~` in the Palettes section of the user interface. 
