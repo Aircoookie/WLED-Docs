@@ -10,8 +10,14 @@
         <meta name="author" content="Christian Schwinne (Aircoookie)">
       
       
+      
+        <link rel="prev" href="../compiling-wled/">
+      
+      
+        <link rel="next" href="../esp32-recovery/">
+      
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -130,8 +135,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="wled" data-md-color-primary="cyan" data-md-color-accent="orange"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Light Mode" for="__palette_2" hidden>
@@ -139,8 +142,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="orange"  aria-label="Dark Mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -1357,10 +1358,9 @@
                 
                   
 
-  <a href="https://github.com/Aircoookie/WLED-Docs/edit/main/docs/advanced/custom-features.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
   <h1>Custom Features</h1>
@@ -1421,31 +1421,31 @@ However, for basic color and brightness changes, these are the most important:</
 <p>After updating the color, you must call the <code>colorUpdated(int)</code> method. If you want to send a notification with the new color to other ESPs, use <code>colorUpdated(NOTIFIER_CALL_MODE_DIRECT_CHANGE)</code>, otherwise <code>colorUpdated(NOTIFIER_CALL_MODE_NO_NOTIFY)</code>.</p>
 <h3 id="timing">Timing</h3>
 <p>If you'd just like a simple modification that requires timing (like sending a request every 2 seconds), please <strong>never</strong> use the <code>delay()</code> function in your <code>userLoop()</code>! It will block everything else and WLED will become unresponsive and effects won't work! Instead, try this instead:
-<div class="highlight"><pre><span></span><code><span class="kt">long</span><span class="w"> </span><span class="n">lastTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kt">long</span><span class="w"> </span><span class="n">lastTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">delayMs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2000</span><span class="p">;</span><span class="w"> </span><span class="c1">//we want to do something every 2 seconds</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">userLoop</span><span class="p">()</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">millis</span><span class="p">()</span><span class="o">-</span><span class="n">lastTime</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">delayMs</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">lastTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">millis</span><span class="p">();</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">userLoop</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">millis</span><span class="p">()</span><span class="o">-</span><span class="n">lastTime</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">delayMs</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">lastTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">millis</span><span class="p">();</span>
 <span class="w">    </span><span class="c1">//do something you want to do every 2 seconds</span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></p>
 <h3 id="internal-segments-api">Internal Segments API</h3>
 <p>You can use Segments from your code to set different parts of the strip to different colors or effects. <br />
 This can be very useful for highly customized installations, clocks, ...   </p>
 <p>To set a segment, use <code>strip.setSegment(id, start, stop);</code>, where <em>id</em> is the segment ID, <em>start</em> is the first LED of the segment and <em>stop</em> is the LED after the last one in the segment.</p>
 <p>To edit the configuration of a segment, use:
-<div class="highlight"><pre><span></span><code><span class="n">WS2812FX</span><span class="o">::</span><span class="n">Segment</span><span class="o">&amp;</span><span class="w"> </span><span class="n">seg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strip</span><span class="p">.</span><span class="n">getSegment</span><span class="p">(</span><span class="n">id</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">WS2812FX</span><span class="o">::</span><span class="n">Segment</span><span class="o">&amp;</span><span class="w"> </span><span class="n">seg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strip</span><span class="p">.</span><span class="n">getSegment</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
 <span class="c1">//set color (i=0 is primary, i=1 secondary i=2 tertiary)</span>
-<span class="n">seg</span><span class="p">.</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="n">myWhite</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">24</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">((</span><span class="n">myRed</span><span class="o">&amp;</span><span class="mh">0xFF</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">((</span><span class="n">myGreen</span><span class="o">&amp;</span><span class="mh">0xFF</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">((</span><span class="n">myBlue</span><span class="o">&amp;</span><span class="mh">0xFF</span><span class="p">)));</span><span class="w"></span>
+<span class="n">seg</span><span class="p">.</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="n">myWhite</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">24</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">((</span><span class="n">myRed</span><span class="o">&amp;</span><span class="mh">0xFF</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">((</span><span class="n">myGreen</span><span class="o">&amp;</span><span class="mh">0xFF</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">((</span><span class="n">myBlue</span><span class="o">&amp;</span><span class="mh">0xFF</span><span class="p">)));</span>
 <span class="c1">//set effect config</span>
-<span class="n">seg</span><span class="p">.</span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myFxI</span><span class="p">;</span><span class="w"></span>
-<span class="n">seg</span><span class="p">.</span><span class="n">speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mySpeed</span><span class="p">;</span><span class="w"></span>
-<span class="n">seg</span><span class="p">.</span><span class="n">intensity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myIntensity</span><span class="p">;</span><span class="w"></span>
-<span class="n">seg</span><span class="p">.</span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myPaletteId</span><span class="p">;</span><span class="w"></span>
+<span class="n">seg</span><span class="p">.</span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myFxI</span><span class="p">;</span>
+<span class="n">seg</span><span class="p">.</span><span class="n">speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mySpeed</span><span class="p">;</span>
+<span class="n">seg</span><span class="p">.</span><span class="n">intensity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myIntensity</span><span class="p">;</span>
+<span class="n">seg</span><span class="p">.</span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myPaletteId</span><span class="p">;</span>
 </code></pre></div>
 Keep in mind that this will not cause interface updates as of 0.8.6. For that, you still need to use <code>colorUpdated(NOTIFIER_CALL_MODE_DIRECT_CHANGE)</code></p>
 <h3 id="create-custom-effects">Create custom effects</h3>
@@ -1513,42 +1513,6 @@ This will start monitoring wled00/data folder for changes.</p>
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../compiling-wled/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Compiling WLED" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Compiling WLED
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../esp32-recovery/" class="md-footer__link md-footer__link--next" aria-label="Next: ESP32 Recovery" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              ESP32 Recovery
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1629,14 +1593,13 @@ This will start monitoring wled00/data folder for changes.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
-    
     
   </body>
 </html>

@@ -10,8 +10,14 @@
         <meta name="author" content="Christian Schwinne (Aircoookie)">
       
       
+      
+        <link rel="prev" href="../compatible-software/">
+      
+      
+        <link rel="next" href="../install-gui/">
+      
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -130,8 +135,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="wled" data-md-color-primary="cyan" data-md-color-accent="orange"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Light Mode" for="__palette_2" hidden>
@@ -139,8 +142,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="orange"  aria-label="Dark Mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -1385,10 +1386,9 @@
                 
                   
 
-  <a href="https://github.com/Aircoookie/WLED-Docs/edit/main/docs/basics/install-binary.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
   <h1>Install WLED Binary</h1>
@@ -1409,21 +1409,21 @@ This installer is not yet available for ESPs with flash chips smaller than 4MB (
 <li>Execute this command:</li>
 </ul>
 <h4 id="esp8266">ESP8266</h4>
-<div class="highlight"><pre><span></span><code>esptool.py write_flash 0x0 ./WLED_XXX.bin
+<div class="highlight"><pre><span></span><code>esptool.py<span class="w"> </span>write_flash<span class="w"> </span>0x0<span class="w"> </span>./WLED_XXX.bin
 </code></pre></div>
 <h4 id="esp32">ESP32</h4>
 <p>Firstly, flash the version 4 bootloader file, which you can find <a href="https://github.com/Aircoookie/WLED/releases/download/v0.13.1/esp32_bootloader_v4.bin">here</a>.<br />
 This step only has to be done once, to update afterwards the bootloader does not have to be re-installed.</p>
-<div class="highlight"><pre><span></span><code>esptool.py write_flash 0x0 ./esp32_bootloader_v4.bin
+<div class="highlight"><pre><span></span><code>esptool.py<span class="w"> </span>write_flash<span class="w"> </span>0x0<span class="w"> </span>./esp32_bootloader_v4.bin
 </code></pre></div>
 <p>Now you can flash the actual firmware binary. Keep in mind the bootloader needs to have a flash offset of 0, but the firmware 0x10000.</p>
-<div class="highlight"><pre><span></span><code>esptool.py write_flash 0x10000 ./WLED_XXX.bin 
+<div class="highlight"><pre><span></span><code>esptool.py<span class="w"> </span>write_flash<span class="w"> </span>0x10000<span class="w"> </span>./WLED_XXX.bin<span class="w"> </span>
 </code></pre></div>
 <p>When esptool.py says <code>Connecting...</code>, some ESP32 boards require you to hold the boot button (to the right of the USB port) for a few seconds  </p>
 <ul>
 <li>If you experience issues, run this command before trying <code>write_flash</code> again (Note: this will erase all settings stored on the ESP!)</li>
 </ul>
-<div class="highlight"><pre><span></span><code>esptool.py erase_flash
+<div class="highlight"><pre><span></span><code>esptool.py<span class="w"> </span>erase_flash
 </code></pre></div>
 <p>If you have a MagicHome controller, here is a <a href="https://www.youtube.com/watch?v=qgBAU39v07k">good video tutorial</a> on how to flash it.</p>
 <h3 id="flashing-method-3-esp-home-flasher-tool">Flashing method 3: <a href="https://github.com/esphome/esphome-flasher/releases">ESP Home Flasher</a> tool</h3>
@@ -1536,42 +1536,6 @@ If your device is already running a firmware with built-in OTA capability, you c
       
         <footer class="md-footer">
   
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../compatible-software/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Software" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Software
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../install-gui/" class="md-footer__link md-footer__link--next" aria-label="Next: Install using ESP GUI" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Install using ESP GUI
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -1651,14 +1615,13 @@ If your device is already running a firmware with built-in OTA capability, you c
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
-    
     
   </body>
 </html>

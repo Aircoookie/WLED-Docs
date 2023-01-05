@@ -10,8 +10,14 @@
         <meta name="author" content="Christian Schwinne (Aircoookie)">
       
       
+      
+        <link rel="prev" href="../../interfaces/websocket/">
+      
+      
+        <link rel="next" href="../remote-access-ifttt/">
+      
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -130,8 +135,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="wled" data-md-color-primary="cyan" data-md-color-accent="orange"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Light Mode" for="__palette_2" hidden>
@@ -139,8 +142,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="orange"  aria-label="Dark Mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -1369,10 +1370,9 @@
                 
                   
 
-  <a href="https://github.com/Aircoookie/WLED-Docs/edit/main/docs/advanced/home-automation.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
   <h1>Home Automation</h1>
@@ -1455,29 +1455,29 @@ In case you want to configure the device manually:</p>
 </code></pre></div>
 by @acid2000</p>
 <p>Config json which is sent via autodiscovery:
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;WLED Light&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;stat_t&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wled/840d8e989815/c&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;cmd_t&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wled/840d8e989815&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;rgb_stat_t&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wled/840d8e989815/c&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;rgb_cmd_t&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wled/840d8e989815/col&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;bri_cmd_t&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wled/840d8e989815&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;bri_stat_t&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wled/840d8e989815/g&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;fx_cmd_t&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wled/840d8e989815/api&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;fx_stat_t&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wled/840d8e989815/api&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;bri_val_tpl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{value}}&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;rgb_cmd_tpl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{&#39;#%02x%02x%02x&#39; | format(red, green, blue)}}&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;rgb_val_tpl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{value[1:3]|int(base=16)}},{{value[3:5]|int(base=16)}},{{value[5:7]|int(base=16)}}&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;qos&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;opt&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;pl_on&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ON&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;pl_off&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OFF&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;fx_val_tpl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{value}}&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;fx_list&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;WLED Light&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;stat_t&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wled/840d8e989815/c&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;cmd_t&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wled/840d8e989815&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;rgb_stat_t&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wled/840d8e989815/c&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;rgb_cmd_t&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wled/840d8e989815/col&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;bri_cmd_t&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wled/840d8e989815&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;bri_stat_t&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wled/840d8e989815/g&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;fx_cmd_t&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wled/840d8e989815/api&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;fx_stat_t&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wled/840d8e989815/api&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;bri_val_tpl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{value}}&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;rgb_cmd_tpl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{&#39;#%02x%02x%02x&#39; | format(red, green, blue)}}&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;rgb_val_tpl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{value[1:3]|int(base=16)}},{{value[3:5]|int(base=16)}},{{value[5:7]|int(base=16)}}&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;qos&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;opt&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;pl_on&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ON&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;pl_off&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OFF&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;fx_val_tpl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{value}}&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;fx_list&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="s2">&quot;[FX=00] Solid&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=01] Blink&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=02] Breathe&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=03] Wipe&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=04] Wipe Random&quot;</span><span class="p">,</span><span class="w"> </span>
 <span class="w">    </span><span class="s2">&quot;[FX=05] Random Colors&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=06] Sweep&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=07] Dynamic&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=08] Colorloop&quot;</span><span class="p">,</span><span class="w"> </span>
 <span class="w">    </span><span class="s2">&quot;[FX=09] Rainbow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=10] Scan&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=11] Dual Scan&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=12] Fade&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=13] Chase&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">    </span><span class="s2">&quot;[FX=14] Chase Rainbow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=15] Running&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=16] Saw&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=17] Twinkle&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=18] Dissolve&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;[FX=14] Chase Rainbow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=15] Running&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=16] Saw&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=17] Twinkle&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=18] Dissolve&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="s2">&quot;[FX=19] Dissolve Rnd&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=20] Sparkle&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=21] Dark Sparkle&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=22] Sparkle+&quot;</span><span class="p">,</span><span class="w"> </span>
 <span class="w">    </span><span class="s2">&quot;[FX=23] Strobe&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=24] Strobe Rainbow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=25] Mega Strobe&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=26] Blink Rainbow&quot;</span><span class="p">,</span><span class="w"> </span>
 <span class="w">    </span><span class="s2">&quot;[FX=27] Android&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=28] Chase&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=29] Chase Random&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=30] Chase Rainbow&quot;</span><span class="p">,</span><span class="w"> </span>
@@ -1490,11 +1490,11 @@ by @acid2000</p>
 <span class="w">    </span><span class="s2">&quot;[FX=57] Lightning&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=58] ICU&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=59] Multi Comet&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=60] Dual Scanner&quot;</span><span class="p">,</span><span class="w"> </span>
 <span class="w">    </span><span class="s2">&quot;[FX=61] Stream 2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=62] Oscillate&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=63] Pride 2015&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=64] Juggle&quot;</span><span class="p">,</span><span class="w"> </span>
 <span class="w">    </span><span class="s2">&quot;[FX=65] Palette&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=66] Fire 2012&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=67] Colorwaves&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=68] BPM&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">    </span><span class="s2">&quot;[FX=69] Fill Noise&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=70] Noise 1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=71] Noise 2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=72] Noise 3&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=73] Noise 4&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;[FX=69] Fill Noise&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=70] Noise 1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=71] Noise 2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=72] Noise 3&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=73] Noise 4&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="s2">&quot;[FX=74] Colortwinkle&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=75] Lake&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=76] Meteor&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=77] Smooth Meteor&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">    </span><span class="s2">&quot;[FX=78] Railway&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=79] Ripple&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="p">]</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;[FX=78] Railway&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[FX=79] Ripple&quot;</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
 </code></pre></div></p>
 </details>
 <h2 id="indigo-domotics">Indigo Domotics:</h2>
@@ -1523,42 +1523,6 @@ Please find the details <a href="https://community.openhab.org/t/wled-control-wi
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../../interfaces/websocket/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Websocket" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Websocket
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../remote-access-ifttt/" class="md-footer__link md-footer__link--next" aria-label="Next: Remote Access / IFTTT" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Remote Access / IFTTT
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1639,14 +1603,13 @@ Please find the details <a href="https://community.openhab.org/t/wled-control-wi
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
-    
     
   </body>
 </html>
