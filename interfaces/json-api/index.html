@@ -251,7 +251,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../features/effects-palettes/" class="md-tabs__link">
+      <a href="../../features/effects/" class="md-tabs__link">
         Features
       </a>
     </li>
@@ -612,8 +612,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/effects-palettes/" class="md-nav__link">
-        Effects & Palettes
+      <a href="../../features/effects/" class="md-nav__link">
+        Effects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/palettes/" class="md-nav__link">
+        Palettes
       </a>
     </li>
   
@@ -2241,14 +2255,19 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 <h4 id="per-segment-individual-led-control">Per-segment individual LED control</h4>
 <p>Using the <code>i</code> property of the segment object, you can set the LED colors in the segment using the JSON API.<br />
 Keep in mind that this is non-persistent, if the light is turned off the segment will return to effect mode.<br />
-The segment is blanked out when using individual control, the set effect will not run. <br />
-To disable, change any property of the segment or turn off the light.</p>
-<p>To set individual LEDs starting from the beginning, use an array of Color arrays.
-<code>{"seg":{"i":[[255,0,0], [0,255,0], [0,0,255]]}}</code> will set the first LED red, the second green and the third blue.</p>
-<p>To set individual LEDs, use the LED index followed by its Color array.
-<code>{"seg":{"i":[0,[255,0,0], 2,[0,255,0], 4,[0,0,255]]}}</code> is the same as above, but leaves blank spaces between the lit LEDs.</p>
-<p>To set ranges of LEDs, use the LED start and stop index followed by its Color array.
-<code>{"seg":{"i":[0,8,[255,0,0], 10,18,[0,0,255]]}}</code> sets the first eight LEDs to red, leaves out two, and sets another 8 to blue.</p>
+The segment is frozen when using individual control, the set effect will not run. <br />
+To unfreeze the segment, click the "eye" icon, change any property of the segment or turn off the light.</p>
+<p>To set individual LEDs starting from the beginning, use an array of Color arrays <code>[255, 0, 0]</code> or hex values <code>'FF0000'</code>. 
+Hex values are more efficient than Color arrays and should be when setting a large number of colors.
+<code>{"seg":{"i":['FF0000', '00FF00', '0000FF']}}</code> or <code>{"seg":{"i":[[255,0,0], [0,255,0], [0,0,255]]}}</code> will set the first LED red, the second green and the third blue.</p>
+<p>To set individual LEDs, use the LED index followed by its color value.
+<code>{"seg":{"i":[0,'FF0000', 2,'00FF00', 4,'0000FF']}}</code> is the same as above, but leaves blank spaces between the lit LEDs.</p>
+<p>To set ranges of LEDs, use the LED start and stop index followed by its color value.
+<code>{"seg":{"i":[0,8,'FF0000', 10,18,'0000FF']}}</code> sets the first eight LEDs to red, leaves out two, and sets another 8 to blue.</p>
+<p>To set a large number of colors, send multiple api calls of 256 colors at a time.
+<code>{"seg": {"i":[0,'CC0000', '00CC00', '0000CC', 'CC0000'...]}}</code> 
+<code>{"seg": {"i":[256, 'CC0000', '00CC00', '0000CC', 'CC0000'...]}}</code>
+<code>{"seg": {"i":[512, 'CC0000', '00CC00', '0000CC', 'CC0000'...]}}</code></p>
 <p>Keep in mind that the LED indices are segment-based, so LED 0 is the first LED of the segment, not of the entire strip.
 Segment features, including Grouping, Spacing, Mirroring and Reverse are functional.
 This feature is available in build 200829 and above.</p>

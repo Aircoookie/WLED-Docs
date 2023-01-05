@@ -11,7 +11,7 @@
       
       
       
-        <link rel="prev" href="../../basics/faq/">
+        <link rel="prev" href="../effects/">
       
       
         <link rel="next" href="../macros/">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Effects and Palettes - WLED Project</title>
+        <title>Palettes - WLED Project</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#effects" class="md-skip">
+        <a href="#custom-palettes" class="md-skip">
           Skip to content
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Effects and Palettes
+              Palettes
             
           </span>
         </div>
@@ -253,7 +253,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../effects/" class="md-tabs__link md-tabs__link--active">
         Features
       </a>
     </li>
@@ -612,6 +612,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../effects/" class="md-nav__link">
+        Effects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -622,12 +636,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Effects & Palettes
+          Palettes
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Effects & Palettes
+        Palettes
       </a>
       
         
@@ -644,15 +658,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#effects" class="md-nav__link">
-    Effects
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#palettes" class="md-nav__link">
-    Palettes
+  <a href="#custom-palettes" class="md-nav__link">
+    Custom Palettes
   </a>
   
 </li>
@@ -1275,15 +1282,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#effects" class="md-nav__link">
-    Effects
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#palettes" class="md-nav__link">
-    Palettes
+  <a href="#custom-palettes" class="md-nav__link">
+    Custom Palettes
   </a>
   
 </li>
@@ -1307,734 +1307,12 @@
 
 
 
-  <h1>Effects & Palettes</h1>
+  <h1>Palettes</h1>
 
-<h3 id="effects">Effects</h3>
-<p>To aid in showing where colors vs palettes are used, all effects are rendered with the Party palette <img alt="party" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_06.gif" />
-and the colors <img alt="primary" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/color_1.gif" /> primary 
-<img alt="secondary" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/color_2.gif" /> secondary 
-<img alt="tertiary" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/color_3.gif" /> tertiary colors</p>
-<table>
-<thead>
-<tr>
-<th align="right">EffectID</th>
-<th>Name</th>
-<th>Description</th>
-<th>Intensity slider effect</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="right">0</td>
-<td>Solid</td>
-<td>Solid primary color on all LEDs <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_000.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">1</td>
-<td>Blink</td>
-<td>Blinks between primary and secondary color <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_001.gif" /></td>
-<td>Duty cycle of blinking</td>
-</tr>
-<tr>
-<td align="right">2</td>
-<td>Breathe</td>
-<td>Fades between primary and secondary color <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_002.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">3</td>
-<td>Wipe</td>
-<td>Switches between primary and secondary, switching LEDs one by one, start to end <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_003.gif" /></td>
-<td>Smoothness</td>
-</tr>
-<tr>
-<td align="right">4</td>
-<td>Wipe Random</td>
-<td>Same as Wipe, but uses random colors <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_004.gif" /></td>
-<td>Smoothness</td>
-</tr>
-<tr>
-<td align="right">5</td>
-<td>Random Colors</td>
-<td>Applies a new random color to all LEDs <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_005.gif" /></td>
-<td>Duration of fading between colors</td>
-</tr>
-<tr>
-<td align="right">6</td>
-<td>Sweep</td>
-<td>Switches between primary and secondary, switching LEDs one by one, start to end to start <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_006.gif" /></td>
-<td>Smoothness</td>
-</tr>
-<tr>
-<td align="right">7</td>
-<td>Dynamic</td>
-<td>Sets each LED to a random color <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_007.gif" /></td>
-<td>0-127: Set single LED 128-255: Set all LEDs</td>
-</tr>
-<tr>
-<td align="right">8</td>
-<td>Colorloop</td>
-<td>Cycle all LEDs through the rainbow colors <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_008.gif" /></td>
-<td>0-127: Pastel colors 128-255: Saturated colors</td>
-</tr>
-<tr>
-<td align="right">9</td>
-<td>Rainbow</td>
-<td>Displays rainbow colors along the whole strip <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_009.gif" /></td>
-<td>Number of rainbows</td>
-</tr>
-<tr>
-<td align="right">10</td>
-<td>Scan</td>
-<td>A single primary colored light wanders between start and end <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_010.gif" /></td>
-<td>Scan dot size</td>
-</tr>
-<tr>
-<td align="right">11</td>
-<td>Scan Dual</td>
-<td>Same as Scan but uses two lights starting at both ends <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_011.gif" /></td>
-<td>scan dot size</td>
-</tr>
-<tr>
-<td align="right">12</td>
-<td>Fade</td>
-<td>Fades smoothly between primary and secondary color <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_012.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">13</td>
-<td>Theater</td>
-<td>Pattern of one lit and two unlit LEDs running <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_013.gif" /></td>
-<td>Gap in lights</td>
-</tr>
-<tr>
-<td align="right">14</td>
-<td>Theater Rainbow</td>
-<td>Same as Theater but uses colors of the rainbow <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_014.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">15</td>
-<td>Running</td>
-<td>Sine Waves scrolling <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_015.gif" /></td>
-<td>Wavelength</td>
-</tr>
-<tr>
-<td align="right">16</td>
-<td>Saw</td>
-<td>Sawtooth Waves scrolling <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_016.gif" /></td>
-<td>Wavelength</td>
-</tr>
-<tr>
-<td align="right">17</td>
-<td>Twinkle</td>
-<td>Random LEDs light up in the primary color with secondary as background, turns all off <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_017.gif" /></td>
-<td>Amount of LEDs turning on</td>
-</tr>
-<tr>
-<td align="right">18</td>
-<td>Dissolve</td>
-<td>Fills LEDs with primary in random order, then off again <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_018.gif" /></td>
-<td>Dissolve rate</td>
-</tr>
-<tr>
-<td align="right">19</td>
-<td>Dissolve Rnd</td>
-<td>Fills LEDs with random colors in random order, then off again <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_019.gif" /></td>
-<td>Dissolve rate</td>
-</tr>
-<tr>
-<td align="right">20</td>
-<td>Sparkle</td>
-<td>Single random LEDs light up in the primary color for a short time, secondary is background <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_020.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">21</td>
-<td>Sparkle Dark</td>
-<td>All LEDs are lit in the primary color, single random LEDs turn off for a short time <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_021.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">22</td>
-<td>Sparkle+</td>
-<td>All LEDs are lit in the primary color, multiple random LEDs turn off for a short time <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_022.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">23</td>
-<td>Strobe</td>
-<td>All LEDs are lit in the secondary color, all LEDs flash in a single short burst in primary color <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_023.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">24</td>
-<td>Strobe Rainbow</td>
-<td>Same as strobe, cycles through the rainbow <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_024.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">25</td>
-<td>Strobe Mega</td>
-<td>All LEDs are lit in the secondary color, all LEDs flash in several short bursts in primary color <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_025.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">26</td>
-<td>Blink Rainbow</td>
-<td>Same as blink, cycles through the rainbow <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_026.gif" /></td>
-<td>Blink Duty cycle</td>
-</tr>
-<tr>
-<td align="right">27</td>
-<td>Android</td>
-<td>Section of varying length running <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_027.gif" /></td>
-<td>Maximum section length</td>
-</tr>
-<tr>
-<td align="right">28</td>
-<td>Chase</td>
-<td>2 LEDs in primary color running on secondary <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_028.gif" /></td>
-<td>Size of chaser</td>
-</tr>
-<tr>
-<td align="right">29</td>
-<td>Chase Random</td>
-<td>Like Chase but leaves trail of random color <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_029.gif" /></td>
-<td>Size of chaser</td>
-</tr>
-<tr>
-<td align="right">30</td>
-<td>Chase Rainbow</td>
-<td>Like 28 but leaves trail of rainbow <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_030.gif" /></td>
-<td>Size of chaser</td>
-</tr>
-<tr>
-<td align="right">31</td>
-<td>Chase Flash</td>
-<td>2 LEDs flash in secondary color while the rest is lit in primary. The flashing LEDs wander from start to end  <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_031.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">32</td>
-<td>Chase Flash Rnd</td>
-<td>Like Chase Flash, but the 2 LEDs flash in random colors and leaves a random color behind <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_032.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">33</td>
-<td>Rainbow Runner</td>
-<td>Like Chase, but the 2 LEDs light up in rainbow colors and leave a primary color trail <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_033.gif" /></td>
-<td>Size of chaser</td>
-</tr>
-<tr>
-<td align="right">34</td>
-<td>Colorful</td>
-<td>Shifting Red-Amber-Green-Blue pattern <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_034.gif" /></td>
-<td>0-127: Pastel colors 128-255: Saturated colors</td>
-</tr>
-<tr>
-<td align="right">35</td>
-<td>Traffic Light</td>
-<td>Emulates a traffic light <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_035.gif" /></td>
-<td>Over 140 skips red / yellow transition</td>
-</tr>
-<tr>
-<td align="right">36</td>
-<td>Sweep Random</td>
-<td>Like Sweep, but uses random colors <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_036.gif" /></td>
-<td>Smoothness</td>
-</tr>
-<tr>
-<td align="right">37</td>
-<td>Running 2</td>
-<td>Pattern of n LEDs primary and n LEDs secondary moves along the strip <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_037.gif" /></td>
-<td>Amount of LEDs lit/unlit</td>
-</tr>
-<tr>
-<td align="right">38</td>
-<td>Aurora</td>
-<td>Simulation of the Aurora Borealis <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_038.gif" /></td>
-<td>Number of waves</td>
-</tr>
-<tr>
-<td align="right">39</td>
-<td>Stream</td>
-<td>Flush bands random hues along the string <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_039.gif" /></td>
-<td>Width of each band (lower is wider)</td>
-</tr>
-<tr>
-<td align="right">40</td>
-<td>Scanner</td>
-<td>Dot moves between ends, leaving behind a fading trail <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_040.gif" /></td>
-<td>Fade rate</td>
-</tr>
-<tr>
-<td align="right">41</td>
-<td>Lighthouse</td>
-<td>Dot moves from start to end, leaving behind a fading trail <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_041.gif" /></td>
-<td>Fade rate</td>
-</tr>
-<tr>
-<td align="right">42</td>
-<td>Fireworks</td>
-<td>Random color blobs light up, then fade again <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_042.gif" /></td>
-<td>Amount of fireworks</td>
-</tr>
-<tr>
-<td align="right">43</td>
-<td>Rain</td>
-<td>Like Fireworks, but the blobs move <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_043.gif" /></td>
-<td>Amout of Rain</td>
-</tr>
-<tr>
-<td align="right">44</td>
-<td>Tetrix</td>
-<td>Falling blocks stack <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_044.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">45</td>
-<td>Fire Flicker</td>
-<td>LEDs randomly flickering <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_045.gif" /></td>
-<td>Flickering intensity</td>
-</tr>
-<tr>
-<td align="right">46</td>
-<td>Gradient</td>
-<td>Moves a saturation gradient of the primary color along the strip <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_046.gif" /></td>
-<td>Gradient width</td>
-</tr>
-<tr>
-<td align="right">47</td>
-<td>Loading</td>
-<td>Moves a sawtooth pattern along the strip <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_047.gif" /></td>
-<td>Width</td>
-</tr>
-<tr>
-<td align="right">48</td>
-<td>Police</td>
-<td>A red and a blue dot running <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_048.gif" /></td>
-<td>Size of dots</td>
-</tr>
-<tr>
-<td align="right">49</td>
-<td>Police All</td>
-<td>Two areas, one red and one blue, sweeping<br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_049.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">50</td>
-<td>Two Dots</td>
-<td>Like Police, but with custom colors<br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_050.gif" /></td>
-<td>Size of dots</td>
-</tr>
-<tr>
-<td align="right">51</td>
-<td>Two Areas</td>
-<td>Like Police All, but with custom colors<br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_051.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">52</td>
-<td>Running Dual</td>
-<td>Sine waves in both directions <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_052.gif" /></td>
-<td>Number of waves</td>
-</tr>
-<tr>
-<td align="right">53</td>
-<td>Halloween</td>
-<td>Running 2, but always uses orange and purple <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_053.gif" /></td>
-<td>Amount of LEDs lit/unlit</td>
-</tr>
-<tr>
-<td align="right">54</td>
-<td>Tri Chase</td>
-<td>Like Chase, but with 3 colors <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_054.gif" /></td>
-<td>Width of pattern</td>
-</tr>
-<tr>
-<td align="right">55</td>
-<td>Tri Wipe</td>
-<td>Like Wipe but turns LEDs off as "third color" <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_055.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">56</td>
-<td>Tri Fade</td>
-<td>Fades the whole strip from primary color to secondary color to off <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_056.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">57</td>
-<td>Lightning</td>
-<td>Short random white strobe similar to a lightning bolt <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_057.gif" /></td>
-<td>Amount of strobes</td>
-</tr>
-<tr>
-<td align="right">58</td>
-<td>ICU</td>
-<td>Two "eyes" running on opposite sides of the strip <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_058.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">59</td>
-<td>Multi Comet</td>
-<td>Like Scanner, but creates multiple trails <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_059.gif" /></td>
-<td>Fade rate</td>
-</tr>
-<tr>
-<td align="right">60</td>
-<td>Scanner Dual</td>
-<td>Like Scanner, but with two dots running on opposite sides <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_060.gif" /></td>
-<td>Fade rate</td>
-</tr>
-<tr>
-<td align="right">61</td>
-<td>Stream 2</td>
-<td>Flush random hues along the string <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_061.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">62</td>
-<td>Oscillate</td>
-<td>Areas of primary and secondary colors move between opposite ends, combining colors where they touch <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_062.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">63</td>
-<td>Pride 2015</td>
-<td>Rainbow cycling with brightness variation <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_063.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">64</td>
-<td>Juggle</td>
-<td>Eight colored dots running, leaving trails <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_064.gif" /></td>
-<td>Fade rate</td>
-</tr>
-<tr>
-<td align="right">65</td>
-<td>Palette</td>
-<td>Running color palette <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_065.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">66</td>
-<td>Fire 2012</td>
-<td>Simulates flickering fire in red and yellow <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_066.gif" /></td>
-<td>Sparkling of fire</td>
-</tr>
-<tr>
-<td align="right">67</td>
-<td>Colorwaves</td>
-<td>Like Pride 2015, but uses palettes <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_067.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">68</td>
-<td>BPM</td>
-<td>Pulses moving back and forth on palette <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_068.gif" /></td>
-<td>BPM setting</td>
-</tr>
-<tr>
-<td align="right">69</td>
-<td>Fill Noise</td>
-<td>Noise pattern <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_069.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">70</td>
-<td>Noise 1</td>
-<td>Fast Noise shift pattern <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_070.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">71</td>
-<td>Noise 2</td>
-<td>Fast Noise shift pattern <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_071.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">72</td>
-<td>Noise 3</td>
-<td>Noise shift pattern <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_072.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">73</td>
-<td>Noise 4</td>
-<td>Noise sparkle pattern <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_073.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">74</td>
-<td>Colortwinkles</td>
-<td>LEDs light up randomly in random colors and fade off again <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_074.gif" /></td>
-<td>Twinkle rate</td>
-</tr>
-<tr>
-<td align="right">75</td>
-<td>Lake</td>
-<td>Calm palette waving <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_075.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">76</td>
-<td>Meteor</td>
-<td>The primary color creates a trail of randomly decaying color <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_076.gif" /></td>
-<td>Fade rate</td>
-</tr>
-<tr>
-<td align="right">77</td>
-<td>Meteor Smooth</td>
-<td>Smoothly animated meteor <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_077.gif" /></td>
-<td>Fade rate</td>
-</tr>
-<tr>
-<td align="right">78</td>
-<td>Railway</td>
-<td>Shows primary and secondary color on alternating LEDs. All LEDs fade to their opposite color and back again <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_078.gif" /></td>
-<td>Duty cycle of fade transition</td>
-</tr>
-<tr>
-<td align="right">79</td>
-<td>Ripple</td>
-<td>Effect resembling random water ripples <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_079.gif" /></td>
-<td>Rate of new ripples</td>
-</tr>
-<tr>
-<td align="right">80</td>
-<td>Twinklefox</td>
-<td>FastLED gentle twinkling with slow fade in/out <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_080.gif" /></td>
-<td>Density</td>
-</tr>
-<tr>
-<td align="right">81</td>
-<td>Twinklecat</td>
-<td>Twinkling with fast in / slow out <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_081.gif" /></td>
-<td>Density</td>
-</tr>
-<tr>
-<td align="right">82</td>
-<td>Halloween Eyes</td>
-<td>One Pair of blinking eyes at random intervals along strip <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_082.gif" /></td>
-<td>Fading rade of eyes</td>
-</tr>
-<tr>
-<td align="right">83</td>
-<td>Solid Pattern</td>
-<td>Speed sets number of LEDs on, intensity sets off <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_083.gif" /></td>
-<td>Amount of LEDs turned off</td>
-</tr>
-<tr>
-<td align="right">84</td>
-<td>Solid Pattern Tri</td>
-<td>Solid Pattern with three colors <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_084.gif" /></td>
-<td>Amount of LEDs of each color</td>
-</tr>
-<tr>
-<td align="right">85</td>
-<td>Spots</td>
-<td>Solid lights with even distance <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_085.gif" /></td>
-<td>Size of each spot</td>
-</tr>
-<tr>
-<td align="right">86</td>
-<td>Spots Fade</td>
-<td>Spots, getting bigger and smaller <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_086.gif" /></td>
-<td>Fading of each spot</td>
-</tr>
-<tr>
-<td align="right">87</td>
-<td>Glitter</td>
-<td>Rainbow with white sparkles <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_087.gif" /></td>
-<td>Amount of glitter</td>
-</tr>
-<tr>
-<td align="right">88</td>
-<td>Candle</td>
-<td>Flicker resembling a candle flame <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_088.gif" /></td>
-<td>Intensity of flickering</td>
-</tr>
-<tr>
-<td align="right">89</td>
-<td>Fireworks Starburst</td>
-<td>Exploding multicolor fireworks <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_089.gif" /></td>
-<td>Fragment count</td>
-</tr>
-<tr>
-<td align="right">90</td>
-<td>Fireworks 1D</td>
-<td>one dimension fireworks with flare <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_090.gif" /></td>
-<td>Firing side</td>
-</tr>
-<tr>
-<td align="right">91</td>
-<td>Bouncing Balls</td>
-<td>Bouncing ball effect <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_091.gif" /></td>
-<td>Number of balls</td>
-</tr>
-<tr>
-<td align="right">92</td>
-<td>Sinelon</td>
-<td>Fastled sinusoidal moving eye <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_092.gif" /></td>
-<td>Fade rate</td>
-</tr>
-<tr>
-<td align="right">93</td>
-<td>Sinelon Dual</td>
-<td>Sinelon from both directions <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_093.gif" /></td>
-<td>Fade rate</td>
-</tr>
-<tr>
-<td align="right">94</td>
-<td>Sinelon Rainbow</td>
-<td>Sinelon in rainbow colours <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_094.gif" /></td>
-<td>Fade rate</td>
-</tr>
-<tr>
-<td align="right">95</td>
-<td>Popcorn</td>
-<td>popping kernels <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_095.gif" /></td>
-<td>Number of kernels</td>
-</tr>
-<tr>
-<td align="right">96</td>
-<td>Drip</td>
-<td>Water dripping effect <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_096.gif" /></td>
-<td>Intensity of dripping</td>
-</tr>
-<tr>
-<td align="right">97</td>
-<td>Plasma</td>
-<td>Plasma lamp <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_097.gif" /></td>
-<td>Max brightness</td>
-</tr>
-<tr>
-<td align="right">98</td>
-<td>Percent</td>
-<td>Lights up a percentage of segment <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_098.gif" /></td>
-<td>Percentage</td>
-</tr>
-<tr>
-<td align="right">99</td>
-<td>Ripple Rainbow</td>
-<td>Like ripple, but with a dimly lit changing background <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_099.gif" /></td>
-<td>Rate of new ripples</td>
-</tr>
-<tr>
-<td align="right">100</td>
-<td>Heartbeat</td>
-<td>led strip pulsing rhythm similar to a heart beat <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_100.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">101</td>
-<td>Pacifica</td>
-<td>Gentle, blue-green ocean waves (one color palette currently) <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_101.gif" /></td>
-<td>Intensity of waves</td>
-</tr>
-<tr>
-<td align="right">102</td>
-<td>Candle Multi</td>
-<td>Like candle effect, but each LED has it's own flicker pattern <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_102.gif" /></td>
-<td>Intensity of flicker</td>
-</tr>
-<tr>
-<td align="right">103</td>
-<td>Solid Glitter</td>
-<td>Like Glitter, but with solid color background <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_103.gif" /></td>
-<td>Amount of glitter</td>
-</tr>
-<tr>
-<td align="right">104</td>
-<td>Sunrise</td>
-<td>Simulates a gradual sunrise or sunset. Speed sets:<br/> 0 - static sun, 1 - 60: sunrise time in minutes,<br/> 60 - 120: sunset time in minutes - 60, above: "breathing" rise and set <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_104.gif" /></td>
-<td>Sun intensity</td>
-</tr>
-<tr>
-<td align="right">105</td>
-<td>Phased</td>
-<td>Sine waves (in sourcecode) <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_105.gif" /></td>
-<td>Wave brightness against background</td>
-</tr>
-<tr>
-<td align="right">106</td>
-<td>TwinkleUp</td>
-<td>Twinkle effect with fade-in <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_106.gif" /></td>
-<td>Amount of Twinkles</td>
-</tr>
-<tr>
-<td align="right">107</td>
-<td>Noise Pal</td>
-<td>Peaceful noise that's slow and with gradually changing palettes <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_107.gif" /></td>
-<td>Wave intensity</td>
-</tr>
-<tr>
-<td align="right">108</td>
-<td>Sine</td>
-<td>Controllable sine waves <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_108.gif" /></td>
-<td>Sinewave frequency</td>
-</tr>
-<tr>
-<td align="right">109</td>
-<td>Phased Noise</td>
-<td>Noisy sine waves <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_109.gif" /></td>
-<td>Wave brightness against background</td>
-</tr>
-<tr>
-<td align="right">110</td>
-<td>Flow</td>
-<td>Blend of palette and spot effects <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_110.gif" /></td>
-<td>waveform frequency</td>
-</tr>
-<tr>
-<td align="right">111</td>
-<td>Chunchun</td>
-<td>Birds flying in a circle formation <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_111.gif" /></td>
-<td>Number of birds</td>
-</tr>
-<tr>
-<td align="right">112</td>
-<td>Dancing Shadows</td>
-<td>Moving spotlights <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_112.gif" /></td>
-<td>Number of spotlights</td>
-</tr>
-<tr>
-<td align="right">113</td>
-<td>Washing machine</td>
-<td>Alternating direction <em>(in source)</em> <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_113.gif" /></td>
-<td>Size of lit sections</td>
-</tr>
-<tr>
-<td align="right">114</td>
-<td>Candy Cane</td>
-<td>Running 2 in Red &amp; White <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_114.gif" /></td>
-<td>Amount of LEDs lit/unlit</td>
-</tr>
-<tr>
-<td align="right">115</td>
-<td>Blends</td>
-<td>Blends random colors across palette <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_115.gif" /></td>
-<td>Blend speed</td>
-</tr>
-<tr>
-<td align="right">116</td>
-<td>TV Simulator</td>
-<td>TV light spill simulation <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_116.gif" /></td>
-<td>-</td>
-</tr>
-<tr>
-<td align="right">117</td>
-<td>Dynamic Smooth</td>
-<td>Like Dynamic, but with smooth palette blends <br /><img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_117.gif" /></td>
-<td>0-127: Set single LED 128-255: Set all LEDs</td>
-</tr>
-</tbody>
-</table>
-<h3 id="palettes">Palettes</h3>
+<div class="admonition info">
+<p class="admonition-title">Version Info</p>
+<p>Beginning in 0.14 up to 10 <a href="#custom-palettes">Custom Palletes</a> can be uploaded.</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -2401,6 +1679,23 @@ and the colors <img alt="primary" src="https://raw.githubusercontent.com/scottrb
 </tr>
 </tbody>
 </table>
+<h3 id="custom-palettes">Custom Palettes</h3>
+<p>As of 0.14, up to 10 custom palettes can be uploaded by the user in JSON files named <code>palette0.json</code> through <code>palette9.json</code>
+The format closely resembles that of the palettes defined in <code>palettes.h</code>. An example of the content would be:
+<div class="highlight"><pre><span></span><code>{&quot;palette&quot;:[ 
+//pos,   R,   G,   B
+    0, 255,  33,   4, 
+   43, 255,  68,  25,
+   86, 255,   7,  25,
+  127, 255,  82, 103,
+  170, 255, 255, 242,
+  209,  42, 255, 22,
+  255,  87, 255, 65]}
+</code></pre></div>
+The position is the 0-255 value for where each color should be placed.</p>
+<p>Once a palette[0-9].json file has been created, it can be uploaded to the controller using the <code>/edit</code> page (http://[controller-ip]/edit).
+The controller must be rebooted (<code>/win&amp;RB</code>) before the newly uploaded palettes will be available. 
+After reboot, the custom palette(s) will be named <code>~ Custom [0-9] ~</code> in the Palettes section of the user interface. </p>
 
 
 
