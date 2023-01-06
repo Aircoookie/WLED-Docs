@@ -186,6 +186,7 @@ ly | `20bbbtttt`: 200002700 - 201006500 | Loxone brightness and color temperatur
 i | array | [Individual LED control](#per-segment-individual-led-control). Not included in state response _(available since 0.10.2)_
 frz | bool | freezes/unfreezes the current effect
 m12 | 0 to 4 [map1D2D.count] | Setting of segment field 'Expand 1D FX'. (0: Pixels, 1: Bar, 2: Arc, 3: Corner)
+si | 0 to 3 | Setting of the sound simulation type for audio enhanced effects. (0: 'BeatSin', 1: 'WeWillRockYou', 2: '10_3', 3: '14_3') (_as of 0.14.0-b1, there are these 4 types defined_)
 
 #### Info object
 
