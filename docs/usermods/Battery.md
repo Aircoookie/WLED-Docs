@@ -5,9 +5,7 @@ hide:
   # - toc
 ---
 
-<p align="center">
-  <img width="700" src="assets/battery_usermod_logo.png">
-</p>
+<img width="700" alt="image" src="https://user-images.githubusercontent.com/91013628/210977865-791ba10c-b1cb-4345-a42e-b2f77ab01089.png">
 
 ## Welcome to the battery usermod! 🔋
 
@@ -17,9 +15,7 @@ For this to work, the positive side of the (18650) battery must be connected to 
 
 If you have an ESP32 board, connect the positive side of the battery to ADC1 (GPIO32 - GPIO39)
 
-<p align="center">
-  <img width="500" src="assets/battery_info_screen.png">
-</p>
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/91013628/210978393-5b2de7bd-6de7-4c98-852b-c4a4f211c6ab.png">
 
 ### ⚙️ Features
 
@@ -34,9 +30,7 @@ define `USERMOD_BATTERY` in `wled00/my_config.h`
 
 ### Example wiring
 
-<p align="center">
-  <img width="300" src="assets/battery_connection_schematic_01.png">
-</p>
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/91013628/210978456-0b399bd2-406f-482a-9dd4-c7d2538441d9.png">
 
 ### Define Your Options
 
