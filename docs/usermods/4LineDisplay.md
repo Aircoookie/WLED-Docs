@@ -5,7 +5,7 @@ hide:
   # - toc
 ---
 
-# I2C 4 Line Display Usermod
+## I2C 4 Line Display Usermod
 
 First, thanks to the authors of the ssd11306_i2c_oled_u8g2 mod.
 
@@ -18,13 +18,13 @@ them together.
 
 [See the pair of usermods in action](https://www.youtube.com/watch?v=tITQY80rIOA)
 
-## Installation
+### Installation
 
 Copy and update the example `platformio_override.ini.sample` 
 from the Rotary Encoder UI usermode folder to the root directory of your particular build.
 This file should be placed in the same directory as `platformio.ini`.
 
-### Define Your Options
+#### Define Your Options
 
 * `USERMOD_FOUR_LINE_DISPLAY`  - define this to have this mod included wled00\usermods_list.cpp - also tells Rotary Encoder usermod, if installed, the display is available
 * `FLD_PIN_SCL`                - The display SCL pin, defaults to 5
@@ -32,13 +32,13 @@ This file should be placed in the same directory as `platformio.ini`.
 
 All of the parameters can be configured via the Usermods settings page, inluding GPIO pins.
 
-### PlatformIO requirements
+#### PlatformIO requirements
 
 This usermod requires the `U8g2` and `Wire` libraries. See the 
 `platformio_override.ini.sample` found in the Rotary Encoder
 UI usermod folder for how to include these using `platformio_override.ini`.
 
-## Configuration
+### Configuration
 
 * `enabled` - enable/disable usermod
 * `pin` - GPIO pins used for display; I2C displays use Clk & Data; SPI displays can use SCK, MOSI, CS, DC & RST
@@ -58,7 +58,7 @@ UI usermod folder for how to include these using `platformio_override.ini`.
 * `clockMode` - enable/disable clock display in screen saver mode
 * `i2c-freq-kHz` - I2C clock frequency in kHz (may help reduce dropped frames, range: 400-3400)
 
-## Change Log
+### Change Log
 
 2021-02
 * First public release

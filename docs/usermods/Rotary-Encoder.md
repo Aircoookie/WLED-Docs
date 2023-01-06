@@ -5,7 +5,7 @@ hide:
   # - toc
 ---
 
-# Rotary Encoder UI Usermod
+## Rotary Encoder UI Usermod
 
 First, thanks to the authors of other Rotary Encoder usermods.
 
@@ -15,12 +15,12 @@ encourage you to try them together.
 
 [See the pair of usermods in action](https://www.youtube.com/watch?v=tITQY80rIOA)
 
-## Installation
+### Installation
 
 Copy and update the example `platformio_override.ini.sample` to the root directory of your particular build.
 This file should be placed in the same directory as `platformio.ini`.
 
-### Define Your Options
+#### Define Your Options
 
 * `USERMOD_ROTARY_ENCODER_UI`       - define this to have this user mod included wled00\usermods_list.cpp
 * `USERMOD_ROTARY_ENCODER_GPIO`     - define the GPIO function (INPUT, INPUT_PULLUP, etc...)
@@ -34,13 +34,13 @@ This file should be placed in the same directory as `platformio.ini`.
                                         `INPUT_PULLUP` to use internal pull-up
                                         `INPUT` to use pull-up on the PCB
 
-### PlatformIO requirements
+#### PlatformIO requirements
 
 No special requirements.
 
 Note: the Four Line Display usermod requires the libraries `U8g2` and `Wire`.
 
-## Change Log
+### Change Log
 
 2021-02
 * First public release
