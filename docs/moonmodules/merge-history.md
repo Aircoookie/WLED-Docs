@@ -9,12 +9,40 @@ _history of features added to the mdev branch_
 
 Our latest work can be found here: [mdev](https://github.com/MoonModules/WLED/tree/mdev) and is based upon the latest version of 0.14. You can compile it yourself using PlatformIO.ini entry esp32_4MB_max or get a build from [Serg74](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/experimental/Firmware/AudioReactive) (daily) or [Wladi](https://wled-install.github.io) (periodically). 
 
+## I2C and SPI pins make over
+Januari 9, 2023
+We (Ewowi and Softhack) were not happy how currently pins are managed. It raises questions in discord we could not answer so we decided to refactor it. It's not easy as a lot is interconnected but we made the first steps:
+
+* Drop down for pin variables (see below)
+* Rebuild the usermods (pins) settings screen so it works the same
+* create _all bin files with a lot of usermods in it so we can test and improve
+* do not reset ui variables if something is wrong (e.g. 4ld/type, enabled)
+* use errorMessage instead and show errormessage in settings ui
+* if global pins are -1, then there is no initialization of spi/i2c if usermods set pins to use global no initialisation
+* HLD_PIN_* variables are used in platformio to specify defaults for global pins, no use of the recent introduced new variables I2CSDAPIN (etc) as causes more confusion, HLD_PIN serve these function and is used instead
+* i2c_scl (etc) variables are used in usermods without if -1 then HLD_PIN check, i2c_scl (etc) most be proper initialized before it can be used.
+* No hijacking of global vars (giving them a value) in usermods 
+* Don't register pins if usermod is not enabled
+* create pinManager.joinWire and use as simplified way in usermods
+
+This will be work in progress the coming weeks to implement in usermods (AudioReactive and 4LD working, others likely working but must be tested)
+
+Overview of usermods available in _all bins:
+
+<img width="448" alt="Screenshot 2023-01-08 at 15 13 00" src="https://user-images.githubusercontent.com/91013628/211351663-28e23710-b8e5-441b-8ec3-ff774b0dd106.png">
+
+
 ## Drop downs for pin variables
 December 23, 2022
 
 <img width="397" alt="image" src="https://user-images.githubusercontent.com/1737159/209367375-48841ac7-abc5-4f3f-ab43-16d7cdfb3a06.png">
 
-Currently implemented for AudioReactive and 4LineDisplay. Globals will follow
+* show pins which are in use (not selectable)
+* excludes pins which may not be used (e.g. for 4ld/mclk variable)
+* use global pins option
+* undefined option
+
+Currently implemented for AudioReactive and 4LineDisplay (tested) and all usermods which uses pin variables (testing in progress)
 
 ## mm.kno.wled.ge
 December 21, 2022
