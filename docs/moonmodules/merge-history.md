@@ -11,7 +11,8 @@ Our latest work can be found here: [mdev](https://github.com/MoonModules/WLED/tr
 
 ## I2C and SPI pins make over
 Januari 9, 2023
-We (Ewowi and Softhack) were not happy how currently pins are managed. It raises questions in discord we could not answer so we decided to refactor it. It's not easy as a lot is interconnected but we made the first steps:
+
+We were not happy how currently pins are managed. It raises questions in discord we could not answer so we decided to refactor it. It's not easy as a lot is interconnected but we made the first steps:
 
 * Drop down for pin variables (see below)
 * Rebuild the usermods (pins) settings screen so it works the same
@@ -19,7 +20,8 @@ We (Ewowi and Softhack) were not happy how currently pins are managed. It raises
 * do not reset ui variables if something is wrong (e.g. 4ld/type, enabled)
 * use errorMessage instead and show errormessage in settings ui
 * if global pins are -1, then there is no initialization of spi/i2c if usermods set pins to use global no initialisation
-* HLD_PIN_* variables are used in platformio to specify defaults for global pins, no use of the recent introduced new variables I2CSDAPIN (etc) as causes more confusion, HLD_PIN serve these function and is used instead
+* HLD_PIN_* variables are used in platformio to specify defaults for global pins, no use of the recent introduced new variables I2CSDAPIN (etc) as causes more confusion, HLD_PIN serve these function and is used instead, 
+* HW_PIN_DATASPI and HW_PIN_MOSISPI both existed but is one pin, merged to HW_PIN_MOSISPI as MOSI and MISO is both data
 * i2c_scl (etc) variables are used in usermods without if -1 then HLD_PIN check, i2c_scl (etc) most be proper initialized before it can be used.
 * No hijacking of global vars (giving them a value) in usermods 
 * Don't register pins if usermod is not enabled
