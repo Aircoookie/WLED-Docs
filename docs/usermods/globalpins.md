@@ -9,7 +9,19 @@ I2C and SPI
 
 This page is work in progress
 
-## pin allocation
+## Pin dropdowns
+<img width="170" alt="image" src="https://user-images.githubusercontent.com/91013628/212557801-0329826a-9d00-4c85-abd9-049c73c5a773.png">
+
+Nr of pins and functionality is depending on the board chosen (esp8266, esp32, esp32-c2, esp32-c3, esps32-s3)
+
+* First option is undefined or use global (global pin)
+* 🔴 pin used by other usermod / global pins, cannot be selected
+* 🟠 read only pin: will be disabled for signals which write
+* 🟣 reserved pin: cannot be selected
+* ⍼ pin defined by board (e.g. I2C on esp32 is 21/22)
+* ⎌ pin defined by bin / platformio entry
+
+## Pin allocation
 * on 8266 the pins for I2C are fixed (and one i2c unit only). So you can have 0 or 1 I2C bus.
 * on esp32 there are two "I2C units" that can attach to any pin.  So you could have 0 or 1, or 2 I2C buses.
 * currently WLED only uses "i2c unit 0" on esp32. So in reality you can have 0 or 1 I2C bus.
@@ -24,4 +36,8 @@ This page is work in progress
 ## Fork specific info
 
 ### WLED SR
+Pin drop downs not supported
+
+### WLED AC
+Pin drop downs not supported
 
