@@ -246,19 +246,25 @@ The segment is frozen when using individual control, the set effect will not run
 To unfreeze the segment, click the "eye" icon, change any property of the segment or turn off the light.
 
 To set individual LEDs starting from the beginning, use an array of Color arrays `[255, 0, 0]` or hex values `'FF0000'`. 
-Hex values are more efficient than Color arrays and should be when setting a large number of colors.
-`{"seg":{"i":['FF0000', '00FF00', '0000FF']}}` or `{"seg":{"i":[[255,0,0], [0,255,0], [0,0,255]]}}` will set the first LED red, the second green and the third blue.
+Hex values are more efficient than Color arrays and should be when setting a large number of colors.<br>
+`{"seg":{"i":['FF0000', '00FF00', '0000FF']}}` <br>or <br>`{"seg":{"i":[[255,0,0], [0,255,0], [0,0,255]]}}` <br>
+will set the first LED red, the second green and the third blue.
 
-To set individual LEDs, use the LED index followed by its color value.
-`{"seg":{"i":[0,'FF0000', 2,'00FF00', 4,'0000FF']}}` is the same as above, but leaves blank spaces between the lit LEDs.
+To set individual LEDs, use the LED index followed by its color value.<br>
+`{"seg":{"i":[0,'FF0000', 2,'00FF00', 4,'0000FF']}}` <br>is the same as above, but leaves blank spaces between the lit LEDs.
 
-To set ranges of LEDs, use the LED start and stop index followed by its color value.
-`{"seg":{"i":[0,8,'FF0000', 10,18,'0000FF']}}` sets the first eight LEDs to red, leaves out two, and sets another 8 to blue.
+To set ranges of LEDs, use the LED start and stop index followed by its color value. <br>
+`{"seg":{"i":[0,8,'FF0000', 10,18,'0000FF']}}` <br>sets the first eight LEDs to red, leaves out two, and sets another 8 to blue. Note that the **stop** index should be the first LED **after** the range. So if you want to set LEDs 1, 2, and 3, your stop index should be 4.
 
-To set a large number of colors, send multiple api calls of 256 colors at a time.
-`{"seg": {"i":[0,'CC0000', '00CC00', '0000CC', 'CC0000'...]}}` 
-`{"seg": {"i":[256, 'CC0000', '00CC00', '0000CC', 'CC0000'...]}}`
-`{"seg": {"i":[512, 'CC0000', '00CC00', '0000CC', 'CC0000'...]}}`
+To set a large number of colors, send multiple api calls of 256 colors at a time.<br>
+`{"seg": {"i":[0,'CC0000', '00CC00', '0000CC', 'CC0000'...]}}` <br>
+`{"seg": {"i":[256, 'CC0000', '00CC00', '0000CC', 'CC0000'...]}}`<br>
+`{"seg": {"i":[512, 'CC0000', '00CC00', '0000CC', 'CC0000'...]}}`<br>
+Note that the number of instructions possible in one api call is dependant on several things. 
+1. Your device. A more powerfull device can handle more instructions at the same time
+2. Your device current load. I.e. running peek when uploading will reduce the number of instructions the device can handle
+3. Your instructions. I.e HEX color codes will use less resources that DEC and thus more instructions can be handled.
+4. Your composition and addressing type. I.e. If you have a checkers board or dotted line typ pattern where you need to change color every led, it will be much harder on the device than if you have large ranges of colors you want to set. In practise you might not be able to set more that 150 individual LEDs in the checkers scenario, but thousands if you have really large segments like 500 red, leds, then 500 green leds, and so on.
 
 Keep in mind that the LED indices are segment-based, so LED 0 is the first LED of the segment, not of the entire strip.
 Segment features, including Grouping, Spacing, Mirroring and Reverse are functional.
