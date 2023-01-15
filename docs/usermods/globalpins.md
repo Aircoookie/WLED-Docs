@@ -22,8 +22,8 @@ Nr of pins and functionality is depending on the board chosen (esp8266, esp32, e
 * ⎌ pin defined by bin / platformio entry
 
 ## Pin allocation
-* on 8266 the pins for I2C are fixed (and one i2c unit only). So you can have 0 or 1 I2C bus.
-* on esp32 there are two "I2C units" that can attach to any pin.  So you could have 0 or 1, or 2 I2C buses.
+* 8266: default I2C pins for most esp8266 variants are SDA=4 and SCL=5 (and one i2c instance only). So you can have 0 or 1 I2C bus.
+* esp32: has two "I2C hardware units" that can attach to any pin.  So you could have 0 or 1, or 2 I2C buses.
 * currently WLED only uses "i2c unit 0" on esp32. So in reality you can have 0 or 1 I2C bus.
 * WLED does not support "software I2C" - that's a common misunderstanding because people see they can freely chose pins on esp32.
 * once the I2C bus pins are set on ESP32, all usermods have to use these pins for I2C. Changing I2C pins requires a reboot.
