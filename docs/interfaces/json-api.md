@@ -185,6 +185,8 @@ ly | `BBBGGGRRR`: 0 - 100100100 | Loxone RGB value for secondary color. Each col
 ly | `20bbbtttt`: 200002700 - 201006500 | Loxone brightness and color temperature values for secondary color. Brightness `bbb` is specified in the range 0 to 100%. `tttt` defines the color temperature in the range from 2700 to 6500 Kelvin. _(available since 0.11.0, not included in state response)_
 i | array | [Individual LED control](#per-segment-individual-led-control). Not included in state response _(available since 0.10.2)_
 frz | bool | freezes/unfreezes the current effect
+m12 | 0 to 4 [map1D2D.count] | Setting of segment field 'Expand 1D FX'. (0: Pixels, 1: Bar, 2: Arc, 3: Corner)
+si | 0 to 3 | Setting of the sound simulation type for audio enhanced effects. (0: 'BeatSin', 1: 'WeWillRockYou', 2: '10_3', 3: '14_3') (_as of 0.14.0-b1, there are these 4 types defined_)
 
 #### Info object
 
@@ -240,21 +242,29 @@ ip | string | The IP address of this instance. Empty string if not connected. (s
 
 Using the `i` property of the segment object, you can set the LED colors in the segment using the JSON API.  
 Keep in mind that this is non-persistent, if the light is turned off the segment will return to effect mode.  
-The segment is blanked out when using individual control, the set effect will not run.   
-To disable, change any property of the segment or turn off the light.
+The segment is frozen when using individual control, the set effect will not run.   
+To unfreeze the segment, click the "eye" icon, change any property of the segment or turn off the light.
 
-To set individual LEDs starting from the beginning, use an array of Color arrays.
-`{"seg":{"i":[[255,0,0], [0,255,0], [0,0,255]]}}` will set the first LED red, the second green and the third blue.
+To set individual LEDs starting from the beginning, use an array of Color arrays `[255, 0, 0]` or hex values `'FF0000'`. 
+Hex values are more efficient than Color arrays and should be when setting a large number of colors.
+`{"seg":{"i":['FF0000', '00FF00', '0000FF']}}` or `{"seg":{"i":[[255,0,0], [0,255,0], [0,0,255]]}}` will set the first LED red, the second green and the third blue.
 
-To set individual LEDs, use the LED index followed by its Color array.
-`{"seg":{"i":[0,[255,0,0], 2,[0,255,0], 4,[0,0,255]]}}` is the same as above, but leaves blank spaces between the lit LEDs.
+To set individual LEDs, use the LED index followed by its color value.
+`{"seg":{"i":[0,'FF0000', 2,'00FF00', 4,'0000FF']}}` is the same as above, but leaves blank spaces between the lit LEDs.
 
-To set ranges of LEDs, use the LED start and stop index followed by its Color array.
-`{"seg":{"i":[0,8,[255,0,0], 10,18,[0,0,255]]}}` sets the first eight LEDs to red, leaves out two, and sets another 8 to blue.
+To set ranges of LEDs, use the LED start and stop index followed by its color value.
+`{"seg":{"i":[0,8,'FF0000', 10,18,'0000FF']}}` sets the first eight LEDs to red, leaves out two, and sets another 8 to blue.
+
+To set a large number of colors, send multiple api calls of 256 colors at a time.
+`{"seg": {"i":[0,'CC0000', '00CC00', '0000CC', 'CC0000'...]}}` 
+`{"seg": {"i":[256, 'CC0000', '00CC00', '0000CC', 'CC0000'...]}}`
+`{"seg": {"i":[512, 'CC0000', '00CC00', '0000CC', 'CC0000'...]}}`
 
 Keep in mind that the LED indices are segment-based, so LED 0 is the first LED of the segment, not of the entire strip.
 Segment features, including Grouping, Spacing, Mirroring and Reverse are functional.
 This feature is available in build 200829 and above.
+
+Matrices are handled as a non-serpentine layout.
 
 !!! info "Brightness interaction"
     For your colors to apply correctly, make sure the desired brightness is set beforehand. Turning on the LEDs from an off state and setting individual LEDs in the same JSON request will _not_ work!

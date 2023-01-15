@@ -80,7 +80,8 @@ nav:
     - Tutorials: basics/tutorials.md
     - FAQ: basics/faq.md
   - Features:
-    - Effects & Palettes: features/effects-palettes.md
+    - Effects: features/effects.md
+    - Palettes: features/palettes.md
     - Macros: features/macros.md
     - Presets: features/presets.md
     - Segments: features/segments.md
