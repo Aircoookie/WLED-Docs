@@ -18,7 +18,7 @@ Nr of pins and functionality is depending on the board chosen (esp8266, esp32, e
 * 🔴 pin used by other usermod / global pins, cannot be selected
 * 🟠 read only pin: will be disabled for signals which write
 * 🟣 reserved pin: cannot be selected
-* ⍼ pin defined by board (e.g. I2C on esp32 is 21/22)
+* ⍼ pin defined by board (e.g. default I2C on esp32 is 21/22)
 * ⎌ pin defined by bin / platformio entry
 
 ## Pin allocation
