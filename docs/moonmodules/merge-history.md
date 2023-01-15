@@ -12,7 +12,7 @@ Our latest work can be found here: [mdev](https://github.com/MoonModules/WLED/tr
 ## Pin drop downs support read only and reserved pins
 January 14, 2023
 
-<img width="144" alt="Screenshot 2023-01-14 at 18 42 14" src="https://user-images.githubusercontent.com/91013628/212558236-50c7da14-6e7c-489e-bc43-778979e9f844.png">
+<img width="288" alt="Screenshot 2023-01-14 at 18 42 14" src="https://user-images.githubusercontent.com/91013628/212558236-50c7da14-6e7c-489e-bc43-778979e9f844.png">
 
 For more information see https://mm.kno.wled.ge/usermods/globalpins/
 This page is shown if you press here: 
