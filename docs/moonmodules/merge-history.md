@@ -12,7 +12,7 @@ Our latest work can be found here: [mdev](https://github.com/MoonModules/WLED/tr
 ## Pin drop downs support read only and reserved pins
 January 14, 2023
 
-<img width="288" alt="Screenshot 2023-01-14 at 18 42 14" src="https://user-images.githubusercontent.com/91013628/212558236-50c7da14-6e7c-489e-bc43-778979e9f844.png">
+<img width="144" alt="Screenshot 2023-01-14 at 18 42 14" src="https://user-images.githubusercontent.com/91013628/212558236-50c7da14-6e7c-489e-bc43-778979e9f844.png">
 
 For more information see https://mm.kno.wled.ge/usermods/globalpins/
 This page is shown if you press here: 
@@ -50,13 +50,13 @@ This will be work in progress the coming weeks to implement in usermods (AudioRe
 
 Overview of usermods available in _all bins:
 
-<img width="448" alt="Screenshot 2023-01-08 at 15 13 00" src="https://user-images.githubusercontent.com/91013628/211351663-28e23710-b8e5-441b-8ec3-ff774b0dd106.png">
+<img width="224" alt="Screenshot 2023-01-08 at 15 13 00" src="https://user-images.githubusercontent.com/91013628/211351663-28e23710-b8e5-441b-8ec3-ff774b0dd106.png">
 
 
 ## Drop downs for pin variables
 December 23, 2022
 
-<img width="397" alt="image" src="https://user-images.githubusercontent.com/1737159/209367375-48841ac7-abc5-4f3f-ab43-16d7cdfb3a06.png">
+<img width="150" alt="image" src="https://user-images.githubusercontent.com/1737159/209367375-48841ac7-abc5-4f3f-ab43-16d7cdfb3a06.png">
 
 * show pins which are in use (not selectable)
 * excludes pins which may not be used (e.g. for 4ld/mclk variable)
