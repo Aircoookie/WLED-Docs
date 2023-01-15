@@ -27,7 +27,7 @@ Nr of pins and functionality is depending on the board chosen (esp8266, esp32, e
 * currently WLED only uses "i2c unit 0" on esp32. So in reality you can have 0 or 1 I2C bus.
 * WLED does not support "software I2C" on esp32 - that's a common misunderstanding because people see they can freely chose pins on esp32.
 * once the I2C bus pins are set, all usermods have to use these pins for I2C. Changing I2C pins requires a reboot.
-* four-line-display is an exception, because the driver library has its own "software I2C" - slow but can always be used
+* four-line-display is an exception, because the driver library has its own "software I2C" - slow, but can always be used with any availeable pin.
 
 * on both esp32 and 8266, you can decide to not use I2C, and use pins for something else. For example (on 8266), attach some buttons or rotary encoder to gpio 4+5. 
 * similar for SPI - if you want SPI, the pins are fixed on 8266. If you don't need SPI, the pins can be used for something else.
