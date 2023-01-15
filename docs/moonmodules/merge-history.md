@@ -19,6 +19,15 @@ This page is shown if you press here:
 
 <img width="200" src="https://user-images.githubusercontent.com/91013628/212558383-fa3f4171-fda7-4d02-b749-bfff03226952.jpeg">
 
+## Generate presets and playlists
+January 12, 2023
+
+Generate presets of all effects and group them together in playlists for 1D or 2D, Volume or FFT, combinations or all
+
+<video width="160" autoplay><source src="https://user-images.githubusercontent.com/91013628/212558544-1c42abef-9567-4431-b940-366b7ce3362f.mov" type="video/mp4"></video>
+
+<img width="221" alt="Screenshot 2023-01-13 at 15 29 50" src="https://user-images.githubusercontent.com/91013628/212558671-08aa50bd-4cef-4103-85bc-aeb8b37f8aa6.png">
+
 ## I2C and SPI pins make over
 Januari 9, 2023
 
