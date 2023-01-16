@@ -2284,7 +2284,8 @@ Hex values are more efficient than Color arrays and should be when setting a lar
 <p>To set a large number of colors, send multiple api calls of 256 colors at a time.
 <code>{"seg": {"i":[0,'CC0000', '00CC00', '0000CC', 'CC0000'...]}}</code> 
 <code>{"seg": {"i":[256, 'CC0000', '00CC00', '0000CC', 'CC0000'...]}}</code>
-<code>{"seg": {"i":[512, 'CC0000', '00CC00', '0000CC', 'CC0000'...]}}</code></p>
+<code>{"seg": {"i":[512, 'CC0000', '00CC00', '0000CC', 'CC0000'...]}}</code>
+Do not make several calls in parallel, that is not optimal for the device. Instead make your call in sequence, where each call waits for the previous to complete before making a new one. How this is done depends on your choice of tool, but with CURL you que your commands by separating then with <code>&amp;&amp;</code> i.e. <code>CURL [command 1] &amp;&amp; CURL [command 2] &amp;&amp; CURL [command 3]</code>.</p>
 <p>Keep in mind that the LED indices are segment-based, so LED 0 is the first LED of the segment, not of the entire strip.
 Segment features, including Grouping, Spacing, Mirroring and Reverse are functional.
 This feature is available in build 200829 and above.</p>
