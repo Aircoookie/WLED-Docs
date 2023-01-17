@@ -5,9 +5,23 @@ hide:
   # - toc
 ---
 
-I2C and SPI
 
 This page is work in progress
+
+## I2C and SPI
+
+<img width="476" alt="image" src="https://user-images.githubusercontent.com/91013628/212864986-6d76bce7-0032-4624-b9a3-bb30af2e81d7.png">
+
+WLED MM has implemented a more intuitive way of dealing with i2c and spi pins accross usermods. Main changes:
+
+* Do not reset ui variables if something is wrong (e.g. 4ld/type, enabled)
+* Use errorMessage instead and show errormessage in settings ui
+* If global pins are -1/undefined, then there is no initialization of spi/i2c in usermods using global pins
+* HW_PIN_* variables are used in platformio to specify defaults for global pins, HW_PIN variables not used in usermods, there only global pin variabes are used
+* HW_PIN_DATASPI and HW_PIN_MOSISPI both existed but is one pin, merged to HW_PIN_MOSISPI as MOSI and MISO is both data
+* i2c_scl (etc) variables are used in usermods without if -1 then HW_PIN check, i2c_scl (etc) most be proper initialized before it can be used.
+* No hijacking of global vars (giving them a value) in usermods
+* Don't register pins if usermod is not enabled
 
 ## Pin dropdowns
 ESP32 <img width="170" alt="image" src="https://user-images.githubusercontent.com/91013628/212557801-0329826a-9d00-4c85-abd9-049c73c5a773.png"> ESP32-S3 <img width="100" alt="image" src="https://user-images.githubusercontent.com/91013628/212862709-95f150fd-42b8-4191-bbf4-d525ab8978a2.png">ESP32-C3<img width="100" alt="image" src="https://user-images.githubusercontent.com/91013628/212862773-1e330fb8-2f7d-47a7-989c-3791c2fec416.png">
