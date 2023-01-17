@@ -3,7 +3,7 @@ Q. Is it possible to use my PC for the sound and without using the microphone, o
 
 The sound reactive fork of WLED was designed as an all-in-one unit that doesn't require the intervention of a PC. You can setup a display and have it run completely independently. It supports your PC's analog line-out signal, several analog microphones, an INMP441 digital microphone, as well as UDP sound sync:
 
-<https://moonmodules.github.io/WLED-Docs/WLEDSR/UDP-Sound-Sync>
+<https://mm.kno.wled.ge/WLEDSR/UDP-Sound-Sync>
 
 To answer this question, not directly, except for the line-out signal. Although we support UDP sound sync, someone would have to write a program for their OS of choice to capture the sound from the PC, perform FFT calculations, and UDP transmit the sampled data (the packet matching our sound reactive WLED data structure). That's a non-trivial course of action.
 

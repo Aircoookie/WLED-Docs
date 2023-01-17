@@ -5,13 +5,13 @@ This version of WLED contains sound reactive routines, which are prefaced with a
 
 Contents:
 
-* [HTTP API Links](https://moonmodules.github.io/WLED-Docs/WLEDSR/WLED-Programming-Notes#http-api-links), [Updating FX.h](https://moonmodules.github.io/WLED-Docs/WLEDSR/WLED-Programming-Notes#updating-fxh-line-numbers-will-vary), [Updating FX.cpp](https://moonmodules.github.io/WLED-Docs/WLEDSR/WLED-Programming-Notes#updating-fxcpp)
-* [WLED Support Functions](https://moonmodules.github.io/WLED-Docs/WLEDSR/WLED-Programming-Notes#wled-support-functions)
-* [Important WLED variables](https://moonmodules.github.io/WLED-Docs/WLEDSR/WLED-Programming-Notes#important-wled-variables), [Important Structures](https://moonmodules.github.io/WLED-Docs/WLEDSR/WLED-Programming-Notes#important-structures)
-* [Delays in WLED](https://moonmodules.github.io/WLED-Docs/WLEDSR/WLED-Programming-Notes#delays), [Displaying LEDs](https://moonmodules.github.io/WLED-Docs/WLEDSR/WLED-Programming-Notes#displaying-the-leds), [FastLED](https://moonmodules.github.io/WLED-Docs/WLEDSR/WLED-Programming-Notes#fastled), [2D Functionality](https://moonmodules.github.io/WLED-Docs/WLEDSR/WLED-Programming-Notes#2d-functionality)
-* [Variable Length Arrays](https://moonmodules.github.io/WLED-Docs/WLEDSR/WLED-Programming-Notes#on-variable-length-arrays), [Using CRGB Color Space](https://moonmodules.github.io/WLED-Docs/WLEDSR/WLED-Programming-Notes#using-crgb-color-space), [Using CHSV Colour Space](https://moonmodules.github.io/WLED-Docs/WLEDSR/WLED-Programming-Notes#proposed---using-chsv-colour-space)
-* [Non-Dynamically Created Variable Arrays](https://moonmodules.github.io/WLED-Docs/WLEDSR/WLED-Programming-Notes#how-to-use-a-non-dynamically-created-variable-array)
-* [Sound Reactive EEPROM Layout](https://moonmodules.github.io/WLED-Docs/WLEDSR/WLED-Programming-Notes#sound-reactive-eeprom-layout)
+* [HTTP API Links](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#http-api-links), [Updating FX.h](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#updating-fxh-line-numbers-will-vary), [Updating FX.cpp](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#updating-fxcpp)
+* [WLED Support Functions](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#wled-support-functions)
+* [Important WLED variables](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#important-wled-variables), [Important Structures](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#important-structures)
+* [Delays in WLED](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#delays), [Displaying LEDs](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#displaying-the-leds), [FastLED](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#fastled), [2D Functionality](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#2d-functionality)
+* [Variable Length Arrays](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#on-variable-length-arrays), [Using CRGB Color Space](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#using-crgb-color-space), [Using CHSV Colour Space](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#proposed---using-chsv-colour-space)
+* [Non-Dynamically Created Variable Arrays](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#how-to-use-a-non-dynamically-created-variable-array)
+* [Sound Reactive EEPROM Layout](https://mm.kno.wled.ge/WLEDSR/WLED-Programming-Notes#sound-reactive-eeprom-layout)
 
 Caveat: Some information on this page is in our 'dev' branch only and not yet ready for prime time.
 
@@ -283,7 +283,7 @@ Some animations may break when the users start implementing SEGMENTS. Issues enc
 * Triggers. A triggered event, which was reset by the animation. This does not work with SEGMENTS. One workaround is knowing that the MIN_SHOW_DELAY is 15, and then determine if now-original_event > MIN_SHOW_DELAY in order to reset the animation.
 * To get the current segment being displayed, try Serial.println(_segment_index);
 * To use persistent variable across SEGMENTS, don't use 'static', but rather use the existing uint16_t defined SEGENV.aux0 and SEGENV.aux1 variables. Too bad they're not uint32_t.
-* For further reading on persistent variables, see this page https://moonmodules.github.io/WLED-Docs/WLEDSR/Persistent-Variables-and-WLED
+* For further reading on persistent variables, see this page https://mm.kno.wled.ge/WLEDSR/Persistent-Variables-and-WLED
 
 Here's a replacement for EVERY_N_MILLIS()
 

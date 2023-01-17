@@ -1,6 +1,6 @@
 ### Microphone Input
 
-Generally we recommend using [I2S digital sound input](https://moonmodules.github.io/WLED-Docs/WLEDSR/Digital-Microphone-Hookup) - like INMP441, SPH0645,  ICS-43434, or PDM I2S microphones. 
+Generally we recommend using [I2S digital sound input](https://mm.kno.wled.ge/WLEDSR/Digital-Microphone-Hookup) - like INMP441, SPH0645,  ICS-43434, or PDM I2S microphones. 
 Additionally there are solutions for line-in via I2S. For example, boards/shields with "es7243" chip should work already (we have a special driver for these), and we're investigating "es8388".
 
 <br/>
@@ -17,15 +17,15 @@ Model | Compatibility | Notes
 
 See also 
 
-&rArr; [Sound setting examples for common microphones](https://moonmodules.github.io/WLED-Docs/WLEDSR/First-Time-Setup#sound-settings-getting-started-with-common-microphones)
+&rArr; [Sound setting examples for common microphones](https://mm.kno.wled.ge/WLEDSR/First-Time-Setup#sound-settings-getting-started-with-common-microphones)
 
-&rArr; [noise and spikes on analog microphones](https://moonmodules.github.io/WLED-Docs/WLEDSR/Noise-and-Spikes#both-platforms)
+&rArr; [noise and spikes on analog microphones](https://mm.kno.wled.ge/WLEDSR/Noise-and-Spikes#both-platforms)
 
 If you are using the [MAX9814](https://learn.adafruit.com/adafruit-agc-electret-microphone-amplifier-max9814/), you need to connect gain to vdd to set the gain to 40dB as the default 60db has far too much background noise. 
 
 Important: there are some inexpensive sound sensors you can buy from Aliexpress or elsewhere (such as LM393, KY-038 or KY-037). Typically these have an on/off output only (detecting "sound" or "silence"), sometimes there is an additional "analog data out" with very low quality. They may or may not work adequately. For more information on our microphone test results, see our [Arduino Compatible Microphones document](https://github.com/atuline/WLED/blob/assets/docs/Microphones.pdf).
 
-If the LED's are active when the ambient volume is low while running volume only effects beginning with a single '*', you can increase the background noise filtering (or squelch) by navigating to the 'Config | Sound Settings' and [increase the Squelch value](https://moonmodules.github.io/WLED-Docs/WLEDSR/Sound-Settings#how-to). You can also make it more sensitive by lowering that Squelch value. In addition, there is a gain setting, which is required especially for the much lower signal level provided by the line-in configuration. Gain, Squelch and AGC are affecting all soundreactive, volumereactive and frequency (FFT) reactive effects.
+If the LED's are active when the ambient volume is low while running volume only effects beginning with a single '*', you can increase the background noise filtering (or squelch) by navigating to the 'Config | Sound Settings' and [increase the Squelch value](https://mm.kno.wled.ge/WLEDSR/Sound-Settings#how-to). You can also make it more sensitive by lowering that Squelch value. In addition, there is a gain setting, which is required especially for the much lower signal level provided by the line-in configuration. Gain, Squelch and AGC are affecting all soundreactive, volumereactive and frequency (FFT) reactive effects.
 
 **Note 1:** Do NOT connect input devices to 5V (or Vin). The power should be connected to the 3.3V pin.
 
@@ -75,6 +75,6 @@ Line-in signals are typically much lower than that of some of the microphones. R
 
 ### Problems Encountered
 
-* **Noise** - [Some recommendations to reduce noise](https://moonmodules.github.io/WLED-Docs/WLEDSR/First-Time-Setup#noise-and-spikes)
+* **Noise** - [Some recommendations to reduce noise](https://mm.kno.wled.ge/WLEDSR/First-Time-Setup#noise-and-spikes)
 
 * **Spikes** - We've often seen spikes when using an analog microphone in conjunction with WLED. There's an article that should shed light on the issue at [ESP32 microcontroller generates noise on microphone](https://electronics.stackexchange.com/questions/368867/esp32-microcontroller-generates-noise-on-microphone).

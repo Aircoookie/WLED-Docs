@@ -4,9 +4,9 @@ See [WLED General Led Settings](https://github.com/aircoookie/WLED/wiki/Settings
 
 ## LED Settings for Sound Reactive Additions
 
-See [LED Preferences](https://moonmodules.github.io/WLED-Docs/WLEDSR/LED-Preferences)
+See [LED Preferences](https://mm.kno.wled.ge/WLEDSR/LED-Preferences)
 
 ### Sound Reactive Settings
 
-See [Sound Settings](https://moonmodules.github.io/WLED-Docs/WLEDSR/Sound-Settings)
+See [Sound Settings](https://mm.kno.wled.ge/WLEDSR/Sound-Settings)
 

@@ -16,7 +16,7 @@ Although the ESP32 did lose connection with the web server, it was nowhere near 
 ![power_noise_and_mic_output](https://user-images.githubusercontent.com/91616163/205751772-8e954e26-200e-42ba-aff0-2583d45749ab.jpg)
 
 
-On both platforms, we encountered significant spikes when using the analog ADC when the WiFi is active. There are numerous articles on this issue, along with various [methods to reduce the noise](https://moonmodules.github.io/WLED-Docs/WLEDSR/First-Time-Setup#noise-and-spikes). We've found that an I2S microphone, such as the INMP441 or ICS-43434 will provide a better response than any of the analog microphones or input methods that we support.
+On both platforms, we encountered significant spikes when using the analog ADC when the WiFi is active. There are numerous articles on this issue, along with various [methods to reduce the noise](https://mm.kno.wled.ge/WLEDSR/First-Time-Setup#noise-and-spikes). We've found that an I2S microphone, such as the INMP441 or ICS-43434 will provide a better response than any of the analog microphones or input methods that we support.
 
 Here's some [test results](https://github.com/atuline/WLED/blob/assets/docs/Noise%20and%20Spikes.pdf) with the analog input, including strong spikes observed very frequently.
 

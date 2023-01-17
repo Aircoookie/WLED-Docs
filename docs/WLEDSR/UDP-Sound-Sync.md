@@ -5,7 +5,7 @@ UDP Sound Sync does not sync the actual animations, but rather transmits summary
 ## Setup
 Before configuring UDP Sound Sync, make sure you have gone into the WiFi Preferences and clicked on 'Disable WiFi sleep' at the bottom of the page. It has caused us innumerable problems in the past.
 
-In order to configure UDP sound sync, the ‘master’ needs to be an ESP32 along with an [audio input](https://moonmodules.github.io/WLED-Docs/WLEDSR/Sound-Settings).
+In order to configure UDP sound sync, the ‘master’ needs to be an ESP32 along with an [audio input](https://mm.kno.wled.ge/WLEDSR/Sound-Settings).
 
 You would then to go the ‘Sync Interfaces’ page and configure the 'Audio Sync' at the bottom of the page. `Transmit` for the ESP32 and `Receive` for devices without an audio input (either ESP32's or ESP8266's). Make sure the UDP port is the same on all devices.
 

@@ -3,7 +3,7 @@ This page provides WLED programmers information on adding another slider to WLED
 
 ## Updating html_ui.h
 
-Please see [https://moonmodules.github.io/WLED-Docs/WLEDSR/Modifying-Sound-Reactive-WLED](https://moonmodules.github.io/WLED-Docs/WLEDSR/Modifying-Sound-Reactive-WLED) on how to generate html_ui.h since the UI was changed in v0.10.0-alpha-lw.
+Please see [https://mm.kno.wled.ge/WLEDSR/Modifying-Sound-Reactive-WLED](https://mm.kno.wled.ge/WLEDSR/Modifying-Sound-Reactive-WLED) on how to generate html_ui.h since the UI was changed in v0.10.0-alpha-lw.
 
 ***
 

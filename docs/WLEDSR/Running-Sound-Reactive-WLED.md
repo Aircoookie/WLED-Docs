@@ -4,7 +4,7 @@ When you first connect to a WLED device in AP mode, there is some really annoyin
 ### Initial Sound Reactive Settings
 On the _"Sound Settings"_ page, configure the Squelch for a value (default is 10) to reduce your background noise for volume reactive effects. Volume reactive effects start with a single '*'. Typically, values between 4 and 20 should suffice. The higher the number, the greater the background noise is suppressed.   
   
-Configure the Gain setting (default is 60) to change the "perceived volume" of the input signal. More info on [Squelch and Gain here](https://moonmodules.github.io/WLED-Docs/WLEDSR/Sound-Settings#squelch).
+Configure the Gain setting (default is 60) to change the "perceived volume" of the input signal. More info on [Squelch and Gain here](https://mm.kno.wled.ge/WLEDSR/Sound-Settings#squelch).
 
 ### Initial 2D Settings - ESP32 Only
 When changing any values in the LED settings page, you'll need to update the 2D settings. If not using a 2D matrix, you can set them to 1 x <number of LED's> or vice versa.  If using a 2D matrix, configure these values for width x height. A value of less than 4 in either dimension will not work with some of the 2D animations.
@@ -12,9 +12,9 @@ When changing any values in the LED settings page, you'll need to update the 2D 
 The serpentine parameter configures whether the LED's are wired up in a continuous/serpentine layout or top to bottom and repeat.
 
 ### Initial UDP Sync Settings
-Devices can be configured as 'disabled', 'transmit' or 'receive' [UDP sound](https://moonmodules.github.io/WLED-Docs/WLEDSR/UDP-Sound-Sync). This is completely independent of the 'Sync' button, which synchronizes effects. 
+Devices can be configured as 'disabled', 'transmit' or 'receive' [UDP sound](https://mm.kno.wled.ge/WLEDSR/UDP-Sound-Sync). This is completely independent of the 'Sync' button, which synchronizes effects. 
 
-As a result, you can run multiple types of sound reactive animations when [UDP Sound Sync](https://moonmodules.github.io/WLED-Docs/WLEDSR/UDP-Sound-Sync) is enabled. This feature provides a subset of the sound and FFT data to several 'slave' devices. As a result, some FFT enabled routines will not function in this mode. You must RESET the ESP32 after you enable/disable this on the Sync settings page.
+As a result, you can run multiple types of sound reactive animations when [UDP Sound Sync](https://mm.kno.wled.ge/WLEDSR/UDP-Sound-Sync) is enabled. This feature provides a subset of the sound and FFT data to several 'slave' devices. As a result, some FFT enabled routines will not function in this mode. You must RESET the ESP32 after you enable/disable this on the Sync settings page.
 
 
 

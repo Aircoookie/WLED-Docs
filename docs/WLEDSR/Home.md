@@ -59,7 +59,7 @@ Using the WLED 0.10 codebase, our code has been tested with:
 
 
 
-For more information, see our **[Analog Audio Input Options](https://moonmodules.github.io/WLED-Docs/WLEDSR/Analog-Audio-Input-Options)** or **[Digital Audio Input Options](https://moonmodules.github.io/WLED-Docs/WLEDSR/Digital-Microphone-Hookup)** page.
+For more information, see our **[Analog Audio Input Options](https://mm.kno.wled.ge/WLEDSR/Analog-Audio-Input-Options)** or **[Digital Audio Input Options](https://mm.kno.wled.ge/WLEDSR/Digital-Microphone-Hookup)** page.
 
 
 ## Default pins used

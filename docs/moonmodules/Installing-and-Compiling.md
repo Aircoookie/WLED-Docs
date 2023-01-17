@@ -82,7 +82,7 @@ Releases only
 * Bin aware: name of the binary contains fork (WLED, WLEDSR, WLEDMM), version and environment e.g WLEDMM_0.14.0.10_wemos_shield_esp32_4MB_ICS4343x_max.bin. This name is shown in the UI when oploading via OTA
 * Build or upload: Build only creates the bin (to be uploaded via OTA or ESPTOOL), upload directly loads it into an USB connected ESP32 board.
 * Shield environments: Pins for Shield are already preconfigured
-* For developers: See [platformio-entries](https://moonmodules.github.io/WLED-Docs/moonmodules/platformio-entries/)
+* For developers: See [platformio-entries](https://mm.kno.wled.ge/moonmodules/platformio-entries/)
 * In case of brownouts, file system issues etc: erase flash from the PlatformIO Core CLU (find in platformio quick access on the left pane of Code) pio run --target erase
 
 ## Fork specific info
