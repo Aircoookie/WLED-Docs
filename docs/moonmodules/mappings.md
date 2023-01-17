@@ -14,6 +14,11 @@ Below is in processing order
 AKA jmap
 1D expansion: maps a 1D effect to a 2D pattern
 
+From excel/vba <img width="181" alt="image" src="https://user-images.githubusercontent.com/1737159/188688306-b5a5e7d8-3172-43b8-9f53-778ff9a2df3b.png"> via /edit and <img width="98" alt="image" src="https://user-images.githubusercontent.com/1737159/188688993-34c73f35-b642-4120-b31d-c87ea58ea10e.png">
+ to matrix <img width="160" alt="image" src="https://user-images.githubusercontent.com/1737159/188688601-73a9e7f8-34d9-463f-9ec3-1cacaea13d6b.png">
+
+Files are here: [JSONMappings](https://github.com/MoonModules/WLED-Effects/tree/master/JSONMappings)
+
 ### Segment to Logical
 Maps segments to a matrix where (0,0) is always topleft and (width, height) always bottom right.
 Non serpentine
