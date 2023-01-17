@@ -10,7 +10,7 @@ I2C and SPI
 This page is work in progress
 
 ## Pin dropdowns
-<img width="170" alt="image" src="https://user-images.githubusercontent.com/91013628/212557801-0329826a-9d00-4c85-abd9-049c73c5a773.png">
+ESP32 <img width="170" alt="image" src="https://user-images.githubusercontent.com/91013628/212557801-0329826a-9d00-4c85-abd9-049c73c5a773.png"> ESP32-S3 <img width="100" alt="image" src="https://user-images.githubusercontent.com/91013628/212862709-95f150fd-42b8-4191-bbf4-d525ab8978a2.png">ESP32-C3<img width="100" alt="image" src="https://user-images.githubusercontent.com/91013628/212862773-1e330fb8-2f7d-47a7-989c-3791c2fec416.png">
 
 Nr of pins and functionality is depending on the board chosen (esp8266, esp32, esp32-c2, esp32-c3, esps32-s3)
 
@@ -32,6 +32,12 @@ Nr of pins and functionality is depending on the board chosen (esp8266, esp32, e
 * on both esp32 and 8266, you can decide to not use I2C, and use pins for something else. For example (on 8266), attach some buttons or rotary encoder to gpio 4+5. 
 * similar for SPI - if you want SPI, the pins are fixed on 8266. If you don't need SPI, the pins can be used for something else.
 * on esp32 its a bit more complicated even, because the fastest SPI modes are only possible on certains pins. But still if people don't want SPI, the pins can be used for something different.
+
+## Serial pin overview
+After booting WLED MM an overview of allocated pns and possible conflicts is send to Serial output:
+
+<img width="454" alt="image" src="https://user-images.githubusercontent.com/91013628/212862122-06dca5b1-0c37-4e5b-a43d-4a0b372d1698.png">
+
 
 ## Fork specific info
 
