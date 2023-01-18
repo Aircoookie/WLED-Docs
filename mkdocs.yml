@@ -147,6 +147,7 @@ nav:
   - Sound Reactive: 
     - Introduction: soundreactive/wip.md
     - Sound Settings: soundreactive/Sound-Settings.md
+    - Sound Reactive Palettes: soundreactive/Sound-Reactive-Palettes.md
   - WLED SR:
     - Basics:
       - Introduction: WLEDSR/Home.md
