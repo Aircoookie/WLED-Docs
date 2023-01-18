@@ -901,43 +901,78 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#0-disabled" class="md-nav__link">
-    0: Disabled
+  <a href="#disabled" class="md-nav__link">
+    Disabled
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#1-single-rgb" class="md-nav__link">
-    1: Single RGB
+  <a href="#single-rgb" class="md-nav__link">
+    Single RGB
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-single-drgb" class="md-nav__link">
-    2: Single DRGB
+  <a href="#single-drgb" class="md-nav__link">
+    Single DRGB
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-effect" class="md-nav__link">
-    3: Effect
+  <a href="#effect" class="md-nav__link">
+    Effect
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-multiple-rgb" class="md-nav__link">
-    4: Multiple RGB
+  <a href="#effect-white" class="md-nav__link">
+    Effect + White
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-multiple-drgb" class="md-nav__link">
-    5: Multiple DRGB
+  <a href="#effect-segment" class="md-nav__link">
+    Effect Segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effect-segment-white" class="md-nav__link">
+    Effect Segment + White
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-rgb" class="md-nav__link">
+    Multiple RGB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-rgbw" class="md-nav__link">
+    Multiple RGBW
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimmer-multi-rgb" class="md-nav__link">
+    Dimmer + Multi RGB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preset" class="md-nav__link">
+    Preset
   </a>
   
 </li>
@@ -1434,43 +1469,78 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#0-disabled" class="md-nav__link">
-    0: Disabled
+  <a href="#disabled" class="md-nav__link">
+    Disabled
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#1-single-rgb" class="md-nav__link">
-    1: Single RGB
+  <a href="#single-rgb" class="md-nav__link">
+    Single RGB
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-single-drgb" class="md-nav__link">
-    2: Single DRGB
+  <a href="#single-drgb" class="md-nav__link">
+    Single DRGB
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-effect" class="md-nav__link">
-    3: Effect
+  <a href="#effect" class="md-nav__link">
+    Effect
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-multiple-rgb" class="md-nav__link">
-    4: Multiple RGB
+  <a href="#effect-white" class="md-nav__link">
+    Effect + White
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-multiple-drgb" class="md-nav__link">
-    5: Multiple DRGB
+  <a href="#effect-segment" class="md-nav__link">
+    Effect Segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effect-segment-white" class="md-nav__link">
+    Effect Segment + White
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-rgb" class="md-nav__link">
+    Multiple RGB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-rgbw" class="md-nav__link">
+    Multiple RGBW
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimmer-multi-rgb" class="md-nav__link">
+    Dimmer + Multi RGB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preset" class="md-nav__link">
+    Preset
   </a>
   
 </li>
@@ -1518,6 +1588,10 @@ You will need to switch to Art-Net mode in Sync settings and reboot once.  </p>
 <p><strong>As of WLED v0.11.0, DDP is alternatively supported.</strong> Using DDP, the Multi RGB DMX mode is always used regardless of the DMX mode setting (as it is no DMX)
 You will need to switch to DDP mode in Sync settings and reboot once.  </p>
 </div>
+<div class="admonition info">
+<p class="admonition-title">Version Info</p>
+<p><strong>As &gt; WLED 0.14.0-b1, DMX Effect mode channel mapping changed.</strong> This is a breaking change in E131 sync behavior. Existing DMX setups using WLED Effect mode are likely to break. Solution: Adopt external DMX channel mappings according to the new Effect mode channel layout.  </p>
+</div>
 <h3 id="features">Features</h3>
 <ul>
 <li>170 LEDs (510 DMX channels) are supported per universe.</li>
@@ -1538,14 +1612,14 @@ If you want to manually add devices, use more than 170 LEDs with LedFx, you need
 <h2 id="settings">Settings</h2>
 <h3 id="dmx-types">DMX types</h3>
 <p>Select the mode you want to use in Sync settings.</p>
-<h4 id="0-disabled">0: Disabled</h4>
+<h4 id="disabled">Disabled</h4>
 <p>Incoming E1.31 packets will be ignored.</p>
-<h4 id="1-single-rgb">1: Single RGB</h4>
+<h4 id="single-rgb">Single RGB</h4>
 <p>All LEDs are set to the same color. 3 Channels: Red, Green, Blue</p>
-<h4 id="2-single-drgb">2: Single DRGB</h4>
+<h4 id="single-drgb">Single DRGB</h4>
 <p>All LEDs are set to the same color. 4 Channels: Master Dimmer, Red, Green, Blue</p>
-<h4 id="3-effect">3: Effect</h4>
-<p>Not a realtime mode. Allows setting WLED effect properties over E1.31 with 11 or 13 channels.</p>
+<h4 id="effect">Effect</h4>
+<p>Not a realtime mode &amp; only support 1 universe. Allows setting WLED effect properties over E1.31 with 15 channels.</p>
 <table>
 <thead>
 <tr>
@@ -1576,44 +1650,132 @@ If you want to manually add devices, use more than 170 LEDs with LedFx, you need
 </tr>
 <tr>
 <td>6</td>
-<td>Red Primary</td>
+<td>Effect option</td>
 </tr>
 <tr>
 <td>7</td>
-<td>Green Primary</td>
+<td>Red Primary</td>
 </tr>
 <tr>
 <td>8</td>
-<td>Blue Primary</td>
+<td>Green Primary</td>
 </tr>
 <tr>
 <td>9</td>
-<td>Red Secondary</td>
+<td>Blue Primary</td>
 </tr>
 <tr>
 <td>10</td>
-<td>Green Secondary</td>
+<td>Red Secondary</td>
 </tr>
 <tr>
 <td>11</td>
-<td>Blue Secondary</td>
+<td>Green Secondary</td>
 </tr>
 <tr>
 <td>12</td>
-<td>White Primary (channel optional)</td>
+<td>Blue Secondary</td>
 </tr>
 <tr>
 <td>13</td>
-<td>White Secondary (channel optional)</td>
+<td>Red Tertiary</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Green Tertiary</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Blue Tertiary</td>
 </tr>
 </tbody>
 </table>
-<h4 id="4-multiple-rgb">4: Multiple RGB</h4>
+<p>The <code>effect option</code> channel is divided into 4 macro parts to control <em>mirror</em> and <em>reverse</em> states:</p>
+<table>
+<thead>
+<tr>
+<th>value</th>
+<th>mirror</th>
+<th>reverse</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0..63</td>
+<td>false</td>
+<td>false</td>
+<td><strong>none</strong></td>
+</tr>
+<tr>
+<td>64..127</td>
+<td>false</td>
+<td>true</td>
+<td><strong>reverse</strong></td>
+</tr>
+<tr>
+<td>128..191</td>
+<td>true</td>
+<td>false</td>
+<td><strong>mirror</strong></td>
+</tr>
+<tr>
+<td>192..255</td>
+<td>true</td>
+<td>true</td>
+<td><strong>mirror &amp; reverse</strong></td>
+</tr>
+</tbody>
+</table>
+<h4 id="effect-white">Effect + White</h4>
+<p>Same as <code>Effect</code> with additional whites = 18 channels.</p>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Property</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>..</td>
+<td>..</td>
+</tr>
+<tr>
+<td>16</td>
+<td>White Primary</td>
+</tr>
+<tr>
+<td>17</td>
+<td>White Secondary</td>
+</tr>
+<tr>
+<td>18</td>
+<td>White Tertiary</td>
+</tr>
+</tbody>
+</table>
+<h4 id="effect-segment">Effect Segment</h4>
+<p>Same as <code>Effect</code> with 15 channels per segment; expect <code>channel 1 = "Segment Dimmer"</code>.</p>
+<p>All effect segment modes introduce an additional <code>DMX segment spacing</code>. If spacing <code>s = 0</code> subsequent DMX addresses for all segments are created. When <code>s &gt; 0</code> a gap of <code>s</code> DMX addresses between segments is used. To calculate segment DMX fixture addresses:</p>
+<div class="highlight"><pre><span></span><code>Segment DMX Address (i) = DMXAddress + i * (dmxEffectChannels + s)
+</code></pre></div>
+<p>Where <code>DMXAddress</code> = start address as configured in UI, <code>dmxEffectChannels</code> = 15|18 depending on selected effect segment mode, <code>s</code> = address gap as configured in UI and <code>i</code> is the index id of each segment as existing.</p>
+<p>Note: 1 DMX universe = max 512 DMX addresses. So max number of segments depends on start address, selected segment mode and configured DMX segment spacing. To calculate how many segments can be controlled:</p>
+<div class="highlight"><pre><span></span><code>Max segments = floor[ (512 - DMXAddress) / (dmxEffectChannels + s) ]
+</code></pre></div>
+<h4 id="effect-segment-white">Effect Segment + White</h4>
+<p>Same as <code>Effect Segment</code> including whites, so it uses 18 DMX channels per segment.</p>
+<h4 id="multiple-rgb">Multiple RGB</h4>
 <p>3 Channels per LED in sequence. LED 0 Red, LED 0 Green, LED 0 Blue, LED 1 Red, ...
 Default mode, equivalent to pre-0.9.1 E1.31. This is the mode you want to use for xLights and LedFx.</p>
-<h4 id="5-multiple-drgb">5: Multiple DRGB</h4>
-<p>Like Multiple RGB, but the first channel is a brightness control.
+<h4 id="multiple-rgbw">Multiple RGBW</h4>
+<p>Like <code>Multiple RGB</code> + additional white channels.</p>
+<h4 id="dimmer-multi-rgb">Dimmer + Multi RGB</h4>
+<p>Like <code>Multiple RGB</code>, but the first channel is a brightness control.
 Master Dimmer, LED 0 Red, LED 0 Green, ...</p>
+<h4 id="preset">Preset</h4>
+<p>Trigger presets and control brightness. 2 Channels: Brightness, Preset ID</p>
 
 
 
