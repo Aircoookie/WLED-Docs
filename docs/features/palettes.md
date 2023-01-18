@@ -81,7 +81,8 @@ hide:
 | 68 | Red Shift | Vibrant yellow to blue gradient with magenta, purple and red<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_68.gif) 
 | 69 | Red Tide | Waves of yellow, orange and red<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_69.gif)
 | 70 | Candy2 | Faded gradient of yellow, salmon and blue<br />![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_70.gif)
-
+| 71 | Audio Responsive Ratio | Dynamic palette based on FFT audio analysis - sets the RGB value based on the relative amplitude of different frequencies 
+| 72 | Audio Responsive Hue | Dynamic palette based on FFT audio analysis - sets the hue based on that frequency 
 ### Custom Palettes
 
 As of 0.14, up to 10 custom palettes can be uploaded by the user in JSON files named `palette0.json` through `palette9.json`
