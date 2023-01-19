@@ -24,8 +24,9 @@ WLED MM has implemented a more intuitive way of dealing with i2c and spi pins ac
 * Don't register pins if usermod is not enabled
 
 ## Pin dropdowns
-ESP32 <img width="170" alt="image" src="https://user-images.githubusercontent.com/91013628/212557801-0329826a-9d00-4c85-abd9-049c73c5a773.png"> ESP32-S3 <img width="100" alt="image" src="https://user-images.githubusercontent.com/91013628/212862709-95f150fd-42b8-4191-bbf4-d525ab8978a2.png"> ESP32-S2<img width="100" alt="image" src="https://user-images.githubusercontent.com/91013628/212862773-1e330fb8-2f7d-47a7-989c-3791c2fec416.png"> 
-ESP32-C3<img width="100" alt="image" src="https://user-images.githubusercontent.com/91616163/213477428-ce9825a8-843e-4423-983b-42e7131f8c0f.png"> 
+ESP32 <img width="130" alt="classic ESP32 GPIO" src="https://user-images.githubusercontent.com/91013628/212557801-0329826a-9d00-4c85-abd9-049c73c5a773.png"> &nbsp;ESP32-S3 <img width="100" alt="ESP32-S3 GPIO" src="https://user-images.githubusercontent.com/91013628/212862709-95f150fd-42b8-4191-bbf4-d525ab8978a2.png"> &nbsp;ESP32-S2 <img width="100" alt="ESP32-S2 GPIO" src="https://user-images.githubusercontent.com/91013628/212862773-1e330fb8-2f7d-47a7-989c-3791c2fec416.png"> 
+&nbsp;ESP32-C3 <img width="100" alt="ESP32-C3 GPIO" src="https://user-images.githubusercontent.com/91616163/213477428-ce9825a8-843e-4423-983b-42e7131f8c0f.png"> 
+&nbsp;ESP8266 <img width="130" alt="ESP8266 GPIO" src="https://user-images.githubusercontent.com/91616163/213484502-e3d84f63-a25b-40fa-a2db-7fc83d53911d.png">
 
 
 
