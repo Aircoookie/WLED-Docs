@@ -10,7 +10,7 @@ This page is work in progress
 
 ## I2C and SPI
 
-<img width="476" alt="image" src="https://user-images.githubusercontent.com/91013628/212864986-6d76bce7-0032-4624-b9a3-bb30af2e81d7.png">
+<img width="350" alt="image" src="https://user-images.githubusercontent.com/91013628/212864986-6d76bce7-0032-4624-b9a3-bb30af2e81d7.png">
 
 WLED MM has implemented a more intuitive way of dealing with i2c and spi pins accross usermods. Main changes:
 
@@ -52,7 +52,7 @@ Nr of pins and functionality is depending on the board chosen (esp8266, esp32, e
 * on esp32 its a bit more complicated even, because the fastest SPI modes are only possible on certains pins. But still if people don't want SPI, the pins can be used for something different.
 
 ## Serial pin overview
-After booting WLED MM an overview of allocated pns and possible conflicts is send to Serial output:
+After booting WLED MM an overview of allocated pins and possible conflicts is send to Serial output:
 
 <img width="454" alt="image" src="https://user-images.githubusercontent.com/91013628/212862122-06dca5b1-0c37-4e5b-a43d-4a0b372d1698.png">
 
