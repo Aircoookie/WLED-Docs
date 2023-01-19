@@ -29,7 +29,6 @@ ESP32 <img width="130" alt="classic ESP32 GPIO" src="https://user-images.githubu
 &nbsp;ESP8266 <img width="130" alt="ESP8266 GPIO" src="https://user-images.githubusercontent.com/91616163/213484502-e3d84f63-a25b-40fa-a2db-7fc83d53911d.png">
 
 
-
 Nr of pins and functionality is depending on the board chosen (esp8266, esp32, esp32-c2, esp32-c3, esps32-s3)
 
 * First option is undefined or use global (global pin)
