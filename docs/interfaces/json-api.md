@@ -259,6 +259,7 @@ To set a large number of colors, send multiple api calls of 256 colors at a time
 `{"seg": {"i":[0,'CC0000', '00CC00', '0000CC', 'CC0000'...]}}` 
 `{"seg": {"i":[256, 'CC0000', '00CC00', '0000CC', 'CC0000'...]}}`
 `{"seg": {"i":[512, 'CC0000', '00CC00', '0000CC', 'CC0000'...]}}`
+Do not make several calls in parallel, that is not optimal for the device. Instead make your call in sequence, where each call waits for the previous to complete before making a new one. How this is done depends on your choice of tool, but with CURL you que your commands by separating then with ` && ` i.e. `CURL [command 1] && CURL [command 2] && CURL [command 3]`.
 
 Keep in mind that the LED indices are segment-based, so LED 0 is the first LED of the segment, not of the entire strip.
 Segment features, including Grouping, Spacing, Mirroring and Reverse are functional.
