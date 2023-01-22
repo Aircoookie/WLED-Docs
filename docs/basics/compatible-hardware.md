@@ -130,7 +130,15 @@ ESP-01 | ESP8266 | One of the first and cheapest ESP8266 boards available. **_No
 | Name | Description ||
 |---|---|---|
 [ESP32 mini dev board 16mb](https://github.com/srg74/ESP32-mini-SerKo) | by SerKo (aka Serg). Buy on [Tindie US](https://www.tindie.com/products/28858/) or [Tindie EU](https://www.tindie.com/products/28788/). ESP32 Dev Board with latest WROOM-32E module, USB Type-C, PTC fused, over-voltage protection. D1 Mini32 form factor and compatible [pin out](https://github.com/srg74/ESP32-mini-SerKo/blob/main/Resources/ESP32_mini_board_pinout.pdf) | <img width="240" alt="image" src="https://user-images.githubusercontent.com/91013628/213931205-520ed9e9-9195-4738-9a05-839ad7d57791.png">
-[ESP32 pico board with digital microphone] | by SerKo (aka Serg). Buy on [Tindie US](https://www.tindie.com/products/serg74/esp32-wled-pico-board/) or [Tindie EU](https://www.tindie.com/products/29131/). ESP32-pico-D4 development board with integrated ics-43434 microphone | <img width="240" alt="image" src="https://user-images.githubusercontent.com/91013628/213931625-0804dc5d-6bce-4c37-ab00-52e11573a2b6.png">
+[ESP32 pico board with digital microphone](https://github.com/srg74/WLED-ESP32-pico) | by SerKo (aka Serg). Buy on [Tindie US](https://www.tindie.com/products/serg74/esp32-wled-pico-board/) or [Tindie EU](https://www.tindie.com/products/29131/). ESP32-pico-D4 development board with integrated ics-43434 microphone | <img width="240" alt="image" src="https://user-images.githubusercontent.com/91013628/213931625-0804dc5d-6bce-4c37-ab00-52e11573a2b6.png">
+
+## Microphones on Tindie
+🌜
+
+| Name | Description ||
+|---|---|---|
+Digital I2S microphone ICS-43434 | by SerKo (aka Serg). Buy on [Tindie US](https://www.tindie.com/products/serg74/digital-i2s-microphone-ics-43434-add-on/) or [Tindie EU](https://www.tindie.com/products/28781/). | <img width="240" alt="image" src="https://user-images.githubusercontent.com/91013628/213933631-2e613a69-9f30-40c8-a297-13563843b56f.png"> 
+Digital I2S PDM microphone SPM1423 | by SerKo (aka Serg). Buy on [Tindie EU](https://www.tindie.com/products/28781/). | <img width="240" alt="image" src="https://user-images.githubusercontent.com/91013628/213933684-f6c83270-4621-435c-9ddc-0fe5807b54a2.png"> 
 
 ## Useful boards and addons
 
