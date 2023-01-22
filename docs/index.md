@@ -30,10 +30,10 @@ See [Features](https://github.com/MoonModules/WLED/wiki/Features) for an overvie
 * Aircoookie/WLED will be referred to as WLED AC or upstream in this documentation
 * MoonModules/WLED will be referred to as WLED MM in this documentation
 * Atuline/WLED will be referred to as WLED SR in this documentation (As this was called WLED Sound Reactive)
-* This documentation is a fork of WLED AC documentation ([kno.wled.ge](http://kno.wled.ge)
-* The menu options Welcome, Basics, Features, Interfaces, Advanced and About originate from kno.wled.ge
+* This documentation is a fork of WLED AC documentation ([kno.wled.ge](http://kno.wled.ge))
+* The menu options Welcome, Basics, Features, Interfaces, Advanced and About originate from upstream
 * The menu options Usermods, MoonModules, 2D, Sound Reactive and WLEDSR are added
-* Usermods are the readme.md files of usermods and will move to kno.wled.ge (see https://github.com/Aircoookie/WLED/pull/2965)
+* Usermods are the readme.md files of usermods and will move to upstream (see https://github.com/Aircoookie/WLED/pull/2965)
 * WLEDSR is a 1:1 copy of [WLED SR Wiki](https://github.com/atuline/WLED/wiki) and will slowly moved to menu items more to the left (updated to 0.14 functionality)
 * MoonModules, 2D and SoundReactive might also be moved to the left, depending on how upstream will organise these topics
 * To see where this documantation differs from upstream documentation the following icons will be used in Welcome, Basics, Features, Interfaces, Advanced and About:🌜: Specific to WLED MM, 🎸: Specific to WLED SR
