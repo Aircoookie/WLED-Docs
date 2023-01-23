@@ -129,6 +129,7 @@ nav:
       - Temperature: usermods/Temperature.md
       - MultiRelay: usermods/MultiRelay.md
       - PIRsensorSwitch: usermods/PIRsensorSwitch.md
+      - Weather: usermods/Weather.md
       - Pin Manager: usermods/pinmanager.md
   - MoonModules: 
     - What is MoonModules: moonmodules/what-is-moonmodules.md
@@ -138,10 +139,7 @@ nav:
     - Mappings: moonmodules/mappings.md
     - Custom Effects: moonmodules/custom-effects.md
     - Platformio entries: moonmodules/platformio-entries.md
-    - Multiple Segment Effects: moonmodules/wip.md
     - Preset API commands: moonmodules/preset-api-commands.md
-    - Usermods:
-      - Weather: moonmodules/Weather.md
     - Contribute to docs: moonmodules/contribute-docs.md
   - 2D: 
     - WIP: 2D/wip.md
