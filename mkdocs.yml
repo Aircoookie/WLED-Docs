@@ -131,6 +131,7 @@ nav:
       - PIRsensorSwitch: usermods/PIRsensorSwitch.md
       - Pin Manager: usermods/pinmanager.md
   - MoonModules: 
+    - What is MoonModules: moonmodules/what-is-moonmodules.md
     - Fork comparison: moonmodules/fork-comparison.md
     - Merge history: moonmodules/merge-history.md
     - Installing and Compiling: moonmodules/Installing-and-Compiling.md
