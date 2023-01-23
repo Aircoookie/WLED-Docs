@@ -7,7 +7,9 @@ hide:
 
 WLED AC 0.14 = (WLED AC 0.13 + WLED SR)(2.0). 
 
-WLED SR is for the last 2 years maintained mainly by @softhack007 and @ewowi. 
+WLED MM 0.14 (🌜) = WLED AC 0.14 + Extra features
+
+WLED SR (🎸) is for the last 2 years maintained mainly by @softhack007 and @ewowi. 
 
 WLED AC 0.14 has been made mainly by @Aircoookie , @blazoncek , @softhack007 and @ewowi. 
 
