@@ -47,4 +47,4 @@ There are a few tips and recomendations to keep in mind when designing your setu
 
 ### Virtual LEDs (DDP)
 
-See [Virtual Leds](/advanced/ddp.md)
+See [Virtual Leds](/advanced/ddp)
