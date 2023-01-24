@@ -47,5 +47,4 @@ There are a few tips and recomendations to keep in mind when designing your setu
 
 ### Virtual LEDs (DDP)
 
-You can now add virtual LEDs which are distributed across one or more ESPs. Select DDP RGB (Network) as the LED type and enter the LED count and IP address for each. An ESP32 is best for this role, but you can use up to 300 LEDs with an ESP8266. Note that this is only RGB data (no white) for now.
-
+See [Virtual Leds](advanced/ddp.md)
