@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#retired-effects" class="md-skip">
+        <a href="#effect-overlay" class="md-skip">
           Skip to content
         </a>
       
@@ -646,6 +646,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#effect-overlay" class="md-nav__link">
+    Effect Overlay
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#retired-effects" class="md-nav__link">
@@ -1289,6 +1296,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#effect-overlay" class="md-nav__link">
+    Effect Overlay
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#retired-effects" class="md-nav__link">
     Retired Effects
   </a>
@@ -1321,6 +1335,11 @@
 <p>Effects above 117 are only available 0.14+ or Sound Reactive forks.<br />
 <a href="#retired-effects">Retired Effects</a> - Can't find an old favorite? Look here.</p>
 </div>
+<h4 id="effect-overlay">Effect Overlay</h4>
+<p>Some effects can be overlaid on the background of another effect. To use overlay, set up
+segments with overlapping pixels. The overlay effect must be playing on the segment with the higher id. 
+If the Overlay option is checked, the background will not be painted and the effect
+from the lower segment will be displayed.</p>
 <p>To aid in showing where colors vs palettes are used, all effects are rendered with the 
 <em>Party</em> palette <img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/PAL_06.gif" /><br />
 and the colors: <br />
@@ -1401,7 +1420,7 @@ and the colors: <br />
 <td>Sets each LED to a random color <br /> <img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_007.gif" /></td>
 <td>⋮</td>
 <td>🎨</td>
-<td>Speed, Intensity</td>
+<td>Speed, Intensity, Smooth</td>
 </tr>
 <tr>
 <td align="right">8</td>
@@ -1489,7 +1508,7 @@ and the colors: <br />
 <td>Fills LEDs with primary in random order, then off again <br /> <img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_018.gif" /></td>
 <td>⋮</td>
 <td>🎨 Fx, Bg</td>
-<td>Repeat speed, Dissolve speed</td>
+<td>Repeat speed, Dissolve speed, Random</td>
 </tr>
 <tr>
 <td align="right">19</td>
@@ -1857,7 +1876,7 @@ and the colors: <br />
 <td>Simulates flickering fire in red and yellow <br /> <img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_066.gif" /></td>
 <td>⋮</td>
 <td>🎨</td>
-<td>Cooling, Spark rate</td>
+<td>Cooling, Spark rate, Boost</td>
 </tr>
 <tr>
 <td align="right">67</td>
@@ -2296,8 +2315,8 @@ and the colors: <br />
 <td>Scrolling Text</td>
 <td>Edit segment name to set text (#DATE and #TIME to include those) <br /> <img alt="" src="https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_122.gif" /></td>
 <td>▦</td>
-<td>🎨 Fx, Bg</td>
-<td>Speed, Y Offset, Trail, Font size, Overlay</td>
+<td>🎨 Fx, Bg, Gradient</td>
+<td>Speed, Y Offset, Trail, Font size, Gradient, Overlay</td>
 </tr>
 <tr>
 <td align="right">123</td>
