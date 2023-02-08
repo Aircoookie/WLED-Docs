@@ -246,7 +246,7 @@ The segment is frozen when using individual control, the set effect will not run
 To unfreeze the segment, click the "eye" icon, change any property of the segment or turn off the light.
 
 To set individual LEDs starting from the beginning, use an array of Color arrays `[255, 0, 0]` or hex values `'FF0000'`. 
-Hex values are more efficient than Color arrays and should be when setting a large number of colors.
+Hex values are more efficient than Color arrays and should be when setting a large number of colors.  
 `{"seg":{"i":['FF0000', '00FF00', '0000FF']}}` or `{"seg":{"i":[[255,0,0], [0,255,0], [0,0,255]]}}` will set the first LED red, the second green and the third blue.
 
 To set individual LEDs, use the LED index followed by its color value.
@@ -259,11 +259,15 @@ To set a large number of colors, send multiple api calls of 256 colors at a time
 `{"seg": {"i":[0,'CC0000', '00CC00', '0000CC', 'CC0000'...]}}` 
 `{"seg": {"i":[256, 'CC0000', '00CC00', '0000CC', 'CC0000'...]}}`
 `{"seg": {"i":[512, 'CC0000', '00CC00', '0000CC', 'CC0000'...]}}`
+
 Do not make several calls in parallel, that is not optimal for the device. Instead make your call in sequence, where each call waits for the previous to complete before making a new one. How this is done depends on your choice of tool, but with CURL you que your commands by separating then with ` && ` i.e. `CURL [command 1] && CURL [command 2] && CURL [command 3]`.
+
+!!! tip "Command buffer size"
+    If you are trying to set many and it fails to work, you can check your request [here](https://arduinojson.org/v6/assistant) for length.
+    Select ESP32 and Deserialize. If the required buffer size is above 10K for ESP8266 and 24K for ESP32, please split it into multiple sequential requests.
 
 Keep in mind that the LED indices are segment-based, so LED 0 is the first LED of the segment, not of the entire strip.
 Segment features, including Grouping, Spacing, Mirroring and Reverse are functional.
-This feature is available in build 200829 and above.
 
 Matrices are handled as a non-serpentine layout.
 
