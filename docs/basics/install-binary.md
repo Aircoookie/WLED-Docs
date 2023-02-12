@@ -10,9 +10,14 @@ hide:
 !!! tip
     This is by far the easiest and fastest way to get WLED up and running!
 
-Make sure you are running a recent desktop Chrome or Edge browser and head over to the [installer site](https://install.wled.me)!
+Make sure you are running a recent desktop Chrome or Edge browser and head over to the [WLED installer site](https://install.wled.me)!
 If you are updating an existing version of WLED, make sure to uncheck "Clean install" so that your settings are kept.
 This installer is not yet available for ESPs with flash chips smaller than 4MB (e.g. ESP01)
+
+!!! tip
+    In case you want to flash WLED with audioreactive usermod, 
+    several users reported that this alternate installer site may work better: [https://wled-install.github.io/](https://wled-install.github.io/).
+    It seems that the standard WLED installer sometimes fails to properly initialize microphone hardware.
 
 ### Flashing method 2: esptool
 
@@ -52,16 +57,23 @@ esptool.py erase_flash
 
 If you have a MagicHome controller, here is a [good video tutorial](https://www.youtube.com/watch?v=qgBAU39v07k) on how to flash it.
 
-### Flashing method 3: [ESP Home Flasher](https://github.com/esphome/esphome-flasher/releases) tool
+### ESP8266 Flashing method 3: [ESP Home Flasher](https://github.com/esphome/esphome-flasher/releases) tool
 
 !!! warning
-    On ESP32, this will make the filesystem very small (61kB), which leads to issues making presets. Please consider using the web installer or esptool.
+    Don't use ESP Home Flasher for ESP32.   
+    On ESP32, ESP Home Flasher will make the filesystem very small (61kB), which leads to issues making presets. 
+    Please consider using [WLED ESP Flasher](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher), or the web installer or esptool.
 
 This is a GUI-based tool recommended by some users as easier to use than esptool.
 For some ESP32 boards, you might have to press some buttons after uploading:
 > Hold both buttons down, plug it in, start flashing, then when it tries to detect, let go of the button to the left of the USB as you look at it, then when it detects the board type, let go of the other button.
 
 If running Windows, you need a driver from here: <https://www.wemos.cc/en/latest/ch340_driver.html> before your computer will show the COM port in ESPhome Flasher. With a Wemos D1 mini you do not need to hold down the reset button while flashing.
+
+
+!!! tip
+    On ESP32, you can use this [WLED ESP Flasher](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher) instead of ESP Home Flasher.
+
 
 ### Flashing method 4: OTA update
 
