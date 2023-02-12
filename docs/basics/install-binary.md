@@ -15,9 +15,9 @@ If you are updating an existing version of WLED, make sure to uncheck "Clean ins
 This installer is not yet available for ESPs with flash chips smaller than 4MB (e.g. ESP01)
 
 !!! tip
-    In case you want to flash WLED with audioreactive usermod, 
+    In case you want to flash WLED with audioreactive usermod: 
     several users reported that this alternate installer site may work better: [https://wled-install.github.io/](https://wled-install.github.io/).
-    It seems that the standard WLED installer sometimes fails to properly initialize microphone hardware.
+    After using the standard WLED installer, microphone hardware sometimes cannot be initialized properly by WLED.
 
 ### Flashing method 2: esptool
 
@@ -60,7 +60,7 @@ If you have a MagicHome controller, here is a [good video tutorial](https://www.
 ### ESP8266 Flashing method 3: [ESP Home Flasher](https://github.com/esphome/esphome-flasher/releases) tool
 
 !!! warning
-    Don't use ESP Home Flasher for ESP32.   
+    Don't use ESP Home Flasher for ESP32 boards.   
     On ESP32, ESP Home Flasher will make the filesystem very small (61kB), which leads to issues making presets. 
     Please consider using [WLED ESP Flasher](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher), or the web installer or esptool.
 
@@ -72,7 +72,7 @@ If running Windows, you need a driver from here: <https://www.wemos.cc/en/latest
 
 
 !!! tip
-    On ESP32, you can use this [WLED ESP Flasher](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher) instead of ESP Home Flasher.
+    For ESP32 boards, you can use this [WLED ESP Flasher](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher) instead of ESP Home Flasher.
 
 
 ### Flashing method 4: OTA update
