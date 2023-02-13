@@ -65,7 +65,7 @@ If you have a MagicHome controller, here is a [good video tutorial](https://www.
     Please consider using [WLED ESP Flasher](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher), or the web installer or esptool.
 
 This is a GUI-based tool recommended by some users as easier to use than esptool.
-For some ESP32 boards, you might have to press some buttons after uploading:
+For some boards, you might have to press some buttons after uploading:
 > Hold both buttons down, plug it in, start flashing, then when it tries to detect, let go of the button to the left of the USB as you look at it, then when it detects the board type, let go of the other button.
 
 If running Windows, you need a driver from here: <https://www.wemos.cc/en/latest/ch340_driver.html> before your computer will show the COM port in ESPhome Flasher. With a Wemos D1 mini you do not need to hold down the reset button while flashing.
