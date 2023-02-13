@@ -62,7 +62,7 @@ If you have a MagicHome controller, here is a [good video tutorial](https://www.
 !!! warning
     Don't use ESP Home Flasher for ESP32 boards.   
     On ESP32, ESP Home Flasher will make the filesystem very small (61kB), which leads to issues making presets. 
-    Please consider using [WLED ESP Flasher](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher), or the web installer or esptool.
+    Please consider using [WLED ESP Flasher](/basics/install-wled-flasher), or the web installer or esptool.
 
 This is a GUI-based tool recommended by some users as easier to use than esptool.
 For some boards, you might have to press some buttons after uploading:
@@ -72,7 +72,7 @@ If running Windows, you need a driver from here: <https://www.wemos.cc/en/latest
 
 
 !!! tip
-    For ESP32 boards, you can use this [WLED ESP Flasher](https://github.com/srg74/WLED-wemos-shield/tree/master/resources/Firmware/WLED_%20ESP_Flasher) instead of ESP Home Flasher.
+    For ESP32 boards, you can use this [WLED ESP Flasher](/basics/install-wled-flasher) instead of ESP Home Flasher.
 
 
 ### Flashing method 4: OTA update
