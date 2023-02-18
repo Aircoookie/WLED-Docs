@@ -42,7 +42,7 @@ Multiple buttons are implemented since 0.13 and allow a few different types of b
 - momentary push-buttons that are normally open and short GPIO pin to ground (active low)
 - momentary push-buttons that are normally closed and release the connection from GPIO pin to GND (inverted, active high)
 - switches (be careful with selection of GPIO for switch since some GPIOs will prevent successful boot of ESP if held LOW or HIGH at boot)
-- PIR switch AKA motion detection sensor (they set GPIO HIGH when motion is detected, this type of buttons will also trigger MQTT message with /motion topic)
+- PIR switch AKA motion detection sensor (they set GPIO HIGH when motion is detected, this type of buttons will also trigger MQTT message with /motion topic if "Publish on button press" is set on MQTT config)
 - some GPIO pins on ESP32 can act as momentary touch buttons with no additional hardware
 - analog "buttons" (also with inverted logic) those can be used as potentiometers or analog input buttons
 
