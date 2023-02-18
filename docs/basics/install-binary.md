@@ -16,7 +16,7 @@ This installer is not yet available for ESPs with flash chips smaller than 4MB (
 
 !!! tip
     In case you want to flash WLED with audioreactive usermod: 
-    several users reported that this alternate installer site may work better: [https://wled-install.github.io/](https://wled-install.github.io/).
+    Several users reported that this alternative, unofficial installer site may work better: [https://wled-install.github.io/](https://wled-install.github.io/).
     After using the standard WLED installer, microphone hardware sometimes cannot be initialized properly by WLED.
 
 ### Flashing method 2: esptool
