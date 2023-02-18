@@ -17,7 +17,7 @@
         <link rel="next" href="../presets/">
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.12">
     
     
       
@@ -1393,7 +1393,7 @@ For further buttons, the default action for short press is cycling effects, long
 <li>momentary push-buttons that are normally open and short GPIO pin to ground (active low)</li>
 <li>momentary push-buttons that are normally closed and release the connection from GPIO pin to GND (inverted, active high)</li>
 <li>switches (be careful with selection of GPIO for switch since some GPIOs will prevent successful boot of ESP if held LOW or HIGH at boot)</li>
-<li>PIR switch AKA motion detection sensor (they set GPIO HIGH when motion is detected, this type of buttons will also trigger MQTT message with /motion topic)</li>
+<li>PIR switch AKA motion detection sensor (they set GPIO HIGH when motion is detected, this type of buttons will also trigger MQTT message with /motion topic if "Publish on button press" is set on MQTT config)</li>
 <li>some GPIO pins on ESP32 can act as momentary touch buttons with no additional hardware</li>
 <li>analog "buttons" (also with inverted logic) those can be used as potentiometers or analog input buttons</li>
 </ul>
@@ -1565,7 +1565,7 @@ On ESP32, only ADC1 pins will work for analog input while WiFi is active (pins 3
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs", "content.action.edit"], "search": "../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6df46069.min.js"></script>
+      <script src="../../assets/javascripts/bundle.4b2c34cd.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
