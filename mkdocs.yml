@@ -19,6 +19,7 @@ theme:
     # - navigation.expand
     - navigation.instant
     - navigation.tabs
+    - content.action.edit
     # - toc.integrate
   palette:
     - scheme: wled
