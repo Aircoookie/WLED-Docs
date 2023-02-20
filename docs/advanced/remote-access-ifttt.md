@@ -5,14 +5,14 @@ hide:
   # - toc
 ---
 
-WLED is open-source, DIY software. This means all services are hosted locally on your ESP8266.
-Because of this, you can only control your lights from within your local (home) network.
+WLED is open-source, DIY software. This means all services are hosted locally on your ESP8266/32.
+Therefore you can only control your lights from within your local (home) network.
 
 If you need to control WLED from anywhere (the public internet) you can do so in multiple ways, some requiring additional hardware:
 
-### 1. Blynk
+### 1. Home Automation systems
 
-From version 0.7.1, WLED supports the free IoT cloud Blynk! See [this](/interfaces/blynk) for details! It has a nice app for you to control the lights from anywhere!
+If you add your WLED device to your Home Automation system (e.g. Home Assistant or ioBroker), you can control WLED remotely if you have set up remote access for your Home Automation system, for example via Nabu Casa.
 
 ### 2. Amazon Echo device
 If you have set up your Alexa device to control WLED, you can just use the Alexa App or another Echo device linked to your account to control your lights (on/off and brightness only)
