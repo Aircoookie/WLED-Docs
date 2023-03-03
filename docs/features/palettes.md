@@ -85,10 +85,9 @@ hide:
 ### Custom Palettes
 
 As of 0.14, up to 10 custom palettes can be uploaded by the user in JSON files named `palette0.json` through `palette9.json`
-The format closely resembles that of the palettes defined in `palettes.h`. An example of the content would be:
+The format closely resembles that of the palettes defined in `palettes.h` with a position (0-255), red, green, blue for each color. An example of the content would be:
 ```
 {"palette":[ 
-//pos,   R,   G,   B
     0, 255,  33,   4, 
    43, 255,  68,  25,
    86, 255,   7,  25,
@@ -97,7 +96,6 @@ The format closely resembles that of the palettes defined in `palettes.h`. An ex
   209,  42, 255, 22,
   255,  87, 255, 65]}
 ```
-The position is the 0-255 value for where each color should be placed.
 
 Once a palette[0-9].json file has been created, it can be uploaded to the controller using the `/edit` page (http://[controller-ip]/edit).
 The controller must be rebooted (`/win&RB`) before the newly uploaded palettes will be available. 
