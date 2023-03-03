@@ -17,7 +17,7 @@
         <link rel="next" href="../macros/">
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.0">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ffa9267a.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.402914a4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -1692,9 +1692,8 @@
 </table>
 <h3 id="custom-palettes">Custom Palettes</h3>
 <p>As of 0.14, up to 10 custom palettes can be uploaded by the user in JSON files named <code>palette0.json</code> through <code>palette9.json</code>
-The format closely resembles that of the palettes defined in <code>palettes.h</code>. An example of the content would be:
+The format closely resembles that of the palettes defined in <code>palettes.h</code> with a position (0-255), red, green, blue for each color. An example of the content would be:
 <div class="highlight"><pre><span></span><code>{&quot;palette&quot;:[ 
-//pos,   R,   G,   B
     0, 255,  33,   4, 
    43, 255,  68,  25,
    86, 255,   7,  25,
@@ -1702,8 +1701,7 @@ The format closely resembles that of the palettes defined in <code>palettes.h</c
   170, 255, 255, 242,
   209,  42, 255, 22,
   255,  87, 255, 65]}
-</code></pre></div>
-The position is the 0-255 value for where each color should be placed.</p>
+</code></pre></div></p>
 <p>Once a palette[0-9].json file has been created, it can be uploaded to the controller using the <code>/edit</code> page (http://[controller-ip]/edit).
 The controller must be rebooted (<code>/win&amp;RB</code>) before the newly uploaded palettes will be available. 
 After reboot, the custom palette(s) will be named <code>~ Custom [0-9] ~</code> in the Palettes section of the user interface. </p>
@@ -1824,7 +1822,7 @@ After reboot, the custom palette(s) will be named <code>~ Custom [0-9] ~</code> 
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs", "content.action.edit"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ce72ebac.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
