@@ -5,39 +5,56 @@ hide:
   # - toc
 ---
 
-The Pixel Art Converter tool aims to make it easier to show pixelart on a LED matrix panel, by converting any image to 2D pixelart and send it to the WLED device.
+The Pixel Art Converter tool aims to make it easier to show pixelart on a LED matrix panel, by converting any image to 2D pixelart and send it to the WLED device. The filetypes PNG, JPG, WEBP and GIF have been tested to work with the tool.
 
-## Installation approaches
+## Installation Approaches
 
-There are two ways to install the pixel art converter:
+There are three ways to install the pixel art converter:
 
 1. Local web browser. Will a web page run on the local machine connecting to the WLED device but will require to fetch an extra file. Supported from WLED release [v0.14.0-b1](https://github.com/Aircoookie/WLED/blob/main/CHANGELOG.md#wled-release-0140-b1) or later
 2. Include the pixel art converter in the binary and compile from source. Allows access the pixel art converter on any device that have a connection to the WLED device. Supported from WLED release [v0.14.0-b2](https://github.com/Aircoookie/WLED/blob/main/CHANGELOG.md#build-2301240) (PR [#3042](https://github.com/Aircoookie/WLED/pull/3042))
+3. WLED editer mode. Upload the web page to your WLED device while it is running
 
 ### Approach 1: Local Browser
-The instruction for the pixel art generator is best described in the original repository under "Basic Operations": [https://github.com/werkstrom/WLED-PixelArtConverter/](https://github.com/werkstrom/WLED-PixelArtConverter/).
 
-### Approach 2: Include Pixart Converter in build files
+1. Download the `pixartmin.htm` from the [WLED-PixelArtConverter](https://github.com/werkstrom/WLED-PixelArtConverter/) repository
+2. Open `pixartmin.htm` in a browser
+3. Head over to the [Setup 2D Matrix](#setup-2d-matrix) point
+
+
+
+### Approach 2: Include Pixart Converter In Build Files
 !!! warning "Compilation required"
-	Compiling WLED from source is required. Follow the instructions on [compiling WLED](advanced/compiling-wled) in order to do this.
+	Compiling WLED from source is required. Follow the instructions on [compiling WLED](../../advanced/compiling-wled) and in order to do this.
 
-1. Set the flag `#define WLED_ENABLE_PIXART` in `./WLED/wled00/my_config.h`
+1. Follow the instructions under [Making a custom environment](../../advanced/compiling-wled/#making-a-custom-environment) and set the flag `-D WLED_ENABLE_PIXART` under the line that starts with `build_flags =` in `platformio_override.ini`
 2. Compile and flash the binary to the ESP board
-3. Power on board and connect via WiFi using the [default login](basics/getting-started/)
+3. Power on board and connect via WiFi using the [default login](../../basics/getting-started/)
+4. It is now time to [Setup the 2D Matrix](#setup-2d-matrix)
 
-## Setup 2D matrix
+### Approach 3: WLED Editor Mode
+
+!!! note "Network connection"
+	A network connection is required in order to connect to the CDN, hosting the JS library [Ace](https://github.com/ajaxorg/ace), an embedded code editor.
+
+1. Download the `pixartmin.html` file from the [WLED-PixelArtConverter](https://github.com/werkstrom/WLED-PixelArtConverter/) repository
+2. Go to the url `http://[device_ip_address]/edit`
+3. Upload the `pixartmin.html` file using the UI
+4. Go to `http://[device_ip_address]/pixartmin.html`
+5. Now head to the [Setup 2D Matrix](#setup-2d-matrix) point
+
+## Setup 2D Matrix
 2D LED panels are natively supported by WLED, but needs some configuration for the software to show the 2D grid correctly.
 
-1. Head into the `2D Configuration` settings menu
+1. Head into the `2D Configuration` settings menu in WLED
 2. Set the option "Strip or panel" to `2D Matrix`
 3. Setup rest of the LED panel layout according to the specifics of your LED panel
 
 !!! tip "Serpentine option"
 	Setting the serpentine LED panel option incorrectly can lead to very confusing results that looks almost correct but no quite. Enabling or Disabling the option depends on the build style of the 2D matrix
 
-
 ## Usage
-The Pixel Art Generator does not yet have link in the WLED front-end, therefore head over to the web page: `http://[device_ip_address]/pixart.htm`  (default IP-address [link](http://4.3.2.1/pixart.htm)).
+The Pixel Art Generator does not yet have link in the WLED front-end, therefore head over to the web page: `http://[device_ip_address]/pixart.htm` (default DHCP IP-address [link](http://4.3.2.1/pixart.htm)).
 
 On the web page:
 
