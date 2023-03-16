@@ -1,5 +1,5 @@
 ---
-title: Virtual LEDs via DDP
+title: Virtual LEDs via DDP/ArtNet
 hide:
   # - navigation
   # - toc
