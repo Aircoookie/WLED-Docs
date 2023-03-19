@@ -18,7 +18,7 @@ Please use a decent and neutral description when adding things to this list.
 
 ## Addressable LED Strips
 
-Sorting: 5v data only, 5v Data + Clock, 12v data only, non-addressable analog PWM
+Sorting: 5v data only, 5v Data + Clock, 12v data only
 
 | Type | Voltage | Comments |
 |---|---|---|
