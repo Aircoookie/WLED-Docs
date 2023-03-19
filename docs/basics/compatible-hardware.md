@@ -34,7 +34,12 @@ GS8208 | 12v |
 TM1814 | 12v | RGBW
 WS2811 | 12v | usually 3-LED segments, has data-line resistor
 WS2815 | 12v | has a backup data line
-Analog PWM | Usually 12v/24v | Needs additional circuits (MOSFETs). Needs 3 or 4 pins for 1 LED strip
+
+## Non-Addressable LED Strips
+
+WLED supports non-addressable LED strips as well. Unlike addressable strips, non-addressable strips require a pin for each "color" channel. To drive these strips, additional circuits (MOSFETs) are required.
+As of v0.13.1, WLED supports single color, CCT, RGB, RGBW and RGBCCT strips. These strips are commonly found at 12 or 24 volts.
+The default PWM frequency for dimming is 880 Hz on ESP8266 and 19531 Hz for ESP32.
 
 ## Controllers with WLED pre-installed
 
