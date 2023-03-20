@@ -483,6 +483,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#non-addressable-led-strips" class="md-nav__link">
+    Non-Addressable LED Strips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#controllers-with-wled-pre-installed" class="md-nav__link">
     Controllers with WLED pre-installed
   </a>
@@ -1375,6 +1382,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#non-addressable-led-strips" class="md-nav__link">
+    Non-Addressable LED Strips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#controllers-with-wled-pre-installed" class="md-nav__link">
     Controllers with WLED pre-installed
   </a>
@@ -1473,7 +1487,7 @@
 Please carefully compare all items in the category you are interested in, and you should find the one that suits your needs best in just a few minutes! </p>
 </div>
 <h2 id="addressable-led-strips">Addressable LED Strips</h2>
-<p>Sorting: 5v data only, 5v Data + Clock, 12v data only, non-addressable analog PWM</p>
+<p>Sorting: 5v data only, 5v Data + Clock, 12v data only</p>
 <table>
 <thead>
 <tr>
@@ -1543,13 +1557,12 @@ Please carefully compare all items in the category you are interested in, and yo
 <td>12v</td>
 <td>has a backup data line</td>
 </tr>
-<tr>
-<td>Analog PWM</td>
-<td>Usually 12v/24v</td>
-<td>Needs additional circuits (MOSFETs). Needs 3 or 4 pins for 1 LED strip</td>
-</tr>
 </tbody>
 </table>
+<h2 id="non-addressable-led-strips">Non-Addressable LED Strips</h2>
+<p>WLED supports non-addressable LED strips as well. Unlike addressable strips, non-addressable strips require a pin for each "color" channel. To drive these strips, additional circuits (MOSFETs) are required.
+As of v0.13.1, WLED supports single color, CCT, RGB, RGBW and RGBCCT strips. These strips are commonly found at 12 or 24 volts.
+The default PWM frequency for dimming is 880 Hz on ESP8266 and 19531 Hz for ESP32.</p>
 <h2 id="controllers-with-wled-pre-installed">Controllers with WLED pre-installed</h2>
 <div class="admonition check">
 <p class="admonition-title">Info</p>
