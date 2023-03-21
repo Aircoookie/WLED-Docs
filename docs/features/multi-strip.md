@@ -27,7 +27,7 @@ There are a few tips and recomendations to keep in mind when designing your setu
 - It is recommended to use 512 LEDs/pin for good performance for a total of 1024 LEDs.
 - 800 LEDs/pin for a total of 1600 has been confirmed working, but is not recommended for good performance and reliability.
 - Using GPIO1 will disable serial debugging. If you need it, you can't use a strip on this pin.
-- GPIO3 is the third pin that allows hardware driving on ESP8266. However, it uses 5 times as much memory per LED as GPIO 1 and 2, so use it only for low LED counts (recommended <50)
+- GPIO3 (RX) is the third pin that allows hardware driving on ESP8266. However, it uses 5 times as much memory per LED as GPIO 1 and 2, so use it only for low LED counts (recommended <50)
 - You can use any other pin, but it will use the bitbang method, which is not recommended for reliability. It is best to stick to GPIO 1, 2, and if need be, 3.
 - Using pin GPIO16 for WS2812b LEDs did not work in my testing.
 - ESP8266 can calculate about 15k LEDs per second (that means 250LEDs @~60fps, 500 LEDs @~30fps, 1000 LEDs @~15fps)
