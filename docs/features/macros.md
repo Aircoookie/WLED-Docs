@@ -53,6 +53,8 @@ Selecting 0 for preset will use the _default_ action. If you find that the defau
 
 For assigning [Presets](/features/presets) to buttons use _Time & Macros_ settings page.
 
+Note: Button 0 has two, built-in functions. 1. Hold it down for >6 seconds and the Wi-Fi settings will be reset to default. Hold it down for >12 seconds and flash memory is erased.
+
 ### Analog button
 Starting in WLED 0.13, analog "buttons" (e.g. a potentiometer) are supported.
 With the Short and Long columns set to 0, set the Double column in Button Actions to one of these values to configure:
