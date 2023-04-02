@@ -31,11 +31,9 @@ For the DMX feature to work, you'll need to compile WLED from source. It's not a
    `#define WLED_ENABLE_DMX`
    Yes, you just remove the //, which enables the line and therefore DMX support.
 
-3. By default the DMX output tries to use pin 2 this conflicts with the LEDPIN, so either change either the DMX output pin (sendPin in src/dependencies/ESPDMX.cpp) or the LED output pin (LEDPIN in NpbWrapper.h) to something other than 2. If both are set to the same setting, you might experience slight flickering on your DMX output.
+3. Once you successfully uploaded the sketch to your board, you'll find a new entry "DMX Output" in your settings menu.
 
-4. Once you successfully uploaded the sketch to your board, you'll find a new entry "DMX Output" in your settings menu.
-
-5. Grab the manual for your lamp and maybe some snacks, look up the dmx channels and set everything up accordingly.
+4. Grab the manual for your lamp and maybe some snacks, look up the dmx channels and set everything up accordingly.
 
 #### hardware setup
 
