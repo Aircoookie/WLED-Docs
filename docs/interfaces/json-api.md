@@ -289,6 +289,8 @@ Sample playlist API call:
     "repeat": 10,
     "end": 21
   }
+  "on": true,
+  "n": "MyPlaylist"
 }
 ```
 
