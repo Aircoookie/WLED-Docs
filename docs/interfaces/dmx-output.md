@@ -31,21 +31,19 @@ For the DMX feature to work, you'll need to compile WLED from source. It's not a
    `#define WLED_ENABLE_DMX`
    Yes, you just remove the //, which enables the line and therefore DMX support.
 
-3. change either the DMX output pin (sendPin in src/dependencies/ESPDMX.cpp) or the LED output pin (LEDPIN in NpbWrapper.h) to something other than 2. If both are set to the same setting, you might experience slight flickering on your DMX output.
+3. Once you successfully uploaded the sketch to your board, you'll find a new entry "DMX Output" in your settings menu.
 
-4. Once you successfully uploaded the sketch to your board, you'll find a new entry "DMX Output" in your settings menu.
-
-5. Grab the manual for your lamp and maybe some snacks, look up the dmx channels and set everything up accordingly.
+4. Grab the manual for your lamp and maybe some snacks, look up the dmx channels and set everything up accordingly.
 
 #### hardware setup
 
-The DMX output uses a MAX485 transceiver connected to the TX-pin of the ESP8266.
+The DMX output required the use of a MAX485 transceiver connected to the TX-pin of the ESP in order to produce DMX output.
 
 I am currently working on an open source PCB design to go along with this feature.
 
-Until then, i can recommend [this](https://robertoostenveld.nl/art-net-to-dmx512-with-esp8266/) tutorial by [Robert Oostenveld](https://robertoostenveld.nl/). Only the hardware side, of course.
+For information about the use of DMX with ESP8266, you might like to read [this](https://robertoostenveld.nl/art-net-to-dmx512-with-esp8266/) tutorial by [Robert Oostenveld](https://robertoostenveld.nl/). Note this is just background information about the hardware and you do not need any of the code listed here when using WLED output.
 
-If you need to use another pin for output than the TX-pin, you'll need to change this in the ESP-Dmx library itself. This setting is located in ESP-Dmx/src/ESPDMX.cpp on line 29.
+If you need to use another pin for output than the TX-pin, you'll need to change this in the ESP-Dmx library itself. This setting is located in src/dependencies/dmx/ESPDMX.cpp on line 31.
 
 #### questions
 
