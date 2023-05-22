@@ -172,6 +172,12 @@ col | array of colors | Array that has up to 3 color arrays as elements, the pri
 fx | 0 to info.fxcount -1 | ID of the effect or ~ to increment, ~- to decrement, or r for random.
 sx | 0 to 255 | Relative effect speed. ~ to increment, ~- to decrement. ~10 to increment by 10, ~-10 to decrement by 10.
 ix | 0 to 255 | Effect intensity. ~ to increment, ~- to decrement. ~10 to increment by 10, ~-10 to decrement by 10.
+c1 | 0 to 255 | Effect custom slider 1. Custom sliders are hidden or displayed and labeled based on [effect metadata](#effect-metadata).
+c2 | 0 to 255 | Effect custom slider 2.
+c3 | 0 to 31 | Effect custom slider 3.
+o1 | bool | Effect option 1. Custom options are hidden or displayed and labeled based on [effect metadata](#effect-metadata).
+o2 | bool | Effect option 2.
+o3 | bool | Effect option 3.
 pal | 0 to info.palcount -1 | ID of the color palette or ~ to increment, ~- to decrement, or r for random.
 sel | bool | `true` if the segment is selected. Selected segments will have their state (color/FX) updated by APIs that don't support segments (e.g. UDP sync, HTTP API). If no segment is selected, the first segment (_id_:`0`) will behave as if selected. WLED will report the state of the first (lowest _id_) segment that is selected to APIs (HTTP, MQTT, Blynk...), or `mainseg` in case no segment is selected and for the UDP API. Live data is always applied to all LEDs regardless of segment configuration.
 rev | bool | Flips the segment, causing animations to change direction.
