@@ -49,4 +49,4 @@ Additionally, on light change, WLED will publish to 3 topics for MQTT clients to
 There is support for client ID and authentication, but this is presently transmitted over an unencrypted connection, so please **do not** use the same password for other services.
 
 !!! warning "Attention"
-    The maximal length of a MQTT messages for WLED is 1024 bytes.
+    The maximum length of an MQTT message for WLED is only limited by free RAM.
