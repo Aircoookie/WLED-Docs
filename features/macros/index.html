@@ -1417,8 +1417,10 @@ For further buttons, the default action for short press is cycling effects, long
 <li>analog "buttons" (also with inverted logic) those can be used as potentiometers or analog input buttons</li>
 </ul>
 <p>Button GPIO pin and type can be selected in the <em>LED Settings</em> page.</p>
-<p>Each momentary button can have 3 different <a href="/features/presets">Presets</a> assigned, for short press, long press or double press. For switch type buttons you can assign only 2 presets, one for transition of switch from LOW to HIGH and second for the opposite transition from HIGH to LOW.
-Selecting 0 for preset will use the <em>default</em> action. If you find that the default action is <em>inverted</em> for switch, please create presets for On and Off actions and assign them appropriately.</p>
+<p>Each momentary button can have 3 different <a href="/features/presets">Presets</a> assigned, for short press, long press or double press.
+Momentary push-buttons by default trigger shortly after the <em>release</em> of a button, to be able to detect if it has been pressed short, long or twice. When configuring the same preset number for short, long and double press, it will trigger directly when being pressed as of WLED 0.14.0-b2-2306020.</p>
+<p>For switch type buttons you can assign only 2 presets, one for transition of switch from LOW to HIGH and second for the opposite transition from HIGH to LOW.</p>
+<p>Selecting 0 for preset will use the <em>default</em> action. If you find that the default action is <em>inverted</em> for switch, please create presets for On and Off actions and assign them appropriately.</p>
 <p>For assigning <a href="/features/presets">Presets</a> to buttons use <em>Time &amp; Macros</em> settings page.</p>
 <p>Note: Button 0 has two, built-in functions. 1. Hold it down for &gt;6 seconds and the Wi-Fi settings will be reset to default. 2. Hold it down for &gt;12 seconds and flash memory is erased.</p>
 <h3 id="analog-button">Analog button</h3>
