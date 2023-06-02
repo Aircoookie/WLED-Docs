@@ -48,7 +48,11 @@ Multiple buttons are implemented since 0.13 and allow a few different types of b
 
 Button GPIO pin and type can be selected in the _LED Settings_ page.
 
-Each momentary button can have 3 different [Presets](/features/presets) assigned, for short press, long press or double press. For switch type buttons you can assign only 2 presets, one for transition of switch from LOW to HIGH and second for the opposite transition from HIGH to LOW.
+Each momentary button can have 3 different [Presets](/features/presets) assigned, for short press, long press or double press.
+Momentary push-buttons by default trigger shortly after the _release_ of a button, to be able to detect if it has been pressed short, long or twice. When configuring the same preset number for short, long and double press, it will trigger directly when being pressed as of WLED 0.14.0-b2-2306020.
+
+For switch type buttons you can assign only 2 presets, one for transition of switch from LOW to HIGH and second for the opposite transition from HIGH to LOW.
+
 Selecting 0 for preset will use the _default_ action. If you find that the default action is _inverted_ for switch, please create presets for On and Off actions and assign them appropriately.
 
 For assigning [Presets](/features/presets) to buttons use _Time & Macros_ settings page.
