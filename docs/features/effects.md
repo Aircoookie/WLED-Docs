@@ -148,6 +148,9 @@ and the colors: <br />
 | 122 | Scrolling Text | Edit segment name to set text (#DATE and #TIME to include those) <br /> ![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_122.gif) |  ▦ | 🎨 Fx, Bg, Gradient | Speed, Y Offset, Trail, Font size, Gradient, Overlay
 | 123 | Drift Rose | Spinning arms that adds and removes nodes as it winds and unwinds. <br /> ![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_123.gif) |  ▦ |  | Fade, Blur
 | 124 | Distortion Waves | Distorted sine waves with a psychedelic flair. <br /> ![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_124.gif) |  ▦ |  | Speed, Scale
+| 125 | Soap | Like soap bubbles, but lasts longer. <br /> ![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_125.gif) |  ▦ | 🎨  | Speed, Smoothness
+| 126 | Octopus | A cephalopod stuck in a whirlpool. <br /> ![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_126.gif) |  ▦ | 🎨  | Speed, Offset X, Offset Y, Legs
+| 127 | Waving Cell | If a bunch of eucaryotes went to a sports stadium and did the wave, it would look exactly like this. <br /> ![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_127.gif) |  ▦ | 🎨  | Speed, Amplitude 1, Amplitude 2, Amplitude 3
 | 128 | Pixels | Random pixels <br /> ![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_128.gif) |  ⋮ ♪ | 🎨 Fx, Bg | Fade rate, # of pixels
 | 129 | Pixelwave | Pixels emanating from center <br /> ![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_129.gif) |  ⋮ ♪ | 🎨 Fx, Bg | Speed, Sensitivity
 | 130 | Juggles | Juggling balls. <br /> ![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_130.gif) |  ⋮ ♪ | 🎨 Fx, Bg | Speed, # of balls
