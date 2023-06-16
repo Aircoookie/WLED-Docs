@@ -7,11 +7,6 @@ hide:
 
 You want to add custom features to WLED, use non-default pins, or add in a usermod? You've found the right place!
 
-!!! tip
-    Only want to build the code with some custom defines to e.g. enable a usermod?
-    Unless you want to do changes yourself, you don't necessarily have to install the development environment.
-    In the WLED Discord server, there is the WBLD bot which will build your custom PIO environemt with the `./build custom` command.
-
 WLED has come to rely on so many dependencies in the latest versions that building with the Arduino IDE is no longer recommended.
 Instead, installing Visual Studio Code and its PlatformIO (PIO) extension is easier, as it will install the ESP Arduino core, all the required libraries and the correct compilation settings for you automatically.
 
@@ -39,10 +34,10 @@ Alternatively fork the WLED project first and download it from your fork.
 
 1. In VS Code, open the file `platformio.ini`.
 2. Add a semicolon in front of the line that says `default_envs = travis_esp8266, travis_esp32` to comment it out.
-3. Select your build environment by un-commenting one of the lines starting with `; default_envs =`.  
-Please remove _BOTH_ the `;` and the whitespace behind it to correctly uncomment the line.  
-For most ESP8266 boards, the `d1_mini` environment is best.  
-4. In the blue bottom bar, hit the checkmark to compile WLED or the arrow pointing right to compile and upload!  
+3. Select your build environment by un-commenting one of the lines starting with `; default_envs =`.
+Please remove _BOTH_ the `;` and the whitespace behind it to correctly uncomment the line.
+For most ESP8266 boards, the `d1_mini` environment is best.
+4. In the blue bottom bar, hit the checkmark to compile WLED or the arrow pointing right to compile and upload!
 
 [Picture Guide](https://i.imgur.com/mZYo4KJ.jpg)
 
@@ -74,11 +69,11 @@ Once you've confirmed VSCode with Platformio is set up correctly, you can add/de
 ### Flashing the compiled binary
 
 !!! tip
-    This step is optional and only recommended if you want to install the same binary to multiple boards. For testing, it is easiest to upload directly from PlatformIO 
+    This step is optional and only recommended if you want to install the same binary to multiple boards. For testing, it is easiest to upload directly from PlatformIO
 
 The .bin file is located in the subfolder `/build_output/firmware` in your WLED folder. The binary will have the same name as your environment.
 
-All that's left to do is [flash this .bin file onto your ESP board](/basics/install-binary/#flashing-method-2-esptool) and then connect it to WiFi. 
+All that's left to do is [flash this .bin file onto your ESP board](/basics/install-binary/#flashing-method-2-esptool) and then connect it to WiFi.
 
 ### Compilation guide (Arduino IDE, not recommended)
 
@@ -133,27 +128,3 @@ ESP-07s (External Antenna):
 ESP32:
 
 - Arduino Core v1.0.6
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
