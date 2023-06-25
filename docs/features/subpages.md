@@ -20,7 +20,6 @@ Access with \<ESP-IP\>/path (Example: **192.168.8.4/settings**)
 /json/pal | Palette name list | No | 0.8.4
 /json/live | Current colors of LEDs | No | 0.9.0
 /liveview | Live preview of current LEDs | No | 0.9.0
-/url | Returns current light setup API url | No | 0.9.1
 /settings | Settings index page | No | 0.2
 /settings/wifi | WiFi Settings page | Cnfg | 0.5.0
 /settings/led | LED Settings page | No | 0.5.0
@@ -36,7 +35,11 @@ Access with \<ESP-IP\>/path (Example: **192.168.8.4/settings**)
 /freeheap | Returns free memory | No | 0.4
 /favicon.ico | Page icon | No | 0.2
 /teapot | :) | No | 0.5.0
-/edit | SPIFFS page (if USEFS) | Yes | 0.2
+/edit | Filesystem editor | Yes | 0.2
+/u | Custom usermod page | 0.8.4 (?)
+/cpal.htm | Custom palette editor | 0.14.0-b3
+/pixart.htm | 2D Pixel Art converter (not compiled by default) | 0.14.0-b3
+/pxmagic.htm | 2D Image converter | 0.14.0-b4
 
 #### Removed sites
 
@@ -48,3 +51,4 @@ Access with \<ESP-IP\>/path (Example: **192.168.8.4/settings**)
 /build | Returns details about the build | No | 0.5.0-0.8.3
 /cleareeprom | Resets to factory defaults | Yes | 0.3-0.6.4
 /down | Kills software. Hard reset required. | Yes | 0.3-0.6.4
+/url | Returns current light setup API url | No | 0.9.1-0.14.0-b3
