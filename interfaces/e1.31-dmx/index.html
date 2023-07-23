@@ -1629,7 +1629,7 @@ You will need to switch to DDP mode in Sync settings and reboot once.  </p>
 <li>For a fluent 25ms (40fps) or more framerate, it is recommended to use no more than 3 universes (510 LEDs).</li>
 <li>Using multiple E1.31 sources to control a single WLED controller will impact performance. If possible it's recommended to avoid this.</li>
 <li>Configure WLED to connect to <a href="/features/settings#wifi-settings">a WiFi Network</a>. It was observed that sending E1.31 from a computer to WLED when accessed as access point (WLED-AP) may not work, see <a href="https://wled.discourse.group/t/sending-e1-31-when-in-ap-mode-may-not-work/407">forum post</a>.</li>
-<li>When using an ESP32, disabling WiFi sleep in the WiFi settings of WLED can reduce/eliminate visual stuttering/lag of effects, and significantly reduce ping times. Note: disabling WiFi will increase power consumption.</li>
+<li>When using an ESP32, disabling WiFi sleep in the WiFi settings of WLED can reduce/eliminate visual stuttering/lag of effects, and significantly reduce ping times. Note: disabling WiFi sleep will increase power consumption.</li>
 </ul>
 <h3 id="using-ledfx">Using LedFX</h3>
 <p>We highly recommend the <a href="https://github.com/LedFx/LedFx">LedFx project</a> in combination with WLED!
