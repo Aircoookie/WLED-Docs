@@ -22,6 +22,7 @@ Please use a decent and neutral description when adding things to this list.
 |---|---|
 [TwilightLord-ESP32 Ethernet Shield](https://www.tindie.com/products/23050/)| Ethernet Shield (10/100Mbps) for ESP32 boards. Stackable with D1 Mini32 form factor boards.
 [Wemos D1 mini Level Shifter Shield](https://www.tindie.com/products/jasoncoon/wemos-d1-mini-esp8266-level-shifter-mini-shield/) | A level shifter shield (74HCT125) - by Evil Genius Labs LLC.
+[WIZmote remote control](https://www.google.com/search?q=wizmote) | Remote control using radio network. Compatible with WLED (vesions 0.14.0-beta3 and above). No additional receiver required.
 
 ## Compatible PC RGB Fans and ARGB accessories
 
@@ -35,12 +36,12 @@ Any | 5v 3-pin ARGB for PC | Any PC RGB device that supports the 5v 3-pin ARGB m
 
 | Name | Description |
 |---|---|
-SN74AHCT125N | Aircoookie's recommended levelshifter. Used on the QuinLed Dig-Uno and [WLED Wemos shield](https://github.com/srg74/WLED-wemos-shield).
-74AHCT32 | Same pinout as above can be used. This is just an OR gate, but any AHCT gate can be used if inputs are connected appropriately. ;)
+SN74AHCT125 | Aircoookie's recommended levelshifter. Often used in DIY and commercial controllers.
+SN74AHCT32 | Same pinout as above can be used. This is just an OR gate, but any AHCT gate can be used if inputs are connected appropriately. ;)
 SN74HCT125N | Slower, cheaper version. Works just as well for WS2812, but not recommended for APA102.
 SN74LVC2T45 | Modern bus transceiver with voltage translation [Yet Another WLED Controller](https://github.com/lizardsystems/yawl-controller)
-TXS0102 | A bidirectional levelshifter that works well with WLED.
-[F-Amp](https://www.pixelcontroller.com/store/controllers/53-falcon-picap.html) | Level shifter/data booster
+TXS0102, TXS0108 | Bidirectional levelshifters that works well with WLED.
+[F-Amp](https://pixelcontroller.com/store/accessories/54-famp-xconnect.html) | Level shifter/data booster
 
 !!! warning
     I2C shifters are generally too slow for WLED, so don't use them.
@@ -68,6 +69,8 @@ Sorting: Sensors, Displays, Actuators
 [TSOP38238](https://www.aliexpress.com/item/32834341300.html) | IR receiver compatible with most IR remotes.
 [SSD1305](https://www.aliexpress.com/wholesale?catId=0&SearchText=SSD1305) | I2C display, can be used with [_4 Line Display_ usermod](https://github.com/Aircoookie/WLED/tree/master/usermods/usermod_v2_four_line_display).
 [SSD1306](https://www.aliexpress.com/wholesale?catId=0&SearchText=SSD1306) | I2C & SPI display, can be used with _4 Line Display_ usermod.
-[5V relay](https://www.aliexpress.com/wholesale?catId=0&SearchText=5v+relay+module) | Relay module. Some will require 5V to trigger so you will need level-shifted output (similar as for LEDs) for proper functionality or a circuit with transistor or MOSFET.
 DS18B20 | Recommended temperature sensor for use with WLED. Compatible with the [Temperature usermod](https://github.com/Aircoookie/WLED/tree/master/usermods/Temperature)
 [Display shield](https://www.tindie.com/products/27112/) | Various configurations. Compatible with the [ESP32 WLED dev board](https://www.tindie.com/products/27056/) also can be used with ESP32 mini dev boards.
+[12V Relay & Fuse board](https://shop.myhome-control.de/Relais-Board-fuer-WLED-Controller-12V/HW10011)|Integrates two relays and two 10 A fuses. Suitable for WLED setups with 12 V LED Strips.
+[5V relay](https://www.aliexpress.com/wholesale?catId=0&SearchText=5v+relay+module) | Relay module. Some will require 5V to trigger so you will need level-shifted output (similar as for LEDs) for proper functionality or a circuit with transistor or MOSFET.
+[5V Relay & Fuse board](https://shop.myhome-control.de/Relais-Board-fuer-WLED-Controller-5V/HW10005)|Integrates two relays and two 10 A fuses. Suitable for WLED setups with 5V LED Strips.
