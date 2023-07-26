@@ -97,7 +97,7 @@ nav:
     - DMX: interfaces/dmx-output.md
     - E1.31 (DMX) / Art-Net: interfaces/e1.31-dmx.md
     - HTTP Request API: interfaces/http-api.md
-    - Infrared: interfaces/infrared.md
+    - Remote Control: interfaces/infrared.md
     - JSON API: interfaces/json-api.md
     - MQTT: interfaces/mqtt.md
     - Philips Hue: interfaces/philips-hue.md
