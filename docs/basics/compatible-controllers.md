@@ -8,12 +8,12 @@ hide:
 Currently (as of summer 2023) only the microcontrollers from Espressif, types ESP8266 and ESP32 (with dual core) are fully supported. Some of the newer types like ESP32-C3, ESP32-S2 and ESP32-S3 are experimentally supported, but productive use is not recommended yet because some bugs are suspected. In addition, the installation of these newer types is not that easy: there are several hardware variations/boards for which the SW must be specially compiled. It should also be mentioned that some ESP32-C3 boards (so-called C3 mini V1.0.0) are still being sold on the market where WLAN does not work properly.
 
 To try out WLED with 5V addressable strip a simple microcontroller board like ESP8266 D1 mini or ESP32 D1 mini is sufficient. The simplest setup might be like:
-![Simple WLED setup](https://wled-faq.github.io/pictures/pic10.jpg)
+![Simple WLED setup](../assets/images/content/pic10.jpg)
 
 However, there are a few other things to keep in mind for a proper setup:
 1. A level shifter is required for reliable data transmission from the controller to the LED strip (this is mandatory, especially with 12V or 24V LED strips). Then you have to solder something together or you can buy a ready-made WLED controller right away.
 2. For safety reasons, the correct cabling (length, cross-section, contacts) and the fuses to be integrated must be considered. Especially with LED strips, it gets more complicated because you need the so-called intermediate feeds. These must be planned and implemented correctly. [LED power, wiring and fuse calculator](https://wled-calculator.github.io/) can be used as an starting point.
-![Advanced WLED setup](https://wled-faq.github.io/pictures/pic11.jpg)
+![Advanced WLED setup](../assets/images/content/pic11.jpg)
 3. LED strips can get quite warm during operation and even overheat in the event of a fault. Again, for safety reasons, you have to protect the area around it: you shouldn't just lay LED strips like that, ideally you should integrate them into aluminum profiles or something similar. In normal operation, these act like a heat sink and thus extend the service life of the LEDs. In the event of a fault, they can protect the surroundings.
 4. To save energy while LEDs are off, you might integarte relays that switch the voltage of LEDs off completely.
 
