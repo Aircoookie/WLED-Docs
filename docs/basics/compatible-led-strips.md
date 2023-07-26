@@ -23,11 +23,16 @@ APA102 | 5v | using 2 data pins, Clock and Data
 LPD8806 | 5v | using 2 data pins, Clock and Data
 WS2801 | 5v | using 2 data pins, Clock and Data
 SK9822 | 5v | using 2 data pins, Clock and Data
+UCS8903 | 5v |
 GS8208 | 12v |
 TM1814 | 12v | RGBW
 WS2811 | 12v | usually 3-LED segments, has data-line resistor
 WS2814 | 12v/24v | RGBW, 3-LED groups (12V) / 6-LED groups (24V) as one logical LED. Must be controlled as SK6812 type, color order: BRG, swap W and G (this option is available since WLED 0.14.0-b1) 
 WS2815 | 12v | has a backup data line
+LPD6803 | 12v |
+P9813 | 5-24 v |
+TM1829 | 5-24 v |
+UCS8904 | 5-24 v | RGBW
 
 ## Non-Addressable LED Strips
 
