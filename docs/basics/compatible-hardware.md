@@ -47,9 +47,9 @@ TXS0102, TXS0108 | Bidirectional levelshifters that works well with WLED.
     I2C shifters are generally too slow for WLED, so don't use them.
 
 How to connect Levelshifters:
-![74AHCT125 one output](https://wled-faq.github.io/pictures/pic1.jpg)
-![74AHCT125 two outputs](https://wled-faq.github.io/pictures/pic2.jpg)
-![TXS0108](https://wled-faq.github.io/pictures/pic3.jpg)
+![74AHCT125 one output](../assets/images/content/pic1.jpg)
+![74AHCT125 two outputs](../assets/images/content/pic2.jpg)
+![TXS0108](../assets/images/content/pic3.jpg)
 
 ## USB/TTL adapters
 
