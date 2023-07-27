@@ -1,13 +1,13 @@
 ---
-title: Remote Control
+title: Infrared
 hide:
   # - navigation
   # - toc
 ---
 
-There are two options to control WLED using remote control: Infrared remote control and ESP-NOW based remote control (uses radio network).
 
-## Infrared (IR) remote control
+!!! info "Version Info"
+    Since v0.8.2, infrared control from various IR remotes is supported for ESP8266 and since v0.9.0 for ESP32, too.
 
 A dedicated infrared receiver module is required and must be connected to the WLED Controller. For example, KY-022 or TSOP38238 are confirmed to work and inexpensive. These receivers each have three pins: 3.3V, GND and IR data. IR data pin must be connected to a free GPIO pin. This GPIO must then be set as IR GPIO under "Config->LED Preferences" (The default sensor pin is GPIO4).
 ![Infrared shcematics](../assets/images/content/pic13.jpg)
@@ -15,9 +15,9 @@ A dedicated infrared receiver module is required and must be connected to the WL
 !!! warning
     IR receiving will not work on ESP8266 if you use any LED pin other than GPIO 1, 2, or 3 for _digital_ LED strips.
 
-You also have to choose which infrared remote control you have. The types available are listed below.
-
 ### Supported IR remotes
+
+To use IR remote go to `Settings`, `Sync Interfaces` and change the value for `Infrared receiver type` according to the IR remote type of the following list:
 
 1. white 24-key IR remote with R,G,B + 12 color-tones  
 2. white 24-key IR remote with CT+ / CT- buttons  
