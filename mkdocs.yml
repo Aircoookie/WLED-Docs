@@ -72,7 +72,9 @@ nav:
   - Basics:
     - Getting Started: basics/getting-started.md
     - Compatibility:
-      - Hardware: basics/compatible-hardware.md
+      - LED strips: basics/compatible-led-strips.md
+      - Controllers: basics/compatible-controllers.md
+      - Other Hardware: basics/compatible-hardware.md
       - Software: basics/compatible-software.md
     - Installation:
       - Install WLED Binary: basics/install-binary.md
