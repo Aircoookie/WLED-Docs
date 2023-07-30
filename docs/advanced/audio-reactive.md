@@ -23,7 +23,7 @@ Three microphone types are supported:
 Examples are MAX4466 (not really good) and MAX9814 (slightly better). These microphones are easy to use: you just have to connect 3.3V, GND and the analog output from the microphone to an ADC input (Analog-to-Digital Converter) of ESP32. However, the big disadvantage is the quality: both from the microphones themselves and from the ADCs integrated into microcontrollers, which are actually not well suited for audio processing and highly influenced by the power supply noise.
 ![Example analog microphone](../assets/images/content/example_analog_mic.jpg)
 
-#### 2. I2S digital microphones.
+#### 2. I2S digital microphones
 
 Examples are INMP4411 and ICS-43434/ICS-43432. These have an integrated ADC and already output a digital signal. The advantage is the best possible quality. The disadvantage is higher complexity (you need several PINs for a digital signal). For proper trouble-free operation keep wires between the microphone and ESP32 as short as possible and solder them properly.
 
@@ -33,7 +33,7 @@ There are also some commercial controllers with integrated digital microphone or
 
 ![Example I2S microphone controller](../assets/images/content/example_i2s_mic_controller.jpg)
 
-#### 3. PDM microphones.
+#### 3. PDM microphones
 
 An example is SPM1423. In principle, these are also digital microphones with an integrated Sigma-Delta ADC. They are slightly cheaper than I2S microphones, require one PIN less and the quality is quite good.
 
@@ -59,4 +59,4 @@ For some more details please refer to [Sound Reactive WLED WIKI](https://github.
 
 ## Software required
 
-Because audio reactive capability is currently implemented as a usermod, you need WLED compiled with this usermod included or use Sound Reactive WLED fork. The [official WEB-based WLED installer](https://install.wled.me/) does not include original WLED with audio reactive usermod, but offers Sound Reactive WLED as an option. The [unofficial WEB-based WLED installer](https://wled-install.github.io/) offers moreo ptions including original WLED with audio reactive usermod.
+Because audio reactive capability is currently implemented as a usermod, you need WLED compiled with this usermod included or use Sound Reactive WLED fork. The [official WEB-based WLED installer](https://install.wled.me/) does not include original WLED with audio reactive usermod, but offers Sound Reactive WLED as an option. The [unofficial WEB-based WLED installer](https://wled-install.github.io/) offers more options including original WLED with audio reactive usermod.
