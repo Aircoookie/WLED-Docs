@@ -107,7 +107,8 @@ nav:
     - WLED UDP Sync: interfaces/udp-notifier.md
     - UDP Realtime / tpm2.net: interfaces/udp-realtime.md
     - Websocket: interfaces/websocket.md
-  - Advanced: 
+  - Advanced:
+    - Audio Reactive WLED: advanced/audio-reactive.md
     - Home Automation: advanced/home-automation.md
     - Remote Access / IFTTT: advanced/remote-access-ifttt.md
     - Security: advanced/security.md
