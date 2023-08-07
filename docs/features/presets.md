@@ -56,6 +56,7 @@ If you know your JSON, you can even create playlists of other presets!
 ![Preset API Example](../assets/images/content/preset_api_example.jpg)
 
 Some baic examples of API commands:
+
 | HTTP API | JSON API | Description |
 |---|---|---|
 T=2 | {"on":"t"} | It is switched between on and off state (toggle). So when LEDs are off, they turn on and vice versa.
