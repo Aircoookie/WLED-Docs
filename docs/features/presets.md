@@ -53,6 +53,23 @@ This accepts any HTTP or JSON API command! (only visible if the current state ch
 It replaces the previous macro functionality.  
 If you know your JSON, you can even create playlists of other presets!
 
+![Preset API Example](../assets/images/content/preset_api_example.jpg)
+
+Some baic examples of API commands:
+| HTTP API | JSON API | Description |
+|---|---|---|
+T=2|{"on":"t"}|It is switched between on and off state (toggle). So when LEDs are off, they turn on and vice versa.
+T=1|{"on":true}|The LEDs turn on (or no change if they were on before)
+T=0|{"on":false}|The LEDs are switched off (or no change if they were already on)
+--|{"on":true, "tt":0}|The LEDs are switched on, the LEDs light up immediately without slowly dimming, regardless of the global setting „Transition“.
+A=128|{"bri": 128}|DThe brightness is set to 50%. Minimum value is 0, maximum value (100%) is 255. Therefore 128 means the brightness of 50%
+A=~10|{"bri":"~10"}|The brightness is increased by 10. So if this was 100 before, it will be 110.
+A=~-20|{"bri":"~-10"}|The brightness is decreased by 20. So if this was 100 before, it will be 80.
+R=255&amp;G=0&amp;B=0|{"seg":[{"col":[[255,0,0]]}]}|The color of LEDs is set to red
+R=0&amp;G=255&amp;B=0&amp;A=128&amp;FX=0|{"seg":[{"fx":0, "col":[[0,255,0]]}], "bri":128}|The color of LEDs is set to green, brightness to 50% (value 128) and effect to solid (FX=0)
+P1=1&amp;P2=3&amp;PL=~|{"ps":"1~ 3~"}|Iterate between presets with IDs 1 to 3: When called up, the next preset is called up and so on in cycle: 1-&gt;2-&gt;3-&gt;1-&gt;2-&gt;3-&gt;1-&gt;…..
+
+
 *Save to ID*  
 This is the ID the preset will be saved to.  
 When creating a new preset, you likely won't have to change it as the lowest unused ID will be chosen automatically.  
