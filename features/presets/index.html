@@ -17,7 +17,7 @@
         <link rel="next" href="../segments/">
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
@@ -1583,6 +1583,69 @@ When disabled, the segment start and stop LEDs are not included in the preset. T
 This accepts any HTTP or JSON API command! (only visible if the current state checkbox is unchecked)<br />
 It replaces the previous macro functionality.<br />
 If you know your JSON, you can even create playlists of other presets!</p>
+<p><img alt="Preset API Example" src="../../assets/images/content/preset_api_example.jpg" /></p>
+<p>Some basic examples of API commands:</p>
+<table>
+<thead>
+<tr>
+<th>HTTP API</th>
+<th>JSON API</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T=2</td>
+<td>{"on":"t"}</td>
+<td>Switch between on and off state (toggle). So when LEDs are off, they turn on and vice versa.</td>
+</tr>
+<tr>
+<td>T=1</td>
+<td>{"on":true}</td>
+<td>The LEDs turn on (or no change if they were already on)</td>
+</tr>
+<tr>
+<td>T=0</td>
+<td>{"on":false}</td>
+<td>The LEDs are switched off (or no change if they were already off)</td>
+</tr>
+<tr>
+<td>n.a.</td>
+<td>{"on":true, "tt":0}</td>
+<td>The LEDs are switched on, the LEDs light up immediately without slowly dimming, regardless of the global setting „Transition“.</td>
+</tr>
+<tr>
+<td>A=128</td>
+<td>{"bri": 128}</td>
+<td>The brightness is set to 50%. Minimum value is 0, maximum value (100%) is 255. Therefore 128 means the brightness of 50%</td>
+</tr>
+<tr>
+<td>A=~10</td>
+<td>{"bri":"~10"}</td>
+<td>The brightness is increased by 10. So if this was 100 before, it will be 110.</td>
+</tr>
+<tr>
+<td>A=~-20</td>
+<td>{"bri":"~-10"}</td>
+<td>The brightness is decreased by 20. So if this was 100 before, it will be 80.</td>
+</tr>
+<tr>
+<td>R=255&amp;G=0&amp;B=0</td>
+<td>{"seg":[{"col":[[255,0,0]]}]}</td>
+<td>The color of LEDs is set to red</td>
+</tr>
+<tr>
+<td>R=0&amp;G=255&amp;B=0&amp;A=128&amp;FX=0</td>
+<td>{"seg":[{"fx":0, "col":[[0,255,0]]}], "bri":128}</td>
+<td>The color of LEDs is set to green, brightness to 50% (value 128) and effect to solid (FX=0)</td>
+</tr>
+<tr>
+<td>P1=1&amp;P2=3&amp;PL=~</td>
+<td>{"ps":"1~ 3~"}</td>
+<td>Iterate between presets with IDs 1 to 3: When called up, the next preset is called up and so on in cycle: 1-&gt;2-&gt;3-&gt;1-&gt;2-&gt;3-&gt;1-&gt;…</td>
+</tr>
+</tbody>
+</table>
 <p><em>Save to ID</em><br />
 This is the ID the preset will be saved to.<br />
 When creating a new preset, you likely won't have to change it as the lowest unused ID will be chosen automatically.<br />
