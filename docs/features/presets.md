@@ -55,13 +55,13 @@ If you know your JSON, you can even create playlists of other presets!
 
 ![Preset API Example](../assets/images/content/preset_api_example.jpg)
 
-Some baic examples of API commands:
+Some basic examples of API commands:
 
 | HTTP API | JSON API | Description |
 |---|---|---|
-T=2 | {"on":"t"} | It is switched between on and off state (toggle). So when LEDs are off, they turn on and vice versa.
-T=1 | {"on":true} | The LEDs turn on (or no change if they were on before)
-T=0 | {"on":false} | The LEDs are switched off (or no change if they were already on)
+T=2 | {"on":"t"} | Switch between on and off state (toggle). So when LEDs are off, they turn on and vice versa.
+T=1 | {"on":true} | The LEDs turn on (or no change if they were already on)
+T=0 | {"on":false} | The LEDs are switched off (or no change if they were already off)
 n.a. | {"on":true, "tt":0} | The LEDs are switched on, the LEDs light up immediately without slowly dimming, regardless of the global setting „Transition“.
 A=128 | {"bri": 128} | The brightness is set to 50%. Minimum value is 0, maximum value (100%) is 255. Therefore 128 means the brightness of 50%
 A=~10 | {"bri":"~10"} | The brightness is increased by 10. So if this was 100 before, it will be 110.
