@@ -1425,7 +1425,7 @@ If you then still have troubles and are going to ask for help, provide as much i
     <img alt="Brightness Limiter Settings" src="../../assets/images/content/brightness_limiter.jpg" /></li>
 <li>Wrong LED type is set. The correct LED type and the correct color sequence (RGB, BGR, etc.) must be set in WLED LED preferences. Check that these settings are correct. You have to know the LED type, but you can simply try out the color sequence to see which is the right one. Special attention must be paid for example to the WS2814 LED strip, which must be set as SK6812 and not as WS281x in the LED preferences.
     <img alt="Example LED type setup" src="../../assets/images/content/example_led_type_setup.jpg" /></li>
-<li>Wiring is bad. Wiring must be done thoroughly. Loose contacts, cold solder joints etc. must be avoided. You also need to be careful about the correct sizing of the cables: too thin wires can not only cause high voltage drop but also lead to an overheating and fire! For wire sizing you may use this <a href="https://wled-calculator.github.io/">LED power, wiring and fuse calculator</a>.</li>
+<li>Wiring is bad. Wiring must be done thoroughly. Loose contacts, cold solder joints etc. must be avoided. You also need to be careful about the correct sizing of the cables: too thin wires can not only cause high voltage drop but also lead to an overheating and fire! For wire sizing you may use this <a href="https://wled-calculator.github.io/">LED power, wiring and fuse calculator</a>. If many power sources are used (for example separate one for ESP and separate one for the LED strip), then all their grounds (GND, V-) must be connected together (but do not connect their V+ together!).</li>
 </ol>
 
 
