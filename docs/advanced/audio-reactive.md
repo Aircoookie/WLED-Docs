@@ -25,7 +25,7 @@ Examples are MAX4466 (not really good) and MAX9814 (slightly better). These micr
 
 #### 2. I2S digital microphones
 
-Examples are INMP4411 and ICS-43434/ICS-43432. These have an integrated ADC and already output a digital signal. The advantage is the best possible quality. The disadvantage is higher complexity (you need several PINs for a digital signal). For proper trouble-free operation keep wires between the microphone and ESP32 as short as possible and solder them properly.
+Examples are INMP441 and ICS-43434/ICS-43432. These have an integrated ADC and already output a digital signal. The advantage is the best possible quality. The disadvantage is higher complexity (you need several PINs for a digital signal). For proper trouble-free operation keep wires between the microphone and ESP32 as short as possible and solder them properly.
 
 ![Example I2S microphone](../assets/images/content/example_i2s_mic.jpg)
 
