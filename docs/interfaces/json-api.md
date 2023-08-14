@@ -142,6 +142,8 @@ nl.tbri | 0 to 255 | Target brightness of nightlight feature
 nl.rem | -1 to 15300 | Remaining nightlight duration in seconds, -1 if not active. Only in state response, can not be set.
 udpn.send | bool | Send WLED broadcast (UDP sync) packet on state change
 udpn.recv | bool | Receive broadcast packets
+udpn.sgrp | 0 to 255 | Bitfield for broadcast send groups 1-8
+udpn.rgrp | 0 to 255 | Bitfield for broadcast receive groups 1-8
 udpn.nn | bool | Don't send a broadcast packet (applies to just the current API call). Not included in state response.
 v | bool | If set to _true_ in a JSON POST command, the response will contain the full JSON state object. Not included in state response
 rb | bool | If set to _true_, device will reboot immediately. Not included in state response.
