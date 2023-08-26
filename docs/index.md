@@ -42,6 +42,9 @@ A fast and feature-rich implementation of an ESP8266/ESP32 webserver to control 
 ## 💡 Supported light control interfaces
 
 - [WLED app](https://github.com/Aircoookie/WLED-App) for [Android](https://play.google.com/store/apps/details?id=com.aircoookie.WLED) and [iOS](https://apps.apple.com/us/app/wled/id1475695033)
+  - Alternatively, WLED Native app made by community member [Moustachauve](https://github.com/Moustachauve)
+    - For [Android](https://play.google.com/store/apps/details?id=ca.cgagnier.wlednativeandroid) [[Source]((https://github.com/Moustachauve/WLED-Native-Android))]
+    - For [iOS](https://apps.apple.com/us/app/wled-native/id6446207239) [[Source]((https://github.com/Moustachauve/WLED-Native-iOS/))]
 - [JSON](/interfaces/json-api) and [HTTP request](/interfaces/http-api) APIs  
 - [MQTT](/interfaces/mqtt)  
 - [Blynk IoT](/interfaces/blynk)  
