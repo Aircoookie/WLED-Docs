@@ -275,6 +275,14 @@ Segments are non-persistant by default. If you want to load your preset at every
 
 This will be improved in a future release, so that you will be able to save multiple segment configurations!
 
+### What is the difference between the WLED app and the WLED Native app?
+
+The WLED app is the official app developped by the same people that brought you WLED. WLED Native is an initiative by community member [Moustachauve](https://github.com/Moustachauve) to bring an interface that is closer to the native operating system look of your device and some new features.
+
+WLED Native has a few more features available, like a tablet interface for Android and can keep track of changes to the device IP address better.
+
+While WLED Native is not the official app, it is officially endorsed and trusted by the WLED maintainers.
+
 ### May I sell a product running WLED?
 
 WLED is licensed under the MIT license, thus you are free to use it in any way you wish as long as you retain the copyright notice and accept that I am not to be held liable for anything regarding your use of the software. For product pages, a link to the WLED GitHub repository would be hugely appreciated !
