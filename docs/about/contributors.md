@@ -26,7 +26,7 @@ adamo made the animated Discord server logo!
 [@viknet365](https://github.com/viknet365) ported the Meteor effect!  
 [@wiesendaniel](https://github.com/wiesendaniel) added the configuration for the PlatformIO IDE!  
 [@YeonV](https://github.com/YeonV) provided the initial HomeAssistant MQTT light config!  
-[Werkstrom](https://github.com/werkstrom) added PixelArt converter  
+[@werkstrom](https://github.com/werkstrom) added PixelArt converter  
 
 _This list is incomplete._  
 
