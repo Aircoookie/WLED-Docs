@@ -14,29 +14,36 @@ Everyone you see on the Contributors page and:
 adamo made the animated Discord server logo!  
 [@blazoncek](https://github.com/blazoncek) makes countless new features and improvements to many parts of WLED!  
 [@debsahu](https://github.com/debsahu) provided the HomeAssistant autodiscovery and a lot of help with PIO!  
-[@frenck](https://github.com/frenck) made an amazing, stable and feature-packed native integration with HomeAssistant!  
+[@ewowi](https://github.com/ewoudwijma) numerous optimizations; 2D, audio and various user mod improvements.  MoonModules maintainer.  
+[@frenck](https://github.com/frenck) made an amazing, stable and feature-packed native integration with HomeAssistant!
 [@Moustachauve](https://github.com/Moustachauve)  added palette visualisation and developped the WLED Native app for Android and iOS!  
-[@photocromax](https://github.com/photocromax) is helping bringing the Live visualization feature to life and added GIF previews to the doc!  
+[@pbolduc](https://github.com/pbolduc) DDP UDP synchronization, UI improvements and user mods.  
+[@photocromax](https://github.com/photocromax) is helping bringing the Live visualization feature to life.  
 [@raymiec](https://github.com/raymiec)  is currently working on creating the best clients for Android and iOS!  
+[@scottrbailey](https://github.com/scottrbailey) added JSON IR remote and gif visualizations for the docs.  
+[@softhack007](https://github.com/softhack007) audio processing, new MCU support, code reviews, and various optimizations.  MoonModules maintainer.  
 [@StormPie](https://github.com/stormpie), the creator of the awesome mobile UI!  
 [@timothybrown](https://github.com/timothybrown) added MQTT authentication!  
 [@viknet365](https://github.com/viknet365) ported the Meteor effect!  
 [@wiesendaniel](https://github.com/wiesendaniel) added the configuration for the PlatformIO IDE!  
 [@YeonV](https://github.com/YeonV) provided the initial HomeAssistant MQTT light config!  
+[@werkstrom](https://github.com/werkstrom) added PixelArt converter  
+
 _This list is incomplete._  
 
 ### Testing, Contributors and Supporters
 
 _This list has been redacted for privacy reasons. If you've contributed to the project by testing a lot, helping the community, or sending me a gift, feel free to edit this page and add yourself (maintain alphabetical order)_ 😄 _Thank you very much, your help is truly appreciated!_  
 **Put two spaces behind your name, else the line break will not appear in the final page!**  
-
+ALDIY - user support, documentation, beta tester   
 [@Def3nder](https://github.com/Def3nder)  
 [@DutchmanNL](https://github.com/DutchmanNL)  
-DrZzs (Justin A.)
+DrZzs (Justin A.)  
 Dylan L.  
 Fil  
-Quindor (Andries F.)  
-Tonyno
+Quindor (Andries F.) - designed Dig-Quad, Dig-Uno, etc.  
+[@Serg74](https://github.com/srg74) - designed controllers and shields - contributes code - hosts nightly build binaries  
+Tonyno - tireless user support and documentation  
 
 ### Used Libraries and Dependencies
 
