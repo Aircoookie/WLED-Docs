@@ -13,5 +13,5 @@ Setup your leds count in Config, LED Preferences as usual, for example 8x8 matri
  
 Go to Config, 2D setup page and create an 8x8 matrix, and then go to the segments, the 8x8 segments should be created automatically. For the 1D strip, add a new segment with the start pixel beyond the matrix, and it will automatically change to a 1D segment, as in this example 
 
-<img width="448" alt="image" src="../assets/images/content/2D-1D-MIX.png">
-Note: If the matrix is chained after the strip, then use reversing at the bus level, i.e. check Reversed (rotated 180°) in LED & Hardware setup 
+<img width="448" alt="example" src="/assets/images/content/2D-1D-MIX.png">
+Note: If the matrix is chained after the strip, then use reversing at the bus level, i.e. check Reversed (rotated 180°) in LED & Hardware setup. This may also require you reverse segment.
