@@ -44,7 +44,7 @@ Fil
 Quindor (Andries F.) - designed Dig-Quad, Dig-Uno, etc.  
 [@Serg74](https://github.com/srg74) - designed controllers and shields - contributes code - hosts nightly build binaries  
 Tonyno - tireless user support and documentation  
-
+Wladi - contributes documentation and maintains [WLED FAQ](https://wled-faq.github.io) unofficial documentation.
 ### Used Libraries and Dependencies
 
 [ESP8266](https://github.com/esp8266/Arduino)/[ESP32](https://github.com/espressif/arduino-esp32) Arduino Core  
