@@ -15,7 +15,7 @@ hide:
 **1.** Connect a  WS2812B-compatible RGB(W) led strip to `GPIO2`. On most ESP8266 based development boards this pin is labeled `D4`, on ESP32 based boards use `IO16` or `G16` or `16`. _If the connecting wire cannot be kept short, use a [level shifter/translator](/basics/compatible-hardware#levelshifters)._ Optionally connect a normally open pushbutton to `GPIO0` (NodeMCU/Wemos pin `D3`, on ESP32 use `IO17`) and ground for [configurable actions](/features/macros).
 **Note:** Board pin naming varies depending on the manufacturer. Please use the board pinout from the _specific_ board you purchased and use the GPIO PINS to reference this guide. _Make sure to connect ESP and LED-strip grounds together!_
 
-![Connection schematics](https://i.ibb.co/k9Jgr8S/connections.jpg)
+![connectionsA](https://github.com/Aircoookie/WLED-Docs/assets/59397047/ae32d2c0-ec2d-450d-90e8-4258c349ca3f)
 
 While using an ESP8266 and LEDs that have clock and data, you can either use hardware SPI (mostly faster) or software SPI.
   - hardware SPI: use `GPIO14` (SCLK) for clock and `GPIO13` (MOSI) for data.
