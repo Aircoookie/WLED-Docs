@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6a10b989.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
@@ -1896,7 +1896,7 @@
 <h3 id="quick-start-guide">Quick start guide</h3>
 <p><strong>1.</strong> Connect a  WS2812B-compatible RGB(W) led strip to <code>GPIO2</code>. On most ESP8266 based development boards this pin is labeled <code>D4</code>, on ESP32 based boards use <code>IO16</code> or <code>G16</code> or <code>16</code>. <em>If the connecting wire cannot be kept short, use a <a href="/basics/compatible-hardware#levelshifters">level shifter/translator</a>.</em> Optionally connect a normally open pushbutton to <code>GPIO0</code> (NodeMCU/Wemos pin <code>D3</code>, on ESP32 use <code>IO17</code>) and ground for <a href="/features/macros">configurable actions</a>.
 <strong>Note:</strong> Board pin naming varies depending on the manufacturer. Please use the board pinout from the <em>specific</em> board you purchased and use the GPIO PINS to reference this guide. <em>Make sure to connect ESP and LED-strip grounds together!</em></p>
-<p><img alt="Connection schematics" src="https://i.ibb.co/k9Jgr8S/connections.jpg" /></p>
+<p><img alt="connectionsA" src="https://github.com/Aircoookie/WLED-Docs/assets/59397047/ae32d2c0-ec2d-450d-90e8-4258c349ca3f" /></p>
 <p>While using an ESP8266 and LEDs that have clock and data, you can either use hardware SPI (mostly faster) or software SPI.
   - hardware SPI: use <code>GPIO14</code> (SCLK) for clock and <code>GPIO13</code> (MOSI) for data.
   - software SPI: since all pins can be changed in the Hardware section of LED settings, you can use any pins. Recommend is to use <code>GPIO1</code> (TxD) for clock and <code>GPIO2</code> (D4) for data. </p>
