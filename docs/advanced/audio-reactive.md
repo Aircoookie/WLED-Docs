@@ -24,7 +24,7 @@ Examples are MAX4466 (not really good) and MAX9814 (slightly better). These micr
 ![Example analog microphone](../assets/images/content/example_analog_mic.jpg)
 
 !!! info "Analog microphones and analog buttons rule out each other"
-    WLED can use analog microphones or [analog buttons](features/macros/#analog-button) but not both at the same time!
+    WLED can use analog microphones or [analog buttons](features/macros) but not both at the same time!
 
 #### 2. I2S digital microphones
 
