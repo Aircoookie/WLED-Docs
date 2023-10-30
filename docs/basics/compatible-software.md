@@ -23,6 +23,7 @@ Controllers use the WLED API to change the current light settings.
 | [node-red-contrib-wled](https://flows.nodered.org/node/node-red-contrib-wled) | [Node-RED](https://nodered.org) nodes for WLED |
 | [OctoPrint-WLED](https://plugins.octoprint.org/plugins/wled) | Connect your [OctoPrint](https://octoprint.org) install to your WLED install using this plugin to show things like printer status, progress and more! |
 [openHAB](https://community.openhab.org/t/wled-a-binding-for-controlling-led-strips-and-strings-from-an-opensource-esp8266-project/87286) | Another more professional feature rich home automation system. WLED integration made easy. [Link 2](https://community.openhab.org/t/solved-wled-please-make-this-work-in-openhab/82783) |
+| [SignalRGB](https://signalrgb.com/) | Allows you to control the WLED together with the components and peripherals of your PC |
 [WLED-GUI](https://github.com/WoodyLetsCode/WLED-GUI) | This is a cross-platform desktop app for WLED. You can use it on Windows, Linux and Mac.
 [WLED Native for Android](https://github.com/Moustachauve/WLED-Native-Android)<br /> [WLED Native for iOS](https://github.com/Moustachauve/WLED-Native-iOS/) | An alternative version of the WLED app with a similar user interface to the official one that looks close to the native OS style guidelines and has a few more features added on top of it.
 [wledQuickControl](https://github.com/satrik/wledQuickControl) | macOS 11.0+ Menu Bar app for controlling power and brightness.
