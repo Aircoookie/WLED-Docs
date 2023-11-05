@@ -95,6 +95,7 @@ nav:
     - Web GUI Sitemap: features/subpages.md
     - White handling: features/cct.md
     - Pixel Art Converter: features/pixel-art-converter.md
+    - Ethernet (LAN) compatibility: features/ethernet-lan.md
   - Interfaces: 
     - Blynk: interfaces/blynk.md
     - DMX: interfaces/dmx-output.md
