@@ -388,7 +388,7 @@ The metadata string consists of up to five sections, separated by semicolons:
 ##### Effect parameters
 
 The first section specifies the number and labels of effect parameters (e.g. speed, intensity).
-Up to 5 sliders and 3 checkboxes are supported (`sx`,`ix`,`c1`,`c2`,`c3`,`o1`,`o2`,`o3` parameters in the `seg` object).
+Up to 5 sliders and 3 checkboxes are supported (`sx`,`ix`,`c1`,`c2`,`c3`,`o1`,`o2`,`o3` parameters in the `seg` object). For more details about the ranges of the sliders see [contents-of-the-segment-object](#contents-of-the-segment-object).
 Slider/checkbox labels are comma separated.
 An empty or missing label disables this control.
 `!` specifies the default label is used:

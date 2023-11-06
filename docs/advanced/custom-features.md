@@ -97,6 +97,43 @@ Here is a step-by-step guide on how to make your effect:
 8. Compile, upload and enjoy!  Your new effect will automatically be added to the list in the web ui.
 
 If you programmed a nice effect you want to share, submit a pull request!
+### Create a custom effect as usermod
+
+!!! info "Since 0.14"
+    This feature was introduced with version 0.14.
+
+It is possible to add new effects in form of a usermod.
+
+Use `255` for the effect ID as it is a placeholder for "1st available slot". If you want a permanent ID use whatever is not used by built-in effects or other usermod's effects. It is possible to call [addEffect(255,...)](https://github.com/Aircoookie/WLED/blob/1dab26bcbcac051f2b7be47a2d5c757a9938bf1f/wled00/FX.cpp#L7655) multiple times to add more effects without a collision of IDs.
+
+```cpp
+uint16_t mode_blink(void) {
+  ...
+  return FRAMETIME;
+}
+
+static const char _data_FX_MODE_BLINK[] PROGMEM = "Blink@!,Duty cycle;!,!;!;01";
+
+class BlinkUsermod : public Usermod
+{
+  public:
+    void setup()
+    {
+      strip.addEffect(255, &mode_blink, _data_FX_MODE_BLINK);
+    }
+
+    void loop()
+    {
+    }
+
+    uint16_t getId()
+    {
+      return USERMOD_ID_...;
+    }
+};
+```
+
+For details about the format of the configuration string see [effect metadata](/interfaces/json-api/#effect-metadata).
 
 ### Changing Web UI
 
