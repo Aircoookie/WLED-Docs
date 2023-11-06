@@ -14,7 +14,7 @@ If possible, it is preferable to store image content within this repository at `
 
 Let’s consider an example. Let’s imagine we want to add a page called `Top 5 mistakes` in section `Basics` after the `Getting Started` page. This page already exists, so you can already see the results in WLED Docs, but let’s imagine the page is not there and we will go steps needed to add it:
 
-1)	Create a file that should contain the documentation. As we want to place the new page in section `Basics` it makes senso to put this file in subfolder `docs/basics/`. In our example we call the file `top5_mistakes.md`. You can use another .md file as an example. Important is to have the following few lines at the beginning of the file:
+1)	Create a file that should contain the documentation. As we want to place the new page in section `Basics` it makes sense to put this file in subfolder `docs/basics/`. In our example we call the file `top5_mistakes.md`. You can use another .md file as an example. Important is to have the following few lines at the beginning of the file:
 ```
 ---
 title: TOP 5 mistakes
@@ -25,7 +25,7 @@ hide:
 ```
 Don’t forget to adapt the title.
 
-2)	Edit `mkdocs.yml` file. Take care that indentations play an important role in .yml files. Go to `nav:` section in this file and add a new line after the line `- Getting Started: basics/getting-started.md` as we want to add or new page after the `Getting Started` page. The new line must have the same indentation as the previous line and the content is `- Top 5 mistakes: basics/top5_mistakes.md`. By this we say that the new page must be called `Top 5 mistakes` and its content is in the file `top5_mistakes.md` we created before in subfolder `basics`.
+2)	Edit `mkdocs.yml` file. Take care that indentations play an important role in .yml files. Go to `nav:` section in this file and add a new line after the line `- Getting Started: basics/getting-started.md` as we want to add a new page after the `Getting Started` page. The new line must have the same indentation as the previous line and the content is `- Top 5 mistakes: basics/top5_mistakes.md`. By this we say that the new page must be called `Top 5 mistakes` and its content is in the file `top5_mistakes.md` we created before in subfolder `basics`.
 That is!
 
 ### How to add a new section
