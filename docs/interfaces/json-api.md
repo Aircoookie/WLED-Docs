@@ -1,8 +1,8 @@
 ---
 title: JSON API
 hide:
-# - navigation
-# - toc
+  # - navigation
+  # - toc
 ---
 
 WLED versions since 0.8.4 implement a powerful JSON API over HTTP.  
@@ -21,10 +21,10 @@ The response consists of four objects:
 You may also obtain those objects individually using the URLs `/json/state` `/json/info` `/json/eff`, and `/json/pal`.
 
 !!! info "Reserved effect IDs"
-In WLED versions 0.14+, some effects are unsupported in certain builds (e.g. some audio reactive effects may only work on ESP32).
-In order for each effect to have an unique ID on all devices, having unsupported ones in between supported ones is possible.
-If called, these will fallback to the Solid effect, in the effects list they have the name `RSVD` or `-`.
-To improve user experience, it is recommended to remove effects with the names `RSVD` or `-` form the UI effect selection.
+    In WLED versions 0.14+, some effects are unsupported in certain builds (e.g. some audio reactive effects may only work on ESP32).
+    In order for each effect to have an unique ID on all devices, having unsupported ones in between supported ones is possible.
+    If called, these will fallback to the Solid effect, in the effects list they have the name `RSVD` or `-`.
+    To improve user experience, it is recommended to remove effects with the names `RSVD` or `-` form the UI effect selection.
 
 ### Example Library
 [WLED JSON API Library in rust](https://github.com/paulwrath1223/wled-json-api-library).
@@ -39,8 +39,8 @@ Example: `{"on":true,"bri":255}` sets the brightness to maximum. `{"seg":[{"col"
 `{"seg":[{"id":X,"on":"t"}]}` and replacing X with the desired segment ID will toggle on or off that segment.
 
 !!! tldr "CURL example"
-This will toggle on and off and return the new state (v0.13+):
-`curl -X POST "http://[WLED-IP]/json/state" -d '{"on":"t","v":true}' -H "Content-Type: application/json"`
+    This will toggle on and off and return the new state (v0.13+):
+    `curl -X POST "http://[WLED-IP]/json/state" -d '{"on":"t","v":true}' -H "Content-Type: application/json"`
 
 Sample JSON API response (v0.8.4):
 
@@ -270,15 +270,15 @@ To set ranges of LEDs, use the LED start and stop index followed by its color va
 `{"seg":{"i":[0,8,"FF0000", 10,18,"0000FF"]}}` sets the first eight LEDs to red, leaves out two, and sets another 8 to blue.
 
 To set a large number of colors, send multiple api calls of 256 colors at a time.  
-`{"seg": {"i":[0,"CC0000", "00CC00", "0000CC", "CC0000"...]}}`
+`{"seg": {"i":[0,"CC0000", "00CC00", "0000CC", "CC0000"...]}}` 
 `{"seg": {"i":[256, "CC0000", "00CC00", "0000CC", "CC0000"...]}}`
 `{"seg": {"i":[512, "CC0000", "00CC00", "0000CC", "CC0000"...]}}`
 
 Do not make several calls in parallel, that is not optimal for the device. Instead make your call in sequence, where each call waits for the previous to complete before making a new one. How this is done depends on your choice of tool, but with CURL you que your commands by separating then with ` && ` i.e. `CURL [command 1] && CURL [command 2] && CURL [command 3]`.
 
 !!! tip "Command buffer size"
-If you are trying to set many LEDs and it fails to work, you can check your request [here](https://arduinojson.org/v6/assistant) for length.
-Select ESP32 and Deserialize. If the required buffer size is above 10K for ESP8266 and 24K for ESP32, please split it into multiple sequential requests and consider using the Hex string syntax.
+    If you are trying to set many LEDs and it fails to work, you can check your request [here](https://arduinojson.org/v6/assistant) for length.
+    Select ESP32 and Deserialize. If the required buffer size is above 10K for ESP8266 and 24K for ESP32, please split it into multiple sequential requests and consider using the Hex string syntax.
 
 Keep in mind that the LED indices are segment-based, so LED 0 is the first LED of the segment, not of the entire strip.
 Segment features, including Grouping, Spacing, Mirroring and Reverse are functional.
@@ -286,7 +286,7 @@ Segment features, including Grouping, Spacing, Mirroring and Reverse are functio
 Matrices are handled as a non-serpentine layout.
 
 !!! info "Brightness interaction"
-For your colors to apply correctly, make sure the desired brightness is set beforehand. Turning on the LEDs from an off state and setting individual LEDs in the same JSON request will _not_ work!
+    For your colors to apply correctly, make sure the desired brightness is set beforehand. Turning on the LEDs from an off state and setting individual LEDs in the same JSON request will _not_ work!
 
 #### Playlists
 
@@ -323,7 +323,7 @@ end | Single preset ID to apply after the playlist finished. Has no effect when 
 In order to e.g. only show color controls relevant to a given setup, it is necessary to obtain the color capabilities of the light.  
 The `info.leds.seglc` array can be used to do so on a per-segment level. It contains `n+1` 8-bit integers, where `n` is the `id` of the last _active_ segment,
 each index corresponds to the segment with that ID.  
-This integer indicates whether a given segment supports (24 bit) RGB colors, an extra (8 bit) white channel and/or adjustable color temperature (CCT):
+This integer indicates whether a given segment supports (24 bit) RGB colors, an extra (8 bit) white channel and/or adjustable color temperature (CCT):  
 
 | Bit | Capability
 | --- | --- |
@@ -332,7 +332,7 @@ This integer indicates whether a given segment supports (24 bit) RGB colors, an 
 2 | Segment supports color temperature
 3-7 | Reserved (expect any value)
 
-Therefore:
+Therefore:  
 
 | `lc` value | Capabilities
 | --- | --- |
@@ -345,9 +345,9 @@ Therefore:
 6 | Supports CCT (including white channel) 
 7 | Supports CCT (including white channel) + RGB
 
-Note that CCT is controllable per-segment, while RGB color and white channel have 3 color slots each per segment.
-
-`info.leds.lc` contains this info on a global level, and is a bitwise AND of the per-segment light capability values.
+Note that CCT is controllable per-segment, while RGB color and white channel have 3 color slots each per segment.  
+  
+`info.leds.lc` contains this info on a global level, and is a bitwise AND of the per-segment light capability values.  
 
 #### CCT control
 
@@ -379,9 +379,9 @@ CCT support is indicated by `info.leds.cct` being `true`, in which case you can 
 #### Effect metadata
 
 !!! tip "Why effect metadata?"
-Prior to 0.14, user interfaces showed Speed and Intensity slider, palette controls, and all three color slots regardless of the effect selected.
-This may cause confusion to the user because controls are displayed that have no immediate effect in the current configuration.
-Effect metadata allows you to dynamically hide certain controls, so that the user only sees controls actually utilized by the selected effect mode.
+    Prior to 0.14, user interfaces showed Speed and Intensity slider, palette controls, and all three color slots regardless of the effect selected.
+    This may cause confusion to the user because controls are displayed that have no immediate effect in the current configuration.
+    Effect metadata allows you to dynamically hide certain controls, so that the user only sees controls actually utilized by the selected effect mode.
 
 Starting with WLED 0.14, effect metadata is available under the `/json/fxdata` URL.  
 This returns an array of strings with `info.fxcount` entries.
@@ -412,7 +412,7 @@ o3 | Option 3
 
 The fallback value if this section is missing is two sliders, Effect speed and Effect intensity.
 
-Examples:
+Examples:  
 
 | Parameter string | Displayed controls
 | --- | --- |
@@ -430,7 +430,7 @@ Up to 3 colors can be used. Please note that only the first two characters of th
 
 The fallback value if this section is missing is 3 colors: `Fx` + `Bg` + `Cs`.
 
-Examples:
+Examples:  
 
 | Colors string | Displayed controls
 | --- | --- |
@@ -477,7 +477,7 @@ If no default is specified for a given parameter, it retains the current value.
 ### Sensors
 
 !!! warning
-This section about the Sensor API is a DRAFT specification. It is not yet implemented and subject to change.
+    This section about the Sensor API is a DRAFT specification. It is not yet implemented and subject to change.
 
 Various types of sensors (e.g. for Temperature, light intensity, PIR) may be added to WLED via usermods.
 To allow read access to sensor data via the JSON API in a standardized way, the `info.sensor` array is used.
