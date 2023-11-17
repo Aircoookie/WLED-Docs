@@ -7,6 +7,8 @@ hide:
 
 # Distributed Display Protocol
 
+NOT TO BE CONFUSED WITH UDP.
+
 DDP is a protocol designed by 3waylabs outlined [here on their website](http://www.3waylabs.com/ddp/).
 
 WLED listens for DDP packets on port 4048, as outlined by the protocol.
