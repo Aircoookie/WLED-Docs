@@ -80,7 +80,7 @@ SP501e | ESP8285 | 8285-based 1M Controller that supports both Addressable and P
 [SP511e](https://www.aliexpress.com/item/32820185063.html) | ESP8285 | An ESP8285 2MB controller with 3 case buttons, built in mic, IR receiver, 38 key remote, and dual outputs. The dual outputs are connected to the same data pin. There is a step-by-step guide for [Installing WLED on SP511E Controller](https://github.com/scottrbailey/WLED-Utils/blob/gh-pages/sp511e_wled.md).
 [ESP LED Strip WIFI Control Board [ESP Version]](https://www.electrodragon.com/product/esp-led-strip-board) | ESP8266 | Controller for addressable or analog LEDs (RGBW), 6-27VDC input, no level shifter, reset and boot buttons, enclosure. NOTE: Although this uses high-current transistors, they used jumpers on two of the connections so you are limited to their current rating (3A?).
 
-## WLED shields to be use with ESP8266/ESP32 controllr boards
+## WLED shields to be use with ESP8266/ESP32 controller boards
 | Name | Description |
 |---|---|
 [ABC! WLED Shield, all-purpose, for ESP8266/ESP32](https://shop.myhome-control.de/ABC-WLED-Basis-Board-fuer-5V-und-12V-LED-universell/HW10008) | Commercial WLED Shield for 5V/12V LED strips. To be used with ESP8266 or ESP32 in D1 mini format. Two outputs. Option for digital microphone or [line-in-to-I2S Adapter](https://shop.myhome-control.de/Line-In-zu-I2S-Adapter-fuer-WLED-Controller/HW10013) for sound reactive WLED (with ESP32 only!). Automatic 5V/12V recognition (no jumper/switch etc. required). Enclosure is available too. German shop & shipping currently only within Germany.
