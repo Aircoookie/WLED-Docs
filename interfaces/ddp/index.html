@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../http-api/">
+        <link rel="prev" href="../websocket/">
       
       
-        <link rel="next" href="../json-api/">
+        <link rel="next" href="../../advanced/audio-reactive/">
       
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Infrared - WLED Project</title>
+        <title>DDP protocol - WLED Project</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#supported-ir-remotes" class="md-skip">
+        <a href="#distributed-display-protocol" class="md-skip">
           Skip to content
         </a>
       
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Infrared
+              DDP protocol
             
           </span>
         </div>
@@ -1166,27 +1166,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Remote Control
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../infrared/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1195,42 +1177,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#supported-ir-remotes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Supported IR remotes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#esp-now-based-remote-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      ESP-NOW based remote control
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1380,9 +1326,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../ddp/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    DDP Realtime
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1391,6 +1357,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example implementations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1832,6 +1827,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1840,18 +1837,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#supported-ir-remotes" class="md-nav__link">
+  <a href="#example-implementations" class="md-nav__link">
     <span class="md-ellipsis">
-      Supported IR remotes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#esp-now-based-remote-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      ESP-NOW based remote control
+      Example implementations
     </span>
   </a>
   
@@ -1872,7 +1860,7 @@
                   
 
   
-    <a href="https://github.com/Aircoookie/WLED-Docs/edit/main/docs/interfaces/infrared.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/Aircoookie/WLED-Docs/edit/main/docs/interfaces/ddp.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1880,33 +1868,19 @@
   
 
 
-  <h1>Remote Control</h1>
-
-<div class="admonition info">
-<p class="admonition-title">Version Info</p>
-<p>Since v0.8.2, infrared control from various IR remotes is supported for ESP8266 and since v0.9.0 for ESP32, too.</p>
-</div>
-<p>A dedicated infrared receiver module is required and must be connected to the WLED Controller. For example, KY-022 or TSOP38238 are confirmed to work and inexpensive. These receivers each have three pins: 3.3V, GND and IR data. IR data pin must be connected to a free GPIO pin. This GPIO must then be set as IR GPIO under "Config-&gt;LED Preferences" (The default sensor pin is GPIO4).
-<img alt="Infrared shcematics" src="../../assets/images/content/pic13.jpg" /></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>IR receiving will not work on ESP8266 if you use any LED pin other than GPIO 1, 2, or 3 for <em>digital</em> LED strips.</p>
-</div>
-<h3 id="supported-ir-remotes">Supported IR remotes</h3>
-<p>To use IR remote go to <code>Settings</code>, <code>Sync Interfaces</code> and change the value for <code>Infrared receiver type</code> according to the IR remote type of the following list:</p>
-<ol>
-<li>white 24-key IR remote with R,G,B + 12 color-tones  </li>
-<li>white 24-key IR remote with CT+ / CT- buttons  </li>
-<li>blue 40-key IR remote with keys for 25%, 50%, 75% and 100%  </li>
-<li>white 44-key IR remote with up/down arrows for the colors R,G and B  </li>
-<li>white 21-key IR remote with R,G,B + 9 color-tones  </li>
-<li>black 6-key IR remote with CH up/down + Vol up/down  </li>
-<li><a href="../json-ir/json_infrared/">JSON IR remote</a> - Easily configure and use any IR remote.  </li>
-</ol>
-<h2 id="esp-now-based-remote-control">ESP-NOW based remote control</h2>
-<p>Since version WLED 14.0-beta3: An ESP-NOW compatible remote control is supported. An example of this is the „WIZmote“ remote control. This is based on an ESP microcontroller. ESP-NOW can be activated in WLED settings. You have to enter the Hardware MAC address of the remote control. This is determined by clicking on any button on the remote control and copying the last received MAC address from the "Last Seen" field to the "Hardware MAC" field in WLED ESP-NOW settings (“Config-&gt;WiFi Setup”) and saving it with "Save". Advantages: no special receiver needs to be attached to the WLED controller and the signals are transmitted via radio network. Therefore there is no line of sight between the remote control and the WLED controller required, as is the case with an IR remote control.
-<img alt="ESP-NOW remote control" src="../../assets/images/content/pic14.jpg" />
-The 4 buttons "1"-"4" of the WIZmote remote control are linked to presets 1 to 4. The meaning of other keys is self-explanatory. Attention: WIZmote needs two good quality AAA batteries to work properly. If the batteries are too weak, the correct signal will not be sent, even if the blue LED on the remote control lights up briefly, actually indicating signal transmission.</p>
+<h1 id="distributed-display-protocol">Distributed Display Protocol</h1>
+<p>NOT TO BE CONFUSED WITH UDP.</p>
+<p>DDP is a protocol designed by 3waylabs outlined <a href="http://www.3waylabs.com/ddp/">here on their website</a>.</p>
+<p>WLED listens for DDP packets on port 4048, as outlined by the protocol.
+Check the <a href="http://www.3waylabs.com/ddp/">DDP documentation</a> for more info about packet structure.</p>
+<p>*<em>Notice</em>
+WLED does not read the optional timecodes in DDP packet headers. 
+If you are implementing the protocol to send packets to WLED, do not bother implementing it</p>
+<h2 id="example-implementations">Example implementations</h2>
+<ul>
+<li><a href="https://github.com/coral/ddp-rs">ddp-rs</a> A Rust library for sending (and even receiving) DDP packets.</li>
+<li><a href="https://github.com/LedFx/LedFx/blob/main/ledfx/devices/ddp.py">LedFX/devices/ddp.py</a> LedFX's implementation for sending DDP packets to WLED</li>
+</ul>
 
 
 
