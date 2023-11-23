@@ -18,7 +18,7 @@ adamo made the animated Discord server logo!
 [@frenck](https://github.com/frenck) made an amazing, stable and feature-packed native integration with HomeAssistant!
 [@Moustachauve](https://github.com/Moustachauve)  added palette visualisation and developped the WLED Native app for Android and iOS!  
 [@pbolduc](https://github.com/pbolduc) DDP UDP synchronization, UI improvements and user mods.  
-[@photocromax](https://github.com/photocromax) is helping bringing the Live visualization feature to life.  
+[@photocromax](https://github.com/photocromax) helped bring the Live visualization feature to life.  
 [@raymiec](https://github.com/raymiec)  is currently working on creating the best clients for Android and iOS!  
 [@scottrbailey](https://github.com/scottrbailey) added JSON IR remote and gif visualizations for the docs.  
 [@softhack007](https://github.com/softhack007) audio processing, new MCU support, code reviews, and various optimizations.  MoonModules maintainer.  
