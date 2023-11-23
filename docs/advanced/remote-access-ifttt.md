@@ -23,7 +23,7 @@ This method offers more flexibility, but is also more involved.
 **Keep in mind this causes anyone with your IP address to have access to your ESP8266!**   
 Setting up an [OTA lock password](/advanced/security) is a must to prevent attackers from acquiring your WiFi credentials!
 
-To expose WLED to the internet, create a port forwarding rule for your ESP's IP local ip and port (80) in your router configuration. It is not recommended to use port 80 on your public IP address since 80 is scanned constantly by bots good and bad. Use a 5 digit port for better securuty.
+To expose WLED to the internet, create a port forwarding rule for your ESP's IP local ip and port (80) in your router configuration. It is not recommended to use port 80 on your public IP address since 80 is scanned constantly by bots good and bad. Use a 5 digit port for better security.
 If your public IP changes a lot, make sure to also use a dynamic DNS service so your lights are always accessible.
 _Unsure what any of this means or how to do it? Google for "[your router model] port forwarding"!_
 
