@@ -213,12 +213,12 @@ Some effects get retired when they can be recreated with newer, more general eff
 
 | Removed Effect  | Replacement                           | Retired After |
 |-----------------|---------------------------------------|---------------|
-| Candy Cane      | Chase 2                               | 0.14.0        |
+| Candy Cane      | Chase 2 - red/white                   | 0.14.0        |
 | Dissolve Rnd    | Dissolve                              | 0.14.0        |
 | Dynamic Smooth  | Dynamic                               | 0.14.0        |
 | Halloween       | Chase 2                               | 0.14.0        |
- | Merry Christmas | Chase 2 - red/green                   | 0.12.0        |    
- | Police          | Two Dot                               | 0.14.0        |
- | Police All      | Two Dots - red/blue w/ full intensity | 0.13.0        |
- | Two Areas       | Two Dots - full intensity             | 0.13.0        |
+| Merry Christmas | Chase 2 - red/green                   | 0.12.0        |    
+| Police          | Two Dot                               | 0.14.0        |
+| Police All      | Two Dots - red/blue w/ full intensity | 0.13.0        |
+| Two Areas       | Two Dots - full intensity             | 0.13.0        |
 
