@@ -132,14 +132,15 @@ Sample JSON API response (v0.8.4):
 
 | JSON key | Value range | Description
 | --- | --- | --- |
-on | bool | On/Off state of the light
-bri | 0 to 255 | Brightness of the light. If _on_ is `false`, contains last brightness when light was on (aka brightness when _on_ is set to true. Setting _bri_ to 0 is supported but it is recommended to use the range 1-255 and use `on: false` to turn off. The state response will never havethe value `0` for _bri_.
-transition | 0 to 255 | Duration of the crossfade between different colors/brightness levels. One unit is 100ms, so a value of `4` results in atransition of 400ms.
-tt | 0 to 255 | Similar to transition, but applies to just the current API call. Not included in state response.
-ps | -1 to 65535 | ID of currently set preset. `1~17~` can be used to iterate through presets 1-17.
+on | bool | On/Off state of the light. You can also use `"t"` instead of `true` or `false` to toggle.
+bri | 1 to 255 | Brightness of the light. If _on_ is `false`, contains last brightness when light was on (aka brightness when _on_ is set to true. Setting _bri_ to 0 is supported but it is recommended to use the range 1-255 and use `on: false` to turn off. The state response will never havethe value `0` for _bri_.
+transition | 0 to 65535 | Duration of the crossfade between different colors/brightness levels. One unit is 100ms, so a value of `4` results in atransition of 400ms.
+tt | 0 to 65535 | Similar to transition, but applies to just the current API call. Not included in state response.
+ps | -1 to 250 | ID of currently set preset. `1~17~` can be used to iterate through presets 1-17, or `4~10~r` to select random preset between presets 4 and 10 (inclusive).
 ~~pss~~ | 0 to 65535 | Bitwise indication of preset slots (0 - vacant, 1 - written). Always 0 in 0.11. Not changable. _Removed as of v0.11.1_
-psave | 1 to 16 (250 in 0.11) | Save current light config to specified preset slot. Not included in state response.
-pl | -1 to 0 | ID of currently set playlist. For now, this sets the preset cycle feature, `-1` is off and `0` is on.
+psave | 1 to 250 (16 prior to 0.11) | Save current light config (state) to specified preset slot. Not included in state response.
+pl | -1 to 250 | ID of currently set playlist. _(read-olny)_
+pdel | 1 to 250 | Preset ID to delete. Not included in state response.
 nl.on | bool | Nightlight currently active
 nl.dur | 1 to 255 | Duration of nightlight in minutes
 ~~nl.fade~~ | bool | If `true`, the light will gradually dim over the course of the nightlight duration. If `false`, it will instantly turn to the target brightness once the duration has elapsed. _Removed in 0.13.0_ (use mode instead)
@@ -157,9 +158,11 @@ live | bool | If set to _true_, enters realtime mode and blanks the LEDs. The re
 lor | 0, 1, or 2 | Live data override. 0 is off, 1 is override until live data ends, 2 is override until ESP reboot (available since 0.10.0)
 time | uint32 | Set module time to unix timestamp. Not included in state response.
 mainseg | 0 to info.leds.maxseg-1 | Main Segment | Sets which segment ID is the main segment. The main segment's values are the ones sent by UDP sync, and in case no segment is selected, all changes done via the `"seg":{}` syntax without a segment `id` specified are applied to the main segment. If the main segment is deleted, the first active segment becomes the new main segment.
-seg | Array of segment objects | Segments are individual parts of the LED strip. In 0.9.0 this will enables running different effects on differentparts of the strip.
-playlist | object | [Custom preset playlists](#playlists). Not included in state response (available since 0.11.0)
+seg | Object or Array of objects | _(see below)_ Segments are individual parts of the LED strip. Since 0.9.0 this enables running different effects on differentparts of the strip.
+playlist | object | [Custom preset playlists](#playlists). Not included in state response. _(available since 0.11.0)_
 tb | uint32 | Sets timebase for effects. Not reported.
+ledmap | 0 to 10 | Load desiired ledmap. [See mapping](/advanced/mapping/). Not included in state response. _(available since 0.14.0)_
+rmcpal | bool | Remove last custom palette if set to `true`. Not included in state response. _(available since 0.14.0)_
 
 #### Contents of the segment object
 
@@ -170,8 +173,10 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 | JSON key | Value range | Description
 | --- | --- | --- |
 id | 0 to info.maxseg -1 | Zero-indexed ID of the segment. May be omitted, in that case the ID will be inferred from the order of the segment objects in the _seg_ array.
-start | 0 to info.leds.count -1 | LED the segment starts at.
-stop | 0 to info.leds.count | LED the segment stops at, not included in range. If _stop_ is set to a lower or equal value than _start_ (setting to `0` is recommended), the segment is invalidated and deleted.
+start | 0 to info.leds.count -1 | LED the segment starts at. For 2D set-up it determines column where segment starts, from top-left corner of the matrix.
+stop | 0 to info.leds.count | LED the segment stops at, not included in range. If _stop_ is set to a lower or equal value than _start_ (setting to `0` is recommended), the segment is invalidated and deleted. For 2D set-up it determines column where segment stops, from top-left corner of the matrix.
+startY | 0 to matrix width | Start row from top-left corner of a matrix. _(available since 0.14.0)_
+stopY | 1 to matrix height | Stop row from top-left corner of matrix. _(available since 0.14.0)_
 len | 0 to info.leds.count | Length of the segment (_stop_ - _start_). _stop_ has preference, so if it is included, _len_ is ignored.
 grp | 0 to 255 | Grouping (how many consecutive LEDs of the same segment will be grouped to the same color)
 spc | 0 to 255 | Spacing (how many LEDs are turned off and skipped between each group)
@@ -188,19 +193,25 @@ o2 | bool | Effect option 2.
 o3 | bool | Effect option 3.
 pal | 0 to info.palcount -1 | ID of the color palette or ~ to increment, ~- to decrement, or r for random.
 sel | bool | `true` if the segment is selected. Selected segments will have their state (color/FX) updated by APIs that don't support segments (e.g. UDP sync, HTTP API). If no segment is selected, the first segment (_id_:`0`) will behave as if selected. WLED will report the state of the first (lowest _id_) segment that is selected to APIs (HTTP, MQTT, Blynk...), or `mainseg` in case no segment is selected and for the UDP API. Live data is always applied to all LEDs regardless of segment configuration.
-rev | bool | Flips the segment, causing animations to change direction.
+rev | bool | Flips the segment (in horizontal dimension for 2D set-up), causing animations to change direction.
+rY | bool | Flips the 2D segment in vertical dimension. _(available since 0.14.0)_
 on | bool | Turns on and off the individual segment. _(available since 0.10.0)_
 bri | 0 to 255 | Sets the individual segment brightness _(available since 0.10.0)_
-mi | bool | Mirrors the segment _(available since 0.10.2)_
+mi | bool | Mirrors the segment (in horizontal dimension for 2D set-up) _(available since 0.10.2)_
+mY | bool | Mirrors the 2D segment in vertical dimension. _(available since 0.14.0)_
+tp | bool | Transposes a segment (swaps X and Y dimensions). _(available since 0.14.0)_
 cct | 0 to 255 _or_ 1900 to 10091 | White spectrum [color temperature](#cct-control) _(available since 0.13.0)_
-lx | `BBBGGGRRR`: 0 - 100100100 | Loxone RGB value for primary color. Each color (`RRR`,`GGG`,`BBB`) is specified in the range from 0 to 100%.
-lx | `20bbbtttt`: 200002700 - 201006500 | Loxone brightness and color temperature values for primary color. Brightness `bbb` is specified in the range 0 to 100%. `tttt` defines the color temperature in the range from 2700 to 6500 Kelvin. (available since 0.11.0, not included in state response)
-ly | `BBBGGGRRR`: 0 - 100100100 | Loxone RGB value for secondary color. Each color (`RRR`,`GGG`,`BBB`) is specified in the range from 0 to 100%.
-ly | `20bbbtttt`: 200002700 - 201006500 | Loxone brightness and color temperature values for secondary color. Brightness `bbb` is specified in the range 0 to 100%. `tttt` defines the color temperature in the range from 2700 to 6500 Kelvin. _(available since 0.11.0, not included in state response)_
+lx | `BBBGGGRRR`: 0 - 100100100 | Loxone RGB value for primary color. Each color (`RRR`,`GGG`,`BBB`) is specified in the range from 0 to 100%. _Only available if Loxone is compiled in._
+lx | `20bbbtttt`: 200002700 - 201006500 | Loxone brightness and color temperature values for primary color. Brightness `bbb` is specified in the range 0 to 100%. `tttt` defines the color temperature in the range from 2700 to 6500 Kelvin. (available since 0.11.0, not included in state response) _Only available if Loxone is compiled in._
+ly | `BBBGGGRRR`: 0 - 100100100 | Loxone RGB value for secondary color. Each color (`RRR`,`GGG`,`BBB`) is specified in the range from 0 to 100%. _Only available if Loxone is compiled in._
+ly | `20bbbtttt`: 200002700 - 201006500 | Loxone brightness and color temperature values for secondary color. Brightness `bbb` is specified in the range 0 to 100%. `tttt` defines the color temperature in the range from 2700 to 6500 Kelvin. _(available since 0.11.0, not included in state response)_ _Only available if Loxone is compiled in._
 i | array | [Individual LED control](#per-segment-individual-led-control). Not included in state response _(available since 0.10.2)_
 frz | bool | freezes/unfreezes the current effect
 m12 | 0 to 4 [map1D2D.count] | Setting of segment field 'Expand 1D FX'. (0: Pixels, 1: Bar, 2: Arc, 3: Corner)
 si | 0 to 3 | Setting of the sound simulation type for audio enhanced effects. (0: 'BeatSin', 1: 'WeWillRockYou', 2: '10_3', 3: '14_3') (_as of 0.14.0-b1, there are these 4 types defined_)
+fxdef | bool | Forces loading of effect defaults (speed, intensity, etc) from effect [metadata](#effect-metadata). _(available since 0.14.0)_
+set | 0 to 3 | Assigns group or set ID  to segment (not to be confused with *grouping*). Visual aid only (helps in UI). _(available since 0.14.0)_
+rpt | bool | Flag to repeat current segment settings by creating segments until all available LEDs are included in automatically created segments or maximum segments reached. Will also toggle *reverse* on every *even* segment. _(available since 0.13.0)_
 
 #### Info object
 
