@@ -264,6 +264,7 @@ mac | string | The hexadecimal hardware MAC address of the light, lowercase and 
 ip | string | The IP address of this instance. Empty string if not connected. (since 0.13.0)
 
 Examples of frequently requested custom API:
+
 | Function/Effect | API (Add to preset or call from other sources)
 | --- | --- |
 Cycle presets between 1 and 6 | `{"ps":"1~6~"}`
