@@ -2477,27 +2477,27 @@ Example: <code>{"on":true,"bri":255}</code> sets the brightness to maximum. <cod
 <tr>
 <td>on</td>
 <td>bool</td>
-<td>On/Off state of the light</td>
+<td>On/Off state of the light. You can also use <code>"t"</code> instead of <code>true</code> or <code>false</code> to toggle.</td>
 </tr>
 <tr>
 <td>bri</td>
-<td>0 to 255</td>
+<td>1 to 255</td>
 <td>Brightness of the light. If <em>on</em> is <code>false</code>, contains last brightness when light was on (aka brightness when <em>on</em> is set to true. Setting <em>bri</em> to 0 is supported but it is recommended to use the range 1-255 and use <code>on: false</code> to turn off. The state response will never havethe value <code>0</code> for <em>bri</em>.</td>
 </tr>
 <tr>
 <td>transition</td>
-<td>0 to 255</td>
+<td>0 to 65535</td>
 <td>Duration of the crossfade between different colors/brightness levels. One unit is 100ms, so a value of <code>4</code> results in atransition of 400ms.</td>
 </tr>
 <tr>
 <td>tt</td>
-<td>0 to 255</td>
+<td>0 to 65535</td>
 <td>Similar to transition, but applies to just the current API call. Not included in state response.</td>
 </tr>
 <tr>
 <td>ps</td>
-<td>-1 to 65535</td>
-<td>ID of currently set preset. <code>1~17~</code> can be used to iterate through presets 1-17.</td>
+<td>-1 to 250</td>
+<td>ID of currently set preset. <code>1~17~</code> can be used to iterate through presets 1-17, or <code>4~10~r</code> to select random preset between presets 4 and 10 (inclusive).</td>
 </tr>
 <tr>
 <td><del>pss</del></td>
@@ -2506,13 +2506,18 @@ Example: <code>{"on":true,"bri":255}</code> sets the brightness to maximum. <cod
 </tr>
 <tr>
 <td>psave</td>
-<td>1 to 16 (250 in 0.11)</td>
-<td>Save current light config to specified preset slot. Not included in state response.</td>
+<td>1 to 250 (16 prior to 0.11)</td>
+<td>Save current light config (state) to specified preset slot. Not included in state response.</td>
 </tr>
 <tr>
 <td>pl</td>
-<td>-1 to 0</td>
-<td>ID of currently set playlist. For now, this sets the preset cycle feature, <code>-1</code> is off and <code>0</code> is on.</td>
+<td>-1 to 250</td>
+<td>ID of currently set playlist. <em>(read-olny)</em></td>
+</tr>
+<tr>
+<td>pdel</td>
+<td>1 to 250</td>
+<td>Preset ID to delete. Not included in state response.</td>
 </tr>
 <tr>
 <td>nl.on</td>
@@ -2601,18 +2606,28 @@ Example: <code>{"on":true,"bri":255}</code> sets the brightness to maximum. <cod
 </tr>
 <tr>
 <td>seg</td>
-<td>Array of segment objects</td>
-<td>Segments are individual parts of the LED strip. In 0.9.0 this will enables running different effects on differentparts of the strip.</td>
+<td>Object or Array of objects</td>
+<td><em>(see below)</em> Segments are individual parts of the LED strip. Since 0.9.0 this enables running different effects on differentparts of the strip.</td>
 </tr>
 <tr>
 <td>playlist</td>
 <td>object</td>
-<td><a href="#playlists">Custom preset playlists</a>. Not included in state response (available since 0.11.0)</td>
+<td><a href="#playlists">Custom preset playlists</a>. Not included in state response. <em>(available since 0.11.0)</em></td>
 </tr>
 <tr>
 <td>tb</td>
 <td>uint32</td>
 <td>Sets timebase for effects. Not reported.</td>
+</tr>
+<tr>
+<td>ledmap</td>
+<td>0 to 10</td>
+<td>Load desiired ledmap. <a href="/advanced/mapping/">See mapping</a>. Not included in state response. <em>(available since 0.14.0)</em></td>
+</tr>
+<tr>
+<td>rmcpal</td>
+<td>bool</td>
+<td>Remove last custom palette if set to <code>true</code>. Not included in state response. <em>(available since 0.14.0)</em></td>
 </tr>
 </tbody>
 </table>
@@ -2637,12 +2652,22 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 <tr>
 <td>start</td>
 <td>0 to info.leds.count -1</td>
-<td>LED the segment starts at.</td>
+<td>LED the segment starts at. For 2D set-up it determines column where segment starts, from top-left corner of the matrix.</td>
 </tr>
 <tr>
 <td>stop</td>
 <td>0 to info.leds.count</td>
-<td>LED the segment stops at, not included in range. If <em>stop</em> is set to a lower or equal value than <em>start</em> (setting to <code>0</code> is recommended), the segment is invalidated and deleted.</td>
+<td>LED the segment stops at, not included in range. If <em>stop</em> is set to a lower or equal value than <em>start</em> (setting to <code>0</code> is recommended), the segment is invalidated and deleted. For 2D set-up it determines column where segment stops, from top-left corner of the matrix.</td>
+</tr>
+<tr>
+<td>startY</td>
+<td>0 to matrix width</td>
+<td>Start row from top-left corner of a matrix. <em>(available since 0.14.0)</em></td>
+</tr>
+<tr>
+<td>stopY</td>
+<td>1 to matrix height </td>
+<td>Stop row from top-left corner of matrix. <em>(available since 0.14.0)</em></td>
 </tr>
 <tr>
 <td>len</td>
@@ -2727,7 +2752,12 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 <tr>
 <td>rev</td>
 <td>bool</td>
-<td>Flips the segment, causing animations to change direction.</td>
+<td>Flips the segment (in horizontal dimension for 2D set-up), causing animations to change direction.</td>
+</tr>
+<tr>
+<td>rY</td>
+<td>bool</td>
+<td>Flips the 2D segment in vertical dimension. <em>(available since 0.14.0)</em></td>
 </tr>
 <tr>
 <td>on</td>
@@ -2742,7 +2772,17 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 <tr>
 <td>mi</td>
 <td>bool</td>
-<td>Mirrors the segment <em>(available since 0.10.2)</em></td>
+<td>Mirrors the segment (in horizontal dimension for 2D set-up) <em>(available since 0.10.2)</em></td>
+</tr>
+<tr>
+<td>mY</td>
+<td>bool</td>
+<td>Mirrors the 2D segment in vertical dimension. <em>(available since 0.14.0)</em></td>
+</tr>
+<tr>
+<td>tp</td>
+<td>bool</td>
+<td>Transposes a segment (swaps X and Y dimensions). <em>(available since 0.14.0)</em></td>
 </tr>
 <tr>
 <td>cct</td>
@@ -2752,22 +2792,22 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 <tr>
 <td>lx</td>
 <td><code>BBBGGGRRR</code>: 0 - 100100100</td>
-<td>Loxone RGB value for primary color. Each color (<code>RRR</code>,<code>GGG</code>,<code>BBB</code>) is specified in the range from 0 to 100%.</td>
+<td>Loxone RGB value for primary color. Each color (<code>RRR</code>,<code>GGG</code>,<code>BBB</code>) is specified in the range from 0 to 100%. <em>Only available if Loxone is compiled in.</em></td>
 </tr>
 <tr>
 <td>lx</td>
 <td><code>20bbbtttt</code>: 200002700 - 201006500</td>
-<td>Loxone brightness and color temperature values for primary color. Brightness <code>bbb</code> is specified in the range 0 to 100%. <code>tttt</code> defines the color temperature in the range from 2700 to 6500 Kelvin. (available since 0.11.0, not included in state response)</td>
+<td>Loxone brightness and color temperature values for primary color. Brightness <code>bbb</code> is specified in the range 0 to 100%. <code>tttt</code> defines the color temperature in the range from 2700 to 6500 Kelvin. (available since 0.11.0, not included in state response) <em>Only available if Loxone is compiled in.</em></td>
 </tr>
 <tr>
 <td>ly</td>
 <td><code>BBBGGGRRR</code>: 0 - 100100100</td>
-<td>Loxone RGB value for secondary color. Each color (<code>RRR</code>,<code>GGG</code>,<code>BBB</code>) is specified in the range from 0 to 100%.</td>
+<td>Loxone RGB value for secondary color. Each color (<code>RRR</code>,<code>GGG</code>,<code>BBB</code>) is specified in the range from 0 to 100%. <em>Only available if Loxone is compiled in.</em></td>
 </tr>
 <tr>
 <td>ly</td>
 <td><code>20bbbtttt</code>: 200002700 - 201006500</td>
-<td>Loxone brightness and color temperature values for secondary color. Brightness <code>bbb</code> is specified in the range 0 to 100%. <code>tttt</code> defines the color temperature in the range from 2700 to 6500 Kelvin. <em>(available since 0.11.0, not included in state response)</em></td>
+<td>Loxone brightness and color temperature values for secondary color. Brightness <code>bbb</code> is specified in the range 0 to 100%. <code>tttt</code> defines the color temperature in the range from 2700 to 6500 Kelvin. <em>(available since 0.11.0, not included in state response)</em> <em>Only available if Loxone is compiled in.</em></td>
 </tr>
 <tr>
 <td>i</td>
@@ -2788,6 +2828,21 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 <td>si</td>
 <td>0 to 3</td>
 <td>Setting of the sound simulation type for audio enhanced effects. (0: 'BeatSin', 1: 'WeWillRockYou', 2: '10_3', 3: '14_3') (<em>as of 0.14.0-b1, there are these 4 types defined</em>)</td>
+</tr>
+<tr>
+<td>fxdef</td>
+<td>bool</td>
+<td>Forces loading of effect defaults (speed, intensity, etc) from effect <a href="#effect-metadata">metadata</a>. <em>(available since 0.14.0)</em></td>
+</tr>
+<tr>
+<td>set</td>
+<td>0 to 3</td>
+<td>Assigns group or set ID  to segment (not to be confused with <em>grouping</em>). Visual aid only (helps in UI). <em>(available since 0.14.0)</em></td>
+</tr>
+<tr>
+<td>rpt</td>
+<td>bool</td>
+<td>Flag to repeat current segment settings by creating segments until all available LEDs are included in automatically created segments or maximum segments reached. Will also toggle <em>reverse</em> on every <em>even</em> segment. <em>(available since 0.13.0)</em></td>
 </tr>
 </tbody>
 </table>
