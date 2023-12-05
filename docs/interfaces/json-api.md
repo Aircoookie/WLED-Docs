@@ -133,7 +133,7 @@ Sample JSON API response (v0.8.4):
 | JSON key | Value range | Description
 | --- | --- | --- |
 on | bool | On/Off state of the light. You can also use `"t"` instead of `true` or `false` to toggle.
-bri | 1 to 255 | Brightness of the light. If _on_ is `false`, contains last brightness when light was on (aka brightness when _on_ is set to true. Setting _bri_ to 0 is supported but it is recommended to use the range 1-255 and use `on: false` to turn off. The state response will never havethe value `0` for _bri_.
+bri | 0 to 255 | Brightness of the light. If _on_ is `false`, contains last brightness when light was on (aka brightness when _on_ is set to true). Setting _bri_ to 0 is supported but it is recommended to use the range 1-255 and use `on: false` to turn off. The state response will never have the value `0` for _bri_.
 transition | 0 to 65535 | Duration of the crossfade between different colors/brightness levels. One unit is 100ms, so a value of `4` results in atransition of 400ms.
 tt | 0 to 65535 | Similar to transition, but applies to just the current API call. Not included in state response.
 ps | -1 to 250 | ID of currently set preset. `1~17~` can be used to iterate through presets 1-17, or `4~10~r` to select random preset between presets 4 and 10 (inclusive).
@@ -181,10 +181,10 @@ len | 0 to info.leds.count | Length of the segment (_stop_ - _start_). _stop_ ha
 grp | 0 to 255 | Grouping (how many consecutive LEDs of the same segment will be grouped to the same color)
 spc | 0 to 255 | Spacing (how many LEDs are turned off and skipped between each group)
 of | -len+1 to len | Offset (how many LEDs to rotate the virtual start of the segments, available since 0.13.0)
-col | array of colors | Array that has up to 3 color arrays as elements, the primary, secondary (background) and tertiary colors of the segment. Each color is an array of 3 or 4 bytes, which represent an RGB(W) color.
-fx | 0 to info.fxcount -1 | ID of the effect or ~ to increment, ~- to decrement, or r for random.
-sx | 0 to 255 | Relative effect speed. ~ to increment, ~- to decrement. ~10 to increment by 10, ~-10 to decrement by 10.
-ix | 0 to 255 | Effect intensity. ~ to increment, ~- to decrement. ~10 to increment by 10, ~-10 to decrement by 10.
+col | array of colors | Array that has up to 3 color arrays as elements, the primary, secondary (background) and tertiary colors of the segment. Each color is an array of 3 or 4 bytes, which represents a RGB(W) color, i.e. `[[255,170,0],[0,0,0],[64,64,64]]`. It can also be represented as aan array of strings of _hex_ values, i.e. `["FFAA00","000000","404040"]` for WLED orange.
+fx | 0 to info.fxcount -1 | ID of the effect or `~` to increment, `~-` to decrement, or `"r"` for random.
+sx | 0 to 255 | Relative effect speed. `~` to increment, `~-` to decrement. `~10` to increment by 10, `~-10` to decrement by 10.
+ix | 0 to 255 | Effect intensity. `~` to increment, `~-` to decrement. `~10` to increment by 10, `~-10` to decrement by 10.
 c1 | 0 to 255 | Effect custom slider 1. Custom sliders are hidden or displayed and labeled based on [effect metadata](#effect-metadata).
 c2 | 0 to 255 | Effect custom slider 2.
 c3 | 0 to 31 | Effect custom slider 3.
@@ -263,6 +263,17 @@ product | string | The product name. Always `FOSS` for standard installations.
 mac | string | The hexadecimal hardware MAC address of the light, lowercase and without colons.
 ip | string | The IP address of this instance. Empty string if not connected. (since 0.13.0)
 
+Examples of frequently requested custom API:
+| Function/Effect | API (Add to preset or call from other sources)
+| --- | --- |
+Cycle presets between 1 and 6 | `{"ps":"1~6~"}`
+Select random effect on _all selected_ segments | `{"seg":{"fx":"r"}}`
+Select random palette between 5 and 10 on segment 2 | `{"seg":[{"id":2,"pal":"5~10~r"}]}`
+Change segment 0 name | `{"seg":[{"id":0,"n":"Your custom ASCII text"}]}`
+Freeze or unfreeze an effect | `{"seg":[{"id":0,"frz":true}]}` or `{"seg":[{"id":0,"frz":false}]}`
+Night light | `{"nl":{"on":true,"dur":10,"mode":0}}`
+Increase brightness by 40 wrapping when maximum reached | `{"bri":"w~40"}`
+
 #### Per-segment individual LED control
 
 Using the `i` property of the segment object, you can set the LED colors in the segment using the JSON API.  
@@ -270,20 +281,20 @@ Keep in mind that this is non-persistent, if the light is turned off the segment
 The segment is frozen when using individual control, the set effect will not run.   
 To unfreeze the segment, click the "eye" icon, change any property of the segment or turn off the light.
 
-To set individual LEDs starting from the beginning, use an array of Color arrays `[255, 0, 0]` or hex values `"FF0000"`.
+To set individual LEDs starting from the beginning, use an array of Color arrays `[255,0,0]` or hex values `"FF0000"`.
 Hex values are more efficient than Color arrays and should be preferred when setting a large number of colors.  
-`{"seg":{"i":["FF0000", "00FF00", "0000FF"]}}` or `{"seg":{"i":[[255,0,0], [0,255,0], [0,0,255]]}}` will set the first LED red, the second green and the third blue.
+`{"seg":{"i":["FF0000","00FF00","0000FF"]}}` or `{"seg":{"i":[[255,0,0],[0,255,0],[0,0,255]]}}` will set the first LED red, the second green and the third blue.
 
 To set individual LEDs, use the LED index followed by its color value.  
-`{"seg":{"i":[0,"FF0000", 2,"00FF00", 4,"0000FF"]}}` is the same as above, but leaves blank spaces between the lit LEDs.
+`{"seg":{"i":[0,"FF0000",2,"00FF00",4,"0000FF"]}}` is the same as above, but leaves blank spaces between the lit LEDs.
 
 To set ranges of LEDs, use the LED start and stop index followed by its color value.  
-`{"seg":{"i":[0,8,"FF0000", 10,18,"0000FF"]}}` sets the first eight LEDs to red, leaves out two, and sets another 8 to blue.
+`{"seg":{"i":[0,8,"FF0000",10,18,"0000FF"]}}` sets the first eight LEDs to red, leaves out two, and sets another 8 to blue.
 
 To set a large number of colors, send multiple api calls of 256 colors at a time.  
-`{"seg": {"i":[0,"CC0000", "00CC00", "0000CC", "CC0000"...]}}` 
-`{"seg": {"i":[256, "CC0000", "00CC00", "0000CC", "CC0000"...]}}`
-`{"seg": {"i":[512, "CC0000", "00CC00", "0000CC", "CC0000"...]}}`
+`{"seg": {"i":[0,"CC0000","00CC00","0000CC","CC0000"...]}}` 
+`{"seg": {"i":[256,"CC0000","00CC00","0000CC","CC0000"...]}}`
+`{"seg": {"i":[512,"CC0000","00CC00","0000CC","CC0000"...]}}`
 
 Do not make several calls in parallel, that is not optimal for the device. Instead make your call in sequence, where each call waits for the previous to complete before making a new one. How this is done depends on your choice of tool, but with CURL you que your commands by separating then with ` && ` i.e. `CURL [command 1] && CURL [command 2] && CURL [command 3]`.
 
@@ -479,7 +490,7 @@ The fallback value if this section is missing is `1`, i.e. a 1D optimized effect
 ##### Defaults
 
 Defaults are values for effect parameters that work particularly well on that effect.
-They are set automatically when the effect is loaded.
+They are set automatically when the effect is selected in UI unless configured otherwis in UI settings.
 To specify defaults, use the standard segment parameter name (e.g. `ix`) followed by an `=` and the default value.
 For example, `sx=24,pal=50` sets the effect speed to 24 (slow) and the palette to ID 50 (Aurora).
 
