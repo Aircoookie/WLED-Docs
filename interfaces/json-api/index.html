@@ -3074,16 +3074,45 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 </tr>
 </tbody>
 </table>
-<p>Examples of frequently requested custom API:
-| Function/Effect | API (Add to preset or call from other sources)
-| --- | --- |
-Cycle presets between 1 and 6 | <code>{"ps":"1~6~"}</code>
-Select random effect on <em>all selected</em> segments | <code>{"seg":{"fx":"r"}}</code>
-Select random palette between 5 and 10 on segment 2 | <code>{"seg":[{"id":2,"pal":"5~10~r"}]}</code>
-Change segment 0 name | <code>{"seg":[{"id":0,"n":"Your custom ASCII text"}]}</code>
-Freeze or unfreeze an effect | <code>{"seg":[{"id":0,"frz":true}]}</code> or <code>{"seg":[{"id":0,"frz":false}]}</code>
-Night light | <code>{"nl":{"on":true,"dur":10,"mode":0}}</code>
-Increase brightness by 40 wrapping when maximum reached | <code>{"bri":"w~40"}</code></p>
+<p>Examples of frequently requested custom API:</p>
+<table>
+<thead>
+<tr>
+<th>Function/Effect</th>
+<th>API (Add to preset or call from other sources)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cycle presets between 1 and 6</td>
+<td><code>{"ps":"1~6~"}</code></td>
+</tr>
+<tr>
+<td>Select random effect on <em>all selected</em> segments</td>
+<td><code>{"seg":{"fx":"r"}}</code></td>
+</tr>
+<tr>
+<td>Select random palette between 5 and 10 on segment 2</td>
+<td><code>{"seg":[{"id":2,"pal":"5~10~r"}]}</code></td>
+</tr>
+<tr>
+<td>Change segment 0 name</td>
+<td><code>{"seg":[{"id":0,"n":"Your custom ASCII text"}]}</code></td>
+</tr>
+<tr>
+<td>Freeze or unfreeze an effect</td>
+<td><code>{"seg":[{"id":0,"frz":true}]}</code> or <code>{"seg":[{"id":0,"frz":false}]}</code></td>
+</tr>
+<tr>
+<td>Night light</td>
+<td><code>{"nl":{"on":true,"dur":10,"mode":0}}</code></td>
+</tr>
+<tr>
+<td>Increase brightness by 40 wrapping when maximum reached</td>
+<td><code>{"bri":"w~40"}</code></td>
+</tr>
+</tbody>
+</table>
 <h4 id="per-segment-individual-led-control">Per-segment individual LED control</h4>
 <p>Using the <code>i</code> property of the segment object, you can set the LED colors in the segment using the JSON API.<br />
 Keep in mind that this is non-persistent, if the light is turned off the segment will return to effect mode.<br />
