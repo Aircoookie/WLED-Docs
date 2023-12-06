@@ -2621,8 +2621,8 @@ Example: <code>{"on":true,"bri":255}</code> sets the brightness to maximum. <cod
 </tr>
 <tr>
 <td>ledmap</td>
-<td>0 to 10</td>
-<td>Load desiired ledmap. <a href="/advanced/mapping/">See mapping</a>. Not included in state response. <em>(available since 0.14.0)</em></td>
+<td>0 to 9</td>
+<td>Load specified ledmap (0 for <code>ledmap.json</code>, 1-9 for <code>ledmap1.json</code> to <code>ledmap9.json</code>). <a href="/advanced/mapping/">See mapping</a>. Not included in state response. <em>(available since 0.14.0)</em></td>
 </tr>
 <tr>
 <td>rmcpal</td>
@@ -2692,7 +2692,7 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 <tr>
 <td>col</td>
 <td>array of colors</td>
-<td>Array that has up to 3 color arrays as elements, the primary, secondary (background) and tertiary colors of the segment. Each color is an array of 3 or 4 bytes, which represents a RGB(W) color, i.e. <code>[[255,170,0],[0,0,0],[64,64,64]]</code>. It can also be represented as aan array of strings of <em>hex</em> values, i.e. <code>["FFAA00","000000","404040"]</code> for WLED orange.</td>
+<td>Array that has up to 3 color arrays as elements, the primary, secondary (background) and tertiary colors of the segment. Each color is an array of 3 or 4 bytes, which represents a RGB(W) color, i.e. <code>[[255,170,0],[0,0,0],[64,64,64]]</code>. It can also be represented as aan array of strings of <em>hex</em> values, i.e. <code>["FFAA00","000000","404040"]</code> for orange, black and grey.</td>
 </tr>
 <tr>
 <td>fx</td>
