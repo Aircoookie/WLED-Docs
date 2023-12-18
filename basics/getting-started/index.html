@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.0">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -2014,15 +2014,17 @@
 <p>Unless noted otherwise, all information applies to the latest release (v0.13.3).</p>
 </div>
 <h3 id="quick-start-guide">Quick start guide</h3>
-<p><strong>1.</strong> Connect a  WS2812B-compatible RGB(W) led strip to <code>GPIO2</code>. On most ESP8266 based development boards this pin is labeled <code>D4</code>, on ESP32 based boards use <code>IO16</code> or <code>G16</code> or <code>16</code>. <em>If the connecting wire cannot be kept short, use a <a href="/basics/compatible-hardware#levelshifters">level shifter/translator</a>.</em> Optionally connect a normally open pushbutton to <code>GPIO0</code> (NodeMCU/Wemos pin <code>D3</code>, on ESP32 use <code>IO17</code>) and ground for <a href="/features/macros">configurable actions</a>.
-<strong>Note:</strong> Board pin naming varies depending on the manufacturer. Please use the board pinout from the <em>specific</em> board you purchased and use the GPIO PINS to reference this guide. <em>Make sure to connect ESP and LED-strip grounds together!</em></p>
+<p><strong>1.</strong> Connect a  WS2812B-compatible RGB(W) led strip to <code>GPIO2</code>. On most ESP8266 based development boards, this pin is labeled <code>D4</code>; on ESP32 based boards, use <code>IO16</code> or <code>G16</code> or <code>16</code>. <em>If the connecting wire cannot be kept short, use a <a href="/basics/compatible-hardware#levelshifters">level shifter/translator</a>.</em> Optionally, connect a normally open pushbutton to <code>GPIO0</code> (NodeMCU/Wemos pin <code>D3</code>, on ESP32 use <code>IO17</code>) and ground for <a href="/features/macros">configurable actions</a>.
+<strong>Note:</strong> Board pin naming varies depending on the manufacturer. Please use the board pinout from the <em>specific</em> board you purchased and use the GPIO pins to reference this guide. <em>Make sure to connect ESP and LED-strip grounds together!</em></p>
 <p><img alt="connectionsA" src="https://github.com/Aircoookie/WLED-Docs/assets/59397047/ae32d2c0-ec2d-450d-90e8-4258c349ca3f" /></p>
-<p>While using an ESP8266 and LEDs that have clock and data, you can either use hardware SPI (mostly faster) or software SPI.
-  - hardware SPI: use <code>GPIO14</code> (SCLK) for clock and <code>GPIO13</code> (MOSI) for data.
-  - software SPI: since all pins can be changed in the Hardware section of LED settings, you can use any pins. Recommend is to use <code>GPIO1</code> (TxD) for clock and <code>GPIO2</code> (D4) for data. </p>
-<p>For safe operation it is recommended to size your power wires correctly and to integrate fuses.<br />
+<p>While using an ESP8266 and LEDs that have clock and data, you can either use hardware SPI (mostly faster) or software SPI.</p>
+<ul>
+<li>hardware SPI: use <code>GPIO14</code> (SCLK) for clock and <code>GPIO13</code> (MOSI) for data.</li>
+<li>software SPI: since all pins can be changed in the Hardware section of LED settings, you can use any pins. Recommend is to use <code>GPIO1</code> (TxD) for clock and <code>GPIO2</code> (D4) for data. </li>
+</ul>
+<p>For safe operation, it is recommended to size your power wires correctly and to integrate fuses.<br />
 For reference, you may use this <a href="https://wled-calculator.github.io/">LED power, wiring and fuse calculator</a>.</p>
-<p>For analog LEDs, the MOSFETs IRLZ44N or STP55NF06L are good candidates. Partial, example circuit...</p>
+<p>For analog LEDs, the MOSFETs IRLZ44N or STP55NF06L are good candidates. Partial, example circuit:</p>
 <p><img alt="Connection schematics Analog" src="https://i.ibb.co/86vsym1/image.png" /> <img alt="image" src="https://user-images.githubusercontent.com/59397047/166152797-111eccae-1942-45d2-8980-1b584ebdeaf9.png" /></p>
 <p><strong>2.</strong> Flash the software to your ESP module! There are two options for this step:</p>
 <p><a href="/basics/install-binary">I just want to use WLED! (install release binary)</a></p>
@@ -2038,7 +2040,7 @@ You can also just scan this QR code:</p>
 <p>Go to the IP <code>4.3.2.1</code> in your browser to control your lights! You should also be able to connect to <code>wled.me</code> if in access point mode (embedded DNS server).</p>
 <h3 id="wifi-setup">Wifi Setup</h3>
 <p>To connect your WLED module to your home Wifi:</p>
-<p><strong>1.</strong> Click on the <em>Config</em> (gear) icon to edit your WLED module settings and choose 'Wifi Setup'.</p>
+<p><strong>1.</strong> Click on the <em>Config</em> (gear) icon to edit your WLED module settings and choose "Wifi Setup".</p>
 <p><strong>2.</strong> For most home networks, simply enter your Wifi network's name and network password. You can also change the mDNS address for your WLED module here.</p>
 <p><strong>3.</strong> Click Save &amp; Connect at the bottom of the page.</p>
 <p><strong>4.</strong> Reconnect your device to your home's Wifi network.</p>
