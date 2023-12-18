@@ -18,6 +18,7 @@ hide:
 ![connectionsA](https://github.com/Aircoookie/WLED-Docs/assets/59397047/ae32d2c0-ec2d-450d-90e8-4258c349ca3f)
 
 While using an ESP8266 and LEDs that have clock and data, you can either use hardware SPI (mostly faster) or software SPI.
+
   - hardware SPI: use `GPIO14` (SCLK) for clock and `GPIO13` (MOSI) for data.
   - software SPI: since all pins can be changed in the Hardware section of LED settings, you can use any pins. Recommend is to use `GPIO1` (TxD) for clock and `GPIO2` (D4) for data. 
 
