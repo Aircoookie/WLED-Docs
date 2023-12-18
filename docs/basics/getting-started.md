@@ -12,8 +12,8 @@ hide:
 
 ### Quick start guide
 
-**1.** Connect a  WS2812B-compatible RGB(W) led strip to `GPIO2`. On most ESP8266 based development boards this pin is labeled `D4`, on ESP32 based boards use `IO16` or `G16` or `16`. _If the connecting wire cannot be kept short, use a [level shifter/translator](/basics/compatible-hardware#levelshifters)._ Optionally connect a normally open pushbutton to `GPIO0` (NodeMCU/Wemos pin `D3`, on ESP32 use `IO17`) and ground for [configurable actions](/features/macros).
-**Note:** Board pin naming varies depending on the manufacturer. Please use the board pinout from the _specific_ board you purchased and use the GPIO PINS to reference this guide. _Make sure to connect ESP and LED-strip grounds together!_
+**1.** Connect a  WS2812B-compatible RGB(W) led strip to `GPIO2`. On most ESP8266 based development boards, this pin is labeled `D4`; on ESP32 based boards, use `IO16` or `G16` or `16`. _If the connecting wire cannot be kept short, use a [level shifter/translator](/basics/compatible-hardware#levelshifters)._ Optionally, connect a normally open pushbutton to `GPIO0` (NodeMCU/Wemos pin `D3`, on ESP32 use `IO17`) and ground for [configurable actions](/features/macros).
+**Note:** Board pin naming varies depending on the manufacturer. Please use the board pinout from the _specific_ board you purchased and use the GPIO pins to reference this guide. _Make sure to connect ESP and LED-strip grounds together!_
 
 ![connectionsA](https://github.com/Aircoookie/WLED-Docs/assets/59397047/ae32d2c0-ec2d-450d-90e8-4258c349ca3f)
 
@@ -21,10 +21,10 @@ While using an ESP8266 and LEDs that have clock and data, you can either use har
   - hardware SPI: use `GPIO14` (SCLK) for clock and `GPIO13` (MOSI) for data.
   - software SPI: since all pins can be changed in the Hardware section of LED settings, you can use any pins. Recommend is to use `GPIO1` (TxD) for clock and `GPIO2` (D4) for data. 
 
-For safe operation it is recommended to size your power wires correctly and to integrate fuses.  
+For safe operation, it is recommended to size your power wires correctly and to integrate fuses.  
 For reference, you may use this [LED power, wiring and fuse calculator](https://wled-calculator.github.io/).
 
-For analog LEDs, the MOSFETs IRLZ44N or STP55NF06L are good candidates. Partial, example circuit...
+For analog LEDs, the MOSFETs IRLZ44N or STP55NF06L are good candidates. Partial, example circuit:
 
 ![Connection schematics Analog](https://i.ibb.co/86vsym1/image.png) ![image](https://user-images.githubusercontent.com/59397047/166152797-111eccae-1942-45d2-8980-1b584ebdeaf9.png)
 
