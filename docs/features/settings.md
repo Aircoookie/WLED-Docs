@@ -5,15 +5,11 @@ hide:
   # - toc
 ---
 
-All web configurable settings are split in 5 sub-pages.
-This page is meant to clarify the purpose of each setting.
-This documentation applies to WLED 0.8.5.
+Web-configurable settings are split in multiple sub-pages. This page is meant to clarify the purpose of each setting.
 
-## Settings overview
+## WiFi Settings
 
-### WiFi Settings
-
-This sub-page offers options to connect the ESP to different WiFi/WLAN devices.
+This sub-page offers options to connect the ESP to different WiFi/WLAN devices. (This section applies to WLED 0.8.5.)
 
 | Setting name | Value Range | Description |
 |---|---|---|
@@ -32,9 +28,9 @@ AP opens | select | Condition on when to open the AP
 AP IP | - | The Access Point IPv4 address of the ESP (is 192.168.4.1 in most cases)
 WiFi sleep | Y/N | Disabling WiFi sleep can increase reliability, but increases power consumption
 
-### LED settings
+## LED settings
 
-This sub-page configures the state of your lights.
+This sub-page configures the state of your lights. (This section applies to WLED 0.8.5.)
 
 | Setting name | Value Range | Description |
 |---|---|---|
@@ -63,18 +59,18 @@ Palette blending | select | Choose how the palette wraps at the end (seam)
 Reverse LED order | Y/N | Mirrors the LEDs (last LED is first)
 Skip first LED | Y/N | Will turn off the first LED and shift the remaining by 1 (1st LED used as a signal repeater)
 
-### User Interface settings
+## User Interface settings
 
-This sub-page changes the look of the web interface.
+This sub-page changes the look of the web interface. (This section applies to WLED 0.8.5.)
 
 | Setting name | Value Range | Description |
 |---|---|---|
 Server description | String 1..32 | The name of the device as shown on the top of the UI. Differs from Alexa device name
 Sync button toggles... | Y/N | If enabled, both send and receive are toggled by the button in UI. If disabled, only sending is toggled and receiving is kept as configured in Sync settings.
 
-### Sync settings
+## Sync settings
 
-This sub-page configures external software synchronization interfaces.
+This sub-page configures external software synchronization interfaces. (This section applies to WLED 0.8.5.)
 
 | Setting name | Value Range | Description |
 |---|---|---|
@@ -113,9 +109,9 @@ Color | Y/N | Set color to that of the hue light
 Hue status | - | Shows the current connection status to a hue bridge
 Baud rate | Various | Set the default Serial connection Baud Rate
 
-### Time settings
+## Time settings
 
-This sub-page configures automation tasks.
+This sub-page configures automation tasks. (This section applies to WLED 0.8.5.)
 
 | Setting name | Value Range | Description |
 |---|---|---|
@@ -135,9 +131,9 @@ Double press | 0..16 | Macro for double click on button.
 Countdown-Over Macro | 0..16 | Macro to trigger when the countdown is over
 Timed-Light-Over Macro | 0..16 | Macro to trigger when timed light is done
 
-### Security settings
+## Security settings
 
-This sub-page manages permissions and updates.
+This sub-page manages permissions and updates. (This section applies to WLED 0.8.5.)
 
 | Setting name | Value Range | Description |
 |---|---|---|
