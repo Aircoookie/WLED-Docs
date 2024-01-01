@@ -28,23 +28,65 @@ AP opens | select | Condition on when to open the AP
 AP IP | - | The Access Point IPv4 address of the ESP (is 192.168.4.1 in most cases)
 WiFi sleep | Y/N | Disabling WiFi sleep can increase reliability, but increases power consumption
 
-## LED settings
+## LED Preferences
 
-This sub-page configures the state of your lights. (This section applies to WLED 0.8.5.)
+This sub-page configures your LED & Hardware setup. (This section applies to WLED 0.14.1.)
+
+| Setting name | Value Range | Default | Description |
+|---|---|---|---|
+Enable automatic brightness limiter | on/off | on | Have WLED automatically reduce overall brightness so that maximum current draw from the power supply stays below a specified level
+Maximum current | 300–65000 mA | 850 mA | Maximum allowable current draw that WLED will target [*only appears if "Enable automatic brightness limiter" is on*]
+LED voltage | multiple options | "5V default (55mA)" | Voltage/type of LEDs [*only appears if "Enable automatic brightness limiter" is on*]
+Custom max. current | 1–255 | 50 | Current draw of a single LED pixel set to full white [*only appears if "LED voltage" is set to "Custom"*]
+
+### Hardware Setup
+
+#### LED outputs
+
+WLED supports multiple outputs. To add an output, click the plus button at the bottom of the "LED outputs": section; to remove the last output, click the minus button. Bellow the plus/minus buttons is an indication of how much of the memory allocated to LEDs is being used by the configuration.
+
+All outputs share the same address space within WLED. By default, the first pixel of an output will be given an address that is one higher than the last pixel of the previous output, but this can be altered.
+
+Each output has the following settings:
+
+| Setting name | Value Range | Default | Description |
+|---|---|---|---|
+Type (represented by the output's number) | multiple options | WS281x | Select the type of LEDs this output will be controlling
+Color order | muliple options | "GRB" | Select which order your LEDs process color information (e.g. if your LEDs display red and green swapped, try changing it) [*only appears if "Type" is set to a type that supports color order*]
+Start/Index | integer | cummulative length of all previous outputs | Define which address this output (or its first pixel) should use within WLED's address space [*only editable if "Custom bus start indices" is on*]
+Length | integer | 1 | Define how many pixels are connected to this output [*only appears if "Type" is set to a type that supports multiple pixels*]
+(Data/Clk) GPIO(s) | integer | (blank) | Tell WLED which GPIO pin(s) this output is connected to [*number and description of GPIO settings will depend on the output's selected type*]
+Reversed (rotated 180°) | on/off | off | Mirrors the LEDs (last LED is first) [*only appears if "Type" is set to a type that supports multiple pixels*]
+Skip first LEDs | 0–length | 0 | Will turn off the first one or more LEDs and shift those remaining by that number (e.g. if the first LEDs are only used as a signal repeater) [*only appears if "Type" is set to a type that supports multiple pixels*]
+Off Refresh | on/off | off (typically) | WLED doesn't send out data if all of its outputs are off, but some pixels (notably TM1814) will go into a demo mode after a period of inactivity, and setting forces WLED to periodically send out additional "off" commands [*only appears if "Type" is set to a type that supports multiple pixels; default is "on" if "Type" is set to "TM1814"*]
+Inverted output | on/off | off | Invert the output's state (i.e. if the output is bright when it's supposed to be dark, set this to "on") [*only appears if "Type" is set to a type that supports output inversion*]
+IP address | IPv4 | (blank) | Set the IP address where the output data should be sent to [*only appears if "Type" is set to a type that supports network output*]
+Auto-calculate white chanel from RGB | multiple options | "None" | Selects whether WLED should attempted to generate white-channel information for colors that are only defined as red, green, and blue values [*only appears if "Type" is set to a type that has more than three color channels*]
+
+The following settings apply to all LED outputs:
+
+| Setting name | Value Range | Default | Description |
+|---|---|---|---|
+Make a segment for each output | on/off | off | Will automatically create a segment for each output, including the correct Start LED and Stop LED settings
+Custom bus start indices | on/off | off| When on, custom "Start" or "Index" values can be set for each output (e.g. output 2 can be set so that it shows up as LED address 200 regardless of output 1's length)
+Use global LED buffer | on/off | on | Improves the performance of WLED-wide brightness controlls (including Automatic Brightness Limiting) at the expense of additional memory usage
+
+Additionally, one or more Color Order Overrides can be defined by clicking the plus button. This is useful when you have LEDs with two different color orders sharing the same output. The following settings are available for each override:
+
+| Setting name | Value Range | Default | Description |
+|---|---|---|---|
+Start | integer | 0 | Define which address this color override should start it
+Length | integer | 1 | Define how many pixels in a row should have their color setting overridden
+Color order | muliple options | "GRB" | Same as "Color order" above
+
+### Other settings
+
+(This section applies to WLED 0.8.5; some of these settings no longer appear in 0.14.1.)
 
 | Setting name | Value Range | Description |
 |---|---|---|
-LED count | 1..1500 | How many LEDs are in your WS2812B strip
-Automatic brightness limiter | Y/N | Limit brightness to stay in a given current range
-Maximum current | 300..65000 | Current limit im milliamps
-LED voltage | select | Voltage/type of LEDs
-Custom max. current | 1..255 | Custom current per LED on full white
-4-channel LEDs (RGBW) | Y/N | Support for SK6812 LEDs with white channel
-Color order | select | If your LEDs display incorrect colors (red and green swapped), try changing it
-Auto-calculate white | select | Get white channel from RGB automatically (only applicable for RGBW) [Details](/features/cct/#auto-white-handling)
 Turn on after power up | Y/N | Whether the lights should turn on after a reset
 Apply preset | 0..16 | Preset to load at boot (0 = none)
-Set current preset cycle... | Y/N | The current preset cycle configuration will be used as boot default
 Use Gamma for brightness | Y/N | Will correct brightness changes to make it appear more linear. Advised to leave off
 Use Gamma for color | Y/N | Will correct colors to match those on a monitor. Strongly advised to keep on
 Brightness factor | 1..255 | Factor to change master brightness if it is to dim/bright for a certain configuration
@@ -56,8 +98,6 @@ Timed light duration | 1..255 | How long the nightlight should stay on
 Target brightness | 0..255 | What brightness the light should have after time is over. 0=off.
 Fade down | Y/N | Gradually fades down the light over the duration instead of turning it off at the end
 Palette blending | select | Choose how the palette wraps at the end (seam)
-Reverse LED order | Y/N | Mirrors the LEDs (last LED is first)
-Skip first LED | Y/N | Will turn off the first LED and shift the remaining by 1 (1st LED used as a signal repeater)
 
 ## User Interface settings
 
