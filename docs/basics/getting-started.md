@@ -27,7 +27,8 @@ For reference, you may use this [LED power, wiring and fuse calculator](https://
 
 For analog LEDs, the MOSFETs IRLZ44N or STP55NF06L are good candidates. Partial, example circuit:
 
-![Connection schematics Analog](https://i.ibb.co/86vsym1/image.png) ![image](https://user-images.githubusercontent.com/59397047/166152797-111eccae-1942-45d2-8980-1b584ebdeaf9.png)
+![image](https://github.com/Aircoookie/WLED-Docs/assets/59397047/87e3f4ef-05fb-452a-8cc1-d0187254b466)
+ ![image](https://user-images.githubusercontent.com/59397047/166152797-111eccae-1942-45d2-8980-1b584ebdeaf9.png)
 
 **2.** Flash the software to your ESP module! There are two options for this step:
 
