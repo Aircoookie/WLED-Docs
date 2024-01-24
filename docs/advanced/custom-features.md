@@ -137,9 +137,9 @@ For details about the format of the configuration string see [effect metadata](/
 
 ### Changing Web UI
 
-In order to conserve space, the Web UI interface is represented as a series of wled00/html_ui.h, wled00/html_settings.h and wled00/html_other.h files which contain C/C++ strings with specific parts of the Web UI.
+In order to conserve space, the Web UI interface is represented as a series of `wled00/html_*.h` files which contain C/C++ strings with specific parts of the Web UI.
 
-These files are automatically created from source files available in wled00/data folder. To generate files, install [NodeJS 11.0+](https://nodejs.org/en/download/) globally. After that, recreate `html_*.h` files by running in the repo directory:
+These files are automatically created from source files available in `wled00/data` folder. To generate files, install [NodeJS 20.0+](https://nodejs.org/en/download/) globally. After that, recreate `html_*.h` files by running in the repo directory:
 ```
 > npm install
 > npm run build
@@ -151,7 +151,13 @@ If you continuously modify files in the wled00/data directory, you want to monit
 ```
 > npm run dev
 ```
-This will start monitoring wled00/data folder for changes.
+This will start monitoring wled00/data folder for changes. However, you will probably never need this, as `npm run build` is automatically executed before compiling.
+
+The `html_*.h` files will only be created or updated if changes have been made to the `wled00/data` folder.
+If you still want to recreate the files, you can use this command:
+```
+> npm run build -- -f
+```
 
 **WARNING!!** Be careful with changing the javascript in HTML files! For example `function GetV() {}` must be the last javascript function in the `<script>` element as it will be replaced by automatically generated code to fetch relevant settings from EEPROM. See `tools/cdata.js` for the replacement rules which run for every *.htm file in `wled00/data`.
 
