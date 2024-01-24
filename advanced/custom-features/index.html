@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.5">
     
     
       
@@ -2181,8 +2181,8 @@ The relevant files for that are <code>FX.cpp</code> and <code>FX.h</code>.</p>
 </code></pre></div>
 <p>For details about the format of the configuration string see <a href="/interfaces/json-api/#effect-metadata">effect metadata</a>.</p>
 <h3 id="changing-web-ui">Changing Web UI</h3>
-<p>In order to conserve space, the Web UI interface is represented as a series of wled00/html_ui.h, wled00/html_settings.h and wled00/html_other.h files which contain C/C++ strings with specific parts of the Web UI.</p>
-<p>These files are automatically created from source files available in wled00/data folder. To generate files, install <a href="https://nodejs.org/en/download/">NodeJS 11.0+</a> globally. After that, recreate <code>html_*.h</code> files by running in the repo directory:
+<p>In order to conserve space, the Web UI interface is represented as a series of <code>wled00/html_*.h</code> files which contain C/C++ strings with specific parts of the Web UI.</p>
+<p>These files are automatically created from source files available in <code>wled00/data</code> folder. To generate files, install <a href="https://nodejs.org/en/download/">NodeJS 20.0+</a> globally. After that, recreate <code>html_*.h</code> files by running in the repo directory:
 <div class="highlight"><pre><span></span><code>&gt; npm install
 &gt; npm run build
 </code></pre></div></p>
@@ -2190,7 +2190,11 @@ The relevant files for that are <code>FX.cpp</code> and <code>FX.h</code>.</p>
 <p>If you continuously modify files in the wled00/data directory, you want to monitor these changes to make local html_*.h files being updated automatically. To do this, run this in repo directory:
 <div class="highlight"><pre><span></span><code>&gt; npm run dev
 </code></pre></div>
-This will start monitoring wled00/data folder for changes.</p>
+This will start monitoring wled00/data folder for changes. However, you will probably never need this, as <code>npm run build</code> is automatically executed before compiling.</p>
+<p>The <code>html_*.h</code> files will only be created or updated if changes have been made to the <code>wled00/data</code> folder.
+If you still want to recreate the files, you can use this command:
+<div class="highlight"><pre><span></span><code>&gt; npm run build -- -f
+</code></pre></div></p>
 <p><strong>WARNING!!</strong> Be careful with changing the javascript in HTML files! For example <code>function GetV() {}</code> must be the last javascript function in the <code>&lt;script&gt;</code> element as it will be replaced by automatically generated code to fetch relevant settings from EEPROM. See <code>tools/cdata.js</code> for the replacement rules which run for every *.htm file in <code>wled00/data</code>.</p>
 <p>Recompile and flash WLED!</p>
 
@@ -2320,10 +2324,10 @@ This will start monitoring wled00/data folder for changes.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs", "content.action.edit"], "search": "../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs", "content.action.edit"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.7389ff0e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c18c5fb9.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
