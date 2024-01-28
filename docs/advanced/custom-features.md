@@ -139,7 +139,7 @@ For details about the format of the configuration string see [effect metadata](/
 
 In order to conserve space, the Web UI interface is represented as a series of `wled00/html_*.h` files which contain C/C++ strings with specific parts of the Web UI.
 
-These files are automatically created from source files available in `wled00/data` folder. To generate files, install [NodeJS 20.0+](https://nodejs.org/en/download/) globally. After that, recreate `html_*.h` files by running in the repo directory:
+These files are automatically created from source files available in `wled00/data` folder. To generate files, install [Node.js](https://nodejs.org/en/download) 20 or higher globally. After that, recreate `html_*.h` files by running in the repo directory:
 ```
 > npm install
 > npm run build
