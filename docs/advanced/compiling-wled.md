@@ -30,7 +30,7 @@ Alternatively fork the WLED project first and download it from your fork.
 2. Open VS Code and go to the Extensions manager (the icon with the stacked blocks in the left bar)
 3. Search for `platformio ide` and install the PlatformIO extension
 ![](https://i.ibb.co/SNv8TtH/Screen-Shot-2020-11-03-at-6-27-58-PM.png)
-5. In VS Code go to `File -> Open Folder` and open that root WLED folder (the one that contains `platformio.ini`, _NOT_ the `wled00` folder)
+4. In VS Code go to `File -> Open Folder` and open that root WLED folder (the one that contains `platformio.ini`, _NOT_ the `wled00` folder)
 ![](https://i.ibb.co/pXs1G0j/Screen-Shot-2020-11-03-at-5-27-03-PM.png)
 ![](https://i.ibb.co/10ykGxk/Screen-Shot-2020-11-03-at-5-27-17-PM.png)
 ---
