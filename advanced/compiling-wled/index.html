@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/ui/aircoookie/blurple.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.5">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
     
     
       
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installation-guide-platformio-recommended" class="md-skip">
+        <a href="#preparations" class="md-skip">
           Skip to content
         </a>
       
@@ -737,6 +737,15 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparations
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#installation-guide-platformio-recommended" class="md-nav__link">
@@ -1694,6 +1703,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#preparations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#installation-guide-platformio-recommended" class="md-nav__link">
     <span class="md-ellipsis">
       Installation guide (PlatformIO, recommended)
@@ -2024,6 +2042,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#preparations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#installation-guide-platformio-recommended" class="md-nav__link">
     <span class="md-ellipsis">
       Installation guide (PlatformIO, recommended)
@@ -2105,24 +2132,28 @@
 <p>You want to add custom features to WLED, use non-default pins, or add in a usermod? You've found the right place!</p>
 <p>WLED has come to rely on so many dependencies in the latest versions that building with the Arduino IDE is no longer recommended.
 Instead, installing Visual Studio Code and its PlatformIO (PIO) extension is easier, as it will install the ESP Arduino core, all the required libraries and the correct compilation settings for you automatically.</p>
-<h3 id="installation-guide-platformio-recommended">Installation guide (PlatformIO, recommended)</h3>
+<h3 id="preparations">Preparations</h3>
 <ol>
 <li>Make sure Git client is installed on your system. If it isn't, you can get it <a href="https://git-scm.com/downloads">here</a>.</li>
+<li>Also make sure that you have <a href="https://nodejs.org/en/download">Node.js</a> 20 or higher installed.</li>
+<li>Download the WLED source code by executing <code>git clone https://github.com/Aircoookie/WLED.git</code> in some folder.
+(You can also use GitHub Desktop or download the latest source code from <a href="https://github.com/Aircoookie/WLED">https://github.com/Aircoookie/WLED</a> under the <code>Code</code> dropdown menu as a .zip file.)
+Alternatively fork the WLED project first and download it from your fork.
+<img alt="" src="https://i.ibb.co/2hnGhyb/Screen-Shot-2020-11-03-at-5-25-18-PM.png" /></li>
+<li>Go into the WLED folder by executing <code>cd WLED</code>.</li>
+<li>Install all dependencies by executing:
+  <div class="highlight"><pre><span></span><code>npm install
+</code></pre></div></li>
+</ol>
+<h3 id="installation-guide-platformio-recommended">Installation guide (PlatformIO, recommended)</h3>
+<ol>
 <li>Download and install the free <a href="https://code.visualstudio.com/">Visual Studio Code</a> by Microsoft.</li>
 <li>Open VS Code and go to the Extensions manager (the icon with the stacked blocks in the left bar)</li>
 <li>Search for <code>platformio ide</code> and install the PlatformIO extension
 <img alt="" src="https://i.ibb.co/SNv8TtH/Screen-Shot-2020-11-03-at-6-27-58-PM.png" /></li>
-<li>
-<p>Download the WLED source code by executing <code>git clone https://github.com/Aircoookie/WLED.git</code> in some folder.
-(You can also use GitHub Desktop or download the latest source code from <a href="https://github.com/Aircoookie/WLED">https://github.com/Aircoookie/WLED</a> under the <code>Code</code> dropdown menu as a .zip file.)
-Alternatively fork the WLED project first and download it from your fork.
-<img alt="" src="https://i.ibb.co/2hnGhyb/Screen-Shot-2020-11-03-at-5-25-18-PM.png" /></p>
-</li>
-<li>
-<p>Go to <code>File -&gt; Open Folder</code> and open that root WLED folder (the one that contains <code>platformio.ini</code>, <em>NOT</em> the <code>wled00</code> folder)
+<li>In VS Code go to <code>File -&gt; Open Folder</code> and open that root WLED folder (the one that contains <code>platformio.ini</code>, <em>NOT</em> the <code>wled00</code> folder)
 <img alt="" src="https://i.ibb.co/pXs1G0j/Screen-Shot-2020-11-03-at-5-27-03-PM.png" />
-<img alt="" src="https://i.ibb.co/10ykGxk/Screen-Shot-2020-11-03-at-5-27-17-PM.png" /></p>
-</li>
+<img alt="" src="https://i.ibb.co/10ykGxk/Screen-Shot-2020-11-03-at-5-27-17-PM.png" /></li>
 </ol>
 <hr />
 <h3 id="compilation-guide-platformio">Compilation guide (PlatformIO)</h3>
@@ -2176,6 +2207,10 @@ For most ESP8266 boards, the <code>d1_mini</code> environment is best.</li>
 <li>
 <p>Follow a guide to setup your Arduino IDE (I am using version 1.8.9) with the ESP8266 libraries.
 For current compiles I recommend the latest Arduino core version 2.7.4. If you do not wish to install all libraries manually it is recommended to download the PlatformIO extension for VS Code (see above).</p>
+</li>
+<li>
+<p>Run the following command to build the Web UI files:
+  <code>npm run build</code></p>
 </li>
 <li>
 <p>You will need to install a few libraries:</p>
@@ -2384,7 +2419,7 @@ For current compiles I recommend the latest Arduino core version 2.7.4. If you d
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tabs", "content.action.edit"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c18c5fb9.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e1c3ead8.min.js"></script>
       
         <script src="../../assets/js/newtab.js"></script>
       
