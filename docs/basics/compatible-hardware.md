@@ -53,6 +53,7 @@ How to connect Levelshifters:
 ![74AHCT125 one output](../assets/images/content/pic1.jpg)
 ![74AHCT125 two outputs](../assets/images/content/pic2.jpg)
 ![TXS0108](../assets/images/content/pic3.jpg)
+![74AHCT245](../assets/images/content/pic4.jpg)
 
 ## USB/TTL adapters
 
