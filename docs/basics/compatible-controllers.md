@@ -11,11 +11,12 @@ To try out WLED with 5V addressable strip a simple microcontroller board like ES
 ![Simple WLED setup](../assets/images/content/pic10.jpg)
 
 However, there are a few other things to keep in mind for a proper setup:
-1. A level shifter is required for reliable data transmission from the controller to the LED strip (this is mandatory, especially with 12V or 24V LED strips). Then you have to solder something together or you can buy a ready-made WLED controller right away.
-2. For safety reasons, the correct cabling (length, cross-section, contacts) and the fuses to be integrated must be considered. Especially with LED strips, it gets more complicated because you need the so-called intermediate feeds. These must be planned and implemented correctly. [LED power, wiring and fuse calculator](https://wled-calculator.github.io/) can be used as an starting point.
-![Advanced WLED setup](../assets/images/content/pic11.jpg)
-3. LED strips can get quite warm during operation and even overheat in the event of a fault. Again, for safety reasons, you have to protect the area around it: you shouldn't just lay LED strips like that, ideally you should integrate them into aluminum profiles or something similar. In normal operation, these act like a heat sink and thus extend the service life of the LEDs. In the event of a fault, they can protect the surroundings.
-4. To save energy while LEDs are off, you might integarte relays that switch the voltage of LEDs off completely.
+
+  1. A level shifter is required for reliable data transmission from the controller to the LED strip (this is mandatory, especially with 12V or 24V LED strips). Then you have to solder something together or you can buy a ready-made WLED controller right away.
+  2. For safety reasons, the correct cabling (length, cross-section, contacts) and the fuses to be integrated must be considered. Especially with LED strips, it gets more complicated because you need the so-called intermediate feeds. These must be planned and implemented correctly. [LED power, wiring and fuse calculator](https://wled-calculator.github.io/) can be used as an starting point.
+  ![Advanced WLED setup](../assets/images/content/pic11.jpg)
+  3. LED strips can get quite warm during operation and even overheat in the event of a fault. Again, for safety reasons, you have to protect the area around it: you shouldn't just lay LED strips like that, ideally you should integrate them into aluminum profiles or something similar. In normal operation, these act like a heat sink and thus extend the service life of the LEDs. In the event of a fault, they can protect the surroundings.
+  4. To save energy while LEDs are off, you might integarte relays that switch the voltage of LEDs off completely.
 
 In the following some third-party controllers are listed. Please use a decent and neutral description when adding things to this list.
 
