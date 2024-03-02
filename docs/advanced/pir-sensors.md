@@ -9,9 +9,9 @@ hide:
 
 WLED controllers can be used with PIR (Passive InfraRed) sensors for human presense detection. There are two types of sensors:
 
-1. With integrated rotary potentiometers to adjust the sensitivity and the time delay. E.g. HC-SR501 type. These sensors can be connected to WLED and configured as a button.
+1. With integrated rotary potentiometers to adjust the sensitivity and the hold time. E.g. HC-SR501 type. These sensors can be connected to WLED and configured as a button.
 
-2. Without integrated possibility to adjust the sensitivity and the time delay. E.g. HC-SR602 type. For these you have to compile WLED with a PIR Sensor Usermod to have these settings in the software.
+2. Without integrated possibility to adjust the sensitivity and the hold time. E.g. HC-SR602 type. For these you have to compile WLED with a PIR Sensor Usermod to have these settings in the software.
 
 ## Using HC-SR501 sensor
 
