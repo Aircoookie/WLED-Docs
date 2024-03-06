@@ -22,3 +22,4 @@ If you are implementing the protocol to send packets to WLED, do not bother impl
 
  - [ddp-rs](https://github.com/coral/ddp-rs) A Rust library for sending (and even receiving) DDP packets.
  - [LedFX/devices/ddp.py](https://github.com/LedFx/LedFx/blob/main/ledfx/devices/ddp.py) LedFX's implementation for sending DDP packets to WLED
+ - [yeonic/plugins/wled](https://github.com/YeonV/yeonic/blob/main/src/plugins/wled.ts#L51) TypeScript (javascript) implementation - Needs a nodejs like environment
