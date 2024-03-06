@@ -26,6 +26,12 @@ You may also obtain those objects individually using the URLs `/json/state` `/js
     If called, these will fallback to the Solid effect, in the effects list they have the name `RSVD` or `-`.
     To improve user experience, it is recommended to remove effects with the names `RSVD` or `-` form the UI effect selection.
 
+### Example Library
+[WLED JSON API Library in rust](https://github.com/paulwrath1223/wled-json-api-library).
+Even if you are not using rust, or don't know how to read rust,
+the up-to-date JSON structure is included and documented in this project.
+
+
 ### Setting new values
 
 Sending a POST request to `/json` or `/json/state` with (parts of) the state object will update the respective values.
@@ -126,14 +132,15 @@ Sample JSON API response (v0.8.4):
 
 | JSON key | Value range | Description
 | --- | --- | --- |
-on | bool | On/Off state of the light
-bri | 0 to 255 | Brightness of the light. If _on_ is `false`, contains last brightness when light was on (aka brightness when _on_ is set to true. Setting _bri_ to 0 is supported but it is recommended to use the range 1-255 and use `on: false` to turn off. The state response will never havethe value `0` for _bri_.
-transition | 0 to 255 | Duration of the crossfade between different colors/brightness levels. One unit is 100ms, so a value of `4` results in atransition of 400ms.
-tt | 0 to 255 | Similar to transition, but applies to just the current API call. Not included in state response.
-ps | -1 to 65535 | ID of currently set preset. `1~17~` can be used to iterate through presets 1-17.
+on | bool | On/Off state of the light. You can also use `"t"` instead of `true` or `false` to toggle.
+bri | 0 to 255 | Brightness of the light. If _on_ is `false`, contains last brightness when light was on (aka brightness when _on_ is set to true). Setting _bri_ to 0 is supported but it is recommended to use the range 1-255 and use `on: false` to turn off. The state response will never have the value `0` for _bri_.
+transition | 0 to 65535 | Duration of the crossfade between different colors/brightness levels. One unit is 100ms, so a value of `4` results in atransition of 400ms.
+tt | 0 to 65535 | Similar to transition, but applies to just the current API call. Not included in state response.
+ps | -1 to 250 | ID of currently set preset. `1~17~` can be used to iterate through presets 1-17, or `4~10~r` to select random preset between presets 4 and 10 (inclusive).
 ~~pss~~ | 0 to 65535 | Bitwise indication of preset slots (0 - vacant, 1 - written). Always 0 in 0.11. Not changable. _Removed as of v0.11.1_
-psave | 1 to 16 (250 in 0.11) | Save current light config to specified preset slot. Not included in state response.
-pl | -1 to 0 | ID of currently set playlist. For now, this sets the preset cycle feature, `-1` is off and `0` is on.
+psave | 1 to 250 (16 prior to 0.11) | Save current light config (state) to specified preset slot. Not included in state response.
+pl | -1 to 250 | ID of currently set playlist. _(read-olny)_
+pdel | 1 to 250 | Preset ID to delete. Not included in state response.
 nl.on | bool | Nightlight currently active
 nl.dur | 1 to 255 | Duration of nightlight in minutes
 ~~nl.fade~~ | bool | If `true`, the light will gradually dim over the course of the nightlight duration. If `false`, it will instantly turn to the target brightness once the duration has elapsed. _Removed in 0.13.0_ (use mode instead)
@@ -142,6 +149,8 @@ nl.tbri | 0 to 255 | Target brightness of nightlight feature
 nl.rem | -1 to 15300 | Remaining nightlight duration in seconds, -1 if not active. Only in state response, can not be set.
 udpn.send | bool | Send WLED broadcast (UDP sync) packet on state change
 udpn.recv | bool | Receive broadcast packets
+udpn.sgrp | 0 to 255 | Bitfield for broadcast send groups 1-8
+udpn.rgrp | 0 to 255 | Bitfield for broadcast receive groups 1-8
 udpn.nn | bool | Don't send a broadcast packet (applies to just the current API call). Not included in state response.
 v | bool | If set to _true_ in a JSON POST command, the response will contain the full JSON state object. Not included in state response
 rb | bool | If set to _true_, device will reboot immediately. Not included in state response.
@@ -149,9 +158,11 @@ live | bool | If set to _true_, enters realtime mode and blanks the LEDs. The re
 lor | 0, 1, or 2 | Live data override. 0 is off, 1 is override until live data ends, 2 is override until ESP reboot (available since 0.10.0)
 time | uint32 | Set module time to unix timestamp. Not included in state response.
 mainseg | 0 to info.leds.maxseg-1 | Main Segment | Sets which segment ID is the main segment. The main segment's values are the ones sent by UDP sync, and in case no segment is selected, all changes done via the `"seg":{}` syntax without a segment `id` specified are applied to the main segment. If the main segment is deleted, the first active segment becomes the new main segment.
-seg | Array of segment objects | Segments are individual parts of the LED strip. In 0.9.0 this will enables running different effects on differentparts of the strip.
-playlist | object | [Custom preset playlists](#playlists). Not included in state response (available since 0.11.0)
+seg | Object or Array of objects | _(see below)_ Segments are individual parts of the LED strip. Since 0.9.0 this enables running different effects on differentparts of the strip.
+playlist | object | [Custom preset playlists](#playlists). Not included in state response. _(available since 0.11.0)_
 tb | uint32 | Sets timebase for effects. Not reported.
+ledmap | 0 to 9 | Load specified ledmap (0 for `ledmap.json`, 1-9 for `ledmap1.json` to `ledmap9.json`). [See mapping](/advanced/mapping/). Not included in state response. _(available since 0.14.0)_
+rmcpal | bool | Remove last custom palette if set to `true`. Not included in state response. _(available since 0.14.0)_
 
 #### Contents of the segment object
 
@@ -162,16 +173,18 @@ The tertiary color is not gamma-corrected in 0.8.4, but is in subsequent release
 | JSON key | Value range | Description
 | --- | --- | --- |
 id | 0 to info.maxseg -1 | Zero-indexed ID of the segment. May be omitted, in that case the ID will be inferred from the order of the segment objects in the _seg_ array.
-start | 0 to info.leds.count -1 | LED the segment starts at.
-stop | 0 to info.leds.count | LED the segment stops at, not included in range. If _stop_ is set to a lower or equal value than _start_ (setting to `0` is recommended), the segment is invalidated and deleted.
+start | 0 to info.leds.count -1 | LED the segment starts at. For 2D set-up it determines column where segment starts, from top-left corner of the matrix.
+stop | 0 to info.leds.count | LED the segment stops at, not included in range. If _stop_ is set to a lower or equal value than _start_ (setting to `0` is recommended), the segment is invalidated and deleted. For 2D set-up it determines column where segment stops, from top-left corner of the matrix.
+startY | 0 to matrix width | Start row from top-left corner of a matrix. _(available since 0.14.0)_
+stopY | 1 to matrix height | Stop row from top-left corner of matrix. _(available since 0.14.0)_
 len | 0 to info.leds.count | Length of the segment (_stop_ - _start_). _stop_ has preference, so if it is included, _len_ is ignored.
 grp | 0 to 255 | Grouping (how many consecutive LEDs of the same segment will be grouped to the same color)
 spc | 0 to 255 | Spacing (how many LEDs are turned off and skipped between each group)
 of | -len+1 to len | Offset (how many LEDs to rotate the virtual start of the segments, available since 0.13.0)
-col | array of colors | Array that has up to 3 color arrays as elements, the primary, secondary (background) and tertiary colors of the segment. Each color is an array of 3 or 4 bytes, which represent an RGB(W) color.
-fx | 0 to info.fxcount -1 | ID of the effect or ~ to increment, ~- to decrement, or r for random.
-sx | 0 to 255 | Relative effect speed. ~ to increment, ~- to decrement. ~10 to increment by 10, ~-10 to decrement by 10.
-ix | 0 to 255 | Effect intensity. ~ to increment, ~- to decrement. ~10 to increment by 10, ~-10 to decrement by 10.
+col | array of colors | Array that has up to 3 color arrays as elements, the primary, secondary (background) and tertiary colors of the segment. Each color is an array of 3 or 4 bytes, which represents a RGB(W) color, i.e. `[[255,170,0],[0,0,0],[64,64,64]]`. It can also be represented as aan array of strings of _hex_ values, i.e. `["FFAA00","000000","404040"]` for orange, black and grey.
+fx | 0 to info.fxcount -1 | ID of the effect or `~` to increment, `~-` to decrement, or `"r"` for random.
+sx | 0 to 255 | Relative effect speed. `~` to increment, `~-` to decrement. `~10` to increment by 10, `~-10` to decrement by 10.
+ix | 0 to 255 | Effect intensity. `~` to increment, `~-` to decrement. `~10` to increment by 10, `~-10` to decrement by 10.
 c1 | 0 to 255 | Effect custom slider 1. Custom sliders are hidden or displayed and labeled based on [effect metadata](#effect-metadata).
 c2 | 0 to 255 | Effect custom slider 2.
 c3 | 0 to 31 | Effect custom slider 3.
@@ -180,19 +193,25 @@ o2 | bool | Effect option 2.
 o3 | bool | Effect option 3.
 pal | 0 to info.palcount -1 | ID of the color palette or ~ to increment, ~- to decrement, or r for random.
 sel | bool | `true` if the segment is selected. Selected segments will have their state (color/FX) updated by APIs that don't support segments (e.g. UDP sync, HTTP API). If no segment is selected, the first segment (_id_:`0`) will behave as if selected. WLED will report the state of the first (lowest _id_) segment that is selected to APIs (HTTP, MQTT, Blynk...), or `mainseg` in case no segment is selected and for the UDP API. Live data is always applied to all LEDs regardless of segment configuration.
-rev | bool | Flips the segment, causing animations to change direction.
+rev | bool | Flips the segment (in horizontal dimension for 2D set-up), causing animations to change direction.
+rY | bool | Flips the 2D segment in vertical dimension. _(available since 0.14.0)_
 on | bool | Turns on and off the individual segment. _(available since 0.10.0)_
 bri | 0 to 255 | Sets the individual segment brightness _(available since 0.10.0)_
-mi | bool | Mirrors the segment _(available since 0.10.2)_
+mi | bool | Mirrors the segment (in horizontal dimension for 2D set-up) _(available since 0.10.2)_
+mY | bool | Mirrors the 2D segment in vertical dimension. _(available since 0.14.0)_
+tp | bool | Transposes a segment (swaps X and Y dimensions). _(available since 0.14.0)_
 cct | 0 to 255 _or_ 1900 to 10091 | White spectrum [color temperature](#cct-control) _(available since 0.13.0)_
-lx | `BBBGGGRRR`: 0 - 100100100 | Loxone RGB value for primary color. Each color (`RRR`,`GGG`,`BBB`) is specified in the range from 0 to 100%.
-lx | `20bbbtttt`: 200002700 - 201006500 | Loxone brightness and color temperature values for primary color. Brightness `bbb` is specified in the range 0 to 100%. `tttt` defines the color temperature in the range from 2700 to 6500 Kelvin. (available since 0.11.0, not included in state response)
-ly | `BBBGGGRRR`: 0 - 100100100 | Loxone RGB value for secondary color. Each color (`RRR`,`GGG`,`BBB`) is specified in the range from 0 to 100%.
-ly | `20bbbtttt`: 200002700 - 201006500 | Loxone brightness and color temperature values for secondary color. Brightness `bbb` is specified in the range 0 to 100%. `tttt` defines the color temperature in the range from 2700 to 6500 Kelvin. _(available since 0.11.0, not included in state response)_
+lx | `BBBGGGRRR`: 0 - 100100100 | Loxone RGB value for primary color. Each color (`RRR`,`GGG`,`BBB`) is specified in the range from 0 to 100%. _Only available if Loxone is compiled in._
+lx | `20bbbtttt`: 200002700 - 201006500 | Loxone brightness and color temperature values for primary color. Brightness `bbb` is specified in the range 0 to 100%. `tttt` defines the color temperature in the range from 2700 to 6500 Kelvin. (available since 0.11.0, not included in state response) _Only available if Loxone is compiled in._
+ly | `BBBGGGRRR`: 0 - 100100100 | Loxone RGB value for secondary color. Each color (`RRR`,`GGG`,`BBB`) is specified in the range from 0 to 100%. _Only available if Loxone is compiled in._
+ly | `20bbbtttt`: 200002700 - 201006500 | Loxone brightness and color temperature values for secondary color. Brightness `bbb` is specified in the range 0 to 100%. `tttt` defines the color temperature in the range from 2700 to 6500 Kelvin. _(available since 0.11.0, not included in state response)_ _Only available if Loxone is compiled in._
 i | array | [Individual LED control](#per-segment-individual-led-control). Not included in state response _(available since 0.10.2)_
 frz | bool | freezes/unfreezes the current effect
 m12 | 0 to 4 [map1D2D.count] | Setting of segment field 'Expand 1D FX'. (0: Pixels, 1: Bar, 2: Arc, 3: Corner)
 si | 0 to 3 | Setting of the sound simulation type for audio enhanced effects. (0: 'BeatSin', 1: 'WeWillRockYou', 2: '10_3', 3: '14_3') (_as of 0.14.0-b1, there are these 4 types defined_)
+fxdef | bool | Forces loading of effect defaults (speed, intensity, etc) from effect [metadata](#effect-metadata). _(available since 0.14.0)_
+set | 0 to 3 | Assigns group or set ID  to segment (not to be confused with *grouping*). Visual aid only (helps in UI). _(available since 0.14.0)_
+rpt | bool | Flag to repeat current segment settings by creating segments until all available LEDs are included in automatically created segments or maximum segments reached. Will also toggle *reverse* on every *even* segment. _(available since 0.13.0)_
 
 #### Info object
 
@@ -244,6 +263,18 @@ product | string | The product name. Always `FOSS` for standard installations.
 mac | string | The hexadecimal hardware MAC address of the light, lowercase and without colons.
 ip | string | The IP address of this instance. Empty string if not connected. (since 0.13.0)
 
+Examples of frequently requested custom API:
+
+| Function/Effect | API (Add to preset or call from other sources)
+| --- | --- |
+Cycle presets between 1 and 6 | `{"ps":"1~6~"}`
+Select random effect on _all selected_ segments | `{"seg":{"fx":"r"}}`
+Select random palette between 5 and 10 on segment 2 | `{"seg":[{"id":2,"pal":"5~10~r"}]}`
+Change segment 0 name | `{"seg":[{"id":0,"n":"Your custom ASCII text"}]}`
+Freeze or unfreeze an effect | `{"seg":[{"id":0,"frz":true}]}` or `{"seg":[{"id":0,"frz":false}]}`
+Night light | `{"nl":{"on":true,"dur":10,"mode":0}}`
+Increase brightness by 40 wrapping when maximum reached | `{"bri":"w~40"}`
+
 #### Per-segment individual LED control
 
 Using the `i` property of the segment object, you can set the LED colors in the segment using the JSON API.  
@@ -251,20 +282,20 @@ Keep in mind that this is non-persistent, if the light is turned off the segment
 The segment is frozen when using individual control, the set effect will not run.   
 To unfreeze the segment, click the "eye" icon, change any property of the segment or turn off the light.
 
-To set individual LEDs starting from the beginning, use an array of Color arrays `[255, 0, 0]` or hex values `"FF0000"`.
+To set individual LEDs starting from the beginning, use an array of Color arrays `[255,0,0]` or hex values `"FF0000"`.
 Hex values are more efficient than Color arrays and should be preferred when setting a large number of colors.  
-`{"seg":{"i":["FF0000", "00FF00", "0000FF"]}}` or `{"seg":{"i":[[255,0,0], [0,255,0], [0,0,255]]}}` will set the first LED red, the second green and the third blue.
+`{"seg":{"i":["FF0000","00FF00","0000FF"]}}` or `{"seg":{"i":[[255,0,0],[0,255,0],[0,0,255]]}}` will set the first LED red, the second green and the third blue.
 
 To set individual LEDs, use the LED index followed by its color value.  
-`{"seg":{"i":[0,"FF0000", 2,"00FF00", 4,"0000FF"]}}` is the same as above, but leaves blank spaces between the lit LEDs.
+`{"seg":{"i":[0,"FF0000",2,"00FF00",4,"0000FF"]}}` is the same as above, but leaves blank spaces between the lit LEDs.
 
 To set ranges of LEDs, use the LED start and stop index followed by its color value.  
-`{"seg":{"i":[0,8,"FF0000", 10,18,"0000FF"]}}` sets the first eight LEDs to red, leaves out two, and sets another 8 to blue.
+`{"seg":{"i":[0,8,"FF0000",10,18,"0000FF"]}}` sets the first eight LEDs to red, leaves out two, and sets another 8 to blue.
 
 To set a large number of colors, send multiple api calls of 256 colors at a time.  
-`{"seg": {"i":[0,"CC0000", "00CC00", "0000CC", "CC0000"...]}}` 
-`{"seg": {"i":[256, "CC0000", "00CC00", "0000CC", "CC0000"...]}}`
-`{"seg": {"i":[512, "CC0000", "00CC00", "0000CC", "CC0000"...]}}`
+`{"seg": {"i":[0,"CC0000","00CC00","0000CC","CC0000"...]}}` 
+`{"seg": {"i":[256,"CC0000","00CC00","0000CC","CC0000"...]}}`
+`{"seg": {"i":[512,"CC0000","00CC00","0000CC","CC0000"...]}}`
 
 Do not make several calls in parallel, that is not optimal for the device. Instead make your call in sequence, where each call waits for the previous to complete before making a new one. How this is done depends on your choice of tool, but with CURL you que your commands by separating then with ` && ` i.e. `CURL [command 1] && CURL [command 2] && CURL [command 3]`.
 
@@ -386,7 +417,7 @@ The metadata string consists of up to five sections, separated by semicolons:
 ##### Effect parameters
 
 The first section specifies the number and labels of effect parameters (e.g. speed, intensity).
-Up to 5 sliders and 3 checkboxes are supported (`sx`,`ix`,`c1`,`c2`,`c3`,`o1`,`o2`,`o3` parameters in the `seg` object).
+Up to 5 sliders and 3 checkboxes are supported (`sx`,`ix`,`c1`,`c2`,`c3`,`o1`,`o2`,`o3` parameters in the `seg` object). For more details about the ranges of the sliders see [contents-of-the-segment-object](#contents-of-the-segment-object).
 Slider/checkbox labels are comma separated.
 An empty or missing label disables this control.
 `!` specifies the default label is used:
@@ -460,7 +491,7 @@ The fallback value if this section is missing is `1`, i.e. a 1D optimized effect
 ##### Defaults
 
 Defaults are values for effect parameters that work particularly well on that effect.
-They are set automatically when the effect is loaded.
+They are set automatically when the effect is selected in UI unless configured otherwis in UI settings.
 To specify defaults, use the standard segment parameter name (e.g. `ix`) followed by an `=` and the default value.
 For example, `sx=24,pal=50` sets the effect speed to 24 (slow) and the palette to ID 50 (Aurora).
 

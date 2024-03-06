@@ -23,9 +23,12 @@ Three microphone types are supported:
 Examples are MAX4466 (not really good) and MAX9814 (slightly better). These microphones are easy to use: you just have to connect 3.3V, GND and the analog output from the microphone to an ADC input (Analog-to-Digital Converter) of ESP32. However, the big disadvantage is the quality: both from the microphones themselves and from the ADCs integrated into microcontrollers, which are actually not well suited for audio processing and highly influenced by the power supply noise.
 ![Example analog microphone](../assets/images/content/example_analog_mic.jpg)
 
+!!! info "Analog microphones and analog buttons (potentiometers) rule out each other"
+    WLED can use analog microphones or [analog buttons](/features/macros/#analog-button) but not both at the same time!
+
 #### 2. I2S digital microphones
 
-Examples are INMP4411 and ICS-43434/ICS-43432. These have an integrated ADC and already output a digital signal. The advantage is the best possible quality. The disadvantage is higher complexity (you need several PINs for a digital signal). For proper trouble-free operation keep wires between the microphone and ESP32 as short as possible and solder them properly.
+Examples are INMP441 and ICS-43434/ICS-43432. These have an integrated ADC and already output a digital signal. The advantage is the best possible quality. The disadvantage is higher complexity (you need several PINs for a digital signal). For proper trouble-free operation keep wires between the microphone and ESP32 as short as possible and solder them properly.
 
 ![Example I2S microphone](../assets/images/content/example_i2s_mic.jpg)
 
@@ -39,7 +42,7 @@ An example is SPM1423. In principle, these are also digital microphones with an 
 
 ### Line-In options
 
-Similar to microphones there ara options for analog or digital line-in adapters. In both cases you use line-out (AUX) or headphone-out signal of your sound system/TV/Smartphone/etc.
+Similar to microphones there are options for analog or digital line-in adapters. In both cases you use line-out (AUX) or headphone-out signal of your sound system/TV/Smartphone/etc.
 
 #### 1. Analog line-in option
 

@@ -126,7 +126,8 @@ Here is a simple guide to get it set up quickly!
 - Make sure the time displayed is correct and accurate. It is highly recommended to enable NTP for a reliable schedule. Do not forget to set the correct timezone.
 If applicable, daylight saving time is handled automatically.  
 - Scroll down to `Time-controlled presets`. There are 8 different timer slots available.  
-- Enter the hour, minute, and weekdays you want the preset to activate. In the `Preset` column, enter the preset ID you noted earlier.  
+- Enter the hour, minute, and weekdays you want the preset to activate. In the `Preset` column, enter the preset ID you noted earlier.
+  -Hours are measured with the 24-hour clock, where midnight is 0:00. Entering "24" will instead activate the preset hourly.
 - Save the settings page! You have successfully set up a schedule :)  
 
 !!! info "Note"

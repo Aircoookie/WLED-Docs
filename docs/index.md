@@ -10,7 +10,7 @@ hide:
   <a href="https://github.com/Aircoookie/WLED/releases"><img src="https://img.shields.io/github/release/Aircoookie/WLED.svg?style=flat-square"></a>
   <a href="https://raw.githubusercontent.com/Aircoookie/WLED/master/LICENSE"><img src="https://img.shields.io/github/license/Aircoookie/wled?color=blue&style=flat-square"></a>
   <a href="https://wled.discourse.group"><img src="https://img.shields.io/discourse/topics?colorB=blue&label=forum&server=https%3A%2F%2Fwled.discourse.group%2F&style=flat-square"></a>
-  <a href="https://discord.gg/KuqP7NE"><img src="https://img.shields.io/discord/473448917040758787.svg?colorB=blue&label=discord&style=flat-square"></a>
+  <a href="https://discord.gg/QAh7wJHrRM"><img src="https://img.shields.io/discord/473448917040758787.svg?colorB=blue&label=discord&style=flat-square"></a>
   <a href="https://github.com/Aircoookie/WLED"><img src="https://img.shields.io/badge/source-github-blue.svg?style=flat-square"></a>
   <a href="https://github.com/Aircoookie/WLED-App"><img src="https://img.shields.io/badge/app-wled-blue.svg?style=flat-square"></a>
   <a href="https://gitpod.io/#https://github.com/Aircoookie/WLED"><img src="https://img.shields.io/badge/Gitpod-ready--to--code-blue?style=flat-square&logo=gitpod"></a>
@@ -42,6 +42,9 @@ A fast and feature-rich implementation of an ESP8266/ESP32 webserver to control 
 ## 💡 Supported light control interfaces
 
 - [WLED app](https://github.com/Aircoookie/WLED-App) for [Android](https://play.google.com/store/apps/details?id=com.aircoookie.WLED) and [iOS](https://apps.apple.com/us/app/wled/id1475695033)
+  - Alternatively, WLED Native app made by community member [Moustachauve](https://github.com/Moustachauve)
+    - For [Android](https://play.google.com/store/apps/details?id=ca.cgagnier.wlednativeandroid) [[Source]((https://github.com/Moustachauve/WLED-Native-Android))]
+    - For [iOS](https://apps.apple.com/us/app/wled-native/id6446207239) [[Source]((https://github.com/Moustachauve/WLED-Native-iOS/))]
 - [JSON](/interfaces/json-api) and [HTTP request](/interfaces/http-api) APIs  
 - [MQTT](/interfaces/mqtt)  
 - [Blynk IoT](/interfaces/blynk)  
@@ -76,7 +79,7 @@ Credits [here](/about/contributors)!
 
 Join the Discord server to discuss everything about WLED!
 
-<a href="https://discord.gg/KuqP7NE"><img src="https://discordapp.com/api/guilds/473448917040758787/widget.png?style=banner2" width="25%"></a>
+<a href="https://discord.gg/QAh7wJHrRM"><img src="https://discordapp.com/api/guilds/473448917040758787/widget.png?style=banner2" width="25%"></a>
 
 Check out the WLED [Discourse forum](https://wled.discourse.group)!  
 You can also send me mails to [dev.aircoookie@gmail.com](mailto:dev.aircoookie@gmail.com), but please only do so if you want to talk to me privately.  
