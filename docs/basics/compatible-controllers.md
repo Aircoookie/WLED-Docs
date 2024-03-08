@@ -30,6 +30,9 @@ In the following some third-party controllers are listed. Please use a decent an
 
 !!! check "Info"
     Unless otherwise noted, controllers feature everything you need for most WLED setups, except a power supply, wiring and fuses, and of course the LEDs themselves!
+
+!!! info "Transparancy Notice"
+    Warning Products listed below under the name "Athom" are offered by the company ATHOM Technology Co., Ltd., based in China, which is not affiliated in any way with the European company Athom B.V., makers of the Homey smart home platform.     There is an ongoing legal process against ATHOM Technology Co., Ltd. for possible trademark infringement.
     
 | Name | Description |
 |---|---|
