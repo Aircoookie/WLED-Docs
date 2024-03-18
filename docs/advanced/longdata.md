@@ -28,9 +28,11 @@ The individual Tx and Rx units are fairly inexpensive and can found on Amazon or
 Here are basic wiring diagrams for two of the more common TTL-RS485 boards generally found:
 
 RS485 board defaults to Tx mode:
-![Auto_Tx_diag](https://github.com/divsys1/WLED-Docs/assets/13357571/44b7ce64-1288-42bb-8e5b-e893aab324b8)
+
+![Def_Tx_diag](https://github.com/divsys1/WLED-Docs/assets/13357571/b43e2101-fe5d-4182-b3ab-3b09237e3496)
 
 RS485 board defaults to RX (has extra safety components)
-![Def_Tx_diag](https://github.com/divsys1/WLED-Docs/assets/13357571/b43e2101-fe5d-4182-b3ab-3b09237e3496)
+
+![Auto_Tx_diag](https://github.com/divsys1/WLED-Docs/assets/13357571/44b7ce64-1288-42bb-8e5b-e893aab324b8)
 
 
