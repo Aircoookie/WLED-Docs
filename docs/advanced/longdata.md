@@ -23,4 +23,16 @@ A TxRx pair can also be used in the middle of a run of LED's when the distance t
 
 The individual Tx and Rx units are fairly inexpensive and can found on Amazon or via Aliexpress usually for less than $2 USD each (try "RS485 TTL interface").
 
+# Examples wiring diagrams
+
+Here are basic wiring diagrams for two of the more common TTL-RS485 boards generally found:
+
+RS485 board defaults to Tx mode:
+
+![Def_Tx_diag](../assets/images/content/Def_Tx_diag.jpg)
+
+RS485 board defaults to RX (has extra safety components)
+
+![Auto_Tx_diag](../assets/images/content/Auto_Tx_diag.jpg)
+
 
