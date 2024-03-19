@@ -51,7 +51,7 @@ Setting this to 100% results in the highest peak brightness output at the neutra
 ![](/assets/images/content/wledcct.png)
 
 !!! warning
-		Make sure your setup can handle driving both white channels at maximum output simultaneously. This results in a higher heat output and might reduce the lifetime of your LEDs. For example, bulbs by Athom are designed for linear blending (0%) and may be damaged by attempting to use additive blending.
+		Make sure your setup can handle driving both white channels at maximum output simultaneously. This results in a higher heat output and might reduce the lifetime of your LEDs.
 
 You can limit the maximum allowed additive blending at build time using the `WLED_MAX_CCT_BLEND` macro.  
 For example, add `-D WLED_MAX_CCT_BLEND=0` to your build flags to force linear blending only.
@@ -59,7 +59,7 @@ For example, add `-D WLED_MAX_CCT_BLEND=0` to your build flags to force linear b
 #### IC CCT
 
 By default, PWM CCT bus types set the value of the warm and cold white channels.  
-If your hardware uses an IC that controls the color temperature based on one PWM signal and the overall brightness on the other, please use the build flag `-D WLED_USE_IC_CCT` in a custom compilation. (the 15W bulb by Athom uses this method)
+If your hardware uses an IC that controls the color temperature based on one PWM signal and the overall brightness on the other, please use the build flag `-D WLED_USE_IC_CCT` in a custom compilation.
 
 #### CCT in the JSON API
 
