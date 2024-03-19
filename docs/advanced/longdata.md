@@ -29,10 +29,10 @@ Here are basic wiring diagrams for two of the more common TTL-RS485 boards gener
 
 RS485 board defaults to Tx mode:
 
-![Def_Tx_diag](https://github.com/divsys1/WLED-Docs/assets/13357571/b43e2101-fe5d-4182-b3ab-3b09237e3496)
+![Def_Tx_diag](../assets/images/content/Def_Tx_diag.jpg)
 
 RS485 board defaults to RX (has extra safety components)
 
-![Auto_Tx_diag](https://github.com/divsys1/WLED-Docs/assets/13357571/44b7ce64-1288-42bb-8e5b-e893aab324b8)
+![Auto_Tx_diag](../assets/images/content/Auto_Tx_diag.jpg)
 
 
