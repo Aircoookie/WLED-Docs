@@ -50,11 +50,11 @@ Further reading:
 [Logic Level Shifters for Driving LED Strips](https://electricfiredesign.com/2021/03/12/logic-level-shifters-for-driving-led-strips/)
 
 How to connect Levelshifters:
-![LS_32_R2](https://github.com/divsys1/WLED-Docs/assets/13357571/85106c9e-1f3f-4bab-805c-03b9add3dcd7)
+![LS_32_R2](../assets/images/content/LS_32_R2.jpg)
 ![74AHCT125 one output](../assets/images/content/pic1.jpg)
 ![74AHCT125 two outputs](../assets/images/content/pic2.jpg)
 ![TXS0108](../assets/images/content/pic3.jpg)
-![LS_245_R2](https://github.com/divsys1/WLED-Docs/assets/13357571/7da6b73d-f314-474f-8dd1-8bddba92982f)
+![LS_245_R2](../assets/images/content/LS_245_R2.jpg)
 
 ## USB/TTL adapters
 
