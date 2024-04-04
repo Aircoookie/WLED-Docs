@@ -255,6 +255,8 @@ WLED version names are Japanese! Here is a nice list of their meanings:
 0.11.1 | Fumikiri | 踏切 | Railroad crossing
 0.12 | Hikari | 光 | Light
 0.13 | Toki | 時 | Time
+0.14 | Hoshi | 星 | Star
+0.15 | Kōsen | 光線 | Ray of light
 N/A | Kuuhaku | 空白 | Blank
 
 ### What is the difference between the brightness sliders in the web UI?

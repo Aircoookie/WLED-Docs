@@ -97,12 +97,49 @@ Here is a step-by-step guide on how to make your effect:
 8. Compile, upload and enjoy!  Your new effect will automatically be added to the list in the web ui.
 
 If you programmed a nice effect you want to share, submit a pull request!
+### Create a custom effect as usermod
+
+!!! info "Since 0.14"
+    This feature was introduced with version 0.14.
+
+It is possible to add new effects in form of a usermod.
+
+Use `255` for the effect ID as it is a placeholder for "1st available slot". If you want a permanent ID use whatever is not used by built-in effects or other usermod's effects. It is possible to call [addEffect(255,...)](https://github.com/Aircoookie/WLED/blob/1dab26bcbcac051f2b7be47a2d5c757a9938bf1f/wled00/FX.cpp#L7655) multiple times to add more effects without a collision of IDs.
+
+```cpp
+uint16_t mode_blink(void) {
+  ...
+  return FRAMETIME;
+}
+
+static const char _data_FX_MODE_BLINK[] PROGMEM = "Blink@!,Duty cycle;!,!;!;01";
+
+class BlinkUsermod : public Usermod
+{
+  public:
+    void setup()
+    {
+      strip.addEffect(255, &mode_blink, _data_FX_MODE_BLINK);
+    }
+
+    void loop()
+    {
+    }
+
+    uint16_t getId()
+    {
+      return USERMOD_ID_...;
+    }
+};
+```
+
+For details about the format of the configuration string see [effect metadata](/interfaces/json-api/#effect-metadata).
 
 ### Changing Web UI
 
-In order to conserve space, the Web UI interface is represented as a series of wled00/html_ui.h, wled00/html_settings.h and wled00/html_other.h files which contain C/C++ strings with specific parts of the Web UI.
+In order to conserve space, the Web UI interface is represented as a series of `wled00/html_*.h` files which contain C/C++ strings with specific parts of the Web UI.
 
-These files are automatically created from source files available in wled00/data folder. To generate files, install [NodeJS 11.0+](https://nodejs.org/en/download/) globally. After that, recreate `html_*.h` files by running in the repo directory:
+These files are automatically created from source files available in `wled00/data` folder. To generate files, install [Node.js](https://nodejs.org/en/download) 20 or higher globally. After that, recreate `html_*.h` files by running in the repo directory:
 ```
 > npm install
 > npm run build
@@ -114,7 +151,13 @@ If you continuously modify files in the wled00/data directory, you want to monit
 ```
 > npm run dev
 ```
-This will start monitoring wled00/data folder for changes.
+This will start monitoring wled00/data folder for changes. However, you will probably never need this, as `npm run build` is automatically executed before compiling.
+
+The `html_*.h` files will only be created or updated if changes have been made to the `wled00/data` folder.
+If you still want to recreate the files, you can use this command:
+```
+> npm run build -- -f
+```
 
 **WARNING!!** Be careful with changing the javascript in HTML files! For example `function GetV() {}` must be the last javascript function in the `<script>` element as it will be replaced by automatically generated code to fetch relevant settings from EEPROM. See `tools/cdata.js` for the replacement rules which run for every *.htm file in `wled00/data`.
 

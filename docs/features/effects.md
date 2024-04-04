@@ -157,7 +157,7 @@ For 2D effects the background (secondary) color is set to black.
 |  11 | Scan Dual           | Same as Scan but uses two lights starting at both ends <br /> ![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_011.gif)                                                                                                                    | ⋮     | 🎨 Fx, Bg, Cs                           | Speed, # of dots, Overlay                                                     |
 |  40 | Scanner             | Dot moves between ends, leaving behind a fading trail <br /> ![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_040.gif)                                                                                                                     | ⋮     | 🎨 Fx, Bg                               | Speed, Fade rate                                                              |
 |  60 | Scanner Dual        | Like Scanner, but with two dots running on opposite sides <br /> ![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_060.gif)                                                                                                                 | ⋮     | 🎨 Fx, Bg, Cs                           | Speed, Fade rate                                                              |
-| 122 | Scrolling Text      | Edit segment name to set text (#DATE and #TIME to include those) <br /> ![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_122.gif)                                                                                                          | ▦     | 🎨 Fx, Bg, Gradient                     | Speed, Y Offset, Trail, Font size, Gradient, Overlay, 0                       |
+| 122 | Scrolling Text      | Edit segment name to set text (variables #DATE, #TIME, #DDMM, #MMDD, #HHMM, #HH, #MM; suffix with 0 to have leading 0s, i.e. #DATE0). Use segment grouping to increase text size on a large matrix.<br /> ![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_122.gif)                                                                                                          | ▦     | 🎨 Fx, Bg, Gradient                     | Speed, Y Offset, Trail, Font size, Gradient, Overlay, 0                       |
 | 181 | Sindots             | Dots revolving in a circle while the 'camera'  <br /> ![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_181.gif)                                                                                                                            | ▦     | 🎨                                      | Speed, Dot distance, Fade rate, Blur                                          |
 | 108 | Sine                | Controllable sine waves <br /> ![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_108.gif)                                                                                                                                                   | ⋮     |                                         |                                                                               |
 |  92 | Sinelon             | Fastled sinusoidal moving eye <br /> ![](https://raw.githubusercontent.com/scottrbailey/WLED-Utils/master/gifs/FX_092.gif)                                                                                                                                             | ⋮     | 🎨 Fx, Bg, Cs                           | Speed, Trail                                                                  |
@@ -213,12 +213,12 @@ Some effects get retired when they can be recreated with newer, more general eff
 
 | Removed Effect  | Replacement                           | Retired After |
 |-----------------|---------------------------------------|---------------|
-| Candy Cane      | Chase 2                               | 0.14.0        |
+| Candy Cane      | Chase 2 - red/white                   | 0.14.0        |
 | Dissolve Rnd    | Dissolve                              | 0.14.0        |
 | Dynamic Smooth  | Dynamic                               | 0.14.0        |
 | Halloween       | Chase 2                               | 0.14.0        |
- | Merry Christmas | Chase 2 - red/green                   | 0.12.0        |    
- | Police          | Two Dot                               | 0.14.0        |
- | Police All      | Two Dots - red/blue w/ full intensity | 0.13.0        |
- | Two Areas       | Two Dots - full intensity             | 0.13.0        |
+| Merry Christmas | Chase 2 - red/green                   | 0.12.0        |    
+| Police          | Two Dot                               | 0.14.0        |
+| Police All      | Two Dots - red/blue w/ full intensity | 0.13.0        |
+| Two Areas       | Two Dots - full intensity             | 0.13.0        |
 

@@ -12,7 +12,8 @@ This feature allows you to set different zones on the LED strip, each running a 
 
 A segment is selected if the checkmark next to the segment number is checked. Changes you make to color or effects will apply to all selected segments. The color/effect that is shown in the web UI is that of the first selected segment.
 
-There is one _main segment_, Segment 0 by default. This segment has a few important differences to the rest of the segments.
+There is one _main segment_, Segment 0 by default. This segment has a few important differences to the rest of the segments:
+
 - Color transitions only work on the main segment
 - The main segment's color is the one that will be reported to HTTP and MQTT APIs
 
