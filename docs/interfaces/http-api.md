@@ -13,7 +13,7 @@ WLED's HTTP API allows you to set many properties of your lights, even more than
 !!! help
     _Unsure how all this API stuff works? Check out [this amazing guide](https://tynick.com/blog/01-28-2020/controlling-wled-with-raspberry-pi-using-the-wled-api/) by tynick!_
 
-The basic URL scheme is: `[ipadress]/win`. This will return an XML file with some current values (see bottom of page).
+The basic URL scheme is: `[ipaddress]/win`. This will return an XML file with some current values (see bottom of page).
 Parameters can be added to control some of the variables.
 
 - Example (AP): `192.168.4.1/win&A=255` sets the brightness to maximum
