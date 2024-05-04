@@ -163,6 +163,7 @@ playlist | object | [Custom preset playlists](#playlists). Not included in state
 tb | uint32 | Sets timebase for effects. Not reported.
 ledmap | 0 to 9 | Load specified ledmap (0 for `ledmap.json`, 1-9 for `ledmap1.json` to `ledmap9.json`). [See mapping](/advanced/mapping/). Not included in state response. _(available since 0.14.0)_
 rmcpal | bool | Remove last custom palette if set to `true`. Not included in state response. _(available since 0.14.0)_
+np | bool | Advance to the next preset in a playlist if set to `true`. Not included in state response. _(available since 0.15)_
 
 #### Contents of the segment object
 
