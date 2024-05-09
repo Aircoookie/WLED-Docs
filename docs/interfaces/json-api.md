@@ -568,3 +568,18 @@ U | Voltage | V
 (other strings) | Reserved, let us know if you need a new type added | -
 
 If a client is only interested in certain sensor types (e.g. Temperature), it may disregard all other sensor objects.
+
+### API
+there is all routes for JSON API:
+
+- /json/state
+- /json/info
+- /json/sinfo
+- /json/nodes
+- /json/eff
+- /json/palx
+- /json/fxdata
+- /json/net
+- /json/live // only if flag WLED_ENABLE_JSONLIVE is on
+- /json/pal
+- /json/cfg
