@@ -574,7 +574,7 @@ there is all routes for JSON API:
 
 - /json/state
 - /json/info
-- /json/sinfo
+- /json/si
 - /json/nodes
 - /json/eff
 - /json/palx
