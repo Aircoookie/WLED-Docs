@@ -26,9 +26,11 @@ SK9822 | 5&nbsp;V | using 2 data pins, Clock and Data
 UCS8903 | 5&nbsp;V |
 GS8208 | 12&nbsp;V |
 TM1814 | 12&nbsp;V | RGBW
+WS2805 | 12&nbsp;V / 24&nbsp;V | RGBCCT, 3-LED groups (12V) / 6-LED groups (24V) as one logical LED. Backup data line. Two white channels for Correlated Color Temperature (CCT) (this option is available since WLED 0.15.0-b2)
 WS2811 | 12&nbsp;V | usually 3-LED segments, has data-line resistor
 WS2814 | 12&nbsp;V / 24&nbsp;V | RGBW, 3-LED groups (12V) / 6-LED groups (24V) as one logical LED. Must be controlled as SK6812 type, color order: BRG, swap W and G (this option is available since WLED 0.14.0-b1) 
 WS2815 | 12&nbsp;V | has a backup data line
+FW1906 | 24&nbsp;V | RGBCCT, 6-LED groups as one logical LED. Two white channels for Correlated Color Temperature (CCT) (this option is available since WLED 0.15.0-b2)
 LPD6803 | 12&nbsp;V |
 P9813 | 5-24&nbsp;V |
 TM1829 | 5-24&nbsp;V |
