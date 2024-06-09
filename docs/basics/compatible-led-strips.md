@@ -15,24 +15,24 @@ Sorting: 5v data only, 5v Data + Clock, 12v data only
 
 | Type | Voltage | Comments |
 |---|---|---|
-SK6812 | 5v/12v | RGBW
-WS2811 | 5v | usually found in IP68 sealed 12mm pixel strings
-WS2812B | 5v |
-WS2813 | 5v | has a backup data line
-APA102 | 5v | using 2 data pins, Clock and Data
-LPD8806 | 5v | using 2 data pins, Clock and Data
-WS2801 | 5v | using 2 data pins, Clock and Data
-SK9822 | 5v | using 2 data pins, Clock and Data
-UCS8903 | 5v |
-GS8208 | 12v |
-TM1814 | 12v | RGBW
-WS2811 | 12v | usually 3-LED segments, has data-line resistor
-WS2814 | 12v/24v | RGBW, 3-LED groups (12V) / 6-LED groups (24V) as one logical LED. Must be controlled as SK6812 type, color order: BRG, swap W and G (this option is available since WLED 0.14.0-b1) 
-WS2815 | 12v | has a backup data line
-LPD6803 | 12v |
-P9813 | 5-24 v |
-TM1829 | 5-24 v |
-UCS8904 | 5-24 v | RGBW
+SK6812 | 5&nbsp;V / 12&nbsp;V | RGBW
+WS2811 | 5&nbsp;V | usually found in IP68 sealed 12mm pixel strings
+WS2812B | 5&nbsp;V |
+WS2813 | 5&nbsp;V | has a backup data line
+APA102 | 5&nbsp;V | using 2 data pins, Clock and Data
+LPD8806 | 5&nbsp;V | using 2 data pins, Clock and Data
+WS2801 | 5&nbsp;V | using 2 data pins, Clock and Data
+SK9822 | 5&nbsp;V | using 2 data pins, Clock and Data
+UCS8903 | 5&nbsp;V |
+GS8208 | 12&nbsp;V |
+TM1814 | 12&nbsp;V | RGBW
+WS2811 | 12&nbsp;V | usually 3-LED segments, has data-line resistor
+WS2814 | 12&nbsp;V / 24&nbsp;V | RGBW, 3-LED groups (12V) / 6-LED groups (24V) as one logical LED. Must be controlled as SK6812 type, color order: BRG, swap W and G (this option is available since WLED 0.14.0-b1) 
+WS2815 | 12&nbsp;V | has a backup data line
+LPD6803 | 12&nbsp;V |
+P9813 | 5-24&nbsp;V |
+TM1829 | 5-24&nbsp;V |
+UCS8904 | 5-24&nbsp;V | RGBW
 
 ## Non-Addressable LED Strips
 
