@@ -21,6 +21,8 @@ Please use a decent and neutral description when adding things to this list.
 | Name | Description |
 |---|---|
 [ESP32 Ethernet Network Shield](https://www.tindie.com/products/30385/)| Ethernet Shield (10/100Mbps) for ESP32 boards. Stackable with D1 Mini32 form factor boards.
+[Logic Level Shifter Board](https://www.tindie.com/products/sjmelectronics/logic-level-converter-level-shifter) | A simple level shifter board.
+[Logic Level Shifter Shield](https://www.tindie.com/products/sjmelectronics/logic-level-converter-shield)|Logic level shifter shield for ESP32-C3 and D1 Mini format dev boards.
 [Wemos D1 mini Level Shifter Shield](https://www.tindie.com/products/jasoncoon/wemos-d1-mini-esp8266-level-shifter-mini-shield/) | A level shifter shield (74HCT125) - by Evil Genius Labs LLC.
 [WIZmote remote control](https://www.google.com/search?q=wizmote) | Remote control using radio network. Compatible with WLED (vesions 0.14.0-beta3 and above). No additional receiver required.
 
