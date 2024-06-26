@@ -37,7 +37,7 @@ Any | 5v 3-pin ARGB for PC | Any PC RGB device that supports the 5v 3-pin ARGB m
 
 | Name | Description |
 |---|---|
-SN74AHCT125 | Aircoookie's recommended levelshifter. Often used in DIY and commercial controllers.
+SN74AHCT125 | Aircoookie's recommended levelshifter. Often used in DIY and commercial controllers. [sjm Level Shifter Board](https://www.tindie.com/products/sjmelectronics/logic-level-converter-level-shifter)
 SN74AHCT32 | Same pinout as above can be used. This is just an OR gate, but any AHCT gate can be used if inputs are connected appropriately. ;)
 SN74HCT125N | Slower, cheaper version. Works just as well for WS2812, but not recommended for APA102.
 SN74LVC2T45 | Modern bus transceiver with voltage translation [Yet Another WLED Controller](https://github.com/lizardsystems/yawl-controller)
