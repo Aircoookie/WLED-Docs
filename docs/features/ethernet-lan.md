@@ -23,7 +23,7 @@ WLED controllers are usually integrated into local network wirelessly (via WiFi)
 Go to "Config" and then to "WiFi Setup". At the bottom of this page select the Ethernet type you use. Then click on "Save &  Connect". Ready!
 ![](../assets/images/content/wled_ethernet_settings.jpg)
 
-## Ethernet controllers and adapters supported by WLED (as of v0.15 development, June 2024)
+## Ethernet controllers and adapters supported by WLED (as of v0.15)
 Note: all controllers use GPIOs 19, 21, 22, 25, 26, 27 as they are required for ethernet and can not be changed. GPIOs additionally used are given in the table.
 
 | Name | Features | additional GPIOs used |
