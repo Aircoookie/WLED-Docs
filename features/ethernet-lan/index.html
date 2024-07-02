@@ -1120,9 +1120,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ethernet-controllers-and-adapters-supported-by-wled-as-of-november-2023" class="md-nav__link">
+  <a href="#ethernet-controllers-and-adapters-supported-by-wled-as-of-v015" class="md-nav__link">
     <span class="md-ellipsis">
-      Ethernet controllers and adapters supported by WLED (as of November 2023)
+      Ethernet controllers and adapters supported by WLED (as of v0.15)
     </span>
   </a>
   
@@ -1961,9 +1961,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ethernet-controllers-and-adapters-supported-by-wled-as-of-november-2023" class="md-nav__link">
+  <a href="#ethernet-controllers-and-adapters-supported-by-wled-as-of-v015" class="md-nav__link">
     <span class="md-ellipsis">
-      Ethernet controllers and adapters supported by WLED (as of November 2023)
+      Ethernet controllers and adapters supported by WLED (as of v0.15)
     </span>
   </a>
   
@@ -2010,7 +2010,7 @@
 <h2 id="ethernet-setup">Ethernet setup</h2>
 <p>Go to "Config" and then to "WiFi Setup". At the bottom of this page select the Ethernet type you use. Then click on "Save &amp;  Connect". Ready!
 <img alt="" src="../../assets/images/content/wled_ethernet_settings.jpg" /></p>
-<h2 id="ethernet-controllers-and-adapters-supported-by-wled-as-of-november-2023">Ethernet controllers and adapters supported by WLED (as of November 2023)</h2>
+<h2 id="ethernet-controllers-and-adapters-supported-by-wled-as-of-v015">Ethernet controllers and adapters supported by WLED (as of v0.15)</h2>
 <p>Note: all controllers use GPIOs 19, 21, 22, 25, 26, 27 as they are required for ethernet and can not be changed. GPIOs additionally used are given in the table.</p>
 <table>
 <thead>
@@ -2032,13 +2032,23 @@
 <td>12, 17, 18, 23</td>
 </tr>
 <tr>
-<td>ESP32Deux</td>
+<td><a href="https://www.olimex.com/Products/IoT/ESP32/ESP32-POE/open-source-hardware">ESP32-POE-WROVER</a></td>
+<td>ethernet clock connected to a different IO than the ESP32-WROOM module version</td>
+<td>0, 12, 18, 23</td>
+</tr>
+<tr>
+<td>ESP32Deux / <a href="https://rgb2go.com/products/ethernet-module-for-tetra2go">RGB2Go Tetra</a></td>
 <td></td>
 <td>17, 18, 23</td>
 </tr>
 <tr>
 <td><a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/hw-reference/esp32/get-started-ethernet-kit.html">KIT-VE</a></td>
 <td>Board from Espressif (ESP microcontroller manufacture company)</td>
+<td>0, 5, 18, 23</td>
+</tr>
+<tr>
+<td><a href="https://www.lilygo.cc/products/t-poe-pro">LILYGO T-POE Pro</a></td>
+<td>PoE IEEE802.3 af/at, Input Voltage: 44-57V, Outputs 5V up to 4A</td>
 <td>0, 5, 18, 23</td>
 </tr>
 <tr>
