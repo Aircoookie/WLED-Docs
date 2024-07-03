@@ -2234,6 +2234,11 @@ Please carefully compare all items in the category you are interested in, and yo
 <td>An ESP8285 2MB controller with 3 case buttons, built in mic, IR receiver, 38 key remote, and dual outputs. The dual outputs are connected to the same data pin. There is a step-by-step guide for <a href="https://github.com/scottrbailey/WLED-Utils/blob/gh-pages/sp511e_wled.md">Installing WLED on SP511E Controller</a>.</td>
 </tr>
 <tr>
+<td><a href="https://www.aliexpress.com/item/1005006472928868.html">SP530e</a></td>
+<td>ESP32-C3</td>
+<td>ESP32-C3 based Controller that supports both Addressable and PWM-based RGBWW LED strips. 5-24v DC input, sold under BTF lighting, RGBZone, etc. Vendors all list 'BanlanX' as the supporting mobile application. Board is silk screened with 'SP530e' but no other markings. Serial pads and GPIO9 are exposed on the back-side of the board. GPIO 9 must be pulled to GND at boot to enter flashing mode. I/O configuration: LEDPIN is 'GPIO19' for addressable LEDs, BTNPIN is GPIO 3. PWM pin out for RGBWW: WW: 4, CW: 5, R: 10, G: 6 and B: 7. Level shifter used: SN74HCT245 - Warning, the flash is <em>encrypted</em> - be sure to specify the <code>-encrypt</code> flag when flashing with <code>esptool.py</code>. Each device has a unique flash encryption key, but the devs forgot to burn the 'disable UART download' efuse, which means that any non-encrypted firmware can be flashed onto the device, and the device will encrypt the firmware on the first boot. Before flashing, please back up the original firmware of the device with esptool.py <code>esptool.py read_flash 0 0x400000 sp530e-encrypted.bin</code>. Pics of board and the flashing connector here: <a href="https://imgur.com/a/0orUKF1">https://imgur.com/a/0orUKF1</a> -  Sample flashing command: <code>esptool.py write_flash --encrypt 0x0 C3_bootloader.bin 0x8000 C3_partitions_4M.bin 0x10000 WLED_0.15.0-b3_ESP32C3_4MB.bin</code>.</td>
+</tr>
+<tr>
 <td><a href="https://www.electrodragon.com/product/esp-led-strip-board">ESP LED Strip WIFI Control Board [ESP Version]</a></td>
 <td>ESP8266</td>
 <td>Controller for addressable or analog LEDs (RGBW), 6-27VDC input, no level shifter, reset and boot buttons, enclosure. NOTE: Although this uses high-current transistors, they used jumpers on two of the connections so you are limited to their current rating (3A?).</td>
