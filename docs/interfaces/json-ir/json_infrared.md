@@ -71,6 +71,10 @@ When purchasing a remote, be sure that it is an infrared (IR) remote and not a r
 6-key
 [ir.json](6-key_ir.json)
 
+![Apple Remote V2](apple-v2.png)
+Apple Remote V2
+[ir.json](apple-v2_ir.json)
+
 ### Editing ir.json
 First see if a JSON file already exists for your remote. If not, see if there is a JSON file for a remote with 
 the same number of buttons. Often remotes with the same number of buttons have different labels but emit the 
