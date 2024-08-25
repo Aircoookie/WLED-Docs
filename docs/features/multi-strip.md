@@ -16,7 +16,7 @@ There are a few tips and recomendations to keep in mind when designing your setu
 
 - It is highly recommended to use an ESP32 when using more than 1 output
 - You may freely choose the LEDs type, pin numbers, length and color order of your LED strips at runtime in the LED settings page
-- Highly recommeded to size power supply correctly according to your setup and disable the WLED brightness limiter setting to increase framerate with very large LED counts
+- Highly recommended to size power supply correctly according to your setup and disable the WLED brightness limiter setting to increase framerate with very large LED counts
 - Most strip types have yet to be tested. Add confirmed working below:
 - Confirmed working: WS281x, SK6812 RGBW, PWM white
 
