@@ -25,10 +25,11 @@ While using an ESP8266 and LEDs that have clock and data, you can either use har
 For safe operation, it is recommended to size your power wires correctly and to integrate fuses.  
 For reference, you may use this [LED power, wiring and fuse calculator](https://wled-calculator.github.io/).
 
-For analog LEDs, the MOSFETs IRLZ44N or STP55NF06L are good candidates. Partial, example circuit:
+For analog LEDs, the MOSFETs IRLZ44N or STP55NF06L are good candidates. Example circuit:
 
-![image](https://github.com/Aircoookie/WLED-Docs/assets/59397047/87e3f4ef-05fb-452a-8cc1-d0187254b466)
- ![image](https://user-images.githubusercontent.com/59397047/166152797-111eccae-1942-45d2-8980-1b584ebdeaf9.png)
+![image](../assets/images/content/12Vanalog_wiring.png)
+
+More wiring examples can be found [here](/basics/compatible-led-strips/#non-addressable-led-strips)
 
 **2.** Flash the software to your ESP module! There are two options for this step:
 
