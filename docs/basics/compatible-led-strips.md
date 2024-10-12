@@ -48,6 +48,9 @@ Recommended MOSFETs are IRLZ44N or STP55NF06L. A much smaller SMD alternative is
 
 As of v0.13.1, WLED supports single color, CCT, RGB, RGBW and RGBCCT strips. These strips are commonly found at 12 or 24 volts.
 The default PWM frequency for dimming is 880 Hz on ESP8266 and 19531 Hz for ESP32.
+
+_See **NOTE** at the end before trying the below amplifiers._
+
 The commercially available so-called RGB(W) LED amplifiers can also be used (also called repeaters/boosters). These typically include optocouplers and MOSFET circuitry (1 to 5 channels) and can be used, for example, as follows:
 ![Controlling analog LED strips](../assets/images/content/pic44.jpg)
 
@@ -60,4 +63,5 @@ The amplifier shown in the picture is a cheap product. Its advantage is a metal 
 ![Controlling analog LED strips](../assets/images/content/pic48.jpg)
 
 The simple structure means that the duty cycle of the PWM signal (the ratio between pulse and period duration) at the output is slightly distorted compared to the input. In many cases this is not critical, but it does result in the color composition of an RGB strip being slightly distorted. A significantly better (and slightly more expensive) version is described in <a href="https://media.elv.com/file/143195_led_rgbw_repeater.pdf" target="_blank">this article (in German, includes schematics)</a>. Here the MOSFETs are controlled with push-pull drivers. This and some other measures in the circuit mean that the PWM signal is reproduced very accurately at the output.
-There are some other types of LED amplifiers on the market (e.g. MiBoxer RGBW amplifiers and similar ones) that DO NOT work as described above because they require higher input voltage.
+
+**NOTE:** There are some other types of LED amplifiers on the market (e.g. MiBoxer RGBW amplifiers and similar ones) that DO NOT work as described above because they require higher input voltage.
