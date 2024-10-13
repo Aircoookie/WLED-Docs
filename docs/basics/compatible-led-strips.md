@@ -64,4 +64,5 @@ The amplifier shown in the picture is a cheap product. Its advantage is a metal 
 
 The simple structure means that the duty cycle of the PWM signal (the ratio between pulse and period duration) at the output is slightly distorted compared to the input. In many cases this is not critical, but it does result in the color composition of an RGB strip being slightly distorted. A significantly better (and slightly more expensive) version is described in <a href="https://media.elv.com/file/143195_led_rgbw_repeater.pdf" target="_blank">this article (in German, includes schematics)</a>. Here the MOSFETs are controlled with push-pull drivers. This and some other measures in the circuit mean that the PWM signal is reproduced very accurately at the output.
 
-**NOTE:** There are some other types of LED amplifiers on the market (e.g. MiBoxer RGBW amplifiers and similar ones) that DO NOT work as described above because they require higher input voltage.
+**NOTE 1:** Meanwile there is another version of the same amplifier in the same housing on the market that does not have optocouplers and therefore can not be used as describe above (will destroy your WLED controller!).
+**NOTE 2:** There are some other types of LED amplifiers on the market (e.g. MiBoxer RGBW amplifiers and similar ones) that DO NOT work as described above because they require higher input voltage.
