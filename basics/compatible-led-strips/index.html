@@ -2091,7 +2091,8 @@ The default PWM frequency for dimming is 880 Hz on ESP8266 and 19531 Hz for ESP3
 <p>The amplifier shown in the picture is a cheap product. Its advantage is a metal case. However, its circuit is very simple:
 <img alt="Controlling analog LED strips" src="../../assets/images/content/pic48.jpg" /></p>
 <p>The simple structure means that the duty cycle of the PWM signal (the ratio between pulse and period duration) at the output is slightly distorted compared to the input. In many cases this is not critical, but it does result in the color composition of an RGB strip being slightly distorted. A significantly better (and slightly more expensive) version is described in <a href="https://media.elv.com/file/143195_led_rgbw_repeater.pdf" target="_blank">this article (in German, includes schematics)</a>. Here the MOSFETs are controlled with push-pull drivers. This and some other measures in the circuit mean that the PWM signal is reproduced very accurately at the output.</p>
-<p><strong>NOTE:</strong> There are some other types of LED amplifiers on the market (e.g. MiBoxer RGBW amplifiers and similar ones) that DO NOT work as described above because they require higher input voltage.</p>
+<p><strong>NOTE 1:</strong> Meanwile there is another version of the same amplifier in the same housing on the market that does not have optocouplers and therefore can not be used as describe above (will destroy your WLED controller!).</p>
+<p><strong>NOTE 2:</strong> There are some other types of LED amplifiers on the market (e.g. MiBoxer RGBW amplifiers and similar ones) that DO NOT work as described above because they require higher input voltage.</p>
 
 
 
