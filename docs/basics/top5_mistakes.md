@@ -8,7 +8,7 @@ hide:
 ### Asking for help
 
 Before asking for help on Discord or on other platforms, check the following top 5 most common mistakes while setting up WLED.
-If you then still have troubles and are going to ask for help, provide as much informtion as possile: describe your setup, make photos, provide screenshots of your settings.
+If you then still have troubles and are going to ask for help, provide as much information as possile: describe your setup, make photos, provide screenshots of your settings.
 
 ### TOP 5 mistakes:
 
