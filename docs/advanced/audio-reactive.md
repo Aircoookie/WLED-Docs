@@ -62,4 +62,4 @@ For some more details please refer to [Sound Reactive WLED WIKI](https://github.
 
 ## Software required
 
-Because audio reactive capability is currently implemented as a usermod, you need WLED compiled with this usermod included or use Sound Reactive WLED fork. The [official WEB-based WLED installer](https://install.wled.me/) does not include original WLED with audio reactive usermod, but offers Sound Reactive WLED as an option. The [unofficial WEB-based WLED installer](https://wled-install.github.io/) offers more options including original WLED with audio reactive usermod.
+Because audio reactive capability is currently implemented as a usermod, you need WLED compiled with this usermod included. The [official WEB-based WLED installer](https://install.wled.me/) did  not include WLED with audio reactive usermod with all builds in the past. The [unofficial WEB-based WLED installer](https://wled-install.github.io/) offers more options including WLED with audio reactive usermod.
