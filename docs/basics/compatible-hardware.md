@@ -41,11 +41,13 @@ SN74AHCT125 | Aircoookie's recommended levelshifter. Often used in DIY and comme
 SN74AHCT32 | Same pinout as above can be used. This is just an OR gate, but any AHCT gate can be used if inputs are connected appropriately. ;)
 SN74HCT125N | Slower, cheaper version. Works just as well for WS2812, but not recommended for APA102.
 SN74LVC2T45 | Modern bus transceiver with voltage translation [Yet Another WLED Controller](https://github.com/lizardsystems/yawl-controller)
-TXS0102, TXS0108 | Bidirectional levelshifters that may work fine with WLED (if possible, 74AHCT gates should be preferred as they support both longer data lines and faster protocols)
+TXS0102, TXS0108 | Not recommended: these bidirectional levelshifters do work but only for short data lines (less than 50cm).
 [F-Amp](https://pixelcontroller.com/store/accessories/54-famp-xconnect.html) | Level shifter/data booster
 
 !!! warning
-    I2C shifters are generally too slow for addressable LEDs, so don't use them.
+    I2C shifters are generally too slow for addressable LEDs, so don't use them.  
+    ![No_I2C_Shifter](../assets/images/content/NoI2Cshifter.jpg)  
+    If you must: there is a [hack to make them work on short data lines](https://wled.discourse.group/t/levelshifter-analysis/11871/12)
 
 Further reading:
 [Logic Level Shifters for Driving LED Strips](https://electricfiredesign.com/2021/03/12/logic-level-shifters-for-driving-led-strips/)
