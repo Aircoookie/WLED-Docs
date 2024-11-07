@@ -5,9 +5,11 @@ hide:
   # - toc
 ---
 
-Currently (as of summer 2023) only the microcontrollers from Espressif, types ESP8266 and ESP32 (with dual core) are fully supported. Some of the newer types like ESP32-C3, ESP32-S2 and ESP32-S3 are experimentally supported, but productive use is not recommended yet because some bugs are suspected. In addition, the installation of these newer types is not that easy: there are several hardware variations/boards for which the SW must be specially compiled. It should also be mentioned that some ESP32-C3 boards (so-called C3 mini V1.0.0) are still being sold on the market where WLAN does not work properly.
+Currently (as of summer 2023) only the microcontrollers from Espressif, types ESP8266 and ESP32 (with dual core) are fully supported, however ESP8266 should not be used for any new installations.
 
-To try out WLED with 5V addressable strip a simple microcontroller board like ESP8266 D1 mini or ESP32 D1 mini is sufficient. The simplest setup might be like:
+Some of the newer types like ESP32-C3, ESP32-S2 and ESP32-S3 are experimentally supported, but productive use is not recommended yet because some bugs are suspected. In addition, the installation of these newer types is not that easy: there are several hardware variations/boards for which the SW must be specially compiled. It should also be mentioned that some ESP32-C3 boards (so-called C3 mini V1.0.0) are still being sold on the market where WLAN does not work properly.
+
+To try out WLED with 5V addressable strip a simple microcontroller board like ESP32 D1 mini is sufficient. The simplest setup might be like:
 ![Simple WLED setup](../assets/images/content/pic10.jpg)
 
 However, there are a few other things to keep in mind for a proper setup:
