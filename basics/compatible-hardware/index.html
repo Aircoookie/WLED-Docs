@@ -2105,7 +2105,7 @@ Please carefully compare all items in the category you are interested in, and yo
 </tr>
 <tr>
 <td>TXS0102, TXS0108</td>
-<td>Bidirectional levelshifters that may work fine with WLED (if possible, 74AHCT gates should be preferred as they support both longer data lines and faster protocols)</td>
+<td>Not recommended: these bidirectional levelshifters do work but only for short data lines (less than 50cm).</td>
 </tr>
 <tr>
 <td><a href="https://pixelcontroller.com/store/accessories/54-famp-xconnect.html">F-Amp</a></td>
@@ -2115,7 +2115,9 @@ Please carefully compare all items in the category you are interested in, and yo
 </table>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>I2C shifters are generally too slow for addressable LEDs, so don't use them.</p>
+<p>I2C shifters are generally too slow for addressable LEDs, so don't use them.<br />
+<img alt="No_I2C_Shifter" src="../../assets/images/content/NoI2Cshifter.jpg" /><br />
+If you must: there is a <a href="https://wled.discourse.group/t/levelshifter-analysis/11871/12">hack to make them work on short data lines</a></p>
 </div>
 <p>Further reading:
 <a href="https://electricfiredesign.com/2021/03/12/logic-level-shifters-for-driving-led-strips/">Logic Level Shifters for Driving LED Strips</a></p>
