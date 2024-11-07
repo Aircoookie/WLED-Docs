@@ -8,7 +8,9 @@ hide:
 ## Welcome to the WLED wiki!
 
 !!! info "Version Info"
-    Unless noted otherwise, all information applies to the latest release (v0.13.3).
+    Unless noted otherwise, all information applies to the latest release.
+
+While the ESP8266 is still supported, all new setups should be using the ESP32 as it's much better hardware and ESP8266 is coming to and end of support.
 
 ### Quick start guide
 
