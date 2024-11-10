@@ -78,7 +78,7 @@ If you accidentally connected the strip the wrong way (if it has arrows printed 
 
 If you did not enter a static IP, the module will automatically obtain a dynamic IP from the router.
 You can check it in the router configuration or in the settings page, if the Access Point is still enabled.
-An easier way is to use the WLED Android app which features automatic discovery!
+An easier way is to use the WLED Native app which features automatic discovery!
 
 ### The module once was connected, but I can no longer reach it
 
@@ -90,7 +90,7 @@ Else, power-cycle the module manually.
 
 This only works with Apple devices out of the box. You can install Bonjour to make it work in Windows.
 For Android there is no convenient way to achieve it, though you can use apps like "Bonjour search" to find the IP.
-I highly recommend you install the WLED app, which makes automatic discovery easy!
+It is highly recommended that you install the WLED Native app, which makes automatic discovery easy!
 
 ### Is it safe to do a port forwarding to the public internet to control the lights from anywhere?
 
@@ -279,7 +279,9 @@ This will be improved in a future release, so that you will be able to save mult
 
 ### What is the difference between the WLED app and the WLED Native app?
 
-The WLED app is the official app developped by the same people that brought you WLED. WLED Native is an initiative by community member [Moustachauve](https://github.com/Moustachauve) to bring an interface that is closer to the native operating system look of your device and some new features.
+The WLED app was the official app developped by the same people that brought you WLED. WLED Native is an initiative by community member [Moustachauve](https://github.com/Moustachauve) to bring an interface that is closer to the native operating system look of your device and some new features.
+
+The official WLED app is now considered legacy. It is not currently maintained and might not receive any future bug fixes.
 
 WLED Native has a few more features available, like a tablet interface for Android and can keep track of changes to the device IP address better.
 
