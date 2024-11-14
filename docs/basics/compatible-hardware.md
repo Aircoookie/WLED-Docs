@@ -41,6 +41,7 @@ SN74AHCT125 | Aircoookie's recommended levelshifter. Often used in DIY and comme
 SN74AHCT32 | Same pinout as above can be used. This is just an OR gate, but any AHCT gate can be used if inputs are connected appropriately. ;)
 SN74HCT125N | Slower, cheaper version. Works just as well for WS2812, but not recommended for APA102.
 SN74LVC2T45 | Modern bus transceiver with voltage translation [Yet Another WLED Controller](https://github.com/lizardsystems/yawl-controller)
+Amplifier/Splitter | These have been tested and do work. [Amp/Splitter](https://www.amazon.com/BTF-LIGHTING-WS2812B-Amplifier-Support-addressable/dp/B0B5ZSSFR7)
 TXS0102, TXS0108 | Not recommended: these bidirectional levelshifters do work but only for short data lines (less than 50cm).
 [F-Amp](https://pixelcontroller.com/store/accessories/54-famp-xconnect.html) | Level shifter/data booster
 
