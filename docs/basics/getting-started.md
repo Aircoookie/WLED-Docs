@@ -63,7 +63,7 @@ To connect your WLED module to your home Wifi:
 
 **4.** Reconnect your device to your home's Wifi network.
 
-**5.**  Check the device list in your router's user interface for the IP of the WLED device within your local network. For easy automatic discovery, use the WLED app! Have fun with the WLED software!
+**5.**  Check the device list in your router's user interface for the IP of the WLED device within your local network. For easy automatic discovery, use the WLED Native app! Have fun with the WLED software!
 
 ### Default GPIO Usage
 
