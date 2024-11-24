@@ -7,8 +7,9 @@ hide:
 
 You want to add custom features to WLED, use non-default pins, or add in a usermod? You've found the right place!
 
-WLED has come to rely on so many dependencies in the latest versions that building with the Arduino IDE is no longer recommended.
-Instead, installing Visual Studio Code and its PlatformIO (PIO) extension is easier, as it will install the ESP Arduino core, all the required libraries and the correct compilation settings for you automatically.
+WLED has come to rely on so many dependencies in the latest versions that building with Visual Studio Code and its PlatformIO (PIO) extension is the recommended way. It will install the ESP Arduino core, all the required libraries and the correct compilation settings for you automatically. The Arduino IDE is no longer recommended.
+
+If you don't want to change the code but only add some compile options and/or usermods, you can use bot on discord or compile with just few clicks using [this inofficial web based wled compiler](https://wled-compile.github.io/). Using it you can download the resulting .bin file directly or install  via USB using built-in web-based installer.
 
 ### Preparations
 
