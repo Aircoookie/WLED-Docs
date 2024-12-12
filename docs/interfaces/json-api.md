@@ -136,7 +136,7 @@ on | bool | On/Off state of the light. You can also use `"t"` instead of `true` 
 bri | 0 to 255 | Brightness of the light. If _on_ is `false`, contains last brightness when light was on (aka brightness when _on_ is set to true). Setting _bri_ to 0 is supported but it is recommended to use the range 1-255 and use `on: false` to turn off. The state response will never have the value `0` for _bri_.
 transition | 0 to 65535 | Duration of the crossfade between different colors/brightness levels. One unit is 100ms, so a value of `4` results in atransition of 400ms.
 tt | 0 to 65535 | Similar to transition, but applies to just the current API call. Not included in state response.
-ps | -1 to 250 | ID of currently set preset. `1~17~` can be used to iterate through presets 1-17, or `4~10~r` to select random preset between presets 4 and 10 (inclusive).
+ps | -1 to 250 | ID of currently set preset. `1~17~` can be used to iterate through presets 1-17, or `4~10r` to select random preset between presets 4 and 10 (inclusive).
 ~~pss~~ | 0 to 65535 | Bitwise indication of preset slots (0 - vacant, 1 - written). Always 0 in 0.11. Not changable. _Removed as of v0.11.1_
 psave | 1 to 250 (16 prior to 0.11) | Save current light config (state) to specified preset slot. Not included in state response.
 pl | -1 to 250 | ID of currently set playlist. _(read-olny)_
@@ -270,7 +270,7 @@ Examples of frequently requested custom API:
 | --- | --- |
 Cycle presets between 1 and 6 | `{"ps":"1~6~"}`
 Select random effect on _all selected_ segments | `{"seg":{"fx":"r"}}`
-Select random palette between 5 and 10 on segment 2 | `{"seg":[{"id":2,"pal":"5~10~r"}]}`
+Select random palette between 5 and 10 on segment 2 | `{"seg":[{"id":2,"pal":"5~10r"}]}`
 Change segment 0 name | `{"seg":[{"id":0,"n":"Your custom ASCII text"}]}`
 Freeze or unfreeze an effect | `{"seg":[{"id":0,"frz":true}]}` or `{"seg":[{"id":0,"frz":false}]}`
 Night light | `{"nl":{"on":true,"dur":10,"mode":0}}`
