@@ -65,13 +65,14 @@ Here, we have a serpentine of LEDs in 4 columns and 3 rows:
 A more complex example of 16 LEDs arrange in a double figure `∞` shape. This includes some missing LEDs showing up as `-1`.
 Note that if a `ledmap.json` file exists, the `2d-gaps.json` file will be ignored.
 ```json
-{"map":[
-  -1, -1, 14, -1, 12, -1, 10, -1, -1,
-  -1, 15, -1, 13, -1, 11, -1,  9, -1,
-   0, -1, -1, -1, -1, -1, -1, -1,  8,
-  -1,  1, -1,  3, -1,  5, -1,  7, -1,
-  -1, -1,  2, -1,  4, -1,  6, -1, -1
-],
+{"map":
+  [
+    -1, -1, 14, -1, 12, -1, 10, -1, -1,
+    -1, 15, -1, 13, -1, 11, -1,  9, -1,
+     0, -1, -1, -1, -1, -1, -1, -1,  8,
+    -1,  1, -1,  3, -1,  5, -1,  7, -1,
+    -1, -1,  2, -1,  4, -1,  6, -1, -1
+  ],
   "width":  9,
   "height": 5
 }
