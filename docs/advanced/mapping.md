@@ -62,6 +62,8 @@ Here, we have a serpentine of LEDs in 4 columns and 3 rows:
 }
 ```
 
+![wiring diagram of the 4x3 mapping](mapping/mapping_4x3.png)
+
 A more complex example of 16 LEDs arrange in a double figure `∞` shape. This includes some missing LEDs showing up as `-1`.
 Note that if a `ledmap.json` file exists, the `2d-gaps.json` file will be ignored.
 ```json
@@ -76,5 +78,6 @@ Note that if a `ledmap.json` file exists, the `2d-gaps.json` file will be ignore
   "width":  9,
   "height": 5
 }
-
 ```
+
+![wiring diagram of the double ∞ shape mapping](mapping/mapping_infinity_shape.png)
