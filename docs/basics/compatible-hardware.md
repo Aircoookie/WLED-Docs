@@ -44,6 +44,7 @@ SN74LVC2T45 | Modern bus transceiver with voltage translation [Yet Another WLED 
 Amplifier/Splitter | These have been tested and do work. [More info here.](https://discord.com/channels/473448917040758787/719873873071308821/1278797679656439849) - [Example product](https://www.amazon.com/BTF-LIGHTING-WS2812B-Amplifier-Support-addressable/dp/B0B5ZSSFR7)
 TXS0102, TXS0108 | Not recommended: these bidirectional levelshifters do work but only for short data lines (less than 50cm).
 [F-Amp](https://pixelcontroller.com/store/accessories/54-famp-xconnect.html) | Level shifter/data booster
+Adafruit Shifter | https://www.adafruit.com/product/6066
 
 !!! warning
     I2C shifters are generally too slow for addressable LEDs, so don't use them.  
