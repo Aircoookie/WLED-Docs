@@ -67,6 +67,9 @@ extra_css:
   - assets/stylesheets/extra.css
 extra_javascript:
   - assets/js/newtab.js
+analytics:
+  provider: google
+  property: G-QSVCRSVM18
 nav:
   - Welcome: index.md
   - Basics:
