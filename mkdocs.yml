@@ -62,14 +62,14 @@ extra:
       link: https://wled.teemill.com/
     - icon: fontawesome/solid/heart
       link: https://paypal.me/aircoookie/
+  analytics:
+    provider: google
+    property: G-QSVCRSVM18
 extra_css:
   - assets/stylesheets/global.css
   - assets/stylesheets/extra.css
 extra_javascript:
   - assets/js/newtab.js
-analytics:
-  provider: google
-  property: G-QSVCRSVM18
 nav:
   - Welcome: index.md
   - Basics:
